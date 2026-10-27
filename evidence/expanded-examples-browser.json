@@ -1,11 +1,11 @@
 {
   "schema": "ygo-expanded-examples-browser/v1",
   "pass": true,
-  "buildId": "9361b6748958d6adfd53f3c0efdcfb54a1115df58d9e8f37e142884fbf90142b",
-  "htmlSha256": "928bd2c76835e8ab75ef15ae58d288c6dc3a5dfcdcb384152b5ad2c0cec3fa6e",
+  "buildId": "d7c220eb32a7876a39fb6caaeee7bbde7ee96bde1fe5353672ed44e2369f9d6b",
+  "htmlSha256": "aa5e34480df69200c7355daf8fdbc589b584cd276d890ab22977867a9ea3aeca",
   "artifactMode": "DELIVERED_BYTES",
   "sourceInjection": false,
-  "servedBytesSha256": "928bd2c76835e8ab75ef15ae58d288c6dc3a5dfcdcb384152b5ad2c0cec3fa6e",
+  "servedBytesSha256": "aa5e34480df69200c7355daf8fdbc589b584cd276d890ab22977867a9ea3aeca",
   "browser": {
     "engine": "chromium",
     "version": "154.0.8037.57"
@@ -28,7 +28,7 @@
       "pass": true
     },
     {
-      "name": "delivered_mechaba_registry_contains_the_thirteen_reviewed_hand_and_gy_handlers",
+      "name": "delivered_mechaba_registry_contains_the_fifteen_reviewed_hand_and_gy_handlers",
       "pass": true
     },
     {
@@ -181,5 +181,5 @@
     "Declared starting fields do not certify the summons that preceded them.",
     "Exact bytes served while offline do not establish direct file navigation on every browser."
   ],
-  "elapsedSeconds": 65.18
+  "elapsedSeconds": 60.97
 }

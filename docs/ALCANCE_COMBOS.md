@@ -33,13 +33,13 @@ El rival necesita mazo y mano completos para usar respuestas. El motor exige car
 | Effect Veiler | Envío real desde mano, Main Phase rival y efecto de monstruo en campo admitido; la negación termina con el turno |
 | Infinite Impermanence | Desde mano solo con campo propio vacío, o colocada en un turno anterior. Niega un monstruo admitido; desde colocada registra su columna y el bloqueo Mágica/Trampa. Las columnas de ambos jugadores se relacionan por su posición física |
 | Chixiao | Destierra una carta Swordsoul/Wyrm real de mano/GY, niega el monstruo elegible y comparte presupuesto con su búsqueda |
-| Mechaba | Envía de mano el tipo correspondiente: monstruo para un efecto individual registrado en campo, mano o GY, o Mágica para las activaciones de Invocation, Branded Fusion y Vessel. Niega la activación y destierra la fuente solo si permanece en su lugar de activación registrado. No cubre efectos GY de Mágicas/Trampas, activaciones de Field Spells o Trampas, Crow/Droll desde mano ni el paquete conjunto Chixiao/Mo Ye |
+| Mechaba | Envía de mano el tipo correspondiente: monstruo para un efecto individual registrado en campo, mano o GY, o Mágica para las activaciones de Invocation, Branded Fusion y Vessel. Niega la activación y destierra la fuente solo si permanece en su lugar de activación registrado. Incluye Crow/Droll desde mano. No cubre efectos GY de Mágicas/Trampas, activaciones de Field Spells o Trampas ni el paquete conjunto Chixiao/Mo Ye |
 | Spirit Dragon | Responde a paquetes individuales de efectos GY registrados, capturando la zona antes de costes. Niega la activación sin seleccionar objetivo ni destruir la fuente; conserva costes pagados y distingue restricciones por uso y por activación. No necesita historial Synchro para esta negación |
-| D.D. Crow | Descarte físico y destierro de una carta del GY rival con perfil de salida revisado |
-| Droll | Ventana tras búsqueda o robo por efecto registrado, coste desde mano y bloqueo de añadir del Deck a la mano para ambos jugadores durante el turno. El robo ordinario de Draw Phase no abre esa ventana |
+| D.D. Crow | Objetivo físico del GY rival registrado antes de resolver, descarte como coste y destierro si resuelve; `NONE`, sin límite por turno inventado. Mechaba puede negar la activación desde mano y el descarte permanece en GY |
+| Droll | Ventana tras búsqueda o robo por efecto registrado, envío de mano a GY como coste y bloqueo de añadir del Deck a la mano para ambos jugadores durante el turno. `NONE`, sin límite por turno inventado; la oportunidad termina con la cadena y un evento elegible posterior puede abrir otra. El robo ordinario de Draw Phase no abre esa ventana |
 | Mirrorjade | Envía Fusion admitido del Extra como coste, elige al resolver sin seleccionar objetivo al activar, destierra y aplica su restricción hasta el turno siguiente. Una salida elegible por el rival puede programar la destrucción End Phase |
 
-La ampliación de mano/GY usa un registro explícito de trece handlers:
+La revisión 8 amplía el registro explícito de mano/GY a quince handlers, comprobados dentro del alcance registrado:
 
 | Paquete | Zona de activación registrada |
 | --- | --- |
@@ -51,10 +51,18 @@ La ampliación de mano/GY usa un registro explícito de trece handlers:
 | `TENYI_SHTHANA_REVIVE` | Mano o GY |
 | `LONGYUAN_SPECIAL` | Mano |
 | `LONGYUAN_BURN` | GY |
+| `DD_CROW_BANISH` | Mano; D.D. Crow |
+| `DROLL_LOCK` | Mano; Droll & Lock Bird |
 
 El registro exige passcode, jugador, UID, zona y metadatos del handler compatibles. Una Invocación Normal o un procedimiento de invocación sin activación no se convierte en efecto negable. El robo separado de Mo Ye mantiene el requisito de orden conocido; no se habilita el paquete conjunto Chixiao/Mo Ye para Mechaba.
 
 El origen se captura antes de pagar costes y se conserva en el replay. Spinny descartado desde la mano o Ashuna desterrada desde GY no se destierran de nuevo desde su nuevo destino. Si Gazelle permanece en la mano o Spinny en el GY al resolver Mechaba, puede aplicarse el destierro desde ese origen. Longyuan negado conserva su descarte y uso, sin invocación ni Token; su disparo GY negado conserva el uso y no causa daño. Spirit reconoce también ese disparo individual del GY.
+
+Crow y Droll declaran `activationRestriction: NONE`: no se marcan usos por turno ficticios. Crow fija el objetivo antes de resolver y lo conserva en la traza, aunque su efecto no llegue a desterrarlo. Su descarte y el envío de Droll permanecen pagados al negarse sus activaciones; Mechaba no destierra de nuevo sus fuentes desde GY porque activaron en mano. La restricción propia de Mechaba se mantiene.
+
+La oportunidad previa de Droll termina al cerrar la cadena, incluso si se negó Droll. Una nueva activación requiere una nueva ventana admitida y una copia disponible; un evento registrado elegible de búsqueda o robo por efecto puede crear esa ventana. `NONE` no exime las restricciones de construcción: Droll está limitada a una en el snapshot TCG actual. Esta ampliación no añade Droll como contrarrespuesta general ni prueba prioridad arbitraria dentro de cadenas.
+
+Field Spells y activaciones registradas de Trampas de Velocidad 2 siguen pendientes. Roar es una Counter Trap de Velocidad 3 y Mechaba, de Velocidad 2, no puede responder a su activación.
 
 El criterio de Mechaba se documenta con las FAQ oficiales OCG en japonés 16041, 22388 y 23949. Sus originales y citas están fijados; las explicaciones españolas no sustituyen la evidencia original. Su alcance de referencia se distingue de una certificación general TCG en [FUENTES_OFICIALES.md](FUENTES_OFICIALES.md).
 
@@ -110,7 +118,7 @@ python3 tests/run_all.py
 
 El runner compila y agrupa las suites registradas en `tests/run_all.py`, incluidas núcleo, familias, fases, respuestas, recomendaciones, formatos, documentos y navegador. El resultado de la ejecución está en `dist/validation-summary.json`; el detalle, en `tests/*-results.json` y logs. Los informes de entrega identifican el build y hash del HTML probado. `--source-inject` en pruebas de desarrollo no constituye evidencia de los bytes del entregable.
 
-La revisión 7 aprobó las comprobaciones sobre sus bytes finales en Chromium, Firefox y WebKit, incluida la apertura directa `file:` sin conexión en Firefox. Chromium mantiene el bloqueo administrativo de navegación local; WebKit tiene una limitación documentada de emulación offline local. Estas limitaciones no equivalen a un fallo demostrado del HTML en otros sistemas. Los informes identifican la compilación y los bytes comprobados.
+La revisión 7 tiene una [aceptación local documentada de 44/44 grupos](https://github.com/socramgns/MODERN/blob/719897b2f9880507b15068c4a5ca9e1a3a02d038/evidence/validation-summary.json), con 114 archivos JavaScript comprobados, Chromium, Firefox y WebKit y apertura directa offline en Firefox. La ejecución inicial aprobó 43 grupos; el flujo de contexto pasó sus 18 comprobaciones al repetirse después de ajustar un selector de la prueba al panel anidado, sin cambiar la aplicación ni el HTML. La evidencia conserva ambos intentos. La revisión 8 también aprobó las comprobaciones entre los tres motores y la apertura directa offline en Firefox sobre sus propios bytes. Chromium mantiene el bloqueo administrativo de navegación local y WebKit tiene una limitación documentada de emulación offline local.
 
 La protección Spark registrada no admite acumular dos protecciones aún sin consumir sobre el mismo objetivo ni modela la prioridad general del Damage Step. La negación GY de Spirit se limita a handlers registrados explícitamente; el descarte de Ash, Crow o Droll desde la mano no cambia el origen de su activación a GY.
 
@@ -118,7 +126,7 @@ La protección Spark registrada no admite acumular dos protecciones aún sin con
 
 El diagnóstico por carta contrasta un registro explícito de acciones parciales con los handlers y proveedores realmente presentes en la compilación. Distingue datos técnicos, uso básico acotado de Normales y efectos registrados. No presenta reconocer una carta como haber implementado todos sus efectos. El informe incluye build, catálogo y contexto; su aplicabilidad causal se limita al formato registrado.
 
-Los ocho ejemplos Invoked, Spark, Spirit, Swordsoul, Branded, Tenyi, Salamangreat y Roar se incluyen en la fuente que construye el HTML. Cargarlos sustituye la baraja actual y prepara las copias físicas y el campo declarado; no ejecuta jugadas automáticamente ni certifica la historia anterior. Se usan como demostraciones técnicas, sin etiquetas ni resultados competitivos.
+La revisión 8 incluye diez ejemplos: Invoked, Spark, Spirit, Swordsoul, Branded, Tenyi, Salamangreat y Roar, más Crow/Mechaba y Droll tras una búsqueda. Cargarlos sustituye la baraja actual y prepara las copias físicas y el campo declarado; no ejecuta jugadas automáticamente ni certifica la historia anterior. El nuevo ejemplo Crow declara dos Mechaba y a Aleister en GY; el de Droll muestra una oportunidad tras una búsqueda. Son demostraciones técnicas comprobadas dentro de la aceptación local de los bytes finales de revisión 8.
 
 
 ## Ampliaciones de la revisión 6
@@ -134,8 +142,14 @@ El laboratorio mantiene JSON avanzado y añade formularios de objetivos, selecci
 El panel de probabilidades del próximo robo calcula distribuciones exactas por identidad sobre las copias restantes. Con orden desconocido supone un barajado uniforme: no revela la siguiente carta, no cambia el mazo y no certifica una continuación. La búsqueda informa separadamente los horizontes de profundidad/turnos y los presupuestos alcanzados.
 
 
-## Estado de aceptación de la revisión 7
+## Aceptación local de la revisión 8
 
-La revisión 7 pasó **44/44 grupos de pruebas** sobre el HTML final y la comprobación de sintaxis de **114 archivos JavaScript**. Chromium, Firefox y WebKit aprobaron sus comprobaciones; Firefox completó también la apertura directa del HTML local sin conexión. Build `9361b6748958d6adfd53f3c0efdcfb54a1115df58d9e8f37e142884fbf90142b`; SHA-256 `928bd2c76835e8ab75ef15ae58d288c6dc3a5dfcdcb384152b5ad2c0cec3fa6e`. Estos resultados acreditan las tareas ejecutadas dentro del alcance registrado.
+La revisión 8 pasó **46/46 grupos de pruebas** sobre el HTML final y la comprobación de sintaxis de **114 archivos JavaScript**. Chromium, Firefox y WebKit aprobaron sus comprobaciones; Firefox completó también la apertura directa del HTML local sin conexión. Build `d7c220eb32a7876a39fb6caaeee7bbde7ee96bde1fe5353672ed44e2369f9d6b`; SHA-256 `aa5e34480df69200c7355daf8fdbc589b584cd276d890ab22977867a9ea3aeca`; tamaño **6.940.108 bytes**. Estos resultados acreditan las tareas ejecutadas dentro del alcance registrado.
 
-La publicación, la comprobación de descarga y la ejecución remota de GitHub Actions se registran por separado; la aceptación local no acredita por sí sola esos pasos. Los 41 grupos y hashes anteriores pertenecen a la [evidencia histórica de revisión 6](https://github.com/socramgns/MODERN/blob/acb9e81573b43318041fc7ab57500dc1f97adc11/evidence/validation-summary.json).
+La publicación, la comprobación de descarga HTTP y la ejecución remota de GitHub Actions se registran por separado; la aceptación local no acredita por sí sola esos pasos.
+
+`dist/validation-summary.json` identifica esta aceptación local de revisión 8. En la rama de entrega, `evidence/validation-summary.json` debe conservar los mismos identificadores. La [evidencia histórica de revisión 7](https://github.com/socramgns/MODERN/blob/719897b2f9880507b15068c4a5ca9e1a3a02d038/evidence/validation-summary.json) se consulta en su commit, sin atribuir los informes antiguos a los bytes nuevos.
+
+La revisión 7 tiene una [aceptación local documentada de 44/44 grupos](https://github.com/socramgns/MODERN/blob/719897b2f9880507b15068c4a5ca9e1a3a02d038/evidence/validation-summary.json), con 114 archivos JavaScript comprobados, Chromium, Firefox y WebKit y apertura directa offline en Firefox. La ejecución inicial aprobó 43 grupos; el flujo de contexto pasó sus 18 comprobaciones al repetirse después de ajustar un selector de la prueba al panel anidado, sin cambiar la aplicación ni el HTML. La evidencia conserva ambos intentos.
+
+La [ejecución remota de revisión 7](https://github.com/socramgns/MODERN/actions/runs/40558997215/job/122382622102) terminó **cancelada** al superar 30 minutos durante «Instalar herramientas de comprobación», antes de ejecutar las pruebas del analizador. No es un CI aprobado ni demuestra un fallo de reglas de la aplicación. La revisión 8 separa las etapas de instalación y añade caché; su resultado remoto debe consultarse por separado.

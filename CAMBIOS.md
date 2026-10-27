@@ -1,10 +1,29 @@
-# Cambios de la revisión 7
+# Cambios de la revisión 8
+
+La revisión `2026.10-stable.8` amplía Mechaba frente a Crow y Droll desde mano. Conserva el HTML único y la puntuación estructural provisional.
+
+La revisión 8 pasó **46/46 grupos de pruebas** sobre el HTML final y la comprobación de sintaxis de **114 archivos JavaScript**. Chromium, Firefox y WebKit aprobaron sus comprobaciones; Firefox completó también la apertura directa del HTML local sin conexión. Build `d7c220eb32a7876a39fb6caaeee7bbde7ee96bde1fe5353672ed44e2369f9d6b`; SHA-256 `aa5e34480df69200c7355daf8fdbc589b584cd276d890ab22977867a9ea3aeca`; tamaño **6.940.108 bytes**. Estos resultados acreditan las tareas ejecutadas dentro del alcance registrado.
+
+La publicación, la comprobación de descarga HTTP y la ejecución remota de GitHub Actions se registran por separado; la aceptación local no acredita por sí sola esos pasos.
+
+`dist/validation-summary.json` identifica esta aceptación local de revisión 8. En la rama de entrega, `evidence/validation-summary.json` debe conservar los mismos identificadores. La [evidencia histórica de revisión 7](https://github.com/socramgns/MODERN/blob/719897b2f9880507b15068c4a5ca9e1a3a02d038/evidence/validation-summary.json) se consulta en su commit, sin atribuir los informes antiguos a los bytes nuevos.
+
+- El registro de monstruos de mano/GY pasa de trece a quince paquetes explícitos. Crow y Droll declaran `NONE`: se respetan sus ventanas sin inventar un límite de una vez por turno.
+- Crow fija el objetivo antes de resolver. Crow descarta y Droll envía su fuente de mano al GY como costes; si se niega la activación, los pagos permanecen y Mechaba no destierra de nuevo esas fuentes desde otra zona.
+- La oportunidad de Droll termina con la cadena, aunque quede negado. Una nueva activación requiere una nueva ventana admitida y una copia disponible; no se añade prioridad arbitraria. `NONE` no exime las cantidades de construcción: el snapshot TCG actual mantiene Droll limitada a una.
+- Se incorporan diez ejemplos con los ocho anteriores conservados. Los nuevos muestran Crow frente a dos Mechaba que pueden proteger a Aleister en GY, y Droll tras una búsqueda. Sus campos iniciales son supuestos declarados y los pasos se ejecutan manualmente.
+- El workflow separa instalación Python, dependencias de sistema y descarga idempotente de cada motor, añade caché por sistema y requisitos y acota tiempos/reintentos. El CI remoto de revisión 8 no se presenta como ejecutado ni aprobado por escribir esa configuración.
+- Field Spells y activaciones de Trampas de Velocidad 2 siguen pendientes. Mechaba no puede responder a la Counter Trap Roar de Velocidad 3.
+
+## Antecedente: revisión 7
 
 La revisión `2026.10-stable.7` amplía Mechaba y los ejemplos incorporados. Conserva las funciones anteriores, la entrega de un único HTML y la puntuación estructural provisional.
 
 La revisión 7 pasó **44/44 grupos de pruebas** sobre el HTML final y la comprobación de sintaxis de **114 archivos JavaScript**. Chromium, Firefox y WebKit aprobaron sus comprobaciones; Firefox completó también la apertura directa del HTML local sin conexión. Build `9361b6748958d6adfd53f3c0efdcfb54a1115df58d9e8f37e142884fbf90142b`; SHA-256 `928bd2c76835e8ab75ef15ae58d288c6dc3a5dfcdcb384152b5ad2c0cec3fa6e`. Estos resultados acreditan las tareas ejecutadas dentro del alcance registrado.
 
-La publicación, la comprobación de descarga y la ejecución remota de GitHub Actions se registran por separado; la aceptación local no acredita por sí sola esos pasos.
+La revisión 7 tiene una [aceptación local documentada de 44/44 grupos](https://github.com/socramgns/MODERN/blob/719897b2f9880507b15068c4a5ca9e1a3a02d038/evidence/validation-summary.json), con 114 archivos JavaScript comprobados, Chromium, Firefox y WebKit y apertura directa offline en Firefox. La ejecución inicial aprobó 43 grupos; el flujo de contexto pasó sus 18 comprobaciones al repetirse después de ajustar un selector de la prueba al panel anidado, sin cambiar la aplicación ni el HTML. La evidencia conserva ambos intentos.
+
+La [ejecución remota de revisión 7](https://github.com/socramgns/MODERN/actions/runs/40558997215/job/122382622102) terminó **cancelada** al superar 30 minutos durante «Instalar herramientas de comprobación», antes de ejecutar las pruebas del analizador. No es un CI aprobado ni demuestra un fallo de reglas de la aplicación. La revisión 8 separa las etapas de instalación y añade caché; su resultado remoto debe consultarse por separado.
 
 - Mechaba reconoce trece paquetes explícitos de efectos de monstruos activados en mano o Cementerio. Comprueba identidad, copia física, jugador, zona y restricciones del handler; no infiere cobertura a partir del texto del catálogo.
 - El origen de activación se captura antes de los costes. Una fuente que salió de ese lugar como coste conserva su destino aunque Mechaba niegue la activación. El coste de respuesta tampoco se devuelve.
@@ -16,7 +35,7 @@ La publicación, la comprobación de descarga y la ejecución remota de GitHub A
 
 ## Antecedente: revisión 6 aceptada
 
-La [evidencia histórica de revisión 6](https://github.com/socramgns/MODERN/blob/acb9e81573b43318041fc7ab57500dc1f97adc11/evidence/validation-summary.json) se conserva en su commit de entrega; los informes actuales corresponden a revisión 7.
+La [evidencia histórica de revisión 6](https://github.com/socramgns/MODERN/blob/acb9e81573b43318041fc7ab57500dc1f97adc11/evidence/validation-summary.json) y la [de revisión 7](https://github.com/socramgns/MODERN/blob/719897b2f9880507b15068c4a5ca9e1a3a02d038/evidence/validation-summary.json) se conservan en sus commits; no acreditan los bytes nuevos de revisión 8.
 
 La revisión `2026.10-stable.6` amplía el catálogo y las acciones registradas, simplifica el laboratorio y añade evidencia documental y de distribución. Conserva el HTML único y la puntuación estructural provisional.
 

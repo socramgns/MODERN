@@ -144,4 +144,3 @@ def load_references(root=ROOT):
     return {**bundle, 'storedBytesRechecked': True,
             'verifiedReferenceCount': checked['references'],
             'sourceAuthenticatedInThisRun': False}
-

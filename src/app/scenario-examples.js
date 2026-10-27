@@ -67,7 +67,27 @@ const roar=base('roar','Roar: una negación y su contrarrespuesta','Compara una 
  'Comprueba Mechaba en tu campo, los dos materiales en tu Cementerio y las dos Roar en sus respectivos Cementerios. Roar no exige descartar: los materiales de Fusión se usan al resolver Invocation.',
  'Para comparar, deshaz el paso y elige Invocation con Roar rival y sin contrarrespuesta: no se invoca Mechaba y los materiales permanecen en tu mano. El replay conserva ambos resultados por separado.'
  ],'RESPONSES_EXPLICIT',['ROAR'],'CHOICE_BRANCHES');
-const templates=new Map([spark,spirit,invoked,swordsoul,branded,tenyi,salamangreat,roar].map(value=>[value.id,value]));
+const crowOwnDeck=deck([[86120751,1],[74063034,1],[89631139,1]],[[75286621,2]]),crowOwnOpening=[74063034,89631139,...NORMALS.slice(0,3)],crowRivalDeck=deck([[24508238,1]],[]),crowRivalOpening=[24508238,...NORMALS.slice(0,4)];
+const crow=base('crow','Crow: proteger Aleister y construir otro Mechaba','Niega a Crow rival para conservar el Aleister del Cementerio y usarlo en una segunda Fusión.',physical(crowOwnDeck,crowOwnOpening),physical(crowRivalDeck,crowRivalOpening),{turn:2,activePlayer:0,phase:'MAIN 1',placements:[
+ {player:0,from:'deck',cardId:86120751,zone:'gy'},
+ {player:0,from:'extra',cardId:75286621,zone:'monster',zoneIndex:0,position:'ATTACK',faceUp:true,summonTurn:1}
+ ]},{requiredFieldIds:[75286621,75286621]},[
+ 'Selecciona D.D. Crow del jugador 2 sobre Aleister de tu Cementerio. Elige la respuesta de tu Mechaba pagando 7 Colored Fish de tu mano. El Mechaba y Aleister previos son un campo inicial declarado.',
+ 'Ejecuta el paso: Crow se descarta al Cementerio como coste y Mechaba niega su activación. Aleister permanece en tu Cementerio; Crow no se destierra desde su nueva zona. Comprueba ambos costes y el replay.',
+ 'Activa Invocation con Aleister de tu Cementerio y Blue-Eyes de tu mano como materiales para invocar tu segunda copia de Mechaba. El objetivo exige dos copias distintas en tu campo.',
+ 'Para comparar, deshaz la Fusión y el paso de Crow. Elige ahora Crow sin respuesta: paga su descarte y destierra a Aleister. Sin ese material ya no aparece esta Fusión de Invocation.'
+ ],'RESPONSES_EXPLICIT',['MECHABA'],'CHOICE_BRANCHES');
+const drollOwnDeck=deck([[86120751,1],[74063034,2]],[[75286621,1]]),drollOwnOpening=[86120751,...NORMALS.slice(0,4)],drollRivalDeck=deck([[94145021,1]],[]),drollRivalOpening=[94145021,...NORMALS.slice(0,4)];
+const droll=base('droll','Droll: una búsqueda y su negación desde la mano','Busca Invocation con Aleister y compara Droll negado por tu Mechaba con su bloqueo resuelto.',physical(drollOwnDeck,drollOwnOpening),physical(drollRivalDeck,drollRivalOpening),{turn:2,activePlayer:0,phase:'MAIN 1',placements:[
+ {player:0,from:'extra',cardId:75286621,zone:'monster',zoneIndex:0,position:'ATTACK',faceUp:true,summonTurn:1}
+ ]},{requiredFieldIds:[75286621],requiredHandIds:[74063034]},[
+ 'Invoca normalmente a Aleister desde tu mano. El Mechaba que ya está en el campo es un supuesto inicial declarado.',
+ 'Resuelve Aleister para buscar Invocation. Esa búsqueda abre la ventana registrada de Droll rival; el robo ordinario no abre esta ventana.',
+ 'Elige Droll del jugador 2 con respuesta de tu Mechaba. Droll se envía de la mano al Cementerio y tu Mechaba paga un monstruo real de tu mano; al negarse la activación no se aplica el bloqueo de añadir cartas del Deck.',
+ 'Comprueba que Droll permanece en el Cementerio, conserva ambos costes y revisa el replay. Al terminar esta cadena se cierra la ventana de la búsqueda anterior; otra activación necesitaría un evento nuevo admitido. El ejemplo respeta el límite de una copia de Droll de la lista incorporada.',
+ 'Deshaz el último paso y elige Droll sin respuesta: el mismo coste permanece pagado y ahora el bloqueo se aplica a los dos jugadores durante el resto del turno.'
+ ],'RESPONSES_EXPLICIT',['MECHABA'],'CHOICE_BRANCHES');
+const templates=new Map([spark,spirit,invoked,swordsoul,branded,tenyi,salamangreat,roar,crow,droll].map(value=>[value.id,value]));
 const describe=value=>({id:value.id,name:value.name,description:value.description,scope:value.scope,steps:clone(value.tutorial.steps),replacesDeck:true,initialHistoryCertified:false,competitiveRecommendation:false});
 function list(){return[...templates.values()].map(describe);}
 function get(id){if(typeof id!=='string'||!templates.has(id))throw Error('SCENARIO_EXAMPLE_UNKNOWN');return clone(templates.get(id));}
@@ -87,5 +107,5 @@ async function load(id){const spec=get(id);if(loading)throw Error('SCENARIO_EXAM
  await A.initialize({goal:spec.goal});
  return{pass:true,status:'SCENARIO_EXAMPLE_LOADED',id,name:spec.name,message:'Ejemplo cargado. El campo inicial es un supuesto declarado; selecciona y ejecuta cada acción en el laboratorio.',steps:clone(spec.tutorial.steps),report:clone(A.report())};
  }finally{loading=false;}}
-W.YGOScenarioExamples=Object.freeze({version:'self-contained-physical-examples-v2',list,get,load,get isBusy(){return loading;}});
+W.YGOScenarioExamples=Object.freeze({version:'self-contained-physical-examples-v3',list,get,load,get isBusy(){return loading;}});
 })();

@@ -32,9 +32,15 @@ La fuente incluye tres respuestas de la base de datos oficial **OCG, en japonés
 
 `src/data/mechaba-ruling-references.json` conserva las URLs, jurisdicción OCG, campos y citas japonesas, con sus SHA-256. Los documentos originales y los metadatos de captura están en `src/data/official/mechaba-faq-*.html` y `*.metadata.json`. Las explicaciones españolas acompañan a esas citas; no son evidencia primaria.
 
-`tools/mechaba_references.py` vuelve a comprobar bytes, campos, citas, identidad y alcance, sin red. `tools/build.py` incorpora la referencia validada en `YGO_RULE_REFERENCES` y en el manifiesto. El panel **Referencias de Mechaba y los costes** muestra los enlaces y explicaciones. La aceptación local de revisión 7 comprende los bytes finales que incorporan estas referencias y su comprobación documental. Los resultados de publicación y CI remoto se registran por separado.
+`tools/mechaba_references.py` vuelve a comprobar bytes, campos, citas, identidad y alcance, sin red. `tools/build.py` incorpora la referencia validada en `YGO_RULE_REFERENCES` y en el manifiesto. El panel **Referencias de Mechaba y los costes** muestra los enlaces y explicaciones. La [aceptación local de revisión 7](https://github.com/socramgns/MODERN/blob/719897b2f9880507b15068c4a5ca9e1a3a02d038/evidence/validation-summary.json) comprende sus bytes y su comprobación documental. La aceptación local de revisión 8 también comprende sus propios bytes finales, las referencias incorporadas y las comprobaciones documentales. La publicación y el resultado remoto de CI se registran por separado.
 
 El alcance declarado es `TCG_REFERENCE_NOT_TCG_RULING_CERTIFICATION`: documenta el criterio utilizado por los paquetes registrados del analizador TCG y conserva su autoridad original OCG. No certifica todos los rulings TCG, los efectos de Pankratops o Maxx “C” en el simulador, los pools ni los resultados competitivos. Un recibo guardado describe la captura HTTPS; su comprobación local posterior no vuelve a autenticar ese transporte.
+
+## Aplicación de estas referencias en la revisión 8
+
+La revisión 8 conserva el criterio de lugar de activación para los nuevos paquetes Crow/Droll desde mano. Que su coste los lleve al GY no convierte su efecto en una activación de GY ni permite el destierro asociado desde ese nuevo destino. Las citas anteriores no se presentan como certificación universal de esos efectos, de sus ventanas o de todos los rulings TCG; la revisión 8 no afirma una captura documental oficial nueva para completar esos apartados.
+
+La comprobación de documentos y las pruebas del motor son evidencias distintas. La [ejecución remota de revisión 7](https://github.com/socramgns/MODERN/actions/runs/40558997215/job/122382622102) terminó **cancelada** al superar 30 minutos durante «Instalar herramientas de comprobación», antes de ejecutar las pruebas del analizador. No es un CI aprobado ni demuestra un fallo de reglas de la aplicación. La revisión 8 separa las etapas de instalación y añade caché; su resultado remoto debe consultarse por separado.
 
 ## Herramienta entregada
 

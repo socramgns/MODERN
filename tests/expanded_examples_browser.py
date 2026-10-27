@@ -37,7 +37,9 @@ def execute_step(page, action_type, **criteria):
           if(key==='destination'&&a.destination!==value)return false;
           if(key==='makeToken'&&a.makeToken!==value)return false;
           if(key==='triggerKind'&&a.triggerKind!==value)return false;
-          if(key==='responseType'&&a.response?.type!==value)return false;
+          if(key==='responseType'&&(a.response?.type??null)!==value)return false;
+          if(key==='responseCostCard'&&id(a.response?.costUid)!==value)return false;
+          if(key==='player'&&a.player!==value)return false;
           if(key==='counterCount'&&(a.counterResponses||[]).length!==value)return false;
         }
         return true;
@@ -104,9 +106,9 @@ def check_mechaba_release(page, check):
         'TENYI_HAND_SPECIAL', 'TENYI_ASHUNA_DECK', 'TENYI_ADHARA_RECOVER', 'TENYI_VISHUDA_BOUNCE',
         'SALAMANGREAT_GAZELLE_HAND', 'SALAMANGREAT_SPINNY_DISCARD', 'SALAMANGREAT_SPINNY_REVIVE',
         'MOYE_DRAW', 'DUEL_ANCIENTS_END_SUMMON', 'ANCIENTS_RECOVER_BLUE_EYES', 'TENYI_SHTHANA_REVIVE',
-        'LONGYUAN_SPECIAL', 'LONGYUAN_BURN'}
-    check('delivered_mechaba_registry_contains_the_thirteen_reviewed_hand_and_gy_handlers',
-          len(evidence['registry']) == 13
+        'LONGYUAN_SPECIAL', 'LONGYUAN_BURN', 'DD_CROW_BANISH', 'DROLL_LOCK'}
+    check('delivered_mechaba_registry_contains_the_fifteen_reviewed_hand_and_gy_handlers',
+          len(evidence['registry']) == 15
           and {row['type'] for row in evidence['registry']} == expected_handlers
           and all(row['cardIds'] and row['activationZones']
                   and set(row['activationZones']).issubset({'hand', 'gy'}) for row in evidence['registry']))
@@ -198,13 +200,13 @@ def run(url=None, source_inject=False):
         check('embedded_tutorials_boot_offline_with_expected_document_bytes', response is not None
               and hashlib.sha256(response.body()).hexdigest() == hashlib.sha256(html).hexdigest()
               and page.evaluate('()=>navigator.onLine===false'))
-        expected_ids = ['spark', 'spirit', 'invoked', 'swordsoul', 'branded', 'tenyi', 'salamangreat', 'roar']
+        expected_ids = ['spark', 'spirit', 'invoked', 'swordsoul', 'branded', 'tenyi', 'salamangreat', 'roar', 'crow', 'droll']
         definitions = page.evaluate('()=>YGOScenarioExamples.list()')
         menu_ids = page.locator('#ygoExampleSelect').evaluate('(el)=>[...el.options].map(option=>option.value)')
         check('dynamic_example_menu_preserves_originals_and_lists_every_registered_tutorial',
               [row['id'] for row in definitions] == expected_ids and menu_ids == expected_ids)
         check_mechaba_release(page, check)
-        for example_id in expected_ids[3:]:
+        for example_id in ['swordsoul', 'branded', 'tenyi', 'salamangreat', 'roar']:
             try:
                 initial = load_example(page, example_id)
                 steps = next(row['steps'] for row in definitions if row['id'] == example_id)

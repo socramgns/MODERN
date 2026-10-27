@@ -1,7 +1,7 @@
-# Evidencia de la revisión 7
+# Evidencia de la revisión 8
 
-Estos informes identifican el build y SHA-256 del HTML aceptado. La validación local pasó 44/44 grupos; se comprobaron 114 archivos JavaScript. Chromium, Firefox y WebKit aprobaron sus comprobaciones. El flujo `file:` sin conexión se ejecutó en Firefox. El informe `release6-browser.json` ejecuta las regresiones de aquella revisión sobre los bytes nuevos; `revision7-browser.json` comprueba las referencias y ampliaciones de esta entrega.
+La validación local pasó 46/46 grupos sobre el build y SHA-256 identificados en los informes; se comprobaron 114 archivos JavaScript. Chromium, Firefox y WebKit aprobaron sus comprobaciones. El HTML también se abrió directamente mediante `file:` sin conexión en Firefox.
 
-Las reglas y cadenas tienen un alcance registrado y la puntuación sigue provisional. Las FAQ japonesas son referencias OCG para el criterio modelado, no certificación general TCG. Los logs y otros informes se generan en `tests/` y en los artefactos del workflow. La aceptación local no equivale por sí sola a un resultado remoto de CI.
+`release6-browser.json` ejecuta las regresiones de aquella revisión sobre los bytes nuevos; `expanded-examples-browser.json` comprueba referencias y rutas anteriores; `revision8-browser.json` comprueba los ejemplos nuevos, costes, variantes, deshacer, exportación y replay. La evidencia histórica de revisión 7 permanece en su commit publicado.
 
-La ejecución inicial aprobó 43 de 44 grupos. Se ajustó el selector de la prueba de contexto al nuevo panel anidado y se repitió únicamente ese flujo: 18/18 comprobaciones aprobadas. No cambió la aplicación ni el HTML. El resumen final conserva la reejecución y el informe inicial se incluye en `validation-initial-attempt.json`.
+La puntuación sigue provisional. Los paquetes registrados no certifican todas las reglas ni prioridad general. Droll está limitada a una copia por el snapshot TCG; los casos unitarios de repetición usan la misma copia con una recuperación declarada como fixture de pruebas, no como efecto o combo del producto. Las FAQ japonesas conservan su alcance OCG. La aceptación local no equivale a un resultado remoto de CI.

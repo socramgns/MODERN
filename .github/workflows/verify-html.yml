@@ -12,19 +12,59 @@ permissions:
 jobs:
   verify:
     runs-on: ubuntu-24.04
-    timeout-minutes: 30
+    timeout-minutes: 45
+    env:
+      PIP_DISABLE_PIP_VERSION_CHECK: '1'
+      PLAYWRIGHT_BROWSERS_PATH: ${{ github.workspace }}/.cache/ms-playwright
+      PLAYWRIGHT_DOWNLOAD_CONNECTION_TIMEOUT: '90000'
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+          cache: pip
+          cache-dependency-path: requirements-dev.txt
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Instalar herramientas de comprobación
+      - name: Instalar dependencias Python de comprobación
+        timeout-minutes: 4
         run: |
-          python -m pip install -r requirements-dev.txt
-          python -m playwright install --with-deps chromium firefox webkit
+          python --version
+          python -m pip --version
+          python -m pip install --timeout 45 --retries 2 -r requirements-dev.txt
+          python -m playwright --version
+      - name: Recuperar la caché de navegadores Playwright
+        timeout-minutes: 3
+        uses: actions/cache@v4
+        with:
+          path: ${{ env.PLAYWRIGHT_BROWSERS_PATH }}
+          key: ${{ runner.os }}-playwright-${{ hashFiles('requirements-dev.txt') }}
+      # La caché solo contiene binarios. Las dependencias del sistema se
+      # comprueban siempre, incluso cuando los tres navegadores están en caché.
+      - name: Instalar dependencias del sistema para los tres motores
+        timeout-minutes: 8
+        run: |
+          sudo tee /etc/apt/apt.conf.d/99-ygo-network-timeouts >/dev/null <<'APT'
+          Acquire::http::Timeout "30";
+          Acquire::https::Timeout "30";
+          Acquire::Retries "2";
+          APT
+          python -m playwright install-deps chromium firefox webkit
+      # Cada instalación comprueba también una caché existente y solo descarga
+      # lo que falte para la versión fijada de Playwright.
+      - name: Preparar Chromium
+        timeout-minutes: 5
+        run: python -m playwright install chromium
+      - name: Preparar Firefox
+        timeout-minutes: 5
+        run: python -m playwright install firefox
+      - name: Preparar WebKit
+        timeout-minutes: 5
+        run: python -m playwright install webkit
+      - name: Registrar la ruta de Chromium para las pruebas existentes
+        timeout-minutes: 1
+        run: |
           python - <<'PY'
           from playwright.sync_api import sync_playwright
           from pathlib import Path
@@ -35,19 +75,24 @@ jobs:
             sudo ln -s "$(cat /tmp/ygo-chromium-path)" /usr/bin/chromium
           fi
       - name: Recuperar la fuente técnica fijada y comprobar idempotencia
+        timeout-minutes: 4
         run: |
           python tools/update_catalog.py --commit ae5dedb957c2c48ab86554fee08a0fca73d8b1cf
           git diff --exit-code -- src/data
       - name: Compilar y comparar el HTML publicado
+        timeout-minutes: 3
         run: |
           python tools/build.py
           cmp Analizador_YuGiOh.html dist/Calculadora_de_Barajas_YuGiOh_Alpha_1263_Corregida.html
       - name: Ejecutar pruebas del entregable
+        timeout-minutes: 15
         run: python tests/run_all.py --no-build
       - name: Exigir comprobación entre motores
+        timeout-minutes: 5
         run: python tests/compatibility_browser.py --require-cross-browser
       - name: Guardar los informes
         if: always()
+        timeout-minutes: 3
         uses: actions/upload-artifact@v4
         with:
           name: pruebas-analizador-yugioh

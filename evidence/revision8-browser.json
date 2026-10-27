@@ -1,0 +1,104 @@
+{
+  "schema": "ygo-release8-browser/v1",
+  "pass": true,
+  "buildId": "d7c220eb32a7876a39fb6caaeee7bbde7ee96bde1fe5353672ed44e2369f9d6b",
+  "htmlSha256": "aa5e34480df69200c7355daf8fdbc589b584cd276d890ab22977867a9ea3aeca",
+  "artifactMode": "DELIVERED_BYTES",
+  "sourceInjection": false,
+  "checks": [
+    {
+      "name": "release8_boots_offline_from_the_manifest_bound_document",
+      "pass": true
+    },
+    {
+      "name": "ten_visible_examples_preserve_the_previous_eight_identifiers",
+      "pass": true
+    },
+    {
+      "name": "crow_and_droll_are_explicit_hand_packets_without_an_invented_once_per_turn",
+      "pass": true
+    },
+    {
+      "name": "crow_guide_loads_without_autoplay_and_requires_a_second_mechaba",
+      "pass": true
+    },
+    {
+      "name": "crow_negation_preserves_the_opposing_discard_and_own_mechaba_cost",
+      "pass": true
+    },
+    {
+      "name": "crow_is_not_banished_again_from_its_new_gy_location",
+      "pass": true
+    },
+    {
+      "name": "the_preserved_aleister_enables_a_second_distinct_physical_mechaba",
+      "pass": true
+    },
+    {
+      "name": "crow_report_export_is_bound_to_the_current_build_and_verified_trace",
+      "pass": true
+    },
+    {
+      "name": "undo_restores_both_costs_and_the_original_crow_target",
+      "pass": true
+    },
+    {
+      "name": "passing_mechaba_banishes_aleister_and_removes_this_invocation_route",
+      "pass": true
+    },
+    {
+      "name": "crow_saved_report_reimports_and_replays_the_negated_branch",
+      "pass": true
+    },
+    {
+      "name": "droll_guide_respects_the_dated_one_copy_limit_without_autoplay",
+      "pass": true
+    },
+    {
+      "name": "normal_summoning_alone_does_not_create_a_droll_window",
+      "pass": true
+    },
+    {
+      "name": "aleisters_actual_search_opens_the_registered_opposing_hand_window",
+      "pass": true
+    },
+    {
+      "name": "droll_negation_keeps_both_send_costs_in_gy_without_a_deck_to_hand_lock",
+      "pass": true
+    },
+    {
+      "name": "the_resolved_chain_closes_the_old_droll_window_without_an_opt_flag",
+      "pass": true
+    },
+    {
+      "name": "undo_restores_the_physical_droll_and_the_search_window",
+      "pass": true
+    },
+    {
+      "name": "passing_mechaba_applies_droll_to_both_players_and_keeps_its_send_cost",
+      "pass": true
+    },
+    {
+      "name": "release8_tasks_raise_no_javascript_page_errors",
+      "pass": true
+    },
+    {
+      "name": "compiled_document_is_unchanged_during_release8_tasks",
+      "pass": true
+    }
+  ],
+  "details": {
+    "release8_tasks_raise_no_javascript_page_errors": []
+  },
+  "browser": {
+    "engine": "chromium",
+    "version": "154.0.8037.57"
+  },
+  "externalRequestsBlocked": 31,
+  "limitations": [
+    "The dated TCG list limits Droll to one copy in the product fixtures.",
+    "The starting Mechaba and Aleister GY history are declared, not reconstructed summons.",
+    "Recorded packet and replay checks do not establish universal priority or competitive results."
+  ],
+  "elapsedSeconds": 19.33
+}
