@@ -1,0 +1,16 @@
+{
+  "schema": "ygo-official-faq-capture/v1",
+  "requestedUrl": "https://www.db.yugioh-card.com/yugiohdb/faq_search.action?ope=5&fid=23949&request_locale=ja",
+  "resolvedUrl": "https://www.db.yugioh-card.com/yugiohdb/faq_search.action?ope=5&fid=23949&request_locale=ja",
+  "httpStatus": 200,
+  "contentType": "text/html;charset=UTF-8",
+  "retrievedAt": "2026-10-27T06:27:54.912700+00:00",
+  "rawSha256": "2dade63f26e749b48b573112cca9b887cb71f6a6c9bb60e3a0f3e00dfcd09096",
+  "bytes": 88877,
+  "captureTransport": "DIRECT_HTTPS_TLS_VALIDATED_AT_CAPTURE",
+  "formatAuthority": "OCG",
+  "language": "ja",
+  "faqId": 23949,
+  "officialCardCid": 12849,
+  "savedReceiptAuthenticatesOriginInLaterRuns": false
+}

@@ -1,8 +1,8 @@
 {
   "schema": "ygo-release6-browser/v1",
   "pass": true,
-  "buildId": "a214f91b5554fb95b64a72cce9a1729eab468b9729229d97494980688b3de119",
-  "htmlSha256": "9fb3b88702cd55655125975be8acba7340545619312e3242723908866957ea37",
+  "buildId": "9361b6748958d6adfd53f3c0efdcfb54a1115df58d9e8f37e142884fbf90142b",
+  "htmlSha256": "928bd2c76835e8ab75ef15ae58d288c6dc3a5dfcdcb384152b5ad2c0cec3fa6e",
   "artifactMode": "DELIVERED_BYTES",
   "checks": [
     {
@@ -65,5 +65,5 @@
     "Technical physical fixtures are not competitive deck recommendations.",
     "Registered providers and chains keep their declared scope."
   ],
-  "elapsedSeconds": 16.14
+  "elapsedSeconds": 16.34
 }

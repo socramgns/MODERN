@@ -3,7 +3,7 @@ name: Verificar HTML del analizador
 on:
   workflow_dispatch:
   push:
-    branches: [entrega/analizador-yugioh-estable6]
+    branches: ['entrega/analizador-yugioh-estable*']
   pull_request:
 
 permissions:

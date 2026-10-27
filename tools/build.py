@@ -65,6 +65,18 @@ def official_context(root=ROOT):
             'retrievalAuthenticatedInThisBuild': False}
 
 
+def rule_references(root=ROOT):
+    """Validate fixed documentary references while preserving their jurisdiction."""
+    if not (root / 'src/data/mechaba-ruling-references.json').exists():
+        return None
+    specification = importlib.util.spec_from_file_location('ygo_build_rule_references', ROOT / 'tools/mechaba_references.py')
+    verifier = importlib.util.module_from_spec(specification)
+    specification.loader.exec_module(verifier)
+    saved = verifier.load_references(root)
+    return {**saved, 'storedBytesRecheckedAtBuild': True,
+            'retrievalAuthenticatedInThisBuild': False}
+
+
 def build():
     manifest = json.loads((ROOT / "manifest.json").read_text())
     cards_bytes = (ROOT / "src/data/cards.json").read_bytes()
@@ -94,6 +106,7 @@ def build():
     catalog_path = ROOT / "src/data/catalog-manifest.json"
     catalog_manifest = json.loads(catalog_path.read_text()) if catalog_path.exists() else {"cardCount": len(cards), "enrichmentStatus": "PENDING"}
     verification = official_context()
+    references = rule_references()
     build_manifest = {
         "version": manifest["version"], "revision": manifest["revision"],
         "canonicalId": manifest["canonicalId"], "moduleCount": len(chunks),
@@ -103,12 +116,13 @@ def build():
         "catalogSha256": digest(cards_bytes), "dataVersion": digest(cards_bytes),
         "scope": {"primaryFormat": "TCG", "ranking": "STRUCTURAL_PROVISIONAL", "search": "DECLARED_BOUNDED_SCOPE", "universalCertified": False},
         "officialContextVerification": verification,
+        "ruleReferences": references,
     }
     html = (ROOT / "src/template.html").read_text()
     for number in manifest["scripts"]:
         html = html.replace(f"@@SCRIPT_{number:02d}@@", compiled["sources"][f"src/scripts/script-{number:02d}.js"])
     html = html.replace("@@SCRIPT_03@@", packed(cards)).replace("@@SCRIPT_05@@", packed(bundle))
-    header = "window.YGO_BUILD_MANIFEST=" + js_json(build_manifest) + ";\nwindow.YGO_CATALOG_MANIFEST=" + js_json(catalog_manifest) + ";\nwindow.YGO_OFFICIAL_CONTEXT_VERIFICATION=" + js_json(verification) + ";"
+    header = "window.YGO_BUILD_MANIFEST=" + js_json(build_manifest) + ";\nwindow.YGO_CATALOG_MANIFEST=" + js_json(catalog_manifest) + ";\nwindow.YGO_OFFICIAL_CONTEXT_VERIFICATION=" + js_json(verification) + ";\nwindow.YGO_RULE_REFERENCES=" + js_json(references) + ";"
     html = html.replace("@@BUILD_MANIFEST@@", header)
     extensions = []
     for path in manifest["extensions"]:

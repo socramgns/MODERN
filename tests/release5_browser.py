@@ -105,10 +105,12 @@ def run(url=None):
               page.evaluate('()=>YGO_BUILD_MANIFEST.buildId') == build['buildId']
               and html_hash == build['htmlSha256'])
         example_defs = page.evaluate('()=>YGOScenarioExamples.list()')
-        check('three_embedded_examples_are_declared_with_physical_deck_replacement',
-              [row['id'] for row in example_defs] == ['spark', 'spirit', 'invoked']
+        check('original_embedded_examples_preserved_and_menu_matches_declared_inventory',
+              [row['id'] for row in example_defs][:3] == ['spark', 'spirit', 'invoked']
+              and len({row['id'] for row in example_defs}) == len(example_defs)
               and all(row.get('replacesDeck') is True for row in example_defs)
-              and page.locator('#ygoExampleSelect option').count() == 3
+              and page.locator('#ygoExampleSelect option').count() == len(example_defs)
+              and page.locator('#ygoExampleSelect').evaluate('(el)=>[...el.options].map(option=>option.value)') == [row['id'] for row in example_defs]
               and page.locator('#ygoExampleSelect').evaluate(
                   '(el)=>/sustituy|reemplaz/i.test(el.closest("details").textContent)'))
 

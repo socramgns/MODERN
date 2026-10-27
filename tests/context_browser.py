@@ -69,7 +69,7 @@ def run(url):
         check('context_change_cancels_running_search',cancelled['result'].get('status')=='CANCELLED_OR_STALE' and cancelled['report']['search'] is None and not cancelled['busy'],cancelled['result'].get('status'))
         mismatch=page.evaluate('''async f=>{const snapshot=structuredClone(BANLIST_PROFILES.tcg);const prior=YGOFormats.snapshotIdentity(snapshot,'tcg'),originalDate=snapshot.date;const row=snapshot.data[0];row.max=Number(row.max)===0?1:0;YGOUIState.setFormatContext({format:'tcg',snapshot});YGOUIState.sync();await YGOComboWorkbench.loadScenario(f);let error=null,result=null;try{result=await YGOComboWorkbench.run()}catch(e){error=String(e.message||e)}return{prior,changed:YGOFormats.snapshotIdentity(snapshot,'tcg'),sameDate:snapshot.date===originalDate,error,result,report:YGOComboWorkbench.report(),profileUnchanged:YGOFormats.snapshotIdentity(BANLIST_PROFILES.tcg,'tcg')===prior};}''',fixture)
         check('changed_snapshot_same_date_blocks_causal_search',mismatch['sameDate'] and mismatch['prior']!=mismatch['changed'] and mismatch['profileUnchanged'] and mismatch['error'] and 'snapshot TCG incorporado' in mismatch['error'] and mismatch['report']['search'] is None,mismatch['error'])
-        page.locator('#ygoStableRelease > details').first.locator('summary').click()
+        page.locator('#ygoStableRelease > details > summary').first.click()
         page.locator('[data-action=format-reset]').click()
         reset=page.evaluate('()=>({context:YGOUIState.getFormatContext(),status:document.querySelector("[data-stable-message]").textContent})')
         check('reset_button_restores_incorporated_context',reset['context']=={'format':'tcg'} and 'Restablecido' in reset['status'],reset)

@@ -33,11 +33,30 @@ El rival necesita mazo y mano completos para usar respuestas. El motor exige car
 | Effect Veiler | Envío real desde mano, Main Phase rival y efecto de monstruo en campo admitido; la negación termina con el turno |
 | Infinite Impermanence | Desde mano solo con campo propio vacío, o colocada en un turno anterior. Niega un monstruo admitido; desde colocada registra su columna y el bloqueo Mágica/Trampa. Las columnas de ambos jugadores se relacionan por su posición física |
 | Chixiao | Destierra una carta Swordsoul/Wyrm real de mano/GY, niega el monstruo elegible y comparte presupuesto con su búsqueda |
-| Mechaba | Envía de mano el tipo correspondiente: monstruo para una activación individual de efecto de monstruo en campo o Mágica para las activaciones registradas de Invocation, Branded Fusion y Vessel. Niega activación y destierra la fuente cuando corresponde. No niega efectos GY de Mágicas/Trampas; las activaciones de Field Spells, Trampas y el paquete conjunto Chixiao/Mo Ye permanecen fuera del registro |
+| Mechaba | Envía de mano el tipo correspondiente: monstruo para un efecto individual registrado en campo, mano o GY, o Mágica para las activaciones de Invocation, Branded Fusion y Vessel. Niega la activación y destierra la fuente solo si permanece en su lugar de activación registrado. No cubre efectos GY de Mágicas/Trampas, activaciones de Field Spells o Trampas, Crow/Droll desde mano ni el paquete conjunto Chixiao/Mo Ye |
 | Spirit Dragon | Responde a paquetes individuales de efectos GY registrados, capturando la zona antes de costes. Niega la activación sin seleccionar objetivo ni destruir la fuente; conserva costes pagados y distingue restricciones por uso y por activación. No necesita historial Synchro para esta negación |
 | D.D. Crow | Descarte físico y destierro de una carta del GY rival con perfil de salida revisado |
 | Droll | Ventana tras búsqueda o robo por efecto registrado, coste desde mano y bloqueo de añadir del Deck a la mano para ambos jugadores durante el turno. El robo ordinario de Draw Phase no abre esa ventana |
 | Mirrorjade | Envía Fusion admitido del Extra como coste, elige al resolver sin seleccionar objetivo al activar, destierra y aplica su restricción hasta el turno siguiente. Una salida elegible por el rival puede programar la destrucción End Phase |
+
+La ampliación de mano/GY usa un registro explícito de trece handlers:
+
+| Paquete | Zona de activación registrada |
+| --- | --- |
+| `TENYI_HAND_SPECIAL` | Mano, para Ashuna, Adhara, Vishuda o Shthana |
+| `TENYI_ASHUNA_DECK`, `TENYI_ADHARA_RECOVER`, `TENYI_VISHUDA_BOUNCE` | Mano o GY |
+| `SALAMANGREAT_GAZELLE_HAND`, `SALAMANGREAT_SPINNY_DISCARD` | Mano |
+| `SALAMANGREAT_SPINNY_REVIVE`, `MOYE_DRAW` | GY |
+| `DUEL_ANCIENTS_END_SUMMON`, `ANCIENTS_RECOVER_BLUE_EYES` | GY |
+| `TENYI_SHTHANA_REVIVE` | Mano o GY |
+| `LONGYUAN_SPECIAL` | Mano |
+| `LONGYUAN_BURN` | GY |
+
+El registro exige passcode, jugador, UID, zona y metadatos del handler compatibles. Una Invocación Normal o un procedimiento de invocación sin activación no se convierte en efecto negable. El robo separado de Mo Ye mantiene el requisito de orden conocido; no se habilita el paquete conjunto Chixiao/Mo Ye para Mechaba.
+
+El origen se captura antes de pagar costes y se conserva en el replay. Spinny descartado desde la mano o Ashuna desterrada desde GY no se destierran de nuevo desde su nuevo destino. Si Gazelle permanece en la mano o Spinny en el GY al resolver Mechaba, puede aplicarse el destierro desde ese origen. Longyuan negado conserva su descarte y uso, sin invocación ni Token; su disparo GY negado conserva el uso y no causa daño. Spirit reconoce también ese disparo individual del GY.
+
+El criterio de Mechaba se documenta con las FAQ oficiales OCG en japonés 16041, 22388 y 23949. Sus originales y citas están fijados; las explicaciones españolas no sustituyen la evidencia original. Su alcance de referencia se distingue de una certificación general TCG en [FUENTES_OFICIALES.md](FUENTES_OFICIALES.md).
 
 Los costes se pagan aunque la resolución quede negada cuando así lo exige el efecto. Negar Mo Ye no crea Token, pero conserva revelación y uso; negar Lubellion no devuelve el descarte. Los paquetes que no declaran un contrato de cadena admiten una respuesta registrada. Mechaba y Roar declaran paquetes que permiten hasta tres contrarrespuestas Roar con velocidad, alternancia de jugadores y resolución LIFO verificadas. La prioridad arbitraria, SEGOC y todas las cadenas posibles siguen fuera del alcance.
 
@@ -77,7 +96,7 @@ El acceso hipergeométrico a una carta/rol mide un evento de mano. El muestreo c
 
 La búsqueda tiene límites de profundidad, estados, tiempo y turnos, y devuelve hasta cinco resultados distintos de los observados. Agotar acciones registradas no agota todas las acciones legales de Yu-Gi-Oh. La identidad de estado conserva información que afecta a continuaciones, como zonas/columnas, protección, historial y efectos diferidos; copias equivalentes no multiplican artificialmente resultados.
 
-Quedan por ampliar cartas, disparos, cadenas, prioridad, Damage Step, decisiones adversariales, mecánicas y reglas de otros formatos. Los pools digitales/históricos, desbloqueos, Skills e impresión/evento requieren datos propios. El editor de formatos ya transporta Skills y Fusion Deck histórico; eso no certifica sus efectos ni disponibilidad. Las fuentes oficiales siguen pendientes por el bloqueo HTTP 403 documentado en [FUENTES_OFICIALES.md](FUENTES_OFICIALES.md).
+Quedan por ampliar cartas, disparos, cadenas, prioridad, Damage Step, decisiones adversariales, mecánicas y reglas de otros formatos. Los pools digitales/históricos, desbloqueos, Skills e impresión/evento requieren datos propios. El editor de formatos ya transporta Skills y Fusion Deck histórico; eso no certifica sus efectos ni disponibilidad. La lista TCG fechada y tres referencias OCG de Mechaba cuentan con capturas oficiales. La revisión completa del reglamento, los rulings restantes y la disponibilidad siguen pendientes; los bloqueos históricos y los alcances documentales están en [FUENTES_OFICIALES.md](FUENTES_OFICIALES.md).
 
 La puntuación competitiva permanece provisional por decisión del usuario. El importador está preparado; requiere barajas y resultados reales con formato, lista, fechas y procedencia para calibrar y validar por separado.
 
@@ -91,7 +110,7 @@ python3 tests/run_all.py
 
 El runner compila y agrupa las suites registradas en `tests/run_all.py`, incluidas núcleo, familias, fases, respuestas, recomendaciones, formatos, documentos y navegador. El resultado de la ejecución está en `dist/validation-summary.json`; el detalle, en `tests/*-results.json` y logs. Los informes de entrega identifican el build y hash del HTML probado. `--source-inject` en pruebas de desarrollo no constituye evidencia de los bytes del entregable.
 
-Chromium usa los bytes construidos. Firefox/WebKit siguen pendientes: la descarga de Firefox devolvió HTTP 403 y WebKit no está instalado. La política administrada bloquea `file:`; el arranque sin Internet se comprueba suministrando esos mismos bytes localmente con la red deshabilitada. Abrir directamente el archivo requiere validación externa donde se permita esa navegación.
+La revisión 7 aprobó las comprobaciones sobre sus bytes finales en Chromium, Firefox y WebKit, incluida la apertura directa `file:` sin conexión en Firefox. Chromium mantiene el bloqueo administrativo de navegación local; WebKit tiene una limitación documentada de emulación offline local. Estas limitaciones no equivalen a un fallo demostrado del HTML en otros sistemas. Los informes identifican la compilación y los bytes comprobados.
 
 La protección Spark registrada no admite acumular dos protecciones aún sin consumir sobre el mismo objetivo ni modela la prioridad general del Damage Step. La negación GY de Spirit se limita a handlers registrados explícitamente; el descarte de Ash, Crow o Droll desde la mano no cambia el origen de su activación a GY.
 
@@ -99,7 +118,7 @@ La protección Spark registrada no admite acumular dos protecciones aún sin con
 
 El diagnóstico por carta contrasta un registro explícito de acciones parciales con los handlers y proveedores realmente presentes en la compilación. Distingue datos técnicos, uso básico acotado de Normales y efectos registrados. No presenta reconocer una carta como haber implementado todos sus efectos. El informe incluye build, catálogo y contexto; su aplicabilidad causal se limita al formato registrado.
 
-Los ejemplos Invoked, Spark y Spirit se incluyen en el HTML. Cargarlos sustituye la baraja actual y prepara las copias físicas y el campo declarado; no ejecuta jugadas automáticamente ni certifica la historia anterior. Se usan como demostraciones técnicas, sin etiquetas ni resultados competitivos.
+Los ocho ejemplos Invoked, Spark, Spirit, Swordsoul, Branded, Tenyi, Salamangreat y Roar se incluyen en la fuente que construye el HTML. Cargarlos sustituye la baraja actual y prepara las copias físicas y el campo declarado; no ejecuta jugadas automáticamente ni certifica la historia anterior. Se usan como demostraciones técnicas, sin etiquetas ni resultados competitivos.
 
 
 ## Ampliaciones de la revisión 6
@@ -113,3 +132,10 @@ Gazelle incorpora un disparo de mano tras un envío Salamangreat elegible; Balel
 El laboratorio mantiene JSON avanzado y añade formularios de objetivos, selección de copias físicas, zonas y columnas, nombres legibles, búsqueda y paginación. Las colocaciones iniciales siguen declaradas, sin certificar su historia anterior.
 
 El panel de probabilidades del próximo robo calcula distribuciones exactas por identidad sobre las copias restantes. Con orden desconocido supone un barajado uniforme: no revela la siguiente carta, no cambia el mazo y no certifica una continuación. La búsqueda informa separadamente los horizontes de profundidad/turnos y los presupuestos alcanzados.
+
+
+## Estado de aceptación de la revisión 7
+
+La revisión 7 pasó **44/44 grupos de pruebas** sobre el HTML final y la comprobación de sintaxis de **114 archivos JavaScript**. Chromium, Firefox y WebKit aprobaron sus comprobaciones; Firefox completó también la apertura directa del HTML local sin conexión. Build `9361b6748958d6adfd53f3c0efdcfb54a1115df58d9e8f37e142884fbf90142b`; SHA-256 `928bd2c76835e8ab75ef15ae58d288c6dc3a5dfcdcb384152b5ad2c0cec3fa6e`. Estos resultados acreditan las tareas ejecutadas dentro del alcance registrado.
+
+La publicación, la comprobación de descarga y la ejecución remota de GitHub Actions se registran por separado; la aceptación local no acredita por sí sola esos pasos. Los 41 grupos y hashes anteriores pertenecen a la [evidencia histórica de revisión 6](https://github.com/socramgns/MODERN/blob/acb9e81573b43318041fc7ab57500dc1f97adc11/evidence/validation-summary.json).

@@ -1,10 +1,10 @@
 {
   "version": "Alpha 1263",
-  "revision": "2026.10-stable.6",
+  "revision": "2026.10-stable.7",
   "canonicalId": "ygo-alpha-1263-canonical-release",
   "moduleCount": 88,
   "catalogCardCount": 21986,
-  "buildId": "a214f91b5554fb95b64a72cce9a1729eab468b9729229d97494980688b3de119",
+  "buildId": "9361b6748958d6adfd53f3c0efdcfb54a1115df58d9e8f37e142884fbf90142b",
   "catalogueSizePinsCompiled": 164,
   "dataHashes": {
     "cards": "cc265022039bba09fc31e8e3a48afb0030e5a81cab0c30c386843fcd75e1cba6"
@@ -57,7 +57,117 @@
     "storedBytesRecheckedAtBuild": true,
     "retrievalAuthenticatedInThisBuild": false
   },
-  "htmlSha256": "9fb3b88702cd55655125975be8acba7340545619312e3242723908866957ea37",
-  "bytes": 6909403,
+  "ruleReferences": {
+    "schema": "ygo-mechaba-ruling-references/v1",
+    "reviewedAt": "2026-10-27T06:33:19.827134+00:00",
+    "technicalCardId": 75286621,
+    "officialCardCid": 12849,
+    "scope": "TCG_REFERENCE_NOT_TCG_RULING_CERTIFICATION",
+    "principle": "SAME_ACTIVATION_LOCATION_FOR_ASSOCIATED_BANISH",
+    "captureActivationLocationBeforeCosts": true,
+    "negationCanApplyAfterSourceChangesLocation": true,
+    "associatedBanishRequiresSourceAtItsActivationLocation": true,
+    "sourceLocationChangeIsNotUndone": true,
+    "references": [
+      {
+        "id": "mechaba-field-source-tributed-as-cost",
+        "faqId": 16041,
+        "officialCardCid": 12849,
+        "sourceUrl": "https://www.db.yugioh-card.com/yugiohdb/faq_search.action?ope=5&fid=16041&request_locale=ja",
+        "documentPath": "src/data/official/mechaba-faq-16041.html",
+        "metadataPath": "src/data/official/mechaba-faq-16041.metadata.json",
+        "rawSha256": "73787504a798bfef58bf8e821328809763f3b42b753ce40932063662d517a0a0",
+        "fieldSha256": {
+          "question_text": "59ce73e02a8fdf4b9481aa75b6e6b7a81417384f913a6d498f39ce22f09d7474",
+          "answer_text": "fab29216d235de9d61328da4e528da6029621ba1a47b748c052bc43f0e5e6aaa"
+        },
+        "formatAuthority": "OCG",
+        "language": "ja",
+        "scope": "TCG_REFERENCE_NOT_TCG_RULING_CERTIFICATION",
+        "quotes": [
+          {
+            "field": "answer_text",
+            "originalJapanese": "「ダイナレスラー・パンクラトプス」が自身をリリースして『②』の効果を発動し、これに対して「召喚獣メルカバー」の効果が発動した場合、「ダイナレスラー・パンクラトプス」の『②』の効果の発動は無効になりますが、フィールドで効果を発動し、フィールドに存在しなくなった「ダイナレスラー・パンクラトプス」が除外されることはありません。",
+            "originalTextSha256": "c5d5c6ac498bf52196cc9ba8a29b03dd873ab2228ff100c3ef674d1d502a3eff",
+            "explanatorySpanish": "Si Pankratops se tributa para activar su efecto, Mechaba niega esa activación, pero no destierra al monstruo que ya dejó el campo. Si Pankratops permanece en el campo, sí se aplica el destierro al resolver.",
+            "translationIsPrimaryEvidence": false
+          }
+        ],
+        "mechabaNamedInOriginalAnswer": true
+      },
+      {
+        "id": "mechaba-hand-source-sent-as-cost",
+        "faqId": 22388,
+        "officialCardCid": 12849,
+        "sourceUrl": "https://www.db.yugioh-card.com/yugiohdb/faq_search.action?ope=5&fid=22388&request_locale=ja",
+        "documentPath": "src/data/official/mechaba-faq-22388.html",
+        "metadataPath": "src/data/official/mechaba-faq-22388.metadata.json",
+        "rawSha256": "2d3144d9f406f49d62f72a121a0dc9d6fa72c4348340a22069a0ed4fb0ff3394",
+        "fieldSha256": {
+          "question_text": "ace89570b9d93c21c3d2a9a4a9cbb7d2d5734e9e3c67793807d69a17f66618b9",
+          "answer_text": "d0de06cd4df65f4ea575141a505e62433ddf330e9b82e856790945f7ac3e3ae9"
+        },
+        "formatAuthority": "OCG",
+        "language": "ja",
+        "scope": "TCG_REFERENCE_NOT_TCG_RULING_CERTIFICATION",
+        "quotes": [
+          {
+            "field": "answer_text",
+            "originalJapanese": "「増殖するG」の効果の発動は無効になりますが、効果を発動したところに存在しなくなった（手札で効果を発動しコストとして墓地に送られた）「増殖するG」は除外されずに墓地に残ります。",
+            "originalTextSha256": "ae3b4fffdd7edcc550e4daa52a440fd70caef2087a0c7f2197b8b89b3df128af",
+            "explanatorySpanish": "La activación de Maxx \"C\" se niega, pero la copia enviada de la mano al Cementerio como coste permanece en el Cementerio. La respuesta enumera expresamente a Mechaba entre las cartas con el mismo tratamiento.",
+            "translationIsPrimaryEvidence": false
+          }
+        ],
+        "mechabaNamedInOriginalAnswer": true
+      },
+      {
+        "id": "mechaba-activation-location-general-principle",
+        "faqId": 23949,
+        "officialCardCid": 12849,
+        "sourceUrl": "https://www.db.yugioh-card.com/yugiohdb/faq_search.action?ope=5&fid=23949&request_locale=ja",
+        "documentPath": "src/data/official/mechaba-faq-23949.html",
+        "metadataPath": "src/data/official/mechaba-faq-23949.metadata.json",
+        "rawSha256": "2dade63f26e749b48b573112cca9b887cb71f6a6c9bb60e3a0f3e00dfcd09096",
+        "fieldSha256": {
+          "question_text": "c3cd5e5c30f2b32dccbf0241ce63789c7b3e8cc0a30ca9d5c1fb3b5c675a09f6",
+          "answer_text": "50c3f20ad19c67526802d7ebdecda057cffeb361df70174db5aa6d063bb776c1"
+        },
+        "formatAuthority": "OCG",
+        "language": "ja",
+        "scope": "TCG_REFERENCE_NOT_TCG_RULING_CERTIFICATION",
+        "quotes": [
+          {
+            "field": "answer_text",
+            "originalJapanese": "以下の効果についても同様に、直前のチェーンブロックで効果を発動したモンスターが効果を発動した場所に存在しない場合、破壊する処理や除外する処理は行いません。",
+            "originalTextSha256": "522f10911dfd4c2640cb7a3e81d5678296aabf0ecef1a6b8c06bbf0816a141c3",
+            "explanatorySpanish": "La respuesta general incluye a Mechaba: cuando el monstruo ya no está en el lugar donde activó su efecto, no se aplica la destrucción o el destierro asociado. La negación de la activación o del efecto sigue aplicándose según la carta.",
+            "translationIsPrimaryEvidence": false
+          }
+        ],
+        "mechabaNamedInOriginalAnswer": true
+      }
+    ],
+    "extraction": "HTMLParser entity decoding; BR to LF; surrounding indentation stripped per line; no lexical substitution.",
+    "officialTcgRulingCertified": false,
+    "officialPoolVerified": false,
+    "competitiveCertified": false,
+    "universalCertified": false,
+    "savedReceiptAuthenticatesOriginInLaterRuns": false,
+    "limitations": [
+      "The primary evidence is Japanese official OCG FAQ text; explanatory Spanish translations are separate review notes.",
+      "This is a scoped reference for registered TCG transitions, not a claim that every OCG ruling or card implementation is TCG-certified.",
+      "Identity changes, leaving and returning, replacement copies, arbitrary chains and global banish-prevention effects need their own modeled rules.",
+      "A stored HTTPS URL and receipt do not authenticate the origin of a newly supplied local document.",
+      "Mechaba cannot use this reference to negate Spell/Trap effects that are not Spell/Trap Card activations."
+    ],
+    "storedBytesRechecked": true,
+    "verifiedReferenceCount": 3,
+    "sourceAuthenticatedInThisRun": false,
+    "storedBytesRecheckedAtBuild": true,
+    "retrievalAuthenticatedInThisBuild": false
+  },
+  "htmlSha256": "928bd2c76835e8ab75ef15ae58d288c6dc3a5dfcdcb384152b5ad2c0cec3fa6e",
+  "bytes": 6935981,
   "output": "dist/Calculadora_de_Barajas_YuGiOh_Alpha_1263_Corregida.html"
 }

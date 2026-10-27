@@ -18,7 +18,23 @@ El 22 de octubre de 2026 el proxy rechazó las conexiones HTTPS con `Tunnel conn
 
 Las URLs, errores y fechas históricos están en `dist/official-verification.json`; el nuevo intento está en `dist/r6-official-verification.json`. No fue un rechazo de aprobación automática del agente. No se intentó eludir el bloqueo ni se sustituyó una fuente oficial por una copia de procedencia desconocida.
 
-La consulta del PDF del reglamento redirige al dominio oficial `img.yugioh-card.com`; el acceso a ese archivo volvió a recibir HTTP 403. El verificador permite únicamente la ruta pública de descargas observada en ese dominio y mantiene TLS y validación de cada redirección. La captura del reglamento y la revisión de rulings específicos siguen pendientes. El catálogo CDB fijado por commit y SHA-256 conserva su carácter de fuente técnica secundaria. El contraste de la lista no modificó sus límites ni creó resultados competitivos.
+La consulta del PDF del reglamento redirige al dominio oficial `img.yugioh-card.com`; el acceso a ese archivo volvió a recibir HTTP 403. El verificador permite únicamente la ruta pública de descargas observada en ese dominio y mantiene TLS y validación de cada redirección. La captura del reglamento y la revisión de rulings restantes siguen pendientes. La revisión 7 sí conserva tres FAQ oficiales OCG de Mechaba, con el alcance específico descrito más abajo. El catálogo CDB fijado por commit y SHA-256 conserva su carácter de fuente técnica secundaria. El contraste de la lista no modificó sus límites ni creó resultados competitivos.
+
+## Referencias de Mechaba incorporadas en la revisión 7
+
+La fuente incluye tres respuestas de la base de datos oficial **OCG, en japonés**, vinculadas a Mechaba (CID oficial 12849; passcode técnico 75286621):
+
+| FAQ | Criterio documentado |
+| --- | --- |
+| [16041](https://www.db.yugioh-card.com/yugiohdb/faq_search.action?ope=5&fid=16041&request_locale=ja) | Pankratops que se tributa como coste tiene su activación negada, pero no se destierra desde su nuevo destino |
+| [22388](https://www.db.yugioh-card.com/yugiohdb/faq_search.action?ope=5&fid=22388&request_locale=ja) | Una fuente activada en mano y enviada al GY como coste permanece allí tras la negación; la respuesta enumera a Mechaba entre las cartas con el mismo tratamiento |
+| [23949](https://www.db.yugioh-card.com/yugiohdb/faq_search.action?ope=5&fid=23949&request_locale=ja) | El destierro asociado depende de que la fuente permanezca en su lugar de activación |
+
+`src/data/mechaba-ruling-references.json` conserva las URLs, jurisdicción OCG, campos y citas japonesas, con sus SHA-256. Los documentos originales y los metadatos de captura están en `src/data/official/mechaba-faq-*.html` y `*.metadata.json`. Las explicaciones españolas acompañan a esas citas; no son evidencia primaria.
+
+`tools/mechaba_references.py` vuelve a comprobar bytes, campos, citas, identidad y alcance, sin red. `tools/build.py` incorpora la referencia validada en `YGO_RULE_REFERENCES` y en el manifiesto. El panel **Referencias de Mechaba y los costes** muestra los enlaces y explicaciones. La aceptación local de revisión 7 comprende los bytes finales que incorporan estas referencias y su comprobación documental. Los resultados de publicación y CI remoto se registran por separado.
+
+El alcance declarado es `TCG_REFERENCE_NOT_TCG_RULING_CERTIFICATION`: documenta el criterio utilizado por los paquetes registrados del analizador TCG y conserva su autoridad original OCG. No certifica todos los rulings TCG, los efectos de Pankratops o Maxx “C” en el simulador, los pools ni los resultados competitivos. Un recibo guardado describe la captura HTTPS; su comprobación local posterior no vuelve a autenticar ese transporte.
 
 ## Herramienta entregada
 
@@ -89,4 +105,4 @@ python3 tests/official_validation.py
 
 Las **29 regresiones** usan documentos sintéticos identificados como tales. Cubren hash, fechas, nombres, límites, citas, PDF, redirecciones, discrepancias, ausencia de mutaciones y estructura completa de Neuron. Son pruebas del verificador; la evidencia oficial es la captura HTTPS cotejada y registrada aparte.
 
-Siguen pendientes la revisión del reglamento y los rulings, los passcodes oficiales y la disponibilidad correspondiente a cada formato o evento. No se generaron pools supuestamente verificados a partir de fechas inferidas ni de flags CDB. El importador de calibración competitiva permanece preparado y provisional por decisión del usuario; no se crearon etiquetas de torneo para completar este apartado.
+Siguen pendientes la revisión completa del reglamento, los rulings restantes, los passcodes oficiales y la disponibilidad correspondiente a cada formato o evento. Las tres FAQ OCG citadas son evidencia específica con un alcance propio; no cierran esas tareas generales. No se generaron pools supuestamente verificados a partir de fechas inferidas ni de flags CDB. El importador de calibración competitiva permanece preparado y provisional por decisión del usuario; no se crearon etiquetas de torneo para completar este apartado.

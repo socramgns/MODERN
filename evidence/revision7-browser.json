@@ -1,0 +1,185 @@
+{
+  "schema": "ygo-expanded-examples-browser/v1",
+  "pass": true,
+  "buildId": "9361b6748958d6adfd53f3c0efdcfb54a1115df58d9e8f37e142884fbf90142b",
+  "htmlSha256": "928bd2c76835e8ab75ef15ae58d288c6dc3a5dfcdcb384152b5ad2c0cec3fa6e",
+  "artifactMode": "DELIVERED_BYTES",
+  "sourceInjection": false,
+  "servedBytesSha256": "928bd2c76835e8ab75ef15ae58d288c6dc3a5dfcdcb384152b5ad2c0cec3fa6e",
+  "browser": {
+    "engine": "chromium",
+    "version": "154.0.8037.57"
+  },
+  "checks": [
+    {
+      "name": "embedded_tutorials_boot_offline_with_expected_document_bytes",
+      "pass": true
+    },
+    {
+      "name": "dynamic_example_menu_preserves_originals_and_lists_every_registered_tutorial",
+      "pass": true
+    },
+    {
+      "name": "delivered_mechaba_references_show_three_official_faq_links_and_honest_ocg_scope",
+      "pass": true
+    },
+    {
+      "name": "delivered_mechaba_reference_evidence_is_bound_to_build_without_new_transport_claim",
+      "pass": true
+    },
+    {
+      "name": "delivered_mechaba_registry_contains_the_thirteen_reviewed_hand_and_gy_handlers",
+      "pass": true
+    },
+    {
+      "name": "delivered_mechaba_hand_packet_preserves_physical_cost_origin_and_fresh_replay",
+      "pass": true
+    },
+    {
+      "name": "delivered_mechaba_gy_packet_preserves_physical_cost_origin_and_fresh_replay",
+      "pass": true
+    },
+    {
+      "name": "swordsoul_loads_physical_deck_and_guide_without_autoplay",
+      "pass": true
+    },
+    {
+      "name": "swordsoul_known_physical_draw_precedes_search_shuffle",
+      "pass": true
+    },
+    {
+      "name": "swordsoul_seven_visible_actions_reach_two_synchros_and_real_damage",
+      "pass": true
+    },
+    {
+      "name": "swordsoul_final_report_has_fresh_replay_and_provisional_score",
+      "pass": true
+    },
+    {
+      "name": "branded_loads_physical_deck_and_guide_without_autoplay",
+      "pass": true
+    },
+    {
+      "name": "branded_two_visible_actions_keep_the_real_discard_and_fusion_lock",
+      "pass": true
+    },
+    {
+      "name": "branded_final_report_has_fresh_replay_and_provisional_score",
+      "pass": true
+    },
+    {
+      "name": "tenyi_loads_physical_deck_and_guide_without_autoplay",
+      "pass": true
+    },
+    {
+      "name": "tenyi_five_visible_actions_conserve_banish_discard_and_normal_summon",
+      "pass": true
+    },
+    {
+      "name": "tenyi_final_report_has_fresh_replay_and_provisional_score",
+      "pass": true
+    },
+    {
+      "name": "salamangreat_loads_physical_deck_and_guide_without_autoplay",
+      "pass": true
+    },
+    {
+      "name": "salamangreat_eleven_visible_actions_recover_roar_and_preserve_spinny_banish",
+      "pass": true
+    },
+    {
+      "name": "salamangreat_final_report_has_fresh_replay_and_provisional_score",
+      "pass": true
+    },
+    {
+      "name": "roar_loads_physical_deck_and_guide_without_autoplay",
+      "pass": true
+    },
+    {
+      "name": "roar_tutorial_preserves_explicit_physical_counter_response_policy",
+      "pass": true
+    },
+    {
+      "name": "roar_counter_chain_reaches_mechaba_and_moves_both_real_traps_to_gy",
+      "pass": true
+    },
+    {
+      "name": "roar_alternative_after_undo_preserves_fusion_materials_when_activation_is_negated",
+      "pass": true
+    },
+    {
+      "name": "roar_final_report_has_fresh_replay_and_provisional_score",
+      "pass": true
+    },
+    {
+      "name": "expanded_tutorials_raise_no_javascript_page_errors",
+      "pass": true
+    },
+    {
+      "name": "compiled_artifact_unchanged_during_browser_test",
+      "pass": true
+    }
+  ],
+  "details": {
+    "delivered_mechaba_hand_packet_preserves_physical_cost_origin_and_fresh_replay": {
+      "sourceUid": "P0:main:87052196:1",
+      "responseCostUid": "P1:main:23771716:1",
+      "activationOrigin": {
+        "sourceUid": "P0:main:87052196:1",
+        "player": 0,
+        "zone": "hand",
+        "handler": "TENYI_HAND_SPECIAL",
+        "registeredForGyNegation": false,
+        "restriction": "USE",
+        "packet": "SINGLE",
+        "cardActivation": null
+      },
+      "negated": true,
+      "sourceZone": "banished",
+      "costZone": "gy",
+      "inputPreserved": true,
+      "copiesPreserved": true,
+      "freshReplay": true,
+      "costPaid": true,
+      "ownBanishCostPaid": false,
+      "sourceBanishedByMechaba": true,
+      "banishSkippedAfterCost": false,
+      "noSummon": true,
+      "noEffectLock": true
+    },
+    "delivered_mechaba_gy_packet_preserves_physical_cost_origin_and_fresh_replay": {
+      "sourceUid": "P0:main:87052196:1",
+      "responseCostUid": "P1:main:23771716:1",
+      "activationOrigin": {
+        "sourceUid": "P0:main:87052196:1",
+        "player": 0,
+        "zone": "gy",
+        "handler": "TENYI_ASHUNA_DECK",
+        "registeredForGyNegation": true,
+        "restriction": "USE",
+        "packet": "SINGLE",
+        "cardActivation": null
+      },
+      "negated": true,
+      "sourceZone": "banished",
+      "costZone": "gy",
+      "inputPreserved": true,
+      "copiesPreserved": true,
+      "freshReplay": true,
+      "costPaid": true,
+      "ownBanishCostPaid": true,
+      "sourceBanishedByMechaba": false,
+      "banishSkippedAfterCost": true,
+      "noSummon": true,
+      "noEffectLock": true
+    },
+    "expanded_tutorials_raise_no_javascript_page_errors": []
+  },
+  "externalRequestsBlocked": 78,
+  "limitations": [
+    "Tutorials are technical fixtures with physical cards, not competitive deck recommendations.",
+    "Declared starting fields do not certify the summons that preceded them.",
+    "Exact bytes served while offline do not establish direct file navigation on every browser."
+  ],
+  "elapsedSeconds": 65.18
+}
