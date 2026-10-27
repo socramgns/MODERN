@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+.cache/
+.venv/
+node_modules/
+dist/*
+!dist/.gitkeep
+tests/*.log
+tests/*-results.json
+tests/*-export.json
+tests/export-*
+tests/context-provenance-template.json
+tests/release5-coverage-export.json
+tests/format-interface-export.*
+tests/blue-eyes-browser-export.json

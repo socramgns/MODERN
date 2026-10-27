@@ -1,0 +1,256 @@
+{
+  "schema": "ygo-validation-summary/v1",
+  "buildId": "a214f91b5554fb95b64a72cce9a1729eab468b9729229d97494980688b3de119",
+  "htmlSha256": "9fb3b88702cd55655125975be8acba7340545619312e3242723908866957ea37",
+  "pass": true,
+  "suites": [
+    {
+      "name": "source_syntax",
+      "pass": true,
+      "files": 114
+    },
+    {
+      "name": "release6_in_browser",
+      "pass": true,
+      "elapsedMs": 16265,
+      "log": "tests/release6_in_browser.log"
+    },
+    {
+      "name": "laboratory_usability",
+      "pass": true,
+      "elapsedMs": 25665,
+      "log": "tests/laboratory_usability.log"
+    },
+    {
+      "name": "local_file_delivery",
+      "pass": true,
+      "elapsedMs": 18996,
+      "log": "tests/local_file_delivery.log"
+    },
+    {
+      "name": "registered_response_chains",
+      "pass": true,
+      "elapsedMs": 1494,
+      "log": "tests/registered_response_chains.log"
+    },
+    {
+      "name": "response_windows",
+      "pass": true,
+      "elapsedMs": 1201,
+      "log": "tests/response_windows.log"
+    },
+    {
+      "name": "new_card_effects",
+      "pass": true,
+      "elapsedMs": 1312,
+      "log": "tests/new_card_effects.log"
+    },
+    {
+      "name": "official_context_at_build",
+      "pass": true,
+      "elapsedMs": 178,
+      "log": "tests/official_context_at_build.log"
+    },
+    {
+      "name": "search_horizons",
+      "pass": true,
+      "elapsedMs": 587,
+      "log": "tests/search_horizons.log"
+    },
+    {
+      "name": "catalogue_expansion",
+      "pass": true,
+      "elapsedMs": 2306,
+      "log": "tests/catalogue_expansion.log"
+    },
+    {
+      "name": "draw_uncertainty",
+      "pass": true,
+      "elapsedMs": 322,
+      "log": "tests/draw_uncertainty.log"
+    },
+    {
+      "name": "official_documents",
+      "pass": true,
+      "elapsedMs": 231,
+      "log": "tests/official_documents.log"
+    },
+    {
+      "name": "duel_phases",
+      "pass": true,
+      "elapsedMs": 1157,
+      "log": "tests/duel_phases.log"
+    },
+    {
+      "name": "physical_responses",
+      "pass": true,
+      "elapsedMs": 1497,
+      "log": "tests/physical_responses.log"
+    },
+    {
+      "name": "expanded_archetypes",
+      "pass": true,
+      "elapsedMs": 9273,
+      "log": "tests/expanded_archetypes.log"
+    },
+    {
+      "name": "blue_eyes_duel",
+      "pass": true,
+      "elapsedMs": 1128,
+      "log": "tests/blue_eyes_duel.log"
+    },
+    {
+      "name": "blue_eyes_protection_and_gy",
+      "pass": true,
+      "elapsedMs": 1877,
+      "log": "tests/blue_eyes_protection_and_gy.log"
+    },
+    {
+      "name": "mechaba_spell_activations",
+      "pass": true,
+      "elapsedMs": 927,
+      "log": "tests/mechaba_spell_activations.log"
+    },
+    {
+      "name": "card_action_coverage",
+      "pass": true,
+      "elapsedMs": 341,
+      "log": "tests/card_action_coverage.log"
+    },
+    {
+      "name": "builtin_scenarios",
+      "pass": true,
+      "elapsedMs": 487,
+      "log": "tests/builtin_scenarios.log"
+    },
+    {
+      "name": "release5_in_browser",
+      "pass": true,
+      "elapsedMs": 24544,
+      "log": "tests/release5_in_browser.log"
+    },
+    {
+      "name": "blue_eyes_in_browser",
+      "pass": true,
+      "elapsedMs": 17822,
+      "log": "tests/blue_eyes_in_browser.log"
+    },
+    {
+      "name": "recommendations",
+      "pass": true,
+      "elapsedMs": 2813,
+      "log": "tests/recommendations.log"
+    },
+    {
+      "name": "format_interface",
+      "pass": true,
+      "elapsedMs": 27216,
+      "log": "tests/format_interface.log"
+    },
+    {
+      "name": "advanced_interface",
+      "pass": true,
+      "elapsedMs": 32659,
+      "log": "tests/advanced_interface.log"
+    },
+    {
+      "name": "browser_compatibility",
+      "pass": true,
+      "elapsedMs": 56213,
+      "log": "tests/browser_compatibility.log"
+    },
+    {
+      "name": "formats",
+      "pass": true,
+      "elapsedMs": 57,
+      "log": "tests/formats.log"
+    },
+    {
+      "name": "provenance",
+      "pass": true,
+      "elapsedMs": 126,
+      "log": "tests/provenance.log"
+    },
+    {
+      "name": "strategy",
+      "pass": true,
+      "elapsedMs": 274,
+      "log": "tests/strategy.log"
+    },
+    {
+      "name": "causal_core",
+      "pass": true,
+      "elapsedMs": 691,
+      "log": "tests/causal_core.log"
+    },
+    {
+      "name": "archetype_rules",
+      "pass": true,
+      "elapsedMs": 4942,
+      "log": "tests/archetype_rules.log"
+    },
+    {
+      "name": "causal_browser",
+      "pass": true,
+      "elapsedMs": 32485,
+      "log": "tests/causal_browser.log"
+    },
+    {
+      "name": "catalogue",
+      "pass": true,
+      "elapsedMs": 476,
+      "log": "tests/catalogue.log"
+    },
+    {
+      "name": "probability_and_calibration",
+      "pass": true,
+      "elapsedMs": 65,
+      "log": "tests/probability_and_calibration.log"
+    },
+    {
+      "name": "probability_in_browser",
+      "pass": true,
+      "elapsedMs": 3579,
+      "log": "tests/probability_in_browser.log"
+    },
+    {
+      "name": "ui_and_persistence",
+      "pass": true,
+      "elapsedMs": 25498,
+      "log": "tests/ui_and_persistence.log"
+    },
+    {
+      "name": "worker",
+      "pass": true,
+      "elapsedMs": 11608,
+      "log": "tests/worker.log"
+    },
+    {
+      "name": "supported_search",
+      "pass": true,
+      "elapsedMs": 10627,
+      "log": "tests/supported_search.log"
+    },
+    {
+      "name": "delivered_bytes_e2e",
+      "pass": true,
+      "elapsedMs": 61369,
+      "log": "tests/delivered_bytes_e2e.log"
+    },
+    {
+      "name": "context_in_browser",
+      "pass": true,
+      "elapsedMs": 27798,
+      "log": "tests/context_in_browser.log"
+    },
+    {
+      "name": "artifact_unchanged_during_tests",
+      "pass": true
+    }
+  ],
+  "elapsedSeconds": 429.23,
+  "limitations": [
+    "Registered TCG routes include six archetypes, declared physical fields, registered responses, phases and battle; unknown effects and post-shuffle draws remain outside verified transitions.",
+    "Competitive score remains provisional until external datasets are supplied."
+  ]
+}

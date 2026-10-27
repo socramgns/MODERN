@@ -1,0 +1,162 @@
+{
+  "schema": "ygo-archetype-fixture/v1",
+  "id": "salamangreat",
+  "name": "Salamangreat · prueba causal TCG",
+  "description": "Gazelle envía Roar; Spinny se descarta y revive; Balelynx busca Sanctuary, Sunlight Wolf se reencarna y recupera Roar del Cementerio.",
+  "scope": "Fixture técnico con relleno Normal; no recomendación competitiva ni evidencia de torneo.",
+  "sourceCommit": "ae5dedb957c2c48ab86554fee08a0fca73d8b1cf",
+  "deck": {
+    "main": [
+      {
+        "id": 26889158,
+        "qty": 1,
+        "name": "Salamangreat Gazelle"
+      },
+      {
+        "id": 52277807,
+        "qty": 1,
+        "name": "Salamangreat Spinny"
+      },
+      {
+        "id": 1295111,
+        "qty": 1,
+        "name": "Salamangreat Sanctuary"
+      },
+      {
+        "id": 51339637,
+        "qty": 1,
+        "name": "Salamangreat Roar"
+      },
+      {
+        "id": 48202661,
+        "qty": 3,
+        "name": "Aitsu"
+      },
+      {
+        "id": 89386122,
+        "qty": 3,
+        "name": "Ally of Justice Clausolas"
+      },
+      {
+        "id": 67371383,
+        "qty": 3,
+        "name": "Amphibian Beast"
+      },
+      {
+        "id": 14015067,
+        "qty": 3,
+        "name": "Ancient One of the Deep Forest"
+      },
+      {
+        "id": 49587396,
+        "qty": 3,
+        "name": "Ancient Tool"
+      },
+      {
+        "id": 47484352,
+        "qty": 3,
+        "name": "Anotherverse Dragon"
+      },
+      {
+        "id": 48365709,
+        "qty": 3,
+        "name": "Ansatsu"
+      },
+      {
+        "id": 18246479,
+        "qty": 3,
+        "name": "Battle Steer"
+      },
+      {
+        "id": 11761845,
+        "qty": 3,
+        "name": "Beast of Talwar"
+      },
+      {
+        "id": 42129512,
+        "qty": 3,
+        "name": "Big Koala"
+      },
+      {
+        "id": 89631139,
+        "qty": 3,
+        "name": "Blue-Eyes White Dragon"
+      },
+      {
+        "id": 81386177,
+        "qty": 3,
+        "name": "Bottom Dweller"
+      }
+    ],
+    "extra": [
+      {
+        "id": 14812471,
+        "qty": 1,
+        "name": "Salamangreat Balelynx"
+      },
+      {
+        "id": 87871125,
+        "qty": 2,
+        "name": "Salamangreat Sunlight Wolf"
+      }
+    ],
+    "side": []
+  },
+  "openingIds": [
+    26889158,
+    52277807,
+    48202661,
+    89386122,
+    67371383
+  ],
+  "remainingDeckIds": [
+    1295111,
+    51339637,
+    48202661,
+    48202661,
+    89386122,
+    89386122,
+    67371383,
+    67371383,
+    14015067,
+    14015067,
+    14015067,
+    49587396,
+    49587396,
+    49587396,
+    47484352,
+    47484352,
+    47484352,
+    48365709,
+    48365709,
+    48365709,
+    18246479,
+    18246479,
+    18246479,
+    11761845,
+    11761845,
+    11761845,
+    42129512,
+    42129512,
+    42129512,
+    89631139,
+    89631139,
+    89631139,
+    81386177,
+    81386177,
+    81386177
+  ],
+  "context": {
+    "format": "tcg",
+    "banlistVersion": "19/10/2026",
+    "opponentPolicy": "PASS"
+  },
+  "goal": {
+    "requiredFieldIds": [
+      87871125
+    ],
+    "requiredHandIds": [
+      51339637
+    ]
+  }
+}

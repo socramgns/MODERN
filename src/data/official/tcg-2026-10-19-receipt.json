@@ -1,0 +1,15 @@
+{
+  "requestedUrl": "https://www.db.yugioh-card.com/yugiohdb/forbidden_limited.action?request_locale=en",
+  "sourceUrl": "https://www.db.yugioh-card.com/yugiohdb/forbidden_limited.action?request_locale=en",
+  "retrievedAt": "2026-10-26T23:35:19.889743+00:00",
+  "contentType": "text/html",
+  "charset": "utf-8",
+  "sha256": "3f6a5c8dbeca3007e98eb29dacbce8c66e4a11d1542a387fa3c573666e53ec9d",
+  "bytes": 253693,
+  "transport": "DIRECT_HTTPS_TLS_VALIDATED_IN_THIS_PROCESS",
+  "format": "tcg",
+  "effectiveDate": "2026-10-19",
+  "dateWitness": "Status Updated 10/19/2026",
+  "complete": true,
+  "originReceiptIsNotPortableAuthentication": true
+}

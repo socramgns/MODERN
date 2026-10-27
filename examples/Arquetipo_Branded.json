@@ -1,0 +1,154 @@
+{
+  "schema": "ygo-archetype-fixture/v1",
+  "id": "branded",
+  "name": "Branded · prueba causal TCG",
+  "description": "Branded Fusion, descarte real de Lubellion y Mirrorjade",
+  "scope": "Fixture técnico con relleno Normal; no recomendación competitiva ni evidencia de torneo.",
+  "sourceCommit": "ae5dedb957c2c48ab86554fee08a0fca73d8b1cf",
+  "deck": {
+    "main": [
+      {
+        "id": 44362883,
+        "qty": 1,
+        "name": "Branded Fusion"
+      },
+      {
+        "id": 68468459,
+        "qty": 3,
+        "name": "Fallen of Albaz"
+      },
+      {
+        "id": 46986414,
+        "qty": 2,
+        "name": "Dark Magician"
+      },
+      {
+        "id": 23771716,
+        "qty": 3,
+        "name": "7 Colored Fish"
+      },
+      {
+        "id": 47372349,
+        "qty": 3,
+        "name": "Acrobat Monkey"
+      },
+      {
+        "id": 97127906,
+        "qty": 3,
+        "name": "Alien Shocktrooper"
+      },
+      {
+        "id": 70924884,
+        "qty": 3,
+        "name": "Alinsection"
+      },
+      {
+        "id": 64428736,
+        "qty": 3,
+        "name": "Alligator's Sword"
+      },
+      {
+        "id": 99785935,
+        "qty": 3,
+        "name": "Alpha The Magnet Warrior"
+      },
+      {
+        "id": 17968114,
+        "qty": 3,
+        "name": "Amazon of the Seas"
+      },
+      {
+        "id": 42431843,
+        "qty": 3,
+        "name": "Ancient Brain"
+      },
+      {
+        "id": 43230671,
+        "qty": 3,
+        "name": "Ancient Lizard Warrior"
+      },
+      {
+        "id": 89904598,
+        "qty": 3,
+        "name": "Anthrosaurus"
+      },
+      {
+        "id": 85639257,
+        "qty": 3,
+        "name": "Aqua Madoor"
+      },
+      {
+        "id": 75889523,
+        "qty": 1,
+        "name": "Archfiend Marmot of Nefariousness"
+      }
+    ],
+    "extra": [
+      {
+        "id": 70534340,
+        "qty": 1,
+        "name": "Lubellion the Searing Dragon"
+      },
+      {
+        "id": 44146295,
+        "qty": 1,
+        "name": "Mirrorjade the Iceblade Dragon"
+      }
+    ],
+    "side": []
+  },
+  "openingIds": [
+    44362883,
+    23771716,
+    47372349,
+    97127906,
+    70924884
+  ],
+  "remainingDeckIds": [
+    68468459,
+    68468459,
+    68468459,
+    46986414,
+    46986414,
+    23771716,
+    23771716,
+    47372349,
+    47372349,
+    97127906,
+    97127906,
+    70924884,
+    70924884,
+    64428736,
+    64428736,
+    64428736,
+    99785935,
+    99785935,
+    99785935,
+    17968114,
+    17968114,
+    17968114,
+    42431843,
+    42431843,
+    42431843,
+    43230671,
+    43230671,
+    43230671,
+    89904598,
+    89904598,
+    89904598,
+    85639257,
+    85639257,
+    85639257,
+    75889523
+  ],
+  "context": {
+    "format": "tcg",
+    "banlistVersion": "19/10/2026",
+    "opponentPolicy": "PASS"
+  },
+  "goal": {
+    "requiredFieldIds": [
+      44146295
+    ]
+  }
+}

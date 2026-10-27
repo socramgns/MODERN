@@ -1,0 +1,27 @@
+/* Conditional distributions over physical remaining cards. This module does
+ * not reveal an unknown order, draw a card or manufacture a replay step. */
+(()=>{'use strict';
+const W=window,E=W.YGOComboEngine,D=typeof document==='object'?document:null;
+const choose=(n,k)=>{if(k<0||k>n)return 0n;k=Math.min(k,n-k);let value=1n;for(let i=1;i<=k;i++)value=value*BigInt(n-k+i)/BigInt(i);return value;};
+function report(state,options={}){
+ const player=options.player??0,count=options.count??1;
+ if(![0,1].includes(player)||!Number.isInteger(count)||count<1||count>10)throw Error('DRAW_DISTRIBUTION_OPTIONS_INVALID');
+ if(state?.schema!=='ygo-causal-state/v1'||!Array.isArray(state.zones)||state.zones.length!==2||!Array.isArray(state.zones[player]?.deck))throw Error('PHYSICAL_STATE_REQUIRED');
+ E.helpers.inventory(state);
+ const cards=state.zones[player].deck,N=cards.length,known=state.deckOrderKnown?.[player]===true,denominator=choose(N,count),groups=new Map();
+ for(const item of cards){const c=E.helpers.card(item),id=Number(c.id);if(!Number.isSafeInteger(id)||id<=0)throw Error('DRAW_DISTRIBUTION_ID_INVALID');if(!groups.has(id))groups.set(id,{id,canonicalId:E.helpers.baseId(item),name:String(c.name||id),copies:0});groups.get(id).copies++;}
+ const entries=[...groups.values()].sort((a,b)=>a.id-b.id).map(row=>{const favorable=denominator?denominator-choose(N-row.copies,count):0n;return{...row,nextDrawProbability:known?Number(Number(E.helpers.card(cards[0])?.id)===row.id):N?row.copies/N:null,atLeastOneInRequestedDraws:N<count?null:known?Number(cards.slice(0,count).some(item=>Number(E.helpers.card(item).id)===row.id)):Number(favorable)/Number(denominator),atLeastOneExact:N<count?null:known?null:{numerator:String(favorable),denominator:String(denominator)}};});
+ return{schema:'ygo-draw-uncertainty/v1',pass:true,status:N<count?'INSUFFICIENT_REMAINING_CARDS':known?'EXPLICIT_KNOWN_ORDER':'CONDITIONAL_UNIFORM_SHUFFLE',buildId:W.YGO_BUILD_MANIFEST?.buildId||null,catalogSha256:W.YGO_BUILD_MANIFEST?.catalogSha256||null,deckFingerprint:state.deckFingerprint,turn:state.turn,phase:state.phase,player,requestedDraws:count,remainingCopies:N,orderKnown:known,assumption:known?'EXPLICIT_SCENARIO_ORDER':'UNIFORM_RANDOM_PERMUTATION_OF_REMAINING_PHYSICAL_CARDS',entries,observedDraw:false,executesAction:false,replayCertified:false,winRate:null,limitations:['Las probabilidades con orden desconocido dependen del supuesto de barajado uniforme; no revelan la siguiente carta.','El informe describe acceso a identidades, no una jugada legal ni una tasa de victoria.','Este panel no cambia el orden del mazo ni permite ejecutar un robo desconocido como si estuviera observado.']};
+}
+W.YGODrawUncertainty=Object.freeze({report});
+if(!D)return;
+const node=(tag,text)=>{const x=D.createElement(tag);if(text!==undefined)x.textContent=text;return x;};
+function mount(){const host=D.getElementById('ygoAdvancedWorkbench');if(!host||D.getElementById('ygoDrawUncertainty'))return;const details=node('details');details.id='ygoDrawUncertainty';details.append(node('summary','Probabilidades del próximo robo'));
+ details.append(node('p','Examina las cartas que quedan. Con orden desconocido, las cifras suponen un barajado uniforme y no permiten conocer ni ejecutar el siguiente robo.'));
+ const controls=node('div');controls.className='ygo-advanced-controls';const playerLabel=node('label','Jugador '),player=node('select');player.id='ygoDrawPlayer';player.setAttribute('aria-label','Jugador del próximo robo');for(const [value,label]of [[0,'Tú'],[1,'Rival']]){const option=node('option',label);option.value=String(value);player.append(option);}playerLabel.append(player);
+ const countLabel=node('label','Número de robos '),count=node('input');count.type='number';count.min='1';count.max='10';count.value='1';count.id='ygoDrawCount';countLabel.append(count);const button=node('button','Calcular distribución');button.type='button';button.id='ygoDrawReport';controls.append(playerLabel,countLabel,button);const result=node('div');result.id='ygoDrawResults';result.setAttribute('role','status');result.setAttribute('aria-live','polite');details.append(controls,result);host.append(details);
+ button.onclick=()=>{result.replaceChildren();try{const state=W.YGOAdvancedWorkbench?.report?.().current;if(!state)throw Error('Inicia el laboratorio para analizar las copias restantes.');const data=report(state,{player:Number(player.value),count:Number(count.value)});result.append(node('p',data.remainingCopies+' cartas restantes. '+(data.orderKnown?'Orden explícito del escenario.':'Probabilidades condicionadas a un barajado uniforme.')));if(data.status==='INSUFFICIENT_REMAINING_CARDS'){result.append(node('p','No quedan suficientes cartas para el número de robos indicado.'));return;}const list=node('ul');for(const entry of data.entries){const probability=data.requestedDraws===1?entry.nextDrawProbability:entry.atLeastOneInRequestedDraws;list.append(node('li',entry.name+' ×'+entry.copies+': '+(100*probability).toFixed(2)+'%'+(data.requestedDraws>1?' de obtener al menos una':' en el próximo robo')));}result.append(list);}catch(error){result.append(node('p',String(error?.message||error)));}};
+ const clear=()=>result.replaceChildren();W.addEventListener('ygo-combo-workbench-updated',clear);W.addEventListener('ygo-advanced-workbench-updated',clear);W.addEventListener('ygo-ui-state-updated',clear);
+}
+Promise.resolve(W.__YGO_ENGINE_READY).then(async()=>{if(W.YGOAdvancedWorkbench?.ready)await W.YGOAdvancedWorkbench.ready;mount();});
+})();

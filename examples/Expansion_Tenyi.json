@@ -1,0 +1,170 @@
+{
+  "schema": "ygo-archetype-fixture/v1",
+  "id": "tenyi",
+  "name": "Tenyi · prueba causal TCG",
+  "description": "Ashuna se invoca, forma Monk, paga destierro para invocar Adhara, forma Shaman y descarta una carta física para revivir Monk.",
+  "scope": "Fixture técnico con relleno Normal; no recomendación competitiva ni evidencia de torneo.",
+  "sourceCommit": "ae5dedb957c2c48ab86554fee08a0fca73d8b1cf",
+  "deck": {
+    "main": [
+      {
+        "id": 87052196,
+        "qty": 1,
+        "name": "Tenyi Spirit - Ashuna"
+      },
+      {
+        "id": 98159737,
+        "qty": 1,
+        "name": "Tenyi Spirit - Adhara"
+      },
+      {
+        "id": 23431858,
+        "qty": 1,
+        "name": "Tenyi Spirit - Vishuda"
+      },
+      {
+        "id": 24557335,
+        "qty": 1,
+        "name": "Tenyi Spirit - Shthana"
+      },
+      {
+        "id": 65124425,
+        "qty": 1,
+        "name": "Vessel for the Dragon Cycle"
+      },
+      {
+        "id": 48202661,
+        "qty": 3,
+        "name": "Aitsu"
+      },
+      {
+        "id": 89386122,
+        "qty": 3,
+        "name": "Ally of Justice Clausolas"
+      },
+      {
+        "id": 67371383,
+        "qty": 3,
+        "name": "Amphibian Beast"
+      },
+      {
+        "id": 14015067,
+        "qty": 3,
+        "name": "Ancient One of the Deep Forest"
+      },
+      {
+        "id": 49587396,
+        "qty": 3,
+        "name": "Ancient Tool"
+      },
+      {
+        "id": 47484352,
+        "qty": 3,
+        "name": "Anotherverse Dragon"
+      },
+      {
+        "id": 48365709,
+        "qty": 3,
+        "name": "Ansatsu"
+      },
+      {
+        "id": 18246479,
+        "qty": 3,
+        "name": "Battle Steer"
+      },
+      {
+        "id": 11761845,
+        "qty": 3,
+        "name": "Beast of Talwar"
+      },
+      {
+        "id": 42129512,
+        "qty": 3,
+        "name": "Big Koala"
+      },
+      {
+        "id": 89631139,
+        "qty": 3,
+        "name": "Blue-Eyes White Dragon"
+      },
+      {
+        "id": 81386177,
+        "qty": 2,
+        "name": "Bottom Dweller"
+      }
+    ],
+    "extra": [
+      {
+        "id": 32519092,
+        "qty": 2,
+        "name": "Monk of the Tenyi"
+      },
+      {
+        "id": 78917791,
+        "qty": 1,
+        "name": "Shaman of the Tenyi"
+      },
+      {
+        "id": 5402805,
+        "qty": 1,
+        "name": "Berserker of the Tenyi"
+      }
+    ],
+    "side": []
+  },
+  "openingIds": [
+    87052196,
+    48202661,
+    89386122,
+    67371383,
+    14015067
+  ],
+  "remainingDeckIds": [
+    98159737,
+    23431858,
+    24557335,
+    65124425,
+    48202661,
+    48202661,
+    89386122,
+    89386122,
+    67371383,
+    67371383,
+    14015067,
+    14015067,
+    49587396,
+    49587396,
+    49587396,
+    47484352,
+    47484352,
+    47484352,
+    48365709,
+    48365709,
+    48365709,
+    18246479,
+    18246479,
+    18246479,
+    11761845,
+    11761845,
+    11761845,
+    42129512,
+    42129512,
+    42129512,
+    89631139,
+    89631139,
+    89631139,
+    81386177,
+    81386177
+  ],
+  "context": {
+    "format": "tcg",
+    "banlistVersion": "19/10/2026",
+    "opponentPolicy": "PASS"
+  },
+  "goal": {
+    "requiredFieldIds": [
+      78917791,
+      32519092
+    ]
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "version": "Alpha 1263",
+  "revision": "2026.10-stable.6",
+  "canonicalId": "ygo-alpha-1263-canonical-release",
+  "moduleCount": 88,
+  "catalogCardCount": 21986,
+  "buildId": "a214f91b5554fb95b64a72cce9a1729eab468b9729229d97494980688b3de119",
+  "catalogueSizePinsCompiled": 164,
+  "dataHashes": {
+    "cards": "cc265022039bba09fc31e8e3a48afb0030e5a81cab0c30c386843fcd75e1cba6"
+  },
+  "catalogSha256": "cc265022039bba09fc31e8e3a48afb0030e5a81cab0c30c386843fcd75e1cba6",
+  "dataVersion": "cc265022039bba09fc31e8e3a48afb0030e5a81cab0c30c386843fcd75e1cba6",
+  "scope": {
+    "primaryFormat": "TCG",
+    "ranking": "STRUCTURAL_PROVISIONAL",
+    "search": "DECLARED_BOUNDED_SCOPE",
+    "universalCertified": false
+  },
+  "officialContextVerification": {
+    "schema": "ygo-official-context-verification/v1",
+    "status": "DATED_TCG_RESTRICTION_TABLE_MATCH",
+    "pass": true,
+    "format": "tcg",
+    "effectiveDate": "2026-10-19",
+    "reviewedAt": "2026-10-26T23:35:20.067328+00:00",
+    "asOfDate": "2026-10-26",
+    "sourceUrl": "https://www.db.yugioh-card.com/yugiohdb/forbidden_limited.action?request_locale=en",
+    "documentPath": "src/data/official/tcg-2026-10-19.html",
+    "receiptPath": "src/data/official/tcg-2026-10-19-receipt.json",
+    "documentSha256": "3f6a5c8dbeca3007e98eb29dacbce8c66e4a11d1542a387fa3c573666e53ec9d",
+    "snapshotSha256": "930199011717285782cadb8b232341bb6446bac3f9afc21a3813a45fafff4f3c",
+    "embeddedTableSha256": "359e33e72b769b89049a8872352753885c1658a5599dd3d8313d6cd2b9a4d82e",
+    "normalizedRestrictionsSha256": "8e48282787baba3fba98638cb3006bd3bd4c4ac4616353b7f4dda3c1ebdab72b",
+    "tableEquivalent": true,
+    "restrictionCounts": {
+      "0": 156,
+      "1": 92,
+      "2": 7,
+      "3": 0
+    },
+    "restrictedNamesCompared": 255,
+    "extraction": "RECOGNIZED_NEURON_SECTIONS",
+    "transportAuthenticatedAtReview": true,
+    "scope": "DATED_TCG_RESTRICTION_NAMES_LIMITS_AND_DATE_ONLY",
+    "currentListProven": false,
+    "officialPoolVerified": false,
+    "officialRulingsVerified": false,
+    "officialPasscodesVerified": false,
+    "competitiveCertified": false,
+    "limitations": [
+      "A local source URL or external receipt does not authenticate document origin.",
+      "A complete-table assertion is supplied by the reviewer; PDF/text rows require exact witnesses.",
+      "Matching table names and limits do not authenticate passcodes, card availability, rulings or all formats.",
+      "A dated matching publication does not prove it is the latest effective list."
+    ],
+    "storedBytesRecheckedAtBuild": true,
+    "retrievalAuthenticatedInThisBuild": false
+  },
+  "htmlSha256": "9fb3b88702cd55655125975be8acba7340545619312e3242723908866957ea37",
+  "bytes": 6909403,
+  "output": "dist/Calculadora_de_Barajas_YuGiOh_Alpha_1263_Corregida.html"
+}

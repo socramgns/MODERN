@@ -1,0 +1,125 @@
+{
+  "schema": "ygo-local-file-delivery/v1",
+  "buildId": "a214f91b5554fb95b64a72cce9a1729eab468b9729229d97494980688b3de119",
+  "htmlSha256": "9fb3b88702cd55655125975be8acba7340545619312e3242723908866957ea37",
+  "executedAt": "2026-10-27T05:10:57.789370+00:00",
+  "pass": true,
+  "complete": true,
+  "artifactMode": "DIRECT_FILE_NAVIGATION",
+  "networkMode": "OFFLINE",
+  "browserPolicyChanges": false,
+  "routeFulfillmentUsed": false,
+  "httpServerUsed": false,
+  "browsers": [
+    {
+      "engine": "firefox",
+      "version": "153.0",
+      "status": "PASSED",
+      "pass": true,
+      "directFileNavigationVerified": true,
+      "tests": [
+        {
+          "name": "offline_file_boot_bound_to_delivered_build",
+          "pass": true
+        },
+        {
+          "name": "import_physical_deck_from_file",
+          "pass": true
+        },
+        {
+          "name": "calculate_with_keyboard_keeps_score_provisional",
+          "pass": true
+        },
+        {
+          "name": "offline_file_invoked_goal_has_fresh_replay",
+          "pass": true
+        },
+        {
+          "name": "ydk_download_from_local_html_preserves_cards",
+          "pass": true
+        },
+        {
+          "name": "analysis_download_from_local_html_is_bound_to_build",
+          "pass": true
+        },
+        {
+          "name": "local_file_session_saved",
+          "pass": true
+        },
+        {
+          "name": "offline_local_file_reload_restores_same_deck_and_context",
+          "pass": true
+        },
+        {
+          "name": "no_javascript_page_errors",
+          "pass": true
+        }
+      ],
+      "details": {
+        "offline_file_boot_bound_to_delivered_build": {
+          "buildId": "a214f91b5554fb95b64a72cce9a1729eab468b9729229d97494980688b3de119",
+          "ready": true,
+          "protocol": "file:"
+        },
+        "import_physical_deck_from_file": {
+          "fingerprint": "{\"extra\":[[34755994,1],[75286621,1]],\"main\":[[17968114,3],[23771716,3],[42431843,3],[43230671,3],[47372349,3],[64428736,3],[70924884,3],[74063034,3],[75889523,1],[85639257,3],[86120751,3],[89904598,3],[97127906,3],[99785935,3]],\"side\":[]}",
+          "opening": [
+            86120751,
+            23771716,
+            47372349,
+            97127906,
+            70924884
+          ],
+          "counts": {
+            "main": 40,
+            "extra": 2,
+            "side": 0,
+            "skills": 0
+          },
+          "name": "Invoked · prueba causal TCG",
+          "context": {
+            "format": "tcg"
+          }
+        },
+        "calculate_with_keyboard_keeps_score_provisional": {
+          "keyboardFocused": true,
+          "total": 45,
+          "scope": {
+            "authority": "ESTRUCTURAL_PROVISIONAL",
+            "certified": false,
+            "competitiveCertified": false,
+            "total": "45 / 100"
+          }
+        },
+        "offline_file_invoked_goal_has_fresh_replay": {
+          "pass": true,
+          "count": 1,
+          "goals": [
+            true
+          ],
+          "replays": [
+            true
+          ]
+        },
+        "local_file_session_saved": {
+          "saved": true,
+          "unchanged": true
+        },
+        "offline_local_file_reload_restores_same_deck_and_context": {
+          "fingerprint": "{\"extra\":[[34755994,1],[75286621,1]],\"main\":[[17968114,3],[23771716,3],[42431843,3],[43230671,3],[47372349,3],[64428736,3],[70924884,3],[74063034,3],[75889523,1],[85639257,3],[86120751,3],[89904598,3],[97127906,3],[99785935,3]],\"side\":[]}",
+          "name": "Invoked · prueba causal TCG",
+          "context": {
+            "format": "tcg"
+          }
+        },
+        "no_javascript_page_errors": []
+      },
+      "pageErrors": []
+    }
+  ],
+  "limitations": [
+    "Automated browser tasks do not certify every OS/browser configuration.",
+    "Local file storage is bound to this browser profile and file location.",
+    "Competition score remains provisional; only registered actions are replayed."
+  ]
+}

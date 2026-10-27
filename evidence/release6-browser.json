@@ -1,0 +1,69 @@
+{
+  "schema": "ygo-release6-browser/v1",
+  "pass": true,
+  "buildId": "a214f91b5554fb95b64a72cce9a1729eab468b9729229d97494980688b3de119",
+  "htmlSha256": "9fb3b88702cd55655125975be8acba7340545619312e3242723908866957ea37",
+  "artifactMode": "DELIVERED_BYTES",
+  "checks": [
+    {
+      "name": "exact_delivered_bytes_boot_offline",
+      "pass": true
+    },
+    {
+      "name": "single_roar_import_preserves_registered_provider_and_choice_policy",
+      "pass": true
+    },
+    {
+      "name": "laboratory_exposes_physical_roar_variant_and_readable_label",
+      "pass": true
+    },
+    {
+      "name": "gui_roar_negates_spark_destroys_actual_source_and_replays",
+      "pass": true
+    },
+    {
+      "name": "comparison_includes_roar_with_its_same_valid_physical_start",
+      "pass": true
+    },
+    {
+      "name": "comparison_excludes_unavailable_roar_set_this_turn",
+      "pass": true
+    },
+    {
+      "name": "comparison_excludes_unavailable_roar_without_salamangreat_link",
+      "pass": true
+    },
+    {
+      "name": "multiple_provider_import_keeps_order_and_context_in_custom_option",
+      "pass": true
+    },
+    {
+      "name": "both_imported_providers_reach_laboratory_action_variants",
+      "pass": true
+    },
+    {
+      "name": "individual_choice_and_return_to_imported_policy_are_lossless",
+      "pass": true
+    },
+    {
+      "name": "unknown_or_missing_providers_are_rejected_before_replacing_scenario",
+      "pass": true
+    },
+    {
+      "name": "no_uncaught_page_errors",
+      "pass": true
+    },
+    {
+      "name": "original_artifact_unchanged",
+      "pass": true
+    }
+  ],
+  "details": {
+    "no_uncaught_page_errors": []
+  },
+  "limitations": [
+    "Technical physical fixtures are not competitive deck recommendations.",
+    "Registered providers and chains keep their declared scope."
+  ],
+  "elapsedSeconds": 16.14
+}

@@ -1,0 +1,335 @@
+{
+  "schema": "ygo-archetype-fixture/v1",
+  "id": "blueeyes-declared-turn-two",
+  "name": "Segundo turno declarado · Blue-Eyes contra 7 Colored Fish",
+  "description": "Campo inicial declarado con copias físicas: avanzar de Main Phase 1 a Battle Phase y atacar con Blue-Eyes White Dragon (3000 ATK) a 7 Colored Fish (1800 ATK) para infligir 1200 de daño.",
+  "scope": "Fixture técnico con historia previa declarada y no certificada; no recomendación competitiva ni evidencia de torneo. Las posiciones iniciales consumen copias reales de las barajas importadas.",
+  "sourceCommit": "ae5dedb957c2c48ab86554fee08a0fca73d8b1cf",
+  "deck": {
+    "main": [
+      {
+        "id": 8240199,
+        "qty": 3,
+        "name": "Sage with Eyes of Blue"
+      },
+      {
+        "id": 71039903,
+        "qty": 2,
+        "name": "The White Stone of Ancients"
+      },
+      {
+        "id": 89631139,
+        "qty": 3,
+        "name": "Blue-Eyes White Dragon"
+      },
+      {
+        "id": 24382602,
+        "qty": 1,
+        "name": "Mausoleum of White"
+      },
+      {
+        "id": 23771716,
+        "qty": 3,
+        "name": "7 Colored Fish"
+      },
+      {
+        "id": 47372349,
+        "qty": 3,
+        "name": "Acrobat Monkey"
+      },
+      {
+        "id": 97127906,
+        "qty": 3,
+        "name": "Alien Shocktrooper"
+      },
+      {
+        "id": 70924884,
+        "qty": 3,
+        "name": "Alinsection"
+      },
+      {
+        "id": 64428736,
+        "qty": 3,
+        "name": "Alligator's Sword"
+      },
+      {
+        "id": 99785935,
+        "qty": 3,
+        "name": "Alpha The Magnet Warrior"
+      },
+      {
+        "id": 17968114,
+        "qty": 3,
+        "name": "Amazon of the Seas"
+      },
+      {
+        "id": 42431843,
+        "qty": 3,
+        "name": "Ancient Brain"
+      },
+      {
+        "id": 43230671,
+        "qty": 3,
+        "name": "Ancient Lizard Warrior"
+      },
+      {
+        "id": 89904598,
+        "qty": 3,
+        "name": "Anthrosaurus"
+      },
+      {
+        "id": 85639257,
+        "qty": 1,
+        "name": "Aqua Madoor"
+      }
+    ],
+    "extra": [
+      {
+        "id": 42097666,
+        "qty": 1,
+        "name": "Spirit with Eyes of Blue"
+      },
+      {
+        "id": 59822133,
+        "qty": 1,
+        "name": "Blue-Eyes Spirit Dragon"
+      },
+      {
+        "id": 40908371,
+        "qty": 1,
+        "name": "Azure-Eyes Silver Dragon"
+      },
+      {
+        "id": 83994433,
+        "qty": 1,
+        "name": "Stardust Spark Dragon"
+      }
+    ],
+    "side": []
+  },
+  "openingIds": [
+    8240199,
+    23771716,
+    47372349,
+    97127906,
+    70924884
+  ],
+  "remainingDeckIds": [
+    8240199,
+    8240199,
+    71039903,
+    71039903,
+    89631139,
+    89631139,
+    89631139,
+    24382602,
+    23771716,
+    23771716,
+    47372349,
+    47372349,
+    97127906,
+    97127906,
+    70924884,
+    70924884,
+    64428736,
+    64428736,
+    64428736,
+    99785935,
+    99785935,
+    99785935,
+    17968114,
+    17968114,
+    17968114,
+    42431843,
+    42431843,
+    42431843,
+    43230671,
+    43230671,
+    43230671,
+    89904598,
+    89904598,
+    89904598,
+    85639257
+  ],
+  "context": {
+    "format": "tcg",
+    "banlistVersion": "19/10/2026",
+    "opponentPolicy": "PASS",
+    "duelMode": true,
+    "manualBothPlayers": true,
+    "goingSecond": true,
+    "initialHistoryCertified": false
+  },
+  "goal": {
+    "requiredFieldIds": [
+      89631139
+    ],
+    "opponentLpAtMost": 6800,
+    "phase": "BATTLE",
+    "turn": 2,
+    "activePlayer": 0
+  },
+  "setup": {
+    "turn": 2,
+    "activePlayer": 0,
+    "phase": "MAIN 1",
+    "lp": [
+      8000,
+      8000
+    ],
+    "placements": [
+      {
+        "player": 0,
+        "from": "deck",
+        "cardId": 89631139,
+        "zone": "monster",
+        "faceUp": true,
+        "position": "ATTACK",
+        "zoneIndex": 0,
+        "summonTurn": 1
+      },
+      {
+        "player": 1,
+        "from": "deck",
+        "cardId": 23771716,
+        "zone": "monster",
+        "faceUp": true,
+        "position": "ATTACK",
+        "zoneIndex": 0,
+        "summonTurn": 1
+      }
+    ]
+  },
+  "opponentDeck": {
+    "main": [
+      {
+        "id": 14558127,
+        "qty": 1
+      },
+      {
+        "id": 23771716,
+        "qty": 3
+      },
+      {
+        "id": 47372349,
+        "qty": 3
+      },
+      {
+        "id": 97127906,
+        "qty": 3
+      },
+      {
+        "id": 70924884,
+        "qty": 3
+      },
+      {
+        "id": 64428736,
+        "qty": 3
+      },
+      {
+        "id": 99785935,
+        "qty": 3
+      },
+      {
+        "id": 17968114,
+        "qty": 3
+      },
+      {
+        "id": 42431843,
+        "qty": 3
+      },
+      {
+        "id": 43230671,
+        "qty": 3
+      },
+      {
+        "id": 89904598,
+        "qty": 2
+      },
+      {
+        "id": 85639257,
+        "qty": 2
+      },
+      {
+        "id": 75889523,
+        "qty": 2
+      },
+      {
+        "id": 49881766,
+        "qty": 2
+      },
+      {
+        "id": 97268402,
+        "qty": 1,
+        "name": "Effect Veiler"
+      },
+      {
+        "id": 10045474,
+        "qty": 1,
+        "name": "Infinite Impermanence"
+      },
+      {
+        "id": 24508238,
+        "qty": 1,
+        "name": "D.D. Crow"
+      },
+      {
+        "id": 94145021,
+        "qty": 1,
+        "name": "Droll & Lock Bird"
+      }
+    ],
+    "extra": [],
+    "side": []
+  },
+  "opponentOpeningIds": [
+    14558127,
+    97268402,
+    10045474,
+    24508238,
+    94145021
+  ],
+  "opponentRemainingDeckIds": [
+    23771716,
+    23771716,
+    23771716,
+    47372349,
+    47372349,
+    47372349,
+    97127906,
+    97127906,
+    97127906,
+    70924884,
+    70924884,
+    70924884,
+    64428736,
+    64428736,
+    64428736,
+    99785935,
+    99785935,
+    99785935,
+    17968114,
+    17968114,
+    17968114,
+    42431843,
+    42431843,
+    42431843,
+    43230671,
+    43230671,
+    43230671,
+    89904598,
+    89904598,
+    85639257,
+    85639257,
+    75889523,
+    75889523,
+    49881766,
+    49881766
+  ],
+  "notes": [
+    "Importa este escenario en el explorador causal; ya incluye ambas barajas, las manos, los órdenes iniciales y el campo declarado.",
+    "En el laboratorio de duelo, inicia desde la selección actual y elige avanzar a BATTLE; después selecciona DUEL_ATTACK con Blue-Eyes contra 7 Colored Fish.",
+    "La colocación inicial no demuestra cómo se llegó a ese campo ni certifica una invocación anterior. El replay verifica las acciones posteriores desde esta suposición explícita.",
+    "Las cartas Extra adicionales son copias reales disponibles para rutas admitidas; añadirlas no acredita todos sus efectos."
+  ]
+}

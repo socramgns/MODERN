@@ -1,0 +1,479 @@
+{
+  "version": "Alpha 1263",
+  "format": "ygo-deferred-bundle-v22",
+  "canonicalId": "ygo-alpha-1263-canonical-release",
+  "revision": "2026.10-stable.6",
+  "scripts": [
+    0,
+    1,
+    2,
+    4
+  ],
+  "modules": [
+    {
+      "id": "ygo-alpha-330-script",
+      "order": 1,
+      "path": "src/modules/000-ygo-alpha-330-script.js"
+    },
+    {
+      "id": "ygo-alpha-239-functional-layer",
+      "order": 2,
+      "path": "src/modules/001-ygo-alpha-239-functional-layer.js"
+    },
+    {
+      "id": "ygo-alpha-243-whole-deck-optimizer",
+      "order": 3,
+      "path": "src/modules/002-ygo-alpha-243-whole-deck-optimizer.js"
+    },
+    {
+      "id": "ygo-prebundle-inline-7",
+      "order": 4,
+      "path": "src/modules/003-ygo-prebundle-inline-7.js"
+    },
+    {
+      "id": "ygo-prebundle-inline-8",
+      "order": 5,
+      "path": "src/modules/004-ygo-prebundle-inline-8.js"
+    },
+    {
+      "id": "ygo-prebundle-inline-9",
+      "order": 6,
+      "path": "src/modules/005-ygo-prebundle-inline-9.js"
+    },
+    {
+      "id": "ygo-alpha-657-pack-305-360",
+      "order": 7,
+      "path": "src/modules/006-ygo-alpha-657-pack-305-360.js"
+    },
+    {
+      "id": "ygo-alpha-657-pack-364-376",
+      "order": 8,
+      "path": "src/modules/007-ygo-alpha-657-pack-364-376.js"
+    },
+    {
+      "id": "ygo-alpha-657-pack-403-522",
+      "order": 9,
+      "path": "src/modules/008-ygo-alpha-657-pack-403-522.js"
+    },
+    {
+      "id": "ygo-alpha-657-pack-543-593",
+      "order": 10,
+      "path": "src/modules/009-ygo-alpha-657-pack-543-593.js"
+    },
+    {
+      "id": "ygo-alpha-653-pack-557-620",
+      "order": 11,
+      "path": "src/modules/010-ygo-alpha-653-pack-557-620.js"
+    },
+    {
+      "id": "ygo-alpha-644-bounded-corpus-start-main1-random-extra-composite-runtime",
+      "order": 12,
+      "path": "src/modules/011-ygo-alpha-644-bounded-corpus-start-main1-random-extra-composite-runtime.js"
+    },
+    {
+      "id": "ygo-alpha-652-consolidated-fixture-runtime",
+      "order": 13,
+      "path": "src/modules/012-ygo-alpha-652-consolidated-fixture-runtime.js"
+    },
+    {
+      "id": "ygo-alpha-654-self-contained-corpus-certificate",
+      "order": 14,
+      "path": "src/modules/013-ygo-alpha-654-self-contained-corpus-certificate.js"
+    },
+    {
+      "id": "ygo-alpha-655-bounded-exhaustive-search",
+      "order": 15,
+      "path": "src/modules/014-ygo-alpha-655-bounded-exhaustive-search.js"
+    },
+    {
+      "id": "ygo-alpha-656-causal-scoring-v3",
+      "order": 16,
+      "path": "src/modules/015-ygo-alpha-656-causal-scoring-v3.js"
+    },
+    {
+      "id": "ygo-alpha-664-parser-taxonomy-exact-dispatch-exhaustive",
+      "order": 17,
+      "path": "src/modules/016-ygo-alpha-664-parser-taxonomy-exact-dispatch-exhaustive.js"
+    },
+    {
+      "id": "ygo-alpha-666-dynamic-engine-exhaustive-enumerator",
+      "order": 18,
+      "path": "src/modules/017-ygo-alpha-666-dynamic-engine-exhaustive-enumerator.js"
+    },
+    {
+      "id": "ygo-alpha-667-fallen-virtuous-exact-facade",
+      "order": 19,
+      "path": "src/modules/018-ygo-alpha-667-fallen-virtuous-exact-facade.js"
+    },
+    {
+      "id": "ygo-alpha-668-parser-cost-turn-taxonomy",
+      "order": 20,
+      "path": "src/modules/019-ygo-alpha-668-parser-cost-turn-taxonomy.js"
+    },
+    {
+      "id": "ygo-alpha-669-self-contained-exhaustive-parser",
+      "order": 21,
+      "path": "src/modules/020-ygo-alpha-669-self-contained-exhaustive-parser.js"
+    },
+    {
+      "id": "ygo-alpha-670-token-passive-opponent-turn-taxonomy",
+      "order": 22,
+      "path": "src/modules/021-ygo-alpha-670-token-passive-opponent-turn-taxonomy.js"
+    },
+    {
+      "id": "ygo-alpha-671-self-contained-taxonomy-complete",
+      "order": 23,
+      "path": "src/modules/022-ygo-alpha-671-self-contained-taxonomy-complete.js"
+    },
+    {
+      "id": "ygo-alpha-672-depth3-exact-gaps",
+      "order": 24,
+      "path": "src/modules/023-ygo-alpha-672-depth3-exact-gaps.js"
+    },
+    {
+      "id": "ygo-alpha-673-exact-state-dedup-material-recipe",
+      "order": 25,
+      "path": "src/modules/024-ygo-alpha-673-exact-state-dedup-material-recipe.js"
+    },
+    {
+      "id": "ygo-alpha-674-main-phase-battle-window-gate",
+      "order": 26,
+      "path": "src/modules/025-ygo-alpha-674-main-phase-battle-window-gate.js"
+    },
+    {
+      "id": "ygo-alpha-675-summary-restriction-taxonomy",
+      "order": 27,
+      "path": "src/modules/026-ygo-alpha-675-summary-restriction-taxonomy.js"
+    },
+    {
+      "id": "ygo-alpha-676-depth3-matrix-certificate",
+      "order": 28,
+      "path": "src/modules/027-ygo-alpha-676-depth3-matrix-certificate.js"
+    },
+    {
+      "id": "ygo-alpha-677-domain-exhaustion-rock-exact",
+      "order": 29,
+      "path": "src/modules/028-ygo-alpha-677-domain-exhaustion-rock-exact.js"
+    },
+    {
+      "id": "ygo-alpha-678-exhaustive-performance-and-cert-semantics",
+      "order": 30,
+      "path": "src/modules/029-ygo-alpha-678-exhaustive-performance-and-cert-semantics.js"
+    },
+    {
+      "id": "ygo-alpha-679-collision-safe-state-key-memory",
+      "order": 31,
+      "path": "src/modules/030-ygo-alpha-679-collision-safe-state-key-memory.js"
+    },
+    {
+      "id": "ygo-alpha-680-kings-sarcophagus-exact",
+      "order": 32,
+      "path": "src/modules/031-ygo-alpha-680-kings-sarcophagus-exact.js"
+    },
+    {
+      "id": "ygo-alpha-681-kings-sarc-summary-normalization",
+      "order": 33,
+      "path": "src/modules/032-ygo-alpha-681-kings-sarc-summary-normalization.js"
+    },
+    {
+      "id": "ygo-alpha-682-depth4-extra-exact-candidates",
+      "order": 34,
+      "path": "src/modules/033-ygo-alpha-682-depth4-extra-exact-candidates.js"
+    },
+    {
+      "id": "ygo-alpha-683-text-material-exact-prefilter",
+      "order": 35,
+      "path": "src/modules/034-ygo-alpha-683-text-material-exact-prefilter.js"
+    },
+    {
+      "id": "ygo-alpha-684-depth4-matrix-certificate",
+      "order": 36,
+      "path": "src/modules/035-ygo-alpha-684-depth4-matrix-certificate.js"
+    },
+    {
+      "id": "ygo-alpha-685-stake-your-soul-exact",
+      "order": 37,
+      "path": "src/modules/036-ygo-alpha-685-stake-your-soul-exact.js"
+    },
+    {
+      "id": "ygo-alpha-686-timestamp-canonical-exhaustive",
+      "order": 38,
+      "path": "src/modules/037-ygo-alpha-686-timestamp-canonical-exhaustive.js"
+    },
+    {
+      "id": "ygo-alpha-687-fiendsmith-tract-exact",
+      "order": 39,
+      "path": "src/modules/038-ygo-alpha-687-fiendsmith-tract-exact.js"
+    },
+    {
+      "id": "ygo-alpha-688-physical-copy-symmetry",
+      "order": 40,
+      "path": "src/modules/039-ygo-alpha-688-physical-copy-symmetry.js"
+    },
+    {
+      "id": "ygo-alpha-723-consolidated-exact-core",
+      "order": 41,
+      "path": "src/modules/040-ygo-alpha-723-consolidated-exact-core.js"
+    },
+    {
+      "id": "ygo-alpha-730-consolidated-modern-runtime",
+      "order": 42,
+      "path": "src/modules/041-ygo-alpha-730-consolidated-modern-runtime.js"
+    },
+    {
+      "id": "ygo-alpha-745-causal-horizon-consolidated",
+      "order": 43,
+      "path": "src/modules/042-ygo-alpha-745-causal-horizon-consolidated.js"
+    },
+    {
+      "id": "ygo-alpha-749-consolidated-decision-runtime",
+      "order": 44,
+      "path": "src/modules/043-ygo-alpha-749-consolidated-decision-runtime.js"
+    },
+    {
+      "id": "ygo-alpha-755-decision-special-causal-consolidated",
+      "order": 45,
+      "path": "src/modules/044-ygo-alpha-755-decision-special-causal-consolidated.js"
+    },
+    {
+      "id": "ygo-alpha-756-verified-choice-causal",
+      "order": 46,
+      "path": "src/modules/045-ygo-alpha-756-verified-choice-causal.js"
+    },
+    {
+      "id": "ygo-alpha-757-prioritized-coverage",
+      "order": 47,
+      "path": "src/modules/046-ygo-alpha-757-prioritized-coverage.js"
+    },
+    {
+      "id": "ygo-alpha-764-high-impact-resource-consolidated",
+      "order": 48,
+      "path": "src/modules/047-ygo-alpha-764-high-impact-resource-consolidated.js"
+    },
+    {
+      "id": "ygo-alpha-770-replacement-continuous-dynamic-risk-consolidated",
+      "order": 49,
+      "path": "src/modules/048-ygo-alpha-770-replacement-continuous-dynamic-risk-consolidated.js"
+    },
+    {
+      "id": "ygo-alpha-774-authority-consolidated",
+      "order": 50,
+      "path": "src/modules/049-ygo-alpha-774-authority-consolidated.js"
+    },
+    {
+      "id": "ygo-alpha-775-catalog-coverage-authority",
+      "order": 51,
+      "path": "src/modules/050-ygo-alpha-775-catalog-coverage-authority.js"
+    },
+    {
+      "id": "ygo-alpha-780-stochastic-control-consolidated",
+      "order": 52,
+      "path": "src/modules/051-ygo-alpha-780-stochastic-control-consolidated.js"
+    },
+    {
+      "id": "ygo-alpha-782-canonical-hardening",
+      "order": 53,
+      "path": "src/modules/052-ygo-alpha-782-canonical-hardening.js"
+    },
+    {
+      "id": "ygo-alpha-787-banlist-transition-release",
+      "order": 54,
+      "path": "src/modules/053-ygo-alpha-787-banlist-transition-release.js"
+    },
+    {
+      "id": "ygo-alpha-788-format-mechanics-certification",
+      "order": 55,
+      "path": "src/modules/054-ygo-alpha-788-format-mechanics-certification.js"
+    },
+    {
+      "id": "ygo-alpha-789-excavate-branch-engine",
+      "order": 56,
+      "path": "src/modules/055-ygo-alpha-789-excavate-branch-engine.js"
+    },
+    {
+      "id": "ygo-alpha-790-range-target-integration",
+      "order": 57,
+      "path": "src/modules/056-ygo-alpha-790-range-target-integration.js"
+    },
+    {
+      "id": "ygo-alpha-798-modal-domain-certificate",
+      "order": 58,
+      "path": "src/modules/057-ygo-alpha-798-modal-domain-certificate.js"
+    },
+    {
+      "id": "ygo-alpha-799-shuffle-order-integrity",
+      "order": 59,
+      "path": "src/modules/058-ygo-alpha-799-shuffle-order-integrity.js"
+    },
+    {
+      "id": "ygo-alpha-800-format-state-runtime",
+      "order": 60,
+      "path": "src/modules/059-ygo-alpha-800-format-state-runtime.js"
+    },
+    {
+      "id": "ygo-alpha-802-release-gate-consolidation",
+      "order": 61,
+      "path": "src/modules/060-ygo-alpha-802-release-gate-consolidation.js"
+    },
+    {
+      "id": "ygo-alpha-817-pack-808-816",
+      "order": 62,
+      "path": "src/modules/061-ygo-alpha-817-pack-808-816.js"
+    },
+    {
+      "id": "ygo-alpha-817-final-pack-and-coverage-backlog",
+      "order": 63,
+      "path": "src/modules/062-ygo-alpha-817-final-pack-and-coverage-backlog.js"
+    },
+    {
+      "id": "ygo-alpha-824-pack-818-823",
+      "order": 64,
+      "path": "src/modules/063-ygo-alpha-824-pack-818-823.js"
+    },
+    {
+      "id": "ygo-alpha-834-pack-825-833",
+      "order": 65,
+      "path": "src/modules/064-ygo-alpha-834-pack-825-833.js"
+    },
+    {
+      "id": "ygo-alpha-840-pack-835-839",
+      "order": 66,
+      "path": "src/modules/065-ygo-alpha-840-pack-835-839.js"
+    },
+    {
+      "id": "ygo-alpha-841-reconciliation-final-authority",
+      "order": 67,
+      "path": "src/modules/066-ygo-alpha-841-reconciliation-final-authority.js"
+    },
+    {
+      "id": "ygo-alpha-844-canonical-runtime-consolidation",
+      "order": 68,
+      "path": "src/modules/067-ygo-alpha-844-canonical-runtime-consolidation.js"
+    },
+    {
+      "id": "ygo-alpha-846-canonical-catalog-active-deck-gate",
+      "order": 69,
+      "path": "src/modules/068-ygo-alpha-846-canonical-catalog-active-deck-gate.js"
+    },
+    {
+      "id": "ygo-alpha-848-opponent-ydk-matchup-authority",
+      "order": 70,
+      "path": "src/modules/069-ygo-alpha-848-opponent-ydk-matchup-authority.js"
+    },
+    {
+      "id": "ygo-alpha-849-search-truth-top5-authority",
+      "order": 71,
+      "path": "src/modules/070-ygo-alpha-849-search-truth-top5-authority.js"
+    },
+    {
+      "id": "ygo-alpha-851-local-archetype-format-authority",
+      "order": 72,
+      "path": "src/modules/071-ygo-alpha-851-local-archetype-format-authority.js"
+    },
+    {
+      "id": "ygo-alpha-859-pack-854-858",
+      "order": 73,
+      "path": "src/modules/072-ygo-alpha-859-pack-854-858.js"
+    },
+    {
+      "id": "ygo-alpha-865-pack-862-864",
+      "order": 74,
+      "path": "src/modules/073-ygo-alpha-865-pack-862-864.js"
+    },
+    {
+      "id": "ygo-alpha-871-pack-867-870",
+      "order": 75,
+      "path": "src/modules/074-ygo-alpha-871-pack-867-870.js"
+    },
+    {
+      "id": "ygo-alpha-872-universal-strict-coverage",
+      "order": 76,
+      "path": "src/modules/075-ygo-alpha-872-universal-strict-coverage.js"
+    },
+    {
+      "id": "ygo-alpha-877-pack-874-876",
+      "order": 77,
+      "path": "src/modules/076-ygo-alpha-877-pack-874-876.js"
+    },
+    {
+      "id": "ygo-alpha-879-self-bound-movement-exact",
+      "order": 78,
+      "path": "src/modules/077-ygo-alpha-879-self-bound-movement-exact.js"
+    },
+    {
+      "id": "ygo-alpha-881-state-condition-expansion",
+      "order": 79,
+      "path": "src/modules/078-ygo-alpha-881-state-condition-expansion.js"
+    },
+    {
+      "id": "ygo-alpha-882-source-self-relocation-exact",
+      "order": 80,
+      "path": "src/modules/079-ygo-alpha-882-source-self-relocation-exact.js"
+    },
+    {
+      "id": "ygo-alpha-883-modern-condition-exact-bridge",
+      "order": 81,
+      "path": "src/modules/080-ygo-alpha-883-modern-condition-exact-bridge.js"
+    },
+    {
+      "id": "ygo-alpha-982-canonical-pack-888-982",
+      "order": 82,
+      "path": "src/modules/081-ygo-alpha-982-canonical-pack-888-982.js"
+    },
+    {
+      "id": "ygo-alpha-984-universal-closure-runtime",
+      "order": 83,
+      "path": "src/modules/082-ygo-alpha-984-universal-closure-runtime.js"
+    },
+    {
+      "id": "ygo-alpha-985-exact-cost-target-top5",
+      "order": 84,
+      "path": "src/modules/083-ygo-alpha-985-exact-cost-target-top5.js"
+    },
+    {
+      "id": "ygo-alpha-986-trigger-condition-usage-exact",
+      "order": 85,
+      "path": "src/modules/084-ygo-alpha-986-trigger-condition-usage-exact.js"
+    },
+    {
+      "id": "ygo-alpha-1216-canonical-release",
+      "order": 86,
+      "path": "src/modules/085-ygo-alpha-1216-canonical-release.js"
+    },
+    {
+      "id": "ygo-alpha-1217-truth-audit",
+      "order": 87,
+      "path": "src/modules/086-ygo-alpha-1217-truth-audit.js"
+    },
+    {
+      "id": "ygo-alpha-1218-opening-provenance-crosscheck",
+      "order": 88,
+      "path": "src/modules/087-ygo-alpha-1218-opening-provenance-crosscheck.js"
+    }
+  ],
+  "extensions": [
+    "src/app/catalog.js",
+    "src/app/formats.js",
+    "src/app/provenance.js",
+    "src/app/combo-engine.js",
+    "src/app/duel-phases.js",
+    "src/app/responses.js",
+    "src/app/archetypes.js",
+    "src/app/archetypes-expanded.js",
+    "src/app/blue-eyes-duel.js",
+    "src/app/strategy.js",
+    "src/app/recommendations.js",
+    "src/app/evaluation.js",
+    "src/app/search.js",
+    "src/app/ui-state.js",
+    "src/app/format-editor.js",
+    "src/app/scenario-examples.js",
+    "src/app/combo-workbench.js",
+    "src/app/advanced-workbench.js",
+    "src/app/draw-uncertainty.js",
+    "src/app/exports.js",
+    "src/app/coverage.js",
+    "src/app/release.js"
+  ],
+  "output": "dist/Calculadora_de_Barajas_YuGiOh_Alpha_1263_Corregida.html"
+}

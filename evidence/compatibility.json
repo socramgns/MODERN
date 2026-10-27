@@ -1,0 +1,60 @@
+{
+  "schema": "ygo-browser-compatibility/v1",
+  "buildId": "a214f91b5554fb95b64a72cce9a1729eab468b9729229d97494980688b3de119",
+  "htmlSha256": "9fb3b88702cd55655125975be8acba7340545619312e3242723908866957ea37",
+  "pass": true,
+  "complete": true,
+  "crossBrowserVerified": true,
+  "executedEngines": [
+    "chromium",
+    "firefox",
+    "webkit"
+  ],
+  "pendingEngines": [],
+  "limitations": [
+    "Passing installed engines does not close unavailable-engine coverage.",
+    "Browser-policy restrictions are reported and are not disabled.",
+    "This is a smoke regression, not complete compatibility coverage."
+  ],
+  "browsers": [
+    {
+      "engine": "chromium",
+      "status": "PASSED",
+      "pass": true,
+      "fileNavigation": {
+        "status": "BLOCKED_BY_BROWSER_POLICY",
+        "verified": false,
+        "error": "Page.goto: net::ERR_BLOCKED_BY_ADMINISTRATOR at file:///workspace/yugioh-analyzer-revision6/dist/Calculadora_de_Barajas_YuGiOh_Alpha_1263_Corregida.html\nCall log:\n  - navigating to \"file:///workspace/yugioh-analyzer-revision6/dist/Calculadora_de_Barajas_YuGiOh_Alpha_1263_Corregida.html\", waiting until \"domcontentloaded\"\n"
+      },
+      "pageErrors": []
+    },
+    {
+      "engine": "firefox",
+      "status": "PASSED",
+      "pass": true,
+      "fileNavigation": {
+        "status": "VERIFIED",
+        "verified": true,
+        "detail": {
+          "ready": true,
+          "catalog": true
+        }
+      },
+      "pageErrors": []
+    },
+    {
+      "engine": "webkit",
+      "status": "PASSED",
+      "pass": true,
+      "fileNavigation": {
+        "status": "VERIFIED",
+        "verified": true,
+        "detail": {
+          "ready": true,
+          "catalog": true
+        }
+      },
+      "pageErrors": []
+    }
+  ]
+}

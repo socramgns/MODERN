@@ -1,0 +1,151 @@
+{
+  "schema": "ygo-archetype-fixture/v1",
+  "id": "swordsoul",
+  "name": "Swordsoul · prueba causal TCG",
+  "description": "Mo Ye, Token y Chixiao; cadena simultánea de robo/búsqueda; Longyuan, Chengying y 1200 de daño verificados.",
+  "scope": "Fixture técnico con relleno Normal; no recomendación competitiva ni evidencia de torneo.",
+  "sourceCommit": "ae5dedb957c2c48ab86554fee08a0fca73d8b1cf",
+  "deck": {
+    "main": [
+      {
+        "id": 20001443,
+        "qty": 3,
+        "name": "Swordsoul of Mo Ye"
+      },
+      {
+        "id": 93490856,
+        "qty": 3,
+        "name": "Swordsoul Strategist Longyuan"
+      },
+      {
+        "id": 56465981,
+        "qty": 2,
+        "name": "Swordsoul Emergence"
+      },
+      {
+        "id": 23771716,
+        "qty": 3,
+        "name": "7 Colored Fish"
+      },
+      {
+        "id": 47372349,
+        "qty": 3,
+        "name": "Acrobat Monkey"
+      },
+      {
+        "id": 97127906,
+        "qty": 3,
+        "name": "Alien Shocktrooper"
+      },
+      {
+        "id": 70924884,
+        "qty": 3,
+        "name": "Alinsection"
+      },
+      {
+        "id": 64428736,
+        "qty": 3,
+        "name": "Alligator's Sword"
+      },
+      {
+        "id": 99785935,
+        "qty": 3,
+        "name": "Alpha The Magnet Warrior"
+      },
+      {
+        "id": 17968114,
+        "qty": 3,
+        "name": "Amazon of the Seas"
+      },
+      {
+        "id": 42431843,
+        "qty": 3,
+        "name": "Ancient Brain"
+      },
+      {
+        "id": 43230671,
+        "qty": 3,
+        "name": "Ancient Lizard Warrior"
+      },
+      {
+        "id": 89904598,
+        "qty": 3,
+        "name": "Anthrosaurus"
+      },
+      {
+        "id": 85639257,
+        "qty": 2,
+        "name": "Aqua Madoor"
+      }
+    ],
+    "extra": [
+      {
+        "id": 69248256,
+        "qty": 1,
+        "name": "Swordsoul Grandmaster - Chixiao"
+      },
+      {
+        "id": 96633955,
+        "qty": 1,
+        "name": "Swordsoul Supreme Sovereign - Chengying"
+      }
+    ],
+    "side": []
+  },
+  "openingIds": [
+    20001443,
+    93490856,
+    47372349,
+    97127906,
+    70924884
+  ],
+  "remainingDeckIds": [
+    20001443,
+    20001443,
+    93490856,
+    93490856,
+    56465981,
+    56465981,
+    23771716,
+    23771716,
+    23771716,
+    47372349,
+    47372349,
+    97127906,
+    97127906,
+    70924884,
+    70924884,
+    64428736,
+    64428736,
+    64428736,
+    99785935,
+    99785935,
+    99785935,
+    17968114,
+    17968114,
+    17968114,
+    42431843,
+    42431843,
+    42431843,
+    43230671,
+    43230671,
+    43230671,
+    89904598,
+    89904598,
+    89904598,
+    85639257,
+    85639257
+  ],
+  "context": {
+    "format": "tcg",
+    "banlistVersion": "19/10/2026",
+    "opponentPolicy": "PASS"
+  },
+  "goal": {
+    "requiredFieldIds": [
+      69248256,
+      96633955
+    ],
+    "opponentLpAtMost": 6800
+  }
+}

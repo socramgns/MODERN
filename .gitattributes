@@ -1,0 +1,6 @@
+* text=auto eol=lf
+src/data/official/*.html -text
+*.cdb binary
+*.png binary
+*.pdf binary
+*.zip binary

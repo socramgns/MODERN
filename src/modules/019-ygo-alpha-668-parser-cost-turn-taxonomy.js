@@ -1,0 +1,28 @@
+(()=>{
+'use strict';
+const W=window,D=document,VERSION='Alpha 668',TITLE='Calculadora_de_Barajas_YuGiOh_Alpha_668',A666=W.YGOAlpha666||{},A667=W.YGOAlpha667||{};
+const arr=v=>Array.isArray(v)?v:[],raw=v=>String(v??''),norm=v=>raw(v).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[’]/g,"'").replace(/[^a-z0-9]+/g,' ').trim();
+let BASE_PARSE=null,PARSE_OWNER=null;
+function patchEffect668(e,card){const x={...e},txt=norm(x.raw||x.resolution||x.activation||''),full=norm(card?.desc||card?.text||'');
+  if(/^each effect(?: of [^.]*)? once per turn\.?$/.test(txt)||/^you can only use each effect(?: of [^.]*)? once per turn\.?$/.test(txt)){x.nonActivatable=true;x.nonActivatableReason='RESTRICTION_ONLY_668';x.alpha668Passive=true}
+  if(/an xyz monster that has this card as material gains/.test(txt)){x.nonActivatable=true;x.nonActivatableReason='MATERIAL_GRANT_PASSIVE_668';x.alpha668Passive=true}
+  if(/send this card from (?:your )?hand or field to the gy and discard (?:1|one) card/.test(txt)||/send this card from (?:your )?hand or field to the graveyard and discard (?:1|one) card/.test(txt)){
+    x.costs=[{kind:'SEND_GY',amount:1,self:true,alpha668:true},{kind:'DISCARD',amount:1,alpha668:true}];x.alpha668CostNormalized=true;
+  }
+  const ctx=W.__YGO668_ENUM_CONTEXT;
+  if(ctx&&Number(ctx.activePlayer)===Number(ctx.player)&&/during your opponent'?s turn/.test(txt)){x.nonActivatable=true;x.nonActivatableReason='OPPONENT_TURN_ONLY_668';x.alpha668TurnGate=true}
+  return x}
+function parse668(card){let p=null;try{p=BASE_PARSE?.(card)||null}catch(e){throw e}if(!p)return p;const out={...p,effects:arr(p.effects).map(e=>patchEffect668(e,card))};return out}
+function installParser668(){const R=W.YGORulingEngine||{};if(R.parseCard?.__alpha668)return true;if(PARSE_OWNER!==R||!BASE_PARSE){BASE_PARSE=typeof R.parseCard==='function'?R.parseCard.bind(R):null;PARSE_OWNER=R}if(!BASE_PARSE)return false;parse668.__alpha668=true;parse668.__base=BASE_PARSE;R.parseCard=parse668;return true}
+function exhaustiveOpeningSearch668(opts={}){installParser668();const old=W.__YGO668_ENUM_CONTEXT;W.__YGO668_ENUM_CONTEXT={player:0,activePlayer:0};try{return A666.exhaustiveOpeningSearch666?.(opts)||{version:VERSION,pass:false,status:'BASE_666_UNAVAILABLE'}}finally{W.__YGO668_ENUM_CONTEXT=old}}
+function install668(){A667.install667?.();installParser668();if(W.YGOAlpha655){W.YGOAlpha655.exhaustiveOpeningSearch655=exhaustiveOpeningSearch668}if(W.YGOApp)W.YGOApp.exhaustiveSearch=exhaustiveOpeningSearch668;return true}
+function selfTest668(){installParser668();const R=W.YGORulingEngine||{},stovie={name:'Labrynth Stovie Torbie',type:'Effect Monster',desc:'(Quick Effect): You can send this card from your hand or field to the GY and discard 1 card; Set 1 "Labrynth" Spell/Trap from your hand or Deck.'},ara={name:'Mitsurugi no Mikoto, Aramasa',type:'Effect Monster',desc:'If this card is Summoned: You can add 1 card. Each effect once per turn.'},lup={name:'K9-ØØ Lupis',type:'Effect Monster',desc:"During your opponent's turn (Quick Effect), immediately Xyz Summon using this card you control."};
+ const ps=R.parseCard?.(stovie),pa=R.parseCard?.(ara);const old=W.__YGO668_ENUM_CONTEXT;W.__YGO668_ENUM_CONTEXT={player:0,activePlayer:0};const pl=R.parseCard?.(lup);W.__YGO668_ENUM_CONTEXT=old;
+ const se=arr(ps?.effects).find(e=>/send this card/i.test(raw(e.raw))),ae=arr(pa?.effects).find(e=>/^each effect/i.test(raw(e.raw))),le=arr(pl?.effects).find(e=>/opponent'?s turn/i.test(raw(e.raw)));
+ const costPass=arr(se?.costs).length===2&&se.costs[0]?.kind==='SEND_GY'&&se.costs[0]?.self===true&&se.costs[1]?.kind==='DISCARD',restrictionPass=ae?.nonActivatable===true,turnPass=le?.nonActivatable===true;
+ return{version:VERSION,pass:costPass&&restrictionPass&&turnPass,costPass,restrictionPass,turnPass,stovieCosts:se?.costs,restrictionReason:ae?.nonActivatableReason,turnReason:le?.nonActivatableReason}}
+function audit668(){install668();const self=selfTest668(),base=A667.audit667?.()||{pass:false};const checks={base:base.pass!==false,self:self.pass,parser:W.YGORulingEngine?.parseCard?.__alpha668===true,search:typeof exhaustiveOpeningSearch668==='function',catalog:arr(W.CARD_CATALOG).length>=19617,ui:!!D.getElementById('alpha306LoadDeck')&&!!D.getElementById('alpha306DeleteDeck')&&!!D.querySelector('.diana-center-zone')};return{version:VERSION,pass:Object.values(checks).every(Boolean),checks,self,base}}
+function completionAudit668(){const audit=audit668(),last=W.__YGO666_LAST_EXHAUSTIVE?.certificate||null,external=W.__YGO620_EXTERNAL_BROWSER_CERT||{pass:false,status:'EXTERNAL_BROWSER_REQUIRED'};return{version:VERSION,internalPass:audit.pass,horizonOptimalityPass:last?.horizonOptimalityProven===true,globalOptimalityPass:false,universalPass:false,status:audit.pass?'CORE_668_COST_TURN_TAXONOMY_GLOBAL_OPTIMALITY_OPEN':'INTERNAL_GATES_OPEN',audit,boundedExhaustive:last,external,remaining:{globalOptimality:true,realBrowser:external.pass!==true,universalExactRules:true,partialFormats:true,scoringCausalComplete:false,legacyPhysicalPrune:true}}}
+function claim(){try{Object.defineProperty(W,'YGO_APP_VERSION',{configurable:true,enumerable:true,get:()=>VERSION,set:v=>{W.__YGO668_VERSION_WRITE={value:raw(v),at:Date.now()}}})}catch(_){}try{D.title=TITLE}catch(_){}try{if(W.YGOOfficialEvaluation)W.YGOOfficialEvaluation.version=VERSION}catch(_){}if(W.YGOApp)W.YGOApp.version=VERSION}
+const API={VERSION,patchEffect668,parse668,installParser668,exhaustiveOpeningSearch668,install668,selfTest668,audit668,completionAudit668};W.YGOAlpha668=API;install668();claim();if(W.YGOApp){W.YGOApp.release668=API;W.YGOApp.runtimeAudit=API}D.documentElement.dataset.alpha668='parser-cost-turn-taxonomy';
+})();

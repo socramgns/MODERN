@@ -1,0 +1,10 @@
+
+(()=>{'use strict';
+const W=window,D=document,VERSION='Alpha 756',TITLE='Calculadora_de_Barajas_YuGiOh_Alpha_756';
+function pin(o,k,v){if(!o)return false;try{const d=Object.getOwnPropertyDescriptor(o,k);if(d&&!d.configurable)return o[k]===v;Object.defineProperty(o,k,{configurable:true,enumerable:true,get:()=>v,set:()=>{}});return o[k]===v}catch(_){try{o[k]=v;return o[k]===v}catch(__){return false}}}
+async function calculateDeep756(){let r;try{r=await W.YGOAlpha755?.calculateDeep755?.()}catch(e){r={pass:false,error:String(e?.message||e)}}if(r&&typeof r==='object'){r.version=VERSION;r.activeDeepPath='756→755→754→…→702';r.causalScoreApplied=false}claim756();return r}
+function audit756(){const checks={a750:W.YGOAlpha750?.selfTest750?.().pass===true,a751:W.YGOAlpha751?.selfTest751?.().pass===true,a752:W.YGOAlpha752?.selfTest752?.().pass===true,a753:W.YGOAlpha753?.selfTest753?.().pass===true,a754:W.YGOAlpha754?.selfTest754?.().pass===true,score10x10:W.YGOOfficialEvaluation?.pointsPerCategory===10&&W.YGOOfficialEvaluation?.max===100,buttons:!!D.getElementById('alpha306LoadDeck')&&!!D.getElementById('alpha306DeleteDeck'),diana:!!D.querySelector('.diana-center-zone'),deep:W.calculateDeep===calculateDeep756};return{version:VERSION,pass:Object.values(checks).every(Boolean),checks}}
+function claim756(){pin(W,'YGO_APP_VERSION',VERSION);pin(W,'__YGO_FINAL_VERSION_LOCK',Object.freeze({version:VERSION,title:TITLE,owner:'Alpha756-verified-choice-causal'}));try{pin(W.YGOOfficialEvaluation,'version',VERSION)}catch(_){}try{pin(W.YGOApp,'version',VERSION)}catch(_){}pin(W,'calculateDeep',calculateDeep756);try{pin(W.YGOApp,'calculateDeep',calculateDeep756)}catch(_){}try{D.title=TITLE}catch(_){}return W.YGO_APP_VERSION===VERSION&&W.calculateDeep===calculateDeep756}
+const API={VERSION,TITLE,calculateDeep756,audit756,claim756};W.YGOAlpha756=API;claim756();try{if(W.YGOApp){W.YGOApp.release756=API;W.YGOApp.runtimeAudit=API}}catch(_){};try{D.documentElement.dataset.alpha756='verified-choice-causal'}catch(_){}
+})();
+

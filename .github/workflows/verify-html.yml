@@ -1,0 +1,60 @@
+name: Verificar HTML del analizador
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [entrega/analizador-yugioh-estable6]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Instalar herramientas de comprobación
+        run: |
+          python -m pip install -r requirements-dev.txt
+          python -m playwright install --with-deps chromium firefox webkit
+          python - <<'PY'
+          from playwright.sync_api import sync_playwright
+          from pathlib import Path
+          with sync_playwright() as runtime:
+              Path('/tmp/ygo-chromium-path').write_text(runtime.chromium.executable_path)
+          PY
+          if [ ! -x /usr/bin/chromium ]; then
+            sudo ln -s "$(cat /tmp/ygo-chromium-path)" /usr/bin/chromium
+          fi
+      - name: Recuperar la fuente técnica fijada y comprobar idempotencia
+        run: |
+          python tools/update_catalog.py --commit ae5dedb957c2c48ab86554fee08a0fca73d8b1cf
+          git diff --exit-code -- src/data
+      - name: Compilar y comparar el HTML publicado
+        run: |
+          python tools/build.py
+          cmp Analizador_YuGiOh.html dist/Calculadora_de_Barajas_YuGiOh_Alpha_1263_Corregida.html
+      - name: Ejecutar pruebas del entregable
+        run: python tests/run_all.py --no-build
+      - name: Exigir comprobación entre motores
+        run: python tests/compatibility_browser.py --require-cross-browser
+      - name: Guardar los informes
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pruebas-analizador-yugioh
+          path: |
+            dist/build-manifest.json
+            dist/validation-summary.json
+            dist/test-evidence.json
+            tests/*-results.json
+            tests/*.log
+          retention-days: 14
