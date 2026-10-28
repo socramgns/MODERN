@@ -57,6 +57,45 @@ function goalMatches(state,goal){
  const zones=state.zones?.[0]||{};
  return contains(arr(zones.monster).filter(x=>x.faceUp===true),goal.requiredFieldIds)&&contains(zones.hand,handGoalIds(goal))&&contains(arr(zones.spelltrap).filter(x=>x.faceUp===true),goal.requiredFaceUpSpellTrapIds)&&contains(arr(zones.spelltrap).filter(x=>x.faceUp===false),goal.requiredSetSpellTrapIds)&&(goal.opponentLpAtMost===undefined||Number(state.lp?.[1])<=goal.opponentLpAtMost)&&(goal.ownLpAtLeast===undefined||Number(state.lp?.[0])>=goal.ownLpAtLeast)&&(goal.phase===undefined||state.phase===goal.phase)&&(goal.turn===undefined||state.turn===goal.turn)&&(goal.activePlayer===undefined||state.activePlayer===goal.activePlayer);
 }
+// This read-only explanation is deliberately outside the per-node search path.
+// Allocate in the same zone and request order as goalMatches, then group the
+// display rows by canonical identity. A physical UID cannot fill two demands.
+function goalProgress(state,goal){
+ const value=validateGoal(goal),present=!!state&&typeof state==='object'&&!Array.isArray(state),zones=present?state.zones?.[0]||{}:{},claimed=new Set(),requirements=[];
+ const placements=[['requiredFieldIds','monster',true],
+  [value.requiredHandIds!==undefined?'requiredHandIds':'recoveredHandIds','hand',null],
+  ['requiredFaceUpSpellTrapIds','spelltrap',true],['requiredSetSpellTrapIds','spelltrap',false]];
+ for(const [key,zone,faceUp]of placements){
+  const requested=arr(value[key]),available=new Map(),groups=new Map();
+  for(const item of arr(zones[zone])){
+   if(faceUp!==null&&item.faceUp!==faceUp)continue;
+   const id=canonicalGoalId(card(item).id),identity=item?.uid??item;if(claimed.has(identity))continue;
+   let copies=available.get(id);if(!copies)available.set(id,copies=[]);if(!copies.some(copy=>copy.identity===identity))copies.push({identity,uid:typeof item?.uid==='string'?item.uid:null});
+  }
+  for(const requestedId of requested){
+   const id=canonicalGoalId(requestedId);let row=groups.get(id);
+   if(!row){const entry=W.YGODataCatalog?.lookup?.(id)||W.YGODataCatalog?.lookup?.(requestedId);row={kind:'CARD',key,zone,...(faceUp!==null?{faceUp}:{}),cardId:id,name:entry?.name||String(id),required:0,matched:0,missing:0,fulfilled:false,matchedUids:[]};groups.set(id,row);}
+   row.required++;
+   const copies=available.get(id);while(copies?.length&&claimed.has(copies[0].identity))copies.shift();
+   const copy=copies?.shift();if(copy){claimed.add(copy.identity);row.matched++;if(copy.uid!==null)row.matchedUids.push(copy.uid);}
+  }
+  for(const row of groups.values()){row.missing=row.required-row.matched;row.fulfilled=present&&row.missing===0;requirements.push(row);}
+ }
+ for(const key of goalStateKeys){
+  if(value[key]===undefined)continue;
+  let actual=null,fulfilled=false;
+  if(present){
+   if(key==='opponentLpAtMost'||key==='ownLpAtLeast'){
+    const numeric=Number(state.lp?.[key==='opponentLpAtMost'?1:0]);actual=Number.isFinite(numeric)?numeric:null;
+    fulfilled=key==='opponentLpAtMost'?numeric<=value[key]:numeric>=value[key];
+   }else{actual=state[key]??null;fulfilled=state[key]===value[key];}
+  }
+  requirements.push({kind:'STATE',key,expected:value[key],actual,fulfilled});
+ }
+ const cardRows=requirements.filter(row=>row.kind==='CARD'),fulfilledRequirements=requirements.filter(row=>row.fulfilled).length;
+ return{schema:'ygo-goal-progress/v1',achieved:present&&fulfilledRequirements===requirements.length,requirements,
+  totals:{fulfilledRequirements,totalRequirements:requirements.length,matchedCopies:cardRows.reduce((total,row)=>total+row.matched,0),requiredCopies:cardRows.reduce((total,row)=>total+row.required,0)}};
+}
 function goalDefinition(goal,label){
  if(goal===undefined||goal===null)return{id:'ANY_SUPPORTED_LINE',label:'Una línea completa dentro del alcance registrado',test:line=>arr(line.actions).length>0,serialized:{id:'ANY_SUPPORTED_LINE'}};
  if(typeof goal==='function')return{id:'CALLER_DECLARED_GOAL',label:String(label||'Objetivo declarado por el usuario'),test:(line,metrics)=>goal(finalState(line),line,metrics)===true,serialized:{id:'CALLER_DECLARED_GOAL',label:String(label||'Objetivo declarado por el usuario')}};
@@ -163,5 +202,5 @@ function evaluate({deck,scenarios,context={},goal,goalLabel}={}){
    limitations:['Only supplied physical openings, fields, policies and replayed outcomes are compared.','A complete bounded search does not prove failure outside its registered rules.','Conditional response capacity is separate from an executed response.','Search truncation and selected results can omit stronger or weaker outcomes.','No win rate, deck tier or globally optimal policy is inferred.']};
  }catch(e){return fail('INVALID_RECOMMENDATION_INPUT',[String(e?.message||e)]);}
 }
-W.YGORecommendations=Object.freeze({version:'observed-policy-recommendations-v1',evaluate,dimensions,validateGoal,goalMatches});
+W.YGORecommendations=Object.freeze({version:'observed-policy-recommendations-v1',evaluate,dimensions,validateGoal,goalMatches,goalProgress});
 })();

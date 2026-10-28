@@ -1,28 +1,30 @@
-# Estado de la revisión 10
+# Estado de la revisión 11
 
 La aplicación se entrega como un único `Analizador_YuGiOh.html`. El original y las entregas anteriores se conservan; la puntuación permanece estructural y provisional por decisión del usuario.
 
-La revisión 10 pasó **50/50 grupos de pruebas** sobre el HTML final y la comprobación de sintaxis de **114 archivos JavaScript**. Chromium, Firefox y WebKit aprobaron sus comprobaciones; Firefox completó también la apertura directa del HTML local sin conexión. Build `5ee44d69c129cc4db4d922c9f064723760b1b1f3596dfb9a0f21ef694ff7fb7a`; SHA-256 `c2cafe3fdba2bc8d5cefaa5f7a4fe5858204fc5a61b50b2723bc04a04dcad807`; tamaño **6,953,153 bytes**. Estos resultados acreditan las tareas ejecutadas dentro del alcance registrado. La ejecución inicial aprobó 49 grupos; la auditoría del catálogo aprobó sus 13 comprobaciones al restaurar y cotejar la caché técnica omitida en el espacio nuevo, sin cambiar el HTML ni el código. La evidencia conserva ambos resultados.
+La revisión 11 pasó **52/52 grupos de pruebas** sobre el HTML final y la comprobación de sintaxis de **114 archivos JavaScript**. Chromium, Firefox y WebKit aprobaron sus comprobaciones; Firefox completó también la apertura directa del HTML local sin conexión. Build `d51427f6537cba496a1e7998ab456cd913c118d733968542bc85922d41989d82`; SHA-256 `84dff70652ed8b7eceab7d6fdbbb4864396c745ecd5440beff482e96da7396ed`; tamaño **6,961,491 bytes**. Estos resultados acreditan las tareas ejecutadas dentro del alcance registrado.
 
-La publicación, la descarga HTTP y el resultado remoto de GitHub Actions de revisión 10 se comprueban por separado y se registran con el commit correspondiente.
+La publicación, la descarga HTTP y el resultado remoto de GitHub Actions de revisión 11 se comprueban por separado y se registran con el commit correspondiente.
 
 | Área | Implementación de esta revisión | Alcance |
 | --- | --- | --- |
-| Objetivos de campo | Monstruos boca arriba, Mágicas/Trampas boca arriba y Mágicas/Trampas colocadas en listas separadas | Solo cartas propias; las Mágicas de Campo se incluyen en Mágicas/Trampas |
-| Cantidades y transporte | Conteo de copias por identidad canónica; validación compartida en paneles, escenarios e informes | Una carta de mano o GY no satisface un objetivo de campo; los objetivos anteriores conservan su significado |
-| Interfaz de objetivos | Selector de zona, carta y cantidad con inventario Main/Extra y tipos apropiados | No ofrece Skills ni Tokens como Mágicas/Trampas; definir un objetivo no registra efectos nuevos |
-| Laboratorio | Conserva once ejemplos y amplía el objetivo de Campo para exigir Sanctuary boca arriba | El campo inicial sigue declarado y los pasos se ejecutan manualmente |
+| Seguimiento del objetivo | Requisitos y cantidades cumplidos o pendientes; LP, fase, turno y jugador activo | Describe el estado propio actual; no estima una probabilidad de victoria |
+| Actualización del seguimiento | Se recalcula al iniciar, ejecutar, deshacer, aplicar un objetivo e importar un informe | Un contexto caducado no conserva la indicación anterior; el progreso importado no se usa como prueba |
+| Estado inicial | Aviso cuando el objetivo ya está cumplido en la preparación declarada | No acredita la historia anterior ni crea una línea sin acciones |
+| Campo y cantidades | Monstruos boca arriba, Mágicas/Trampas boca arriba, colocadas y mano con identidad canónica y copias distintas | La mano, GY y campo rival no satisfacen un requisito de campo propio |
+| Interfaz del tablero | Distingue Mágicas/Trampas boca arriba, colocadas y zona de Campo | El seguimiento no registra automáticamente efectos nuevos |
+| Laboratorio y ejemplos | Conserva once ejemplos; el de Campo exige Sanctuary boca arriba, Wolf en campo y Roar en mano | El campo inicial sigue declarado y las jugadas se ejecutan manualmente |
 | Catálogo y lista | Conserva 21.986 registros y snapshot TCG del 19/10/2026 | Los datos técnicos no equivalen a todos los efectos ni a disponibilidad oficial |
 | Rutas y respuestas | Seis familias parciales, protección de Spark, negación GY de Spirit y respuestas registradas | Mechaba conserva quince paquetes de monstruos, tres Mágicas Normales y dos activaciones de Campo |
-| Mágicas de Campo | Mausoleum y Sanctuary desde mano, reemplazo físico anterior a respuestas y zona separada | No incluye todos sus efectos, todas las cartas de Campo ni activaciones generales de Trampas |
+| Mágicas de Campo | Mausoleum y Sanctuary desde mano, reemplazo físico y zona separada | No incluye todos sus efectos, otras cartas de Campo ni activaciones generales de Trampas |
 | Calibración | Importador preparado y puntuación provisional | Necesita barajas y resultados externos reales con procedencia |
-| Fuentes y mantenimiento | Captura TCG de restricciones, tres FAQ OCG de casos de monstruos, compilación reproducible y CI por etapas | Las pruebas de aplicación y el cotejo documental acreditan alcances distintos |
+| Fuentes y mantenimiento | Restricciones TCG fechadas, tres FAQ OCG de monstruos, compilación reproducible y CI por etapas | La evidencia de aplicación y el cotejo documental acreditan alcances distintos |
 
 ## Aceptación y antecedentes
 
 `dist/validation-summary.json`, los informes de navegador y `evidence/` identifican el build y el SHA-256 del HTML probado. La distribución y el resultado remoto de CI tienen sus propias comprobaciones.
 
-La revisión 9 conserva una [aceptación local de 48/48 grupos](https://github.com/socramgns/MODERN/blob/213d323f05fbb57cffce8b19a36afa6f132a989a/evidence/validation-summary.json). Su [ejecución remota de GitHub Actions](https://github.com/socramgns/MODERN/actions/runs/40614521563) terminó **correctamente** para el commit `213d323f05fbb57cffce8b19a36afa6f132a989a`. Esa evidencia corresponde a revisión 9 y no sustituye la comprobación de los bytes nuevos.
+La revisión 10 conserva una [aceptación local de 50/50 grupos](https://github.com/socramgns/MODERN/blob/bfa5d3cd6fd307e529ab68d9b15469b558e8a9d1/evidence/validation-summary.json). La ejecución inicial aprobó 49 grupos; la auditoría del catálogo pasó 13 comprobaciones después de restaurar y cotejar la caché técnica omitida al crear el espacio nuevo, sin cambiar el HTML ni el código. Su [ejecución remota de GitHub Actions](https://github.com/socramgns/MODERN/actions/runs/40736683938) terminó **correctamente**, incluidas las pruebas del entregable y la comprobación entre motores. Esta evidencia corresponde al commit `bfa5d3cd6fd307e529ab68d9b15469b558e8a9d1` y no sustituye la comprobación de los bytes nuevos.
 
 Chromium mantiene una restricción administrativa de navegación local en este entorno. Firefox permite comprobar la apertura directa offline; WebKit conserva una limitación de emulación offline local. Los informes distinguen esas limitaciones de las comprobaciones de compatibilidad ejecutadas sobre los bytes entregados.
 
@@ -35,4 +37,4 @@ Chromium mantiene una restricción administrativa de navegación local en este e
 - Disponibilidad, pools y reglas históricos/digitales, Skills, desbloqueos, Legend e impresión/evento.
 - Reglamento y rulings restantes, revisión de identidades heredadas y aceptación en más dispositivos y sistemas reales.
 
-El análisis actual está en [ANALISIS_PENDIENTES_REVISION10.md](ANALISIS_PENDIENTES_REVISION10.md). Los análisis anteriores permanecen como antecedentes con resultados ligados a sus propias revisiones. No se atribuye un porcentaje global a completar todas las cartas y reglas.
+El análisis actual está en [ANALISIS_PENDIENTES_REVISION11.md](ANALISIS_PENDIENTES_REVISION11.md). Los análisis anteriores permanecen como antecedentes con resultados ligados a sus propias revisiones. No se atribuye un porcentaje global a completar todas las cartas y reglas.

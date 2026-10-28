@@ -1,9 +1,7 @@
-# Evidencia de la revisión 10
+# Evidencia de la revisión 11
 
-La validación local pasó 50/50 grupos sobre el build y SHA-256 indicados; se comprobaron 114 archivos JavaScript. Chromium, Firefox y WebKit aprobaron sus comprobaciones. Firefox abrió directamente el HTML mediante `file:` sin conexión.
+La validación local pasó 52/52 grupos en una ejecución completa sobre el mismo build y SHA-256. Se comprobaron 114 archivos JavaScript, Chromium, Firefox y WebKit y la apertura directa offline en Firefox.
 
-La ejecución inicial aprobó 49 grupos. La auditoría del catálogo pasó sus 13 comprobaciones al restaurar y cotejar los cinco archivos de caché omitidos al crear el espacio nuevo. No cambió el HTML ni el código de producción o de pruebas. `validation-initial-attempt.json` y `catalogue-retest.json` conservan ambos resultados.
+`revision11-browser.json` comprueba progreso visible, cantidades y requisitos de estado, objetivos inicialmente satisfechos sin fabricar líneas vacías, jugadas, deshacer, informes y escenarios nuevos. Los demás informes de navegador comprueban regresiones sobre estos bytes; no se atribuyen los resultados anteriores al archivo nuevo. La evidencia histórica de revisión 10, incluido el fallo inicial de preparación y su repetición documentada, permanece en su commit y respaldo.
 
-`release6-browser.json`, `expanded-examples-browser.json` y `revision8-browser.json` comprueban regresiones sobre los bytes nuevos. `revision9-browser.json` comprueba regresiones de Campo. `revision10-browser.json` comprueba objetivos tipados de Mágicas/Trampas, cantidades, guardado, importación y búsqueda con replay. La evidencia histórica de las revisiones anteriores permanece en sus commits publicados.
-
-Las activaciones de Campo se limitan a Mausoleum of White y Salamangreat Sanctuary desde mano, con perfiles de reemplazo conocidos. El proveedor unitario de negación solo de efecto es un fixture QA, no una carta implementada. Las FAQ japonesas conservan su alcance de efectos de monstruos y no certifican el reemplazo de Campo. La puntuación sigue provisional. La aceptación local no equivale por sí sola a un resultado remoto de CI.
+El progreso describe requisitos del estado actual. Un campo inicial sigue declarado; el resumen importado se recalcula y no sirve como prueba. Las búsquedas, replays y simulaciones conservan su alcance; no se infiere probabilidad de victoria ni certificación competitiva. La puntuación competitiva sigue provisional. La aceptación local y el resultado remoto de GitHub Actions se registran por separado.

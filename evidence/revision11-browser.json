@@ -1,0 +1,512 @@
+{
+  "schema": "ygo-release11-browser/v1",
+  "pass": true,
+  "buildId": "d51427f6537cba496a1e7998ab456cd913c118d733968542bc85922d41989d82",
+  "htmlSha256": "84dff70652ed8b7eceab7d6fdbbb4864396c745ecd5440beff482e96da7396ed",
+  "artifactMode": "DELIVERED_BYTES",
+  "sourceInjection": false,
+  "checks": [
+    {
+      "name": "release11_boots_offline_from_the_manifest_bound_document",
+      "pass": true
+    },
+    {
+      "name": "progress_widget_is_accessible_and_does_not_claim_an_unstarted_scenario",
+      "pass": true
+    },
+    {
+      "name": "included_field_goal_reports_the_actual_missing_hand_and_face_up_copies",
+      "pass": true
+    },
+    {
+      "name": "board_identifies_face_up_field_and_set_spell_trap_positions",
+      "pass": true
+    },
+    {
+      "name": "an_initially_met_goal_is_visible_as_declared_without_autoplay_or_a_replay_claim",
+      "pass": true
+    },
+    {
+      "name": "a_visual_missing_quantity_requires_another_physical_copy",
+      "pass": true
+    },
+    {
+      "name": "applying_a_new_goal_immediately_replaces_previous_success",
+      "pass": true
+    },
+    {
+      "name": "resolved_field_progress_distinguishes_sanctuary_from_the_paid_roar",
+      "pass": true
+    },
+    {
+      "name": "progress_does_not_count_a_recovered_hand_copy_as_a_set_card",
+      "pass": true
+    },
+    {
+      "name": "the_registered_set_step_completes_the_goal_with_the_same_physical_roar",
+      "pass": true
+    },
+    {
+      "name": "downloaded_report_binds_derived_progress_to_goal_and_verified_state",
+      "pass": true
+    },
+    {
+      "name": "state_conditions_show_expected_and_actual_phase_without_a_percentage",
+      "pass": true
+    },
+    {
+      "name": "a_real_phase_transition_recomputes_scalar_progress_and_preserves_replay",
+      "pass": true
+    },
+    {
+      "name": "undo_reverts_the_fulfilled_phase_condition",
+      "pass": true
+    },
+    {
+      "name": "undo_reverts_set_progress_and_exposes_the_missing_copy_again",
+      "pass": true
+    },
+    {
+      "name": "a_negated_field_activation_remains_missing_in_progress",
+      "pass": true
+    },
+    {
+      "name": "import_recomputes_progress_from_validated_goal_and_replayed_state",
+      "pass": true
+    },
+    {
+      "name": "a_report_without_derived_progress_is_recomputed_compatibly",
+      "pass": true
+    },
+    {
+      "name": "an_invalid_goal_cannot_replace_the_session_using_a_derived_success_summary",
+      "pass": true
+    },
+    {
+      "name": "applying_another_goal_after_resume_clears_the_previous_success",
+      "pass": true
+    },
+    {
+      "name": "reinitialization_recomputes_the_goal_from_declared_initial_copies",
+      "pass": true
+    },
+    {
+      "name": "same_deck_scenario_import_does_not_keep_old_laboratory_success",
+      "pass": true
+    },
+    {
+      "name": "an_already_met_opening_goal_does_not_fabricate_an_empty_replay",
+      "pass": true
+    },
+    {
+      "name": "zero_continuations_explain_the_initial_declared_success_and_search_limit",
+      "pass": true
+    },
+    {
+      "name": "starting_the_imported_opening_recomputes_its_own_initial_goal",
+      "pass": true
+    },
+    {
+      "name": "changing_the_causal_preset_refreshes_the_laboratory_goal_progress",
+      "pass": true
+    },
+    {
+      "name": "changed_format_context_removes_old_progress_until_a_fresh_initialization",
+      "pass": true
+    },
+    {
+      "name": "release11_tasks_raise_no_javascript_page_errors",
+      "pass": true
+    },
+    {
+      "name": "compiled_document_is_unchanged_during_release11_tasks",
+      "pass": true
+    }
+  ],
+  "details": {
+    "included_field_goal_reports_the_actual_missing_hand_and_face_up_copies": {
+      "schema": "ygo-goal-progress/v1",
+      "achieved": false,
+      "requirements": [
+        {
+          "kind": "CARD",
+          "key": "requiredFieldIds",
+          "zone": "monster",
+          "faceUp": true,
+          "cardId": 87871125,
+          "name": "Salamangreat Sunlight Wolf",
+          "required": 1,
+          "matched": 1,
+          "missing": 0,
+          "fulfilled": true,
+          "matchedUids": [
+            "P0:extra:87871125:1"
+          ]
+        },
+        {
+          "kind": "CARD",
+          "key": "requiredHandIds",
+          "zone": "hand",
+          "cardId": 51339637,
+          "name": "Salamangreat Roar",
+          "required": 1,
+          "matched": 0,
+          "missing": 1,
+          "fulfilled": false,
+          "matchedUids": []
+        },
+        {
+          "kind": "CARD",
+          "key": "requiredFaceUpSpellTrapIds",
+          "zone": "spelltrap",
+          "faceUp": true,
+          "cardId": 1295111,
+          "name": "Salamangreat Sanctuary",
+          "required": 1,
+          "matched": 0,
+          "missing": 1,
+          "fulfilled": false,
+          "matchedUids": []
+        }
+      ],
+      "totals": {
+        "fulfilledRequirements": 1,
+        "totalRequirements": 3,
+        "matchedCopies": 1,
+        "requiredCopies": 3
+      }
+    },
+    "an_initially_met_goal_is_visible_as_declared_without_autoplay_or_a_replay_claim": {
+      "schema": "ygo-goal-progress/v1",
+      "achieved": true,
+      "requirements": [
+        {
+          "kind": "CARD",
+          "key": "requiredFaceUpSpellTrapIds",
+          "zone": "spelltrap",
+          "faceUp": true,
+          "cardId": 24382602,
+          "name": "Mausoleum of White",
+          "required": 1,
+          "matched": 1,
+          "missing": 0,
+          "fulfilled": true,
+          "matchedUids": [
+            "P0:main:24382602:1"
+          ]
+        },
+        {
+          "kind": "CARD",
+          "key": "requiredSetSpellTrapIds",
+          "zone": "spelltrap",
+          "faceUp": false,
+          "cardId": 51339637,
+          "name": "Salamangreat Roar",
+          "required": 1,
+          "matched": 1,
+          "missing": 0,
+          "fulfilled": true,
+          "matchedUids": [
+            "P0:main:51339637:1"
+          ]
+        },
+        {
+          "kind": "STATE",
+          "key": "ownLpAtLeast",
+          "expected": 8000,
+          "actual": 8000,
+          "fulfilled": true
+        },
+        {
+          "kind": "STATE",
+          "key": "phase",
+          "expected": "MAIN 1",
+          "actual": "MAIN 1",
+          "fulfilled": true
+        }
+      ],
+      "totals": {
+        "fulfilledRequirements": 4,
+        "totalRequirements": 4,
+        "matchedCopies": 2,
+        "requiredCopies": 2
+      }
+    },
+    "a_visual_missing_quantity_requires_another_physical_copy": {
+      "kind": "CARD",
+      "key": "requiredFaceUpSpellTrapIds",
+      "zone": "spelltrap",
+      "faceUp": true,
+      "cardId": 24382602,
+      "name": "Mausoleum of White",
+      "required": 2,
+      "matched": 1,
+      "missing": 1,
+      "fulfilled": false,
+      "matchedUids": [
+        "P0:main:24382602:1"
+      ]
+    },
+    "resolved_field_progress_distinguishes_sanctuary_from_the_paid_roar": {
+      "schema": "ygo-goal-progress/v1",
+      "achieved": false,
+      "requirements": [
+        {
+          "kind": "CARD",
+          "key": "requiredFaceUpSpellTrapIds",
+          "zone": "spelltrap",
+          "faceUp": true,
+          "cardId": 1295111,
+          "name": "Salamangreat Sanctuary",
+          "required": 1,
+          "matched": 1,
+          "missing": 0,
+          "fulfilled": true,
+          "matchedUids": [
+            "P0:main:1295111:1"
+          ]
+        },
+        {
+          "kind": "CARD",
+          "key": "requiredSetSpellTrapIds",
+          "zone": "spelltrap",
+          "faceUp": false,
+          "cardId": 51339637,
+          "name": "Salamangreat Roar",
+          "required": 1,
+          "matched": 0,
+          "missing": 1,
+          "fulfilled": false,
+          "matchedUids": []
+        },
+        {
+          "kind": "STATE",
+          "key": "phase",
+          "expected": "MAIN 1",
+          "actual": "MAIN 1",
+          "fulfilled": true
+        }
+      ],
+      "totals": {
+        "fulfilledRequirements": 2,
+        "totalRequirements": 3,
+        "matchedCopies": 1,
+        "requiredCopies": 2
+      }
+    },
+    "state_conditions_show_expected_and_actual_phase_without_a_percentage": {
+      "schema": "ygo-goal-progress/v1",
+      "achieved": false,
+      "requirements": [
+        {
+          "kind": "CARD",
+          "key": "requiredFaceUpSpellTrapIds",
+          "zone": "spelltrap",
+          "faceUp": true,
+          "cardId": 1295111,
+          "name": "Salamangreat Sanctuary",
+          "required": 1,
+          "matched": 1,
+          "missing": 0,
+          "fulfilled": true,
+          "matchedUids": [
+            "P0:main:1295111:1"
+          ]
+        },
+        {
+          "kind": "CARD",
+          "key": "requiredSetSpellTrapIds",
+          "zone": "spelltrap",
+          "faceUp": false,
+          "cardId": 51339637,
+          "name": "Salamangreat Roar",
+          "required": 1,
+          "matched": 1,
+          "missing": 0,
+          "fulfilled": true,
+          "matchedUids": [
+            "P0:main:51339637:1"
+          ]
+        },
+        {
+          "kind": "STATE",
+          "key": "opponentLpAtMost",
+          "expected": 8000,
+          "actual": 8000,
+          "fulfilled": true
+        },
+        {
+          "kind": "STATE",
+          "key": "ownLpAtLeast",
+          "expected": 8000,
+          "actual": 8000,
+          "fulfilled": true
+        },
+        {
+          "kind": "STATE",
+          "key": "phase",
+          "expected": "BATTLE",
+          "actual": "MAIN 1",
+          "fulfilled": false
+        },
+        {
+          "kind": "STATE",
+          "key": "turn",
+          "expected": 2,
+          "actual": 2,
+          "fulfilled": true
+        },
+        {
+          "kind": "STATE",
+          "key": "activePlayer",
+          "expected": 0,
+          "actual": 0,
+          "fulfilled": true
+        }
+      ],
+      "totals": {
+        "fulfilledRequirements": 6,
+        "totalRequirements": 7,
+        "matchedCopies": 2,
+        "requiredCopies": 2
+      }
+    },
+    "an_already_met_opening_goal_does_not_fabricate_an_empty_replay": {
+      "pass": true,
+      "status": "NO_SUPPORTED_COMPLETE_LINES",
+      "lines": [],
+      "candidates": [],
+      "candidateCount": 0,
+      "expanded": 6,
+      "truncated": false,
+      "depthLimitReached": true,
+      "turnLimitReached": false,
+      "depthCutoffStates": 5,
+      "turnCutoffTransitions": 0,
+      "budgetReasons": [],
+      "horizonComplete": true,
+      "enumerationComplete": false,
+      "globalEnumerationComplete": false,
+      "completenessScope": "REGISTERED_TRANSITIONS_WITHIN_DECLARED_HORIZON",
+      "limits": {
+        "maxDepth": 1,
+        "maxStates": 100,
+        "maxMs": 3000,
+        "maxTurns": 1
+      },
+      "stopReasons": [
+        "DEPTH_HORIZON"
+      ],
+      "elapsedMs": 16,
+      "remainingFrontier": 0,
+      "distinctOutcomeIdentity": "PRINTED_ALIAS_FAMILY_ZONE_RESOURCES_USAGE_AND_LIVE_LOCKS",
+      "goalApplied": true,
+      "scope": "tcg-causal-archetypes-v2",
+      "certified": false,
+      "globalOptimalityProven": false,
+      "goal": {
+        "requiredHandIds": [
+          1295111,
+          23771716,
+          47372349,
+          97127906,
+          70924884
+        ]
+      },
+      "initialGoalProgress": {
+        "schema": "ygo-goal-progress/v1",
+        "achieved": true,
+        "requirements": [
+          {
+            "kind": "CARD",
+            "key": "requiredHandIds",
+            "zone": "hand",
+            "cardId": 1295111,
+            "name": "Salamangreat Sanctuary",
+            "required": 1,
+            "matched": 1,
+            "missing": 0,
+            "fulfilled": true,
+            "matchedUids": [
+              "P0:main:1295111:1"
+            ]
+          },
+          {
+            "kind": "CARD",
+            "key": "requiredHandIds",
+            "zone": "hand",
+            "cardId": 23771716,
+            "name": "7 Colored Fish",
+            "required": 1,
+            "matched": 1,
+            "missing": 0,
+            "fulfilled": true,
+            "matchedUids": [
+              "P0:main:23771716:1"
+            ]
+          },
+          {
+            "kind": "CARD",
+            "key": "requiredHandIds",
+            "zone": "hand",
+            "cardId": 47372349,
+            "name": "Acrobat Monkey",
+            "required": 1,
+            "matched": 1,
+            "missing": 0,
+            "fulfilled": true,
+            "matchedUids": [
+              "P0:main:47372349:1"
+            ]
+          },
+          {
+            "kind": "CARD",
+            "key": "requiredHandIds",
+            "zone": "hand",
+            "cardId": 97127906,
+            "name": "Alien Shocktrooper",
+            "required": 1,
+            "matched": 1,
+            "missing": 0,
+            "fulfilled": true,
+            "matchedUids": [
+              "P0:main:97127906:1"
+            ]
+          },
+          {
+            "kind": "CARD",
+            "key": "requiredHandIds",
+            "zone": "hand",
+            "cardId": 70924884,
+            "name": "Alinsection",
+            "required": 1,
+            "matched": 1,
+            "missing": 0,
+            "fulfilled": true,
+            "matchedUids": [
+              "P0:main:70924884:1"
+            ]
+          }
+        ],
+        "totals": {
+          "fulfilledRequirements": 5,
+          "totalRequirements": 5,
+          "matchedCopies": 5,
+          "requiredCopies": 5
+        }
+      }
+    },
+    "release11_tasks_raise_no_javascript_page_errors": []
+  },
+  "browser": {
+    "engine": "chromium",
+    "version": "154.0.8037.57"
+  },
+  "externalRequestsBlocked": 32,
+  "limitations": [
+    "Initial goal fulfillment describes declared physical copies and state, not certified prior history.",
+    "Progress is recomputed from validated state and goals; it does not register new card effects.",
+    "No zero-action replay, win rate or competitive score is created from an initially met goal."
+  ],
+  "elapsedSeconds": 33.55
+}

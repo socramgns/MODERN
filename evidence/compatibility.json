@@ -1,9 +1,9 @@
 {
   "schema": "ygo-browser-compatibility/v1",
-  "buildId": "5ee44d69c129cc4db4d922c9f064723760b1b1f3596dfb9a0f21ef694ff7fb7a",
-  "htmlSha256": "c2cafe3fdba2bc8d5cefaa5f7a4fe5858204fc5a61b50b2723bc04a04dcad807",
+  "buildId": "d51427f6537cba496a1e7998ab456cd913c118d733968542bc85922d41989d82",
+  "htmlSha256": "84dff70652ed8b7eceab7d6fdbbb4864396c745ecd5440beff482e96da7396ed",
   "artifactMode": "DELIVERED_BYTES",
-  "executedAt": "2026-10-28T17:28:20.862753+00:00",
+  "executedAt": "2026-10-28T17:56:08.948061+00:00",
   "pass": true,
   "complete": true,
   "crossBrowserVerified": true,
@@ -18,7 +18,7 @@
     "Browser-policy restrictions are reported and are not disabled.",
     "This is a smoke regression, not complete compatibility coverage."
   ],
-  "elapsedSeconds": 64.27,
+  "elapsedSeconds": 63.78,
   "browsers": [
     {
       "engine": "chromium",
@@ -69,7 +69,7 @@
       "fileNavigation": {
         "status": "BLOCKED_BY_BROWSER_POLICY",
         "verified": false,
-        "error": "Page.goto: net::ERR_BLOCKED_BY_ADMINISTRATOR at file:///workspace/yugioh-analyzer-revision10/dist/Calculadora_de_Barajas_YuGiOh_Alpha_1263_Corregida.html\nCall log:\n  - navigating to \"file:///workspace/yugioh-analyzer-revision10/dist/Calculadora_de_Barajas_YuGiOh_Alpha_1263_Corregida.html\", waiting until \"domcontentloaded\"\n"
+        "error": "Page.goto: net::ERR_BLOCKED_BY_ADMINISTRATOR at file:///workspace/yugioh-analyzer-revision11/dist/Calculadora_de_Barajas_YuGiOh_Alpha_1263_Corregida.html\nCall log:\n  - navigating to \"file:///workspace/yugioh-analyzer-revision11/dist/Calculadora_de_Barajas_YuGiOh_Alpha_1263_Corregida.html\", waiting until \"domcontentloaded\"\n"
       },
       "pageErrors": []
     },

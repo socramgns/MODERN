@@ -1,4 +1,22 @@
-# Cambios de la revisión 10
+# Cambios de la revisión 11
+
+La revisión `2026.10-stable.11` añade seguimiento visible de los objetivos en el laboratorio y conserva el HTML único y la puntuación estructural provisional.
+
+La revisión 11 pasó **52/52 grupos de pruebas** sobre el HTML final y la comprobación de sintaxis de **114 archivos JavaScript**. Chromium, Firefox y WebKit aprobaron sus comprobaciones; Firefox completó también la apertura directa del HTML local sin conexión. Build `d51427f6537cba496a1e7998ab456cd913c118d733968542bc85922d41989d82`; SHA-256 `84dff70652ed8b7eceab7d6fdbbb4864396c745ecd5440beff482e96da7396ed`; tamaño **6,961,491 bytes**. Estos resultados acreditan las tareas ejecutadas dentro del alcance registrado.
+
+La publicación, la descarga HTTP y el resultado remoto de GitHub Actions de revisión 11 se comprueban por separado y se registran con el commit correspondiente.
+
+- Desglosa cantidades y requisitos cumplidos o pendientes en monstruos, Mágicas/Trampas boca arriba, Mágicas/Trampas colocadas y mano, junto con LP, fase, turno y jugador activo.
+- Conserva identidad canónica y copias físicas distintas; el seguimiento usa el mismo significado del objetivo que las búsquedas y recomendaciones.
+- Actualiza el seguimiento al iniciar, ejecutar, deshacer, cambiar el objetivo y reanudar un informe. Un contexto caducado no conserva una indicación de objetivo cumplido.
+- Distingue boca arriba, colocada y zona de Campo en las Mágicas/Trampas del tablero.
+- Informa cuando el objetivo ya está satisfecho en el estado inicial declarado. Las líneas de búsqueda siguen requiriendo acciones reales y replay; ese aviso no fabrica una línea vacía ni se convierte en una victoria o éxito de muestreo.
+- Recalcula el progreso desde el estado y objetivo validados. Un resumen de progreso importado no sustituye esa comprobación ni certifica la historia previa.
+- Conserva once ejemplos, el catálogo de 21.986 registros, las seis familias parciales y todos los alcances registrados anteriores.
+
+La revisión 10 conserva una [aceptación local de 50/50 grupos](https://github.com/socramgns/MODERN/blob/bfa5d3cd6fd307e529ab68d9b15469b558e8a9d1/evidence/validation-summary.json). La ejecución inicial aprobó 49 grupos; la auditoría del catálogo pasó 13 comprobaciones después de restaurar y cotejar la caché técnica omitida al crear el espacio nuevo, sin cambiar el HTML ni el código. Su [ejecución remota de GitHub Actions](https://github.com/socramgns/MODERN/actions/runs/40736683938) terminó **correctamente**, incluidas las pruebas del entregable y la comprobación entre motores. Esta evidencia corresponde al commit `bfa5d3cd6fd307e529ab68d9b15469b558e8a9d1` y no sustituye la comprobación de los bytes nuevos.
+
+# Antecedente: cambios de la revisión 10
 
 La revisión `2026.10-stable.10` añade objetivos propios de Mágicas/Trampas en campo y conserva el HTML único y la puntuación estructural provisional.
 
