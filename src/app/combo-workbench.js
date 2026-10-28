@@ -29,16 +29,9 @@ function renderHand(){const host=$('ygoCausalHand');if(!host)return;host.replace
 }
 const goals={mechaba:{requiredFieldIds:[75286621]},swordsoul:{requiredFieldIds:[69248256,96633955],opponentLpAtMost:6800},chixiao:{requiredFieldIds:[69248256]},mirrorjade:{requiredFieldIds:[44146295]},spirit:{requiredFieldIds:[59822133]},blueeyes:{requiredFieldIds:[89631139]},tenyi:{requiredFieldIds:[78917791]},salamangreat:{requiredFieldIds:[87871125],requiredHandIds:[51339637]}};
 function selectedGoal(){return clone(state.goal||goals[$('ygoCausalGoal')?.value]||goals.mechaba);}
-function goalMatches(st,g){const canonical=id=>W.YGODataCatalog.canonicalIdentity?.(Number(id))?.canonicalId??Number(id),contains=(items,ids)=>{const counts=new Map();for(const x of arr(items)){const id=canonical(card(x).id);counts.set(id,(counts.get(id)||0)+1);}for(const id of arr(ids)){const key=canonical(id),n=counts.get(key)||0;if(!n)return false;counts.set(key,n-1);}return true;};return contains(arr(st.zones?.[0]?.monster).filter(x=>x.faceUp===true),g.requiredFieldIds)&&(g.opponentLpAtMost===undefined||Number(st.lp?.[1])<=g.opponentLpAtMost)&&(g.ownLpAtLeast===undefined||Number(st.lp?.[0])>=g.ownLpAtLeast)&&(g.phase===undefined||st.phase===g.phase)&&(g.turn===undefined||st.turn===g.turn)&&(g.activePlayer===undefined||st.activePlayer===g.activePlayer)&&contains(st.zones?.[0]?.hand,g.requiredHandIds||g.recoveredHandIds);}
-function validateGoal(g){
- if(!g||typeof g!=='object'||Array.isArray(g))throw Error('Objetivo inválido: utiliza cartas, LP, turno, fase o jugador activo.');
- const allowed=['requiredFieldIds','requiredHandIds','recoveredHandIds','opponentLpAtMost','ownLpAtLeast','phase','turn','activePlayer'];if(Object.keys(g).some(key=>!allowed.includes(key)))throw Error('El objetivo contiene un campo no admitido.');
- for(const key of ['requiredFieldIds','requiredHandIds','recoveredHandIds'])if(g[key]!==undefined&&(!Array.isArray(g[key])||g[key].length>20||g[key].some(id=>!Number.isSafeInteger(id)||id<1||!W.YGODataCatalog.lookup(id))))throw Error('El objetivo contiene cartas o cantidades inválidas.');
- for(const key of ['opponentLpAtMost','ownLpAtLeast'])if(g[key]!==undefined&&(!Number.isFinite(g[key])||g[key]<0))throw Error('Objetivo de LP inválido.');
- if(g.turn!==undefined&&(!Number.isSafeInteger(g.turn)||g.turn<1||g.turn>100)||g.activePlayer!==undefined&&![0,1].includes(g.activePlayer)||g.phase!==undefined&&!['DRAW','STANDBY','MAIN 1','BATTLE','MAIN 2','END'].includes(g.phase))throw Error('El turno, fase o jugador del objetivo es inválido.');
- if(!['requiredFieldIds','requiredHandIds','recoveredHandIds'].some(key=>arr(g[key]).length)&&!['opponentLpAtMost','ownLpAtLeast','phase','turn','activePlayer'].some(key=>g[key]!==undefined))throw Error('Añade al menos una carta, condición de LP, turno, fase o jugador al objetivo.');
- return clone(g);
-}
+function goalMatches(st,g){return W.YGORecommendations.goalMatches(st,g);}
+function validateGoal(g){return W.YGORecommendations.validateGoal(g);}
+
 function ownSpec(d=deck(),opening=state.opening,remaining=state.remaining){
  const imported=W.YGOUIState.getFormatContext();if(imported.snapshot&&W.YGOFormats.snapshotIdentity(imported.snapshot,'tcg')!==W.YGOFormats.snapshotIdentity(W.BANLIST_PROFILES?.tcg,'tcg'))throw Error('El contexto importado usa otra lista. Estas rutas causales requieren el snapshot TCG incorporado; exporta el contexto antes de restablecerlo.');
  const selected=$('ygoCausalPolicy')?.value||'PASS',type=individualResponses.includes(selected)?selected:null,policy=type?'RESPONSES_EXPLICIT':selected,types=type?[type]:selected==='RESPONSES_EXPLICIT'?responseTypes(state.contextExtra.responseTypes):arr(state.contextExtra.responseTypes);
@@ -83,7 +76,7 @@ function install(){const host=$('comboWorkbench');if(!host)throw Error('COMBO_WO
  const original=D.querySelector('.combo-toolbar > button.adv-btn.gold');if(original){const button=original.cloneNode(true);button.removeAttribute('onclick');button.textContent='EXPLORAR COMBOS TCG VERIFICABLES';button.onclick=()=>panel.scrollIntoView({behavior:'smooth',block:'start'});original.replaceWith(button);}
  state.ready=true;resolveReady(true);
 }
-W.YGOComboWorkbench=Object.freeze({ready,get isBusy(){return state.busy;},run,simulate,loadScenario,loadOpponent,cancel,report,goalMatches,input:()=>{if(state.loadingScenario)throw Error('Espera a que termine la carga del escenario.');return clone(ownSpec());},setGoal:g=>{state.goal=validateGoal(g);$('ygoCausalGoal').value='custom';invalidateResults();return selectedGoal();},get lastSearch(){return state.search?clone(state.search):null},get lastSimulation(){return state.simulation?clone(state.simulation):null}});
+W.YGOComboWorkbench=Object.freeze({ready,get isBusy(){return state.busy;},run,simulate,loadScenario,loadOpponent,cancel,report,goalMatches,validateGoal,input:()=>{if(state.loadingScenario)throw Error('Espera a que termine la carga del escenario.');return clone(ownSpec());},setGoal:g=>{state.goal=validateGoal(g);$('ygoCausalGoal').value='custom';invalidateResults();return selectedGoal();},get lastSearch(){return state.search?clone(state.search):null},get lastSimulation(){return state.simulation?clone(state.simulation):null}});
 async function init(){try{await W.__YGO_ENGINE_READY;await W.YGODataCatalog.ready;await W.YGOUIState.ready;install();}catch(error){console.error('CAUSAL_WORKBENCH_INIT',error);resolveReady(false);}}
 if(D.readyState==='loading')D.addEventListener('DOMContentLoaded',init,{once:true});else init();
 })();

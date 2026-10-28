@@ -1,0 +1,128 @@
+{
+  "schema": "ygo-release10-browser/v1",
+  "pass": true,
+  "buildId": "5ee44d69c129cc4db4d922c9f064723760b1b1f3596dfb9a0f21ef694ff7fb7a",
+  "htmlSha256": "c2cafe3fdba2bc8d5cefaa5f7a4fe5858204fc5a61b50b2723bc04a04dcad807",
+  "artifactMode": "DELIVERED_BYTES",
+  "sourceInjection": false,
+  "checks": [
+    {
+      "name": "release10_boots_offline_from_the_manifest_bound_document",
+      "pass": true
+    },
+    {
+      "name": "visual_goal_selector_exposes_four_explicit_own_zones",
+      "pass": true
+    },
+    {
+      "name": "the_included_field_goal_now_requires_the_resolved_sanctuary",
+      "pass": true
+    },
+    {
+      "name": "typed_goal_inventory_requiredFaceUpSpellTrapIds",
+      "pass": true
+    },
+    {
+      "name": "typed_goal_inventory_requiredSetSpellTrapIds",
+      "pass": true
+    },
+    {
+      "name": "visual_additions_are_a_quantity_preserving_draft_until_applied",
+      "pass": true
+    },
+    {
+      "name": "applied_visual_goals_sync_json_and_count_each_requested_copy",
+      "pass": true
+    },
+    {
+      "name": "removing_and_readding_one_copy_keeps_the_other_zone_requirement",
+      "pass": true
+    },
+    {
+      "name": "resolved_field_meets_face_up_goal_but_paid_roar_no_longer_meets_set_goal",
+      "pass": true
+    },
+    {
+      "name": "a_recovered_hand_copy_still_does_not_satisfy_a_set_goal",
+      "pass": true
+    },
+    {
+      "name": "a_real_set_transition_reaches_both_typed_goal_zones_with_fresh_replay",
+      "pass": true
+    },
+    {
+      "name": "report_download_preserves_goal_arrays_and_binds_the_verified_trace_to_this_build",
+      "pass": true
+    },
+    {
+      "name": "a_negated_field_activation_cannot_satisfy_the_face_up_goal",
+      "pass": true
+    },
+    {
+      "name": "report_import_reconstructs_the_four_steps_and_typed_goal",
+      "pass": true
+    },
+    {
+      "name": "invalid_typed_report_goal_rejects_atomically_without_replacing_the_session",
+      "pass": true
+    },
+    {
+      "name": "scenario_import_preserves_both_arrays_and_recreates_the_declared_initial_field",
+      "pass": true
+    },
+    {
+      "name": "legacy_hand_goal_stays_visible_and_user_edits_preserve_both_requested_copies",
+      "pass": true
+    },
+    {
+      "name": "release10_tasks_raise_no_javascript_page_errors",
+      "pass": true
+    },
+    {
+      "name": "compiled_document_is_unchanged_during_release10_tasks",
+      "pass": true
+    }
+  ],
+  "details": {
+    "visual_goal_selector_exposes_four_explicit_own_zones": [
+      {
+        "value": "requiredFieldIds",
+        "label": "Tus monstruos boca arriba"
+      },
+      {
+        "value": "requiredHandIds",
+        "label": "Tu mano"
+      },
+      {
+        "value": "requiredFaceUpSpellTrapIds",
+        "label": "Tus Mágicas/Trampas boca arriba"
+      },
+      {
+        "value": "requiredSetSpellTrapIds",
+        "label": "Tus Mágicas/Trampas colocadas"
+      }
+    ],
+    "typed_goal_inventory_requiredFaceUpSpellTrapIds": [
+      24382602,
+      1295111,
+      51339637
+    ],
+    "typed_goal_inventory_requiredSetSpellTrapIds": [
+      24382602,
+      1295111,
+      51339637
+    ],
+    "release10_tasks_raise_no_javascript_page_errors": []
+  },
+  "browser": {
+    "engine": "chromium",
+    "version": "154.0.8037.57"
+  },
+  "externalRequestsBlocked": 32,
+  "limitations": [
+    "Starting fields and prior summon history remain declared assumptions.",
+    "Typed goals describe own physical zones and do not register new card effects.",
+    "Recorded replay and goal checks do not certify competitive results."
+  ],
+  "elapsedSeconds": 27.97
+}

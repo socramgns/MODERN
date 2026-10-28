@@ -93,11 +93,11 @@ const field=base('field','Mágica de Campo: reemplazar, responder y reincarnar',
  {player:0,from:'deck',cardId:51339637,zone:'spelltrap',zoneIndex:0,faceUp:false,setTurn:1},
  {player:0,from:'extra',cardId:87871125,zone:'monster',zoneIndex:5,position:'ATTACK',faceUp:true,summonTurn:1},
  {player:1,from:'extra',cardId:75286621,zone:'monster',zoneIndex:0,position:'ATTACK',faceUp:true,summonTurn:1}
- ]},{requiredFieldIds:[87871125],requiredHandIds:[51339637]},[
+ ]},{requiredFieldIds:[87871125],requiredHandIds:[51339637],requiredFaceUpSpellTrapIds:[1295111]},[
  'Activa Sanctuary desde tu mano. Selecciona la variante con Mechaba rival y una contrarrespuesta de tu Roar colocada desde el turno anterior. Los monstruos y el campo previos son supuestos iniciales declarados.',
  'Ejecuta el paso: Mausoleum se envía al Cementerio por regla antes de la respuesta, sin destruirse. Mechaba paga Invocation de su mano, pero tu Roar niega a Mechaba y permite que Sanctuary permanezca en la Zona del Campo. Comprueba ambos Cementerios y el replay.',
  'Reincarna Sunlight Wolf usando tu primer Wolf como único material. Esta ruta necesita Sanctuary resuelto; la historia de esta nueva invocación sí queda registrada.',
- 'Resuelve el Wolf reincarnado para recuperar Roar del Cementerio a tu mano. El objetivo exige Wolf en el campo y esa Roar física en la mano.',
+ 'Resuelve el Wolf reincarnado para recuperar Roar del Cementerio a tu mano. El objetivo exige Wolf en el campo, Sanctuary boca arriba en la Zona del Campo y esa Roar física en la mano.',
  'Para comparar, deshaz los tres pasos y activa Sanctuary con Mechaba rival pero sin tu Roar. Sanctuary queda desterrado y Mausoleum permanece en el Cementerio: el campo anterior no regresa y no aparece esta reincarnación.'
  ],'RESPONSES_EXPLICIT',['MECHABA','ROAR'],'CHOICE_BRANCHES');
 const templates=new Map([spark,spirit,invoked,swordsoul,branded,tenyi,salamangreat,roar,crow,droll,field].map(value=>[value.id,value]));

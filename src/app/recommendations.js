@@ -30,17 +30,38 @@ function reconstructInitial(state,deck){
  catch(e){return{pass:false,reason:'INITIAL_RECONSTRUCTION_REJECTED',issues:[String(e?.message||e)]};}
 }
 function finalState(line){return line.state||line.after||line.finalState;}
+// One declarative goal contract is shared by recommendations and both workbenches.
+// The legacy field key continues to mean face-up monsters; Spell/Trap positions
+// have distinct keys and never widen that historical meaning.
+const goalCardKeys=Object.freeze(['requiredFieldIds','requiredHandIds','recoveredHandIds','requiredFaceUpSpellTrapIds','requiredSetSpellTrapIds']);
+const goalStateKeys=Object.freeze(['opponentLpAtMost','ownLpAtLeast','phase','turn','activePlayer']);
+const canonicalGoalId=id=>Number(W.YGODataCatalog?.canonicalIdentity?.(Number(id))?.canonicalId??(W.YGODataCatalog?.lookup?.(Number(id))?.alias||id));
+function handGoalIds(goal){return goal.requiredHandIds??goal.recoveredHandIds;}
+function validateGoal(goal){
+ if(!goal||typeof goal!=='object'||Array.isArray(goal))throw Error('INVALID_GOAL: utiliza cartas, LP, turno, fase o jugador activo.');
+ if(Object.keys(goal).some(key=>![...goalCardKeys,...goalStateKeys].includes(key)))throw Error('UNSUPPORTED_GOAL_FIELD');
+ for(const key of goalCardKeys)if(goal[key]!==undefined){
+  if(!Array.isArray(goal[key])||goal[key].length>20||goal[key].some(id=>!integer(id,1)||!W.YGODataCatalog?.lookup?.(id)))throw Error('INVALID_GOAL_CARD_IDS: cartas o cantidades inválidas.');
+  if(['requiredFaceUpSpellTrapIds','requiredSetSpellTrapIds'].includes(key)&&goal[key].some(id=>{const c=W.YGODataCatalog?.rulesCard?.(id)||W.YGODataCatalog.lookup(id),bits=Number(c?.typeBits);return!Number.isSafeInteger(bits)||!(bits&6)||!!(bits&(1|0x8000000|0x4000))||/skills/i.test(String(c?.source||''))||/skill/i.test(String(c?.type||''));}))throw Error('INVALID_SPELL_TRAP_GOAL: utiliza Mágicas o Trampas del catálogo.');
+ }
+ if(goal.requiredHandIds!==undefined&&goal.recoveredHandIds!==undefined){const identities=ids=>arr(ids).map(canonicalGoalId).sort((a,b)=>a-b);if(stable(identities(goal.requiredHandIds))!==stable(identities(goal.recoveredHandIds)))throw Error('CONFLICTING_HAND_GOAL_ALIASES: los dos campos de mano deben representar las mismas copias.');}
+ for(const key of ['opponentLpAtMost','ownLpAtLeast'])if(goal[key]!==undefined&&(!finite(goal[key])||goal[key]<0))throw Error('INVALID_GOAL_LP');
+ if(goal.turn!==undefined&&(!integer(goal.turn,1)||goal.turn>100)||goal.activePlayer!==undefined&&![0,1].includes(goal.activePlayer)||goal.phase!==undefined&&!['DRAW','STANDBY','MAIN 1','BATTLE','MAIN 2','END'].includes(goal.phase))throw Error('INVALID_GOAL_STATE');
+ if(!goalCardKeys.some(key=>arr(goal[key]).length)&&!goalStateKeys.some(key=>goal[key]!==undefined))throw Error('EMPTY_GOAL: añade al menos una carta o condición al objetivo.');
+ return clone(goal);
+}
+function goalMatches(state,goal){
+ if(!state||!goal||typeof goal!=='object'||Array.isArray(goal))return false;
+ // A physical UID can satisfy only one requested copy, including across zones.
+ const claimed=new Set(),contains=(items,ids)=>{const available=new Map();for(const item of arr(items)){const id=canonicalGoalId(card(item).id),identity=item?.uid??item;if(claimed.has(identity))continue;let row=available.get(id);if(!row)available.set(id,row=[]);if(!row.some(x=>x.identity===identity))row.push({identity});}for(const id of arr(ids)){const row=available.get(canonicalGoalId(id));while(row?.length&&claimed.has(row[0].identity))row.shift();const copy=row?.shift();if(!copy)return false;claimed.add(copy.identity);}return true;};
+ const zones=state.zones?.[0]||{};
+ return contains(arr(zones.monster).filter(x=>x.faceUp===true),goal.requiredFieldIds)&&contains(zones.hand,handGoalIds(goal))&&contains(arr(zones.spelltrap).filter(x=>x.faceUp===true),goal.requiredFaceUpSpellTrapIds)&&contains(arr(zones.spelltrap).filter(x=>x.faceUp===false),goal.requiredSetSpellTrapIds)&&(goal.opponentLpAtMost===undefined||Number(state.lp?.[1])<=goal.opponentLpAtMost)&&(goal.ownLpAtLeast===undefined||Number(state.lp?.[0])>=goal.ownLpAtLeast)&&(goal.phase===undefined||state.phase===goal.phase)&&(goal.turn===undefined||state.turn===goal.turn)&&(goal.activePlayer===undefined||state.activePlayer===goal.activePlayer);
+}
 function goalDefinition(goal,label){
  if(goal===undefined||goal===null)return{id:'ANY_SUPPORTED_LINE',label:'Una línea completa dentro del alcance registrado',test:line=>arr(line.actions).length>0,serialized:{id:'ANY_SUPPORTED_LINE'}};
  if(typeof goal==='function')return{id:'CALLER_DECLARED_GOAL',label:String(label||'Objetivo declarado por el usuario'),test:(line,metrics)=>goal(finalState(line),line,metrics)===true,serialized:{id:'CALLER_DECLARED_GOAL',label:String(label||'Objetivo declarado por el usuario')}};
- if(typeof goal!=='object'||Array.isArray(goal))throw Error('INVALID_GOAL');
- const allowed=['requiredFieldIds','requiredHandIds','opponentLpAtMost','ownLpAtLeast','phase','turn','activePlayer'];
- if(Object.keys(goal).some(k=>!allowed.includes(k)))throw Error('UNSUPPORTED_GOAL_FIELD');
- for(const key of ['requiredFieldIds','requiredHandIds'])if(goal[key]!==undefined&&(!Array.isArray(goal[key])||goal[key].length>20||goal[key].some(x=>!integer(Number(x),1))))throw Error('INVALID_GOAL_CARD_IDS');
- for(const key of ['opponentLpAtMost','ownLpAtLeast'])if(goal[key]!==undefined&&(!finite(goal[key])||goal[key]<0))throw Error('INVALID_GOAL_LP');
- if(goal.turn!==undefined&&!integer(goal.turn,1)||goal.activePlayer!==undefined&&![0,1].includes(goal.activePlayer)||goal.phase!==undefined&&typeof goal.phase!=='string')throw Error('INVALID_GOAL_STATE');
- const value=clone(goal),contains=(zone,ids)=>{const available=new Map();for(const x of arr(zone)){const id=Number(card(x).alias||card(x).id);available.set(id,(available.get(id)||0)+1);}for(const id of arr(ids)){if(!available.get(Number(id)))return false;available.set(Number(id),available.get(Number(id))-1);}return true;};
- return{id:'DECLARED_STATE_GOAL',label:String(label||'Campo, mano y estado declarados'),serialized:value,test:line=>{const s=finalState(line);return contains(arr(s.zones?.[0]?.monster).filter(x=>x.faceUp===true),value.requiredFieldIds)&&contains(s.zones?.[0]?.hand,value.requiredHandIds)&&(value.opponentLpAtMost===undefined||Number(s.lp?.[1])<=value.opponentLpAtMost)&&(value.ownLpAtLeast===undefined||Number(s.lp?.[0])>=value.ownLpAtLeast)&&(value.phase===undefined||s.phase===value.phase)&&(value.turn===undefined||s.turn===value.turn)&&(value.activePlayer===undefined||s.activePlayer===value.activePlayer);}};
+ const value=validateGoal(goal);
+ return{id:'DECLARED_STATE_GOAL',label:String(label||'Monstruos, Mágicas/Trampas, mano y estado declarados'),serialized:value,test:line=>goalMatches(finalState(line),value)};
 }
 function firstOwnAction(line){
  for(const action of arr(line.actions)){
@@ -71,9 +92,9 @@ function explain(row,cohort){
 }
 function missingGoalCards(deck,goal){
  if(!goal||typeof goal!=='object'||Array.isArray(goal))return[];
- const family=id=>Number(W.YGODataCatalog?.canonicalIdentity?.(Number(id))?.canonicalId||W.YGODataCatalog?.lookup?.(Number(id))?.alias||id);
- const output=[],counts=new Map();for(const z of ['main','extra'])for(const c of arr(deck?.[z]))counts.set(family(c.id),(counts.get(family(c.id))||0)+Number(c.qty??1));
- for(const id of [...new Set(arr(goal.requiredFieldIds).map(Number))])if(!counts.get(family(id))){const c=W.YGODataCatalog?.rulesCard?.(id)||W.YGODataCatalog?.lookup?.(id),isExtra=!!(Number(c?.typeBits)&(0x40|0x2000|0x800000|0x4000000));output.push({reason:'DECLARED_GOAL_CARD_ABSENT',cardId:id,name:c?.name||null,requiredZone:isExtra?'extra':'main_or_extra',evidence:{goalField:'requiredFieldIds',actualCopies:0},meaning:'El objetivo exige esta identidad, pero no está en el Main ni el Extra. No se propone una proporción competitiva.'});}
+ const output=[],counts=new Map(),demands=new Map();for(const z of ['main','extra'])for(const c of arr(deck?.[z]))counts.set(canonicalGoalId(c.id),(counts.get(canonicalGoalId(c.id))||0)+Number(c.qty??1));
+ for(const key of goalCardKeys){if(key==='recoveredHandIds'&&goal.requiredHandIds!==undefined)continue;for(const id of arr(goal[key])){const family=canonicalGoalId(id);let row=demands.get(family);if(!row)demands.set(family,row={id,requiredCopies:0,goalFields:[]});row.requiredCopies++;if(!row.goalFields.includes(key))row.goalFields.push(key);}}
+ for(const [family,row]of demands){const actualCopies=counts.get(family)||0;if(actualCopies>=row.requiredCopies)continue;const c=W.YGODataCatalog?.rulesCard?.(row.id)||W.YGODataCatalog?.lookup?.(row.id),isExtra=!!(Number(c?.typeBits)&(0x40|0x2000|0x800000|0x4000000));output.push({reason:actualCopies?'DECLARED_GOAL_COPIES_INSUFFICIENT':'DECLARED_GOAL_CARD_ABSENT',cardId:row.id,name:c?.name||null,requiredZone:isExtra?'extra':'main_or_extra',evidence:{goalField:row.goalFields[0],goalFields:row.goalFields,actualCopies,requiredCopies:row.requiredCopies},meaning:'El objetivo exige más copias simultáneas de esta identidad que las disponibles en Main y Extra. No se propone una proporción competitiva.'});}
  return output;
 }
 function evaluate({deck,scenarios,context={},goal,goalLabel}={}){
@@ -142,5 +163,5 @@ function evaluate({deck,scenarios,context={},goal,goalLabel}={}){
    limitations:['Only supplied physical openings, fields, policies and replayed outcomes are compared.','A complete bounded search does not prove failure outside its registered rules.','Conditional response capacity is separate from an executed response.','Search truncation and selected results can omit stronger or weaker outcomes.','No win rate, deck tier or globally optimal policy is inferred.']};
  }catch(e){return fail('INVALID_RECOMMENDATION_INPUT',[String(e?.message||e)]);}
 }
-W.YGORecommendations=Object.freeze({version:'observed-policy-recommendations-v1',evaluate,dimensions});
+W.YGORecommendations=Object.freeze({version:'observed-policy-recommendations-v1',evaluate,dimensions,validateGoal,goalMatches});
 })();

@@ -46,7 +46,7 @@ La comprobación de documentos y las pruebas del motor son evidencias distintas.
 
 La revisión 9 pasó **48/48 grupos de pruebas** sobre el HTML final y la comprobación de sintaxis de **114 archivos JavaScript**. Chromium, Firefox y WebKit aprobaron sus comprobaciones; Firefox completó también la apertura directa del HTML local sin conexión. Build `b2e655dc990e6951cf886945774c028ac97a3e55c4f84010a1edb9942f1b0ba7`; SHA-256 `0976989809a5c2c96404149679d4806a89d13a6e3efa61c500e94da3a9793a2b`; tamaño **6.951.935 bytes**. Estos resultados acreditan las tareas ejecutadas dentro del alcance registrado.
 
-La publicación, la comprobación de descarga HTTP y la ejecución remota de GitHub Actions de revisión 9 se registran por separado; esta aceptación local no acredita por sí sola esos pasos.
+La [ejecución remota de revisión 9](https://github.com/socramgns/MODERN/actions/runs/40614521563) terminó **correctamente** para el commit `213d323f05fbb57cffce8b19a36afa6f132a989a`. La publicación y la descarga HTTP conservan sus propios registros.
 
 Se intentó consultar el PDF oficial del reglamento y una FAQ oficial pertinente a activación/reemplazo de Mágicas de Campo; las consultas recibieron HTTP 403. Son fallos de acceso HTTP, no rechazos de aprobación automática. No se presenta contenido no recibido como documento cotejado ni se afirma una captura oficial nueva para cerrar estas reglas.
 
@@ -124,3 +124,7 @@ python3 tests/official_validation.py
 Las **29 regresiones** usan documentos sintéticos identificados como tales. Cubren hash, fechas, nombres, límites, citas, PDF, redirecciones, discrepancias, ausencia de mutaciones y estructura completa de Neuron. Son pruebas del verificador; la evidencia oficial es la captura HTTPS cotejada y registrada aparte.
 
 Siguen pendientes la revisión completa del reglamento, los rulings restantes, los passcodes oficiales y la disponibilidad correspondiente a cada formato o evento. Las tres FAQ OCG citadas son evidencia específica con un alcance propio; no cierran esas tareas generales. No se generaron pools supuestamente verificados a partir de fechas inferidas ni de flags CDB. El importador de calibración competitiva permanece preparado y provisional por decisión del usuario; no se crearon etiquetas de torneo para completar este apartado.
+
+## Alcance de los objetivos de revisión 10
+
+La ampliación de objetivos de Mágicas/Trampas distingue copias propias boca arriba y colocadas, incluidas las Mágicas de Campo. Es un contrato de selección y comprobación de estados; no constituye una fuente documental nueva ni amplía por sí solo los efectos registrados. Las capturas y referencias anteriores conservan sus alcances originales. La aceptación del HTML de revisión 10 se identifica por su propio build y hash en [ESTADO_PROYECTO.md](ESTADO_PROYECTO.md).

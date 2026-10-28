@@ -1,10 +1,28 @@
-# Cambios de la revisión 9
+# Cambios de la revisión 10
+
+La revisión `2026.10-stable.10` añade objetivos propios de Mágicas/Trampas en campo y conserva el HTML único y la puntuación estructural provisional.
+
+La revisión 10 pasó **50/50 grupos de pruebas** sobre el HTML final y la comprobación de sintaxis de **114 archivos JavaScript**. Chromium, Firefox y WebKit aprobaron sus comprobaciones; Firefox completó también la apertura directa del HTML local sin conexión. Build `5ee44d69c129cc4db4d922c9f064723760b1b1f3596dfb9a0f21ef694ff7fb7a`; SHA-256 `c2cafe3fdba2bc8d5cefaa5f7a4fe5858204fc5a61b50b2723bc04a04dcad807`; tamaño **6,953,153 bytes**. Estos resultados acreditan las tareas ejecutadas dentro del alcance registrado. La ejecución inicial aprobó 49 grupos; la auditoría del catálogo aprobó sus 13 comprobaciones al restaurar y cotejar la caché técnica omitida en el espacio nuevo, sin cambiar el HTML ni el código. La evidencia conserva ambos resultados.
+
+La publicación, la descarga HTTP y el resultado remoto de GitHub Actions de revisión 10 se comprueban por separado y se registran con el commit correspondiente.
+
+- Añade `requiredFaceUpSpellTrapIds` para Mágicas/Trampas propias boca arriba y `requiredSetSpellTrapIds` para las colocadas. Ambas listas incluyen Mágicas de Campo en su zona independiente.
+- Conserva `requiredFieldIds` para monstruos propios boca arriba y los objetivos de mano, incluidas las importaciones heredadas con `recoveredHandIds`. Las cantidades se cuentan por copias e identidad canónica dentro de cada zona.
+- Comparte la validación entre los paneles y mantiene el objetivo en escenarios, informes y comparaciones. La búsqueda y la evaluación de recomendaciones deben exigir todas las condiciones del objetivo.
+- Amplía el selector visual con las dos zonas nuevas y filtra por tipo e inventario. Skills y Tokens no se ofrecen como Mágicas/Trampas.
+- Conserva once ejemplos; el ejemplo de Campo exige ahora Sanctuary boca arriba además de Wolf en campo y Roar en mano.
+- Conserva las rutas y respuestas previas, la protección de Spark, la negación GY de Spirit y los costes, usos y replay de las activaciones registradas.
+- Los objetivos nuevos no registran efectos adicionales de cartas ni certifican el juego completo. La calibración competitiva continúa pendiente de datos externos reales.
+
+La revisión 9 conserva una [aceptación local de 48/48 grupos](https://github.com/socramgns/MODERN/blob/213d323f05fbb57cffce8b19a36afa6f132a989a/evidence/validation-summary.json). Su [ejecución remota de GitHub Actions](https://github.com/socramgns/MODERN/actions/runs/40614521563) terminó **correctamente** para el commit `213d323f05fbb57cffce8b19a36afa6f132a989a`. Esa evidencia corresponde a revisión 9 y no sustituye la comprobación de los bytes nuevos.
+
+# Antecedente: cambios de la revisión 9
 
 La revisión `2026.10-stable.9` incorpora dos activaciones de Mágicas de Campo registradas y conserva el HTML único y la puntuación estructural provisional.
 
 La revisión 9 pasó **48/48 grupos de pruebas** sobre el HTML final y la comprobación de sintaxis de **114 archivos JavaScript**. Chromium, Firefox y WebKit aprobaron sus comprobaciones; Firefox completó también la apertura directa del HTML local sin conexión. Build `b2e655dc990e6951cf886945774c028ac97a3e55c4f84010a1edb9942f1b0ba7`; SHA-256 `0976989809a5c2c96404149679d4806a89d13a6e3efa61c500e94da3a9793a2b`; tamaño **6.951.935 bytes**. Estos resultados acreditan las tareas ejecutadas dentro del alcance registrado.
 
-La publicación, la comprobación de descarga HTTP y la ejecución remota de GitHub Actions de revisión 9 se registran por separado; esta aceptación local no acredita por sí sola esos pasos.
+La [ejecución remota de revisión 9](https://github.com/socramgns/MODERN/actions/runs/40614521563) terminó **correctamente** para el commit `213d323f05fbb57cffce8b19a36afa6f132a989a`. La publicación y la descarga HTTP conservan sus propios registros.
 
 - Mausoleum of White y Salamangreat Sanctuary activan desde mano como paquetes `FIELD_SPELL`/`SINGLE`/`NONE`, con preparación física antes de Mechaba o Roar.
 - El Field Spell anterior admitido, boca arriba o colocado, se envía al GY por regla. No es destrucción ni coste de efecto y no se recupera al negarse la nueva activación.
