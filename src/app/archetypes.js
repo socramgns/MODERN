@@ -85,9 +85,11 @@ register({type:'SPIRIT_SEARCH_MAUSOLEUM',ashable:true,enumerate:st=>!H.isUsed(st
  if(a.ashNegated||a.effectNegated||a.activationNegated)return{events:[{type:'SPIRIT_SEARCH_NEGATED',uid:a.sourceUid}]};
  H.move(st,a.selectionUid,'hand');H.shuffle(st);return{events:[{type:'SEARCH',uid:a.selectionUid,sourceUid:a.sourceUid,from:'deck',to:'hand',mode:'ADD_TO_HAND'}]};
 }});
-register({type:'ACTIVATE_MAUSOLEUM_OF_WHITE',enumerate:st=>idle(st)?own(st,'hand',x=>id(x)===I.MAUSOLEUM).map(x=>({type:'ACTIVATE_MAUSOLEUM_OF_WHITE',sourceUid:x.uid})):[],apply:(st,a)=>{
- for(const old of fieldSpells(st))sent(st,old.uid,'gy');const field=H.move(st,a.sourceUid,'spelltrap',{faceUp:true});field.fieldSpell=true;
- return{events:[{type:'FIELD_SPELL_ACTIVATION',uid:field.uid}]};
+register({type:'ACTIVATE_MAUSOLEUM_OF_WHITE',cardActivation:'FIELD_SPELL',activationCardId:I.MAUSOLEUM,activationPacket:'SINGLE',activationRestriction:'NONE',enumerate:st=>idle(st)?own(st,'hand',x=>id(x)===I.MAUSOLEUM&&H.fieldSpellActivationEligible(st,x.uid,I.MAUSOLEUM)).map(x=>({type:'ACTIVATE_MAUSOLEUM_OF_WHITE',sourceUid:x.uid})):[],apply:(st,a)=>{
+ const field=H.locate(st,a.sourceUid);if(field?.player!==0||field.zone!=='spelltrap'||field.item.faceUp!==true||field.item.fieldSpell!==true||field.item.zoneIndex!==undefined||id(field.item)!==I.MAUSOLEUM)throw Error('MAUSOLEUM_FIELD_ACTIVATION_STAGE_REQUIRED');
+ if(a.activationNegated)return{events:[{type:'FIELD_SPELL_ACTIVATION_NEGATED',uid:a.sourceUid,cardId:I.MAUSOLEUM}]};
+ if(a.ashNegated||a.effectNegated)return{events:[{type:'FIELD_SPELL_EFFECT_NEGATED',uid:a.sourceUid,cardId:I.MAUSOLEUM,activationNegated:false,remainsInFieldZone:true}]};
+ return{events:[{type:'FIELD_SPELL_ACTIVATION',uid:a.sourceUid}]};
 }});
 register({type:'MAUSOLEUM_ADDITIONAL_NORMAL_SUMMON',enumerate:st=>{
  if(!idle(st)||H.isUsed(st,'MAUSOLEUM_ADDITIONAL_NORMAL')||!H.mainRoom(st))return[];

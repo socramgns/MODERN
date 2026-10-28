@@ -33,13 +33,13 @@ El rival necesita mazo y mano completos para usar respuestas. El motor exige car
 | Effect Veiler | Envío real desde mano, Main Phase rival y efecto de monstruo en campo admitido; la negación termina con el turno |
 | Infinite Impermanence | Desde mano solo con campo propio vacío, o colocada en un turno anterior. Niega un monstruo admitido; desde colocada registra su columna y el bloqueo Mágica/Trampa. Las columnas de ambos jugadores se relacionan por su posición física |
 | Chixiao | Destierra una carta Swordsoul/Wyrm real de mano/GY, niega el monstruo elegible y comparte presupuesto con su búsqueda |
-| Mechaba | Envía de mano el tipo correspondiente: monstruo para un efecto individual registrado en campo, mano o GY, o Mágica para las activaciones de Invocation, Branded Fusion y Vessel. Niega la activación y destierra la fuente solo si permanece en su lugar de activación registrado. Incluye Crow/Droll desde mano. No cubre efectos GY de Mágicas/Trampas, activaciones de Field Spells o Trampas ni el paquete conjunto Chixiao/Mo Ye |
+| Mechaba | Envía de mano el tipo correspondiente: monstruo para un efecto individual registrado en campo, mano o GY, o Mágica para las activaciones de Invocation, Branded Fusion, Vessel y las dos Mágicas de Campo registradas. Niega la activación y destierra la fuente solo si permanece en su lugar de activación registrado. Incluye Crow/Droll desde mano. No cubre efectos GY de Mágicas/Trampas, otras Mágicas de Campo, activaciones generales de Trampas ni el paquete conjunto Chixiao/Mo Ye |
 | Spirit Dragon | Responde a paquetes individuales de efectos GY registrados, capturando la zona antes de costes. Niega la activación sin seleccionar objetivo ni destruir la fuente; conserva costes pagados y distingue restricciones por uso y por activación. No necesita historial Synchro para esta negación |
 | D.D. Crow | Objetivo físico del GY rival registrado antes de resolver, descarte como coste y destierro si resuelve; `NONE`, sin límite por turno inventado. Mechaba puede negar la activación desde mano y el descarte permanece en GY |
 | Droll | Ventana tras búsqueda o robo por efecto registrado, envío de mano a GY como coste y bloqueo de añadir del Deck a la mano para ambos jugadores durante el turno. `NONE`, sin límite por turno inventado; la oportunidad termina con la cadena y un evento elegible posterior puede abrir otra. El robo ordinario de Draw Phase no abre esa ventana |
 | Mirrorjade | Envía Fusion admitido del Extra como coste, elige al resolver sin seleccionar objetivo al activar, destierra y aplica su restricción hasta el turno siguiente. Una salida elegible por el rival puede programar la destrucción End Phase |
 
-La revisión 8 amplía el registro explícito de mano/GY a quince handlers, comprobados dentro del alcance registrado:
+La revisión 9 conserva el registro explícito de mano/GY de quince handlers, aceptado en revisión 8 dentro de su alcance:
 
 | Paquete | Zona de activación registrada |
 | --- | --- |
@@ -62,11 +62,25 @@ Crow y Droll declaran `activationRestriction: NONE`: no se marcan usos por turno
 
 La oportunidad previa de Droll termina al cerrar la cadena, incluso si se negó Droll. Una nueva activación requiere una nueva ventana admitida y una copia disponible; un evento registrado elegible de búsqueda o robo por efecto puede crear esa ventana. `NONE` no exime las restricciones de construcción: Droll está limitada a una en el snapshot TCG actual. Esta ampliación no añade Droll como contrarrespuesta general ni prueba prioridad arbitraria dentro de cadenas.
 
-Field Spells y activaciones registradas de Trampas de Velocidad 2 siguen pendientes. Roar es una Counter Trap de Velocidad 3 y Mechaba, de Velocidad 2, no puede responder a su activación.
+Otras Mágicas de Campo y las activaciones generales de Trampas de Velocidad 2 siguen pendientes. Roar es una Counter Trap de Velocidad 3 y Mechaba, de Velocidad 2, no puede responder a su activación.
 
 El criterio de Mechaba se documenta con las FAQ oficiales OCG en japonés 16041, 22388 y 23949. Sus originales y citas están fijados; las explicaciones españolas no sustituyen la evidencia original. Su alcance de referencia se distingue de una certificación general TCG en [FUENTES_OFICIALES.md](FUENTES_OFICIALES.md).
 
 Los costes se pagan aunque la resolución quede negada cuando así lo exige el efecto. Negar Mo Ye no crea Token, pero conserva revelación y uso; negar Lubellion no devuelve el descarte. Los paquetes que no declaran un contrato de cadena admiten una respuesta registrada. Mechaba y Roar declaran paquetes que permiten hasta tres contrarrespuestas Roar con velocidad, alternancia de jugadores y resolución LIFO verificadas. La prioridad arbitraria, SEGOC y todas las cadenas posibles siguen fuera del alcance.
+
+## Activaciones de Mágicas de Campo de la revisión 9
+
+El registro se limita a `ACTIVATE_MAUSOLEUM_OF_WHITE` (Mausoleum of White, 24382602) y `SALAMANGREAT_ACTIVATE_SANCTUARY` (Salamangreat Sanctuary, 1295111), activadas desde la mano. Declaran `FIELD_SPELL`, paquete `SINGLE` y restricción de activación `NONE`. Se conservan los quince paquetes de monstruos y las tres activaciones de Mágicas Normales anteriores; no se infieren otras cartas o efectos desde el texto del catálogo.
+
+Antes de ofrecer respuestas, la nueva carta ocupa su zona de Campo y el Field Spell propio anterior admitido, boca arriba o colocado, se envía al GY por regla. Ese envío no es destrucción ni coste de efecto y no se revierte si se niega la nueva activación. La preparación conserva UID, jugador, identidad, origen y reemplazos en la traza. Las salidas con consecuencias desconocidas no se incorporan como si estuvieran modeladas.
+
+La zona de Campo es independiente de las cinco zonas de Mágicas/Trampas: llenarlas no impide esta activación. El bloqueo de una columna por Impermanence no se aplica a la zona de Campo. Esto no habilita todas las activaciones de cartas colocadas ni una activación rival simétrica de cada handler de familia.
+
+Mechaba paga una Mágica física de la mano para negar la activación y destierra la nueva carta cuando corresponde. Roar niega y destruye la carta activada; una activación negada no se trata como carta en el campo a efectos de protección de Spark o reemplazo de Balelynx, por lo que termina en GY sin esos reemplazos. Si una contrarrespuesta Roar niega la primera respuesta y permite resolver la activación, permanece el Field Spell **nuevo**; el anterior ya enviado por regla no vuelve al campo.
+
+Reemplazar copias no reinicia los presupuestos globales del turno: el Normal adicional de Mausoleum y la reincarnación de Sanctuary conservan sus usos gastados. Un aumento de ATK de Mausoleum que ya resolvió conserva su duración al salir el Field Spell. Los efectos propios posteriores siguen necesitando su acción registrada; activar la carta no ejecuta automáticamente todos sus efectos.
+
+Esta ampliación no registra el efecto de Mausoleum desde GY, otras Mágicas de Campo ni efectos desconocidos de cartas nuevas. Las activaciones generales de Trampas de Velocidad 2 continúan pendientes. Mechaba, de Velocidad 2, no puede responder a la Counter Trap Roar de Velocidad 3.
 
 ## Laboratorio de fases y campo
 
@@ -94,7 +108,7 @@ Una búsqueda o envío desde Deck que baraja invalida el conocimiento del orden.
 
 ## Objetivos, recursos y comparación
 
-Los objetivos admiten cartas en campo/mano, cantidades, LP, fase, turno y jugador activo. Las métricas describen recursos observados: mano, zonas, ATK conocido, materiales, descartes, tributos y restricciones. Una capacidad condicional de negar no se contabiliza como una negación ya ejecutada; opciones que comparten uso no se suman como independientes.
+Los objetivos admiten monstruos boca arriba en campo, cartas en mano, cantidades, LP, fase, turno y jugador activo. `requiredFieldIds` cuenta actualmente monstruos; no sirve como objetivo directo de una Mágica de Campo o una Trampa. El ejemplo de Campo demuestra su utilidad mediante la reincarnación de Wolf y la recuperación de Roar a la mano. Las métricas describen recursos observados: mano, zonas, ATK conocido, materiales, descartes, tributos y restricciones. Una capacidad condicional de negar no se contabiliza como una negación ya ejecutada; opciones que comparten uso no se suman como independientes.
 
 La interfaz compara PASS y Ash/Veiler/Imperm que existan en la mano rival y Spirit Dragon cuando una copia elegible está en el campo. La comparación parte del mismo campo físico inicial guardado y conserva sus políticas. `examples/Escenario_Respuestas_TCG.json` contiene mano e inventario físicos para las cuatro políticas. Cada escenario conserva exactamente la misma mano propia, orden restante, inventario y campo rival; solo cambia la política de respuesta. Todas las líneas aceptadas se reproducen de nuevo. Los recursos y el Pareto se comparan cuando hay cobertura y dominio final compatibles; si falta evidencia queda desconocida. Los resultados observados no son una garantía contra todas las decisiones rivales ni una tasa de victoria.
 
@@ -126,7 +140,7 @@ La protección Spark registrada no admite acumular dos protecciones aún sin con
 
 El diagnóstico por carta contrasta un registro explícito de acciones parciales con los handlers y proveedores realmente presentes en la compilación. Distingue datos técnicos, uso básico acotado de Normales y efectos registrados. No presenta reconocer una carta como haber implementado todos sus efectos. El informe incluye build, catálogo y contexto; su aplicabilidad causal se limita al formato registrado.
 
-La revisión 8 incluye diez ejemplos: Invoked, Spark, Spirit, Swordsoul, Branded, Tenyi, Salamangreat y Roar, más Crow/Mechaba y Droll tras una búsqueda. Cargarlos sustituye la baraja actual y prepara las copias físicas y el campo declarado; no ejecuta jugadas automáticamente ni certifica la historia anterior. El nuevo ejemplo Crow declara dos Mechaba y a Aleister en GY; el de Droll muestra una oportunidad tras una búsqueda. Son demostraciones técnicas comprobadas dentro de la aceptación local de los bytes finales de revisión 8.
+La revisión 9 incluye once ejemplos: los diez anteriores —Invoked, Spark, Spirit, Swordsoul, Branded, Tenyi, Salamangreat, Roar, Crow/Mechaba y Droll tras una búsqueda— y uno de activación y reemplazo de Campo. Cargarlos sustituye la baraja actual y prepara las copias físicas y el campo declarado; no ejecuta jugadas automáticamente ni certifica la historia anterior. Los flujos registrados de los ejemplos y su replay se comprobaron sobre los bytes finales de revisión 9.
 
 
 ## Ampliaciones de la revisión 6
@@ -142,14 +156,10 @@ El laboratorio mantiene JSON avanzado y añade formularios de objetivos, selecci
 El panel de probabilidades del próximo robo calcula distribuciones exactas por identidad sobre las copias restantes. Con orden desconocido supone un barajado uniforme: no revela la siguiente carta, no cambia el mazo y no certifica una continuación. La búsqueda informa separadamente los horizontes de profundidad/turnos y los presupuestos alcanzados.
 
 
-## Aceptación local de la revisión 8
+## Aceptación local de la revisión 9
 
-La revisión 8 pasó **46/46 grupos de pruebas** sobre el HTML final y la comprobación de sintaxis de **114 archivos JavaScript**. Chromium, Firefox y WebKit aprobaron sus comprobaciones; Firefox completó también la apertura directa del HTML local sin conexión. Build `d7c220eb32a7876a39fb6caaeee7bbde7ee96bde1fe5353672ed44e2369f9d6b`; SHA-256 `aa5e34480df69200c7355daf8fdbc589b584cd276d890ab22977867a9ea3aeca`; tamaño **6.940.108 bytes**. Estos resultados acreditan las tareas ejecutadas dentro del alcance registrado.
+La revisión 9 pasó **48/48 grupos de pruebas** sobre el HTML final y la comprobación de sintaxis de **114 archivos JavaScript**. Chromium, Firefox y WebKit aprobaron sus comprobaciones; Firefox completó también la apertura directa del HTML local sin conexión. Build `b2e655dc990e6951cf886945774c028ac97a3e55c4f84010a1edb9942f1b0ba7`; SHA-256 `0976989809a5c2c96404149679d4806a89d13a6e3efa61c500e94da3a9793a2b`; tamaño **6.951.935 bytes**. Estos resultados acreditan las tareas ejecutadas dentro del alcance registrado.
 
-La publicación, la comprobación de descarga HTTP y la ejecución remota de GitHub Actions se registran por separado; la aceptación local no acredita por sí sola esos pasos.
+La publicación, la comprobación de descarga HTTP y la ejecución remota de GitHub Actions de revisión 9 se registran por separado; esta aceptación local no acredita por sí sola esos pasos.
 
-`dist/validation-summary.json` identifica esta aceptación local de revisión 8. En la rama de entrega, `evidence/validation-summary.json` debe conservar los mismos identificadores. La [evidencia histórica de revisión 7](https://github.com/socramgns/MODERN/blob/719897b2f9880507b15068c4a5ca9e1a3a02d038/evidence/validation-summary.json) se consulta en su commit, sin atribuir los informes antiguos a los bytes nuevos.
-
-La revisión 7 tiene una [aceptación local documentada de 44/44 grupos](https://github.com/socramgns/MODERN/blob/719897b2f9880507b15068c4a5ca9e1a3a02d038/evidence/validation-summary.json), con 114 archivos JavaScript comprobados, Chromium, Firefox y WebKit y apertura directa offline en Firefox. La ejecución inicial aprobó 43 grupos; el flujo de contexto pasó sus 18 comprobaciones al repetirse después de ajustar un selector de la prueba al panel anidado, sin cambiar la aplicación ni el HTML. La evidencia conserva ambos intentos.
-
-La [ejecución remota de revisión 7](https://github.com/socramgns/MODERN/actions/runs/40558997215/job/122382622102) terminó **cancelada** al superar 30 minutos durante «Instalar herramientas de comprobación», antes de ejecutar las pruebas del analizador. No es un CI aprobado ni demuestra un fallo de reglas de la aplicación. La revisión 8 separa las etapas de instalación y añade caché; su resultado remoto debe consultarse por separado.
+La revisión 8 conserva una [aceptación local de 46/46 grupos](https://github.com/socramgns/MODERN/blob/b1a478d95020a7a718b2de0ef01b7793013058fd/evidence/validation-summary.json), con 114 archivos JavaScript comprobados, Chromium, Firefox y WebKit y apertura directa sin conexión en Firefox. Su [ejecución remota de GitHub Actions](https://github.com/socramgns/MODERN/actions/runs/40599777991) terminó **correctamente** para el commit `b1a478d95020a7a718b2de0ef01b7793013058fd`: instalación, actualización idempotente, compilación/comparación del HTML, pruebas y comprobación entre motores aprobadas. Esta evidencia pertenece a revisión 8 y no sustituye la aceptación de revisión 9.

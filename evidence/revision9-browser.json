@@ -1,0 +1,92 @@
+{
+  "schema": "ygo-release9-browser/v1",
+  "pass": true,
+  "buildId": "b2e655dc990e6951cf886945774c028ac97a3e55c4f84010a1edb9942f1b0ba7",
+  "htmlSha256": "0976989809a5c2c96404149679d4806a89d13a6e3efa61c500e94da3a9793a2b",
+  "artifactMode": "DELIVERED_BYTES",
+  "sourceInjection": false,
+  "checks": [
+    {
+      "name": "release9_boots_offline_from_the_manifest_bound_document",
+      "pass": true
+    },
+    {
+      "name": "eleven_visible_examples_preserve_the_previous_ten_identifiers",
+      "pass": true
+    },
+    {
+      "name": "the_delivered_mechaba_field_registry_is_explicit_and_limited_to_the_two_reviewed_cards",
+      "pass": true
+    },
+    {
+      "name": "field_guide_prepares_physical_cards_without_autoplay_or_an_already_reached_goal",
+      "pass": true
+    },
+    {
+      "name": "the_field_packet_captures_hand_origin_and_the_exact_prior_field",
+      "pass": true
+    },
+    {
+      "name": "the_prior_field_is_sent_by_rule_before_the_activation_and_responses_without_destruction",
+      "pass": true
+    },
+    {
+      "name": "roar_negates_mechaba_after_its_spell_cost_and_all_physical_payments_remain_paid",
+      "pass": true
+    },
+    {
+      "name": "the_resolved_sanctuary_keeps_its_separate_field_slot_and_a_fresh_replay",
+      "pass": true
+    },
+    {
+      "name": "sanctuary_enables_a_new_reincarnated_wolf_using_the_actual_starting_copy",
+      "pass": true
+    },
+    {
+      "name": "the_three_visible_steps_recover_the_same_roar_and_reach_the_advertised_goal",
+      "pass": true
+    },
+    {
+      "name": "field_report_export_binds_the_staging_proof_and_verified_trace_to_the_delivered_build",
+      "pass": true
+    },
+    {
+      "name": "undo_restores_the_original_field_roar_mechaba_and_spell_cost",
+      "pass": true
+    },
+    {
+      "name": "declining_the_roar_counter_banishes_sanctuary_without_restoring_mausoleum",
+      "pass": true
+    },
+    {
+      "name": "the_negated_branch_cannot_use_sanctuary_reincarnation_and_does_not_claim_the_goal",
+      "pass": true
+    },
+    {
+      "name": "the_saved_field_route_reimports_and_replays_its_original_staging_and_recovered_roar",
+      "pass": true
+    },
+    {
+      "name": "release9_tasks_raise_no_javascript_page_errors",
+      "pass": true
+    },
+    {
+      "name": "compiled_document_is_unchanged_during_release9_tasks",
+      "pass": true
+    }
+  ],
+  "details": {
+    "release9_tasks_raise_no_javascript_page_errors": []
+  },
+  "browser": {
+    "engine": "chromium",
+    "version": "154.0.8037.57"
+  },
+  "externalRequestsBlocked": 16,
+  "limitations": [
+    "Starting fields and prior summon history remain declared assumptions.",
+    "The two registered Field Spell activations do not provide arbitrary priority or all Spell/Trap rules.",
+    "Recorded replay and goal checks do not certify competitive results."
+  ],
+  "elapsedSeconds": 16.49
+}

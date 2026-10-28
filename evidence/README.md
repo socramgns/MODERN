@@ -1,7 +1,7 @@
-# Evidencia de la revisión 8
+# Evidencia de la revisión 9
 
-La validación local pasó 46/46 grupos sobre el build y SHA-256 identificados en los informes; se comprobaron 114 archivos JavaScript. Chromium, Firefox y WebKit aprobaron sus comprobaciones. El HTML también se abrió directamente mediante `file:` sin conexión en Firefox.
+La validación local pasó 48/48 grupos sobre el build y SHA-256 indicados; se comprobaron 114 archivos JavaScript. Chromium, Firefox y WebKit aprobaron sus comprobaciones. Firefox abrió directamente el HTML mediante `file:` sin conexión.
 
-`release6-browser.json` ejecuta las regresiones de aquella revisión sobre los bytes nuevos; `expanded-examples-browser.json` comprueba referencias y rutas anteriores; `revision8-browser.json` comprueba los ejemplos nuevos, costes, variantes, deshacer, exportación y replay. La evidencia histórica de revisión 7 permanece en su commit publicado.
+`release6-browser.json`, `expanded-examples-browser.json` y `revision8-browser.json` comprueban regresiones sobre los bytes nuevos. `revision9-browser.json` comprueba el ejemplo de Campo, costes, reemplazo, contrarrespuesta, deshacer, exportación y replay. La evidencia histórica de revisión 8 permanece en su commit publicado.
 
-La puntuación sigue provisional. Los paquetes registrados no certifican todas las reglas ni prioridad general. Droll está limitada a una copia por el snapshot TCG; los casos unitarios de repetición usan la misma copia con una recuperación declarada como fixture de pruebas, no como efecto o combo del producto. Las FAQ japonesas conservan su alcance OCG. La aceptación local no equivale a un resultado remoto de CI.
+Las activaciones de Campo se limitan a Mausoleum of White y Salamangreat Sanctuary desde mano, con perfiles de reemplazo conocidos. El proveedor unitario de negación solo de efecto es un fixture QA, no una carta implementada. Las FAQ japonesas conservan su alcance de efectos de monstruos y no certifican el reemplazo de Campo. La puntuación sigue provisional. La aceptación local no equivale por sí sola a un resultado remoto de CI.

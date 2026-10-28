@@ -1,8 +1,8 @@
 {
   "schema": "ygo-release8-browser/v1",
   "pass": true,
-  "buildId": "d7c220eb32a7876a39fb6caaeee7bbde7ee96bde1fe5353672ed44e2369f9d6b",
-  "htmlSha256": "aa5e34480df69200c7355daf8fdbc589b584cd276d890ab22977867a9ea3aeca",
+  "buildId": "b2e655dc990e6951cf886945774c028ac97a3e55c4f84010a1edb9942f1b0ba7",
+  "htmlSha256": "0976989809a5c2c96404149679d4806a89d13a6e3efa61c500e94da3a9793a2b",
   "artifactMode": "DELIVERED_BYTES",
   "sourceInjection": false,
   "checks": [
@@ -11,7 +11,7 @@
       "pass": true
     },
     {
-      "name": "ten_visible_examples_preserve_the_previous_eight_identifiers",
+      "name": "eleven_visible_examples_preserve_the_previous_ten_identifiers",
       "pass": true
     },
     {
@@ -100,5 +100,5 @@
     "The starting Mechaba and Aleister GY history are declared, not reconstructed summons.",
     "Recorded packet and replay checks do not establish universal priority or competitive results."
   ],
-  "elapsedSeconds": 19.33
+  "elapsedSeconds": 21.26
 }

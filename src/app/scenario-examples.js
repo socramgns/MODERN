@@ -87,7 +87,20 @@ const droll=base('droll','Droll: una búsqueda y su negación desde la mano','Bu
  'Comprueba que Droll permanece en el Cementerio, conserva ambos costes y revisa el replay. Al terminar esta cadena se cierra la ventana de la búsqueda anterior; otra activación necesitaría un evento nuevo admitido. El ejemplo respeta el límite de una copia de Droll de la lista incorporada.',
  'Deshaz el último paso y elige Droll sin respuesta: el mismo coste permanece pagado y ahora el bloqueo se aplica a los dos jugadores durante el resto del turno.'
  ],'RESPONSES_EXPLICIT',['MECHABA'],'CHOICE_BRANCHES');
-const templates=new Map([spark,spirit,invoked,swordsoul,branded,tenyi,salamangreat,roar,crow,droll].map(value=>[value.id,value]));
+const fieldOwnDeck=deck([[24382602,1],[1295111,1],[51339637,1]],[[87871125,2]]),fieldOwnOpening=[1295111,...NORMALS.slice(0,4)],fieldRivalDeck=deck([[74063034,1]],[[75286621,1]]),fieldRivalOpening=[74063034,...NORMALS.slice(0,4)];
+const field=base('field','Mágica de Campo: reemplazar, responder y reincarnar','Sustituye Mausoleum por Sanctuary y usa Roar para permitir que resuelva frente a Mechaba.',physical(fieldOwnDeck,fieldOwnOpening),physical(fieldRivalDeck,fieldRivalOpening),{turn:2,activePlayer:0,phase:'MAIN 1',placements:[
+ {player:0,from:'deck',cardId:24382602,zone:'spelltrap',faceUp:true},
+ {player:0,from:'deck',cardId:51339637,zone:'spelltrap',zoneIndex:0,faceUp:false,setTurn:1},
+ {player:0,from:'extra',cardId:87871125,zone:'monster',zoneIndex:5,position:'ATTACK',faceUp:true,summonTurn:1},
+ {player:1,from:'extra',cardId:75286621,zone:'monster',zoneIndex:0,position:'ATTACK',faceUp:true,summonTurn:1}
+ ]},{requiredFieldIds:[87871125],requiredHandIds:[51339637]},[
+ 'Activa Sanctuary desde tu mano. Selecciona la variante con Mechaba rival y una contrarrespuesta de tu Roar colocada desde el turno anterior. Los monstruos y el campo previos son supuestos iniciales declarados.',
+ 'Ejecuta el paso: Mausoleum se envía al Cementerio por regla antes de la respuesta, sin destruirse. Mechaba paga Invocation de su mano, pero tu Roar niega a Mechaba y permite que Sanctuary permanezca en la Zona del Campo. Comprueba ambos Cementerios y el replay.',
+ 'Reincarna Sunlight Wolf usando tu primer Wolf como único material. Esta ruta necesita Sanctuary resuelto; la historia de esta nueva invocación sí queda registrada.',
+ 'Resuelve el Wolf reincarnado para recuperar Roar del Cementerio a tu mano. El objetivo exige Wolf en el campo y esa Roar física en la mano.',
+ 'Para comparar, deshaz los tres pasos y activa Sanctuary con Mechaba rival pero sin tu Roar. Sanctuary queda desterrado y Mausoleum permanece en el Cementerio: el campo anterior no regresa y no aparece esta reincarnación.'
+ ],'RESPONSES_EXPLICIT',['MECHABA','ROAR'],'CHOICE_BRANCHES');
+const templates=new Map([spark,spirit,invoked,swordsoul,branded,tenyi,salamangreat,roar,crow,droll,field].map(value=>[value.id,value]));
 const describe=value=>({id:value.id,name:value.name,description:value.description,scope:value.scope,steps:clone(value.tutorial.steps),replacesDeck:true,initialHistoryCertified:false,competitiveRecommendation:false});
 function list(){return[...templates.values()].map(describe);}
 function get(id){if(typeof id!=='string'||!templates.has(id))throw Error('SCENARIO_EXAMPLE_UNKNOWN');return clone(templates.get(id));}
@@ -107,5 +120,5 @@ async function load(id){const spec=get(id);if(loading)throw Error('SCENARIO_EXAM
  await A.initialize({goal:spec.goal});
  return{pass:true,status:'SCENARIO_EXAMPLE_LOADED',id,name:spec.name,message:'Ejemplo cargado. El campo inicial es un supuesto declarado; selecciona y ejecuta cada acción en el laboratorio.',steps:clone(spec.tutorial.steps),report:clone(A.report())};
  }finally{loading=false;}}
-W.YGOScenarioExamples=Object.freeze({version:'self-contained-physical-examples-v3',list,get,load,get isBusy(){return loading;}});
+W.YGOScenarioExamples=Object.freeze({version:'self-contained-physical-examples-v4',list,get,load,get isBusy(){return loading;}});
 })();

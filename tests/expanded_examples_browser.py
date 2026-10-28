@@ -56,8 +56,11 @@ def execute_step(page, action_type, **criteria):
         assert ('zona de Monstruos Extra' if destination == 5 else f'zona principal {destination + 1}') in label
     if criteria.get('triggerKind') == 'SALAMANGREAT_ROAR_SET':
         assert 'colocar Roar desde el Cementerio' in label
-    if criteria.get('counterCount') == 1:
-        assert label.count('Salamangreat Roar') == 2
+    if 'counterCount' in criteria:
+        action = choice['action']
+        roar_count = int((action.get('response') or {}).get('type') == 'ROAR')
+        roar_count += sum(counter.get('type') == 'ROAR' for counter in action.get('counterResponses', []))
+        assert label.count('Salamangreat Roar') == roar_count
     before = report(page)
     count = len((before.get('scenario') or {}).get('actions', []))
     page.locator('#ygoDuelActions').select_option(value=str(choice['index']))
@@ -200,7 +203,7 @@ def run(url=None, source_inject=False):
         check('embedded_tutorials_boot_offline_with_expected_document_bytes', response is not None
               and hashlib.sha256(response.body()).hexdigest() == hashlib.sha256(html).hexdigest()
               and page.evaluate('()=>navigator.onLine===false'))
-        expected_ids = ['spark', 'spirit', 'invoked', 'swordsoul', 'branded', 'tenyi', 'salamangreat', 'roar', 'crow', 'droll']
+        expected_ids = ['spark', 'spirit', 'invoked', 'swordsoul', 'branded', 'tenyi', 'salamangreat', 'roar', 'crow', 'droll', 'field']
         definitions = page.evaluate('()=>YGOScenarioExamples.list()')
         menu_ids = page.locator('#ygoExampleSelect').evaluate('(el)=>[...el.options].map(option=>option.value)')
         check('dynamic_example_menu_preserves_originals_and_lists_every_registered_tutorial',

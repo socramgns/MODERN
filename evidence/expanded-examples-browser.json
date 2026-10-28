@@ -1,11 +1,11 @@
 {
   "schema": "ygo-expanded-examples-browser/v1",
   "pass": true,
-  "buildId": "d7c220eb32a7876a39fb6caaeee7bbde7ee96bde1fe5353672ed44e2369f9d6b",
-  "htmlSha256": "aa5e34480df69200c7355daf8fdbc589b584cd276d890ab22977867a9ea3aeca",
+  "buildId": "b2e655dc990e6951cf886945774c028ac97a3e55c4f84010a1edb9942f1b0ba7",
+  "htmlSha256": "0976989809a5c2c96404149679d4806a89d13a6e3efa61c500e94da3a9793a2b",
   "artifactMode": "DELIVERED_BYTES",
   "sourceInjection": false,
-  "servedBytesSha256": "aa5e34480df69200c7355daf8fdbc589b584cd276d890ab22977867a9ea3aeca",
+  "servedBytesSha256": "0976989809a5c2c96404149679d4806a89d13a6e3efa61c500e94da3a9793a2b",
   "browser": {
     "engine": "chromium",
     "version": "154.0.8037.57"
@@ -181,5 +181,5 @@
     "Declared starting fields do not certify the summons that preceded them.",
     "Exact bytes served while offline do not establish direct file navigation on every browser."
   ],
-  "elapsedSeconds": 60.97
+  "elapsedSeconds": 60.47
 }
