@@ -1,0 +1,235 @@
+{
+  "schema": "ygo-node-source-suite-evidence/v1",
+  "pass": true,
+  "buildId": "937c9e64aa9594ce8d60ad5fadf8fc66f8f220b7420461576f76f45ed700e247",
+  "htmlSha256": "73182845a1d7e2ede4496b50f04009f68dfeb9db7f1b1bc4c6fa9fdb68805007",
+  "artifactMode": "SOURCE_NODE_SUITE",
+  "testFile": "tests/normal_trap_activations.cjs",
+  "testFileSha256": "a845e4509c990793f0745b295e4a7526fa129fcb5a94b2aaf616f21a78ca50ba",
+  "meaning": "Source-level Node cases executed during validation of the bound artifact; compiled document tasks are reported separately in revision12-browser.json.",
+  "result": {
+    "schema": "ygo-normal-trap-activation-tests/v1",
+    "pass": true,
+    "total": 53,
+    "tests": [
+      {
+        "name": "The registry adds exactly the reviewed Speed 2 Normal Trap while retaining all prior packets",
+        "pass": true
+      },
+      {
+        "name": "Resolving hand Impermanence binds its source and target before cleanup, preserving every copy",
+        "pass": true
+      },
+      {
+        "name": "Resolving spelltrap Impermanence binds its source and target before cleanup, preserving every copy",
+        "pass": true
+      },
+      {
+        "name": "An empty controlled field offers all five hand activation columns without inventing a Set column effect",
+        "pass": true
+      },
+      {
+        "name": "Opponent manual activation uses its own physical copy and mirrors the column into player-zero coordinates",
+        "pass": true
+      },
+      {
+        "name": "A Set Trap still activates when all five ordinary Spell/Trap zones are full",
+        "pass": true
+      },
+      {
+        "name": "A Trap Set this turn is not an activation source",
+        "pass": true
+      },
+      {
+        "name": "A future declared Set turn is rejected before creating an initial state",
+        "pass": true
+      },
+      {
+        "name": "A Trap newly Set by an actual duel action cannot activate during the same turn",
+        "pass": true
+      },
+      {
+        "name": "A controlled monster prevents the hand exception",
+        "pass": true
+      },
+      {
+        "name": "A controlled Set Spell/Trap prevents the hand exception",
+        "pass": true
+      },
+      {
+        "name": "A controlled Field Spell prevents the hand exception",
+        "pass": true
+      },
+      {
+        "name": "A real Mo Ye and generated Token block hand activation; unresolved triggers are not skipped",
+        "pass": true
+      },
+      {
+        "name": "Unregistered/non-Effect targets are not inferred from card text: 89631139",
+        "pass": true
+      },
+      {
+        "name": "Unregistered/non-Effect targets are not inferred from card text: 38033121",
+        "pass": true
+      },
+      {
+        "name": "A face-down opposing monster is not a legal target",
+        "pass": true
+      },
+      {
+        "name": "Targeting protection and already-negated target gates are explicit read-only probes",
+        "pass": true
+      },
+      {
+        "name": "Normal Trap registry does not turn Roar or unknown Traps into standalone card activations",
+        "pass": true
+      },
+      {
+        "name": "Mechaba pays an actual 10045474 Trap and banishes the hand root, preserving target and cost destinations",
+        "pass": true
+      },
+      {
+        "name": "Mechaba pays an actual 51339637 Trap and banishes the hand root, preserving target and cost destinations",
+        "pass": true
+      },
+      {
+        "name": "Mechaba pays an actual 10045474 Trap and banishes the spelltrap root, preserving target and cost destinations",
+        "pass": true
+      },
+      {
+        "name": "Mechaba pays an actual 51339637 Trap and banishes the spelltrap root, preserving target and cost destinations",
+        "pass": true
+      },
+      {
+        "name": "Monster and Spell hand cards cannot substitute for a Mechaba Trap cost",
+        "pass": true
+      },
+      {
+        "name": "Mechaba can answer the other player’s Trap using player zero’s own physical hand cost",
+        "pass": true
+      },
+      {
+        "name": "Counter Trap Roar negates the card activation and sends the source to GY without a field-protection replacement",
+        "pass": true
+      },
+      {
+        "name": "Own Roar counters Mechaba after its Trap cost and allows a different Spirit target plus the Set column effect",
+        "pass": true
+      },
+      {
+        "name": "If the targeted Mechaba leaves through the Roar counter, THEN prevents both target negation and the column effect",
+        "pass": true
+      },
+      {
+        "name": "A real Spark shield keeps the targeted Mechaba present, so restored Impermanence can negate it and apply its column",
+        "pass": true
+      },
+      {
+        "name": "Roar counter-counter links resolve in LIFO order and cannot turn Mechaba into a Speed 3 responder",
+        "pass": true
+      },
+      {
+        "name": "A physical Roar can counter another Roar, restoring the Set Trap activation",
+        "pass": true
+      },
+      {
+        "name": "An actual previous Impermanence lock negates a later Set Trap effect in the mirrored column without forbidding its activation",
+        "pass": true
+      },
+      {
+        "name": "A Chixiao already negated by the root can still pay its real activation cost but cannot attract a second Impermanence response",
+        "pass": true
+      },
+      {
+        "name": "The existing Set Impermanence response respects the actual root column: mirrored same column",
+        "pass": true
+      },
+      {
+        "name": "The existing Set Impermanence response respects the actual root column: different column",
+        "pass": true
+      },
+      {
+        "name": "The existing hand Impermanence response chooses the first unlocked mirrored column after actual field departure",
+        "pass": true
+      },
+      {
+        "name": "QA-only all-five column locks consume the hand response without negating the actual search or adding another lock",
+        "pass": true
+      },
+      {
+        "name": "Two real hand copies can activate in the same turn without an invented Impermanence OPT",
+        "pass": true
+      },
+      {
+        "name": "Two real spelltrap copies can activate in the same turn without an invented Impermanence OPT",
+        "pass": true
+      },
+      {
+        "name": "Ending the registered turn expires both the target negation and the Set-column lock",
+        "pass": true
+      },
+      {
+        "name": "Draw-before-draw, unresolved chains and unmodeled Damage Step do not become open Trap windows",
+        "pass": true
+      },
+      {
+        "name": "Default policy permits own Trap on the rival turn without inventing voluntary rival actions",
+        "pass": true
+      },
+      {
+        "name": "Corrupted source departure metadata and source identity are excluded by the exact core eligibility gate",
+        "pass": true
+      },
+      {
+        "name": "Forged actor, source, target and column are rejected without modifying the physical state",
+        "pass": true
+      },
+      {
+        "name": "Forged matching cost type, cost UID and counter provider cannot enter a registered response packet",
+        "pass": true
+      },
+      {
+        "name": "Fresh replay rejects altered Trap origin, Set status, column, target and recorded cleanup evidence",
+        "pass": true
+      },
+      {
+        "name": "Restoring a recorded before-state restores the same physical Set source and target without retaining later locks",
+        "pass": true
+      },
+      {
+        "name": "Bounded search finds the actual registered Trap transition and every resulting line replays freshly",
+        "pass": true
+      },
+      {
+        "name": "A mirrored blocked first Roar response preserves activation use and obeys the real prior Impermanence lock",
+        "pass": true
+      },
+      {
+        "name": "A different-column first Roar response preserves activation use and obeys the real prior Impermanence lock",
+        "pass": true
+      },
+      {
+        "name": "A blocked Roar counter to Mechaba retains the real Monster cost and correct root resolution",
+        "pass": true
+      },
+      {
+        "name": "A unblocked Roar counter to Mechaba retains the real Monster cost and correct root resolution",
+        "pass": true
+      },
+      {
+        "name": "A higher unblocked Roar can negate the activation of a column-blocked Roar without refunding either shared use",
+        "pass": true
+      },
+      {
+        "name": "A higher column-blocked Roar fails to negate a lower unblocked Roar while both cards and uses are consumed",
+        "pass": true
+      }
+    ],
+    "limitations": [
+      "Only Infinite Impermanence has the registered Normal Trap root packet.",
+      "The catalogue and fixture fields are technical data, not full TCG ruling or prior-history certification.",
+      "Target-immunity, malformed-source, phase and pending-chain gate probes are explicitly un-replayed state probes. The all-five blocked-column case uses an explicitly marked QA-only aggregate lock fixture, not a physically certified five-copy route; other positive scenarios use actual physical cards and registered transitions.",
+      "General priority, arbitrary chains and Damage Step remain outside scope."
+    ]
+  }
+}

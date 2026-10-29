@@ -1,0 +1,149 @@
+{
+  "schema": "ygo-release12-browser/v1",
+  "pass": true,
+  "buildId": "937c9e64aa9594ce8d60ad5fadf8fc66f8f220b7420461576f76f45ed700e247",
+  "htmlSha256": "73182845a1d7e2ede4496b50f04009f68dfeb9db7f1b1bc4c6fa9fdb68805007",
+  "artifactMode": "DELIVERED_BYTES",
+  "sourceInjection": false,
+  "checks": [
+    {
+      "name": "release12_boots_offline_from_the_manifest_bound_document",
+      "pass": true
+    },
+    {
+      "name": "twelve_visible_examples_preserve_the_previous_eleven_identifiers",
+      "pass": true
+    },
+    {
+      "name": "normal_trap_registry_explicitly_limits_the_new_card_activation",
+      "pass": true
+    },
+    {
+      "name": "mechaba_models_a_physical_trap_cost_without_widening_monster_registry",
+      "pass": true
+    },
+    {
+      "name": "trap_guide_loads_previous_turn_set_copies_without_autoplay_or_initial_goal_success",
+      "pass": true
+    },
+    {
+      "name": "coverage_retains_imperm_response_and_adds_the_registered_card_activation",
+      "pass": true
+    },
+    {
+      "name": "the_normal_trap_packet_keeps_the_set_origin_physical_column_and_speed_two",
+      "pass": true
+    },
+    {
+      "name": "mechaba_pays_a_different_physical_trap_even_when_roar_negates_its_response",
+      "pass": true
+    },
+    {
+      "name": "the_registered_counter_chain_resolves_roar_before_mechaba_without_refunding_payments",
+      "pass": true
+    },
+    {
+      "name": "imperm_negates_the_surviving_spirit_instead_of_the_destroyed_mechaba",
+      "pass": true
+    },
+    {
+      "name": "set_imperm_applies_its_source_column_only_after_successfully_negating_the_target",
+      "pass": true
+    },
+    {
+      "name": "normal_trap_resolution_cleanup_is_not_an_activation_cost_and_keeps_fresh_replay",
+      "pass": true
+    },
+    {
+      "name": "the_three_visible_actions_finish_the_guide_with_an_actual_invocation_in_hand",
+      "pass": true
+    },
+    {
+      "name": "export_binds_the_trap_origin_and_paid_response_to_the_same_delivered_build",
+      "pass": true
+    },
+    {
+      "name": "undo_restores_the_same_set_trap_roar_mechaba_cost_and_unnegated_target",
+      "pass": true
+    },
+    {
+      "name": "declining_roar_banishes_the_activated_trap_without_a_target_or_column_effect",
+      "pass": true
+    },
+    {
+      "name": "forged_trap_packet_evidence_is_rejected_without_replacing_the_active_session",
+      "pass": true
+    },
+    {
+      "name": "saved_trap_route_reimports_its_proof_costs_and_recomputed_goal_progress",
+      "pass": true
+    },
+    {
+      "name": "a_trap_set_this_turn_does_not_gain_an_activation_option",
+      "pass": true
+    },
+    {
+      "name": "imperm_in_hand_requires_control_of_no_cards_including_the_existing_wolf_and_roar",
+      "pass": true
+    },
+    {
+      "name": "an_empty_own_field_offers_all_five_real_hand_activation_columns",
+      "pass": true
+    },
+    {
+      "name": "hand_activation_preserves_its_different_origin_and_never_creates_the_set_column_bonus",
+      "pass": true
+    },
+    {
+      "name": "release12_tasks_raise_no_javascript_page_errors",
+      "pass": true
+    },
+    {
+      "name": "compiled_document_is_unchanged_during_release12_tasks",
+      "pass": true
+    }
+  ],
+  "details": {
+    "the_normal_trap_packet_keeps_the_set_origin_physical_column_and_speed_two": {
+      "kind": "NORMAL_TRAP_CARD_ACTIVATION",
+      "sourceUid": "P0:main:10045474:1",
+      "cardId": 10045474,
+      "player": 0,
+      "originZone": "spelltrap",
+      "activationZone": "spelltrap",
+      "column": 2,
+      "fromSet": true,
+      "setTurn": 1,
+      "spellSpeed": 2,
+      "targetUid": "P1:extra:59822133:1",
+      "targetPlayer": 1
+    },
+    "set_imperm_applies_its_source_column_only_after_successfully_negating_the_target": [
+      {
+        "kind": "IMPERM_COLUMN_NEGATED",
+        "wholeTurn": true,
+        "untilTurn": 2,
+        "column": 2,
+        "sourceColumn": 2,
+        "appliesToPlayers": [
+          0,
+          1
+        ],
+        "sourceUid": "P0:main:10045474:1",
+        "description": "Se niegan otros efectos de Mágicas/Trampas en esta columna hasta el final del turno."
+      }
+    ],
+    "release12_tasks_raise_no_javascript_page_errors": []
+  },
+  "browser": {
+    "engine": "chromium",
+    "version": "154.0.8037.57"
+  },
+  "externalRequestsBlocked": 64,
+  "limitations": [
+    "The new Normal Trap card activation is limited to Infinite Impermanence.",
+    "The registered between-action windows do not certify arbitrary priority or Damage Step.",
+    "Starting fields remain declared assumptions and competitive scoring remains provisional."
+  ],
+  "elapsedSeconds": 22.69
+}

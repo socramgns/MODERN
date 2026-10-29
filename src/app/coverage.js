@@ -29,7 +29,7 @@ const definitions=[
  {id:40908371,actions:[effect('AZURE_EYES_PROTECTION','Protección registrada de Azure-Eyes'),effect('AZURE_EYES_STANDBY_REVIVE','Revivir un Normal en Standby')]},
  {id:83994433,actions:[effect('STARDUST_SPARK_PROTECTION','Protección de una destrucción de Spark')],notes:['No se acumulan protecciones Spark aún sin consumir ni se infiere la prioridad general del Damage Step.']},
  {id:97268402,actions:[response('VEILER','Respuesta física de Effect Veiler')]},
- {id:10045474,actions:[response('IMPERM','Respuesta física de Infinite Impermanence')]},
+ {id:10045474,actions:[effect('ACTIVATE_INFINITE_IMPERMANENCE','Activar Infinite Impermanence'),response('IMPERM','Respuesta física de Infinite Impermanence')]},
  {id:24508238,actions:[effect('DD_CROW_BANISH','Destierro registrado de D.D. Crow')]},
  {id:94145021,actions:[effect('DROLL_LOCK','Ventana y bloqueo registrados de Droll')]},
  {id:87052196,actions:[effect('TENYI_HAND_SPECIAL','Invocación desde mano de Ashuna'),effect('TENYI_ASHUNA_DECK','Invocación registrada desde Deck')]},

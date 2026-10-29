@@ -100,7 +100,21 @@ const field=base('field','Mágica de Campo: reemplazar, responder y reincarnar',
  'Resuelve el Wolf reincarnado para recuperar Roar del Cementerio a tu mano. El objetivo exige Wolf en el campo, Sanctuary boca arriba en la Zona del Campo y esa Roar física en la mano.',
  'Para comparar, deshaz los tres pasos y activa Sanctuary con Mechaba rival pero sin tu Roar. Sanctuary queda desterrado y Mausoleum permanece en el Cementerio: el campo anterior no regresa y no aparece esta reincarnación.'
  ],'RESPONSES_EXPLICIT',['MECHABA','ROAR'],'CHOICE_BRANCHES');
-const templates=new Map([spark,spirit,invoked,swordsoul,branded,tenyi,salamangreat,roar,crow,droll,field].map(value=>[value.id,value]));
+const trapOwnDeck=deck([[10045474,1],[51339637,1],[86120751,1],[74063034,1]],[[87871125,1]]),trapOwnOpening=[86120751,...NORMALS.slice(0,4)],trapRivalDeck=deck([[10045474,1]],[[75286621,1],[59822133,1]]),trapRivalOpening=[10045474,...NORMALS.slice(0,4)];
+const trap=base('trap','Infinite Impermanence: activar y responder a una Trampa','Activa Impermanence colocada, responde a Mechaba con Roar y conserva la negación del monstruo y la columna registradas.',physical(trapOwnDeck,trapOwnOpening),physical(trapRivalDeck,trapRivalOpening),{turn:2,activePlayer:0,phase:'MAIN 1',placements:[
+ {player:0,from:'deck',cardId:10045474,zone:'spelltrap',zoneIndex:2,faceUp:false,setTurn:1},
+ {player:0,from:'deck',cardId:51339637,zone:'spelltrap',zoneIndex:0,faceUp:false,setTurn:1},
+ {player:0,from:'extra',cardId:87871125,zone:'monster',zoneIndex:5,position:'ATTACK',faceUp:true,summonTurn:1},
+ {player:1,from:'extra',cardId:75286621,zone:'monster',zoneIndex:0,position:'ATTACK',faceUp:true,summonTurn:1},
+ {player:1,from:'extra',cardId:59822133,zone:'monster',zoneIndex:1,position:'DEFENSE',faceUp:true,summonTurn:1}
+ ]},{requiredHandIds:[74063034]},[
+ 'Activa tu Infinite Impermanence colocada en la columna 3, seleccionando Blue-Eyes Spirit Dragon rival. Elige la variante con Mechaba rival, su Infinite Impermanence de la mano como coste y una contrarrespuesta de tu Roar. El campo inicial y las colocaciones previas son supuestos declarados.',
+ 'Ejecuta el paso: Mechaba paga una Trampa física, pero Roar niega a Mechaba y lo destruye. Impermanence niega los efectos del Spirit Dragon que sigue en el campo y aplica su bloqueo de columna hasta el final del turno. Las dos Trampas propias terminan en el Cementerio; el coste rival permanece pagado.',
+ 'Invoca normalmente a Aleister desde tu mano.',
+ 'Resuelve Aleister para buscar Invocation. El objetivo exige esa carta en tu mano; comprueba los tres pasos, los costes y el replay. El objetivo no representa una probabilidad de ganar.',
+ 'Para comparar, deshaz los tres pasos y activa Impermanence con Mechaba rival pero sin tu Roar: tu Trampa queda desterrada, Spirit Dragon conserva sus efectos y no aparece un bloqueo nuevo de columna. Con Wolf en tu campo no puedes activar Impermanence desde la mano.'
+ ],'RESPONSES_EXPLICIT',['MECHABA','ROAR'],'CHOICE_BRANCHES');
+const templates=new Map([spark,spirit,invoked,swordsoul,branded,tenyi,salamangreat,roar,crow,droll,field,trap].map(value=>[value.id,value]));
 const describe=value=>({id:value.id,name:value.name,description:value.description,scope:value.scope,steps:clone(value.tutorial.steps),replacesDeck:true,initialHistoryCertified:false,competitiveRecommendation:false});
 function list(){return[...templates.values()].map(describe);}
 function get(id){if(typeof id!=='string'||!templates.has(id))throw Error('SCENARIO_EXAMPLE_UNKNOWN');return clone(templates.get(id));}
@@ -120,5 +134,5 @@ async function load(id){const spec=get(id);if(loading)throw Error('SCENARIO_EXAM
  await A.initialize({goal:spec.goal});
  return{pass:true,status:'SCENARIO_EXAMPLE_LOADED',id,name:spec.name,message:'Ejemplo cargado. El campo inicial es un supuesto declarado; selecciona y ejecuta cada acción en el laboratorio.',steps:clone(spec.tutorial.steps),report:clone(A.report())};
  }finally{loading=false;}}
-W.YGOScenarioExamples=Object.freeze({version:'self-contained-physical-examples-v4',list,get,load,get isBusy(){return loading;}});
+W.YGOScenarioExamples=Object.freeze({version:'self-contained-physical-examples-v5',list,get,load,get isBusy(){return loading;}});
 })();

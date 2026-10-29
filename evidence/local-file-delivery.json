@@ -1,8 +1,8 @@
 {
   "schema": "ygo-local-file-delivery/v1",
-  "buildId": "d51427f6537cba496a1e7998ab456cd913c118d733968542bc85922d41989d82",
-  "htmlSha256": "84dff70652ed8b7eceab7d6fdbbb4864396c745ecd5440beff482e96da7396ed",
-  "executedAt": "2026-10-28T17:49:39.301843+00:00",
+  "buildId": "937c9e64aa9594ce8d60ad5fadf8fc66f8f220b7420461576f76f45ed700e247",
+  "htmlSha256": "73182845a1d7e2ede4496b50f04009f68dfeb9db7f1b1bc4c6fa9fdb68805007",
+  "executedAt": "2026-10-29T05:06:28.579080+00:00",
   "pass": true,
   "complete": true,
   "artifactMode": "DIRECT_FILE_NAVIGATION",
@@ -57,7 +57,7 @@
       ],
       "details": {
         "offline_file_boot_bound_to_delivered_build": {
-          "buildId": "d51427f6537cba496a1e7998ab456cd913c118d733968542bc85922d41989d82",
+          "buildId": "937c9e64aa9594ce8d60ad5fadf8fc66f8f220b7420461576f76f45ed700e247",
           "ready": true,
           "protocol": "file:"
         },

@@ -35,6 +35,7 @@ def execute_step(page, action_type, **criteria):
           if(key==='targetCard'&&id(a.targetUid)!==value)return false;
           if(key==='materialCards'&&JSON.stringify(a.materialUids.map(id).sort((a,b)=>a-b))!==JSON.stringify([...value].sort((a,b)=>a-b)))return false;
           if(key==='destination'&&a.destination!==value)return false;
+          if(key==='column'&&a.column!==value)return false;
           if(key==='makeToken'&&a.makeToken!==value)return false;
           if(key==='triggerKind'&&a.triggerKind!==value)return false;
           if(key==='responseType'&&(a.response?.type??null)!==value)return false;
@@ -54,6 +55,8 @@ def execute_step(page, action_type, **criteria):
     if 'destination' in criteria:
         destination = criteria['destination']
         assert ('zona de Monstruos Extra' if destination == 5 else f'zona principal {destination + 1}') in label
+    if 'column' in criteria:
+        assert f'columna {criteria["column"] + 1}' in label
     if criteria.get('triggerKind') == 'SALAMANGREAT_ROAR_SET':
         assert 'colocar Roar desde el Cementerio' in label
     if 'counterCount' in criteria:
@@ -203,7 +206,7 @@ def run(url=None, source_inject=False):
         check('embedded_tutorials_boot_offline_with_expected_document_bytes', response is not None
               and hashlib.sha256(response.body()).hexdigest() == hashlib.sha256(html).hexdigest()
               and page.evaluate('()=>navigator.onLine===false'))
-        expected_ids = ['spark', 'spirit', 'invoked', 'swordsoul', 'branded', 'tenyi', 'salamangreat', 'roar', 'crow', 'droll', 'field']
+        expected_ids = ['spark', 'spirit', 'invoked', 'swordsoul', 'branded', 'tenyi', 'salamangreat', 'roar', 'crow', 'droll', 'field', 'trap']
         definitions = page.evaluate('()=>YGOScenarioExamples.list()')
         menu_ids = page.locator('#ygoExampleSelect').evaluate('(el)=>[...el.options].map(option=>option.value)')
         check('dynamic_example_menu_preserves_originals_and_lists_every_registered_tutorial',
