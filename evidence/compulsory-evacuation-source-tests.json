@@ -1,0 +1,250 @@
+{
+  "schema": "ygo-node-source-suite-evidence/v1",
+  "pass": true,
+  "buildId": "62d595ef64824400782f54808fd32e70a9b2fcb21ef98ba2aeaec753c41ec79a",
+  "htmlSha256": "5f05c079f9a512c04e3d7978864461746e4bcb8d9cf0589440579663e6dceecb",
+  "artifactMode": "SOURCE_NODE_SUITE",
+  "testFile": "tests/compulsory_evacuation.cjs",
+  "testFileSha256": "9bd89d5aeb3aca2e2bf0cc17d78b786286d021c686e4d793ff90aee798068364",
+  "meaning": "Source-level Node cases executed during validation of the bound artifact; compiled document tasks are reported separately in revision13-browser.json.",
+  "result": {
+    "schema": "ygo-compulsory-evacuation-regression/v1",
+    "pass": true,
+    "total": 57,
+    "tests": [
+      {
+        "name": "CED is an exact second registered Speed 2 Normal Trap with only a Set origin",
+        "pass": true
+      },
+      {
+        "name": "A Main monster returns to its physical owner hand: actor 0, target 0",
+        "pass": true
+      },
+      {
+        "name": "A Main monster returns to its physical owner hand: actor 0, target 1",
+        "pass": true
+      },
+      {
+        "name": "A Main monster returns to its physical owner hand: actor 1, target 0",
+        "pass": true
+      },
+      {
+        "name": "A Main monster returns to its physical owner hand: actor 1, target 1",
+        "pass": true
+      },
+      {
+        "name": "Extra monster 75286621 returns hidden to player 0 Extra instead of a hand",
+        "pass": true
+      },
+      {
+        "name": "Extra monster 75286621 returns hidden to player 1 Extra instead of a hand",
+        "pass": true
+      },
+      {
+        "name": "Extra monster 59822133 returns hidden to player 0 Extra instead of a hand",
+        "pass": true
+      },
+      {
+        "name": "Extra monster 59822133 returns hidden to player 1 Extra instead of a hand",
+        "pass": true
+      },
+      {
+        "name": "Extra monster 87871125 returns hidden to player 0 Extra instead of a hand",
+        "pass": true
+      },
+      {
+        "name": "Extra monster 87871125 returns hidden to player 1 Extra instead of a hand",
+        "pass": true
+      },
+      {
+        "name": "A declared Set Main monster is a valid target and returns the same UID to its owner hand",
+        "pass": true
+      },
+      {
+        "name": "A Set Fusion also returns to the Extra without claiming a proper prior summon",
+        "pass": true
+      },
+      {
+        "name": "There is no CED hand exception even with no controlled cards",
+        "pass": true
+      },
+      {
+        "name": "A Trap Set this turn cannot activate and a future Set declaration is rejected",
+        "pass": true
+      },
+      {
+        "name": "Actual setting consumes no Trap activation and permits activation only after the next turn starts",
+        "pass": true
+      },
+      {
+        "name": "Two physical CED copies may resolve in one turn without an invented once-per-turn limit",
+        "pass": true
+      },
+      {
+        "name": "Returning an already-negated monster remains legal and clears its field negation",
+        "pass": true
+      },
+      {
+        "name": "Real Spark protection does not prevent return or spend a destruction-prevention charge",
+        "pass": true
+      },
+      {
+        "name": "Balelynx in the GY cannot pay a destruction replacement for an ordinary return",
+        "pass": true
+      },
+      {
+        "name": "A real Mo Ye Token ceases, releases its live lock and creates no destruction trigger",
+        "pass": true
+      },
+      {
+        "name": "A real revived Spinny honours its known banish redirect instead of fabricating a hand return",
+        "pass": true
+      },
+      {
+        "name": "Returning Mirrorjade to hidden Extra creates no End Phase activation or optional-decline event",
+        "pass": true
+      },
+      {
+        "name": "Returning an actually Fusion Summoned Mirrorjade clears local history without refunding global Branded budgets, locks or Extra history",
+        "pass": true
+      },
+      {
+        "name": "Returning another Mirrorjade preserves an already scheduled real departure effect without scheduling a new hidden-return effect",
+        "pass": true
+      },
+      {
+        "name": "Returning real Mo Ye keeps its spent name budget, Normal Summon and the surviving Token lock",
+        "pass": true
+      },
+      {
+        "name": "A used Mechaba returned to hidden Extra loses only its field-instance use metadata",
+        "pass": true
+      },
+      {
+        "name": "QA-only physical control-transfer state returns 89631139 to its owner, with no claim of a registered control-change history",
+        "pass": true
+      },
+      {
+        "name": "QA-only physical control-transfer state returns 75286621 to its owner, with no claim of a registered control-change history",
+        "pass": true
+      },
+      {
+        "name": "A Main-to-hand return does not create a Deck search, shuffle, Ash or Droll window",
+        "pass": true
+      },
+      {
+        "name": "Mechaba pays real Trap 94192409 and banishes CED without returning the selected monster",
+        "pass": true
+      },
+      {
+        "name": "Mechaba pays real Trap 10045474 and banishes CED without returning the selected monster",
+        "pass": true
+      },
+      {
+        "name": "Mechaba pays real Trap 51339637 and banishes CED without returning the selected monster",
+        "pass": true
+      },
+      {
+        "name": "Mechaba can negate CED aimed at its actor own monster and uses the other player cost",
+        "pass": true
+      },
+      {
+        "name": "Monster or Spell hand cards cannot pay the Trap matching cost",
+        "pass": true
+      },
+      {
+        "name": "Roar negates CED card activation, destroys the source and leaves the target in place",
+        "pass": true
+      },
+      {
+        "name": "Own Roar counters Mechaba, keeps its Trap cost paid and restores a return to the actor hand",
+        "pass": true
+      },
+      {
+        "name": "If the selected Mechaba is destroyed by the counter, the Trap resolves without returning a different copy",
+        "pass": true
+      },
+      {
+        "name": "A Spark-protected Mechaba survives the counter destruction and is then returned to its Extra",
+        "pass": true
+      },
+      {
+        "name": "Two Roar counter links resolve LIFO and restore the Mechaba negation without refunding costs",
+        "pass": true
+      },
+      {
+        "name": "A physical own Roar can counter a rival Roar to restore the return",
+        "pass": true
+      },
+      {
+        "name": "A real prior mirrored Impermanence column negates the CED effect while allowing its activation and cleanup",
+        "pass": true
+      },
+      {
+        "name": "A blocked first Roar still uses its real Set source but cannot negate an unblocked CED return",
+        "pass": true
+      },
+      {
+        "name": "A blocked own Roar counter leaves Mechaba effective and preserves the paid Trap cost",
+        "pass": true
+      },
+      {
+        "name": "Unreviewed target profile is excluded: unknown Effect monster",
+        "pass": true
+      },
+      {
+        "name": "Unreviewed target profile is excluded: Xyz monster",
+        "pass": true
+      },
+      {
+        "name": "Unreviewed target profile is excluded: Pendulum monster",
+        "pass": true
+      },
+      {
+        "name": "Unreviewed target profile is excluded: impossible Set Link",
+        "pass": true
+      },
+      {
+        "name": "Read-only target gate probes exclude active target immunity, attachments and unknown redirects",
+        "pass": true
+      },
+      {
+        "name": "Source eligibility rejects wrong Trap identity, corrupt redirect and invalid or different columns",
+        "pass": true
+      },
+      {
+        "name": "Default policy offers player-zero CED during rival turn and manual mode alone exposes rival voluntary actions",
+        "pass": true
+      },
+      {
+        "name": "Unfinished Draw, a pending trigger or an unmodeled phase does not create a Trap window",
+        "pass": true
+      },
+      {
+        "name": "Forged actor, source, unavailable target, column and hand-origin data are rejected transactionally",
+        "pass": true
+      },
+      {
+        "name": "Forged matching cost, responder packet and illegal Speed 2 counter cannot replace a real Trap payment",
+        "pass": true
+      },
+      {
+        "name": "Fresh replay rejects altered target owner, origin, Set status, card identity, cleanup and return destination",
+        "pass": true
+      },
+      {
+        "name": "Undo through the recorded before-state restores the same Set source and target, then re-executes identically",
+        "pass": true
+      },
+      {
+        "name": "Bounded search discovers the actual return and every accepted line replays without claiming a win rate",
+        "pass": true
+      }
+    ],
+    "limitations": [
+      "Pinned technical catalogue and application TCG snapshot are not independent official ruling authentication.",
+      "Registered Set Compulsory and reviewed departure profiles only; Xyz, Pendulum, attachments, general priority, SEGOC and Damage Step remain outside scope.",
+      "Declared fields and metadata gate probes do not certify prior history. The two direct helper control-transfer diagnostics do not certify an unregistered control-changing effect or a replay origin; competitive scoring remains provisional."
+    ]
+  }
+}

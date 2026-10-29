@@ -1,19 +1,19 @@
 {
   "schema": "ygo-node-source-suite-evidence/v1",
   "pass": true,
-  "buildId": "937c9e64aa9594ce8d60ad5fadf8fc66f8f220b7420461576f76f45ed700e247",
-  "htmlSha256": "73182845a1d7e2ede4496b50f04009f68dfeb9db7f1b1bc4c6fa9fdb68805007",
+  "buildId": "62d595ef64824400782f54808fd32e70a9b2fcb21ef98ba2aeaec753c41ec79a",
+  "htmlSha256": "5f05c079f9a512c04e3d7978864461746e4bcb8d9cf0589440579663e6dceecb",
   "artifactMode": "SOURCE_NODE_SUITE",
   "testFile": "tests/normal_trap_activations.cjs",
-  "testFileSha256": "a845e4509c990793f0745b295e4a7526fa129fcb5a94b2aaf616f21a78ca50ba",
-  "meaning": "Source-level Node cases executed during validation of the bound artifact; compiled document tasks are reported separately in revision12-browser.json.",
+  "testFileSha256": "a7cfd05d22edf85831b90f80300a51506894174f4f52ea543beb7e5fd57d166a",
+  "meaning": "Source-level Node cases executed during validation of the bound artifact; compiled document tasks are reported separately in revision13-browser.json.",
   "result": {
     "schema": "ygo-normal-trap-activation-tests/v1",
     "pass": true,
     "total": 53,
     "tests": [
       {
-        "name": "The registry adds exactly the reviewed Speed 2 Normal Trap while retaining all prior packets",
+        "name": "The registry preserves Impermanence and adds exactly the second reviewed Speed 2 Normal Trap",
         "pass": true
       },
       {
@@ -226,7 +226,7 @@
       }
     ],
     "limitations": [
-      "Only Infinite Impermanence has the registered Normal Trap root packet.",
+      "The registered Normal Trap roots are Impermanence and Compulsory Evacuation Device; this suite preserves Impermanence and the separate CED suite checks its return rules.",
       "The catalogue and fixture fields are technical data, not full TCG ruling or prior-history certification.",
       "Target-immunity, malformed-source, phase and pending-chain gate probes are explicitly un-replayed state probes. The all-five blocked-column case uses an explicitly marked QA-only aggregate lock fixture, not a physically certified five-copy route; other positive scenarios use actual physical cards and registered transitions.",
       "General priority, arbitrary chains and Damage Step remain outside scope."

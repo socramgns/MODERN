@@ -21,12 +21,14 @@ def run(url,output):
   record('catalogue_metadata_enrichment',initial['catalog']['sourceMatched']>=19555 and initial['catalog']['knownMonsterStats']>11000 and initial['catalog']['unknownMonsterStats']<=51,{'known':initial['catalog']['knownMonsterStats'],'unknown':initial['catalog']['unknownMonsterStats']})
   runtime=page.evaluate('async()=>await YGOStableRelease.runChecks()')
   record('included_rule_suites',runtime['pass'],{'count':len(runtime['tests']),'failed':[x['name'] for x in runtime['tests'] if not x['pass']]})
-  fixtures=page.evaluate("""()=>Object.entries(YGOAlpha357.fixtureCatalog(true).entries).filter(([id,e])=>e?.fixture&&!e.aliasOf&&e.ok!==false).slice(0,10).map(([id,e])=>{const ids=z=>(e.fixture[z]||[]).flatMap(c=>Array(c.qty??1).fill(c.id));return{id,label:e.label,expected:ids('main').length,text:'#main\\n'+ids('main').join('\\n')+'\\n#extra\\n'+ids('extra').join('\\n')+'\\n!side\\n'+ids('side').join('\\n')+'\\n'}})""")
+  fixtures=page.evaluate("""()=>Object.entries(YGOAlpha357.fixtureCatalog(true).entries).filter(([id,e])=>e?.fixture&&!e.aliasOf&&e.ok!==false).slice(0,10).map(([id,e])=>{const ids=z=>(e.fixture[z]||[]).flatMap(c=>Array(c.qty??1).fill(c.id));const identity=z=>{const counts=new Map();for(const id of ids(z))counts.set(Number(id),(counts.get(Number(id))||0)+1);return [...counts].sort((a,b)=>a[0]-b[0])};return{id,label:e.label,expected:ids('main').length,expectedDeck:Object.fromEntries(['main','extra','side'].map(z=>[z,identity(z)])),text:'#main\\n'+ids('main').join('\\n')+'\\n#extra\\n'+ids('extra').join('\\n')+'\\n!side\\n'+ids('side').join('\\n')+'\\n'}})""")
   rows=[]
   for fixture in fixtures:
    page.locator('#ydkMainFile').set_input_files({'name':fixture['id'].replace(':','-')+'.ydk','mimeType':'text/plain','buffer':fixture['text'].encode()})
-   page.wait_for_function('expected=>YGOUIState.last?.counts.main===expected && !!YGOUIState.last?.evaluation',arg=fixture['expected'],timeout=30000)
-   snapshot=page.evaluate("""()=>({counts:YGOUIState.last.counts,composition:[...document.querySelectorAll('#composition .metric b')].map(x=>Number(x.textContent)),evaluation:YGOUIState.last.evaluation,probabilityCopies:YGOUIState.last.probabilities?.meta?.deckCopies})""")
+   # Imports are asynchronous. Equal Main sizes do not identify the new deck;
+   # wait for every zone's exact copies and an evaluation of the current state.
+   page.wait_for_function("""expected=>{const identity=z=>{const counts=new Map();for(const c of deckState[z]||[]){const id=Number(c.id);counts.set(id,(counts.get(id)||0)+Number(c.qty??1))}return [...counts].sort((a,b)=>a[0]-b[0])};return ['main','extra','side'].every(z=>JSON.stringify(identity(z))===JSON.stringify(expected[z]))&&YGOUIState.getEvaluation()!==null}""",arg=fixture['expectedDeck'],timeout=30000)
+   snapshot=page.evaluate("""()=>({counts:YGOUIState.last.counts,composition:[...document.querySelectorAll('#composition .metric b')].map(x=>Number(x.textContent)),evaluation:YGOUIState.getEvaluation(),probabilityCopies:YGOUIState.last.probabilities?.meta?.deckCopies})""")
    passed=snapshot['counts']['main']==fixture['expected'] and snapshot['composition'][0]==sum(snapshot['composition'][1:]) and snapshot['probabilityCopies']==fixture['expected'] and sum(snapshot['evaluation']['stats'])==snapshot['evaluation']['total']
    rows.append({'id':fixture['id'],'pass':passed,**snapshot})
   record('ten_distinct_deck_imports',len(rows)==10 and all(r['pass'] for r in rows),rows)
@@ -39,7 +41,7 @@ def run(url,output):
   export_text=(ROOT/'tests/export-roundtrip.ydk').read_text()
   expected_lines=[x.strip() for x in serialized['text'].splitlines() if x.strip() and not x.startswith('#created')]
   actual_lines=[x.strip() for x in export_text.splitlines() if x.strip() and not x.startswith('#created')]
-  record('ydk_download_preserves_cards',expected_lines==actual_lines,{'bytes':len(export_text),'name':downloaded.suggested_filename})
+  record('ydk_download_preserves_cards',expected_lines==actual_lines,{'bytes':len(export_text),'name':downloaded.suggested_filename,'expectedLines':expected_lines,'actualLines':actual_lines})
   with page.expect_download() as pending:page.locator('[data-action=analysis]').click()
   pending.value.save_as(str(ROOT/'tests/export-analysis.json'));analysis=json.loads((ROOT/'tests/export-analysis.json').read_text())
   record('json_export_records_scope',analysis['schema']=='ygo-analysis/v1' and analysis['status']['build']['buildId']==build['buildId'] and analysis['status']['score']['competitiveCertified'] is False)

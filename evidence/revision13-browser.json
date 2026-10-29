@@ -1,0 +1,131 @@
+{
+  "schema": "ygo-release13-browser/v1",
+  "pass": true,
+  "buildId": "62d595ef64824400782f54808fd32e70a9b2fcb21ef98ba2aeaec753c41ec79a",
+  "htmlSha256": "5f05c079f9a512c04e3d7978864461746e4bcb8d9cf0589440579663e6dceecb",
+  "artifactMode": "DELIVERED_BYTES",
+  "sourceInjection": false,
+  "checks": [
+    {
+      "name": "release13_boots_offline_from_the_same_manifest_bound_html",
+      "pass": true
+    },
+    {
+      "name": "the_evacuation_guide_preserves_all_twelve_previous_example_identifiers",
+      "pass": true
+    },
+    {
+      "name": "only_impermanence_keeps_a_registered_hand_activation_exception",
+      "pass": true
+    },
+    {
+      "name": "evacuation_loads_a_declared_physical_field_without_autoplay_or_goal_success",
+      "pass": true
+    },
+    {
+      "name": "the_card_coverage_panel_advertises_only_the_registered_compulsory_action",
+      "pass": true
+    },
+    {
+      "name": "the_first_manual_step_protects_the_same_blue_eyes_without_finishing_the_goal",
+      "pass": true
+    },
+    {
+      "name": "the_return_packet_preserves_the_own_target_set_turn_column_and_speed",
+      "pass": true
+    },
+    {
+      "name": "mechaba_pays_the_rival_compulsory_as_a_distinct_physical_trap_cost",
+      "pass": true
+    },
+    {
+      "name": "roar_negates_mechaba_first_and_preserves_all_paid_response_costs",
+      "pass": true
+    },
+    {
+      "name": "returning_the_protected_blue_eyes_is_not_prevented_or_reported_as_destruction",
+      "pass": true
+    },
+    {
+      "name": "both_actual_actions_finish_the_hand_goal_and_keep_a_fresh_replay",
+      "pass": true
+    },
+    {
+      "name": "the_export_binds_the_own_target_and_paid_response_to_the_delivered_build",
+      "pass": true
+    },
+    {
+      "name": "undoing_only_compulsory_restores_the_same_shield_target_traps_and_unpaid_cost",
+      "pass": true
+    },
+    {
+      "name": "declining_roar_banishes_compulsory_without_returning_or_consuming_the_target_shield",
+      "pass": true
+    },
+    {
+      "name": "the_opposing_fusion_returns_to_its_owners_hidden_extra_instead_of_either_hand",
+      "pass": true
+    },
+    {
+      "name": "passing_the_response_leaves_roar_and_the_opponents_cost_available",
+      "pass": true
+    },
+    {
+      "name": "reimport_replays_the_original_own_target_route_and_recomputes_goal_success",
+      "pass": true
+    },
+    {
+      "name": "an_altered_target_player_is_rejected_without_replacing_the_active_session",
+      "pass": true
+    },
+    {
+      "name": "the_alternate_extra_destination_also_reimports_with_the_same_uid_and_replay",
+      "pass": true
+    },
+    {
+      "name": "a_forged_hand_destination_for_the_fusion_is_transactionally_rejected",
+      "pass": true
+    },
+    {
+      "name": "undoing_both_steps_restores_the_initial_unprotected_field_and_pending_goal",
+      "pass": true
+    },
+    {
+      "name": "release13_tasks_raise_no_javascript_page_errors",
+      "pass": true
+    },
+    {
+      "name": "compiled_document_is_unchanged_during_release13_tasks",
+      "pass": true
+    }
+  ],
+  "details": {
+    "the_return_packet_preserves_the_own_target_set_turn_column_and_speed": {
+      "kind": "NORMAL_TRAP_CARD_ACTIVATION",
+      "sourceUid": "P0:main:94192409:1",
+      "cardId": 94192409,
+      "player": 0,
+      "originZone": "spelltrap",
+      "activationZone": "spelltrap",
+      "column": 1,
+      "fromSet": true,
+      "setTurn": 1,
+      "spellSpeed": 2,
+      "targetUid": "P0:main:89631139:1",
+      "targetPlayer": 0
+    },
+    "release13_tasks_raise_no_javascript_page_errors": []
+  },
+  "browser": {
+    "engine": "chromium",
+    "version": "154.0.8037.57"
+  },
+  "externalRequestsBlocked": 16,
+  "limitations": [
+    "Compulsory targets and zone departures are limited to the registered reviewed profiles.",
+    "The visible guide checks own Main and opposing Fusion returns; the source suite covers other admitted profiles and Tokens.",
+    "The initial field remains declared and these registered windows do not certify general priority, SEGOC or Damage Step.",
+    "Competitive scoring remains provisional."
+  ],
+  "elapsedSeconds": 21.19
+}

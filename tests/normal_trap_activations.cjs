@@ -93,12 +93,15 @@ const I={IMPERM:10045474,MECHABA:75286621,SPIRIT:59822133,ROAR:51339637,
  const targetNegated=(t,u)=>locate(t,u)?.item.effectsNegated===true;
  async function test(name,fn){try{await fn();tests.push({name,pass:true});}catch(error){tests.push({name,pass:false,error:error.stack});}}
 
- await test('The registry adds exactly the reviewed Speed 2 Normal Trap while retaining all prior packets',()=>{
+ await test('The registry preserves Impermanence and adds exactly the second reviewed Speed 2 Normal Trap',()=>{
   const caps=E.capabilities(),normal=caps.normalTrapActivations;
-  assert.equal(normal.length,1);assert.equal(normal[0].type,TYPE);assert.equal(normal[0].cardId,I.IMPERM);
+  assert.equal(normal.length,2);assert.equal(normal[0].type,TYPE);assert.equal(normal[0].cardId,I.IMPERM);
+  const ced=normal.find(row=>row.cardId===94192409);assert(ced);assert.equal(ced.type,'ACTIVATE_COMPULSORY_EVACUATION_DEVICE');
+  assert.deepEqual(Array.from(ced.activationZones),['spelltrap']);assert.deepEqual(Array.from(normal[0].activationZones),['hand','spelltrap']);
   assert.equal(normal[0].spellSpeed,2);assert.equal(normal[0].restriction,'NONE');
   assert.equal(caps.normalSpellActivations.length,3);assert.equal(caps.fieldSpellActivations.length,2);
   const response=W.YGOResponses.capabilities();assert(Array.from(response.mechabaModeledCardTypes).includes('TRAP'));
+  assert.deepEqual(Array.from(response.mechabaNormalTrapActivations),[TYPE,'ACTIVATE_COMPULSORY_EVACUATION_DEVICE']);
   assert.equal(response.mechabaNonFieldMonsterActivations.length,15);
  });
  for(const from of ['hand','spelltrap'])await test('Resolving '+from+' Impermanence binds its source and target before cleanup, preserving every copy',()=>{
@@ -424,7 +427,7 @@ const I={IMPERM:10045474,MECHABA:75286621,SPIRIT:59822133,ROAR:51339637,
   assert(r.action.events.some(e=>e.type==='ROAR_EFFECT_NEGATED_BY_COLUMN'&&e.uid===rivalRoar&&e.column===3&&e.canonicalColumn===1));replay(t);
  });
  const report={schema:'ygo-normal-trap-activation-tests/v1',pass:tests.every(x=>x.pass),total:tests.length,tests,
-  limitations:['Only Infinite Impermanence has the registered Normal Trap root packet.','The catalogue and fixture fields are technical data, not full TCG ruling or prior-history certification.','Target-immunity, malformed-source, phase and pending-chain gate probes are explicitly un-replayed state probes. The all-five blocked-column case uses an explicitly marked QA-only aggregate lock fixture, not a physically certified five-copy route; other positive scenarios use actual physical cards and registered transitions.','General priority, arbitrary chains and Damage Step remain outside scope.']};
+  limitations:['The registered Normal Trap roots are Impermanence and Compulsory Evacuation Device; this suite preserves Impermanence and the separate CED suite checks its return rules.','The catalogue and fixture fields are technical data, not full TCG ruling or prior-history certification.','Target-immunity, malformed-source, phase and pending-chain gate probes are explicitly un-replayed state probes. The all-five blocked-column case uses an explicitly marked QA-only aggregate lock fixture, not a physically certified five-copy route; other positive scenarios use actual physical cards and registered transitions.','General priority, arbitrary chains and Damage Step remain outside scope.']};
  fs.writeFileSync(path.join(ROOT,'tests/normal-trap-activations-results.json'),JSON.stringify(report,null,2)+'\n');
  console.log(JSON.stringify(report,null,2));if(!report.pass)process.exitCode=1;
 })().catch(error=>{console.error(error);process.exitCode=1;});

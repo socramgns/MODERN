@@ -1,10 +1,10 @@
 {
   "version": "Alpha 1263",
-  "revision": "2026.10-stable.12",
+  "revision": "2026.10-stable.13",
   "canonicalId": "ygo-alpha-1263-canonical-release",
   "moduleCount": 88,
   "catalogCardCount": 21986,
-  "buildId": "937c9e64aa9594ce8d60ad5fadf8fc66f8f220b7420461576f76f45ed700e247",
+  "buildId": "62d595ef64824400782f54808fd32e70a9b2fcb21ef98ba2aeaec753c41ec79a",
   "catalogueSizePinsCompiled": 164,
   "dataHashes": {
     "cards": "cc265022039bba09fc31e8e3a48afb0030e5a81cab0c30c386843fcd75e1cba6"
@@ -167,7 +167,7 @@
     "storedBytesRecheckedAtBuild": true,
     "retrievalAuthenticatedInThisBuild": false
   },
-  "htmlSha256": "73182845a1d7e2ede4496b50f04009f68dfeb9db7f1b1bc4c6fa9fdb68805007",
-  "bytes": 6981312,
+  "htmlSha256": "5f05c079f9a512c04e3d7978864461746e4bcb8d9cf0589440579663e6dceecb",
+  "bytes": 6989766,
   "output": "dist/Calculadora_de_Barajas_YuGiOh_Alpha_1263_Corregida.html"
 }

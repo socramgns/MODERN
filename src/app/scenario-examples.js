@@ -114,7 +114,22 @@ const trap=base('trap','Infinite Impermanence: activar y responder a una Trampa'
  'Resuelve Aleister para buscar Invocation. El objetivo exige esa carta en tu mano; comprueba los tres pasos, los costes y el replay. El objetivo no representa una probabilidad de ganar.',
  'Para comparar, deshaz los tres pasos y activa Impermanence con Mechaba rival pero sin tu Roar: tu Trampa queda desterrada, Spirit Dragon conserva sus efectos y no aparece un bloqueo nuevo de columna. Con Wolf en tu campo no puedes activar Impermanence desde la mano.'
  ],'RESPONSES_EXPLICIT',['MECHABA','ROAR'],'CHOICE_BRANCHES');
-const templates=new Map([spark,spirit,invoked,swordsoul,branded,tenyi,salamangreat,roar,crow,droll,field,trap].map(value=>[value.id,value]));
+const evacuationOwnDeck=deck([[94192409,1],[51339637,1],[89631139,1]],[[87871125,1],[83994433,1]]),evacuationOwnOpening=NORMALS.slice(0,5),evacuationRivalDeck=deck([[94192409,1]],[[75286621,1]]),evacuationRivalOpening=[94192409,...NORMALS.slice(0,4)];
+const evacuation=base('evacuation','Compulsory Evacuation Device: devolver sin destruir','Devuelve tu Blue-Eyes protegido a la mano y compara la negación de Mechaba o el regreso de un monstruo al Extra.',physical(evacuationOwnDeck,evacuationOwnOpening),physical(evacuationRivalDeck,evacuationRivalOpening),{turn:2,activePlayer:0,phase:'MAIN 1',placements:[
+ {player:0,from:'deck',cardId:94192409,zone:'spelltrap',zoneIndex:1,faceUp:false,setTurn:1},
+ {player:0,from:'deck',cardId:51339637,zone:'spelltrap',zoneIndex:0,faceUp:false,setTurn:1},
+ {player:0,from:'extra',cardId:87871125,zone:'monster',zoneIndex:5,position:'ATTACK',faceUp:true,summonTurn:1},
+ {player:0,from:'extra',cardId:83994433,zone:'monster',zoneIndex:0,position:'ATTACK',faceUp:true,summonTurn:1},
+ {player:0,from:'deck',cardId:89631139,zone:'monster',zoneIndex:1,position:'ATTACK',faceUp:true,summonTurn:1},
+ {player:1,from:'extra',cardId:75286621,zone:'monster',zoneIndex:0,position:'ATTACK',faceUp:true,summonTurn:1}
+ ]},{requiredHandIds:[89631139]},[
+ 'Activa la protección de tu Stardust Spark Dragon sobre tu Blue-Eyes White Dragon y elige la variante sin respuesta. El campo y las colocaciones anteriores son supuestos declarados.',
+ 'Activa tu Compulsory Evacuation Device colocada en la columna 2 sobre tu propio Blue-Eyes. Elige Mechaba rival pagando su Compulsory de la mano como coste de Trampa y una contrarrespuesta de tu Roar. Roar niega y destruye Mechaba; Blue-Eyes vuelve a tu mano pese a la protección de Spark, porque devolver no es destruir.',
+ 'Comprueba el mismo Blue-Eyes en tu mano, ambas Trampas propias y el coste rival en sus Cementerios, el objetivo cumplido y el replay de los dos pasos.',
+ 'Deshaz solo la devolución y conserva la protección de Spark. Activa Compulsory sobre Blue-Eyes con Mechaba rival pero sin Roar: la Trampa propia queda desterrada, el coste rival permanece pagado y Blue-Eyes sigue en el campo con su protección disponible.',
+ 'Deshaz esa última activación y elige Compulsory sobre Mechaba rival sin respuesta. El mismo Mechaba vuelve al Extra de su dueño, no a la mano; tu Roar y la Trampa rival de la mano no se consumen. El objetivo de Blue-Eyes en mano es independiente de esta comparación.'
+ ],'RESPONSES_EXPLICIT',['MECHABA','ROAR'],'CHOICE_BRANCHES');
+const templates=new Map([spark,spirit,invoked,swordsoul,branded,tenyi,salamangreat,roar,crow,droll,field,trap,evacuation].map(value=>[value.id,value]));
 const describe=value=>({id:value.id,name:value.name,description:value.description,scope:value.scope,steps:clone(value.tutorial.steps),replacesDeck:true,initialHistoryCertified:false,competitiveRecommendation:false});
 function list(){return[...templates.values()].map(describe);}
 function get(id){if(typeof id!=='string'||!templates.has(id))throw Error('SCENARIO_EXAMPLE_UNKNOWN');return clone(templates.get(id));}

@@ -1,0 +1,21 @@
+{
+  "schema": "ygo-validation-reconciliation/v1",
+  "pass": true,
+  "buildId": "62d595ef64824400782f54808fd32e70a9b2fcb21ef98ba2aeaec753c41ec79a",
+  "htmlSha256": "5f05c079f9a512c04e3d7978864461746e4bcb8d9cf0589440579663e6dceecb",
+  "observedAt": "2026-10-29T19:05:14.876328+00:00",
+  "acceptanceMode": "FULL_MATRIX_WITH_TARGETED_RETEST",
+  "initialPassedGroups": 55,
+  "totalGroups": 56,
+  "onlyInitialFailedGroup": "delivered_bytes_e2e",
+  "initialFailedTask": "ydk_download_preserves_cards",
+  "retestTasks": 14,
+  "retestAllPassed": true,
+  "applicationSourceUnchanged": true,
+  "sourceFingerprintRechecked": true,
+  "artifactBytesUnchanged": true,
+  "testFile": "tests/end_to_end.py",
+  "testFileSha256": "31caeb711406f0a9f871667a6f780e2d4a07715a9eceb793bf2a3ca0a3932c15",
+  "correction": "Wait for exact Main/Extra/Side identities and quantities and current UI evaluation after asynchronous file import; preserve the full YDK equality assertion.",
+  "meaning": "The full matrix was executed once with 55/56 passing. Its only failed suite was rerun in full after a harness synchronization correction. These are not claimed as one failure-free execution."
+}

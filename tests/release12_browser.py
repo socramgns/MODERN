@@ -81,18 +81,18 @@ def run(url=None):
               and hashlib.sha256(response.body()).hexdigest() == html_hash
               and page.evaluate('()=>navigator.onLine===false&&YGO_BUILD_MANIFEST.buildId') == build['buildId'])
         expected_ids = ['spark', 'spirit', 'invoked', 'swordsoul', 'branded', 'tenyi', 'salamangreat',
-                        'roar', 'crow', 'droll', 'field', 'trap']
-        check('twelve_visible_examples_preserve_the_previous_eleven_identifiers',
+                        'roar', 'crow', 'droll', 'field', 'trap', 'evacuation']
+        check('thirteen_visible_examples_preserve_the_previous_twelve_identifiers',
               page.locator('#ygoExampleSelect').evaluate('(el)=>[...el.options].map(o=>o.value)') == expected_ids)
         capabilities = page.evaluate('()=>({core:YGOComboEngine.capabilities(),response:YGOResponses.capabilities()})')
         roots = capabilities['core'].get('normalTrapActivations', [])
         check('normal_trap_registry_explicitly_limits_the_new_card_activation',
-              len(roots) == 1 and roots[0]['type'] == ACTION and roots[0]['cardId'] == IMPERM
+              len(roots) == 2 and {row['type']: row['cardId'] for row in roots} == {ACTION: IMPERM, 'ACTIVATE_COMPULSORY_EVACUATION_DEVICE': 94192409}
               and len(capabilities['core']['normalSpellActivations']) == 3
               and len(capabilities['core']['fieldSpellActivations']) == 2)
         check('mechaba_models_a_physical_trap_cost_without_widening_monster_registry',
               'TRAP' in capabilities['response']['mechabaModeledCardTypes']
-              and capabilities['response']['mechabaNormalTrapActivations'] == [ACTION]
+              and set(capabilities['response']['mechabaNormalTrapActivations']) == {ACTION, 'ACTIVATE_COMPULSORY_EVACUATION_DEVICE'}
               and len(capabilities['response']['mechabaNonFieldMonsterActivations']) == 15)
         try:
             initial = load_example(page, 'trap')
@@ -267,7 +267,7 @@ def run(url=None):
             'buildId': build['buildId'], 'htmlSha256': html_hash, 'artifactMode': 'DELIVERED_BYTES',
             'sourceInjection': False, 'checks': checks, 'details': details,
             'browser': {'engine': 'chromium', 'version': version}, 'externalRequestsBlocked': len(blocked),
-            'limitations': ['The new Normal Trap card activation is limited to Infinite Impermanence.',
+            'limitations': ['This regression suite checks Infinite Impermanence; the separate revision13 suite checks the registered Compulsory activation.',
                             'The registered between-action windows do not certify arbitrary priority or Damage Step.',
                             'Starting fields remain declared assumptions and competitive scoring remains provisional.']}
 

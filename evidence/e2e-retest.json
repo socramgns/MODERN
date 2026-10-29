@@ -1,0 +1,1380 @@
+{
+  "schema": "ygo-analyzer-e2e/v1",
+  "runner": "Playwright/Chromium",
+  "executedAt": "2026-10-29T19:04:55Z",
+  "buildId": "62d595ef64824400782f54808fd32e70a9b2fcb21ef98ba2aeaec753c41ec79a",
+  "htmlSha256": "5f05c079f9a512c04e3d7978864461746e4bcb8d9cf0589440579663e6dceecb",
+  "pass": true,
+  "tests": [
+    {
+      "name": "delivered_build_and_integrity",
+      "pass": true
+    },
+    {
+      "name": "catalogue_metadata_enrichment",
+      "pass": true
+    },
+    {
+      "name": "included_rule_suites",
+      "pass": true
+    },
+    {
+      "name": "ten_distinct_deck_imports",
+      "pass": true
+    },
+    {
+      "name": "invalid_import_is_transactional",
+      "pass": true
+    },
+    {
+      "name": "ydk_download_preserves_cards",
+      "pass": true
+    },
+    {
+      "name": "json_export_records_scope",
+      "pass": true
+    },
+    {
+      "name": "png_export",
+      "pass": true
+    },
+    {
+      "name": "print_pdf_render",
+      "pass": true
+    },
+    {
+      "name": "shared_link_restores_deck_and_format",
+      "pass": true
+    },
+    {
+      "name": "external_evidence_bound_to_build",
+      "pass": true
+    },
+    {
+      "name": "mobile_has_no_horizontal_overflow",
+      "pass": true
+    },
+    {
+      "name": "standalone_bytes_offline",
+      "pass": true
+    },
+    {
+      "name": "no_javascript_page_errors",
+      "pass": true
+    }
+  ],
+  "details": {
+    "delivered_build_and_integrity": {
+      "health": {
+        "version": "Alpha 1263",
+        "status": "READY",
+        "phase": "READY",
+        "total": 88,
+        "done": 88,
+        "lastProgressOrder": 88,
+        "elapsedMs": 8364,
+        "waitingMs": 6738,
+        "slowLoading": false,
+        "hashesVerified": true,
+        "hashesChecked": 88,
+        "hashesTotal": 88,
+        "hashMode": "WEBCRYPTO",
+        "catalogCount": 21986,
+        "catalogReady": true,
+        "apiVersion": "Alpha 1263",
+        "scenarioPanelPresent": true,
+        "videoPanelPresent": true,
+        "supportsMediaRecorder": true,
+        "zipExportAvailable": true,
+        "bootErrors": [],
+        "startupQueued": 0,
+        "ready": true
+      },
+      "catalog": {
+        "schemaVersion": 2,
+        "sourceCommit": "ae5dedb957c2c48ab86554fee08a0fca73d8b1cf",
+        "cardsSha256": "cc265022039bba09fc31e8e3a48afb0030e5a81cab0c30c386843fcd75e1cba6",
+        "cardCount": 21986,
+        "expectedCount": 21986,
+        "loaded": true,
+        "sourceMatched": 21888,
+        "monsterCount": 13061,
+        "knownMonsterStats": 13010,
+        "unknownMonsterStats": 51,
+        "unresolvedLegacyRows": [
+          {
+            "id": 810000043,
+            "name": "Amplifier (Anime)",
+            "source": "cards-unofficial(2).cdb",
+            "reason": "PASSCODE_NOT_IN_PINNED_BABELCDB_SNAPSHOT"
+          },
+          {
+            "id": 511030041,
+            "name": "Appliancer Vacculephant",
+            "source": "cards-unofficial(2).cdb",
+            "reason": "PASSCODE_NOT_IN_PINNED_BABELCDB_SNAPSHOT"
+          },
+          {
+            "id": 101111067,
+            "name": "Aquamirror Focalization",
+            "source": "prerelease-phhy.cdb",
+            "reason": "PASSCODE_NOT_IN_PINNED_BABELCDB_SNAPSHOT"
+          },
+          {
+            "id": 100000159,
+            "name": "Assault Dog (TF6)",
+            "source": "cards-unofficial(2).cdb",
+            "reason": "PASSCODE_NOT_IN_PINNED_BABELCDB_SNAPSHOT"
+          },
+          {
+            "id": 101111019,
+            "name": "Basiltrice, Familiar of the Evil Eye",
+            "source": "prerelease-phhy.cdb",
+            "reason": "PASSCODE_NOT_IN_PINNED_BABELCDB_SNAPSHOT"
+          },
+          {
+            "id": 101111109,
+            "name": "Black Beast Token",
+            "source": "prerelease-phhy.cdb",
+            "reason": "PASSCODE_NOT_IN_PINNED_BABELCDB_SNAPSHOT"
+          },
+          {
+            "id": 511002613,
+            "name": "Black Luster Soldier (DM)",
+            "source": "cards-unofficial(2).cdb",
+            "reason": "PASSCODE_NOT_IN_PINNED_BABELCDB_SNAPSHOT"
+          },
+          {
+            "id": 100000185,
+            "name": "Bonds of Rival",
+            "source": "cards-unofficial(2).cdb",
+            "reason": "PASSCODE_NOT_IN_PINNED_BABELCDB_SNAPSHOT"
+          },
+          {
+            "id": 100000026,
+            "name": "Cenozoic Fossil Knight - Skullger",
+            "source": "cards-unofficial(2).cdb",
+            "reason": "PASSCODE_NOT_IN_PINNED_BABELCDB_SNAPSHOT"
+          },
+          {
+            "id": 101111039,
+            "name": "Chaos Archfiend",
+            "source": "prerelease-phhy.cdb",
+            "reason": "PASSCODE_NOT_IN_PINNED_BABELCDB_SNAPSHOT"
+          },
+          {
+            "id": 101111040,
+            "name": "Chaos Beast",
+            "source": "prerelease-phhy.cdb",
+            "reason": "PASSCODE_NOT_IN_PINNED_BABELCDB_SNAPSHOT"
+          },
+          {
+            "id": 101111013,
+            "name": "Chaos Mirage Dragon",
+            "source": "prerelease-phhy.cdb",
+            "reason": "PASSCODE_NOT_IN_PINNED_BABELCDB_SNAPSHOT"
+          },
+          {
+            "id": 101111076,
+            "name": "Chaos Phantasm",
+            "source": "prerelease-phhy.cdb",
+            "reason": "PASSCODE_NOT_IN_PINNED_BABELCDB_SNAPSHOT"
+          },
+          {
+            "id": 101111009,
+            "name": "Chaos Witch",
+            "source": "prerelease-phhy.cdb",
+            "reason": "PASSCODE_NOT_IN_PINNED_BABELCDB_SNAPSHOT"
+          },
+          {
+            "id": 101111011,
+            "name": "Core of Chaos",
+            "source": "prerelease-phhy.cdb",
+            "reason": "PASSCODE_NOT_IN_PINNED_BABELCDB_SNAPSHOT"
+          },
+          {
+            "id": 300,
+            "name": "Deck Master Functions",
+            "source": "cards-unofficial(2).cdb",
+            "reason": "PASSCODE_NOT_IN_PINNED_BABELCDB_SNAPSHOT"
+          },
+          {
+            "id": 511009112,
+            "name": "Doll Monster Bear-Bear",
+            "source": "cards-unofficial(2).cdb",
+            "reason": "PASSCODE_NOT_IN_PINNED_BABELCDB_SNAPSHOT"
+          },
+          {
+            "id": 511009116,
+            "name": "Doll Monster Miss MadChen",
+            "source": "cards-unofficial(2).cdb",
+            "reason": "PASSCODE_NOT_IN_PINNED_BABELCDB_SNAPSHOT"
+          },
+          {
+            "id": 511002017,
+            "name": "Edge Nightmare",
+            "source": "cards-unofficial(2).cdb",
+            "reason": "PASSCODE_NOT_IN_PINNED_BABELCDB_SNAPSHOT"
+          },
+          {
+            "id": 100000041,
+            "name": "Efflorescent Knight",
+            "source": "cards-unofficial(2).cdb",
+            "reason": "PASSCODE_NOT_IN_PINNED_BABELCDB_SNAPSHOT"
+          },
+          {
+            "id": 101111032,
+            "name": "Evigishki Nereimanas",
+            "source": "prerelease-phhy.cdb",
+            "reason": "PASSCODE_NOT_IN_PINNED_BABELCDB_SNAPSHOT"
+          },
+          {
+            "id": 101111068,
+            "name": "Evil Eye Resurrection",
+            "source": "prerelease-phhy.cdb",
+            "reason": "PASSCODE_NOT_IN_PINNED_BABELCDB_SNAPSHOT"
+          },
+          {
+            "id": 100000621,
+            "name": "Fossil Dragon Skullgar",
+            "source": "cards-unofficial(2).cdb",
+            "reason": "PASSCODE_NOT_IN_PINNED_BABELCDB_SNAPSHOT"
+          },
+          {
+            "id": 100000620,
+            "name": "Fossil Machine Skull Buggy",
+            "source": "cards-unofficial(2).cdb",
+            "reason": "PASSCODE_NOT_IN_PINNED_BABELCDB_SNAPSHOT"
+          },
+          {
+            "id": 100000023,
+            "name": "Fossil Machine Skull Convoy",
+            "source": "cards-unofficial(2).cdb",
+            "reason": "PASSCODE_NOT_IN_PINNED_BABELCDB_SNAPSHOT"
+          },
+          {
+            "id": 100000622,
+            "name": "Fossil Machine Skull Wagon",
+            "source": "cards-unofficial(2).cdb",
+            "reason": "PASSCODE_NOT_IN_PINNED_BABELCDB_SNAPSHOT"
+          },
+          {
+            "id": 511001233,
+            "name": "Gachi Battle",
+            "source": "cards-unofficial(2).cdb",
+            "reason": "PASSCODE_NOT_IN_PINNED_BABELCDB_SNAPSHOT"
+          },
+          {
+            "id": 511001407,
+            "name": "Gagagamirage",
+            "source": "cards-unofficial(2).cdb",
+            "reason": "PASSCODE_NOT_IN_PINNED_BABELCDB_SNAPSHOT"
+          },
+          {
+            "id": 101111003,
+            "name": "Galakuriboh",
+            "source": "prerelease-phhy.cdb",
+            "reason": "PASSCODE_NOT_IN_PINNED_BABELCDB_SNAPSHOT"
+          },
+          {
+            "id": 101111051,
+            "name": "Galaxy Hundred",
+            "source": "prerelease-phhy.cdb",
+            "reason": "PASSCODE_NOT_IN_PINNED_BABELCDB_SNAPSHOT"
+          },
+          {
+            "id": 101111044,
+            "name": "Galaxy Photon Dragon",
+            "source": "prerelease-phhy.cdb",
+            "reason": "PASSCODE_NOT_IN_PINNED_BABELCDB_SNAPSHOT"
+          },
+          {
+            "id": 101111002,
+            "name": "Galaxy Summoner",
+            "source": "prerelease-phhy.cdb",
+            "reason": "PASSCODE_NOT_IN_PINNED_BABELCDB_SNAPSHOT"
+          },
+          {
+            "id": 101111066,
+            "name": "Gishki Icemirror",
+            "source": "prerelease-phhy.cdb",
+            "reason": "PASSCODE_NOT_IN_PINNED_BABELCDB_SNAPSHOT"
+          },
+          {
+            "id": 101111018,
+            "name": "Grim Gishki",
+            "source": "prerelease-phhy.cdb",
+            "reason": "PASSCODE_NOT_IN_PINNED_BABELCDB_SNAPSHOT"
+          },
+          {
+            "id": 511005062,
+            "name": "Hat Token",
+            "source": "cards-unofficial(2).cdb",
+            "reason": "PASSCODE_NOT_IN_PINNED_BABELCDB_SNAPSHOT"
+          },
+          {
+            "id": 511000292,
+            "name": "Infernity Sage",
+            "source": "cards-unofficial(2).cdb",
+            "reason": "PASSCODE_NOT_IN_PINNED_BABELCDB_SNAPSHOT"
+          },
+          {
+            "id": 511001966,
+            "name": "Iron Chain Dragon (Anime)",
+            "source": "cards-unofficial(2).cdb",
+            "reason": "PASSCODE_NOT_IN_PINNED_BABELCDB_SNAPSHOT"
+          },
+          {
+            "id": 101111046,
+            "name": "Kshatri-La Ariseheart",
+            "source": "prerelease-phhy.cdb",
+            "reason": "PASSCODE_NOT_IN_PINNED_BABELCDB_SNAPSHOT"
+          },
+          {
+            "id": 101111075,
+            "name": "Kshatri-La Big Bang",
+            "source": "prerelease-phhy.cdb",
+            "reason": "PASSCODE_NOT_IN_PINNED_BABELCDB_SNAPSHOT"
+          },
+          {
+            "id": 101111057,
+            "name": "Kshatri-La Overlap",
+            "source": "prerelease-phhy.cdb",
+            "reason": "PASSCODE_NOT_IN_PINNED_BABELCDB_SNAPSHOT"
+          },
+          {
+            "id": 101111058,
+            "name": "Kshatri-La Papiyas",
+            "source": "prerelease-phhy.cdb",
+            "reason": "PASSCODE_NOT_IN_PINNED_BABELCDB_SNAPSHOT"
+          },
+          {
+            "id": 101111006,
+            "name": "Kshatri-La Riseheart",
+            "source": "prerelease-phhy.cdb",
+            "reason": "PASSCODE_NOT_IN_PINNED_BABELCDB_SNAPSHOT"
+          },
+          {
+            "id": 101111047,
+            "name": "Laevateinn, Generaider Boss of Shadows",
+            "source": "prerelease-phhy.cdb",
+            "reason": "PASSCODE_NOT_IN_PINNED_BABELCDB_SNAPSHOT"
+          },
+          {
+            "id": 511005063,
+            "name": "Magical Hats (Anime)",
+            "source": "cards-unofficial(2).cdb",
+            "reason": "PASSCODE_NOT_IN_PINNED_BABELCDB_SNAPSHOT"
+          },
+          {
+            "id": 810000094,
+            "name": "Magician's Selection",
+            "source": "cards-unofficial(2).cdb",
+            "reason": "PASSCODE_NOT_IN_PINNED_BABELCDB_SNAPSHOT"
+          },
+          {
+            "id": 101111012,
+            "name": "Mind Tuner",
+            "source": "prerelease-phhy.cdb",
+            "reason": "PASSCODE_NOT_IN_PINNED_BABELCDB_SNAPSHOT"
+          },
+          {
+            "id": 101111043,
+            "name": "Number C62: Neo Galaxy-Eyes Prime Photon Dragon",
+            "source": "prerelease-phhy.cdb",
+            "reason": "PASSCODE_NOT_IN_PINNED_BABELCDB_SNAPSHOT"
+          },
+          {
+            "id": 101111052,
+            "name": "Numeron Creation",
+            "source": "prerelease-phhy.cdb",
+            "reason": "PASSCODE_NOT_IN_PINNED_BABELCDB_SNAPSHOT"
+          },
+          {
+            "id": 511001664,
+            "name": "Numeron Wall",
+            "source": "cards-unofficial(2).cdb",
+            "reason": "PASSCODE_NOT_IN_PINNED_BABELCDB_SNAPSHOT"
+          },
+          {
+            "id": 100000028,
+            "name": "Paleozoic Fossil Knight - Skullking",
+            "source": "cards-unofficial(2).cdb",
+            "reason": "PASSCODE_NOT_IN_PINNED_BABELCDB_SNAPSHOT"
+          },
+          {
+            "id": 101111071,
+            "name": "Photon Deceleration",
+            "source": "prerelease-phhy.cdb",
+            "reason": "PASSCODE_NOT_IN_PINNED_BABELCDB_SNAPSHOT"
+          },
+          {
+            "id": 101111001,
+            "name": "Photon Emperor",
+            "source": "prerelease-phhy.cdb",
+            "reason": "PASSCODE_NOT_IN_PINNED_BABELCDB_SNAPSHOT"
+          },
+          {
+            "id": 511002582,
+            "name": "Photon Spear",
+            "source": "cards-unofficial(2).cdb",
+            "reason": "PASSCODE_NOT_IN_PINNED_BABELCDB_SNAPSHOT"
+          },
+          {
+            "id": 101111059,
+            "name": "Prime Planet Paraisos",
+            "source": "prerelease-phhy.cdb",
+            "reason": "PASSCODE_NOT_IN_PINNED_BABELCDB_SNAPSHOT"
+          },
+          {
+            "id": 101111060,
+            "name": "Scareclaw Defang",
+            "source": "prerelease-phhy.cdb",
+            "reason": "PASSCODE_NOT_IN_PINNED_BABELCDB_SNAPSHOT"
+          },
+          {
+            "id": 101111007,
+            "name": "Scareclaw Kshatri-La",
+            "source": "prerelease-phhy.cdb",
+            "reason": "PASSCODE_NOT_IN_PINNED_BABELCDB_SNAPSHOT"
+          },
+          {
+            "id": 101111010,
+            "name": "Shell of Chaos",
+            "source": "prerelease-phhy.cdb",
+            "reason": "PASSCODE_NOT_IN_PINNED_BABELCDB_SNAPSHOT"
+          },
+          {
+            "id": 513000177,
+            "name": "Skiel Carrier (Anime)",
+            "source": "cards-unofficial(2).cdb",
+            "reason": "PASSCODE_NOT_IN_PINNED_BABELCDB_SNAPSHOT"
+          },
+          {
+            "id": 513000176,
+            "name": "Skiel Guard (Anime)",
+            "source": "cards-unofficial(2).cdb",
+            "reason": "PASSCODE_NOT_IN_PINNED_BABELCDB_SNAPSHOT"
+          },
+          {
+            "id": 513000174,
+            "name": "Skiel Top (Anime)",
+            "source": "cards-unofficial(2).cdb",
+            "reason": "PASSCODE_NOT_IN_PINNED_BABELCDB_SNAPSHOT"
+          },
+          {
+            "id": 511009215,
+            "name": "Slime Token",
+            "source": "cards-unofficial(2).cdb",
+            "reason": "PASSCODE_NOT_IN_PINNED_BABELCDB_SNAPSHOT"
+          },
+          {
+            "id": 511000911,
+            "name": "Smile Angel",
+            "source": "cards-unofficial(2).cdb",
+            "reason": "PASSCODE_NOT_IN_PINNED_BABELCDB_SNAPSHOT"
+          },
+          {
+            "id": 511002094,
+            "name": "Speed World",
+            "source": "cards-unofficial(2).cdb",
+            "reason": "PASSCODE_NOT_IN_PINNED_BABELCDB_SNAPSHOT"
+          },
+          {
+            "id": 4010,
+            "name": "String Placeholder 10",
+            "source": "cards-unofficial(2).cdb",
+            "reason": "PASSCODE_NOT_IN_PINNED_BABELCDB_SNAPSHOT"
+          },
+          {
+            "id": 4011,
+            "name": "String Placeholder 11",
+            "source": "cards-unofficial(2).cdb",
+            "reason": "PASSCODE_NOT_IN_PINNED_BABELCDB_SNAPSHOT"
+          },
+          {
+            "id": 4012,
+            "name": "String Placeholder 12",
+            "source": "cards-unofficial(2).cdb",
+            "reason": "PASSCODE_NOT_IN_PINNED_BABELCDB_SNAPSHOT"
+          },
+          {
+            "id": 4013,
+            "name": "String Placeholder 13",
+            "source": "cards-unofficial(2).cdb",
+            "reason": "PASSCODE_NOT_IN_PINNED_BABELCDB_SNAPSHOT"
+          },
+          {
+            "id": 4015,
+            "name": "String Placeholder 15",
+            "source": "cards-unofficial(2).cdb",
+            "reason": "PASSCODE_NOT_IN_PINNED_BABELCDB_SNAPSHOT"
+          },
+          {
+            "id": 4016,
+            "name": "String Placeholder 16",
+            "source": "cards-unofficial(2).cdb",
+            "reason": "PASSCODE_NOT_IN_PINNED_BABELCDB_SNAPSHOT"
+          },
+          {
+            "id": 4017,
+            "name": "String Placeholder 17",
+            "source": "cards-unofficial(2).cdb",
+            "reason": "PASSCODE_NOT_IN_PINNED_BABELCDB_SNAPSHOT"
+          },
+          {
+            "id": 4001,
+            "name": "Strings Placeholder 1",
+            "source": "cards-unofficial(2).cdb",
+            "reason": "PASSCODE_NOT_IN_PINNED_BABELCDB_SNAPSHOT"
+          },
+          {
+            "id": 4002,
+            "name": "Strings Placeholder 2",
+            "source": "cards-unofficial(2).cdb",
+            "reason": "PASSCODE_NOT_IN_PINNED_BABELCDB_SNAPSHOT"
+          },
+          {
+            "id": 4003,
+            "name": "Strings Placeholder 3",
+            "source": "cards-unofficial(2).cdb",
+            "reason": "PASSCODE_NOT_IN_PINNED_BABELCDB_SNAPSHOT"
+          },
+          {
+            "id": 4004,
+            "name": "Strings Placeholder 4",
+            "source": "cards-unofficial(2).cdb",
+            "reason": "PASSCODE_NOT_IN_PINNED_BABELCDB_SNAPSHOT"
+          },
+          {
+            "id": 4005,
+            "name": "Strings Placeholder 5",
+            "source": "cards-unofficial(2).cdb",
+            "reason": "PASSCODE_NOT_IN_PINNED_BABELCDB_SNAPSHOT"
+          },
+          {
+            "id": 4006,
+            "name": "Strings Placeholder 6",
+            "source": "cards-unofficial(2).cdb",
+            "reason": "PASSCODE_NOT_IN_PINNED_BABELCDB_SNAPSHOT"
+          },
+          {
+            "id": 4007,
+            "name": "Strings Placeholder 7",
+            "source": "cards-unofficial(2).cdb",
+            "reason": "PASSCODE_NOT_IN_PINNED_BABELCDB_SNAPSHOT"
+          },
+          {
+            "id": 4008,
+            "name": "Strings Placeholder 8",
+            "source": "cards-unofficial(2).cdb",
+            "reason": "PASSCODE_NOT_IN_PINNED_BABELCDB_SNAPSHOT"
+          },
+          {
+            "id": 4009,
+            "name": "Strings Placeholder 9",
+            "source": "cards-unofficial(2).cdb",
+            "reason": "PASSCODE_NOT_IN_PINNED_BABELCDB_SNAPSHOT"
+          },
+          {
+            "id": 511000725,
+            "name": "Summon Storm",
+            "source": "cards-unofficial(2).cdb",
+            "reason": "PASSCODE_NOT_IN_PINNED_BABELCDB_SNAPSHOT"
+          },
+          {
+            "id": 511009679,
+            "name": "Sunseed Genius Loci",
+            "source": "cards-unofficial(2).cdb",
+            "reason": "PASSCODE_NOT_IN_PINNED_BABELCDB_SNAPSHOT"
+          },
+          {
+            "id": 100293099,
+            "name": "Sweet Room-Maid",
+            "source": "prerelease-slf1.cdb",
+            "reason": "PASSCODE_NOT_IN_PINNED_BABELCDB_SNAPSHOT"
+          },
+          {
+            "id": 100293096,
+            "name": "Switch Point",
+            "source": "prerelease-slf1.cdb",
+            "reason": "PASSCODE_NOT_IN_PINNED_BABELCDB_SNAPSHOT"
+          },
+          {
+            "id": 101111008,
+            "name": "Tearlaments Kshatri-La",
+            "source": "prerelease-phhy.cdb",
+            "reason": "PASSCODE_NOT_IN_PINNED_BABELCDB_SNAPSHOT"
+          },
+          {
+            "id": 101111061,
+            "name": "Tearlaments Perlregia",
+            "source": "prerelease-phhy.cdb",
+            "reason": "PASSCODE_NOT_IN_PINNED_BABELCDB_SNAPSHOT"
+          },
+          {
+            "id": 511001365,
+            "name": "Tellus Wing",
+            "source": "cards-unofficial(2).cdb",
+            "reason": "PASSCODE_NOT_IN_PINNED_BABELCDB_SNAPSHOT"
+          },
+          {
+            "id": 100293274,
+            "name": "The Breaking Ruin God",
+            "source": "prerelease-mp22.cdb",
+            "reason": "PASSCODE_NOT_IN_PINNED_BABELCDB_SNAPSHOT"
+          },
+          {
+            "id": 100293273,
+            "name": "The Revived Sky God",
+            "source": "prerelease-mp22.cdb",
+            "reason": "PASSCODE_NOT_IN_PINNED_BABELCDB_SNAPSHOT"
+          },
+          {
+            "id": 100293275,
+            "name": "The True Sun God",
+            "source": "prerelease-mp22.cdb",
+            "reason": "PASSCODE_NOT_IN_PINNED_BABELCDB_SNAPSHOT"
+          },
+          {
+            "id": 511000576,
+            "name": "Trap Sluzer",
+            "source": "cards-unofficial(2).cdb",
+            "reason": "PASSCODE_NOT_IN_PINNED_BABELCDB_SNAPSHOT"
+          },
+          {
+            "id": 511001570,
+            "name": "Tribute Ticket",
+            "source": "cards-unofficial(2).cdb",
+            "reason": "PASSCODE_NOT_IN_PINNED_BABELCDB_SNAPSHOT"
+          },
+          {
+            "id": 101111074,
+            "name": "Trivikarma",
+            "source": "prerelease-phhy.cdb",
+            "reason": "PASSCODE_NOT_IN_PINNED_BABELCDB_SNAPSHOT"
+          },
+          {
+            "id": 101111020,
+            "name": "Vara, Seidhr of the Generaider Bosses",
+            "source": "prerelease-phhy.cdb",
+            "reason": "PASSCODE_NOT_IN_PINNED_BABELCDB_SNAPSHOT"
+          },
+          {
+            "id": 101111209,
+            "name": "White Beast Token",
+            "source": "prerelease-phhy.cdb",
+            "reason": "PASSCODE_NOT_IN_PINNED_BABELCDB_SNAPSHOT"
+          },
+          {
+            "id": 513000169,
+            "name": "Wisel Attack (Anime)",
+            "source": "cards-unofficial(2).cdb",
+            "reason": "PASSCODE_NOT_IN_PINNED_BABELCDB_SNAPSHOT"
+          },
+          {
+            "id": 513000171,
+            "name": "Wisel Carrier (Anime)",
+            "source": "cards-unofficial(2).cdb",
+            "reason": "PASSCODE_NOT_IN_PINNED_BABELCDB_SNAPSHOT"
+          },
+          {
+            "id": 513000170,
+            "name": "Wisel Guard (Anime)",
+            "source": "cards-unofficial(2).cdb",
+            "reason": "PASSCODE_NOT_IN_PINNED_BABELCDB_SNAPSHOT"
+          },
+          {
+            "id": 513000168,
+            "name": "Wisel Top (Anime)",
+            "source": "cards-unofficial(2).cdb",
+            "reason": "PASSCODE_NOT_IN_PINNED_BABELCDB_SNAPSHOT"
+          }
+        ],
+        "restrictedNamesNotInCatalogue": [],
+        "aliases": 2863,
+        "error": null,
+        "officialMetadataCertified": false
+      },
+      "build": {
+        "version": "Alpha 1263",
+        "revision": "2026.10-stable.13",
+        "canonicalId": "ygo-alpha-1263-canonical-release",
+        "moduleCount": 88,
+        "catalogCardCount": 21986,
+        "buildId": "62d595ef64824400782f54808fd32e70a9b2fcb21ef98ba2aeaec753c41ec79a",
+        "catalogueSizePinsCompiled": 164,
+        "dataHashes": {
+          "cards": "cc265022039bba09fc31e8e3a48afb0030e5a81cab0c30c386843fcd75e1cba6"
+        },
+        "catalogSha256": "cc265022039bba09fc31e8e3a48afb0030e5a81cab0c30c386843fcd75e1cba6",
+        "dataVersion": "cc265022039bba09fc31e8e3a48afb0030e5a81cab0c30c386843fcd75e1cba6",
+        "scope": {
+          "primaryFormat": "TCG",
+          "ranking": "STRUCTURAL_PROVISIONAL",
+          "search": "DECLARED_BOUNDED_SCOPE",
+          "universalCertified": false
+        },
+        "officialContextVerification": {
+          "schema": "ygo-official-context-verification/v1",
+          "status": "DATED_TCG_RESTRICTION_TABLE_MATCH",
+          "pass": true,
+          "format": "tcg",
+          "effectiveDate": "2026-10-19",
+          "reviewedAt": "2026-10-26T23:35:20.067328+00:00",
+          "asOfDate": "2026-10-26",
+          "sourceUrl": "https://www.db.yugioh-card.com/yugiohdb/forbidden_limited.action?request_locale=en",
+          "documentPath": "src/data/official/tcg-2026-10-19.html",
+          "receiptPath": "src/data/official/tcg-2026-10-19-receipt.json",
+          "documentSha256": "3f6a5c8dbeca3007e98eb29dacbce8c66e4a11d1542a387fa3c573666e53ec9d",
+          "snapshotSha256": "930199011717285782cadb8b232341bb6446bac3f9afc21a3813a45fafff4f3c",
+          "embeddedTableSha256": "359e33e72b769b89049a8872352753885c1658a5599dd3d8313d6cd2b9a4d82e",
+          "normalizedRestrictionsSha256": "8e48282787baba3fba98638cb3006bd3bd4c4ac4616353b7f4dda3c1ebdab72b",
+          "tableEquivalent": true,
+          "restrictionCounts": {
+            "0": 156,
+            "1": 92,
+            "2": 7,
+            "3": 0
+          },
+          "restrictedNamesCompared": 255,
+          "extraction": "RECOGNIZED_NEURON_SECTIONS",
+          "transportAuthenticatedAtReview": true,
+          "scope": "DATED_TCG_RESTRICTION_NAMES_LIMITS_AND_DATE_ONLY",
+          "currentListProven": false,
+          "officialPoolVerified": false,
+          "officialRulingsVerified": false,
+          "officialPasscodesVerified": false,
+          "competitiveCertified": false,
+          "limitations": [
+            "A local source URL or external receipt does not authenticate document origin.",
+            "A complete-table assertion is supplied by the reviewer; PDF/text rows require exact witnesses.",
+            "Matching table names and limits do not authenticate passcodes, card availability, rulings or all formats.",
+            "A dated matching publication does not prove it is the latest effective list."
+          ],
+          "storedBytesRecheckedAtBuild": true,
+          "retrievalAuthenticatedInThisBuild": false
+        },
+        "ruleReferences": {
+          "schema": "ygo-mechaba-ruling-references/v1",
+          "reviewedAt": "2026-10-27T06:33:19.827134+00:00",
+          "technicalCardId": 75286621,
+          "officialCardCid": 12849,
+          "scope": "TCG_REFERENCE_NOT_TCG_RULING_CERTIFICATION",
+          "principle": "SAME_ACTIVATION_LOCATION_FOR_ASSOCIATED_BANISH",
+          "captureActivationLocationBeforeCosts": true,
+          "negationCanApplyAfterSourceChangesLocation": true,
+          "associatedBanishRequiresSourceAtItsActivationLocation": true,
+          "sourceLocationChangeIsNotUndone": true,
+          "references": [
+            {
+              "id": "mechaba-field-source-tributed-as-cost",
+              "faqId": 16041,
+              "officialCardCid": 12849,
+              "sourceUrl": "https://www.db.yugioh-card.com/yugiohdb/faq_search.action?ope=5&fid=16041&request_locale=ja",
+              "documentPath": "src/data/official/mechaba-faq-16041.html",
+              "metadataPath": "src/data/official/mechaba-faq-16041.metadata.json",
+              "rawSha256": "73787504a798bfef58bf8e821328809763f3b42b753ce40932063662d517a0a0",
+              "fieldSha256": {
+                "question_text": "59ce73e02a8fdf4b9481aa75b6e6b7a81417384f913a6d498f39ce22f09d7474",
+                "answer_text": "fab29216d235de9d61328da4e528da6029621ba1a47b748c052bc43f0e5e6aaa"
+              },
+              "formatAuthority": "OCG",
+              "language": "ja",
+              "scope": "TCG_REFERENCE_NOT_TCG_RULING_CERTIFICATION",
+              "quotes": [
+                {
+                  "field": "answer_text",
+                  "originalJapanese": "「ダイナレスラー・パンクラトプス」が自身をリリースして『②』の効果を発動し、これに対して「召喚獣メルカバー」の効果が発動した場合、「ダイナレスラー・パンクラトプス」の『②』の効果の発動は無効になりますが、フィールドで効果を発動し、フィールドに存在しなくなった「ダイナレスラー・パンクラトプス」が除外されることはありません。",
+                  "originalTextSha256": "c5d5c6ac498bf52196cc9ba8a29b03dd873ab2228ff100c3ef674d1d502a3eff",
+                  "explanatorySpanish": "Si Pankratops se tributa para activar su efecto, Mechaba niega esa activación, pero no destierra al monstruo que ya dejó el campo. Si Pankratops permanece en el campo, sí se aplica el destierro al resolver.",
+                  "translationIsPrimaryEvidence": false
+                }
+              ],
+              "mechabaNamedInOriginalAnswer": true
+            },
+            {
+              "id": "mechaba-hand-source-sent-as-cost",
+              "faqId": 22388,
+              "officialCardCid": 12849,
+              "sourceUrl": "https://www.db.yugioh-card.com/yugiohdb/faq_search.action?ope=5&fid=22388&request_locale=ja",
+              "documentPath": "src/data/official/mechaba-faq-22388.html",
+              "metadataPath": "src/data/official/mechaba-faq-22388.metadata.json",
+              "rawSha256": "2d3144d9f406f49d62f72a121a0dc9d6fa72c4348340a22069a0ed4fb0ff3394",
+              "fieldSha256": {
+                "question_text": "ace89570b9d93c21c3d2a9a4a9cbb7d2d5734e9e3c67793807d69a17f66618b9",
+                "answer_text": "d0de06cd4df65f4ea575141a505e62433ddf330e9b82e856790945f7ac3e3ae9"
+              },
+              "formatAuthority": "OCG",
+              "language": "ja",
+              "scope": "TCG_REFERENCE_NOT_TCG_RULING_CERTIFICATION",
+              "quotes": [
+                {
+                  "field": "answer_text",
+                  "originalJapanese": "「増殖するG」の効果の発動は無効になりますが、効果を発動したところに存在しなくなった（手札で効果を発動しコストとして墓地に送られた）「増殖するG」は除外されずに墓地に残ります。",
+                  "originalTextSha256": "ae3b4fffdd7edcc550e4daa52a440fd70caef2087a0c7f2197b8b89b3df128af",
+                  "explanatorySpanish": "La activación de Maxx \"C\" se niega, pero la copia enviada de la mano al Cementerio como coste permanece en el Cementerio. La respuesta enumera expresamente a Mechaba entre las cartas con el mismo tratamiento.",
+                  "translationIsPrimaryEvidence": false
+                }
+              ],
+              "mechabaNamedInOriginalAnswer": true
+            },
+            {
+              "id": "mechaba-activation-location-general-principle",
+              "faqId": 23949,
+              "officialCardCid": 12849,
+              "sourceUrl": "https://www.db.yugioh-card.com/yugiohdb/faq_search.action?ope=5&fid=23949&request_locale=ja",
+              "documentPath": "src/data/official/mechaba-faq-23949.html",
+              "metadataPath": "src/data/official/mechaba-faq-23949.metadata.json",
+              "rawSha256": "2dade63f26e749b48b573112cca9b887cb71f6a6c9bb60e3a0f3e00dfcd09096",
+              "fieldSha256": {
+                "question_text": "c3cd5e5c30f2b32dccbf0241ce63789c7b3e8cc0a30ca9d5c1fb3b5c675a09f6",
+                "answer_text": "50c3f20ad19c67526802d7ebdecda057cffeb361df70174db5aa6d063bb776c1"
+              },
+              "formatAuthority": "OCG",
+              "language": "ja",
+              "scope": "TCG_REFERENCE_NOT_TCG_RULING_CERTIFICATION",
+              "quotes": [
+                {
+                  "field": "answer_text",
+                  "originalJapanese": "以下の効果についても同様に、直前のチェーンブロックで効果を発動したモンスターが効果を発動した場所に存在しない場合、破壊する処理や除外する処理は行いません。",
+                  "originalTextSha256": "522f10911dfd4c2640cb7a3e81d5678296aabf0ecef1a6b8c06bbf0816a141c3",
+                  "explanatorySpanish": "La respuesta general incluye a Mechaba: cuando el monstruo ya no está en el lugar donde activó su efecto, no se aplica la destrucción o el destierro asociado. La negación de la activación o del efecto sigue aplicándose según la carta.",
+                  "translationIsPrimaryEvidence": false
+                }
+              ],
+              "mechabaNamedInOriginalAnswer": true
+            }
+          ],
+          "extraction": "HTMLParser entity decoding; BR to LF; surrounding indentation stripped per line; no lexical substitution.",
+          "officialTcgRulingCertified": false,
+          "officialPoolVerified": false,
+          "competitiveCertified": false,
+          "universalCertified": false,
+          "savedReceiptAuthenticatesOriginInLaterRuns": false,
+          "limitations": [
+            "The primary evidence is Japanese official OCG FAQ text; explanatory Spanish translations are separate review notes.",
+            "This is a scoped reference for registered TCG transitions, not a claim that every OCG ruling or card implementation is TCG-certified.",
+            "Identity changes, leaving and returning, replacement copies, arbitrary chains and global banish-prevention effects need their own modeled rules.",
+            "A stored HTTPS URL and receipt do not authenticate the origin of a newly supplied local document.",
+            "Mechaba cannot use this reference to negate Spell/Trap effects that are not Spell/Trap Card activations."
+          ],
+          "storedBytesRechecked": true,
+          "verifiedReferenceCount": 3,
+          "sourceAuthenticatedInThisRun": false,
+          "storedBytesRecheckedAtBuild": true,
+          "retrievalAuthenticatedInThisBuild": false
+        }
+      }
+    },
+    "catalogue_metadata_enrichment": {
+      "known": 13010,
+      "unknown": 51
+    },
+    "included_rule_suites": {
+      "count": 9,
+      "failed": []
+    },
+    "ten_distinct_deck_imports": [
+      {
+        "id": "core:radiant",
+        "pass": true,
+        "counts": {
+          "main": 40,
+          "extra": 15,
+          "side": 0,
+          "skills": 0
+        },
+        "composition": [
+          40,
+          20,
+          19,
+          1
+        ],
+        "evaluation": {
+          "stats": [
+            8,
+            5,
+            8,
+            5,
+            7,
+            6,
+            6,
+            5,
+            6,
+            6
+          ],
+          "total": 62,
+          "tier": "SIN TIER",
+          "authority": "ESTRUCTURAL_NO_APTO",
+          "legal": false,
+          "certified": false
+        },
+        "probabilityCopies": 40
+      },
+      {
+        "id": "core:yummy",
+        "pass": true,
+        "counts": {
+          "main": 43,
+          "extra": 15,
+          "side": 0,
+          "skills": 0
+        },
+        "composition": [
+          43,
+          24,
+          18,
+          1
+        ],
+        "evaluation": {
+          "stats": [
+            7,
+            5,
+            8,
+            6,
+            6,
+            5,
+            5,
+            6,
+            5,
+            6
+          ],
+          "total": 59,
+          "tier": "SIN TIER",
+          "authority": "ESTRUCTURAL_NO_APTO",
+          "legal": false,
+          "certified": false
+        },
+        "probabilityCopies": 43
+      },
+      {
+        "id": "core:orcustFiendsmith",
+        "pass": true,
+        "counts": {
+          "main": 40,
+          "extra": 15,
+          "side": 0,
+          "skills": 0
+        },
+        "composition": [
+          40,
+          27,
+          11,
+          2
+        ],
+        "evaluation": {
+          "stats": [
+            7,
+            5,
+            8,
+            5,
+            7,
+            6,
+            6,
+            5,
+            5,
+            6
+          ],
+          "total": 60,
+          "tier": "SIN TIER",
+          "authority": "ESTRUCTURAL_NO_APTO",
+          "legal": false,
+          "certified": false
+        },
+        "probabilityCopies": 40
+      },
+      {
+        "id": "core:melodious",
+        "pass": true,
+        "counts": {
+          "main": 40,
+          "extra": 15,
+          "side": 0,
+          "skills": 0
+        },
+        "composition": [
+          40,
+          23,
+          14,
+          3
+        ],
+        "evaluation": {
+          "stats": [
+            5,
+            4,
+            6,
+            4,
+            5,
+            4,
+            4,
+            4,
+            3,
+            5
+          ],
+          "total": 44,
+          "tier": "SIN TIER",
+          "authority": "ESTRUCTURAL_NO_APTO",
+          "legal": false,
+          "certified": false
+        },
+        "probabilityCopies": 40
+      },
+      {
+        "id": "core:blueEyes",
+        "pass": true,
+        "counts": {
+          "main": 41,
+          "extra": 15,
+          "side": 0,
+          "skills": 0
+        },
+        "composition": [
+          41,
+          24,
+          9,
+          8
+        ],
+        "evaluation": {
+          "stats": [
+            7,
+            6,
+            9,
+            8,
+            7,
+            7,
+            8,
+            8,
+            6,
+            7
+          ],
+          "total": 73,
+          "tier": "TIER 1.5",
+          "authority": "ESTRUCTURAL_PROVISIONAL",
+          "legal": null,
+          "certified": false
+        },
+        "probabilityCopies": 41
+      },
+      {
+        "id": "core:dracotail",
+        "pass": true,
+        "counts": {
+          "main": 40,
+          "extra": 15,
+          "side": 0,
+          "skills": 0
+        },
+        "composition": [
+          40,
+          28,
+          9,
+          3
+        ],
+        "evaluation": {
+          "stats": [
+            6,
+            5,
+            8,
+            5,
+            5,
+            4,
+            5,
+            5,
+            4,
+            6
+          ],
+          "total": 53,
+          "tier": "SIN TIER",
+          "authority": "ESTRUCTURAL_NO_APTO",
+          "legal": false,
+          "certified": false
+        },
+        "probabilityCopies": 40
+      },
+      {
+        "id": "meta322:labrynth",
+        "pass": true,
+        "counts": {
+          "main": 41,
+          "extra": 13,
+          "side": 0,
+          "skills": 0
+        },
+        "composition": [
+          41,
+          22,
+          2,
+          17
+        ],
+        "evaluation": {
+          "stats": [
+            7,
+            6,
+            8,
+            7,
+            7,
+            5,
+            6,
+            6,
+            4,
+            7
+          ],
+          "total": 63,
+          "tier": "TIER 2",
+          "authority": "ESTRUCTURAL_PROVISIONAL",
+          "legal": null,
+          "certified": false
+        },
+        "probabilityCopies": 41
+      },
+      {
+        "id": "meta322:memento",
+        "pass": true,
+        "counts": {
+          "main": 44,
+          "extra": 15,
+          "side": 0,
+          "skills": 0
+        },
+        "composition": [
+          44,
+          22,
+          22,
+          0
+        ],
+        "evaluation": {
+          "stats": [
+            7,
+            5,
+            8,
+            6,
+            7,
+            5,
+            5,
+            6,
+            5,
+            6
+          ],
+          "total": 60,
+          "tier": "SIN TIER",
+          "authority": "ESTRUCTURAL_NO_APTO",
+          "legal": false,
+          "certified": false
+        },
+        "probabilityCopies": 44
+      },
+      {
+        "id": "meta324:mitsurugi",
+        "pass": true,
+        "counts": {
+          "main": 40,
+          "extra": 15,
+          "side": 0,
+          "skills": 0
+        },
+        "composition": [
+          40,
+          18,
+          17,
+          5
+        ],
+        "evaluation": {
+          "stats": [
+            8,
+            5,
+            7,
+            6,
+            7,
+            5,
+            5,
+            6,
+            5,
+            6
+          ],
+          "total": 60,
+          "tier": "SIN TIER",
+          "authority": "ESTRUCTURAL_NO_APTO",
+          "legal": false,
+          "certified": false
+        },
+        "probabilityCopies": 40
+      },
+      {
+        "id": "meta324:k9vs",
+        "pass": true,
+        "counts": {
+          "main": 40,
+          "extra": 10,
+          "side": 0,
+          "skills": 0
+        },
+        "composition": [
+          40,
+          30,
+          9,
+          1
+        ],
+        "evaluation": {
+          "stats": [
+            6,
+            4,
+            7,
+            5,
+            5,
+            5,
+            4,
+            5,
+            4,
+            5
+          ],
+          "total": 50,
+          "tier": "SIN TIER",
+          "authority": "ESTRUCTURAL_NO_APTO",
+          "legal": false,
+          "certified": false
+        },
+        "probabilityCopies": 40
+      }
+    ],
+    "invalid_import_is_transactional": {
+      "rejected": true,
+      "preserved": true
+    },
+    "ydk_download_preserves_cards": {
+      "bytes": 518,
+      "name": "meta324-k9vs.ydk",
+      "expectedLines": [
+        "#main",
+        "29302858",
+        "29302858",
+        "29302858",
+        "29280200",
+        "29280200",
+        "29280200",
+        "91073013",
+        "9091064",
+        "9091064",
+        "9091064",
+        "93156774",
+        "93156774",
+        "93156774",
+        "92895501",
+        "14558127",
+        "14558127",
+        "14558127",
+        "35405755",
+        "35405755",
+        "35405755",
+        "42141493",
+        "42141493",
+        "42141493",
+        "92248362",
+        "92248362",
+        "28642461",
+        "28642461",
+        "28642461",
+        "55031170",
+        "91025875",
+        "54562327",
+        "54562327",
+        "54562327",
+        "35550352",
+        "32807846",
+        "80181649",
+        "80181649",
+        "53792930",
+        "25311006",
+        "60883493",
+        "#extra",
+        "28168628",
+        "28168628",
+        "27420824",
+        "27420824",
+        "54919528",
+        "90303227",
+        "90448279",
+        "34876719",
+        "35772782",
+        "49456901",
+        "!side"
+      ],
+      "actualLines": [
+        "#main",
+        "29302858",
+        "29302858",
+        "29302858",
+        "29280200",
+        "29280200",
+        "29280200",
+        "91073013",
+        "9091064",
+        "9091064",
+        "9091064",
+        "93156774",
+        "93156774",
+        "93156774",
+        "92895501",
+        "14558127",
+        "14558127",
+        "14558127",
+        "35405755",
+        "35405755",
+        "35405755",
+        "42141493",
+        "42141493",
+        "42141493",
+        "92248362",
+        "92248362",
+        "28642461",
+        "28642461",
+        "28642461",
+        "55031170",
+        "91025875",
+        "54562327",
+        "54562327",
+        "54562327",
+        "35550352",
+        "32807846",
+        "80181649",
+        "80181649",
+        "53792930",
+        "25311006",
+        "60883493",
+        "#extra",
+        "28168628",
+        "28168628",
+        "27420824",
+        "27420824",
+        "54919528",
+        "90303227",
+        "90448279",
+        "34876719",
+        "35772782",
+        "49456901",
+        "!side"
+      ]
+    },
+    "json_export_records_scope": null,
+    "png_export": {
+      "bytes": 91529
+    },
+    "print_pdf_render": {
+      "bytes": 13417401
+    },
+    "shared_link_restores_deck_and_format": {
+      "main": 40
+    },
+    "external_evidence_bound_to_build": null,
+    "mobile_has_no_horizontal_overflow": {
+      "width": 390,
+      "scroll": 390
+    },
+    "standalone_bytes_offline": {
+      "transport": "Document bytes fulfilled locally, browser network offline",
+      "fileNavigation": "Not validated: managed Chromium blocks file: URLs with ERR_BLOCKED_BY_ADMINISTRATOR"
+    },
+    "no_javascript_page_errors": []
+  },
+  "scope": "Functional scoped product; not universal rules or competitive-ranking certification."
+}
