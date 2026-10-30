@@ -1,4 +1,25 @@
-# Cambios de la revisión 14
+# Cambios de la revisión 15
+
+La revisión `2026.10-stable.15` añade Monster Reborn como activación registrada y una herramienta para exportar una copia revisada de identidades de la baraja. Conserva el HTML único y la puntuación estructural provisional.
+
+La revisión 15 pasó **63/63 grupos de pruebas en una ejecución completa** sobre el HTML final, con **119 archivos JavaScript** comprobados. Chromium, Firefox y WebKit aprobaron sus tareas; Firefox completó la apertura directa del HTML local sin conexión. Las tareas móviles se ejecutaron en Chromium y WebKit emulados, sin acreditar teléfonos físicos ni conformidad WCAG completa. Build `c4b3a88282d993fd538a0ecc5c80b62f99239bfbbfeb0fd47bdbfc70816388ed`; SHA-256 `2a4e2c76869e9fdfce9435152fd2c0b654180a0a71c1e0c082b08555c263b804`; tamaño **7,075,902 bytes**. Estos resultados se limitan a las capacidades y tareas registradas; la puntuación competitiva sigue provisional.
+
+La aceptación local, la publicación, la descarga HTTP y el resultado remoto de GitHub Actions se verifican y registran por separado para el commit de esta revisión.
+
+- Añade `ACTIVATE_MONSTER_REBORN` (83764718) como cuarta Mágica Normal registrada, desde mano en Main Phase propia. Selecciona un objetivo revisado de cualquiera de los dos Cementerios y una posición legal en una zona principal libre.
+- Conserva UID y propietario al revivir bajo control propio. Mechaba puede enviar una Mágica física como coste; Roar y las columnas negadas conservan pagos, usos y destinos dentro de la cadena acotada.
+- Distingue el procedimiento de invocación apropiado observado por el motor de la historia inicial declarada. Los Extra admitidos necesitan ese historial; la resurrección se registra como Special Summon, por lo que no conserva la condición de recién Invocado por Fusión.
+- Corrige los destinos fuera del campo para cartas controladas por alguien distinto de su propietario: batalla y materiales llegan al Cementerio del propietario. La identidad de resultados conserva también el propietario por zona, para no agrupar continuaciones diferentes.
+- Añade el ejemplo `reborn`, conservando los catorce identificadores anteriores. Permite comparar resurrección, negación y devolución posterior al propietario con Compulsory.
+- Añade una copia JSON de baraja con identidades revisadas: propuestas presentes, elección explícita, vista previa, incidencias y verificación ligada al origen. Conserva cantidades, zonas, formato, contexto y Skills; la baraja activa, el catálogo y el laboratorio no cambian.
+
+La herramienta no aplica propuestas automáticamente ni transfiere al candidato la certificación documental del passcode sustituido. Cambiar el origen invalida la propuesta pendiente. La copia mantiene sus incidencias de construcción; una revisión de identidad no acredita por sí sola su legalidad, disponibilidad o rulings.
+
+Monster Reborn se limita a perfiles de monstruo revisados; las condiciones, disparos y consecuencias desconocidas no se omiten para admitir un objetivo. No añade Ash o Spirit como respuesta a la activación ordinaria de esta Mágica, no crea un uso por turno ficticio y no amplía prioridad general ni todas las cadenas.
+
+La revisión 14 conserva su [aceptación local de 60/60 grupos](https://github.com/socramgns/MODERN/blob/97999625580fbab3b035edae25748148571cb205/evidence/validation-summary.json), con 117 archivos JavaScript comprobados, tres motores de escritorio, apertura directa offline en Firefox y 35/35 comprobaciones móviles emuladas. Su [descarga HTTP verificada](https://github.com/socramgns/MODERN/raw/97999625580fbab3b035edae25748148571cb205/Analizador_YuGiOh.html?download=1) corresponde al commit `97999625580fbab3b035edae25748148571cb205` y al SHA-256 `28e03daf44c632ad8edb358e9f216b745b332cc18643eca2e1f188213b15974d`. Su [ejecución remota de GitHub Actions](https://github.com/socramgns/MODERN/actions/runs/40992556499) terminó correctamente para ese commit. Esa evidencia pertenece a revisión 14 y no sustituye la aceptación de los bytes nuevos.
+
+# Antecedente: cambios de la revisión 14
 
 La revisión `2026.10-stable.14` añade continuaciones hipotéticas ponderadas, un diagnóstico de calidad de datos y aceptación móvil emulada, conservando el HTML único y la puntuación estructural provisional.
 

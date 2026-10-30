@@ -61,8 +61,8 @@ def run(url=None):
         check('release8_boots_offline_from_the_manifest_bound_document', response is not None
               and hashlib.sha256(response.body()).hexdigest() == html_hash
               and page.evaluate('()=>navigator.onLine===false&&YGO_BUILD_MANIFEST.buildId') == build['buildId'])
-        expected_ids = ['spark', 'spirit', 'invoked', 'swordsoul', 'branded', 'tenyi', 'salamangreat', 'roar', 'crow', 'droll', 'field', 'trap', 'evacuation', 'shuffle']
-        check('fourteen_visible_examples_preserve_the_previous_thirteen_identifiers',
+        expected_ids = ['spark', 'spirit', 'invoked', 'swordsoul', 'branded', 'tenyi', 'salamangreat', 'roar', 'crow', 'droll', 'field', 'trap', 'evacuation', 'shuffle', 'reborn']
+        check('fifteen_visible_examples_preserve_the_previous_fourteen_identifiers',
               page.locator('#ygoExampleSelect').evaluate('(el)=>[...el.options].map(o=>o.value)') == expected_ids)
         metadata = page.evaluate('()=>YGOResponses.capabilities().mechabaNonFieldMonsterActivations.filter(r=>["DD_CROW_BANISH","DROLL_LOCK"].includes(r.type))')
         check('crow_and_droll_are_explicit_hand_packets_without_an_invented_once_per_turn',

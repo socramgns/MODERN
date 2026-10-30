@@ -1,0 +1,279 @@
+{
+  "schema": "ygo-node-source-suite-evidence/v1",
+  "pass": true,
+  "buildId": "c4b3a88282d993fd538a0ecc5c80b62f99239bfbbfeb0fd47bdbfc70816388ed",
+  "htmlSha256": "2a4e2c76869e9fdfce9435152fd2c0b654180a0a71c1e0c082b08555c263b804",
+  "artifactMode": "SOURCE_NODE_SUITE",
+  "testFile": "tests/monster_reborn.cjs",
+  "testFileSha256": "e69a189da40d822bfc991b21ff36d868e4eac738f2ed98b3eefca549177ad307",
+  "meaning": "Source-level Node cases executed during validation of the bound artifact; compiled document tasks are reported separately in revision15-browser.json and mobile-accessibility.json.",
+  "result": {
+    "schema": "ygo-monster-reborn-tests/v1",
+    "pass": true,
+    "total": 64,
+    "tests": [
+      {
+        "name": "Monster Reborn is the exact fourth registered single Normal Spell, also registered for physical Spell negation",
+        "pass": true
+      },
+      {
+        "name": "Main GY owner 0 revives under controller 0 in Main 0 ATTACK",
+        "pass": true
+      },
+      {
+        "name": "Main GY owner 0 revives under controller 0 in Main 0 DEFENSE",
+        "pass": true
+      },
+      {
+        "name": "Main GY owner 0 revives under controller 0 in Main 1 ATTACK",
+        "pass": true
+      },
+      {
+        "name": "Main GY owner 0 revives under controller 0 in Main 1 DEFENSE",
+        "pass": true
+      },
+      {
+        "name": "Main GY owner 0 revives under controller 0 in Main 2 ATTACK",
+        "pass": true
+      },
+      {
+        "name": "Main GY owner 0 revives under controller 0 in Main 2 DEFENSE",
+        "pass": true
+      },
+      {
+        "name": "Main GY owner 0 revives under controller 0 in Main 3 ATTACK",
+        "pass": true
+      },
+      {
+        "name": "Main GY owner 0 revives under controller 0 in Main 3 DEFENSE",
+        "pass": true
+      },
+      {
+        "name": "Main GY owner 0 revives under controller 0 in Main 4 ATTACK",
+        "pass": true
+      },
+      {
+        "name": "Main GY owner 0 revives under controller 0 in Main 4 DEFENSE",
+        "pass": true
+      },
+      {
+        "name": "Main GY owner 1 revives under controller 0 in Main 0 ATTACK",
+        "pass": true
+      },
+      {
+        "name": "Main GY owner 1 revives under controller 0 in Main 0 DEFENSE",
+        "pass": true
+      },
+      {
+        "name": "Main GY owner 1 revives under controller 0 in Main 1 ATTACK",
+        "pass": true
+      },
+      {
+        "name": "Main GY owner 1 revives under controller 0 in Main 1 DEFENSE",
+        "pass": true
+      },
+      {
+        "name": "Main GY owner 1 revives under controller 0 in Main 2 ATTACK",
+        "pass": true
+      },
+      {
+        "name": "Main GY owner 1 revives under controller 0 in Main 2 DEFENSE",
+        "pass": true
+      },
+      {
+        "name": "Main GY owner 1 revives under controller 0 in Main 3 ATTACK",
+        "pass": true
+      },
+      {
+        "name": "Main GY owner 1 revives under controller 0 in Main 3 DEFENSE",
+        "pass": true
+      },
+      {
+        "name": "Main GY owner 1 revives under controller 0 in Main 4 ATTACK",
+        "pass": true
+      },
+      {
+        "name": "Main GY owner 1 revives under controller 0 in Main 4 DEFENSE",
+        "pass": true
+      },
+      {
+        "name": "One physical Reborn chooses between both GYs without moving an unselected copy",
+        "pass": true
+      },
+      {
+        "name": "Real opponent-owned revival followed by CED returns that same UID to its owner hand",
+        "pass": true
+      },
+      {
+        "name": "Outcome identity preserves physical owners by zone for identical controlled monsters and real CED returns",
+        "pass": true
+      },
+      {
+        "name": "A revived opponent-owned monster destroyed in real mutual battle returns to the owner GY",
+        "pass": true
+      },
+      {
+        "name": "A revived opponent-owned Aleister used by a real Artemis Link Summon goes to the owner GY",
+        "pass": true
+      },
+      {
+        "name": "Actual Artemis and Invocation establish Fusion history which survives battle and revival",
+        "pass": true
+      },
+      {
+        "name": "Actual Artemis Link Summon and battle respect its Special Summon limit, then permit Main-zone revival on a later turn",
+        "pass": true
+      },
+      {
+        "name": "Actual Tenyi hand Special Summon and Monk Link history permit a same-turn Main-zone revival after battle",
+        "pass": true
+      },
+      {
+        "name": "Actual Mo Ye Token and Chixiao Synchro history survive battle and Reborn without repeating search or draw",
+        "pass": true
+      },
+      {
+        "name": "Declared GY Extra 75286621 without a real proper summon is excluded",
+        "pass": true
+      },
+      {
+        "name": "Declared GY Extra 34755994 without a real proper summon is excluded",
+        "pass": true
+      },
+      {
+        "name": "Declared GY Extra 69248256 without a real proper summon is excluded",
+        "pass": true
+      },
+      {
+        "name": "Declared GY Extra 59822133 without a real proper summon is excluded",
+        "pass": true
+      },
+      {
+        "name": "Declared GY Extra 70534340 without a real proper summon is excluded",
+        "pass": true
+      },
+      {
+        "name": "Forged placement proper-history fields do not become executed history",
+        "pass": true
+      },
+      {
+        "name": "A declared proper starting field destroyed by actual battle is still not an actual registered Fusion history",
+        "pass": true
+      },
+      {
+        "name": "Real Branded Fusion Extra-only restriction permits a Main monster GY revival",
+        "pass": true
+      },
+      {
+        "name": "Actual Ashuna banish cost and Wyrm-only lock exclude Dragon GY revival but permit a reviewed Wyrm",
+        "pass": true
+      },
+      {
+        "name": "Reborn Mo Ye queues its real optional Token trigger without consuming a Normal Summon",
+        "pass": true
+      },
+      {
+        "name": "Reborn Gazelle queues its reviewed on-summon send and that trigger uses an actual Deck card",
+        "pass": true
+      },
+      {
+        "name": "Revival into the live EMZ Wolf linked Main zone queues its existing FIRE recovery trigger",
+        "pass": true
+      },
+      {
+        "name": "Mechaba pays an actual hand Spell and banishes the activated Reborn source while leaving the selected GY monster",
+        "pass": true
+      },
+      {
+        "name": "Opponent Roar negates the Normal Spell card activation and destroys the physical source",
+        "pass": true
+      },
+      {
+        "name": "Own Roar counters Mechaba without refunding its Spell cost and Reborn then revives its original target",
+        "pass": true
+      },
+      {
+        "name": "A physical own Roar can counter the rival Roar and restore the declared revival",
+        "pass": true
+      },
+      {
+        "name": "Ash and Blue-Eyes Spirit Dragon cannot answer a Spell card activation from the hand",
+        "pass": true
+      },
+      {
+        "name": "Actual Set Impermanence column negates a forced Reborn column while retaining physical activation and cleanup",
+        "pass": true
+      },
+      {
+        "name": "A free unblocked Spell column is used after real Impermanence instead of an available blocked column",
+        "pass": true
+      },
+      {
+        "name": "A real Impermanence column negates the own Roar counter while Mechaba still negates Reborn and keeps its Spell cost",
+        "pass": true
+      },
+      {
+        "name": "No free Main zone blocks Reborn even when an Extra Monster Zone remains free",
+        "pass": true
+      },
+      {
+        "name": "All five ordinary Spell/Trap slots occupied block a hand Normal Spell source",
+        "pass": true
+      },
+      {
+        "name": "Reborn remains an own Main Phase Speed 1 action: {\"phase\":\"BATTLE\"}",
+        "pass": true
+      },
+      {
+        "name": "Reborn remains an own Main Phase Speed 1 action: {\"phase\":\"END\"}",
+        "pass": true
+      },
+      {
+        "name": "Reborn remains an own Main Phase Speed 1 action: {\"activePlayer\":1}",
+        "pass": true
+      },
+      {
+        "name": "Pending real Mo Ye trigger cannot be skipped to activate Reborn",
+        "pass": true
+      },
+      {
+        "name": "Unsupported revival profile 38033121 is excluded rather than executing arbitrary card text",
+        "pass": true
+      },
+      {
+        "name": "Unsupported revival profile 16195942 is excluded rather than executing arbitrary card text",
+        "pass": true
+      },
+      {
+        "name": "Unsupported revival profile 70026064 is excluded rather than executing arbitrary card text",
+        "pass": true
+      },
+      {
+        "name": "Forged source, target, destination and position are rejected without input mutation",
+        "pass": true
+      },
+      {
+        "name": "An occupied Main destination cannot replace a physical monster",
+        "pass": true
+      },
+      {
+        "name": "Mechaba rejects forged Monster or Trap payment, activation location and copied activation packet claims",
+        "pass": true
+      },
+      {
+        "name": "Fresh replay rejects tampered target ownership, actual summon history, paid costs and activation proof",
+        "pass": true
+      },
+      {
+        "name": "Bounded search finds the real target/destination revival and every returned witness replays",
+        "pass": true
+      }
+    ],
+    "limitations": [
+      "Pinned CDB metadata and the dated TCG application restriction snapshot are technical inputs, not new official rule authentication.",
+      "Starting GYs and fields are explicit declarations; Extra revival eligibility is tested using actual registered Fusion/Synchro/Link actions and battle destruction.",
+      "Only registered reviewed revival profiles and bounded response packets are covered; arbitrary card text, general priority, Xyz/Pendulum and unknown mandatory triggers are excluded.",
+      "Competitive scoring remains provisional by user request; diagnostic decks are not tournament evidence."
+    ]
+  }
+}

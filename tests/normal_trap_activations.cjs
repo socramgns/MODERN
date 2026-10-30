@@ -13,7 +13,7 @@ const I={IMPERM:10045474,MECHABA:75286621,SPIRIT:59822133,ROAR:51339637,
 
 (async()=>{
  const {W,E,fixture}=await harness(true),H=E.helpers,tests=[];
- for(const module of ['duel-phases','responses','archetypes-expanded','blue-eyes-duel'])
+ for(const module of ['duel-phases','responses','archetypes-expanded','blue-eyes-duel','monster-reborn'])
   vm.runInNewContext(fs.readFileSync(path.join(ROOT,'src/app/'+module+'.js'),'utf8'),
    {window:W,structuredClone,console,Date,Promise,setTimeout,clearTimeout,performance});
  await Promise.resolve();
@@ -99,7 +99,7 @@ const I={IMPERM:10045474,MECHABA:75286621,SPIRIT:59822133,ROAR:51339637,
   const ced=normal.find(row=>row.cardId===94192409);assert(ced);assert.equal(ced.type,'ACTIVATE_COMPULSORY_EVACUATION_DEVICE');
   assert.deepEqual(Array.from(ced.activationZones),['spelltrap']);assert.deepEqual(Array.from(normal[0].activationZones),['hand','spelltrap']);
   assert.equal(normal[0].spellSpeed,2);assert.equal(normal[0].restriction,'NONE');
-  assert.equal(caps.normalSpellActivations.length,3);assert.equal(caps.fieldSpellActivations.length,2);
+  assert.equal(caps.normalSpellActivations.length,4);assert.equal(caps.fieldSpellActivations.length,2);
   const response=W.YGOResponses.capabilities();assert(Array.from(response.mechabaModeledCardTypes).includes('TRAP'));
   assert.deepEqual(Array.from(response.mechabaNormalTrapActivations),[TYPE,'ACTIVATE_COMPULSORY_EVACUATION_DEVICE']);
   assert.equal(response.mechabaNonFieldMonsterActivations.length,15);

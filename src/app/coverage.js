@@ -8,6 +8,7 @@ const effect=(id,label)=>action('EFFECT',id,label),summon=(id,label)=>action('SU
 // Each entry names an actual source action. Being material, a search target,
 // a reviewed departure cost or a CDB match does not add an effect to this map.
 const definitions=[
+ {id:83764718,actions:[effect('ACTIVATE_MONSTER_REBORN','Revivir un monstruo admitido desde cualquier Cementerio')],notes:['Conserva al propietario y coloca el monstruo bajo tu control. Los monstruos Extra requieren un historial real de invocación correcta; el subconjunto de objetivos es explícito.']},
  {id:86120751,actions:[summon('NORMAL_SUMMON','Invocación Normal registrada'),effect('ALEISTER_SEARCH','Buscar Invocation')]},
  {id:34755994,actions:[summon('LINK_ARTEMIS','Invocación Link de Artemis')]},
  {id:74063034,actions:[effect('INVOCATION_MECHABA','Fusión de Mechaba con materiales admitidos'),effect('INVOCATION_RECYCLE','Recuperación de Invocation y Aleister')]},

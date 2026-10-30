@@ -42,7 +42,7 @@ register({type:'BRANDED_FUSION_LUBELLION',cardActivation:'NORMAL_SPELL',activati
  if(a.ashNegated||a.effectNegated||a.activationNegated)return{activationEvents,events:[{type:'BRANDED_FUSION_EFFECT_NEGATED',uid:a.sourceUid,materialsMoved:false}]};
  const materials=a.materialUids.map(uid=>{const hit=H.locate(st,uid);return{uid,from:hit.zone,to:'gy',kind:'FUSION_MATERIAL'}});
  for(const uid of a.materialUids)sent(st,uid,'gy');if(materials.some(m=>m.from==='deck'))H.shuffle(st);
- const fusion=H.move(st,a.fusionUid,'monster');fusion.summonType='FUSION';st.extraHistory.push('FUSION');H.queueTrigger(st,'LUBELLION_FUSION',fusion.uid);
+ const fusion=H.move(st,a.fusionUid,'monster');fusion.summonType='FUSION';fusion.properlySummoned=true;fusion.properSummonType='FUSION';st.extraHistory.push('FUSION');H.queueTrigger(st,'LUBELLION_FUSION',fusion.uid);
  return{activationEvents,paid:materials,events:[{type:'FUSION_SUMMON',uid:fusion.uid,materials:a.materialUids,spellUid:a.sourceUid}]};
 }});
 register({type:'LUBELLION_FUSION_MIRRORJADE',enumerate:st=>{
@@ -60,7 +60,7 @@ register({type:'LUBELLION_FUSION_MIRRORJADE',enumerate:st=>{
  let mainShuffle=false;
  for(const uid of a.materialUids){const x=H.locate(st,uid).item,to=extraType(x)?'extra':'deck';H.move(st,uid,to);mainShuffle ||= to==='deck';paid.push({kind:'FUSION_MATERIAL_RETURN',uid,to});}
  if(mainShuffle)H.shuffle(st);
- const fusion=H.move(st,a.fusionUid,'monster');fusion.summonType='FUSION';st.extraHistory.push('FUSION');
+ const fusion=H.move(st,a.fusionUid,'monster');fusion.summonType='FUSION';fusion.properlySummoned=true;fusion.properSummonType='FUSION';st.extraHistory.push('FUSION');
  return{paid,activationEvents,events:[{type:'FUSION_SUMMON',uid:fusion.uid,materials:a.materialUids,effect:'LUBELLION_FUSION'}]};
 }});
 register({type:'BLUE_EYES_NORMAL_SUMMON_SAGE',enumerate:st=>idle(st)&&st.normalSummonAvailable[0]&&H.mainRoom(st)?own(st,'hand',x=>id(x)===I.SAGE).map(x=>({type:'BLUE_EYES_NORMAL_SUMMON_SAGE',sourceUid:x.uid})):[],apply:(st,a)=>{
@@ -77,7 +77,7 @@ register({type:'LINK_SPIRIT_WITH_EYES_OF_BLUE',enumerate:st=>{
  if(!idle(st)||own(st,'monster',x=>x.zoneIndex===5).length)return[];
  return own(st,'extra',x=>id(x)===I.SPIRIT&&isExtraAllowed(st,'LINK',x)).flatMap(target=>own(st,'monster',x=>face(x)&&safeLinkMaterial(x)&&[2,8192].includes(race(x))&&level(x)>=1&&level(x)<=4).map(x=>({type:'LINK_SPIRIT_WITH_EYES_OF_BLUE',sourceUid:target.uid,materialUids:[x.uid]})));
 },apply:(st,a)=>{
- for(const uid of a.materialUids)sent(st,uid,'gy');const x=H.move(st,a.sourceUid,'monster',{zoneIndex:5});x.summonType='LINK';st.extraHistory.push('LINK');st.locks.push({kind:'DRAGON_ONLY',sourceUid:x.uid});H.queueTrigger(st,'SPIRIT_MAUSOLEUM',x.uid);
+ for(const uid of a.materialUids)sent(st,uid,'gy');const x=H.move(st,a.sourceUid,'monster',{zoneIndex:5});x.summonType='LINK';x.properlySummoned=true;x.properSummonType='LINK';st.extraHistory.push('LINK');st.locks.push({kind:'DRAGON_ONLY',sourceUid:x.uid});H.queueTrigger(st,'SPIRIT_MAUSOLEUM',x.uid);
  return{paid:a.materialUids.map(uid=>({kind:'LINK_MATERIAL',uid,to:'gy'})),events:[{type:'LINK_SUMMON',uid:x.uid,materials:a.materialUids}]};
 }});
 register({type:'SPIRIT_SEARCH_MAUSOLEUM',ashable:true,enumerate:st=>!H.isUsed(st,'SPIRIT_MAUSOLEUM')?pending(st,'SPIRIT_MAUSOLEUM').flatMap(t=>own(st,'deck',x=>id(x)===I.MAUSOLEUM).map(x=>({type:'SPIRIT_SEARCH_MAUSOLEUM',sourceUid:t.sourceUid,selectionUid:x.uid}))):[],apply:(st,a)=>{
@@ -129,7 +129,7 @@ register({type:'SYNCHRO_BLUE_EYES_SPIRIT_DRAGON',enumerate:st=>{
  if(!idle(st))return[];
  return own(st,'extra',x=>id(x)===I.SPIRIT_DRAGON&&isExtraAllowed(st,'SYNCHRO',x)).flatMap(target=>own(st,'monster',x=>face(x)&&[I.ANCIENTS,I.SAGE,I.VEILER].includes(id(x))&&level(x)===1&&(Number(c(x).typeBits)&0x1000)).flatMap(tuner=>own(st,'monster',x=>face(x)&&id(x)===I.BEWD&&level(x)===8&&!(Number(c(x).typeBits)&0x1000)).map(blue=>({type:'SYNCHRO_BLUE_EYES_SPIRIT_DRAGON',sourceUid:target.uid,materialUids:[tuner.uid,blue.uid]}))));
 },apply:(st,a)=>{
- for(const uid of a.materialUids)sent(st,uid,'gy');const x=H.move(st,a.sourceUid,'monster');x.summonType='SYNCHRO';st.extraHistory.push('SYNCHRO');
+ for(const uid of a.materialUids)sent(st,uid,'gy');const x=H.move(st,a.sourceUid,'monster');x.summonType='SYNCHRO';x.properlySummoned=true;x.properSummonType='SYNCHRO';st.extraHistory.push('SYNCHRO');
  return{paid:a.materialUids.map(uid=>({kind:'SYNCHRO_MATERIAL',uid,to:'gy'})),events:[{type:'SYNCHRO_SUMMON',uid:x.uid,materials:a.materialUids},{type:'MAIN_PHASE_STOP',note:'White Stone of Ancients End Phase effect is not resolved in this Main Phase analysis.'}]};
 }});
 W.YGOArchetypeRules=Object.freeze({revision:'branded-blue-eyes-v1',cards:Object.freeze(I),archetypes:['Branded','Blue-Eyes'],scope:'Exact registered transitions in Main Phase 1, explicit opponent policy; no universal rule certification.',limitations:['Branded DARK materials are Normal Monsters or Fallen of Albaz; other material triggers are not inferred.','Discard costs use known safe cards; unrelated graveyard triggers are not silently resolved.','End Phase, combat and Pendulum material replacement are outside these handlers.','Mausoleum extra Normal Summon supports Sage, Ancients and Effect Veiler.']});

@@ -1,0 +1,110 @@
+{
+  "schema": "ygo-node-source-suite-evidence/v1",
+  "pass": true,
+  "buildId": "c4b3a88282d993fd538a0ecc5c80b62f99239bfbbfeb0fd47bdbfc70816388ed",
+  "htmlSha256": "2a4e2c76869e9fdfce9435152fd2c0b654180a0a71c1e0c082b08555c263b804",
+  "artifactMode": "SOURCE_NODE_SUITE",
+  "testFile": "tests/deck_identity_review.cjs",
+  "testFileSha256": "1df7adbdf1356b64fb5322917dbcfd072405577ffe4c1d00bd61292724b43a4b",
+  "meaning": "Source-level Node cases executed during validation of the bound artifact; compiled document tasks are reported separately in revision15-browser.json and mobile-accessibility.json.",
+  "result": {
+    "schema": "ygo-deck-identity-review-tests/v1",
+    "pass": true,
+    "total": 22,
+    "tests": [
+      {
+        "name": "Exact candidate IDs and technical provenance are checked against the checksum-validated cached SQLite source",
+        "pass": true
+      },
+      {
+        "name": "Only proposals actually present in the source are listed with conserved quantities and zones",
+        "pass": true
+      },
+      {
+        "name": "An empty selection conserves all printed passcodes and does not select a candidate",
+        "pass": true
+      },
+      {
+        "name": "Explicit decisions produce the independently expected IDs and merge quantities without moving zones",
+        "pass": true
+      },
+      {
+        "name": "The exported JSON normalizes through the actual existing importer with all zones and context intact",
+        "pass": true
+      },
+      {
+        "name": "Merged families above three remain present and carry diagnostic incidents without legality claims",
+        "pass": true
+      },
+      {
+        "name": "Source, choices, output, active deck, actual engine state and goal are detached across successful and failed decisions",
+        "pass": true
+      },
+      {
+        "name": "Malformed, duplicate, unknown, absent and invented candidate choices are rejected transactionally",
+        "pass": true
+      },
+      {
+        "name": "Executable properties and sparse or non-JSON values cannot become review decisions or source data",
+        "pass": true
+      },
+      {
+        "name": "A full source fingerprint binds quantities, all zones, name, build, format and declared context",
+        "pass": true
+      },
+      {
+        "name": "Changes to the live deck or semantic context invalidate old source snapshots without mutating them",
+        "pass": true
+      },
+      {
+        "name": "Main and Extra incompatibility is rejected without automatic movement or source repair",
+        "pass": true
+      },
+      {
+        "name": "Ambiguous technical token proposals retain every candidate and no manual choice makes Tokens deckable",
+        "pass": true
+      },
+      {
+        "name": "Recognized identity-specific evidence is retained for kept IDs and explicitly omitted for a changed ID",
+        "pass": true
+      },
+      {
+        "name": "Conflicting evidence on converging rows is not silently dropped or promoted to the candidate",
+        "pass": true
+      },
+      {
+        "name": "Format context and independent Skills round-trip through the existing normalizer",
+        "pass": true
+      },
+      {
+        "name": "Reverification recomputes copy IDs, quantities, source decisions, provenance, summary, context and audit",
+        "pass": true
+      },
+      {
+        "name": "A candidate-valid edited source and recomputed fingerprint still fail against the expected original source",
+        "pass": true
+      },
+      {
+        "name": "Presentation edits and externally modified proposals cannot invent candidates or alter the immutable preview names",
+        "pass": true
+      },
+      {
+        "name": "Build or inventory changes fail closed while source and catalogue diagnostics remain read-only",
+        "pass": true
+      },
+      {
+        "name": "The final UTF-8 JSON copy cannot exceed the actual existing 4 MiB file import limit",
+        "pass": true
+      },
+      {
+        "name": "Backend-only use exposes no prepared browser download and does not apply any copy",
+        "pass": true
+      }
+    ],
+    "limitations": [
+      "Technical exact-name candidates are not official passcode equivalence, release or ruling certification.",
+      "The copy workflow does not mutate or replace the active deck, catalogue, laboratory state, goal or competitive scoring.",
+      "Source comparison is an explicit data binding, not a cryptographic authorship signature; actual browser downloads/file imports and stale controls are tested in GUI15."
+    ]
+  }
+}

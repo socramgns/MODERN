@@ -1,168 +1,180 @@
 {
   "schema": "ygo-validation-summary/v1",
-  "buildId": "20eb64b21d09ad48a1ad0f1eae39864302fd2aa96bd5d37bed83a40aeffbebbf",
-  "htmlSha256": "28e03daf44c632ad8edb358e9f216b745b332cc18643eca2e1f188213b15974d",
+  "buildId": "c4b3a88282d993fd538a0ecc5c80b62f99239bfbbfeb0fd47bdbfc70816388ed",
+  "htmlSha256": "2a4e2c76869e9fdfce9435152fd2c0b654180a0a71c1e0c082b08555c263b804",
   "pass": true,
   "suites": [
     {
       "name": "source_syntax",
       "pass": true,
-      "files": 117
+      "files": 119
     },
     {
       "name": "release6_in_browser",
       "pass": true,
-      "elapsedMs": 16884,
+      "elapsedMs": 18297,
       "log": "tests/release6_in_browser.log"
     },
     {
       "name": "laboratory_usability",
       "pass": true,
-      "elapsedMs": 26957,
+      "elapsedMs": 29145,
       "log": "tests/laboratory_usability.log"
     },
     {
       "name": "local_file_delivery",
       "pass": true,
-      "elapsedMs": 19882,
+      "elapsedMs": 24278,
       "log": "tests/local_file_delivery.log"
     },
     {
       "name": "registered_response_chains",
       "pass": true,
-      "elapsedMs": 1518,
+      "elapsedMs": 1623,
       "log": "tests/registered_response_chains.log"
     },
     {
       "name": "response_windows",
       "pass": true,
-      "elapsedMs": 1317,
+      "elapsedMs": 1464,
       "log": "tests/response_windows.log"
     },
     {
       "name": "new_card_effects",
       "pass": true,
-      "elapsedMs": 1326,
+      "elapsedMs": 1531,
       "log": "tests/new_card_effects.log"
     },
     {
       "name": "official_context_at_build",
       "pass": true,
-      "elapsedMs": 172,
+      "elapsedMs": 199,
       "log": "tests/official_context_at_build.log"
     },
     {
       "name": "search_horizons",
       "pass": true,
-      "elapsedMs": 615,
+      "elapsedMs": 596,
       "log": "tests/search_horizons.log"
     },
     {
       "name": "catalogue_expansion",
       "pass": true,
-      "elapsedMs": 2223,
+      "elapsedMs": 2595,
       "log": "tests/catalogue_expansion.log"
     },
     {
       "name": "draw_uncertainty",
       "pass": true,
-      "elapsedMs": 327,
+      "elapsedMs": 374,
       "log": "tests/draw_uncertainty.log"
     },
     {
       "name": "draw_continuation",
       "pass": true,
-      "elapsedMs": 18340,
+      "elapsedMs": 18113,
       "log": "tests/draw_continuation.log"
     },
     {
       "name": "data_quality",
       "pass": true,
-      "elapsedMs": 1050,
+      "elapsedMs": 1089,
       "log": "tests/data_quality.log"
+    },
+    {
+      "name": "deck_identity_review",
+      "pass": true,
+      "elapsedMs": 5156,
+      "log": "tests/deck_identity_review.log"
+    },
+    {
+      "name": "monster_reborn",
+      "pass": true,
+      "elapsedMs": 2990,
+      "log": "tests/monster_reborn.log"
     },
     {
       "name": "official_documents",
       "pass": true,
-      "elapsedMs": 259,
+      "elapsedMs": 275,
       "log": "tests/official_documents.log"
     },
     {
       "name": "duel_phases",
       "pass": true,
-      "elapsedMs": 1237,
+      "elapsedMs": 1345,
       "log": "tests/duel_phases.log"
     },
     {
       "name": "physical_responses",
       "pass": true,
-      "elapsedMs": 1529,
+      "elapsedMs": 1428,
       "log": "tests/physical_responses.log"
     },
     {
       "name": "expanded_archetypes",
       "pass": true,
-      "elapsedMs": 9609,
+      "elapsedMs": 10061,
       "log": "tests/expanded_archetypes.log"
     },
     {
       "name": "blue_eyes_duel",
       "pass": true,
-      "elapsedMs": 1294,
+      "elapsedMs": 1239,
       "log": "tests/blue_eyes_duel.log"
     },
     {
       "name": "blue_eyes_protection_and_gy",
       "pass": true,
-      "elapsedMs": 1981,
+      "elapsedMs": 2219,
       "log": "tests/blue_eyes_protection_and_gy.log"
     },
     {
       "name": "mechaba_spell_activations",
       "pass": true,
-      "elapsedMs": 927,
+      "elapsedMs": 1052,
       "log": "tests/mechaba_spell_activations.log"
     },
     {
       "name": "mechaba_monster_zones",
       "pass": true,
-      "elapsedMs": 2637,
+      "elapsedMs": 2901,
       "log": "tests/mechaba_monster_zones.log"
     },
     {
       "name": "mechaba_quick_hand",
       "pass": true,
-      "elapsedMs": 1880,
+      "elapsedMs": 2050,
       "log": "tests/mechaba_quick_hand.log"
     },
     {
       "name": "field_spell_activations",
       "pass": true,
-      "elapsedMs": 1701,
+      "elapsedMs": 1861,
       "log": "tests/field_spell_activations.log"
     },
     {
       "name": "normal_trap_activations",
       "pass": true,
-      "elapsedMs": 2105,
+      "elapsedMs": 2236,
       "log": "tests/normal_trap_activations.log"
     },
     {
       "name": "compulsory_evacuation",
       "pass": true,
-      "elapsedMs": 2178,
+      "elapsedMs": 2593,
       "log": "tests/compulsory_evacuation.log"
     },
     {
       "name": "typed_field_goals",
       "pass": true,
-      "elapsedMs": 949,
+      "elapsedMs": 1046,
       "log": "tests/typed_field_goals.log"
     },
     {
       "name": "goal_progress",
       "pass": true,
-      "elapsedMs": 740,
+      "elapsedMs": 981,
       "log": "tests/goal_progress.log"
     },
     {
@@ -174,109 +186,115 @@
     {
       "name": "card_action_coverage",
       "pass": true,
-      "elapsedMs": 351,
+      "elapsedMs": 357,
       "log": "tests/card_action_coverage.log"
     },
     {
       "name": "builtin_scenarios",
       "pass": true,
-      "elapsedMs": 1306,
+      "elapsedMs": 1552,
       "log": "tests/builtin_scenarios.log"
     },
     {
       "name": "expanded_examples_in_browser",
       "pass": true,
-      "elapsedMs": 60364,
+      "elapsedMs": 68591,
       "log": "tests/expanded_examples_in_browser.log"
     },
     {
       "name": "release8_in_browser",
       "pass": true,
-      "elapsedMs": 20308,
+      "elapsedMs": 22741,
       "log": "tests/release8_in_browser.log"
     },
     {
       "name": "release9_in_browser",
       "pass": true,
-      "elapsedMs": 17041,
+      "elapsedMs": 18759,
       "log": "tests/release9_in_browser.log"
     },
     {
       "name": "release10_in_browser",
       "pass": true,
-      "elapsedMs": 28212,
+      "elapsedMs": 30301,
       "log": "tests/release10_in_browser.log"
     },
     {
       "name": "release11_in_browser",
       "pass": true,
-      "elapsedMs": 31293,
+      "elapsedMs": 32603,
       "log": "tests/release11_in_browser.log"
     },
     {
       "name": "release12_in_browser",
       "pass": true,
-      "elapsedMs": 22705,
+      "elapsedMs": 25329,
       "log": "tests/release12_in_browser.log"
     },
     {
       "name": "release13_in_browser",
       "pass": true,
-      "elapsedMs": 20590,
+      "elapsedMs": 22661,
       "log": "tests/release13_in_browser.log"
     },
     {
       "name": "release14_in_browser",
       "pass": true,
-      "elapsedMs": 60278,
+      "elapsedMs": 62361,
       "log": "tests/release14_in_browser.log"
+    },
+    {
+      "name": "release15_in_browser",
+      "pass": true,
+      "elapsedMs": 30532,
+      "log": "tests/release15_in_browser.log"
     },
     {
       "name": "mobile_accessibility",
       "pass": true,
-      "elapsedMs": 35528,
+      "elapsedMs": 40911,
       "log": "tests/mobile_accessibility.log"
     },
     {
       "name": "release5_in_browser",
       "pass": true,
-      "elapsedMs": 23880,
+      "elapsedMs": 24795,
       "log": "tests/release5_in_browser.log"
     },
     {
       "name": "blue_eyes_in_browser",
       "pass": true,
-      "elapsedMs": 16793,
+      "elapsedMs": 18445,
       "log": "tests/blue_eyes_in_browser.log"
     },
     {
       "name": "recommendations",
       "pass": true,
-      "elapsedMs": 2441,
+      "elapsedMs": 2701,
       "log": "tests/recommendations.log"
     },
     {
       "name": "format_interface",
       "pass": true,
-      "elapsedMs": 26530,
+      "elapsedMs": 28740,
       "log": "tests/format_interface.log"
     },
     {
       "name": "advanced_interface",
       "pass": true,
-      "elapsedMs": 31806,
+      "elapsedMs": 34420,
       "log": "tests/advanced_interface.log"
     },
     {
       "name": "browser_compatibility",
       "pass": true,
-      "elapsedMs": 61217,
+      "elapsedMs": 64813,
       "log": "tests/browser_compatibility.log"
     },
     {
       "name": "formats",
       "pass": true,
-      "elapsedMs": 63,
+      "elapsedMs": 57,
       "log": "tests/formats.log"
     },
     {
@@ -288,73 +306,73 @@
     {
       "name": "strategy",
       "pass": true,
-      "elapsedMs": 266,
+      "elapsedMs": 256,
       "log": "tests/strategy.log"
     },
     {
       "name": "causal_core",
       "pass": true,
-      "elapsedMs": 681,
+      "elapsedMs": 723,
       "log": "tests/causal_core.log"
     },
     {
       "name": "archetype_rules",
       "pass": true,
-      "elapsedMs": 4806,
+      "elapsedMs": 4921,
       "log": "tests/archetype_rules.log"
     },
     {
       "name": "causal_browser",
       "pass": true,
-      "elapsedMs": 33635,
+      "elapsedMs": 38519,
       "log": "tests/causal_browser.log"
     },
     {
       "name": "catalogue",
       "pass": true,
-      "elapsedMs": 512,
+      "elapsedMs": 577,
       "log": "tests/catalogue.log"
     },
     {
       "name": "probability_and_calibration",
       "pass": true,
-      "elapsedMs": 64,
+      "elapsedMs": 78,
       "log": "tests/probability_and_calibration.log"
     },
     {
       "name": "probability_in_browser",
       "pass": true,
-      "elapsedMs": 3758,
+      "elapsedMs": 3902,
       "log": "tests/probability_in_browser.log"
     },
     {
       "name": "ui_and_persistence",
       "pass": true,
-      "elapsedMs": 26765,
+      "elapsedMs": 28381,
       "log": "tests/ui_and_persistence.log"
     },
     {
       "name": "worker",
       "pass": true,
-      "elapsedMs": 11203,
+      "elapsedMs": 12464,
       "log": "tests/worker.log"
     },
     {
       "name": "supported_search",
       "pass": true,
-      "elapsedMs": 11263,
+      "elapsedMs": 10949,
       "log": "tests/supported_search.log"
     },
     {
       "name": "delivered_bytes_e2e",
       "pass": true,
-      "elapsedMs": 64984,
+      "elapsedMs": 73419,
       "log": "tests/delivered_bytes_e2e.log"
     },
     {
       "name": "context_in_browser",
       "pass": true,
-      "elapsedMs": 28473,
+      "elapsedMs": 32861,
       "log": "tests/context_in_browser.log"
     },
     {
@@ -362,7 +380,7 @@
       "pass": true
     }
   ],
-  "elapsedSeconds": 771.1,
+  "elapsedSeconds": 880.79,
   "limitations": [
     "Registered TCG routes include six archetypes, declared physical fields, registered responses, phases and battle; unknown effects remain outside verified transitions; an explicit one-turn-draw hypothetical analysis uses separate weighted assumptions and never reveals unknown order.",
     "Competitive score remains provisional until external datasets are supplied."

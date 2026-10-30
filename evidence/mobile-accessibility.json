@@ -1,8 +1,8 @@
 {
   "schema": "ygo-mobile-accessibility/v1",
   "pass": true,
-  "buildId": "20eb64b21d09ad48a1ad0f1eae39864302fd2aa96bd5d37bed83a40aeffbebbf",
-  "htmlSha256": "28e03daf44c632ad8edb358e9f216b745b332cc18643eca2e1f188213b15974d",
+  "buildId": "c4b3a88282d993fd538a0ecc5c80b62f99239bfbbfeb0fd47bdbfc70816388ed",
+  "htmlSha256": "2a4e2c76869e9fdfce9435152fd2c0b654180a0a71c1e0c082b08555c263b804",
   "artifactMode": "DELIVERED_BYTES",
   "sourceInjection": false,
   "checks": [
@@ -179,35 +179,35 @@
     "chromium_390px_controls_have_44px_touch_targets": {
       "viewport": 390,
       "documentWidth": 390,
-      "count": 101,
+      "count": 103,
       "shortTargets": [],
       "outsideViewport": []
     },
     "chromium_390px_controls_remain_inside_the_viewport": {
       "viewport": 390,
       "documentWidth": 390,
-      "count": 101,
+      "count": 103,
       "shortTargets": [],
       "outsideViewport": []
     },
     "chromium_320px_controls_have_44px_touch_targets": {
       "viewport": 320,
       "documentWidth": 320,
-      "count": 101,
+      "count": 103,
       "shortTargets": [],
       "outsideViewport": []
     },
     "chromium_320px_controls_remain_inside_the_viewport": {
       "viewport": 320,
       "documentWidth": 320,
-      "count": 101,
+      "count": 103,
       "shortTargets": [],
       "outsideViewport": []
     },
     "chromium_twofold_text_enlargement_keeps_controls_in_view": {
       "viewport": 320,
       "documentWidth": 320,
-      "count": 101,
+      "count": 103,
       "shortTargets": [],
       "outsideViewport": []
     },
@@ -258,21 +258,21 @@
     "webkit_390px_controls_have_44px_touch_targets": {
       "viewport": 390,
       "documentWidth": 390,
-      "count": 101,
+      "count": 103,
       "shortTargets": [],
       "outsideViewport": []
     },
     "webkit_390px_controls_remain_inside_the_viewport": {
       "viewport": 390,
       "documentWidth": 390,
-      "count": 101,
+      "count": 103,
       "shortTargets": [],
       "outsideViewport": []
     },
     "webkit_twofold_text_enlargement_keeps_controls_in_view": {
       "viewport": 390,
       "documentWidth": 390,
-      "count": 101,
+      "count": 103,
       "shortTargets": [],
       "outsideViewport": []
     },
@@ -332,5 +332,5 @@
     "The native OS file picker and assistive technology were not tested.",
     "These functional tasks do not establish complete WCAG conformance or universal mobile compatibility."
   ],
-  "elapsedSeconds": 35.38
+  "elapsedSeconds": 40.76
 }

@@ -139,7 +139,23 @@ const shuffle=base('shuffle','Después de barajar: continuaciones hipotéticas',
  'Examina las ramas ponderadas y sus continuaciones verificadas. Una rama sin testigo permanece desconocida. El análisis no roba una carta en la partida ni convierte una posibilidad en un resultado observado.',
  'Puedes guardar y verificar el informe hipotético por separado. El replay del laboratorio conserva las nueve acciones reales anteriores y el Deck restante sigue sin orden conocido.'
 ]);
-const templates=new Map([spark,spirit,invoked,swordsoul,branded,tenyi,salamangreat,roar,crow,droll,field,trap,evacuation,shuffle].map(value=>[value.id,value]));
+const rebornDeck=deck([[83764718,1],[51339637,1],[94192409,1],[89631139,1]],[[87871125,1]]),rebornOpening=[83764718,...NORMALS.slice(0,4)],rebornRivalDeck=deck([[74063034,1],[89631139,1]],[[75286621,1]]),rebornRivalOpening=[74063034,...NORMALS.slice(0,4)];
+const reborn=base('reborn','Monster Reborn: revivir y conservar al propietario','Compara la negación de una Mágica, una resurrección y la devolución de una carta que pertenece al rival.',physical(rebornDeck,rebornOpening),physical(rebornRivalDeck,rebornRivalOpening),{turn:2,activePlayer:0,phase:'MAIN 1',placements:[
+ {player:0,from:'deck',cardId:51339637,zone:'spelltrap',zoneIndex:0,faceUp:false,setTurn:1},
+ {player:0,from:'deck',cardId:94192409,zone:'spelltrap',zoneIndex:2,faceUp:false,setTurn:1},
+ {player:0,from:'extra',cardId:87871125,zone:'monster',zoneIndex:5,position:'ATTACK',faceUp:true,summonTurn:1},
+ {player:0,from:'deck',cardId:89631139,zone:'gy'},
+ {player:1,from:'extra',cardId:75286621,zone:'monster',zoneIndex:0,position:'ATTACK',faceUp:true,summonTurn:1},
+ {player:1,from:'deck',cardId:89631139,zone:'gy'}
+ ]},{requiredFieldIds:[89631139]},[
+ 'Activa Monster Reborn desde tu mano sobre el Blue-Eyes White Dragon de tu Cementerio. Elige una zona principal libre, posición de Defensa, Mechaba rival pagando Invocation de su mano y una contrarrespuesta de tu Roar. El campo y los Cementerios iniciales son supuestos declarados.',
+ 'Ejecuta el paso. Roar niega y destruye Mechaba; la Mágica revive la misma copia de Blue-Eyes bajo tu control. Monster Reborn, Roar y la Invocation usada como coste terminan en sus Cementerios. Comprueba el objetivo y el replay.',
+ 'Deshaz ese paso y compara la variante de Mechaba sin Roar: Monster Reborn queda desterrada, Blue-Eyes permanece en el Cementerio y el coste rival sigue pagado.',
+ 'Deshaz la comparación. Activa Monster Reborn sin respuesta sobre el Blue-Eyes del Cementerio rival y elige tu zona principal 3, en Ataque. Esa zona no está enlazada a Wolf en este ejemplo. La copia entra bajo tu control, pero sigue perteneciendo al rival.',
+ 'Activa tu Compulsory Evacuation Device colocada en la columna 3, sin respuesta, sobre ese Blue-Eyes. Regresa a la mano de su propietario rival, no a la tuya. El objetivo deja de cumplirse; revisa el replay de ambos pasos y la identidad de la carta.',
+ 'Estos monstruos del Main no requieren historial de Invocación propia. Un monstruo del Extra con perfil admitido requiere su Invocación apropiada verificada; colocarlo inicialmente en un Cementerio no acredita esa historia.'
+ ],'RESPONSES_EXPLICIT',['MECHABA','ROAR'],'CHOICE_BRANCHES');
+const templates=new Map([spark,spirit,invoked,swordsoul,branded,tenyi,salamangreat,roar,crow,droll,field,trap,evacuation,shuffle,reborn].map(value=>[value.id,value]));
 const describe=value=>({id:value.id,name:value.name,description:value.description,scope:value.scope,steps:clone(value.tutorial.steps),replacesDeck:true,initialHistoryCertified:false,competitiveRecommendation:false});
 function list(){return[...templates.values()].map(describe);}
 function get(id){if(typeof id!=='string'||!templates.has(id))throw Error('SCENARIO_EXAMPLE_UNKNOWN');return clone(templates.get(id));}

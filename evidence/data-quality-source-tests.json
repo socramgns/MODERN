@@ -1,12 +1,12 @@
 {
   "schema": "ygo-node-source-suite-evidence/v1",
   "pass": true,
-  "buildId": "20eb64b21d09ad48a1ad0f1eae39864302fd2aa96bd5d37bed83a40aeffbebbf",
-  "htmlSha256": "28e03daf44c632ad8edb358e9f216b745b332cc18643eca2e1f188213b15974d",
+  "buildId": "c4b3a88282d993fd538a0ecc5c80b62f99239bfbbfeb0fd47bdbfc70816388ed",
+  "htmlSha256": "2a4e2c76869e9fdfce9435152fd2c0b654180a0a71c1e0c082b08555c263b804",
   "artifactMode": "SOURCE_NODE_SUITE",
   "testFile": "tests/data_quality.cjs",
   "testFileSha256": "6844a66262cf59a5742403acc58f4df6e4e29f2a7c6e6051f52c596ac2f095ff",
-  "meaning": "Source-level Node cases executed during validation of the bound artifact; compiled document tasks are reported separately in revision14-browser.json and mobile-accessibility.json.",
+  "meaning": "Source-level Node cases executed during validation of the bound artifact; compiled document tasks are reported separately in revision15-browser.json and mobile-accessibility.json.",
   "result": {
     "schema": "ygo-data-quality-tests/v1",
     "pass": true,

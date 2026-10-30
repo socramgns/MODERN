@@ -15,7 +15,7 @@ const TYPES = new Map([[I.MAUSOLEUM,'ACTIVATE_MAUSOLEUM_OF_WHITE'],
 (async () => {
   const {W,E,fixture} = await harness(true), H = E.helpers, tests = [];
   const id = value => H.baseId(value);
-  for (const name of ['duel-phases','responses','archetypes-expanded','blue-eyes-duel']) {
+  for (const name of ['duel-phases','responses','archetypes-expanded','blue-eyes-duel','monster-reborn']) {
     vm.runInNewContext(fs.readFileSync(path.join(ROOT,'src/app/'+name+'.js'),'utf8'),
       {window:W,structuredClone,console,Promise,Date,setTimeout,clearTimeout,performance});
   }
@@ -140,9 +140,9 @@ const TYPES = new Map([[I.MAUSOLEUM,'ACTIVATE_MAUSOLEUM_OF_WHITE'],
     assert(fields.every(row=>row.restriction==='NONE'&&row.activationZone==='spelltrap'));
     const responses=W.YGOResponses.capabilities();
     assert.deepEqual(Array.from(responses.mechabaFieldSpellActivations).sort(),[...TYPES.values()].sort());
-    assert.equal(responses.mechabaNormalSpellActivations.length,3);
+    assert.equal(responses.mechabaNormalSpellActivations.length,4);
     assert.equal(responses.mechabaNonFieldMonsterActivations.length,15);
-    assert.equal(E.capabilities().normalSpellActivations.length,3);
+    assert.equal(E.capabilities().normalSpellActivations.length,4);
   });
   for (const field of TYPES.keys()) {
     await test('A successful Field Spell remains in the separate Field Zone: '+field,()=>{

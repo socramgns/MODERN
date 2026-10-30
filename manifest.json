@@ -2,7 +2,7 @@
   "version": "Alpha 1263",
   "format": "ygo-deferred-bundle-v22",
   "canonicalId": "ygo-alpha-1263-canonical-release",
-  "revision": "2026.10-stable.14",
+  "revision": "2026.10-stable.15",
   "scripts": [
     0,
     1,
@@ -461,6 +461,7 @@
     "src/app/archetypes.js",
     "src/app/archetypes-expanded.js",
     "src/app/blue-eyes-duel.js",
+    "src/app/monster-reborn.js",
     "src/app/strategy.js",
     "src/app/recommendations.js",
     "src/app/evaluation.js",
@@ -476,6 +477,7 @@
     "src/app/exports.js",
     "src/app/coverage.js",
     "src/app/data-quality.js",
+    "src/app/deck-identity-review.js",
     "src/app/release.js"
   ],
   "output": "dist/Calculadora_de_Barajas_YuGiOh_Alpha_1263_Corregida.html"

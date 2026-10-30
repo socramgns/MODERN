@@ -49,7 +49,7 @@ const I={MAUSOLEUM:24382602,SANCTUARY:1295111,ROAR:51339637,WOLF:87871125,
    {requiredHandIds:[I.ROAR],recoveredHandIds:[I.SANCTUARY]}])
    for(const api of [C,R])assert.throws(()=>api.goalProgress(blank(),g));
  });
- await test('All fourteen physical starting scenarios retain matcher and progress agreement',()=>{
+ await test('All fifteen physical starting scenarios retain matcher and progress agreement',()=>{
   for(const {id}of W.YGOScenarioExamples.list()){
    const spec=W.YGOScenarioExamples.get(id),st=E.createState(spec);
    assert.equal(W.YGODataCatalog.auditDeck(spec.deck,{format:'tcg',banlist:W.BANLIST_PROFILES.tcg.data}).pass,true);
