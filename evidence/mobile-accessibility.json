@@ -1,0 +1,336 @@
+{
+  "schema": "ygo-mobile-accessibility/v1",
+  "pass": true,
+  "buildId": "20eb64b21d09ad48a1ad0f1eae39864302fd2aa96bd5d37bed83a40aeffbebbf",
+  "htmlSha256": "28e03daf44c632ad8edb358e9f216b745b332cc18643eca2e1f188213b15974d",
+  "artifactMode": "DELIVERED_BYTES",
+  "sourceInjection": false,
+  "checks": [
+    {
+      "name": "chromium_mobile_boot_uses_manifest_bound_bytes",
+      "pass": true
+    },
+    {
+      "name": "chromium_context_reports_a_coarse_pointer",
+      "pass": true
+    },
+    {
+      "name": "chromium_example_load_is_physical_and_has_no_autoplay",
+      "pass": true
+    },
+    {
+      "name": "chromium_example_load_is_reachable_by_keyboard_with_visible_focus",
+      "pass": true
+    },
+    {
+      "name": "chromium_primary_inputs_have_programmatic_labels",
+      "pass": true
+    },
+    {
+      "name": "chromium_registered_steps_keep_a_fresh_replay_on_mobile",
+      "pass": true
+    },
+    {
+      "name": "chromium_390px_controls_have_44px_touch_targets",
+      "pass": true
+    },
+    {
+      "name": "chromium_390px_controls_remain_inside_the_viewport",
+      "pass": true
+    },
+    {
+      "name": "chromium_320px_controls_have_44px_touch_targets",
+      "pass": true
+    },
+    {
+      "name": "chromium_320px_controls_remain_inside_the_viewport",
+      "pass": true
+    },
+    {
+      "name": "chromium_twofold_text_enlargement_keeps_controls_in_view",
+      "pass": true
+    },
+    {
+      "name": "chromium_viewport_and_text_changes_preserve_the_live_scenario",
+      "pass": true
+    },
+    {
+      "name": "chromium_single_action_page_is_disabled_or_multiple_pages_are_selectable",
+      "pass": true
+    },
+    {
+      "name": "chromium_action_filter_and_page_controls_do_not_execute_a_step",
+      "pass": true
+    },
+    {
+      "name": "chromium_export_tap_emits_a_trusted_browser_touch_event",
+      "pass": true
+    },
+    {
+      "name": "chromium_touch_export_preserves_every_ydk_card_and_zone",
+      "pass": true
+    },
+    {
+      "name": "chromium_touch_export_preserves_the_live_scenario",
+      "pass": true
+    },
+    {
+      "name": "chromium_mobile_tasks_raise_no_javascript_page_errors",
+      "pass": true
+    },
+    {
+      "name": "webkit_mobile_boot_uses_manifest_bound_bytes",
+      "pass": true
+    },
+    {
+      "name": "webkit_context_reports_a_coarse_pointer",
+      "pass": true
+    },
+    {
+      "name": "webkit_example_load_is_physical_and_has_no_autoplay",
+      "pass": true
+    },
+    {
+      "name": "webkit_example_load_is_reachable_by_keyboard_with_visible_focus",
+      "pass": true
+    },
+    {
+      "name": "webkit_primary_inputs_have_programmatic_labels",
+      "pass": true
+    },
+    {
+      "name": "webkit_registered_steps_keep_a_fresh_replay_on_mobile",
+      "pass": true
+    },
+    {
+      "name": "webkit_390px_controls_have_44px_touch_targets",
+      "pass": true
+    },
+    {
+      "name": "webkit_390px_controls_remain_inside_the_viewport",
+      "pass": true
+    },
+    {
+      "name": "webkit_twofold_text_enlargement_keeps_controls_in_view",
+      "pass": true
+    },
+    {
+      "name": "webkit_viewport_and_text_changes_preserve_the_live_scenario",
+      "pass": true
+    },
+    {
+      "name": "webkit_single_action_page_is_disabled_or_multiple_pages_are_selectable",
+      "pass": true
+    },
+    {
+      "name": "webkit_action_filter_and_page_controls_do_not_execute_a_step",
+      "pass": true
+    },
+    {
+      "name": "webkit_export_tap_emits_a_trusted_browser_touch_event",
+      "pass": true
+    },
+    {
+      "name": "webkit_touch_export_preserves_every_ydk_card_and_zone",
+      "pass": true
+    },
+    {
+      "name": "webkit_touch_export_preserves_the_live_scenario",
+      "pass": true
+    },
+    {
+      "name": "webkit_mobile_tasks_raise_no_javascript_page_errors",
+      "pass": true
+    },
+    {
+      "name": "mobile_tasks_leave_the_delivered_artifact_unchanged",
+      "pass": true
+    }
+  ],
+  "details": {
+    "chromium_context_reports_a_coarse_pointer": {
+      "touch": 1,
+      "coarse": true,
+      "width": 390
+    },
+    "chromium_example_load_is_reachable_by_keyboard_with_visible_focus": {
+      "id": "ygoExampleLoad",
+      "outline": "solid",
+      "width": 3
+    },
+    "chromium_primary_inputs_have_programmatic_labels": [
+      {
+        "id": "ygoDuelActions",
+        "named": true
+      },
+      {
+        "id": "ygoDuelActionFilter",
+        "named": true
+      },
+      {
+        "id": "ygoFormatFile",
+        "named": true
+      },
+      {
+        "id": "ygoExampleSelect",
+        "named": true
+      }
+    ],
+    "chromium_390px_controls_have_44px_touch_targets": {
+      "viewport": 390,
+      "documentWidth": 390,
+      "count": 101,
+      "shortTargets": [],
+      "outsideViewport": []
+    },
+    "chromium_390px_controls_remain_inside_the_viewport": {
+      "viewport": 390,
+      "documentWidth": 390,
+      "count": 101,
+      "shortTargets": [],
+      "outsideViewport": []
+    },
+    "chromium_320px_controls_have_44px_touch_targets": {
+      "viewport": 320,
+      "documentWidth": 320,
+      "count": 101,
+      "shortTargets": [],
+      "outsideViewport": []
+    },
+    "chromium_320px_controls_remain_inside_the_viewport": {
+      "viewport": 320,
+      "documentWidth": 320,
+      "count": 101,
+      "shortTargets": [],
+      "outsideViewport": []
+    },
+    "chromium_twofold_text_enlargement_keeps_controls_in_view": {
+      "viewport": 320,
+      "documentWidth": 320,
+      "count": 101,
+      "shortTargets": [],
+      "outsideViewport": []
+    },
+    "chromium_single_action_page_is_disabled_or_multiple_pages_are_selectable": {
+      "count": 1,
+      "disabled": true,
+      "index": 0
+    },
+    "chromium_export_tap_emits_a_trusted_browser_touch_event": [
+      {
+        "trusted": true,
+        "touches": 1
+      }
+    ],
+    "chromium_touch_export_preserves_every_ydk_card_and_zone": {
+      "filename": "Baraja_Cartas.ydk",
+      "bytes": 433
+    },
+    "chromium_mobile_tasks_raise_no_javascript_page_errors": [],
+    "webkit_context_reports_a_coarse_pointer": {
+      "touch": 0,
+      "coarse": true,
+      "width": 390
+    },
+    "webkit_example_load_is_reachable_by_keyboard_with_visible_focus": {
+      "id": "ygoExampleLoad",
+      "outline": "solid",
+      "width": 3
+    },
+    "webkit_primary_inputs_have_programmatic_labels": [
+      {
+        "id": "ygoDuelActions",
+        "named": true
+      },
+      {
+        "id": "ygoDuelActionFilter",
+        "named": true
+      },
+      {
+        "id": "ygoFormatFile",
+        "named": true
+      },
+      {
+        "id": "ygoExampleSelect",
+        "named": true
+      }
+    ],
+    "webkit_390px_controls_have_44px_touch_targets": {
+      "viewport": 390,
+      "documentWidth": 390,
+      "count": 101,
+      "shortTargets": [],
+      "outsideViewport": []
+    },
+    "webkit_390px_controls_remain_inside_the_viewport": {
+      "viewport": 390,
+      "documentWidth": 390,
+      "count": 101,
+      "shortTargets": [],
+      "outsideViewport": []
+    },
+    "webkit_twofold_text_enlargement_keeps_controls_in_view": {
+      "viewport": 390,
+      "documentWidth": 390,
+      "count": 101,
+      "shortTargets": [],
+      "outsideViewport": []
+    },
+    "webkit_single_action_page_is_disabled_or_multiple_pages_are_selectable": {
+      "count": 1,
+      "disabled": true,
+      "index": 0
+    },
+    "webkit_export_tap_emits_a_trusted_browser_touch_event": [
+      {
+        "trusted": true,
+        "touches": 1
+      }
+    ],
+    "webkit_touch_export_preserves_every_ydk_card_and_zone": {
+      "filename": "Baraja_Cartas.ydk",
+      "bytes": 433
+    },
+    "webkit_mobile_tasks_raise_no_javascript_page_errors": []
+  },
+  "browsers": [
+    {
+      "engine": "chromium",
+      "version": "154.0.8037.57",
+      "emulatedDevice": "Pixel 7",
+      "executablePath": "/usr/bin/chromium",
+      "executed": true,
+      "touchCapabilityMetadata": {
+        "touch": 1,
+        "coarse": true,
+        "width": 390
+      },
+      "externalRequestsBlocked": 22
+    },
+    {
+      "engine": "webkit",
+      "version": "26.5",
+      "emulatedDevice": "iPhone 13",
+      "executablePath": "/tmp/ygo-browsers/webkit-2336/pw_run.sh",
+      "executed": true,
+      "touchCapabilityMetadata": {
+        "touch": 0,
+        "coarse": true,
+        "width": 390
+      },
+      "externalRequestsBlocked": 0
+    }
+  ],
+  "executedEngines": [
+    "chromium",
+    "webkit"
+  ],
+  "textResizeEmulation": "Twofold computed font sizes in registered workbenches; presentation overrides only.",
+  "limitations": [
+    "Device, viewport, coarse pointer and text enlargement are emulated; no physical phone was tested.",
+    "Touch capability metadata differs between desktop-engine ports; the export task requires a trusted browser touch event.",
+    "The native OS file picker and assistive technology were not tested.",
+    "These functional tasks do not establish complete WCAG conformance or universal mobile compatibility."
+  ],
+  "elapsedSeconds": 35.38
+}

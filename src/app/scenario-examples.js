@@ -129,7 +129,17 @@ const evacuation=base('evacuation','Compulsory Evacuation Device: devolver sin d
  'Deshaz solo la devolución y conserva la protección de Spark. Activa Compulsory sobre Blue-Eyes con Mechaba rival pero sin Roar: la Trampa propia queda desterrada, el coste rival permanece pagado y Blue-Eyes sigue en el campo con su protección disponible.',
  'Deshaz esa última activación y elige Compulsory sobre Mechaba rival sin respuesta. El mismo Mechaba vuelve al Extra de su dueño, no a la mano; tu Roar y la Trampa rival de la mano no se consumen. El objetivo de Blue-Eyes en mano es independiente de esta comparación.'
  ],'RESPONSES_EXPLICIT',['MECHABA','ROAR'],'CHOICE_BRANCHES');
-const templates=new Map([spark,spirit,invoked,swordsoul,branded,tenyi,salamangreat,roar,crow,droll,field,trap,evacuation].map(value=>[value.id,value]));
+const shuffleDeck=deck([[86120751,1],[74063034,1],[89631139,1]],[]),shuffleOpening=[86120751,...NORMALS.slice(0,4)],shuffleRival=deck([[89631139,1]],[]),shuffleRivalOpening=NORMALS.slice(0,5);
+const shuffle=base('shuffle','Después de barajar: continuaciones hipotéticas','Llega al próximo robo desconocido mediante una búsqueda real y compara sus posibilidades sin cambiar la partida.',physical(shuffleDeck,shuffleOpening),physical(shuffleRival,shuffleRivalOpening),{turn:2,activePlayer:0,phase:'MAIN 1',placements:[]},{requiredHandIds:[89631139]},[
+ 'Invoca normalmente a Aleister desde tu mano y resuelve su búsqueda para añadir Invocation. La búsqueda baraja tu Deck; desde ese momento su orden deja de ser conocido.',
+ 'Pasa directamente de Main Phase 1 a End Phase y termina tu turno.',
+ 'En el turno rival, ejecuta su robo del orden todavía conocido. Pasa a Standby Phase, después a Main Phase 1 y luego a End Phase. En este ejemplo el rival pasa sin jugar cartas.',
+ 'Termina el turno rival. Tu cuarto turno comienza en Draw Phase, con el orden de tu Deck desconocido y sin un robo ordinario ejecutable.',
+ 'Abre «Continuaciones hipotéticas después de barajar» y pulsa «Analizar continuaciones». El objetivo exige Blue-Eyes White Dragon en tu mano; no se cumple en el estado real.',
+ 'Examina las ramas ponderadas y sus continuaciones verificadas. Una rama sin testigo permanece desconocida. El análisis no roba una carta en la partida ni convierte una posibilidad en un resultado observado.',
+ 'Puedes guardar y verificar el informe hipotético por separado. El replay del laboratorio conserva las nueve acciones reales anteriores y el Deck restante sigue sin orden conocido.'
+]);
+const templates=new Map([spark,spirit,invoked,swordsoul,branded,tenyi,salamangreat,roar,crow,droll,field,trap,evacuation,shuffle].map(value=>[value.id,value]));
 const describe=value=>({id:value.id,name:value.name,description:value.description,scope:value.scope,steps:clone(value.tutorial.steps),replacesDeck:true,initialHistoryCertified:false,competitiveRecommendation:false});
 function list(){return[...templates.values()].map(describe);}
 function get(id){if(typeof id!=='string'||!templates.has(id))throw Error('SCENARIO_EXAMPLE_UNKNOWN');return clone(templates.get(id));}

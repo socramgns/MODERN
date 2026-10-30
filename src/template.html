@@ -769,6 +769,17 @@ border-radius:46% 46% 17px 17px;box-shadow:0 0 18px #ff1bd899,inset 0 0 22px #80
 
 /* Revision auditada: paneles sin simulaciones acreditadas */
 .ygo-evidence-empty{margin:10px 7px;padding:12px 15px;border:1px dashed rgba(22,180,245,.55);border-radius:9px;background:rgba(6,31,64,.67);color:#c5e9ff;font:600 13px/1.55 Arial,Helvetica,sans-serif;text-align:left}
+/* Registered workbenches keep visible focus and practical touch targets. */
+:is(#ygoCausalWorkbench,#ygoAdvancedWorkbench,#ygoCardCoverage,#ygoFormatEditor,#ygoDataQuality) :is(button,input,select,textarea,summary):focus-visible{outline:3px solid #ffdd70;outline-offset:3px}
+@media(max-width:800px),(pointer:coarse){
+ :is(#ygoCausalWorkbench,#ygoAdvancedWorkbench,#ygoCardCoverage,#ygoFormatEditor,#ygoDataQuality){min-width:0;overflow-wrap:anywhere}
+ :is(#ygoCausalWorkbench,#ygoAdvancedWorkbench,#ygoCardCoverage,#ygoFormatEditor,#ygoDataQuality) :is(button,input,select){min-height:44px!important;min-width:0;max-width:100%;box-sizing:border-box;font-size:16px!important}
+ :is(#ygoCausalWorkbench,#ygoAdvancedWorkbench,#ygoCardCoverage,#ygoFormatEditor,#ygoDataQuality) button{white-space:normal;overflow-wrap:anywhere}
+ :is(.ygo-causal-inputs,.ygo-advanced-controls,.ygo-coverage-controls,.ygo-format-controls,.ygo-data-quality-controls)>label{min-width:0;max-width:100%}
+ :is(#ygoCausalWorkbench,#ygoAdvancedWorkbench,#ygoCardCoverage,#ygoFormatEditor,#ygoDataQuality) summary{min-height:44px;box-sizing:border-box;padding-top:10px;padding-bottom:10px;cursor:pointer}
+ #ygoAdvancedWorkbench .ygo-advanced-check{min-height:44px}
+ #ygoAdvancedWorkbench .ygo-advanced-check input[type=checkbox]{flex:0 0 24px;width:24px;min-width:24px;height:24px;min-height:24px!important}
+}
 </style><span data-ygo-style-marker="Alpha 1047" hidden="" id="ygo-alpha-465-replay-motion-style"></span><span data-ygo-style-marker="Alpha 1047" hidden="" id="ygo-duel-field-style"></span>
 <!-- Alpha1047: legacy fingerprint certificates bound to physically pruned standalone scripts are historical evidence only; canonical certification must use current release gates. -->
 <!-- YGO V27 ARCHITECTURE: final public evaluation route is YGOOfficialEvaluation.evaluate; older engines remain compatibility layers until dependency-tested removal. -->

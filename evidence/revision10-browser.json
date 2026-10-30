@@ -1,8 +1,8 @@
 {
   "schema": "ygo-release10-browser/v1",
   "pass": true,
-  "buildId": "62d595ef64824400782f54808fd32e70a9b2fcb21ef98ba2aeaec753c41ec79a",
-  "htmlSha256": "5f05c079f9a512c04e3d7978864461746e4bcb8d9cf0589440579663e6dceecb",
+  "buildId": "20eb64b21d09ad48a1ad0f1eae39864302fd2aa96bd5d37bed83a40aeffbebbf",
+  "htmlSha256": "28e03daf44c632ad8edb358e9f216b745b332cc18643eca2e1f188213b15974d",
   "artifactMode": "DELIVERED_BYTES",
   "sourceInjection": false,
   "checks": [
@@ -124,5 +124,5 @@
     "Typed goals describe own physical zones and do not register new card effects.",
     "Recorded replay and goal checks do not certify competitive results."
   ],
-  "elapsedSeconds": 26.73
+  "elapsedSeconds": 28.05
 }

@@ -53,8 +53,8 @@ def run(url=None):
               and hashlib.sha256(response.body()).hexdigest() == html_hash
               and page.evaluate('()=>navigator.onLine===false&&YGO_BUILD_MANIFEST.buildId') == build['buildId'])
         expected_ids = ['spark', 'spirit', 'invoked', 'swordsoul', 'branded', 'tenyi', 'salamangreat',
-                        'roar', 'crow', 'droll', 'field', 'trap', 'evacuation']
-        check('thirteen_visible_examples_preserve_the_previous_twelve_identifiers',
+                        'roar', 'crow', 'droll', 'field', 'trap', 'evacuation', 'shuffle']
+        check('fourteen_visible_examples_preserve_the_previous_thirteen_identifiers',
               page.locator('#ygoExampleSelect').evaluate('(el)=>[...el.options].map(o=>o.value)') == expected_ids)
         registered = page.evaluate('()=>YGOResponses.capabilities().mechabaFieldSpellActivations')
         check('the_delivered_mechaba_field_registry_is_explicit_and_limited_to_the_two_reviewed_cards',

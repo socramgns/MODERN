@@ -1,12 +1,12 @@
 {
   "schema": "ygo-node-source-suite-evidence/v1",
   "pass": true,
-  "buildId": "62d595ef64824400782f54808fd32e70a9b2fcb21ef98ba2aeaec753c41ec79a",
-  "htmlSha256": "5f05c079f9a512c04e3d7978864461746e4bcb8d9cf0589440579663e6dceecb",
+  "buildId": "20eb64b21d09ad48a1ad0f1eae39864302fd2aa96bd5d37bed83a40aeffbebbf",
+  "htmlSha256": "28e03daf44c632ad8edb358e9f216b745b332cc18643eca2e1f188213b15974d",
   "artifactMode": "SOURCE_NODE_SUITE",
   "testFile": "tests/compulsory_evacuation.cjs",
   "testFileSha256": "9bd89d5aeb3aca2e2bf0cc17d78b786286d021c686e4d793ff90aee798068364",
-  "meaning": "Source-level Node cases executed during validation of the bound artifact; compiled document tasks are reported separately in revision13-browser.json.",
+  "meaning": "Source-level Node cases executed during validation of the bound artifact; compiled document tasks are reported separately in revision14-browser.json and mobile-accessibility.json.",
   "result": {
     "schema": "ygo-compulsory-evacuation-regression/v1",
     "pass": true,

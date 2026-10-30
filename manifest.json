@@ -2,7 +2,7 @@
   "version": "Alpha 1263",
   "format": "ygo-deferred-bundle-v22",
   "canonicalId": "ygo-alpha-1263-canonical-release",
-  "revision": "2026.10-stable.13",
+  "revision": "2026.10-stable.14",
   "scripts": [
     0,
     1,
@@ -471,8 +471,11 @@
     "src/app/combo-workbench.js",
     "src/app/advanced-workbench.js",
     "src/app/draw-uncertainty.js",
+    "src/app/draw-continuation.js",
+    "src/app/draw-continuation-workbench.js",
     "src/app/exports.js",
     "src/app/coverage.js",
+    "src/app/data-quality.js",
     "src/app/release.js"
   ],
   "output": "dist/Calculadora_de_Barajas_YuGiOh_Alpha_1263_Corregida.html"

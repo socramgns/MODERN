@@ -145,3 +145,12 @@ La redirección registrada de Spinny que fue revivido se respeta: su salida lo d
 Las FAQ OCG japonesas de Mechaba conservadas desde revisión 7 documentan efectos de monstruos y el lugar de activación. No se amplía su alcance a una certificación general de Trampas, de retornos ocultos o del tratamiento de Mirrorjade al volver al Extra. La revisión del reglamento y los rulings restantes sigue pendiente; no se afirma haber recibido documentos nuevos tras los errores HTTP 403 ya registrados.
 
 La [ejecución remota de revisión 12](https://github.com/socramgns/MODERN/actions/runs/40822517564) terminó correctamente para el commit `f538b8002106b4e0a9244e39fc3d82aecb8de78e`, con sus propios bytes y pruebas. La aceptación de revisión 13, su descarga y su resultado remoto se registran por separado en [ESTADO_PROYECTO.md](ESTADO_PROYECTO.md). El importador competitivo permanece preparado y la puntuación provisional por decisión del usuario; esta ampliación no incorpora resultados ficticios ni una validación competitiva externa.
+
+
+## Alcance documental de las hipótesis y del diagnóstico de datos en revisión 14
+
+El análisis de un próximo robo desconocido declara un supuesto matemático de barajado uniforme. Sus pesos por copia, testigos de continuación y pruebas de importación acreditan el comportamiento del modelo implementado; no son una nueva fuente primaria de reglas, evidencia de un robo observado ni resultados competitivos. El replay del prefijo conserva su alcance anterior y el verificador separado identifica expresamente la transición supuesta.
+
+El diagnóstico de calidad deriva incidencias, estadísticas desconocidas y propuestas de migración de las fuentes técnicas ya fijadas. Exportar esa lista no resuelve las identidades ni autentica passcodes, disponibilidad o rulings oficiales. Las propuestas requieren revisión documental antes de cualquier migración; la revisión 14 no inventa estadísticas ni nuevas capturas oficiales para cerrar pendientes.
+
+Las pruebas móviles identifican motores y tamaños emulados. Sus resultados tampoco acreditan ejecución en teléfonos físicos. Reglamento, rulings, disponibilidad por formato/evento y aceptación en hardware real mantienen sus criterios de evidencia independientes. La puntuación competitiva continúa provisional por decisión del usuario; no se fabrican datos externos ni se solicita de nuevo esa decisión.

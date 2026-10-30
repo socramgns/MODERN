@@ -1,41 +1,40 @@
-# Estado de la revisión 13
+# Estado de la revisión 14
 
 La aplicación se entrega como un único `Analizador_YuGiOh.html`. El original y las entregas anteriores se conservan; la puntuación permanece estructural y provisional por decisión del usuario.
 
-La revisión 13 obtuvo aceptación local de **56/56 grupos** sobre el HTML final. La primera ejecución completa aprobó **55/56**: la prueba de exportación YDK podía comparar una baraja antes de terminar su importación. Se corrigió la espera de la prueba y se repitió la suite completa de entrega, con **14/14 tareas aprobadas sobre los mismos bytes**, sin modificar la aplicación. Se comprobó la sintaxis de **114 archivos JavaScript**, Chromium, Firefox y WebKit, y la apertura directa del HTML local sin conexión en Firefox. Build `62d595ef64824400782f54808fd32e70a9b2fcb21ef98ba2aeaec753c41ec79a`; SHA-256 `5f05c079f9a512c04e3d7978864461746e4bcb8d9cf0589440579663e6dceecb`; tamaño **6,989,766 bytes**. Los informes conservan el intento inicial y la repetición; la aceptación se limita al alcance registrado.
+La revisión 14 pasó **60/60 grupos de pruebas en una ejecución completa** sobre el HTML final, con **117 archivos JavaScript** comprobados. Chromium, Firefox y WebKit aprobaron sus tareas; Firefox completó la apertura directa del HTML local sin conexión. Las tareas móviles se ejecutaron en Chromium y WebKit emulados, sin acreditar teléfonos físicos ni conformidad WCAG completa. Build `20eb64b21d09ad48a1ad0f1eae39864302fd2aa96bd5d37bed83a40aeffbebbf`; SHA-256 `28e03daf44c632ad8edb358e9f216b745b332cc18643eca2e1f188213b15974d`; tamaño **7,037,392 bytes**. Estos resultados se limitan a las capacidades y tareas registradas; la puntuación competitiva sigue provisional.
 
-La publicación, la descarga HTTP y el resultado remoto de GitHub Actions de revisión 13 se comprueban por separado y se registran con el commit correspondiente.
+La publicación, la descarga HTTP y el resultado remoto de GitHub Actions de revisión 14 se comprueban por separado y se registran con el commit correspondiente.
 
 | Área | Implementación de esta revisión | Alcance |
 | --- | --- | --- |
-| Trampas Normales | Compulsory Evacuation Device se añade a Infinite Impermanence | Dos paquetes concretos de Velocidad 2; Compulsory solo desde colocada en turno anterior, Impermanence conserva su excepción desde mano |
-| Devolución de monstruos | Objetivo propio o rival con perfil de salida admitido | Main a mano de su propietario, Fusion/Synchro/Link admitidos a su Extra oculto y Tokens registrados dejan de existir; no equivale a destrucción |
-| Costes y negación | Mechaba paga una Trampa física admitida; Roar conserva respuestas y contrarrespuestas | Costes y usos permanecen al negar; una columna previamente negada puede anular el efecto de la Trampa sin impedir su activación |
-| Protecciones y salidas | Spark no impide devolver y Balelynx no reemplaza la devolución | Mirrorjade devuelto al Extra oculto no crea una nueva destrucción End; salidas desconocidas siguen excluidas |
-| Laboratorio y ejemplos | Trece ejemplos, con los doce identificadores anteriores conservados y `evacuation` nuevo | Preparación inicial declarada; los pasos de la guía se ejecutan manualmente |
-| Seguimiento del objetivo | Cantidades y requisitos de cartas, LP, fase, turno y jugador activo | Se recalcula al ejecutar, deshacer o importar; el resumen importado no se usa como prueba |
-| Rutas anteriores | Seis familias parciales, Spark, Spirit y respuestas registradas | Conserva quince paquetes de monstruos fuera del campo, tres Mágicas Normales y dos activaciones de Campo; no equivale al juego completo |
-| Catálogo y lista | Conserva 21.986 registros y snapshot TCG del 19/10/2026 | Los datos técnicos no acreditan todos los efectos ni disponibilidad oficial |
-| Calibración | Importador preparado y puntuación provisional | Para validarla hacen falta barajas y resultados externos reales con procedencia; no bloquea las mejoras del HTML |
-| Fuentes y mantenimiento | Capturas TCG fechadas, tres FAQ OCG de monstruos y compilación reproducible | Las pruebas del modelo y el cotejo documental tienen alcances distintos |
-
-La redirección registrada de Spinny que fue revivido se respeta: su salida lo destierra en lugar de devolverlo a la mano. La traza conserva el destino solicitado y el real; otras redirecciones sin revisar permanecen excluidas.
+| Continuación tras barajar | Ramas hipotéticas por copia física del próximo robo propio | Draw Phase, turno posterior al primero, orden desconocido, rival `PASS`; el resto del Deck conserva orden desconocido |
+| Pesos y objetivos | Peso exacto `1/N` y testigos de continuación registrados | Distingue azar y decisiones; solo la parte demostrada aporta al límite inferior del objetivo |
+| Incertidumbre | Conserva la masa no explorada o sin demostración | Un presupuesto alcanzado, segundo robo no cubierto o regla desconocida no equivalen a derrota |
+| Verificación e informes | Reconstruye prefijo, hipótesis y pasos posteriores; exportación/importación JSON | Rechaza alteraciones de copia, peso, contexto y evidencia; no sustituye la partida del laboratorio |
+| Calidad de datos | Informe derivado de incidencias y propuestas vigentes | Conserva passcodes y procedencia, sin completar estadísticas por conjetura ni aplicar migraciones automáticas |
+| Accesibilidad y pantallas móviles | Comprobaciones de emulación en motores y tamaños registrados | La aceptación pertenece a las tareas ejecutadas; no acredita teléfonos físicos ni todos los sistemas |
+| Laboratorio y ejemplos | Catorce ejemplos, con `shuffle` y los trece anteriores | Prefijos iniciales declarados y pasos ejecutados manualmente; las hipótesis quedan separadas |
+| Rutas conservadas | Seis familias parciales, Spark, Spirit y respuestas registradas | Quince paquetes de monstruos fuera del campo, tres Mágicas Normales, dos Mágicas de Campo y dos Trampas Normales; no equivale al juego completo |
+| Catálogo y contexto | Conserva 21.986 registros y snapshot TCG del 19/10/2026 | Los datos técnicos y la captura fechada no acreditan todos los efectos ni disponibilidad oficial |
+| Calibración | Importador preparado y puntuación provisional | Requiere resultados externos reales para validarla; no bloquea las mejoras del HTML |
 
 ## Aceptación y antecedentes
 
-`dist/validation-summary.json`, los informes de navegador y `evidence/` identifican el build y SHA-256 del HTML probado. La distribución y el resultado remoto de CI tienen sus propias comprobaciones. Declarar dos nuevas suites en el runner no demuestra que hayan aprobado; el criterio de cierre exige ejecutar toda la batería contra los mismos bytes compilados.
+Los informes del build y del HTML probado distinguen pruebas de fuentes, tareas sobre los bytes compilados, emulación móvil, descarga y CI. Declarar una suite o su número previsto no acredita su aprobación. Los campos iniciales siguen siendo supuestos; el replay comprueba las transiciones posteriores y el verificador de hipótesis declara su robo supuesto.
 
-La revisión 12 conserva una [aceptación local de 54/54 grupos](https://github.com/socramgns/MODERN/blob/f538b8002106b4e0a9244e39fc3d82aecb8de78e/evidence/validation-summary.json), con 114 archivos JavaScript comprobados, Chromium, Firefox y WebKit y apertura directa del HTML sin conexión en Firefox. Su descarga HTTP fue cotejada con los bytes aceptados y su [ejecución remota de GitHub Actions](https://github.com/socramgns/MODERN/actions/runs/40822517564) terminó **correctamente** para el commit `f538b8002106b4e0a9244e39fc3d82aecb8de78e`. Esta evidencia pertenece a revisión 12 y no sustituye la aceptación de los bytes nuevos.
+La revisión 13 conserva una [aceptación local de 56/56 grupos](https://github.com/socramgns/MODERN/blob/508e1e9b1ea7707b9e4167e663bb98feb33c4614/evidence/validation-summary.json): 55/56 en la ejecución completa y 14/14 tareas al repetir el único grupo fallido después de corregir una espera de la prueba YDK, sobre los mismos bytes. Su [descarga HTTP verificada](https://github.com/socramgns/MODERN/raw/508e1e9b1ea7707b9e4167e663bb98feb33c4614/Analizador_YuGiOh.html?download=1) corresponde al commit `508e1e9b1ea7707b9e4167e663bb98feb33c4614` y al SHA-256 `5f05c079f9a512c04e3d7978864461746e4bcb8d9cf0589440579663e6dceecb`. Su [ejecución remota de GitHub Actions](https://github.com/socramgns/MODERN/actions/runs/40936973430) terminó correctamente para ese commit. Esa evidencia pertenece a revisión 13 y no sustituye la aceptación de los bytes nuevos.
 
-Chromium mantiene una restricción administrativa de navegación local en este entorno. Firefox permite comprobar la apertura directa offline; WebKit conserva una limitación de emulación offline local. Los informes distinguen esas limitaciones de las comprobaciones ejecutadas sobre los bytes entregados.
+Chromium mantiene una restricción administrativa de navegación local en este entorno. Firefox permite comprobar la apertura directa offline; WebKit conserva una limitación de emulación offline local. Esas limitaciones se separan de las tareas ejecutadas en cada informe.
 
-## Pendientes posteriores
+## Trabajo posterior
 
-- Más efectos, Trampas, Mágicas de Campo y perfiles de salida revisados; las seis familias conservan cobertura parcial.
+- Ampliar la continuación hipotética a otros robos, varios eventos de azar y políticas rivales, conservando pesos y masa desconocida.
+- Más efectos y perfiles de salida revisados; las seis familias conservan cobertura parcial.
 - Prioridad, cadenas generales, SEGOC, Damage Step, Flip, ataques múltiples y Pendulum.
-- Continuación probabilística después de barajar, conservando la incertidumbre del orden.
-- Decisiones rivales óptimas y validación con metajuego y datos competitivos externos reales.
-- Disponibilidad, pools y reglas históricos/digitales, Skills, desbloqueos, Legend e impresión/evento.
-- Reglamento y rulings restantes, identidades heredadas y aceptación en más dispositivos y sistemas reales.
+- Resolver incidencias técnicas con fuentes y revisión explícita de identidades, estadísticas y propuestas.
+- Completar disponibilidad, pools, reglas históricos/digitales, Skills, desbloqueos, Legend e impresión/evento.
+- Revisar reglamento y rulings restantes, y ampliar aceptación en dispositivos y sistemas físicos.
+- Validar métricas competitivas con resultados reales, manteniendo separados ajuste y validación.
 
-El análisis actual está en [ANALISIS_PENDIENTES_REVISION13.md](ANALISIS_PENDIENTES_REVISION13.md). Los análisis anteriores permanecen como antecedentes ligados a sus propias revisiones. No se atribuye un porcentaje global a completar todas las cartas y reglas.
+El análisis actual está en [ANALISIS_PENDIENTES_REVISION14.md](ANALISIS_PENDIENTES_REVISION14.md). Los análisis anteriores permanecen ligados a sus revisiones. La cobertura se mide por capacidades y criterios de aceptación, sin asignar un porcentaje global a todo el juego.

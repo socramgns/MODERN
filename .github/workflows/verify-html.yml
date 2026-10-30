@@ -85,7 +85,7 @@ jobs:
           python tools/build.py
           cmp Analizador_YuGiOh.html dist/Calculadora_de_Barajas_YuGiOh_Alpha_1263_Corregida.html
       - name: Ejecutar pruebas del entregable
-        timeout-minutes: 15
+        timeout-minutes: 20
         run: python tests/run_all.py --no-build
       - name: Exigir comprobación entre motores
         timeout-minutes: 5

@@ -1,4 +1,25 @@
-# Cambios de la revisión 13
+# Cambios de la revisión 14
+
+La revisión `2026.10-stable.14` añade continuaciones hipotéticas ponderadas, un diagnóstico de calidad de datos y aceptación móvil emulada, conservando el HTML único y la puntuación estructural provisional.
+
+La revisión 14 pasó **60/60 grupos de pruebas en una ejecución completa** sobre el HTML final, con **117 archivos JavaScript** comprobados. Chromium, Firefox y WebKit aprobaron sus tareas; Firefox completó la apertura directa del HTML local sin conexión. Las tareas móviles se ejecutaron en Chromium y WebKit emulados, sin acreditar teléfonos físicos ni conformidad WCAG completa. Build `20eb64b21d09ad48a1ad0f1eae39864302fd2aa96bd5d37bed83a40aeffbebbf`; SHA-256 `28e03daf44c632ad8edb358e9f216b745b332cc18643eca2e1f188213b15974d`; tamaño **7,037,392 bytes**. Estos resultados se limitan a las capacidades y tareas registradas; la puntuación competitiva sigue provisional.
+
+La publicación, la descarga HTTP y el resultado remoto de GitHub Actions de revisión 14 se comprueban por separado y se registran con el commit correspondiente.
+
+- Añade un análisis separado de continuaciones hipotéticas tras un próximo robo de turno con orden desconocido, bajo el supuesto de barajado uniforme y rival `PASS`.
+- Conserva una rama por copia física y su peso exacto `1/N`. Solo acredita un objetivo cuando existe una continuación registrada que vuelve a verificarse; los casos no explorados o sin demostración conservan masa desconocida.
+- Reconstruye el prefijo real y verifica por separado la hipótesis y las acciones posteriores. Exportar o importar ese análisis no convierte el robo en observado ni sustituye el estado del laboratorio.
+- Añade un informe de calidad de datos con incidencias, estadísticas desconocidas y propuestas de migración existentes. Los conteos se derivan del catálogo vigente; las propuestas no cambian automáticamente passcodes ni barajas.
+- Amplía la aceptación de accesibilidad y pantallas móviles mediante emulación de navegador, diferenciándola de pruebas en teléfonos físicos.
+- Añade el ejemplo `shuffle` y conserva los trece anteriores, los 21.986 registros, las seis familias parciales y las funciones registradas previas.
+
+Las hipótesis no se incorporan como robos observados ni habilitan `deckOrderKnown`. El verificador reconstruye inicio y prefijo, comprueba copia y peso del robo supuesto y vuelve a ejecutar los pasos posteriores. Los resúmenes importados no sustituyen ese cálculo; alterar copia, peso, contexto o evidencia invalida el análisis. Los límites conservan masa desconocida, sin transformarla en una derrota ni en probabilidad de victoria.
+
+El diagnóstico de datos conserva las identidades heredadas y su procedencia. Las propuestas de revisión no son migraciones aplicadas y las estadísticas desconocidas permanecen declaradas. La aceptación móvil describe emulación y tareas ejecutadas; la comprobación en dispositivos físicos sigue siendo independiente.
+
+La revisión 13 conserva una [aceptación local de 56/56 grupos](https://github.com/socramgns/MODERN/blob/508e1e9b1ea7707b9e4167e663bb98feb33c4614/evidence/validation-summary.json): 55/56 en la ejecución completa y 14/14 tareas al repetir el único grupo fallido después de corregir una espera de la prueba YDK, sobre los mismos bytes. Su [descarga HTTP verificada](https://github.com/socramgns/MODERN/raw/508e1e9b1ea7707b9e4167e663bb98feb33c4614/Analizador_YuGiOh.html?download=1) corresponde al commit `508e1e9b1ea7707b9e4167e663bb98feb33c4614` y al SHA-256 `5f05c079f9a512c04e3d7978864461746e4bcb8d9cf0589440579663e6dceecb`. Su [ejecución remota](https://github.com/socramgns/MODERN/actions/runs/40936973430) se observa por separado. Esa evidencia pertenece a revisión 13 y no sustituye la aceptación de los bytes nuevos.
+
+# Antecedente: cambios de la revisión 13
 
 La revisión `2026.10-stable.13` amplía las Trampas Normales registradas con Compulsory Evacuation Device y conserva el HTML único y la puntuación estructural provisional.
 

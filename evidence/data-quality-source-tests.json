@@ -1,0 +1,81 @@
+{
+  "schema": "ygo-node-source-suite-evidence/v1",
+  "pass": true,
+  "buildId": "20eb64b21d09ad48a1ad0f1eae39864302fd2aa96bd5d37bed83a40aeffbebbf",
+  "htmlSha256": "28e03daf44c632ad8edb358e9f216b745b332cc18643eca2e1f188213b15974d",
+  "artifactMode": "SOURCE_NODE_SUITE",
+  "testFile": "tests/data_quality.cjs",
+  "testFileSha256": "6844a66262cf59a5742403acc58f4df6e4e29f2a7c6e6051f52c596ac2f095ff",
+  "meaning": "Source-level Node cases executed during validation of the bound artifact; compiled document tasks are reported separately in revision14-browser.json and mobile-accessibility.json.",
+  "result": {
+    "schema": "ygo-data-quality-tests/v1",
+    "pass": true,
+    "total": 15,
+    "tests": [
+      {
+        "name": "The independent pinned-CDB audit is available and checks its source hash before comparison",
+        "pass": true
+      },
+      {
+        "name": "Live counts conserve the shipped catalogue while separating unresolved IDs and missing statistics",
+        "pass": true
+      },
+      {
+        "name": "Every unresolved ID, classification and unknown-stat identity agrees with the independent source audit",
+        "pass": true
+      },
+      {
+        "name": "Candidate passcodes match the pinned primary SQLite names and remain proposals rather than replacements",
+        "pass": true
+      },
+      {
+        "name": "Ambiguous name matches preserve every proposed identity without selecting or applying the first result",
+        "pass": true
+      },
+      {
+        "name": "Legacy source declarations never acquire an unrelated pinned URL, hash or official identity claim",
+        "pass": true
+      },
+      {
+        "name": "Known zero attack and question-mark technical values are not reclassified as missing statistics",
+        "pass": true
+      },
+      {
+        "name": "Mutable presentation objects cannot invent a source match or fill unknown statistics",
+        "pass": true
+      },
+      {
+        "name": "The diagnostic keeps its immutable minimum raw snapshot after shared embedded rows are changed",
+        "pass": true
+      },
+      {
+        "name": "An active inventory change is visible instead of silently changing the shipped identity baseline",
+        "pass": true
+      },
+      {
+        "name": "Exported reports retain build and catalogue bindings and cannot mutate later diagnostics",
+        "pass": true
+      },
+      {
+        "name": "A changed build or catalogue hash is marked stale without rebinding the captured catalogue",
+        "pass": true
+      },
+      {
+        "name": "Format context is exported as a detached context without manufacturing availability evidence",
+        "pass": true
+      },
+      {
+        "name": "Reporting, exporting, refreshing and the Node download adapter preserve every deck and raw catalogue row",
+        "pass": true
+      },
+      {
+        "name": "An incomplete embedded payload fails initialization instead of claiming a complete bound catalogue",
+        "pass": true
+      }
+    ],
+    "limitations": [
+      "The pinned SQLite source is a secondary technical snapshot, not official identity, availability or ruling certification.",
+      "No statistics, passcodes, proposals or decks are automatically rewritten; the tests do not validate a competitive score."
+    ]
+  }
+}

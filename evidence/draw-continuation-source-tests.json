@@ -1,0 +1,130 @@
+{
+  "schema": "ygo-node-source-suite-evidence/v1",
+  "pass": true,
+  "buildId": "20eb64b21d09ad48a1ad0f1eae39864302fd2aa96bd5d37bed83a40aeffbebbf",
+  "htmlSha256": "28e03daf44c632ad8edb358e9f216b745b332cc18643eca2e1f188213b15974d",
+  "artifactMode": "SOURCE_NODE_SUITE",
+  "testFile": "tests/draw_continuation.cjs",
+  "testFileSha256": "1945fe5179b923cf72c2f8966e9afe55381abfed8444ddb50d86950968d528fb",
+  "meaning": "Source-level Node cases executed during validation of the bound artifact; compiled document tasks are reported separately in revision14-browser.json and mobile-accessibility.json.",
+  "result": {
+    "schema": "ygo-hypothetical-draw-source-regression/v1",
+    "pass": true,
+    "total": 27,
+    "tests": [
+      {
+        "name": "The source contains a real nine-action shuffle prefix and two audited physical decks",
+        "pass": true
+      },
+      {
+        "name": "A single assumed draw branches over every remaining physical copy without changing the source",
+        "pass": true
+      },
+      {
+        "name": "The unique Marmot draw has a zero-action conditional witness and exact one-in-34 mass",
+        "pass": true
+      },
+      {
+        "name": "Reports identify a hypothetical analysis and never certify an observed draw or competitive win rate",
+        "pass": true
+      },
+      {
+        "name": "The ordinary causal engine still refuses an unknown draw and offers no favorable-draw action",
+        "pass": true
+      },
+      {
+        "name": "A turn draw hypothesis does not open Droll or mutate its source response windows",
+        "pass": true
+      },
+      {
+        "name": "Each branch can be re-verified freshly, including immediate goals with no fabricated combo step",
+        "pass": true
+      },
+      {
+        "name": "The drawn Normal Monster reaches the field through actual Standby, Main and Summon actions",
+        "pass": true
+      },
+      {
+        "name": "A conditional Fusion continuation preserves real material payments and source-zone consequences",
+        "pass": true
+      },
+      {
+        "name": "Two requested copies cannot be supplied by the one physical Marmot, and absence stays unknown",
+        "pass": true
+      },
+      {
+        "name": "Scalar goal conditions are evaluated together with the physical card requirement",
+        "pass": true
+      },
+      {
+        "name": "Branch and state budgets preserve all unvisited probability mass instead of calling it failure",
+        "pass": true
+      },
+      {
+        "name": "Mo Ye cannot reveal a second unknown card after a verified first-draw hypothesis",
+        "pass": true
+      },
+      {
+        "name": "Pre-cancellation returns a cancelled result and leaves the source intact",
+        "pass": true
+      },
+      {
+        "name": "Out-of-range or noninteger exploration options are rejected",
+        "pass": true
+      },
+      {
+        "name": "A legitimate prefix outside the own unknown Draw window is not admitted",
+        "pass": true
+      },
+      {
+        "name": "An unverified manual unknown-order declaration cannot replace the real shuffle prefix",
+        "pass": true
+      },
+      {
+        "name": "Forged source state, prefix costs, context, goal and competitive claims are rejected",
+        "pass": true
+      },
+      {
+        "name": "An imported report rejects altered physical UID sets, card identities and exact weights",
+        "pass": true
+      },
+      {
+        "name": "Imported totals, source goals, context and assumed-draw claims cannot be inflated",
+        "pass": true
+      },
+      {
+        "name": "A witness rejects tampered final state, recorded payment, phase and hypothesis event",
+        "pass": true
+      },
+      {
+        "name": "A physically valid alternative goal is still a different import source",
+        "pass": true
+      },
+      {
+        "name": "Changed build, catalogue and same-date restriction content invalidate old reports",
+        "pass": true
+      },
+      {
+        "name": "Return values remain detached, and invalid verification does not alter the original report",
+        "pass": true
+      },
+      {
+        "name": "The manual laboratory may expose a real rival Trap while hypothetical continuations use only own actions",
+        "pass": true
+      },
+      {
+        "name": "A changed live laboratory goal cancels exploration and rejects an otherwise valid old report",
+        "pass": true
+      },
+      {
+        "name": "The exported report limit is measured in UTF-8 bytes rather than JavaScript characters",
+        "pass": true
+      }
+    ],
+    "limitations": [
+      "This Node suite uses source modules and pinned technical cards and TCG snapshot, not a new official-ruling authentication.",
+      "The first draw is explicitly hypothetical under a uniform-shuffle assumption; all subsequent witnessed actions use the ordinary causal engine.",
+      "Only a single own turn draw with opponent PASS is admitted. Unknown continuations are not proved failures, competitive win rates or general optimal play."
+    ]
+  }
+}

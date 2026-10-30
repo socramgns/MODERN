@@ -1,0 +1,143 @@
+{
+  "schema": "ygo-release14-browser/v1",
+  "pass": true,
+  "buildId": "20eb64b21d09ad48a1ad0f1eae39864302fd2aa96bd5d37bed83a40aeffbebbf",
+  "htmlSha256": "28e03daf44c632ad8edb358e9f216b745b332cc18643eca2e1f188213b15974d",
+  "artifactMode": "DELIVERED_BYTES",
+  "sourceInjection": false,
+  "checks": [
+    {
+      "name": "release14_uses_the_same_manifest_bound_bytes_with_network_offline",
+      "pass": true
+    },
+    {
+      "name": "fourteen_examples_preserve_all_previous_identifiers",
+      "pass": true
+    },
+    {
+      "name": "shuffle_loads_without_autoplay_or_initial_goal_success",
+      "pass": true
+    },
+    {
+      "name": "nine_real_steps_reach_the_unknown_own_draw_without_drawing_a_card",
+      "pass": true
+    },
+    {
+      "name": "analyzing_hypotheses_preserves_the_entire_real_laboratory_report",
+      "pass": true
+    },
+    {
+      "name": "all_remaining_physical_copies_keep_their_exact_uniform_weight",
+      "pass": true
+    },
+    {
+      "name": "the_hand_goal_has_one_verified_draw_and_the_other_mass_stays_unknown",
+      "pass": true
+    },
+    {
+      "name": "the_blue_eyes_witness_is_hypothetical_and_needs_no_post_draw_action",
+      "pass": true
+    },
+    {
+      "name": "the_visible_result_explains_unknown_mass_and_does_not_claim_a_win_rate",
+      "pass": true
+    },
+    {
+      "name": "fresh_verification_reconstructs_the_prefix_and_each_success_witness",
+      "pass": true
+    },
+    {
+      "name": "saving_a_hypothetical_report_downloads_the_exact_verified_result",
+      "pass": true
+    },
+    {
+      "name": "saved_hypotheses_reimport_without_replacing_the_real_partida",
+      "pass": true
+    },
+    {
+      "name": "altered_weight_is_rejected_transactionally",
+      "pass": true
+    },
+    {
+      "name": "altered_uid_is_rejected_transactionally",
+      "pass": true
+    },
+    {
+      "name": "altered_context_is_rejected_transactionally",
+      "pass": true
+    },
+    {
+      "name": "altered_total_is_rejected_transactionally",
+      "pass": true
+    },
+    {
+      "name": "an_unchanged_ui_refresh_preserves_the_verified_report",
+      "pass": true
+    },
+    {
+      "name": "applying_a_different_goal_invalidates_only_the_hypothetical_result",
+      "pass": true
+    },
+    {
+      "name": "restoring_the_original_goal_allows_the_saved_hypothesis_to_verify_again",
+      "pass": true
+    },
+    {
+      "name": "the_public_report_is_detached_from_internal_panel_state",
+      "pass": true
+    },
+    {
+      "name": "the_hypothetical_panel_remains_readable_at_mobile_width",
+      "pass": true
+    },
+    {
+      "name": "data_quality_counts_are_derived_from_the_incorporated_catalogue",
+      "pass": true
+    },
+    {
+      "name": "data_quality_download_is_bound_to_the_current_build",
+      "pass": true
+    },
+    {
+      "name": "data_review_and_export_do_not_migrate_or_change_the_active_deck",
+      "pass": true
+    },
+    {
+      "name": "the_incident_panel_limits_its_visible_page_to_fifty_rows",
+      "pass": true
+    },
+    {
+      "name": "release14_tasks_raise_no_javascript_page_errors",
+      "pass": true
+    },
+    {
+      "name": "compiled_document_remains_unchanged_during_release14_tasks",
+      "pass": true
+    }
+  ],
+  "details": {
+    "data_quality_counts_are_derived_from_the_incorporated_catalogue": {
+      "catalogueRecords": 21986,
+      "activeCatalogueRecords": 21986,
+      "activeUniquePasscodes": 21986,
+      "technicalSourceMatched": 21888,
+      "unresolvedIdentities": 98,
+      "unknownMonsterStats": 51,
+      "migrationProposals": 32,
+      "incidentEntries": 181
+    },
+    "release14_tasks_raise_no_javascript_page_errors": []
+  },
+  "browser": {
+    "engine": "chromium",
+    "version": "154.0.8037.57"
+  },
+  "externalRequestsBlocked": 16,
+  "limitations": [
+    "The unknown turn draw is an explicit uniform hypothetical assumption, never an observed laboratory action.",
+    "The zero-depth visible task checks an immediate hand goal; source tests exercise registered subsequent actions.",
+    "Card-quality incidents are reported for review without applying migrations or inventing missing data.",
+    "The mobile width check is desktop emulation; competitive scoring remains provisional."
+  ],
+  "elapsedSeconds": 60.09
+}

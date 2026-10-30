@@ -206,7 +206,7 @@ def run(url=None, source_inject=False):
         check('embedded_tutorials_boot_offline_with_expected_document_bytes', response is not None
               and hashlib.sha256(response.body()).hexdigest() == hashlib.sha256(html).hexdigest()
               and page.evaluate('()=>navigator.onLine===false'))
-        expected_ids = ['spark', 'spirit', 'invoked', 'swordsoul', 'branded', 'tenyi', 'salamangreat', 'roar', 'crow', 'droll', 'field', 'trap', 'evacuation']
+        expected_ids = ['spark', 'spirit', 'invoked', 'swordsoul', 'branded', 'tenyi', 'salamangreat', 'roar', 'crow', 'droll', 'field', 'trap', 'evacuation', 'shuffle']
         definitions = page.evaluate('()=>YGOScenarioExamples.list()')
         menu_ids = page.locator('#ygoExampleSelect').evaluate('(el)=>[...el.options].map(option=>option.value)')
         check('dynamic_example_menu_preserves_originals_and_lists_every_registered_tutorial',
