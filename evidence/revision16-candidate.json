@@ -1,9 +1,9 @@
 {
   "schema": "ygo-release-candidate/v1",
   "revision": "2026.10-stable.16",
-  "pass": null,
-  "releaseAccepted": false,
-  "status": "REMOTE_FULL_VALIDATION_PENDING",
+  "pass": true,
+  "releaseAccepted": true,
+  "status": "REMOTE_FULL_EXECUTION_ACCEPTED",
   "bindings": {
     "buildId": "d49d56207cfff495f8a356974dc554fd77c063b9a9022da8ed041d26e1a1171e",
     "htmlSha256": "fab64088c402372a2cf8d3c8c997bdf13612c11701640bb8172694fcf00aa0cc",
@@ -78,10 +78,16 @@
   },
   "newSourceCasesPassed": 58,
   "newGuiChecksPassed": 38,
-  "localValidation": "RUNNING_WITH_FIREFOX_WEBKIT_UNAVAILABLE",
-  "remoteValidation": "PENDING",
+  "localValidation": "COMPLETE_WITH_FIREFOX_WEBKIT_UNAVAILABLE",
+  "remoteValidation": "ACCEPTED",
   "previousAcceptedCommit": "17eeb86257ba4bca01feffeb2c10f64d38fb3fbb",
   "competitiveScoring": "PROVISIONAL_BY_USER_REQUEST",
   "previousCandidateCommit": "b538f101cdfefbc855f4d8b5d164bdfb5e35a624",
-  "testFixtureCorrection": "Normalize the new summon origin in an ownership-only diagnostic projection; all strict ownership and real replay assertions preserved."
+  "testFixtureCorrection": "Normalize the new summon origin in an ownership-only diagnostic projection; all strict ownership and real replay assertions preserved.",
+  "acceptedCandidateCommit": "329f1ba15e960a949ceecc971005eee0fb622e03",
+  "remoteRunUrl": "https://github.com/socramgns/MODERN/actions/runs/41889817768",
+  "localValidationPass": false,
+  "localPassedGroups": 63,
+  "localTotalGroups": 65,
+  "acceptanceEvidence": "evidence/remote-acceptance.json"
 }

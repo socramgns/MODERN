@@ -1,8 +1,8 @@
 {
   "schema": "ygo-mobile-accessibility/v1",
-  "pass": true,
-  "buildId": "c4b3a88282d993fd538a0ecc5c80b62f99239bfbbfeb0fd47bdbfc70816388ed",
-  "htmlSha256": "2a4e2c76869e9fdfce9435152fd2c0b654180a0a71c1e0c082b08555c263b804",
+  "pass": false,
+  "buildId": "d49d56207cfff495f8a356974dc554fd77c063b9a9022da8ed041d26e1a1171e",
+  "htmlSha256": "fab64088c402372a2cf8d3c8c997bdf13612c11701640bb8172694fcf00aa0cc",
   "artifactMode": "DELIVERED_BYTES",
   "sourceInjection": false,
   "checks": [
@@ -79,68 +79,8 @@
       "pass": true
     },
     {
-      "name": "webkit_mobile_boot_uses_manifest_bound_bytes",
-      "pass": true
-    },
-    {
-      "name": "webkit_context_reports_a_coarse_pointer",
-      "pass": true
-    },
-    {
-      "name": "webkit_example_load_is_physical_and_has_no_autoplay",
-      "pass": true
-    },
-    {
-      "name": "webkit_example_load_is_reachable_by_keyboard_with_visible_focus",
-      "pass": true
-    },
-    {
-      "name": "webkit_primary_inputs_have_programmatic_labels",
-      "pass": true
-    },
-    {
-      "name": "webkit_registered_steps_keep_a_fresh_replay_on_mobile",
-      "pass": true
-    },
-    {
-      "name": "webkit_390px_controls_have_44px_touch_targets",
-      "pass": true
-    },
-    {
-      "name": "webkit_390px_controls_remain_inside_the_viewport",
-      "pass": true
-    },
-    {
-      "name": "webkit_twofold_text_enlargement_keeps_controls_in_view",
-      "pass": true
-    },
-    {
-      "name": "webkit_viewport_and_text_changes_preserve_the_live_scenario",
-      "pass": true
-    },
-    {
-      "name": "webkit_single_action_page_is_disabled_or_multiple_pages_are_selectable",
-      "pass": true
-    },
-    {
-      "name": "webkit_action_filter_and_page_controls_do_not_execute_a_step",
-      "pass": true
-    },
-    {
-      "name": "webkit_export_tap_emits_a_trusted_browser_touch_event",
-      "pass": true
-    },
-    {
-      "name": "webkit_touch_export_preserves_every_ydk_card_and_zone",
-      "pass": true
-    },
-    {
-      "name": "webkit_touch_export_preserves_the_live_scenario",
-      "pass": true
-    },
-    {
-      "name": "webkit_mobile_tasks_raise_no_javascript_page_errors",
-      "pass": true
+      "name": "webkit_mobile_tasks_complete",
+      "pass": false
     },
     {
       "name": "mobile_tasks_leave_the_delivered_artifact_unchanged",
@@ -227,71 +167,7 @@
       "bytes": 433
     },
     "chromium_mobile_tasks_raise_no_javascript_page_errors": [],
-    "webkit_context_reports_a_coarse_pointer": {
-      "touch": 0,
-      "coarse": true,
-      "width": 390
-    },
-    "webkit_example_load_is_reachable_by_keyboard_with_visible_focus": {
-      "id": "ygoExampleLoad",
-      "outline": "solid",
-      "width": 3
-    },
-    "webkit_primary_inputs_have_programmatic_labels": [
-      {
-        "id": "ygoDuelActions",
-        "named": true
-      },
-      {
-        "id": "ygoDuelActionFilter",
-        "named": true
-      },
-      {
-        "id": "ygoFormatFile",
-        "named": true
-      },
-      {
-        "id": "ygoExampleSelect",
-        "named": true
-      }
-    ],
-    "webkit_390px_controls_have_44px_touch_targets": {
-      "viewport": 390,
-      "documentWidth": 390,
-      "count": 103,
-      "shortTargets": [],
-      "outsideViewport": []
-    },
-    "webkit_390px_controls_remain_inside_the_viewport": {
-      "viewport": 390,
-      "documentWidth": 390,
-      "count": 103,
-      "shortTargets": [],
-      "outsideViewport": []
-    },
-    "webkit_twofold_text_enlargement_keeps_controls_in_view": {
-      "viewport": 390,
-      "documentWidth": 390,
-      "count": 103,
-      "shortTargets": [],
-      "outsideViewport": []
-    },
-    "webkit_single_action_page_is_disabled_or_multiple_pages_are_selectable": {
-      "count": 1,
-      "disabled": true,
-      "index": 0
-    },
-    "webkit_export_tap_emits_a_trusted_browser_touch_event": [
-      {
-        "trusted": true,
-        "touches": 1
-      }
-    ],
-    "webkit_touch_export_preserves_every_ydk_card_and_zone": {
-      "filename": "Baraja_Cartas.ydk",
-      "bytes": 433
-    },
-    "webkit_mobile_tasks_raise_no_javascript_page_errors": []
+    "webkit_mobile_tasks_complete": "BrowserType.launch: Failed to launch webkit because executable doesn't exist at /home/agent/.cache/ms-playwright/webkit-2336/pw_run.sh"
   },
   "browsers": [
     {
@@ -309,21 +185,13 @@
     },
     {
       "engine": "webkit",
-      "version": "26.5",
       "emulatedDevice": "iPhone 13",
-      "executablePath": "/tmp/ygo-browsers/webkit-2336/pw_run.sh",
-      "executed": true,
-      "touchCapabilityMetadata": {
-        "touch": 0,
-        "coarse": true,
-        "width": 390
-      },
-      "externalRequestsBlocked": 0
+      "executed": false,
+      "error": "BrowserType.launch: Failed to launch webkit because executable doesn't exist at /home/agent/.cache/ms-playwright/webkit-2336/pw_run.sh"
     }
   ],
   "executedEngines": [
-    "chromium",
-    "webkit"
+    "chromium"
   ],
   "textResizeEmulation": "Twofold computed font sizes in registered workbenches; presentation overrides only.",
   "limitations": [
@@ -332,5 +200,5 @@
     "The native OS file picker and assistive technology were not tested.",
     "These functional tasks do not establish complete WCAG conformance or universal mobile compatibility."
   ],
-  "elapsedSeconds": 40.76
+  "elapsedSeconds": 22.87
 }

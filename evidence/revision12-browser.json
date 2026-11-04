@@ -1,8 +1,8 @@
 {
   "schema": "ygo-release12-browser/v1",
   "pass": true,
-  "buildId": "c4b3a88282d993fd538a0ecc5c80b62f99239bfbbfeb0fd47bdbfc70816388ed",
-  "htmlSha256": "2a4e2c76869e9fdfce9435152fd2c0b654180a0a71c1e0c082b08555c263b804",
+  "buildId": "d49d56207cfff495f8a356974dc554fd77c063b9a9022da8ed041d26e1a1171e",
+  "htmlSha256": "fab64088c402372a2cf8d3c8c997bdf13612c11701640bb8172694fcf00aa0cc",
   "artifactMode": "DELIVERED_BYTES",
   "sourceInjection": false,
   "checks": [
@@ -11,7 +11,7 @@
       "pass": true
     },
     {
-      "name": "fifteen_visible_examples_preserve_the_previous_fourteen_identifiers",
+      "name": "sixteen_visible_examples_preserve_the_previous_fifteen_identifiers",
       "pass": true
     },
     {
@@ -145,5 +145,5 @@
     "The registered between-action windows do not certify arbitrary priority or Damage Step.",
     "Starting fields remain declared assumptions and competitive scoring remains provisional."
   ],
-  "elapsedSeconds": 25.18
+  "elapsedSeconds": 26.44
 }

@@ -256,6 +256,6 @@ El ejemplo decimosexto `synchro` conserva los quince anteriores y conecta Normal
 
 ### Aceptación de la revisión 16
 
-VALIDACION_R16_PENDIENTE
+La aceptación de la revisión 16 se apoya en la ejecución remota del commit `329f1ba15e960a949ceecc971005eee0fb622e03`: el [workflow de GitHub Actions](https://github.com/socramgns/MODERN/actions/runs/41889817768) completó con éxito las etapas obligatorias de instalación de los tres motores, compilación y comparación del HTML, batería de **65 grupos** y comprobación entre motores. El recuento corresponde al runner versionado y sus salidas obligatorias; los informes remotos individuales no se descargaron. Las fuentes incluyen **120 archivos JavaScript**. La ejecución local completa conserva su resultado **63/65 grupos aprobados**, con Firefox y WebKit no disponibles; su informe original permanece con `pass: false`, sin conciliación ni conversión a éxito. Build `d49d56207cfff495f8a356974dc554fd77c063b9a9022da8ed041d26e1a1171e`; SHA-256 `fab64088c402372a2cf8d3c8c997bdf13612c11701640bb8172694fcf00aa0cc`; tamaño **7,089,078 bytes**. La puntuación competitiva sigue provisional; no se acreditan todas las reglas, dispositivos físicos ni conformidad WCAG completa.
 
 La aceptación se limita al procedimiento y perfiles registrados. La publicación, descarga HTTP y CI se observan para el commit concreto, por separado de las pruebas locales. Permanecen pendientes prioridad y cadenas generales, SEGOC, Damage Step, Flip, ataques múltiples, Xyz, Pendulum y los demás perfiles no registrados.

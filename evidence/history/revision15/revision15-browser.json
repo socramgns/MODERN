@@ -1,0 +1,137 @@
+{
+  "schema": "ygo-release15-browser/v1",
+  "pass": true,
+  "buildId": "c4b3a88282d993fd538a0ecc5c80b62f99239bfbbfeb0fd47bdbfc70816388ed",
+  "htmlSha256": "2a4e2c76869e9fdfce9435152fd2c0b654180a0a71c1e0c082b08555c263b804",
+  "artifactMode": "DELIVERED_BYTES",
+  "sourceInjection": false,
+  "checks": [
+    {
+      "name": "release15_uses_manifest_bound_bytes_offline",
+      "pass": true
+    },
+    {
+      "name": "fifteen_examples_preserve_all_fourteen_previous_identifiers",
+      "pass": true
+    },
+    {
+      "name": "reborn_is_the_fourth_registered_normal_spell_with_its_real_identity",
+      "pass": true
+    },
+    {
+      "name": "reborn_loads_a_physical_declared_field_without_autoplay_or_goal_success",
+      "pass": true
+    },
+    {
+      "name": "the_visible_choice_identifies_the_own_graveyard_position_and_destination",
+      "pass": true
+    },
+    {
+      "name": "roar_allows_the_same_own_monster_to_revive_in_defense",
+      "pass": true
+    },
+    {
+      "name": "the_real_matching_spell_cost_and_both_own_spell_traps_stay_paid",
+      "pass": true
+    },
+    {
+      "name": "normal_spell_transport_records_its_source_before_responses",
+      "pass": true
+    },
+    {
+      "name": "revival_achieves_the_field_goal_without_spending_a_normal_summon",
+      "pass": true
+    },
+    {
+      "name": "the_saved_revival_report_is_bound_to_the_target_cost_and_build",
+      "pass": true
+    },
+    {
+      "name": "undo_restores_the_original_graveyards_set_trap_and_unpaid_response",
+      "pass": true
+    },
+    {
+      "name": "negating_reborn_keeps_the_monster_in_its_graveyard_and_the_spell_cost_paid",
+      "pass": true
+    },
+    {
+      "name": "reviving_the_rival_monster_changes_control_and_preserves_its_real_owner",
+      "pass": true
+    },
+    {
+      "name": "a_registered_revival_then_compulsory_returns_to_the_original_rival_owner",
+      "pass": true
+    },
+    {
+      "name": "a_saved_revival_reimports_with_fresh_replay_and_the_same_physical_target",
+      "pass": true
+    },
+    {
+      "name": "an_altered_target_is_rejected_without_replacing_the_active_revival",
+      "pass": true
+    },
+    {
+      "name": "an_altered_cost_is_rejected_without_replacing_the_active_revival",
+      "pass": true
+    },
+    {
+      "name": "an_altered_history_is_rejected_without_replacing_the_active_revival",
+      "pass": true
+    },
+    {
+      "name": "revival_controls_remain_inside_a_mobile_width_without_changing_the_route",
+      "pass": true
+    },
+    {
+      "name": "the_review_tool_preserves_the_legacy_passcode_by_default",
+      "pass": true
+    },
+    {
+      "name": "selecting_a_real_candidate_prepares_a_detached_copy_without_mutating_the_deck",
+      "pass": true
+    },
+    {
+      "name": "the_review_download_preserves_all_counts_format_and_context",
+      "pass": true
+    },
+    {
+      "name": "an_unchanged_refresh_preserves_the_explicit_identity_choice",
+      "pass": true
+    },
+    {
+      "name": "an_altered_copy_quantity_is_rejected_against_the_current_source",
+      "pass": true
+    },
+    {
+      "name": "the_existing_json_importer_accepts_the_reviewed_copy_in_a_separate_session",
+      "pass": true
+    },
+    {
+      "name": "a_changed_source_invalidates_the_old_proposal_and_selection",
+      "pass": true
+    },
+    {
+      "name": "release15_tasks_raise_no_javascript_page_errors",
+      "pass": true
+    },
+    {
+      "name": "release15_leaves_the_compiled_artifact_unchanged",
+      "pass": true
+    }
+  ],
+  "details": {
+    "release15_tasks_raise_no_javascript_page_errors": []
+  },
+  "browser": {
+    "engine": "chromium",
+    "version": "154.0.8037.57"
+  },
+  "externalRequestsBlocked": 47,
+  "limitations": [
+    "Initial fields and graveyards are declared; Extra resurrection history is exercised separately by source-level tests.",
+    "The registered Reborn and Compulsory route verifies physical ownership without certifying general control-changing effects.",
+    "Reviewed identity candidates come from the technical catalogue and require user selection; exports do not certify official identity or competitive legality.",
+    "Viewport checks are emulated and competitive scoring remains provisional."
+  ],
+  "elapsedSeconds": 30.38
+}

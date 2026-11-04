@@ -1,12 +1,12 @@
 {
   "schema": "ygo-node-source-suite-evidence/v1",
   "pass": true,
-  "buildId": "c4b3a88282d993fd538a0ecc5c80b62f99239bfbbfeb0fd47bdbfc70816388ed",
-  "htmlSha256": "2a4e2c76869e9fdfce9435152fd2c0b654180a0a71c1e0c082b08555c263b804",
+  "buildId": "d49d56207cfff495f8a356974dc554fd77c063b9a9022da8ed041d26e1a1171e",
+  "htmlSha256": "fab64088c402372a2cf8d3c8c997bdf13612c11701640bb8172694fcf00aa0cc",
   "artifactMode": "SOURCE_NODE_SUITE",
+  "executionEnvironment": "LOCAL_NODE_SOURCE_TESTS",
   "testFile": "tests/draw_continuation.cjs",
   "testFileSha256": "1945fe5179b923cf72c2f8966e9afe55381abfed8444ddb50d86950968d528fb",
-  "meaning": "Source-level Node cases executed during validation of the bound artifact; compiled document tasks are reported separately in revision15-browser.json and mobile-accessibility.json.",
   "result": {
     "schema": "ygo-hypothetical-draw-source-regression/v1",
     "pass": true,
@@ -126,5 +126,6 @@
       "The first draw is explicitly hypothetical under a uniform-shuffle assumption; all subsequent witnessed actions use the ordinary causal engine.",
       "Only a single own turn draw with opponent PASS is admitted. Unknown continuations are not proved failures, competitive win rates or general optimal play."
     ]
-  }
+  },
+  "meaning": "Passed local Node source cases from the preserved complete local run; remote whole-release acceptance is recorded separately through mandatory CI gates. These are not downloaded remote result files."
 }

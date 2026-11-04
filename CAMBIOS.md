@@ -2,7 +2,7 @@
 
 La revisión `2026.10-stable.16` añade un procedimiento Synchro registrado de Stardust Spark Dragon y conecta su historial ejecutado con Monster Reborn y la protección posterior, conservando el HTML único y la puntuación provisional.
 
-VALIDACION_R16_PENDIENTE
+La aceptación de la revisión 16 se apoya en la ejecución remota del commit `329f1ba15e960a949ceecc971005eee0fb622e03`: el [workflow de GitHub Actions](https://github.com/socramgns/MODERN/actions/runs/41889817768) completó con éxito las etapas obligatorias de instalación de los tres motores, compilación y comparación del HTML, batería de **65 grupos** y comprobación entre motores. El recuento corresponde al runner versionado y sus salidas obligatorias; los informes remotos individuales no se descargaron. Las fuentes incluyen **120 archivos JavaScript**. La ejecución local completa conserva su resultado **63/65 grupos aprobados**, con Firefox y WebKit no disponibles; su informe original permanece con `pass: false`, sin conciliación ni conversión a éxito. Build `d49d56207cfff495f8a356974dc554fd77c063b9a9022da8ed041d26e1a1171e`; SHA-256 `fab64088c402372a2cf8d3c8c997bdf13612c11701640bb8172694fcf00aa0cc`; tamaño **7,089,078 bytes**. La puntuación competitiva sigue provisional; no se acreditan todas las reglas, dispositivos físicos ni conformidad WCAG completa.
 
 - Añade `SYNCHRO_STARDUST_SPARK_DRAGON` (83994433), con un Tuner y uno o más no Tuner admitidos, todos físicos y boca arriba, cuyos niveles suman 8.
 - Comprueba espacio tras retirar los materiales y restricciones por su alcance. La invocación registra su historial apropiado y los destinos reales de materiales; una colocación inicial declarada no sustituye ese procedimiento.

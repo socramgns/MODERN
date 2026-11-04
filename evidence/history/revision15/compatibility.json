@@ -1,0 +1,197 @@
+{
+  "schema": "ygo-browser-compatibility/v1",
+  "buildId": "c4b3a88282d993fd538a0ecc5c80b62f99239bfbbfeb0fd47bdbfc70816388ed",
+  "htmlSha256": "2a4e2c76869e9fdfce9435152fd2c0b654180a0a71c1e0c082b08555c263b804",
+  "artifactMode": "DELIVERED_BYTES",
+  "executedAt": "2026-10-30T17:48:07.015247+00:00",
+  "pass": true,
+  "complete": true,
+  "crossBrowserVerified": true,
+  "executedEngines": [
+    "chromium",
+    "firefox",
+    "webkit"
+  ],
+  "pendingEngines": [],
+  "limitations": [
+    "Passing installed engines does not close unavailable-engine coverage.",
+    "Browser-policy restrictions are reported and are not disabled.",
+    "This is a smoke regression, not complete compatibility coverage."
+  ],
+  "elapsedSeconds": 64.68,
+  "browsers": [
+    {
+      "engine": "chromium",
+      "status": "PASSED",
+      "pass": true,
+      "tests": [
+        {
+          "name": "delivered_document_bytes_match_manifest",
+          "pass": true
+        },
+        {
+          "name": "catalogue_and_engine_boot",
+          "pass": true
+        },
+        {
+          "name": "physical_fixture_file_import",
+          "pass": true
+        },
+        {
+          "name": "invoked_goal_with_fresh_replay",
+          "pass": true
+        },
+        {
+          "name": "replay_results_rendered",
+          "pass": true
+        },
+        {
+          "name": "json_shared_transport_roundtrip",
+          "pass": true
+        },
+        {
+          "name": "session_write_confirmed",
+          "pass": true
+        },
+        {
+          "name": "session_reload_preserves_identity_and_context",
+          "pass": true
+        },
+        {
+          "name": "mobile_layout_no_document_overflow",
+          "pass": true
+        },
+        {
+          "name": "no_page_errors",
+          "pass": true
+        }
+      ],
+      "fileNavigation": {
+        "status": "BLOCKED_BY_BROWSER_POLICY",
+        "verified": false,
+        "error": "Page.goto: net::ERR_BLOCKED_BY_ADMINISTRATOR at file:///workspace/yugioh-analyzer-revision15/dist/Calculadora_de_Barajas_YuGiOh_Alpha_1263_Corregida.html\nCall log:\n  - navigating to \"file:///workspace/yugioh-analyzer-revision15/dist/Calculadora_de_Barajas_YuGiOh_Alpha_1263_Corregida.html\", waiting until \"domcontentloaded\"\n"
+      },
+      "pageErrors": []
+    },
+    {
+      "engine": "firefox",
+      "status": "PASSED",
+      "pass": true,
+      "tests": [
+        {
+          "name": "delivered_document_bytes_match_manifest",
+          "pass": true
+        },
+        {
+          "name": "catalogue_and_engine_boot",
+          "pass": true
+        },
+        {
+          "name": "physical_fixture_file_import",
+          "pass": true
+        },
+        {
+          "name": "invoked_goal_with_fresh_replay",
+          "pass": true
+        },
+        {
+          "name": "replay_results_rendered",
+          "pass": true
+        },
+        {
+          "name": "json_shared_transport_roundtrip",
+          "pass": true
+        },
+        {
+          "name": "session_write_confirmed",
+          "pass": true
+        },
+        {
+          "name": "session_reload_preserves_identity_and_context",
+          "pass": true
+        },
+        {
+          "name": "mobile_layout_no_document_overflow",
+          "pass": true
+        },
+        {
+          "name": "no_page_errors",
+          "pass": true
+        },
+        {
+          "name": "direct_file_boot",
+          "pass": true
+        }
+      ],
+      "fileNavigation": {
+        "status": "VERIFIED",
+        "verified": true,
+        "detail": {
+          "ready": true,
+          "catalog": true
+        }
+      },
+      "pageErrors": []
+    },
+    {
+      "engine": "webkit",
+      "status": "PASSED",
+      "pass": true,
+      "tests": [
+        {
+          "name": "delivered_document_bytes_match_manifest",
+          "pass": true
+        },
+        {
+          "name": "catalogue_and_engine_boot",
+          "pass": true
+        },
+        {
+          "name": "physical_fixture_file_import",
+          "pass": true
+        },
+        {
+          "name": "invoked_goal_with_fresh_replay",
+          "pass": true
+        },
+        {
+          "name": "replay_results_rendered",
+          "pass": true
+        },
+        {
+          "name": "json_shared_transport_roundtrip",
+          "pass": true
+        },
+        {
+          "name": "session_write_confirmed",
+          "pass": true
+        },
+        {
+          "name": "session_reload_preserves_identity_and_context",
+          "pass": true
+        },
+        {
+          "name": "mobile_layout_no_document_overflow",
+          "pass": true
+        },
+        {
+          "name": "no_page_errors",
+          "pass": true
+        },
+        {
+          "name": "direct_file_boot",
+          "pass": true
+        }
+      ],
+      "fileNavigation": {
+        "status": "VERIFIED",
+        "verified": true,
+        "detail": {
+          "ready": true,
+          "catalog": true
+        }
+      },
+      "pageErrors": []
+    }
+  ]
+}

@@ -1,8 +1,8 @@
 {
   "schema": "ygo-release13-browser/v1",
   "pass": true,
-  "buildId": "c4b3a88282d993fd538a0ecc5c80b62f99239bfbbfeb0fd47bdbfc70816388ed",
-  "htmlSha256": "2a4e2c76869e9fdfce9435152fd2c0b654180a0a71c1e0c082b08555c263b804",
+  "buildId": "d49d56207cfff495f8a356974dc554fd77c063b9a9022da8ed041d26e1a1171e",
+  "htmlSha256": "fab64088c402372a2cf8d3c8c997bdf13612c11701640bb8172694fcf00aa0cc",
   "artifactMode": "DELIVERED_BYTES",
   "sourceInjection": false,
   "checks": [
@@ -127,5 +127,5 @@
     "The initial field remains declared and these registered windows do not certify general priority, SEGOC or Damage Step.",
     "Competitive scoring remains provisional."
   ],
-  "elapsedSeconds": 22.48
+  "elapsedSeconds": 23.71
 }

@@ -1,12 +1,12 @@
 {
   "schema": "ygo-node-source-suite-evidence/v1",
   "pass": true,
-  "buildId": "c4b3a88282d993fd538a0ecc5c80b62f99239bfbbfeb0fd47bdbfc70816388ed",
-  "htmlSha256": "2a4e2c76869e9fdfce9435152fd2c0b654180a0a71c1e0c082b08555c263b804",
+  "buildId": "d49d56207cfff495f8a356974dc554fd77c063b9a9022da8ed041d26e1a1171e",
+  "htmlSha256": "fab64088c402372a2cf8d3c8c997bdf13612c11701640bb8172694fcf00aa0cc",
   "artifactMode": "SOURCE_NODE_SUITE",
+  "executionEnvironment": "LOCAL_NODE_SOURCE_TESTS",
   "testFile": "tests/deck_identity_review.cjs",
   "testFileSha256": "1df7adbdf1356b64fb5322917dbcfd072405577ffe4c1d00bd61292724b43a4b",
-  "meaning": "Source-level Node cases executed during validation of the bound artifact; compiled document tasks are reported separately in revision15-browser.json and mobile-accessibility.json.",
   "result": {
     "schema": "ygo-deck-identity-review-tests/v1",
     "pass": true,
@@ -106,5 +106,6 @@
       "The copy workflow does not mutate or replace the active deck, catalogue, laboratory state, goal or competitive scoring.",
       "Source comparison is an explicit data binding, not a cryptographic authorship signature; actual browser downloads/file imports and stale controls are tested in GUI15."
     ]
-  }
+  },
+  "meaning": "Passed local Node source cases from the preserved complete local run; remote whole-release acceptance is recorded separately through mandatory CI gates. These are not downloaded remote result files."
 }
