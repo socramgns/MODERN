@@ -42,7 +42,7 @@
       "tests/mechaba_official_references.py": "212bb676bb7ada7dd9fe23efcf40d7df53724d47b776bfc4f890fe862c9c35d3",
       "tests/mechaba_quick_hand.cjs": "be5b4d21e7ea001b2b82ef0434c94e7d022e24fdbc5e2497d08549d7615f0bb2",
       "tests/mobile_accessibility.py": "3c5ed4cb97adc009efdc34354617b62001a1d4a99b9009f23a038d41e505b8f5",
-      "tests/monster_reborn.cjs": "e69a189da40d822bfc991b21ff36d868e4eac738f2ed98b3eefca549177ad307",
+      "tests/monster_reborn.cjs": "d6ae49ed69997ca1854a72828f948b6b4d69b18809d77581122102140c43b520",
       "tests/new_card_effects.cjs": "f66afb763efbb1fbb8c44f56c5bcbfe01ae96605956064e1f0555c26730a5fcf",
       "tests/normal_trap_activations.cjs": "1be227f12d3745d975c065874011971b0339f8dabb710ed8d8a2741542fc0f71",
       "tests/official_context_build.py": "8819e3d99994f10ffcfa9b0ab4fded2bbb849962f3f35f14bf3b7e5018a93f52",
@@ -81,5 +81,7 @@
   "localValidation": "RUNNING_WITH_FIREFOX_WEBKIT_UNAVAILABLE",
   "remoteValidation": "PENDING",
   "previousAcceptedCommit": "17eeb86257ba4bca01feffeb2c10f64d38fb3fbb",
-  "competitiveScoring": "PROVISIONAL_BY_USER_REQUEST"
+  "competitiveScoring": "PROVISIONAL_BY_USER_REQUEST",
+  "previousCandidateCommit": "b538f101cdfefbc855f4d8b5d164bdfb5e35a624",
+  "testFixtureCorrection": "Normalize the new summon origin in an ownership-only diagnostic projection; all strict ownership and real replay assertions preserved."
 }

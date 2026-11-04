@@ -133,7 +133,7 @@ const I={REBORN:83764718,CED:94192409,IMPERM:10045474,MECHABA:75286621,
     // QA-only projection isolates ownership from DECLARED versus SPECIAL
     // starting history. It is never submitted as an executable game line.
     const diagnostic=copy(t.state),a=H.locate(diagnostic,own.uid).item,b=H.locate(diagnostic,foreign).item;
-    for(const key of ['summonType','summonTurn','properlySummoned','properSummonType','declaredSummonType','sentToGyTurn']){
+    for(const key of ['summonType','summonOriginZone','summonTurn','properlySummoned','properSummonType','declaredSummonType','sentToGyTurn']){
      if(b[key]===undefined)delete a[key];else a[key]=copy(b[key]);
     }
     const swapped=copy(diagnostic),first=H.locate(swapped,own.uid).item,second=H.locate(swapped,foreign).item;
