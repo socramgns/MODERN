@@ -54,6 +54,9 @@ E.registerLifecycle({id:'registered-gazelle-shthana-triggers-v1',validateTransit
 function validateShamanActivations(s,action){
  const rootIsActivation=!/^(?:DECLINE_|DUEL_|ATTACK|BATTLE|PHASE|END_|START_|NEXT_|CHANGE_POSITION)/.test(action.type),uids=[...(rootIsActivation&&action.sourceUid?[action.sourceUid]:[]),...(action.response?.uid?[action.response.uid]:[]),...arr(action.counterResponses).map(x=>x.uid||x.sourceUid).filter(Boolean)];
  for(const uid of uids){const source=H.locate(s,uid);if(!source||!['monster','gy','banished'].includes(source.zone)||!(Number(C(source.item).typeBits)&(0x40|0x2000|0x800000|0x4000000))||TENYI.has(id(source.item)))continue;
+  // A new field instance revived from the GY is not summoned from the Extra
+  // Deck. A declared initial origin remains unknown and keeps the prior guard.
+  if(source.zone==='monster'&&['hand','deck','gy','banished'].includes(source.item.summonOriginZone))continue;
   if(s.locks.some(l=>l.kind==='TENYI_EXTRA_EFFECTS_ONLY'&&(l.appliesToPlayer??l.player??H.locate(s,l.sourceUid)?.player??0)===source.player&&(l.untilTurn===undefined||l.untilTurn>=s.turn)))throw Error('SHAMAN_FORBIDS_NON_TENYI_EXTRA_MONSTER_EFFECT');
  }
  return{pass:true};

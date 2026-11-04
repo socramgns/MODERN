@@ -2,7 +2,7 @@
   "version": "Alpha 1263",
   "format": "ygo-deferred-bundle-v22",
   "canonicalId": "ygo-alpha-1263-canonical-release",
-  "revision": "2026.10-stable.15",
+  "revision": "2026.10-stable.16",
   "scripts": [
     0,
     1,
@@ -462,6 +462,7 @@
     "src/app/archetypes-expanded.js",
     "src/app/blue-eyes-duel.js",
     "src/app/monster-reborn.js",
+    "src/app/stardust-synchro.js",
     "src/app/strategy.js",
     "src/app/recommendations.js",
     "src/app/evaluation.js",

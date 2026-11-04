@@ -28,7 +28,7 @@ const definitions=[
  {id:71039903,actions:[effect('DUEL_ANCIENTS_END_SUMMON','Invocación registrada en End Phase'),effect('ANCIENTS_RECOVER_BLUE_EYES','Recuperación admitida de Blue-Eyes')]},
  {id:59822133,actions:[summon('SYNCHRO_BLUE_EYES_SPIRIT_DRAGON','Invocación Synchro de Spirit Dragon'),effect('SPIRIT_DRAGON_TRIBUTE_SYNCHRO','Tributo para Azure-Eyes o Spark'),response('SPIRIT','Negar activación GY registrada')]},
  {id:40908371,actions:[effect('AZURE_EYES_PROTECTION','Protección registrada de Azure-Eyes'),effect('AZURE_EYES_STANDBY_REVIVE','Revivir un Normal en Standby')]},
- {id:83994433,actions:[effect('STARDUST_SPARK_PROTECTION','Protección de una destrucción de Spark')],notes:['No se acumulan protecciones Spark aún sin consumir ni se infiere la prioridad general del Damage Step.']},
+ {id:83994433,actions:[summon('SYNCHRO_STARDUST_SPARK_DRAGON','Invocación Synchro de Spark con materiales admitidos'),effect('STARDUST_SPARK_PROTECTION','Protección de una destrucción de Spark')],notes:['No se acumulan protecciones Spark aún sin consumir ni se infiere la prioridad general del Damage Step.']},
  {id:97268402,actions:[response('VEILER','Respuesta física de Effect Veiler')]},
  {id:10045474,actions:[effect('ACTIVATE_INFINITE_IMPERMANENCE','Activar Infinite Impermanence'),response('IMPERM','Respuesta física de Infinite Impermanence')]},
  {id:94192409,actions:[effect('ACTIVATE_COMPULSORY_EVACUATION_DEVICE','Activación registrada de Compulsory Evacuation Device desde colocada')]},

@@ -1,4 +1,23 @@
-# Cambios de la revisión 15
+# Cambios de la revisión 16
+
+La revisión `2026.10-stable.16` añade un procedimiento Synchro registrado de Stardust Spark Dragon y conecta su historial ejecutado con Monster Reborn y la protección posterior, conservando el HTML único y la puntuación provisional.
+
+VALIDACION_R16_PENDIENTE
+
+- Añade `SYNCHRO_STARDUST_SPARK_DRAGON` (83994433), con un Tuner y uno o más no Tuner admitidos, todos físicos y boca arriba, cuyos niveles suman 8.
+- Comprueba espacio tras retirar los materiales y restricciones por su alcance. La invocación registra su historial apropiado y los destinos reales de materiales; una colocación inicial declarada no sustituye ese procedimiento.
+- Permite revivir a Spark mediante el paquete existente de Monster Reborn después de una salida válida al Cementerio. Conserva UID, propietario e historial apropiado, y registra la llegada como Invocación Especial.
+- Reutiliza la protección de Spark, con una prevención compartida entre batalla y efecto, duración hasta terminar ese turno y presupuesto de uso de la presencia actual en campo. No inventa un límite por turno para la invocación de Spark ni para Monster Reborn.
+- Distingue el origen de la entrada actual en campo del historial de Invocación apropiada. Para el bloqueo de Shaman sobre activaciones de campo, Spark invocado desde el Extra sigue restringido y Spark revivido desde el GY no se trata como una llegada desde el Extra; la historia inicial desconocida conserva su criterio prudente.
+- Añade el ejemplo `synchro` y conserva los quince identificadores anteriores y las funciones de edición, cálculo, importación, exportación y revisión de identidades.
+
+Las pruebas nuevas deben distinguir materiales declarados de un procedimiento ejecutado, comprobar la salida y resurrección de la misma copia y volver a ejecutar la jugada desde su origen. Los efectos o condiciones de material sin revisar se excluyen o conservan su pendiente registrado; no se omiten para permitir una invocación. La protección activada antes de cambiar de turno no se conserva como si siguiera vigente después.
+
+La aceptación local, publicación, descarga y resultado remoto se registran por separado para el commit correspondiente. La ampliación no certifica todos los procedimientos Synchro, prioridad, cadenas o reglas del juego.
+
+La revisión 15 conserva su [aceptación local de 63/63 grupos](https://github.com/socramgns/MODERN/blob/17eeb86257ba4bca01feffeb2c10f64d38fb3fbb/evidence/validation-summary.json), con 119 archivos JavaScript comprobados, 28 tareas de la interfaz nueva, 64 casos de Monster Reborn y 22 de copias revisadas. Su [descarga HTTP verificada](https://github.com/socramgns/MODERN/raw/17eeb86257ba4bca01feffeb2c10f64d38fb3fbb/Analizador_YuGiOh.html?download=1) corresponde al commit `17eeb86257ba4bca01feffeb2c10f64d38fb3fbb` y al SHA-256 `2a4e2c76869e9fdfce9435152fd2c0b654180a0a71c1e0c082b08555c263b804`. Su [ejecución remota de GitHub Actions](https://github.com/socramgns/MODERN/actions/runs/41102084215) terminó correctamente para ese commit. Sus tareas móviles fueron 35/35 comprobaciones emuladas, sin acreditar hardware físico. Esa evidencia pertenece a revisión 15 y no sustituye la aceptación de los bytes nuevos.
+
+# Antecedente: cambios de la revisión 15
 
 La revisión `2026.10-stable.15` añade Monster Reborn como activación registrada y una herramienta para exportar una copia revisada de identidades de la baraja. Conserva el HTML único y la puntuación estructural provisional.
 

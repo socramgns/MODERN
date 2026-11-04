@@ -1,46 +1,48 @@
-# Analizador de barajas Yu-Gi-Oh · revisión 15
+# Analizador de barajas Yu-Gi-Oh · revisión 16
 
-La entrega sigue siendo **un único `Analizador_YuGiOh.html`**, con el catálogo y los motores incorporados. La revisión 15 amplía las jugadas registradas con Monster Reborn y permite preparar una copia de la baraja con identidades revisadas.
+La entrega sigue siendo **un único `Analizador_YuGiOh.html`**, con catálogo y motores incorporados. La revisión 16 conecta una invocación Synchro registrada de Stardust Spark Dragon con su salida al Cementerio, resurrección mediante Monster Reborn y protección posterior.
 
-[Descargar el HTML de esta rama: revisión 15](https://github.com/socramgns/MODERN/raw/refs/heads/entrega/analizador-yugioh-estable15/Analizador_YuGiOh.html?download=1)
+[Descargar el HTML de esta rama: revisión 16](https://github.com/socramgns/MODERN/raw/refs/heads/entrega/analizador-yugioh-estable16/Analizador_YuGiOh.html?download=1)
 
-La revisión 15 pasó **63/63 grupos de pruebas en una ejecución completa** sobre el HTML final, con **119 archivos JavaScript** comprobados. Chromium, Firefox y WebKit aprobaron sus tareas; Firefox completó la apertura directa del HTML local sin conexión. Las tareas móviles se ejecutaron en Chromium y WebKit emulados, sin acreditar teléfonos físicos ni conformidad WCAG completa. Build `c4b3a88282d993fd538a0ecc5c80b62f99239bfbbfeb0fd47bdbfc70816388ed`; SHA-256 `2a4e2c76869e9fdfce9435152fd2c0b654180a0a71c1e0c082b08555c263b804`; tamaño **7,075,902 bytes**. Estos resultados se limitan a las capacidades y tareas registradas; la puntuación competitiva sigue provisional.
+VALIDACION_R16_PENDIENTE
 
-La aceptación local, la publicación, la descarga HTTP y GitHub Actions se comprueban por separado para el build y el commit correspondientes. Una configuración de CI o una cantidad prevista de pruebas no demuestra su aprobación.
+La aceptación local, publicación, descarga HTTP y GitHub Actions se comprueban por separado para el build y commit correspondientes. La configuración de CI o el número previsto de grupos no demuestra su aprobación.
 
 ## Cómo usarlo
 
 1. Guarda el archivo con extensión `.html` y ábrelo en un navegador reciente. Si el enlace muestra código, usa **Guardar como** y conserva el nombre `Analizador_YuGiOh.html`.
-2. Importa una baraja JSON o YDK en **Baraja y zonas por formato**, revisa las incidencias y pulsa **CALCULAR**.
-3. Abre **Probar un ejemplo incluido** y pulsa **Cargar ejemplo en el laboratorio**. El ejemplo sustituye la baraja actual y prepara un campo declarado; ejecuta sus pasos manualmente. `reborn` permite comparar la resurrección, la negación con coste y la devolución de una carta a la mano de su propietario. Se conservan los catorce ejemplos anteriores, incluido `shuffle`.
-4. Define cartas y cantidades en el objetivo y pulsa **Aplicar objetivo visual**. Consulta sus requisitos al ejecutar, deshacer o reanudar un informe.
-5. En **Continuaciones hipotéticas después de barajar**, analiza las posibilidades desde un estado elegible. La parte demostrada y la parte desconocida no representan un robo observado ni una tasa de victoria. Guardar o verificar su JSON conserva la partida del laboratorio.
-6. Consulta **Acciones registradas de esta baraja** y **Calidad de los datos**. La revisión de identidades permite elegir explícitamente entre propuestas presentes en la baraja y preparar una copia JSON importable. Revisa la vista previa y sus incidencias antes de descargarla. La baraja activa, el catálogo y el laboratorio conservan su contenido.
+2. Importa una baraja JSON o YDK en **Baraja y zonas por formato**, revisa sus incidencias y pulsa **CALCULAR**.
+3. En **Probar un ejemplo incluido**, selecciona `synchro` y pulsa **Cargar ejemplo en el laboratorio**. El ejemplo sustituye la baraja actual y prepara materiales y campo iniciales declarados. La invocación Synchro y los pasos posteriores sí se ejecutan y se vuelven a verificar; esa distinción se conserva en el informe.
+4. Invoca de modo Normal a Flamvell Guard desde la mano y úsalo junto a Dark Magician de nivel 7 para invocar a Spark. La guía hace que Spark ataque a un Blue-Eyes más fuerte, llegue al Cementerio y reviva mediante Monster Reborn en Main Phase 2. Su historial apropiado se conserva, pero la llegada por Reborn figura como Invocación Especial y no como otra Synchro.
+5. Para comprobar la protección en batalla, sigue hasta el turno rival, completa su robo físico conocido y activa entonces el escudo de Spark. El primer Blue-Eyes consume su cargo sin destruir a Spark; otro ataque puede destruirlo. La protección caduca al cambiar de turno y comparte un solo cargo entre destrucción por batalla y por efecto. No evita daño de batalla ni una devolución a mano.
+6. Define cartas y cantidades en el objetivo y pulsa **Aplicar objetivo visual**. Revisa sus requisitos al ejecutar, deshacer o reanudar un informe.
+7. En **Continuaciones hipotéticas después de barajar**, analiza únicamente estados elegibles. La parte demostrada y la desconocida no representan un robo observado ni una tasa de victoria; exportar o verificar ese JSON conserva la partida del laboratorio.
+8. Consulta **Acciones registradas de esta baraja** y **Calidad de los datos**. La revisión de identidades permite elegir propuestas presentes y preparar una copia JSON importable. La baraja activa, el catálogo y el laboratorio conservan su contenido al preparar o descargar esa copia.
 
-El catálogo y los cálculos incorporados funcionan sin Internet. Las imágenes y actualizaciones remotas requieren conexión. La sesión se guarda en ese navegador/origen; exporta una copia para trasladarla o conservarla fuera de ese almacenamiento. JSON conserva contexto y Skills; YDK transporta Main, Extra y Side, pero no Skills.
+Se conservan los quince ejemplos anteriores, incluidos `spark`, `reborn` y `shuffle`. El catálogo y los cálculos incorporados funcionan sin Internet; imágenes y actualizaciones remotas necesitan conexión. La sesión pertenece a ese navegador/origen. JSON conserva contexto y Skills; YDK transporta Main, Extra y Side, pero no Skills.
 
 ## Qué incluye esta revisión
 
-- Registra Monster Reborn (83764718) desde mano en Main Phase propia para un subconjunto revisado de objetivos de ambos Cementerios. Conserva UID y propietario e invoca bajo el control de quien activa la carta, en una zona principal libre.
-- Comprueba posiciones, restricciones y las respuestas físicas de Mechaba y Roar. Negar la activación o el efecto mantiene los pagos efectuados. No añade un límite por turno ficticio.
-- Distingue una Invocación apropiada ejecutada por el motor de una historia inicial declarada. Los Fusion/Synchro/Link admitidos requieren el historial apropiado correspondiente; una resurrección es una Special Summon y no una nueva Fusion/Synchro/Link Summon.
-- Añade una copia revisable de identidades con elecciones explícitas, verificación ligada al origen e incidencias de construcción. Conserva cantidades, zonas, formato, contexto y Skills; no aplica propuestas automáticamente ni certifica la legalidad de la copia.
-- Añade el decimoquinto ejemplo `reborn` y conserva los 21.986 registros, las seis familias parciales y las funciones registradas previas.
+- Registra `SYNCHRO_STARDUST_SPARK_DRAGON` (83994433) con un Tuner y uno o más no Tuner admitidos, de niveles que suman 8. Comprueba copias físicas distintas, materiales boca arriba, restricciones y espacio después de retirar materiales.
+- Registra una invocación Synchro apropiada ejecutada, en lugar de aceptar una bandera inicial como prueba. Monster Reborn puede usar ese historial cuando Spark llega después al Cementerio por una transición registrada.
+- Conserva destinos de materiales, propietarios, Tokens registrados y las consecuencias admitidas. Los perfiles y efectos no revisados permanecen excluidos; no se infieren procedimientos desde el texto del catálogo.
+- Reutiliza la protección de Spark y su cargo de destrucción compartido, con usos y duración vinculados a la presencia en campo. La resurrección no restaura una protección de una presencia anterior.
+- Añade el decimosexto ejemplo `synchro`, conservando los quince anteriores, los 21.986 registros, las seis familias parciales, Monster Reborn y las copias revisadas de barajas.
 
-Los objetivos con condiciones de Invocación Especial, disparos o consecuencias sin revisar permanecen fuera de este paquete. Reconocer una carta o mostrar su texto técnico no implementa todos sus efectos. Se conservan Compulsory e Impermanence, sus costes y columnas, la protección de Stardust Spark Dragon, la negación GY de Blue-Eyes Spirit Dragon, el seguimiento de objetivos y la reanudación de informes.
+Se mantienen Impermanence, Compulsory, las respuestas físicas de Mechaba y Roar, la negación de activaciones en Cementerio de Blue-Eyes Spirit Dragon, el seguimiento de objetivos, la búsqueda acotada y la reanudación de informes. La invocación Synchro es un procedimiento; sus efectos posteriores conservan sus propias ventanas y respuestas registradas.
 
-La puntuación competitiva sigue **estructural y provisional**, como solicitó el usuario. El importador está preparado para resultados reales; esta entrega no crea datos de torneo. La revisión completa de prioridad, cadenas generales, SEGOC, Damage Step, Flip, Pendulum, disponibilidad y otros formatos conserva los límites documentados. Una coincidencia técnica no certifica rulings ni disponibilidad en un evento.
+La puntuación competitiva sigue **estructural y provisional**, por decisión del usuario. El importador para resultados reales está preparado; esta entrega no crea datos de torneo. Prioridad y cadenas generales, SEGOC, Damage Step, Flip, Xyz, Pendulum, disponibilidad y otros formatos conservan los límites documentados.
 
 ## Evidencia y desarrollo
 
-`dist/validation-summary.json` identifica la aceptación local por build y SHA-256. En la rama de entrega, `evidence/validation-summary.json` conserva el resultado del HTML correspondiente. Los informes móviles identifican emulación, motores y tamaños ejecutados; no acreditan teléfonos físicos ni conformidad WCAG completa.
+`dist/validation-summary.json` identifica la aceptación local por build y SHA-256. En la rama de entrega, `evidence/validation-summary.json` conserva el resultado del HTML correspondiente. Las pruebas de fuentes y las tareas sobre el HTML compilado se distinguen. Los informes móviles describen emulación y no acreditan teléfonos físicos ni conformidad WCAG completa.
 
-La revisión 14 conserva su [aceptación local de 60/60 grupos](https://github.com/socramgns/MODERN/blob/97999625580fbab3b035edae25748148571cb205/evidence/validation-summary.json), con 117 archivos JavaScript comprobados, tres motores de escritorio, apertura directa offline en Firefox y 35/35 comprobaciones móviles emuladas. Su [descarga HTTP verificada](https://github.com/socramgns/MODERN/raw/97999625580fbab3b035edae25748148571cb205/Analizador_YuGiOh.html?download=1) corresponde al commit `97999625580fbab3b035edae25748148571cb205` y al SHA-256 `28e03daf44c632ad8edb358e9f216b745b332cc18643eca2e1f188213b15974d`. Su [ejecución remota de GitHub Actions](https://github.com/socramgns/MODERN/actions/runs/40992556499) terminó correctamente para ese commit. Esa evidencia pertenece a revisión 14 y no sustituye la aceptación de los bytes nuevos.
+La revisión 15 conserva su [aceptación local de 63/63 grupos](https://github.com/socramgns/MODERN/blob/17eeb86257ba4bca01feffeb2c10f64d38fb3fbb/evidence/validation-summary.json), con 119 archivos JavaScript comprobados, 28 tareas de la interfaz nueva, 64 casos de Monster Reborn y 22 de copias revisadas. Su [descarga HTTP verificada](https://github.com/socramgns/MODERN/raw/17eeb86257ba4bca01feffeb2c10f64d38fb3fbb/Analizador_YuGiOh.html?download=1) corresponde al commit `17eeb86257ba4bca01feffeb2c10f64d38fb3fbb` y al SHA-256 `2a4e2c76869e9fdfce9435152fd2c0b654180a0a71c1e0c082b08555c263b804`. Su [ejecución remota de GitHub Actions](https://github.com/socramgns/MODERN/actions/runs/41102084215) terminó correctamente para ese commit. Sus tareas móviles fueron 35/35 comprobaciones emuladas, sin acreditar hardware físico. Esa evidencia pertenece a revisión 15 y no sustituye la aceptación de los bytes nuevos.
 
-- [Estado y pendientes](docs/ESTADO_PROYECTO.md)
-- [Análisis de lo que falta](docs/ANALISIS_PENDIENTES_REVISION15.md)
+- [Estado del proyecto](docs/ESTADO_PROYECTO.md)
+- [Análisis de pendientes](docs/ANALISIS_PENDIENTES_REVISION16.md)
 - [Alcance de reglas y búsquedas](docs/ALCANCE_COMBOS.md)
 - [Fuentes oficiales](docs/FUENTES_OFICIALES.md)
 - [Compilación, datos y pruebas](docs/DESARROLLO.md)
 
-El avance se expresa por capacidades y comprobaciones. No se asigna un porcentaje global a todas las cartas y reglas del juego.
+El avance se expresa mediante capacidades y criterios de aceptación, sin asignar un porcentaje global a todas las cartas y reglas del juego.

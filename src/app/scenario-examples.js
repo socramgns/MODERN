@@ -155,7 +155,23 @@ const reborn=base('reborn','Monster Reborn: revivir y conservar al propietario',
  'Activa tu Compulsory Evacuation Device colocada en la columna 3, sin respuesta, sobre ese Blue-Eyes. Regresa a la mano de su propietario rival, no a la tuya. El objetivo deja de cumplirse; revisa el replay de ambos pasos y la identidad de la carta.',
  'Estos monstruos del Main no requieren historial de Invocación propia. Un monstruo del Extra con perfil admitido requiere su Invocación apropiada verificada; colocarlo inicialmente en un Cementerio no acredita esa historia.'
  ],'RESPONSES_EXPLICIT',['MECHABA','ROAR'],'CHOICE_BRANCHES');
-const templates=new Map([spark,spirit,invoked,swordsoul,branded,tenyi,salamangreat,roar,crow,droll,field,trap,evacuation,shuffle,reborn].map(value=>[value.id,value]));
+const synchroDeck=deck([[21615956,1],[46986414,1],[83764718,1]],[[83994433,1]]),synchroOpening=[21615956,83764718,...NORMALS.slice(0,3)],synchroRivalDeck=deck([[89631139,2]],[]),synchroRivalOpening=NORMALS.slice(0,5);
+const synchro=base('synchro','Spark: Synchro real, resurrección y protección','Invoca a Spark con materiales físicos, llévalo al Cementerio, revívelo y comprueba su protección durante el turno rival.',physical(synchroDeck,synchroOpening),physical(synchroRivalDeck,synchroRivalOpening),{turn:2,activePlayer:0,phase:'MAIN 1',placements:[
+ {player:0,from:'deck',cardId:46986414,zone:'monster',zoneIndex:0,position:'ATTACK',faceUp:true,summonTurn:1},
+ {player:1,from:'deck',cardId:89631139,zone:'monster',zoneIndex:0,position:'ATTACK',faceUp:true,summonTurn:1},
+ {player:1,from:'deck',cardId:89631139,zone:'monster',zoneIndex:1,position:'ATTACK',faceUp:true,summonTurn:1}
+ ]},{requiredFieldIds:[83994433],phase:'MAIN 2'},[
+ 'Invoca normalmente a Flamvell Guard desde tu mano. Es un Cantante Normal de Nivel 1; el Dark Magician de Nivel 7 y los dos Blue-Eyes rivales pertenecen a la preparación inicial declarada.',
+ 'Invoca por Synchro a Stardust Spark Dragon en Ataque, en tu zona principal 1, usando Flamvell Guard y Dark Magician. Las dos copias físicas van al Cementerio; la Invocación Synchro de este Spark sí queda registrada por la jugada.',
+ 'Pasa a Battle Phase y ataca con Spark al primer Blue-Eyes rival. Spark tiene 2500 ATK frente a 3000: recibes 500 de daño y la misma copia de Spark va al Cementerio.',
+ 'Pasa a Main Phase 2. Activa Monster Reborn sobre ese Spark de tu Cementerio, en Ataque y en la zona principal 1. El objetivo se cumple en esta fase; la invocación actual es Especial, conservando la prueba de su Synchro anterior.',
+ 'Pasa a End Phase y termina el turno. En el turno 3 rival, ejecuta el robo de su siguiente carta física del orden conocido. Todavía no has aplicado una protección que deba cruzar el cambio de turno.',
+ 'Después del robo rival, activa la protección de tu Spark sobre sí mismo. La protección pertenece al turno 3 y evita una sola destrucción por batalla o efecto; no evita el daño de batalla.',
+ 'Pasa por Standby Phase y Main Phase 1 hasta Battle Phase rival. Ataca a Spark con el primer Blue-Eyes: recibes otros 500 de daño, Spark sobrevive y se consume su única protección.',
+ 'Ataca a Spark con el segundo Blue-Eyes rival: recibes otros 500 y Spark va al Cementerio. Tus LP quedan en 6500. Comprueba los materiales, las invocaciones, Monster Reborn, ambos ataques y el replay de las quince acciones.',
+ 'Puedes deshacer los ataques para comprobar que el primer combate consume la protección y el segundo no dispone de otra carga. El objetivo de Spark en Main Phase 2 describe un estado intermedio y no certifica ganar la partida.'
+]);
+const templates=new Map([spark,spirit,invoked,swordsoul,branded,tenyi,salamangreat,roar,crow,droll,field,trap,evacuation,shuffle,reborn,synchro].map(value=>[value.id,value]));
 const describe=value=>({id:value.id,name:value.name,description:value.description,scope:value.scope,steps:clone(value.tutorial.steps),replacesDeck:true,initialHistoryCertified:false,competitiveRecommendation:false});
 function list(){return[...templates.values()].map(describe);}
 function get(id){if(typeof id!=='string'||!templates.has(id))throw Error('SCENARIO_EXAMPLE_UNKNOWN');return clone(templates.get(id));}
@@ -175,5 +191,5 @@ async function load(id){const spec=get(id);if(loading)throw Error('SCENARIO_EXAM
  await A.initialize({goal:spec.goal});
  return{pass:true,status:'SCENARIO_EXAMPLE_LOADED',id,name:spec.name,message:'Ejemplo cargado. El campo inicial es un supuesto declarado; selecciona y ejecuta cada acción en el laboratorio.',steps:clone(spec.tutorial.steps),report:clone(A.report())};
  }finally{loading=false;}}
-W.YGOScenarioExamples=Object.freeze({version:'self-contained-physical-examples-v5',list,get,load,get isBusy(){return loading;}});
+W.YGOScenarioExamples=Object.freeze({version:'self-contained-physical-examples-v6',list,get,load,get isBusy(){return loading;}});
 })();
