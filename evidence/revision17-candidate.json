@@ -1,9 +1,9 @@
 {
   "schema": "ygo-release-candidate/v1",
   "revision": "2026.11-stable.17",
-  "pass": null,
-  "releaseAccepted": false,
-  "status": "REMOTE_FULL_VALIDATION_PENDING",
+  "pass": true,
+  "releaseAccepted": true,
+  "status": "REMOTE_FULL_EXECUTION_ACCEPTED",
   "bindings": {
     "buildId": "44adab61fe289978ed72e0ab2a116f521387641584ecb77a4a9e097ecc194ae1",
     "htmlSha256": "41c301b7ec88125cf6403756a69406873fbfebce9fc96d90ef4739af20633312",
@@ -80,10 +80,16 @@
   },
   "newSourceCasesPassed": 74,
   "newGuiChecksPassed": 43,
-  "localValidation": "RUNNING_WITH_FIREFOX_WEBKIT_UNAVAILABLE",
-  "remoteValidation": "PENDING",
+  "localValidation": "COMPLETE_WITH_FIREFOX_WEBKIT_UNAVAILABLE",
+  "remoteValidation": "ACCEPTED",
   "previousAcceptedCommit": "309a8bdb983807d622c1ad5df8106a09688babf3",
   "competitiveScoring": "PROVISIONAL_BY_USER_REQUEST",
   "previousCandidateCommit": "73bd5ab43c6da304d980a1d50f9ccca8768db478",
-  "testFixtureAdaptation": "Position Spark and Spirit so the Azure shield counter regression arrives outside a live Wolf arrow; preserve all negation, cost, protection, reuse and replay assertions."
+  "testFixtureAdaptation": "Position Spark and Spirit so the Azure shield counter regression arrives outside a live Wolf arrow; preserve all negation, cost, protection, reuse and replay assertions.",
+  "acceptedCandidateCommit": "b77b4ddd61885f8ed6e49df231ed305ad70d5b11",
+  "remoteRunUrl": "https://github.com/socramgns/MODERN/actions/runs/42084234037",
+  "localValidationPass": false,
+  "localPassedGroups": 65,
+  "localTotalGroups": 67,
+  "acceptanceEvidence": "evidence/remote-acceptance.json"
 }

@@ -1,9 +1,9 @@
 {
   "schema": "ygo-analyzer-e2e/v1",
   "runner": "Playwright/Chromium",
-  "executedAt": "2026-11-04T18:58:20Z",
-  "buildId": "d49d56207cfff495f8a356974dc554fd77c063b9a9022da8ed041d26e1a1171e",
-  "htmlSha256": "fab64088c402372a2cf8d3c8c997bdf13612c11701640bb8172694fcf00aa0cc",
+  "executedAt": "2026-11-05T18:42:41Z",
+  "buildId": "44adab61fe289978ed72e0ab2a116f521387641584ecb77a4a9e097ecc194ae1",
+  "htmlSha256": "41c301b7ec88125cf6403756a69406873fbfebce9fc96d90ef4739af20633312",
   "pass": true,
   "tests": [
     {
@@ -72,8 +72,8 @@
         "total": 88,
         "done": 88,
         "lastProgressOrder": 88,
-        "elapsedMs": 3806,
-        "waitingMs": 399,
+        "elapsedMs": 8026,
+        "waitingMs": 6528,
         "slowLoading": false,
         "hashesVerified": true,
         "hashesChecked": 88,
@@ -698,11 +698,11 @@
       },
       "build": {
         "version": "Alpha 1263",
-        "revision": "2026.10-stable.16",
+        "revision": "2026.11-stable.17",
         "canonicalId": "ygo-alpha-1263-canonical-release",
         "moduleCount": 88,
         "catalogCardCount": 21986,
-        "buildId": "d49d56207cfff495f8a356974dc554fd77c063b9a9022da8ed041d26e1a1171e",
+        "buildId": "44adab61fe289978ed72e0ab2a116f521387641584ecb77a4a9e097ecc194ae1",
         "catalogueSizePinsCompiled": 164,
         "dataHashes": {
           "cards": "cc265022039bba09fc31e8e3a48afb0030e5a81cab0c30c386843fcd75e1cba6"
@@ -893,18 +893,18 @@
         ],
         "evaluation": {
           "stats": [
-            7,
+            8,
             5,
             8,
             5,
-            6,
+            7,
             6,
             6,
             5,
             6,
             6
           ],
-          "total": 60,
+          "total": 62,
           "tier": "SIN TIER",
           "authority": "ESTRUCTURAL_NO_APTO",
           "legal": false,
@@ -929,18 +929,18 @@
         ],
         "evaluation": {
           "stats": [
-            6,
+            7,
             5,
             8,
             6,
-            5,
+            6,
             5,
             5,
             6,
             5,
             6
           ],
-          "total": 57,
+          "total": 59,
           "tier": "SIN TIER",
           "authority": "ESTRUCTURAL_NO_APTO",
           "legal": false,
@@ -968,15 +968,15 @@
             7,
             5,
             8,
-            6,
+            5,
             7,
             6,
             6,
-            6,
             5,
-            7
+            5,
+            6
           ],
-          "total": 63,
+          "total": 60,
           "tier": "SIN TIER",
           "authority": "ESTRUCTURAL_NO_APTO",
           "legal": false,
@@ -1002,17 +1002,17 @@
         "evaluation": {
           "stats": [
             5,
-            3,
+            4,
             6,
             4,
+            5,
             4,
             4,
             4,
-            4,
-            2,
+            3,
             5
           ],
-          "total": 41,
+          "total": 44,
           "tier": "SIN TIER",
           "authority": "ESTRUCTURAL_NO_APTO",
           "legal": false,
@@ -1037,18 +1037,18 @@
         ],
         "evaluation": {
           "stats": [
+            7,
+            6,
+            9,
             8,
-            5,
-            9,
-            9,
             7,
             7,
-            7,
-            9,
+            8,
+            8,
             6,
             7
           ],
-          "total": 74,
+          "total": 73,
           "tier": "TIER 1.5",
           "authority": "ESTRUCTURAL_PROVISIONAL",
           "legal": null,
@@ -1073,18 +1073,18 @@
         ],
         "evaluation": {
           "stats": [
-            4,
-            4,
+            6,
+            5,
             8,
             5,
-            4,
+            5,
             4,
             5,
             5,
-            2,
-            5
+            4,
+            6
           ],
-          "total": 46,
+          "total": 53,
           "tier": "SIN TIER",
           "authority": "ESTRUCTURAL_NO_APTO",
           "legal": false,
@@ -1146,17 +1146,17 @@
         "evaluation": {
           "stats": [
             7,
-            3,
+            5,
             8,
             6,
-            5,
+            7,
             5,
             5,
             6,
-            4,
+            5,
             6
           ],
-          "total": 55,
+          "total": 60,
           "tier": "SIN TIER",
           "authority": "ESTRUCTURAL_NO_APTO",
           "legal": false,
@@ -1181,18 +1181,18 @@
         ],
         "evaluation": {
           "stats": [
-            7,
+            8,
             5,
             7,
             6,
             7,
             5,
             5,
-            5,
+            6,
             5,
             6
           ],
-          "total": 58,
+          "total": 60,
           "tier": "SIN TIER",
           "authority": "ESTRUCTURAL_NO_APTO",
           "legal": false,
@@ -1220,10 +1220,10 @@
             6,
             4,
             7,
+            5,
+            5,
+            5,
             4,
-            5,
-            5,
-            5,
             5,
             4,
             5
@@ -1357,10 +1357,10 @@
     },
     "json_export_records_scope": null,
     "png_export": {
-      "bytes": 91540
+      "bytes": 91529
     },
     "print_pdf_render": {
-      "bytes": 16809559
+      "bytes": 16489312
     },
     "shared_link_restores_deck_and_format": {
       "main": 40

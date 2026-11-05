@@ -1,8 +1,8 @@
 {
   "schema": "ygo-node-source-suite-evidence/v1",
   "pass": true,
-  "buildId": "d49d56207cfff495f8a356974dc554fd77c063b9a9022da8ed041d26e1a1171e",
-  "htmlSha256": "fab64088c402372a2cf8d3c8c997bdf13612c11701640bb8172694fcf00aa0cc",
+  "buildId": "44adab61fe289978ed72e0ab2a116f521387641584ecb77a4a9e097ecc194ae1",
+  "htmlSha256": "41c301b7ec88125cf6403756a69406873fbfebce9fc96d90ef4739af20633312",
   "artifactMode": "SOURCE_NODE_SUITE",
   "executionEnvironment": "LOCAL_NODE_SOURCE_TESTS",
   "testFile": "tests/draw_continuation.cjs",

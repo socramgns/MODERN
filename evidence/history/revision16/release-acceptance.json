@@ -1,0 +1,26 @@
+{
+  "schema": "ygo-release-acceptance/v1",
+  "pass": true,
+  "acceptanceMode": "REMOTE_FULL_EXECUTION_OBSERVED",
+  "candidateCommit": "329f1ba15e960a949ceecc971005eee0fb622e03",
+  "candidateBindingSha256": "2b25fed0d4a469ad359b199d911844ea336a2e540fac75ce0b7fd72e8badcbd2",
+  "buildId": "d49d56207cfff495f8a356974dc554fd77c063b9a9022da8ed041d26e1a1171e",
+  "htmlSha256": "fab64088c402372a2cf8d3c8c997bdf13612c11701640bb8172694fcf00aa0cc",
+  "bytes": 7089078,
+  "validatedRemoteGroups": 65,
+  "remoteRunUrl": "https://github.com/socramgns/MODERN/actions/runs/41889817768",
+  "individualRemoteReportsDownloaded": false,
+  "localValidationPass": false,
+  "localPassedGroups": 63,
+  "localTotalGroups": 65,
+  "localValidationSummarySha256": "bc77bc280e07a48f9d9d3794adbdc033988050e99cc2b3650f74854b455e4294",
+  "localUnavailableEngines": [
+    "firefox",
+    "webkit"
+  ],
+  "sourceNodeEvidenceEnvironment": "LOCAL",
+  "guiEvidenceEnvironment": "LOCAL_CHROMIUM",
+  "remoteFullExecutionEvidence": "SUCCESSFUL_MANDATORY_GITHUB_ACTIONS_GATES",
+  "physicalDevicesValidated": false,
+  "competitiveScoring": "PROVISIONAL_BY_USER_REQUEST"
+}

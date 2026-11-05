@@ -1,8 +1,8 @@
 {
   "schema": "ygo-release11-browser/v1",
   "pass": true,
-  "buildId": "d49d56207cfff495f8a356974dc554fd77c063b9a9022da8ed041d26e1a1171e",
-  "htmlSha256": "fab64088c402372a2cf8d3c8c997bdf13612c11701640bb8172694fcf00aa0cc",
+  "buildId": "44adab61fe289978ed72e0ab2a116f521387641584ecb77a4a9e097ecc194ae1",
+  "htmlSha256": "41c301b7ec88125cf6403756a69406873fbfebce9fc96d90ef4739af20633312",
   "artifactMode": "DELIVERED_BYTES",
   "sourceInjection": false,
   "checks": [
@@ -397,7 +397,7 @@
       "stopReasons": [
         "DEPTH_HORIZON"
       ],
-      "elapsedMs": 19,
+      "elapsedMs": 27,
       "remainingFrontier": 0,
       "distinctOutcomeIdentity": "PRINTED_ALIAS_FAMILY_ZONE_RESOURCES_USAGE_AND_LIVE_LOCKS",
       "goalApplied": true,
@@ -508,5 +508,5 @@
     "Progress is recomputed from validated state and goals; it does not register new card effects.",
     "No zero-action replay, win rate or competitive score is created from an initially met goal."
   ],
-  "elapsedSeconds": 35.65
+  "elapsedSeconds": 34.32
 }

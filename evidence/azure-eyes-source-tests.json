@@ -4,9 +4,9 @@
   "buildId": "44adab61fe289978ed72e0ab2a116f521387641584ecb77a4a9e097ecc194ae1",
   "htmlSha256": "41c301b7ec88125cf6403756a69406873fbfebce9fc96d90ef4739af20633312",
   "artifactMode": "SOURCE_NODE_SUITE",
+  "executionEnvironment": "LOCAL_NODE_SOURCE_TESTS",
   "testFile": "tests/azure_eyes.cjs",
   "testFileSha256": "82c9e09d6b7d5356ebaefa4ebcbd25e2c432e291c283a3172b7944cdaae6809a",
-  "meaning": "Focused local source cases before complete remote validation; absent local engines remain pending.",
   "result": {
     "schema": "ygo-azure-eyes-tests/v1",
     "pass": true,
@@ -315,5 +315,6 @@
       "Unknown material effects, level modifications, simultaneous trigger arrangements and general priority remain outside this registered subset.",
       "Protection does not prevent battle damage, non-destruction removal or unknown rule interactions; competitive scoring remains provisional."
     ]
-  }
+  },
+  "meaning": "Passed local Node source cases from the preserved complete local run; remote whole-release acceptance is recorded separately through mandatory CI gates. These are not downloaded remote result files."
 }

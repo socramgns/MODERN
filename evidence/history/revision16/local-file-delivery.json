@@ -1,0 +1,27 @@
+{
+  "schema": "ygo-local-file-delivery/v1",
+  "buildId": "d49d56207cfff495f8a356974dc554fd77c063b9a9022da8ed041d26e1a1171e",
+  "htmlSha256": "fab64088c402372a2cf8d3c8c997bdf13612c11701640bb8172694fcf00aa0cc",
+  "executedAt": "2026-11-04T18:43:49.694369+00:00",
+  "pass": false,
+  "complete": false,
+  "artifactMode": "DIRECT_FILE_NAVIGATION",
+  "networkMode": "OFFLINE",
+  "browserPolicyChanges": false,
+  "routeFulfillmentUsed": false,
+  "httpServerUsed": false,
+  "browsers": [
+    {
+      "engine": "firefox",
+      "status": "UNAVAILABLE",
+      "pass": null,
+      "directFileNavigationVerified": false,
+      "tests": []
+    }
+  ],
+  "limitations": [
+    "Automated browser tasks do not certify every OS/browser configuration.",
+    "Local file storage is bound to this browser profile and file location.",
+    "Competition score remains provisional; only registered actions are replayed."
+  ]
+}

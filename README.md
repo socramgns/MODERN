@@ -4,7 +4,7 @@ La entrega sigue siendo **un único `Analizador_YuGiOh.html` sin comprimir**, co
 
 [Descargar el HTML de esta rama: revisión 17](https://github.com/socramgns/MODERN/raw/refs/heads/entrega/analizador-yugioh-estable17/Analizador_YuGiOh.html?download=1)
 
-VALIDACION_R17_PENDIENTE
+La aceptación de la revisión 17 se apoya en la ejecución remota del commit `b77b4ddd61885f8ed6e49df231ed305ad70d5b11`: el [workflow de GitHub Actions](https://github.com/socramgns/MODERN/actions/runs/42084234037) completó con éxito las etapas obligatorias de instalación de los tres motores, compilación y comparación del HTML, batería de **67 grupos** y comprobación entre motores. El recuento corresponde al runner versionado y sus salidas obligatorias; los informes remotos individuales no se descargaron. Las fuentes incluyen **121 archivos JavaScript**. La ejecución local completa conserva su resultado **65/67 grupos aprobados**, con Firefox y WebKit no disponibles; su informe original permanece con `pass: false`, sin conciliación ni conversión a éxito. Build `44adab61fe289978ed72e0ab2a116f521387641584ecb77a4a9e097ecc194ae1`; SHA-256 `41c301b7ec88125cf6403756a69406873fbfebce9fc96d90ef4739af20633312`; tamaño **7,107,206 bytes**. La puntuación competitiva sigue provisional; no se acreditan todas las reglas, dispositivos físicos ni conformidad WCAG completa.
 
 La aceptación local, publicación, descarga HTTP y GitHub Actions se comprueban por separado para su build y commit. Un número previsto de grupos o la configuración de CI no demuestra su aprobación.
 
