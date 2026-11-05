@@ -171,7 +171,23 @@ const synchro=base('synchro','Spark: Synchro real, resurrección y protección',
  'Ataca a Spark con el segundo Blue-Eyes rival: recibes otros 500 y Spark va al Cementerio. Tus LP quedan en 6500. Comprueba los materiales, las invocaciones, Monster Reborn, ambos ataques y el replay de las quince acciones.',
  'Puedes deshacer los ataques para comprobar que el primer combate consume la protección y el segundo no dispone de otra carga. El objetivo de Spark en Main Phase 2 describe un estado intermedio y no certifica ganar la partida.'
 ]);
-const templates=new Map([spark,spirit,invoked,swordsoul,branded,tenyi,salamangreat,roar,crow,droll,field,trap,evacuation,shuffle,reborn,synchro].map(value=>[value.id,value]));
+const azureDeck=deck([[21615956,1],[89631139,1],[83764718,1]],[[40908371,1]]),azureOpening=[21615956,83764718,...NORMALS.slice(0,3)],azureRivalDeck=deck([[89631139,1]],[]),azureRivalOpening=NORMALS.slice(0,5);
+const azure=base('azure','Azure-Eyes: Synchro, protección y resurrección en Standby','Invoca correctamente a Azure-Eyes, revívelo con Monster Reborn y recupera su Blue-Eyes material durante tu siguiente Standby.',physical(azureDeck,azureOpening),physical(azureRivalDeck,azureRivalOpening),{turn:2,activePlayer:0,phase:'MAIN 1',placements:[
+ {player:0,from:'deck',cardId:89631139,zone:'monster',zoneIndex:0,position:'ATTACK',faceUp:true,summonTurn:1},
+ {player:1,from:'deck',cardId:89631139,zone:'monster',zoneIndex:0,position:'ATTACK',faceUp:true,summonTurn:1}
+ ]},{requiredFieldIds:[40908371,89631139],phase:'STANDBY',turn:4,activePlayer:0},[
+ 'Invoca normalmente a Flamvell Guard desde tu mano. Es un Cantante Normal de Nivel 1; los dos Blue-Eyes de Nivel 8 pertenecen a la preparación inicial declarada. Azure-Eyes sigue en tu Extra y todavía no tiene una Invocación apropiada registrada.',
+ 'Invoca por Synchro a Azure-Eyes Silver Dragon en Ataque, en tu zona principal 1, con Flamvell Guard y tu Blue-Eyes. Sus niveles suman 9 y el no Cantante es Normal. Las copias físicas van al Cementerio y el historial apropiado de Azure-Eyes queda registrado.',
+ 'Resuelve la protección obligatoria de Azure-Eyes antes de seguir. Afecta a los Dragones que controlas al resolver y dura hasta el final del turno siguiente: protege frente a selección por efectos y destrucción por efectos; no impide la destrucción ni el daño de batalla.',
+ 'Pasa a Battle Phase y ataca con Azure-Eyes al Blue-Eyes rival. Tus 2500 ATK pierden frente a 3000: recibes 500 de daño y Azure-Eyes va al Cementerio pese a la protección. Sus marcas de esa presencia en campo se retiran y conserva su historial Synchro.',
+ 'Pasa a Main Phase 2. Activa Monster Reborn sobre la misma copia de Azure-Eyes, en Ataque y en tu zona principal 1. Monster Reborn termina en el Cementerio; la llegada actual es Especial desde el Cementerio, no otra Synchro.',
+ 'Resuelve de nuevo la protección obligatoria generada por esta Invocación Especial. No se restaura un escudo antiguo ni se añade un límite por turno ficticio a esa protección.',
+ 'Pasa a End Phase y termina el turno. Ejecuta el robo conocido del rival en turno 3; pasa por Standby, Main Phase 1 y End Phase sin activar la resurrección de tu Azure-Eyes durante el Standby rival.',
+ 'Termina el turno rival, roba tu siguiente carta física conocida en turno 4 y pasa a tu Standby. La protección anterior ya caducó; no se inventa ningún robo ni se revela un orden desconocido.',
+ 'Activa la resurrección de Standby de Azure-Eyes sobre tu Blue-Eyes original, usado como material y conservado en el Cementerio. La misma copia vuelve a tu campo; la protección previa de Azure-Eyes no se aplica automáticamente a este nuevo Dragón.',
+ 'El objetivo se cumple con Azure-Eyes y Blue-Eyes en tu campo durante tu Standby del turno 4, con 7500 LP. Comprueba las dieciocho acciones, ambos disparos obligatorios, la Mágica pagada, el uso de la resurrección y el replay. El ejemplo no certifica ganar la partida.'
+]);
+const templates=new Map([spark,spirit,invoked,swordsoul,branded,tenyi,salamangreat,roar,crow,droll,field,trap,evacuation,shuffle,reborn,synchro,azure].map(value=>[value.id,value]));
 const describe=value=>({id:value.id,name:value.name,description:value.description,scope:value.scope,steps:clone(value.tutorial.steps),replacesDeck:true,initialHistoryCertified:false,competitiveRecommendation:false});
 function list(){return[...templates.values()].map(describe);}
 function get(id){if(typeof id!=='string'||!templates.has(id))throw Error('SCENARIO_EXAMPLE_UNKNOWN');return clone(templates.get(id));}

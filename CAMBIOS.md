@@ -1,4 +1,25 @@
-# Cambios de la revisión 16
+# Cambios de la revisión 17
+
+La revisión `2026.11-stable.17` añade la Synchro registrada de Azure-Eyes Silver Dragon y conecta su historia real con Monster Reborn, protección obligatoria y resurrección en Standby. Conserva la entrega de un único HTML sin comprimir y la puntuación provisional.
+
+VALIDACION_R17_PENDIENTE
+
+La revisión incluye el cierre de las invocaciones de Spirit y Standby ante campos boca arriba sin perfil revisado, con regresiones de Vanity’s Fiend y Black Garden. Los costes y el estado permanecen intactos cuando la jugada se excluye.
+
+- Registra `SYNCHRO_AZURE_EYES_SILVER_DRAGON` (40908371) para un Tuner y uno o más no Tuner Normales admitidos, de nivel total 9, físicos, distintos y boca arriba. Valida restricciones y espacio tras retirar los materiales.
+- Limita la nueva ruta de Azure al contexto explícito de duelo TCG. La protección obligatoria no queda pendiente en un análisis causal sin fases que no pueda resolverla.
+- Permite Azure como objetivo de Monster Reborn cuando la misma copia obtuvo una invocación apropiada mediante una transición registrada y llegó después al GY. Una declaración inicial o la llegada prestada por Spirit Dragon no sustituyen ese historial.
+- Comparte el encolado de `AZURE_PROTECTION` entre Spirit Dragon, la nueva Synchro y Reborn. Cada Invocación Especial real habilitada crea el pendiente obligatorio correspondiente, sin inventarlo en setup ni duplicarlo, y sin imponer un OPT a la protección.
+- Excluye la llegada a la zona apuntada revisada de un Wolf vivo y elegible cuando se necesitaría registrar conjuntamente su disparo opcional y la protección obligatoria de Azure.
+- Conserva la protección sobre los Dragones actuales al resolver hasta el final del turno siguiente. Las llegadas posteriores y las nuevas presencias tras salir/volver no heredan ese efecto; la protección resuelta no requiere conservar a Azure en campo.
+- Conserva la resurrección de un Normal admitido en Standby propia, las restricciones de uso, costes físicos de respuestas, propiedad y replay. La protección contra efectos no evita destrucción por batalla ni daño.
+- Añade el ejemplo `azure` y conserva los dieciséis anteriores. Tras una salida de Azure al GY por batalla, Reborn y fases con robos conocidos permiten llegar a Standby propia y revivir el Blue-Eyes usado como material.
+
+La batería prevista comprende 67 grupos y 121 archivos JavaScript. Esas cantidades describen su configuración; la aceptación exige ejecutar y registrar las comprobaciones del build correspondiente. La publicación, descarga y CI se observan por separado.
+
+La revisión 16 conserva su [aceptación remota de 65 grupos](https://github.com/socramgns/MODERN/blob/309a8bdb983807d622c1ad5df8106a09688babf3/evidence/remote-acceptance.json) sobre el candidato `329f1ba15e960a949ceecc971005eee0fb622e03`, con 120 archivos JavaScript, 58 casos de Spark y 38 tareas de su interfaz. Su [workflow de aceptación](https://github.com/socramgns/MODERN/actions/runs/41889817768) y el [CI del commit final](https://github.com/socramgns/MODERN/actions/runs/41893149441) terminaron correctamente. El commit final `309a8bdb983807d622c1ad5df8106a09688babf3` conserva el [HTML descargado y verificado](https://github.com/socramgns/MODERN/raw/309a8bdb983807d622c1ad5df8106a09688babf3/Analizador_YuGiOh.html?download=1), SHA-256 `fab64088c402372a2cf8d3c8c997bdf13612c11701640bb8172694fcf00aa0cc`. Su informe local permanece con `pass: false`, 63/65 grupos y Firefox/WebKit no disponibles por el bloqueo de descarga. Esa evidencia pertenece a revisión 16; no sustituye la aceptación de los bytes nuevos.
+
+# Antecedente: cambios de la revisión 16
 
 La revisión `2026.10-stable.16` añade un procedimiento Synchro registrado de Stardust Spark Dragon y conecta su historial ejecutado con Monster Reborn y la protección posterior, conservando el HTML único y la puntuación provisional.
 
