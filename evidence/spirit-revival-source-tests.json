@@ -4,9 +4,9 @@
   "buildId": "7b027eadfd3aa793f479a4225b6a52e3e96471d9a11276ed8ad7754f6c9f16ab",
   "htmlSha256": "622328ee699c2a6407c5f20e724fe0f613bc6479858d4c2b4f222c86e8fdc9bb",
   "artifactMode": "SOURCE_NODE_SUITE",
+  "executionEnvironment": "LOCAL_NODE_SOURCE_TESTS",
   "testFile": "tests/spirit_revival.cjs",
   "testFileSha256": "61dc2509a212ccdfc319711eddaed944a2d0e0af4cc2f264f451ba3b094db606",
-  "meaning": "Focused local source cases before complete remote validation; absent local engines remain pending.",
   "result": {
     "schema": "ygo-spirit-revival-tests/v1",
     "pass": true,
@@ -220,5 +220,6 @@
       "Only registered summon profiles, physical response packets and bounded continuations are covered; unknown effects, general priority and Wolf Main-zone revival remain outside scope.",
       "Competitive scoring remains provisional; these diagnostic decks do not constitute tournament results."
     ]
-  }
+  },
+  "meaning": "Passed local Node source cases from the preserved complete local run; remote whole-release acceptance is recorded separately through mandatory CI gates. These are not downloaded remote result files."
 }

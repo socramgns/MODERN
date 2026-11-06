@@ -1,0 +1,204 @@
+{
+  "schema": "ygo-release17-browser/v1",
+  "pass": true,
+  "buildId": "44adab61fe289978ed72e0ab2a116f521387641584ecb77a4a9e097ecc194ae1",
+  "htmlSha256": "41c301b7ec88125cf6403756a69406873fbfebce9fc96d90ef4739af20633312",
+  "artifactMode": "DELIVERED_BYTES",
+  "sourceInjection": false,
+  "checks": [
+    {
+      "name": "release17_runs_the_manifest_bound_document_without_network",
+      "pass": true
+    },
+    {
+      "name": "seventeen_visible_examples_preserve_all_sixteen_previous_identifiers",
+      "pass": true
+    },
+    {
+      "name": "azure_adds_a_summon_without_widening_spell_or_trap_activation_registries",
+      "pass": true
+    },
+    {
+      "name": "the_example_starts_with_declared_materials_and_no_autoplay",
+      "pass": true
+    },
+    {
+      "name": "the_extra_copy_and_starting_field_do_not_claim_witnessed_summon_history",
+      "pass": true
+    },
+    {
+      "name": "monster_reborn_does_not_offer_the_unwitnessed_extra_copy",
+      "pass": true
+    },
+    {
+      "name": "the_normal_tuner_uses_the_real_hand_copy_and_normal_summon",
+      "pass": true
+    },
+    {
+      "name": "the_visible_synchro_choice_names_materials_position_and_destination",
+      "pass": true
+    },
+    {
+      "name": "the_successful_synchro_creates_its_own_proper_history_and_extra_origin",
+      "pass": true
+    },
+    {
+      "name": "both_distinct_physical_materials_reach_their_owners_graveyard",
+      "pass": true
+    },
+    {
+      "name": "the_procedure_is_not_a_card_activation_or_response",
+      "pass": true
+    },
+    {
+      "name": "one_mandatory_protection_trigger_blocks_unrelated_steps",
+      "pass": true
+    },
+    {
+      "name": "protection_resolves_through_the_end_of_the_next_turn",
+      "pass": true
+    },
+    {
+      "name": "protection_is_a_snapshot_of_current_own_dragons",
+      "pass": true
+    },
+    {
+      "name": "the_first_download_binds_materials_mandatory_trigger_and_build",
+      "pass": true
+    },
+    {
+      "name": "battle_still_destroys_azure_and_deals_five_hundred_damage",
+      "pass": true
+    },
+    {
+      "name": "departure_clears_field_protection_but_retains_proper_synchro_qualification",
+      "pass": true
+    },
+    {
+      "name": "monster_reborn_revives_the_same_qualified_copy_with_a_new_graveyard_origin",
+      "pass": true
+    },
+    {
+      "name": "revival_does_not_restore_a_field_shield_or_charge_materials_again",
+      "pass": true
+    },
+    {
+      "name": "revival_creates_one_new_mandatory_protection_trigger",
+      "pass": true
+    },
+    {
+      "name": "the_second_special_summon_resolves_its_own_protection_without_an_invented_limit",
+      "pass": true
+    },
+    {
+      "name": "the_second_protection_download_preserves_both_activations_and_spell_payment",
+      "pass": true
+    },
+    {
+      "name": "protection_is_still_active_during_the_next_turn",
+      "pass": true
+    },
+    {
+      "name": "the_rival_draw_uses_a_known_physical_card_without_inventing_order",
+      "pass": true
+    },
+    {
+      "name": "own_azure_cannot_revive_a_normal_during_the_rival_standby",
+      "pass": true
+    },
+    {
+      "name": "the_next_turn_expires_the_old_protection_before_own_standby",
+      "pass": true
+    },
+    {
+      "name": "the_own_draw_moves_the_next_known_copy_and_preserves_life_points",
+      "pass": true
+    },
+    {
+      "name": "the_goal_remains_false_before_the_normal_copy_is_revived",
+      "pass": true
+    },
+    {
+      "name": "standby_revives_the_same_normal_material_under_its_owner",
+      "pass": true
+    },
+    {
+      "name": "the_new_normal_dragon_has_no_stale_previous_turn_protection",
+      "pass": true
+    },
+    {
+      "name": "standby_consumes_the_physical_azure_once_per_turn_budget",
+      "pass": true
+    },
+    {
+      "name": "the_visible_goal_requires_both_dragons_during_the_own_turn_four_standby",
+      "pass": true
+    },
+    {
+      "name": "the_entire_eighteen_action_route_replays_without_competitive_certification",
+      "pass": true
+    },
+    {
+      "name": "the_final_download_preserves_the_summon_origins_materials_and_standby_result",
+      "pass": true
+    },
+    {
+      "name": "undo_restores_the_graveyard_target_and_unspent_standby_budget",
+      "pass": true
+    },
+    {
+      "name": "importing_the_intermediate_report_reconstructs_the_new_mandatory_protection",
+      "pass": true
+    },
+    {
+      "name": "importing_the_final_report_replays_all_eighteen_actions",
+      "pass": true
+    },
+    {
+      "name": "an_altered_materials_is_rejected_without_replacing_the_active_route",
+      "pass": true
+    },
+    {
+      "name": "an_altered_history_is_rejected_without_replacing_the_active_route",
+      "pass": true
+    },
+    {
+      "name": "an_altered_payment_is_rejected_without_replacing_the_active_route",
+      "pass": true
+    },
+    {
+      "name": "the_azure_route_remains_readable_at_mobile_width_without_changing_state",
+      "pass": true
+    },
+    {
+      "name": "release17_raises_no_javascript_page_errors",
+      "pass": true
+    },
+    {
+      "name": "release17_leaves_the_compiled_artifact_unchanged",
+      "pass": true
+    }
+  ],
+  "details": {
+    "the_azure_route_remains_readable_at_mobile_width_without_changing_state": {
+      "left": 16,
+      "right": 374,
+      "selectHeight": 44,
+      "buttonHeight": 44,
+      "width": 390
+    },
+    "release17_raises_no_javascript_page_errors": []
+  },
+  "browser": {
+    "engine": "chromium",
+    "version": "154.0.8037.57"
+  },
+  "externalRequestsBlocked": 16,
+  "limitations": [
+    "The starting Blue-Eyes fields are declared; the Azure-Eyes Synchro, materials, graveyard departure, revival and two protections are executed and replayed.",
+    "Azure protection applies to the current own Dragons through the end of the next turn, not battle destruction or later arrivals.",
+    "The Standby revival requires the own Standby and a registered physical Normal target; this does not certify arbitrary summon procedures or priority.",
+    "Mobile width is emulated; competitive scoring remains provisional."
+  ],
+  "elapsedSeconds": 77.92
+}

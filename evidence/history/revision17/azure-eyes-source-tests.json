@@ -1,0 +1,320 @@
+{
+  "schema": "ygo-node-source-suite-evidence/v1",
+  "pass": true,
+  "buildId": "44adab61fe289978ed72e0ab2a116f521387641584ecb77a4a9e097ecc194ae1",
+  "htmlSha256": "41c301b7ec88125cf6403756a69406873fbfebce9fc96d90ef4739af20633312",
+  "artifactMode": "SOURCE_NODE_SUITE",
+  "executionEnvironment": "LOCAL_NODE_SOURCE_TESTS",
+  "testFile": "tests/azure_eyes.cjs",
+  "testFileSha256": "82c9e09d6b7d5356ebaefa4ebcbd25e2c432e291c283a3172b7944cdaae6809a",
+  "result": {
+    "schema": "ygo-azure-eyes-tests/v1",
+    "pass": true,
+    "total": 74,
+    "tests": [
+      {
+        "name": "Azure registers a bounded non-chain Synchro procedure and does not widen the four Normal Spells",
+        "pass": true
+      },
+      {
+        "name": "Real Azure Synchro in Main 0 ATTACK queues mandatory protection",
+        "pass": true
+      },
+      {
+        "name": "Real Azure Synchro in Main 0 DEFENSE queues mandatory protection",
+        "pass": true
+      },
+      {
+        "name": "Real Azure Synchro in Main 1 ATTACK queues mandatory protection",
+        "pass": true
+      },
+      {
+        "name": "Real Azure Synchro in Main 1 DEFENSE queues mandatory protection",
+        "pass": true
+      },
+      {
+        "name": "Real Azure Synchro in Main 2 ATTACK queues mandatory protection",
+        "pass": true
+      },
+      {
+        "name": "Real Azure Synchro in Main 2 DEFENSE queues mandatory protection",
+        "pass": true
+      },
+      {
+        "name": "Real Azure Synchro in Main 3 ATTACK queues mandatory protection",
+        "pass": true
+      },
+      {
+        "name": "Real Azure Synchro in Main 3 DEFENSE queues mandatory protection",
+        "pass": true
+      },
+      {
+        "name": "Real Azure Synchro in Main 4 ATTACK queues mandatory protection",
+        "pass": true
+      },
+      {
+        "name": "Real Azure Synchro in Main 4 DEFENSE queues mandatory protection",
+        "pass": true
+      },
+      {
+        "name": "Complete physical route revives the same Azure, protects again and revives a Normal in the next own Standby",
+        "pass": true
+      },
+      {
+        "name": "Mandatory Azure protection prevents declining, starting a Spell or changing phase before resolution",
+        "pass": true
+      },
+      {
+        "name": "Starting field and direct Extra-to-GY declarations create neither mandatory triggers nor proper qualification",
+        "pass": true
+      },
+      {
+        "name": "Spirit-borrowed Azure with negated protection reaches GY without a proper Synchro history and stays ineligible for Reborn",
+        "pass": true
+      },
+      {
+        "name": "Azure Synchro remains legal in Main Phase 2 while another monster occupies the Extra Monster Zone",
+        "pass": true
+      },
+      {
+        "name": "A full Main row frees exactly the consumed zones before placing Azure",
+        "pass": true
+      },
+      {
+        "name": "One Tuner and two Normal non-Tuners can total nine",
+        "pass": true
+      },
+      {
+        "name": "All five occupied Main zones may be consumed by an exact valid nine-level recipe",
+        "pass": true
+      },
+      {
+        "name": "A full Spell/Trap row does not create a fictitious activation column for Synchro",
+        "pass": true
+      },
+      {
+        "name": "Duplicate, invented and wrong-zone source UIDs are rejected atomically",
+        "pass": true
+      },
+      {
+        "name": "A hand, GY or rival-field card cannot be injected as a Synchro material",
+        "pass": true
+      },
+      {
+        "name": "Azure recipe rejects zero Tuners",
+        "pass": true
+      },
+      {
+        "name": "Azure recipe rejects two Tuners",
+        "pass": true
+      },
+      {
+        "name": "Azure recipe rejects total eight",
+        "pass": true
+      },
+      {
+        "name": "Azure recipe rejects Effect non-Tuner despite total nine",
+        "pass": true
+      },
+      {
+        "name": "Azure recipe rejects face-down material",
+        "pass": true
+      },
+      {
+        "name": "Azure recipe rejects unreviewed Tuner",
+        "pass": true
+      },
+      {
+        "name": "Azure recipe rejects Pendulum material",
+        "pass": true
+      },
+      {
+        "name": "Azure recipe rejects Xyz material",
+        "pass": true
+      },
+      {
+        "name": "Azure recipe rejects Link material",
+        "pass": true
+      },
+      {
+        "name": "QA-only level override cannot silently become a legal material",
+        "pass": true
+      },
+      {
+        "name": "QA-only level modifier cannot silently become a legal material",
+        "pass": true
+      },
+      {
+        "name": "QA-only unreviewed equipment cannot silently become a legal material",
+        "pass": true
+      },
+      {
+        "name": "QA-only material prohibition cannot silently become a legal material",
+        "pass": true
+      },
+      {
+        "name": "QA-only unknown redirect cannot silently become a legal material",
+        "pass": true
+      },
+      {
+        "name": "Changing printed levels in a QA snapshot does not spoof catalogue-backed material eligibility",
+        "pass": true
+      },
+      {
+        "name": "Azure procedure stays unavailable in opponent Main",
+        "pass": true
+      },
+      {
+        "name": "Azure procedure stays unavailable in Battle",
+        "pass": true
+      },
+      {
+        "name": "Azure procedure stays unavailable in Standby",
+        "pass": true
+      },
+      {
+        "name": "Azure procedure stays unavailable in End",
+        "pass": true
+      },
+      {
+        "name": "The procedure does not introduce a mandatory protection dead end outside duel mode",
+        "pass": true
+      },
+      {
+        "name": "A pending Sage search must be resolved or declined before Azure Synchro",
+        "pass": true
+      },
+      {
+        "name": "An opponent-owned Normal revived through real Reborn returns to its owner GY when used as Azure material",
+        "pass": true
+      },
+      {
+        "name": "A real negated Branded Fusion still prevents the non-Fusion Extra procedure",
+        "pass": true
+      },
+      {
+        "name": "A real Ashuna activation applies Wyrm-only and excludes the Dragon Azure procedure",
+        "pass": true
+      },
+      {
+        "name": "A live Swordsoul Tuner Token and Normal level five produce Azure while the real Token ceases",
+        "pass": true
+      },
+      {
+        "name": "A fabricated Token ledger cannot qualify as a reviewed material",
+        "pass": true
+      },
+      {
+        "name": "Spirit Dragon single-summon cap does not turn this one-card procedure into a multiple summon",
+        "pass": true
+      },
+      {
+        "name": "The procedure offers no Ash, Spirit, Mechaba or Roar response even with their physical costs present",
+        "pass": true
+      },
+      {
+        "name": "Mechaba sends a physical Monster cost and negates the mandatory protection before banishing Azure",
+        "pass": true
+      },
+      {
+        "name": "A paid Roar counter negates Mechaba and allows mandatory Azure protection to resolve",
+        "pass": true
+      },
+      {
+        "name": "Negated Monster Reborn pays the matching Spell response and creates no Azure summon trigger",
+        "pass": true
+      },
+      {
+        "name": "Azure Standby revival uses player 0 own physical Normal and once-per-turn budget",
+        "pass": true
+      },
+      {
+        "name": "Azure Standby revival uses player 1 own physical Normal and once-per-turn budget",
+        "pass": true
+      },
+      {
+        "name": "An Azure in the non-active player field cannot use its own-Standby effect",
+        "pass": true
+      },
+      {
+        "name": "Standby effect negation consumes its activation budget and preserves the unmoved target",
+        "pass": true
+      },
+      {
+        "name": "A protected Azure survives Roar activation negation and may activate its Standby effect again",
+        "pass": true
+      },
+      {
+        "name": "Protection snapshots current Dragons, excludes other races and does not cover later arrivals",
+        "pass": true
+      },
+      {
+        "name": "Protection lasts throughout the following turn, expires before the next own turn and is not a battle shield",
+        "pass": true
+      },
+      {
+        "name": "Resolved protection on another Dragon survives Azure departure but does not return to the revived source instance",
+        "pass": true
+      },
+      {
+        "name": "A hidden Extra return clears qualification and the same physical Azure can gain it through a new procedure",
+        "pass": true
+      },
+      {
+        "name": "Live unused Wolf excludes the unmodeled simultaneous mandatory/optional destination only",
+        "pass": true
+      },
+      {
+        "name": "QA-only spent Wolf state does not create an extra trigger and allows the linked destination",
+        "pass": true
+      },
+      {
+        "name": "Replay rejects forged qualification, protection duration, owner, origin and material costs",
+        "pass": true
+      },
+      {
+        "name": "Bounded search reaches a protected Azure only through an executed procedure and mandatory resolution",
+        "pass": true
+      },
+      {
+        "name": "Paid Shaman forbids the mandatory Extra-origin activation without preventing the genuine Azure Synchro",
+        "pass": true
+      },
+      {
+        "name": "The same paid Shaman lock permits mandatory Azure protection on an actual GY revival",
+        "pass": true
+      },
+      {
+        "name": "Effect negation answers mandatory Azure protection without treating it as a prohibited activation",
+        "pass": true
+      },
+      {
+        "name": "A Normal Dragon revived by Reborn in the same protection turn does not inherit the earlier snapshot",
+        "pass": true
+      },
+      {
+        "name": "A live Wolf arrow excludes an unregistered Standby revival trigger arrangement without spending a target or use",
+        "pass": true
+      },
+      {
+        "name": "Standby revival excludes a rival Vanitys Fiend without spending its source, target or budget",
+        "pass": true
+      },
+      {
+        "name": "Standby revival excludes an unreviewed Black Garden Special Summon consequence without spending its source, target or budget",
+        "pass": true
+      },
+      {
+        "name": "Spirit cannot borrow either Azure or Spark through a rival Vanitys Fiend and never pays a fictitious tribute",
+        "pass": true
+      }
+    ],
+    "limitations": [
+      "Pinned catalogue and dated TCG snapshot are technical test inputs, not new official rulings.",
+      "Initial Main Deck fields and borrowed Spirit history are declared when explicitly noted; witnessed Azure qualification is created only by executed Synchro procedures.",
+      "Unknown material effects, level modifications, simultaneous trigger arrangements and general priority remain outside this registered subset.",
+      "Protection does not prevent battle damage, non-destruction removal or unknown rule interactions; competitive scoring remains provisional."
+    ]
+  },
+  "meaning": "Passed local Node source cases from the preserved complete local run; remote whole-release acceptance is recorded separately through mandatory CI gates. These are not downloaded remote result files."
+}

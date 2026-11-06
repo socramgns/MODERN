@@ -1,9 +1,9 @@
 {
   "schema": "ygo-analyzer-e2e/v1",
   "runner": "Playwright/Chromium",
-  "executedAt": "2026-11-05T18:42:41Z",
-  "buildId": "44adab61fe289978ed72e0ab2a116f521387641584ecb77a4a9e097ecc194ae1",
-  "htmlSha256": "41c301b7ec88125cf6403756a69406873fbfebce9fc96d90ef4739af20633312",
+  "executedAt": "2026-11-06T03:04:55Z",
+  "buildId": "7b027eadfd3aa793f479a4225b6a52e3e96471d9a11276ed8ad7754f6c9f16ab",
+  "htmlSha256": "622328ee699c2a6407c5f20e724fe0f613bc6479858d4c2b4f222c86e8fdc9bb",
   "pass": true,
   "tests": [
     {
@@ -72,8 +72,8 @@
         "total": 88,
         "done": 88,
         "lastProgressOrder": 88,
-        "elapsedMs": 8026,
-        "waitingMs": 6528,
+        "elapsedMs": 6988,
+        "waitingMs": 5597,
         "slowLoading": false,
         "hashesVerified": true,
         "hashesChecked": 88,
@@ -698,11 +698,11 @@
       },
       "build": {
         "version": "Alpha 1263",
-        "revision": "2026.11-stable.17",
+        "revision": "2026.11-stable.18",
         "canonicalId": "ygo-alpha-1263-canonical-release",
         "moduleCount": 88,
         "catalogCardCount": 21986,
-        "buildId": "44adab61fe289978ed72e0ab2a116f521387641584ecb77a4a9e097ecc194ae1",
+        "buildId": "7b027eadfd3aa793f479a4225b6a52e3e96471d9a11276ed8ad7754f6c9f16ab",
         "catalogueSizePinsCompiled": 164,
         "dataHashes": {
           "cards": "cc265022039bba09fc31e8e3a48afb0030e5a81cab0c30c386843fcd75e1cba6"
@@ -1360,7 +1360,7 @@
       "bytes": 91529
     },
     "print_pdf_render": {
-      "bytes": 16489312
+      "bytes": 16489187
     },
     "shared_link_restores_deck_and_format": {
       "main": 40
