@@ -1,12 +1,12 @@
 {
   "schema": "ygo-node-source-suite-evidence/v1",
   "pass": true,
-  "buildId": "7b027eadfd3aa793f479a4225b6a52e3e96471d9a11276ed8ad7754f6c9f16ab",
-  "htmlSha256": "622328ee699c2a6407c5f20e724fe0f613bc6479858d4c2b4f222c86e8fdc9bb",
+  "buildId": "1da146dc7d27821a750f484b8c9d5177358425ae74b3656ad17154a72a1f71e2",
+  "htmlSha256": "e03038a2d7932ded30cfb93e0d5d79a3e3dbe26efdadefc1b02b445632933fda",
   "artifactMode": "SOURCE_NODE_SUITE",
   "executionEnvironment": "LOCAL_NODE_SOURCE_TESTS",
   "testFile": "tests/azure_eyes.cjs",
-  "testFileSha256": "82c9e09d6b7d5356ebaefa4ebcbd25e2c432e291c283a3172b7944cdaae6809a",
+  "testFileSha256": "6c17c57044534fe59d5bf96133756a6abc37fbbdb354e95b8b3c0cb8b1e35ee2",
   "result": {
     "schema": "ygo-azure-eyes-tests/v1",
     "pass": true,
@@ -293,7 +293,7 @@
         "pass": true
       },
       {
-        "name": "A live Wolf arrow excludes an unregistered Standby revival trigger arrangement without spending a target or use",
+        "name": "A registered Standby revival observes one optional Wolf opportunity and preserves both usage budgets",
         "pass": true
       },
       {

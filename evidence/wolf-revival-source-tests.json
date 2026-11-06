@@ -4,9 +4,9 @@
   "buildId": "1da146dc7d27821a750f484b8c9d5177358425ae74b3656ad17154a72a1f71e2",
   "htmlSha256": "e03038a2d7932ded30cfb93e0d5d79a3e3dbe26efdadefc1b02b445632933fda",
   "artifactMode": "SOURCE_NODE_SUITE",
+  "executionEnvironment": "LOCAL_NODE_SOURCE_TESTS",
   "testFile": "tests/wolf_revival.cjs",
   "testFileSha256": "97c49facb1c5300c7a785ec31ee126ae230ca5c7fa9b6304408476779d478d51",
-  "meaning": "Focused local source cases before complete remote validation; absent local engines remain pending.",
   "result": {
     "schema": "ygo-wolf-revival-tests/v1",
     "pass": true,
@@ -296,5 +296,6 @@
       "Both-player Normal and Special arrivals use real registered actions. Opponent Spirit prior history in the Spark arrival fixture is a declared scenario assumption, not a registered opponent Synchro proof.",
       "Search is bounded, uncertified and does not prove global optimality or competitive tournament performance."
     ]
-  }
+  },
+  "meaning": "Passed local Node source cases from the preserved complete local run; remote whole-release acceptance is recorded separately through mandatory CI gates. These are not downloaded remote result files."
 }

@@ -2,19 +2,19 @@
   "schema": "ygo-remote-full-acceptance/v1",
   "pass": true,
   "acceptanceReady": true,
-  "candidateCommit": "0807cd758ee30c3824330bcf59eb11f5d298df60",
-  "bindingSha256": "ad860dfd474325aa01c75083a792cb394740f4e85cd67eb530ca14d74fec282e",
+  "candidateCommit": "c5bfa6d74aec0d6ae1661170cd712c0daa49fe32",
+  "bindingSha256": "3e46597bb9c0e18c085d1158f12e904e607fec3c2583be58c8b8bfbcd8cc353d",
   "bindings": {
-    "candidateCommit": "0807cd758ee30c3824330bcf59eb11f5d298df60",
-    "buildId": "7b027eadfd3aa793f479a4225b6a52e3e96471d9a11276ed8ad7754f6c9f16ab",
-    "htmlSha256": "622328ee699c2a6407c5f20e724fe0f613bc6479858d4c2b4f222c86e8fdc9bb",
-    "workflowSha256": "8c68bc01941ac70ea4c92d888772abb6a349a987458a6b25b8929f65c2e00f09",
+    "candidateCommit": "c5bfa6d74aec0d6ae1661170cd712c0daa49fe32",
+    "buildId": "1da146dc7d27821a750f484b8c9d5177358425ae74b3656ad17154a72a1f71e2",
+    "htmlSha256": "e03038a2d7932ded30cfb93e0d5d79a3e3dbe26efdadefc1b02b445632933fda",
+    "workflowSha256": "bae765f94710d8aad47e317f00c39eec9620cca2d985d4f4ff6f9ef67b1c46e6",
     "testFiles": {
       "tests/advanced_browser.py": "9826dc2ad23809656f57b829a49b25436e1d0111bd5417563540f475fe8ed366",
       "tests/archetypes.cjs": "89dcb28d9bf667bfd83ecfaf8c53054e0e44b28a4361883b930b354c6078ea99",
       "tests/archetypes_browser.py": "7d6aab31ec212ffc78a8bbf2b813234093ae8c79995b20628e0cc754750cebaa",
       "tests/archetypes_expanded.cjs": "ffe77f328bcbac89d93d68e32a1c6120e2b6752cad54a6feaad52b0887ba02c8",
-      "tests/azure_eyes.cjs": "82c9e09d6b7d5356ebaefa4ebcbd25e2c432e291c283a3172b7944cdaae6809a",
+      "tests/azure_eyes.cjs": "6c17c57044534fe59d5bf96133756a6abc37fbbdb354e95b8b3c0cb8b1e35ee2",
       "tests/blue_eyes_browser.py": "986323a45cc25be2c1478cb28fa0ad496515789eb1627340243ed1f11f47fccc",
       "tests/blue_eyes_duel.cjs": "f9cfb0ab132033270216dc737c803a9a8777f7e6564ce8e9637ba1e1516b06bc",
       "tests/blue_eyes_pending.cjs": "b0f54619e2078ee45e442d0dc8a77d00195ac3aca5bb01e60f97b8d1daf5a24d",
@@ -32,7 +32,7 @@
       "tests/draw_uncertainty.cjs": "2b18dbb57e3d43e71af8f2782794cb1516f223d62b31f44d6a10f2c39acf3b22",
       "tests/duel_phases.cjs": "09543e5c784da2df658c8d3f13cc2d5128d3018575284879a24d71253239cd35",
       "tests/end_to_end.py": "31caeb711406f0a9f871667a6f780e2d4a07715a9eceb793bf2a3ca0a3932c15",
-      "tests/expanded_examples_browser.py": "681231c67935555f08574190da9c549f3aa7b8feb6f5182126d497f232a08b8b",
+      "tests/expanded_examples_browser.py": "92980e730a57e1e19020c184b97ef96114f0d91bbabd9e9ec78fcbfba6298724",
       "tests/field_goals.cjs": "5ff191976799ee39ad08f8d60eb23523c737b4b9b897ddaa107d722bacb33eae",
       "tests/field_spell_activations.cjs": "ebac17ecf16b215e5e430d1a80eac2f4dd4657701541fa52ee5222b290255fcb",
       "tests/format_interface.py": "25a5186e35c290cf9d535ed63f38bc910e647cf8d1d0ff1c03e06769e57a81b5",
@@ -55,50 +55,56 @@
       "tests/recommendations.cjs": "40c71b8784a3e8e8f79ab289217dcaa0f86bcab27417365560cc67c434397ca7",
       "tests/release10_browser.py": "ae4217f45f7acdd40a2f878ffa6bd7f5ac095175947303c2d9c9d40df13fc46c",
       "tests/release11_browser.py": "14539ad5725064c6af0925939dc2c35e12aea3888382e3515eff235322ad7523",
-      "tests/release12_browser.py": "87a88d77d368f5b4f20bb827d1eb14dc0a68c7e50158dc7ad702dc818de3a9e3",
-      "tests/release13_browser.py": "768fdf73ec855930a8704ee62868c78783625eeff69bbea23d2895e4a536875d",
-      "tests/release14_browser.py": "67cbcdad58be50c81cc08ec4b1f96d9d061cc053fd47f592869e1dae4eb8fc5c",
-      "tests/release15_browser.py": "5c1eaee23fe34ad42e5037d2a6d4a123065bed3d3e168f2fcc4053de6f7d4c4a",
-      "tests/release16_browser.py": "9f83d2369ebc877b59cc58efd8d4ce601869235a15447d629d1a8e93694ed7a6",
-      "tests/release17_browser.py": "75e72fac475b9a37647975dd490ad6ec654037eb8572b1dabf78c928ac80a025",
-      "tests/release18_browser.py": "c9516998639b5984a6403f19d751d20440d90e9c304067caf15a3c7974a1fa0f",
+      "tests/release12_browser.py": "09d331de881aa9bb862e162c6e1df69601275fc09263bc5150c9a23f3b79f983",
+      "tests/release13_browser.py": "203f7c1e1a4981509891303e2057471294a6fba1b5ea8e2c8bb25da12cda950b",
+      "tests/release14_browser.py": "26640e14fb2b48aa87b2832a50a76ec7617df611e570dae2c725575f80dee279",
+      "tests/release15_browser.py": "3430a7956393a68c688f903d1a34f78fc9bc2860fe7d6ab5ae00fea747fd74c9",
+      "tests/release16_browser.py": "798ea7d5979b937a0354a841e4dbab01130d18f7cdc29dcb033eb8be3647d528",
+      "tests/release17_browser.py": "2d4c23ab49e594c943a20a54ac34c1a4fff63d7842da05db603edc98a1f07dae",
+      "tests/release18_browser.py": "46fa00a3de013d1f1cc42184ce491f80d40f00b5aa656389af13b45ab11c0039",
+      "tests/release19_browser.py": "888f721d79dea10482ee4731c1ef3c41ead930d275f6a278e8825fec9fe46c25",
       "tests/release5_browser.py": "fb9add111dd6d799859b1ed05ca30ed451ef129cf1cbf10136196ad5b3676692",
       "tests/release6_browser.py": "56cb39f63f22edf7324d48cf19ea4130f35833eaf0c6dde5fd36ef820becca10",
-      "tests/release8_browser.py": "578b3ef60ca054ba669e4361412f8e814138f3fa19c1f7610624aedc69683c17",
-      "tests/release9_browser.py": "7961f50667dadb701cadb6d9b471422f9caf35e7c1aadf000dfbccc7a9c2776d",
+      "tests/release8_browser.py": "8b2c9747cd03f83c26e90d3d8fc2246acf7abe79ddb34ad9e4d7192fdb485990",
+      "tests/release9_browser.py": "ab887540c6f87518d7460dd3a94a0541dedd6ef395b5af604b2aa5469249b468",
       "tests/response_windows.cjs": "d06bd6de6a0511c168edd0e3ed078366e0a7916332c68431e9aa7fb3979972a1",
       "tests/responses.cjs": "0356cf45ba82cc28603b7caf61299711ecb7ed9685ea62961ce4cc6af3535158",
-      "tests/run_all.py": "e5f01ed69bac00726164942b397f0a82689769f04e76ae0d7e7c59bdca39db3d",
-      "tests/scenario_examples.cjs": "9d9e30ca81eb670319ab68f610a330efb2bc282ecc7e914923979288debc11e7",
+      "tests/run_all.py": "9f3c95b1caf1a45cfbc3ac8000385d0d94879e2dbc1856200de040dd6a958b42",
+      "tests/scenario_examples.cjs": "c1031091f1b6dafad3dd70c6fca0b4b690a95df451b1eb19858474dbc06f9637",
       "tests/search_limits.cjs": "0633a5d319d515b79282bc7a821b88cca9bb10810b25bb74abe289e86b63d6db",
-      "tests/spirit_revival.cjs": "61dc2509a212ccdfc319711eddaed944a2d0e0af4cc2f264f451ba3b094db606",
+      "tests/spirit_revival.cjs": "4a71707f55be3792d06734eabac9160b12ee22f18d6db6f8224d93e2cca2ac11",
       "tests/stardust_synchro.cjs": "932592562791a68c006ac1676638243d8c0f2fe76fc1b4477d23f17dd138988d",
       "tests/strategy.cjs": "ac36cdbc8d89d5602d208e0e56c15518d3aa7e392d4d903e3430cae46374a25d",
       "tests/supported_search_probe.py": "fb633053c365084cd5491d66d213711ade2aae1cb6d638d2cbfcb6c0a90a8b16",
       "tests/ui_probe.py": "335430fc7e2d93b2d245fad1611b37c18ebac9cc8cad2c95f4f06cf75727809e",
       "tests/ux_revision6_browser.py": "a42bb56fb1afe1b5f470e29d77e96e313b99649db19fa331f9e4f0833aa5b493",
+      "tests/wolf_revival.cjs": "97c49facb1c5300c7a785ec31ee126ae230ca5c7fa9b6304408476779d478d51",
       "tests/worker_probe.py": "8377eb33acf5e53b5ab382c5209a3de1dbfffb13e0279d739a89faa1e535cde0"
     },
-    "expectedValidationGroups": 69,
+    "expectedValidationGroups": 71,
     "sourceJavaScriptFiles": 121,
-    "workflowUnchangedFromAcceptedPredecessor": true,
+    "workflowUnchangedFromAcceptedPredecessor": false,
+    "reviewedWorkflowChanges": [
+      "DELIVERED_TEST_STEP_TIMEOUT_20_TO_25_ONLY"
+    ],
+    "mandatoryGateCommandsUnchanged": true,
     "runnerOnlyAddsTwoReviewedGroups": true,
     "browserGatesUnchangedFromAcceptedPredecessor": true
   },
-  "observedAt": "2026-11-06T03:12:38.124269+00:00",
+  "observedAt": "2026-11-06T22:52:54.490326+00:00",
   "status": "ACCEPTED",
   "transport": "PUBLIC_GITHUB_HTML",
   "apiUsed": false,
   "individualRemoteReportsDownloaded": false,
   "remoteGroupCountInferredFromVersionedRunner": true,
-  "expectedRemoteValidationGroups": 69,
+  "expectedRemoteValidationGroups": 71,
   "localValidation": {
     "pass": false,
     "originalReportPreserved": true,
     "summaryPath": "dist/validation-summary.json",
-    "summarySha256": "a73e03e4406ee57841a3ca5d6e75b519fbaf138fc77000dacc48fc63551338ce",
-    "groups": 69,
-    "passedGroups": 67,
+    "summarySha256": "85ee50ded666323543ea540c0592c64485592de5b8a990abd65b8e3b45132b29",
+    "groups": 71,
+    "passedGroups": 69,
     "failedGroups": [
       "local_file_delivery",
       "mobile_accessibility"
@@ -111,100 +117,105 @@
       "chromium"
     ],
     "reportSha256": {
-      "tests/local-file-delivery-results.json": "d2b08ab0137b39b2d1890301047d2155dd51b1d235ce1dd293a084b3ddf43106",
-      "tests/mobile-accessibility-results.json": "51042d771d9d212a4f7c53d644086c1c37a9bbfac00d1878ec1af6a3a8a07594",
-      "tests/compatibility-results.json": "7c5db2425467101692e5ee6385e951debb670802c3c27f0d793f8313190f3d80"
+      "tests/local-file-delivery-results.json": "a08b12bf413dd3b300b3ce0e541335ecfdbd59ca5742ca34fa452bddd2732bca",
+      "tests/mobile-accessibility-results.json": "8d59cd0572ed6b6867a49a38eaf3f5d470fc0d85e36cc456ce53666d5b624e0d",
+      "tests/compatibility-results.json": "74ec242d2e9cad6ab530bdccd02fc3a3e02b42f40a89e38440f9644e7410d1f0"
     }
   },
-  "runUrl": "https://github.com/socramgns/MODERN/actions/runs/42152616194",
+  "workflowUnchangedFromAcceptedPredecessor": false,
+  "reviewedWorkflowChanges": [
+    "DELIVERED_TEST_STEP_TIMEOUT_20_TO_25_ONLY"
+  ],
+  "mandatoryGateCommandsUnchanged": true,
+  "runUrl": "https://github.com/socramgns/MODERN/actions/runs/42305553910",
   "visibleStatus": [
     "Success"
   ],
   "commitFoundInRunHeader": true,
   "remoteRun": {
-    "url": "https://github.com/socramgns/MODERN/actions/runs/42152616194",
-    "snapshotPath": "dist/remote-evidence/0807cd758ee30c3824330bcf59eb11f5d298df60-run-42152616194.html",
-    "sha256": "b846b73458cc9048b9b12cc04f0fbd3b91c678160956625671b304b6de11f27f"
+    "url": "https://github.com/socramgns/MODERN/actions/runs/42305553910",
+    "snapshotPath": "dist/remote-evidence/c5bfa6d74aec0d6ae1661170cd712c0daa49fe32-run-42305553910.html",
+    "sha256": "2af918806bc032ef83f3ac4bc3f067211c697b469e5a1588ee694558d2c68b4d"
   },
   "remoteJob": {
-    "url": "https://github.com/socramgns/MODERN/actions/runs/42152616194/job/127679172954",
-    "snapshotPath": "dist/remote-evidence/0807cd758ee30c3824330bcf59eb11f5d298df60-job-127679172954.html",
-    "sha256": "18cc87c4ba1567bc4dafefd860f3a5866d81161c65e73d79ca4a13766745d6f2"
+    "url": "https://github.com/socramgns/MODERN/actions/runs/42305553910/job/128193860252",
+    "snapshotPath": "dist/remote-evidence/c5bfa6d74aec0d6ae1661170cd712c0daa49fe32-job-128193860252.html",
+    "sha256": "c621e705dc0f100cf046aaf506eacb23800e1a4a3d9717baa6e5fd8712dc7dff"
   },
   "remoteRequiredSteps": [
     {
       "data-name": "Instalar dependencias Python de comprobación",
       "data-conclusion": "success",
-      "data-log-url": "/socramgns/MODERN/commit/0807cd758ee30c3824330bcf59eb11f5d298df60/checks/127679172954/logs/5",
-      "data-started-at": "2026-11-06T02:48:20Z",
-      "data-completed-at": "2026-11-06T02:48:23Z"
+      "data-log-url": "/socramgns/MODERN/commit/c5bfa6d74aec0d6ae1661170cd712c0daa49fe32/checks/128193860252/logs/5",
+      "data-started-at": "2026-11-06T22:33:09Z",
+      "data-completed-at": "2026-11-06T22:33:12Z"
     },
     {
       "data-name": "Instalar dependencias del sistema para los tres motores",
       "data-conclusion": "success",
-      "data-log-url": "/socramgns/MODERN/commit/0807cd758ee30c3824330bcf59eb11f5d298df60/checks/127679172954/logs/7",
-      "data-started-at": "2026-11-06T02:48:24Z",
-      "data-completed-at": "2026-11-06T02:49:37Z"
+      "data-log-url": "/socramgns/MODERN/commit/c5bfa6d74aec0d6ae1661170cd712c0daa49fe32/checks/128193860252/logs/7",
+      "data-started-at": "2026-11-06T22:33:12Z",
+      "data-completed-at": "2026-11-06T22:33:42Z"
     },
     {
       "data-name": "Preparar Chromium",
       "data-conclusion": "success",
-      "data-log-url": "/socramgns/MODERN/commit/0807cd758ee30c3824330bcf59eb11f5d298df60/checks/127679172954/logs/8",
-      "data-started-at": "2026-11-06T02:49:37Z",
-      "data-completed-at": "2026-11-06T02:49:48Z"
+      "data-log-url": "/socramgns/MODERN/commit/c5bfa6d74aec0d6ae1661170cd712c0daa49fe32/checks/128193860252/logs/8",
+      "data-started-at": "2026-11-06T22:33:42Z",
+      "data-completed-at": "2026-11-06T22:33:50Z"
     },
     {
       "data-name": "Preparar Firefox",
       "data-conclusion": "success",
-      "data-log-url": "/socramgns/MODERN/commit/0807cd758ee30c3824330bcf59eb11f5d298df60/checks/127679172954/logs/9",
-      "data-started-at": "2026-11-06T02:49:48Z",
-      "data-completed-at": "2026-11-06T02:49:53Z"
+      "data-log-url": "/socramgns/MODERN/commit/c5bfa6d74aec0d6ae1661170cd712c0daa49fe32/checks/128193860252/logs/9",
+      "data-started-at": "2026-11-06T22:33:50Z",
+      "data-completed-at": "2026-11-06T22:33:55Z"
     },
     {
       "data-name": "Preparar WebKit",
       "data-conclusion": "success",
-      "data-log-url": "/socramgns/MODERN/commit/0807cd758ee30c3824330bcf59eb11f5d298df60/checks/127679172954/logs/10",
-      "data-started-at": "2026-11-06T02:49:53Z",
-      "data-completed-at": "2026-11-06T02:49:58Z"
+      "data-log-url": "/socramgns/MODERN/commit/c5bfa6d74aec0d6ae1661170cd712c0daa49fe32/checks/128193860252/logs/10",
+      "data-started-at": "2026-11-06T22:33:55Z",
+      "data-completed-at": "2026-11-06T22:34:00Z"
     },
     {
       "data-name": "Registrar la ruta de Chromium para las pruebas existentes",
       "data-conclusion": "success",
-      "data-log-url": "/socramgns/MODERN/commit/0807cd758ee30c3824330bcf59eb11f5d298df60/checks/127679172954/logs/11",
-      "data-started-at": "2026-11-06T02:49:58Z",
-      "data-completed-at": "2026-11-06T02:49:58Z"
+      "data-log-url": "/socramgns/MODERN/commit/c5bfa6d74aec0d6ae1661170cd712c0daa49fe32/checks/128193860252/logs/11",
+      "data-started-at": "2026-11-06T22:34:00Z",
+      "data-completed-at": "2026-11-06T22:34:00Z"
     },
     {
       "data-name": "Recuperar la fuente técnica fijada y comprobar idempotencia",
       "data-conclusion": "success",
-      "data-log-url": "/socramgns/MODERN/commit/0807cd758ee30c3824330bcf59eb11f5d298df60/checks/127679172954/logs/12",
-      "data-started-at": "2026-11-06T02:49:58Z",
-      "data-completed-at": "2026-11-06T02:50:01Z"
+      "data-log-url": "/socramgns/MODERN/commit/c5bfa6d74aec0d6ae1661170cd712c0daa49fe32/checks/128193860252/logs/12",
+      "data-started-at": "2026-11-06T22:34:00Z",
+      "data-completed-at": "2026-11-06T22:34:02Z"
     },
     {
       "data-name": "Compilar y comparar el HTML publicado",
       "data-conclusion": "success",
-      "data-log-url": "/socramgns/MODERN/commit/0807cd758ee30c3824330bcf59eb11f5d298df60/checks/127679172954/logs/13",
-      "data-started-at": "2026-11-06T02:50:01Z",
-      "data-completed-at": "2026-11-06T02:50:03Z"
+      "data-log-url": "/socramgns/MODERN/commit/c5bfa6d74aec0d6ae1661170cd712c0daa49fe32/checks/128193860252/logs/13",
+      "data-started-at": "2026-11-06T22:34:02Z",
+      "data-completed-at": "2026-11-06T22:34:04Z"
     },
     {
       "data-name": "Ejecutar pruebas del entregable",
       "data-conclusion": "success",
-      "data-log-url": "/socramgns/MODERN/commit/0807cd758ee30c3824330bcf59eb11f5d298df60/checks/127679172954/logs/14",
-      "data-started-at": "2026-11-06T02:50:03Z",
-      "data-completed-at": "2026-11-06T03:09:41Z"
+      "data-log-url": "/socramgns/MODERN/commit/c5bfa6d74aec0d6ae1661170cd712c0daa49fe32/checks/128193860252/logs/14",
+      "data-started-at": "2026-11-06T22:34:04Z",
+      "data-completed-at": "2026-11-06T22:49:59Z"
     },
     {
       "data-name": "Exigir comprobación entre motores",
       "data-conclusion": "success",
-      "data-log-url": "/socramgns/MODERN/commit/0807cd758ee30c3824330bcf59eb11f5d298df60/checks/127679172954/logs/15",
-      "data-started-at": "2026-11-06T03:09:41Z",
-      "data-completed-at": "2026-11-06T03:11:05Z"
+      "data-log-url": "/socramgns/MODERN/commit/c5bfa6d74aec0d6ae1661170cd712c0daa49fe32/checks/128193860252/logs/15",
+      "data-started-at": "2026-11-06T22:49:59Z",
+      "data-completed-at": "2026-11-06T22:51:09Z"
     }
   ],
   "acceptanceMode": "REMOTE_FULL_EXECUTION_OBSERVED",
-  "validatedRemoteGroups": 69,
+  "validatedRemoteGroups": 71,
   "remoteEngineAvailabilityInferredFromUnchangedGates": [
     "chromium",
     "firefox",
@@ -218,7 +229,7 @@
     "The scoring remains provisional and only registered game rules are covered."
   ],
   "versionedSnapshots": {
-    "remoteRun": "evidence/remote-ci/0807cd758ee30c3824330bcf59eb11f5d298df60-run-42152616194.html",
-    "remoteJob": "evidence/remote-ci/0807cd758ee30c3824330bcf59eb11f5d298df60-job-127679172954.html"
+    "remoteRun": "evidence/remote-ci/c5bfa6d74aec0d6ae1661170cd712c0daa49fe32-run-42305553910.html",
+    "remoteJob": "evidence/remote-ci/c5bfa6d74aec0d6ae1661170cd712c0daa49fe32-job-128193860252.html"
   }
 }

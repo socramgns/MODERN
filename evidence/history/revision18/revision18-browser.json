@@ -1,0 +1,180 @@
+{
+  "schema": "ygo-release18-browser/v1",
+  "pass": true,
+  "buildId": "7b027eadfd3aa793f479a4225b6a52e3e96471d9a11276ed8ad7754f6c9f16ab",
+  "htmlSha256": "622328ee699c2a6407c5f20e724fe0f613bc6479858d4c2b4f222c86e8fdc9bb",
+  "artifactMode": "DELIVERED_BYTES",
+  "sourceInjection": false,
+  "checks": [
+    {
+      "name": "release18_runs_the_manifest_bound_document_without_network",
+      "pass": true
+    },
+    {
+      "name": "eighteen_visible_examples_preserve_all_seventeen_previous_identifiers",
+      "pass": true
+    },
+    {
+      "name": "spirit_revival_reuses_the_registered_spell_packet_and_preserves_other_registries",
+      "pass": true
+    },
+    {
+      "name": "the_example_starts_with_an_empty_field_five_physical_hand_cards_and_no_autoplay",
+      "pass": true
+    },
+    {
+      "name": "the_extra_copy_claims_no_initial_proper_link_history",
+      "pass": true
+    },
+    {
+      "name": "the_visible_longyuan_alternative_initially_has_a_real_wyrm_discard",
+      "pass": true
+    },
+    {
+      "name": "monster_reborn_does_not_offer_an_extra_copy_without_graveyard_history",
+      "pass": true
+    },
+    {
+      "name": "normal_summon_consumes_the_real_guard_and_normal_budget",
+      "pass": true
+    },
+    {
+      "name": "the_visible_link_choice_identifies_spirit_and_its_real_material",
+      "pass": true
+    },
+    {
+      "name": "the_link_procedure_creates_proper_history_for_the_same_physical_copy",
+      "pass": true
+    },
+    {
+      "name": "the_material_reaches_the_graveyard_with_a_link_material_proof",
+      "pass": true
+    },
+    {
+      "name": "the_real_link_summon_queues_its_own_mausoleum_opportunity",
+      "pass": true
+    },
+    {
+      "name": "the_link_only_search_adds_a_real_mausoleum_consumes_its_use_and_shuffles",
+      "pass": true
+    },
+    {
+      "name": "the_live_spirit_restriction_excludes_longyuan_without_spending_its_discard",
+      "pass": true
+    },
+    {
+      "name": "the_goal_remains_unachieved_before_tribute_and_revival",
+      "pass": true
+    },
+    {
+      "name": "the_tribute_is_a_real_paid_cost_and_preserves_spirits_link_qualification",
+      "pass": true
+    },
+    {
+      "name": "blue_eyes_is_summoned_from_the_same_hand_and_the_tribute_use_is_spent",
+      "pass": true
+    },
+    {
+      "name": "departure_removes_the_live_restriction_despite_retained_historical_locks",
+      "pass": true
+    },
+    {
+      "name": "the_revive_choices_offer_only_attack_in_free_main_monster_zones",
+      "pass": true
+    },
+    {
+      "name": "the_intermediate_download_binds_proper_history_cost_and_build",
+      "pass": true
+    },
+    {
+      "name": "the_visible_revive_choice_names_own_graveyard_attack_and_main_zone_three",
+      "pass": true
+    },
+    {
+      "name": "the_revived_copy_keeps_owner_and_proper_link_history_with_current_gy_origin",
+      "pass": true
+    },
+    {
+      "name": "reborn_creates_no_second_link_only_search_or_pending_summon_trigger",
+      "pass": true
+    },
+    {
+      "name": "revival_does_not_reset_either_spirit_once_per_turn_use",
+      "pass": true
+    },
+    {
+      "name": "revival_reinstates_the_live_dragon_restriction_without_spending_longyuan",
+      "pass": true
+    },
+    {
+      "name": "the_normal_spell_finishes_in_the_graveyard_without_material_or_normal_summon_charges",
+      "pass": true
+    },
+    {
+      "name": "the_advertised_goal_and_five_real_actions_have_a_fresh_passing_replay",
+      "pass": true
+    },
+    {
+      "name": "the_final_download_preserves_the_same_physical_spirit_and_goal",
+      "pass": true
+    },
+    {
+      "name": "undo_restores_the_graveyard_copy_reborn_in_hand_and_unrestricted_alternative",
+      "pass": true
+    },
+    {
+      "name": "import_reconstructs_five_actions_and_the_live_restriction_from_fresh_replay",
+      "pass": true
+    },
+    {
+      "name": "an_altered_material_is_rejected_without_replacing_the_active_route",
+      "pass": true
+    },
+    {
+      "name": "an_altered_qualification_is_rejected_without_replacing_the_active_route",
+      "pass": true
+    },
+    {
+      "name": "an_altered_tribute_cost_is_rejected_without_replacing_the_active_route",
+      "pass": true
+    },
+    {
+      "name": "an_altered_revival_origin_is_rejected_without_replacing_the_active_route",
+      "pass": true
+    },
+    {
+      "name": "the_spirit_guide_remains_readable_at_mobile_width_without_mutating_state",
+      "pass": true
+    },
+    {
+      "name": "release18_raises_no_javascript_page_errors",
+      "pass": true
+    },
+    {
+      "name": "release18_leaves_the_compiled_artifact_unchanged",
+      "pass": true
+    }
+  ],
+  "details": {
+    "the_spirit_guide_remains_readable_at_mobile_width_without_mutating_state": {
+      "left": 16,
+      "right": 374,
+      "selectHeight": 44,
+      "buttonHeight": 44,
+      "width": 390
+    },
+    "release18_raises_no_javascript_page_errors": []
+  },
+  "browser": {
+    "engine": "chromium",
+    "version": "154.0.8037.57"
+  },
+  "externalRequestsBlocked": 18,
+  "limitations": [
+    "The Spirit Link procedure, physical tribute cost and Monster Reborn revival are executed and freshly replayed; no initial field assumes proper qualification.",
+    "Mausoleum search belongs to the genuine Link Summon. Revival does not create a new Link trigger or reset used effects.",
+    "Longyuan is inspected as a real available alternative without spending its source or discard; this is not a general priority or all-card certification.",
+    "Mobile width is emulated; competitive scoring remains provisional."
+  ],
+  "elapsedSeconds": 22.73
+}
