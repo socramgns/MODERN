@@ -127,7 +127,7 @@ const I={REBORN:83764718,CED:94192409,IMPERM:10045474,MECHABA:75286621,
  await test('Reborn admits Spirit only as a reviewed properly Link Summoned Extra profile',()=>{
   const c=W.YGOMonsterReborn.capabilities(),p=c.extraProfiles.find(x=>x.cardId===I.SPIRIT_LINK);assert(p);
   assert.equal(p.properSummonType,'LINK');assert.equal(p.requiresRegisteredProperSummon,true);
-  assert(!c.excludedProfiles.some(x=>x.id===I.SPIRIT_LINK));assert(c.excludedProfiles.some(x=>x.id===I.WOLF));assert(c.excludedProfiles.some(x=>x.id===I.ALBAZ));
+  assert(!c.excludedProfiles.some(x=>x.id===I.SPIRIT_LINK));assert(!c.excludedProfiles.some(x=>x.id===I.WOLF));assert(c.extraProfiles.some(x=>x.cardId===I.WOLF&&x.properSummonType==='LINK'));assert(c.excludedProfiles.some(x=>x.id===I.ALBAZ));
  });
  for(const destination of [0,1,2,3,4])await test('A witnessed Link and paid tribute revive the same Spirit into Main '+destination+' in Attack',()=>{
   const {t,spirit}=tributeRoute(destination===0?{placements:[set(0,I.CED,0)]}:{}),beforeHistory=copy(t.state.extraHistory),blue=uid(t,0,'monster',I.BEWD),source=uid(t,0,'hand',I.REBORN);
@@ -308,7 +308,7 @@ const I={REBORN:83764718,CED:94192409,IMPERM:10045474,MECHABA:75286621,
   assert.equal(actions(t,'SPIRIT_TRIBUTE_BLUE_EYES').length,0);reject(t,{type:'SPIRIT_TRIBUTE_BLUE_EYES',sourceUid:spirit,summonUid:blue});
   assert.equal(locate(t,spirit).zone,'monster');assert.equal(locate(t,blue).zone,'hand');assert.equal(t.state.used.SPIRIT_TRIBUTE,undefined);assert.equal(t.actions.length,0);
  });
- for(const recoverFire of [false,true])await test('Witnessed Wolf and revived Spirit automatic arrival '+(recoverFire?'permits tribute after actual FIRE recovery':'excludes an unregistered unspent Wolf trigger before tribute cost'),()=>{
+ for(const recoverFire of [false,true])await test('Witnessed Wolf and revived Spirit automatic arrival '+(recoverFire?'permits tribute after actual FIRE recovery':'records a new observed Wolf opportunity after the paid tribute'),()=>{
   const t=make({hands:[[I.GUARD,I.BEWD],[]],cards:[[I.MAUSOLEUM],[]],extra:[[I.WOLF],[]],placements:[monster(0,I.FISH,0),monster(0,I.GAZELLE,2),monster(0,I.SPINNY,3),monster(1,I.BEWD,2)]});
   step(t,'NORMAL_SUMMON',a=>a.sourceUid===uid(t,0,'hand',I.GUARD));step(t,'LINK_SPIRIT_WITH_EYES_OF_BLUE');step(t,'SPIRIT_SEARCH_MAUSOLEUM');const spirit=uid(t,0,'monster',I.SPIRIT_LINK);
   battleToGY(t,spirit);step(t,'SALAMANGREAT_LINK_WOLF',pass);const wolf=uid(t,0,'monster',I.WOLF);step(t,TYPE,select(spirit,1));assert(t.state.pendingTriggers.some(x=>x.kind==='SALAMANGREAT_WOLF_FIRE'));
@@ -317,8 +317,9 @@ const I={REBORN:83764718,CED:94192409,IMPERM:10045474,MECHABA:75286621,
    step(t,'SALAMANGREAT_WOLF_RECOVER_FIRE',a=>a.sourceUid===wolf&&a.targetUid===uid(t,0,'gy',I.GAZELLE)&&pass(a));assert.equal(t.state.used.SALAMANGREAT_WOLF_FIRE,true);
    step(t,'SPIRIT_TRIBUTE_BLUE_EYES',a=>a.sourceUid===spirit&&a.summonUid===blue&&pass(a));assert.equal(locate(t,blue).zone,'monster');assert.equal(locate(t,blue).item.zoneIndex,1);assert.equal(t.state.pendingTriggers.length,0);assert.equal(t.state.used.SPIRIT_TRIBUTE,true);
   }else{
-   decline(t);assert.equal(t.state.used.SALAMANGREAT_WOLF_FIRE,undefined);assert.equal(actions(t,'SPIRIT_TRIBUTE_BLUE_EYES').length,0);
-   reject(t,{type:'SPIRIT_TRIBUTE_BLUE_EYES',sourceUid:spirit,summonUid:blue});assert.equal(locate(t,spirit).item.zoneIndex,1);assert.equal(locate(t,blue).zone,'hand');assert.equal(t.state.used.SPIRIT_TRIBUTE,undefined);
+   decline(t);assert.equal(t.state.used.SALAMANGREAT_WOLF_FIRE,undefined);assert(actions(t,'SPIRIT_TRIBUTE_BLUE_EYES').length>0);
+   const r=step(t,'SPIRIT_TRIBUTE_BLUE_EYES',a=>a.sourceUid===spirit&&a.summonUid===blue&&pass(a));assert(r.action.paid.some(p=>p.kind==='TRIBUTE'&&p.uid===spirit));assert.equal(locate(t,spirit).zone,'gy');assert.equal(locate(t,blue).zone,'monster');assert.equal(locate(t,blue).item.zoneIndex,1);assert.equal(t.state.used.SPIRIT_TRIBUTE,true);
+   assert.equal(t.state.pendingTriggers.filter(p=>p.kind==='SALAMANGREAT_WOLF_FIRE'&&p.sourceUid===wolf).length,1);decline(t);assert.equal(t.state.pendingTriggers.length,0);
   }
   assert.equal(locate(t,wolf).item.zoneIndex,5);replay(t);
  });
@@ -326,7 +327,7 @@ const I={REBORN:83764718,CED:94192409,IMPERM:10045474,MECHABA:75286621,
   'Pinned technical CDB and dated TCG restriction snapshot do not independently authenticate new official rulings.',
   'Witnessed Spirit history comes from actual registered Link and tribute or battle actions; declared history remains unqualified.',
   'No registered opponent Link procedure or control-transfer action is added. Owner/controller differences are explicitly QA-only diagnostics, never an invented opponent-owned witnessed line.',
-  'Only registered summon profiles, physical response packets and bounded continuations are covered; unknown effects, general priority and Wolf Main-zone revival remain outside scope.',
+  'Only registered summon profiles, physical response packets and bounded continuations are covered; unknown effects, general priority and arbitrary simultaneous-trigger chains remain outside scope.',
   'Competitive scoring remains provisional; these diagnostic decks do not constitute tournament results.'
  ]};fs.writeFileSync(path.join(ROOT,'tests/spirit-revival-results.json'),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report,null,2));process.exitCode=report.pass?0:1;
 })().catch(error=>{console.error(error);process.exitCode=1;});

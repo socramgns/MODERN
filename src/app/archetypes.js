@@ -114,23 +114,21 @@ register({type:'MAUSOLEUM_SEND_NORMAL_MONSTER',ashable:true,enumerate:st=>{
  return{activationEvents,events:[{type:'SEND_TO_GY_BY_EFFECT',uid:a.selectionUid,from:origin,to:'gy',sourceUid:a.sourceUid},{type:'TEMPORARY_ATK_DEF_GAIN',uid:a.targetUid,amount:gain,untilTurn:st.turn}]};
 }});
 function spiritTributeTargetAllowed(st,target){
- if(!H.spiritSpecialAllowed(st,0,target))return false;
+ if(!H.spiritSpecialAllowed(st,0,target)||!H.wolfNameAllowed(st,0,target))return false;
  return st.locks.every(lock=>{
   const source=H.locate(st,lock.sourceUid),player=lock.appliesToPlayer??lock.player??source?.player??0;
   if(player!==0||lock.untilTurn!==undefined&&Number(lock.untilTurn)<st.turn)return true;
   if(!lock.wholeTurn&&lock.sourceUid&&(source?.zone!=='monster'||!face(source.item)||source.item.effectsNegated===true))return true;
   if(lock.kind==='WYRM_ONLY'&&race(target)!==0x800000)return false;
-  if(lock.kind==='SALAMANGREAT_WOLF_NAME_LOCK'&&Number(lock.cardId)===id(target))return false;
   // Fusion/Synchro-only locks govern Extra Deck summons, not hand/GY targets.
   return true;
  });
 }
 function spiritTributeDestinationSupported(st,sourceUid){
- if(typeof W.YGOBlueEyesDuel?.azureSummonDestinationSupported!=='function')return true;
  const occupied=new Set(own(st,'monster',x=>x.uid!==sourceUid).map(x=>x.zoneIndex)),destination=[0,1,2,3,4].find(zone=>!occupied.has(zone));
- // The arrival is automatic after the tribute. Exclude an unregistered Wolf
- // trigger arrangement instead of silently omitting its recovery opportunity.
- return destination!==undefined&&W.YGOBlueEyesDuel.azureSummonDestinationSupported(st,0,destination);
+ // This ordinary Blue-Eyes arrival may create a single registered optional
+ // Wolf opportunity. Its source has already left as the tribute cost.
+ return destination!==undefined&&(typeof W.YGOExpandedArchetypes?.wolfSummonDestinationSupported!=='function'||W.YGOExpandedArchetypes.wolfSummonDestinationSupported(st,0,destination,{departingUids:[sourceUid],mandatoryAzure:false}));
 }
 register({type:'SPIRIT_TRIBUTE_BLUE_EYES',fieldMonsterEffect:true,sourceLeavesFieldAsCost:true,enumerate:st=>{
  if(!idle(st)||H.isUsed(st,'SPIRIT_TRIBUTE')||W.YGOBlueEyesDuel?.azureFieldSupported&&!W.YGOBlueEyesDuel.azureFieldSupported(st))return[];const out=[];
@@ -151,5 +149,5 @@ register({type:'SYNCHRO_BLUE_EYES_SPIRIT_DRAGON',enumerate:st=>{
  for(const uid of a.materialUids)sent(st,uid,'gy');const x=H.move(st,a.sourceUid,'monster');x.summonType='SYNCHRO';x.properlySummoned=true;x.properSummonType='SYNCHRO';st.extraHistory.push('SYNCHRO');
  return{paid:a.materialUids.map(uid=>({kind:'SYNCHRO_MATERIAL',uid,to:'gy'})),events:[{type:'SYNCHRO_SUMMON',uid:x.uid,materials:a.materialUids},{type:'MAIN_PHASE_STOP',note:'White Stone of Ancients End Phase effect is not resolved in this Main Phase analysis.'}]};
 }});
-W.YGOArchetypeRules=Object.freeze({revision:'branded-blue-eyes-v1',cards:Object.freeze(I),archetypes:['Branded','Blue-Eyes'],scope:'Exact registered transitions in Main Phase 1, explicit opponent policy; no universal rule certification.',limitations:['Branded DARK materials are Normal Monsters or Fallen of Albaz; other material triggers are not inferred.','Discard costs use known safe cards; unrelated graveyard triggers are not silently resolved.','End Phase, combat and Pendulum material replacement are outside these handlers.','Mausoleum extra Normal Summon supports Sage, Ancients and Effect Veiler.','Spirit tribute supports only the reviewed Blue-Eyes White Dragon target and checks current summon restrictions before paying. In the complete HTML, unknown face-up continuous profiles and automatic arrivals into a live eligible Wolf pointed zone are excluded. It is a field effect whose source leaves as cost; prior applied negation and registered non-targeting activation responses preserve that distinction.']});
+W.YGOArchetypeRules=Object.freeze({revision:'branded-blue-eyes-v1',cards:Object.freeze(I),archetypes:['Branded','Blue-Eyes'],scope:'Exact registered transitions in Main Phase 1, explicit opponent policy; no universal rule certification.',limitations:['Branded DARK materials are Normal Monsters or Fallen of Albaz; other material triggers are not inferred.','Discard costs use known safe cards; unrelated graveyard triggers are not silently resolved.','End Phase, combat and Pendulum material replacement are outside these handlers.','Mausoleum extra Normal Summon supports Sage, Ancients and Effect Veiler.','Spirit tribute supports only the reviewed Blue-Eyes White Dragon target and checks current summon restrictions before paying. In the complete HTML, unknown face-up continuous profiles remain excluded. An automatic arrival can create a single registered optional Wolf recovery opportunity under the fixed left Extra Monster Zone per controller geometry; simultaneous trigger combinations without a registered packet remain excluded. It is a field effect whose source leaves as cost; prior applied negation and registered non-targeting activation responses preserve that distinction.']});
 })();

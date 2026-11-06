@@ -1,0 +1,300 @@
+{
+  "schema": "ygo-node-source-suite-evidence/v1",
+  "pass": true,
+  "buildId": "1da146dc7d27821a750f484b8c9d5177358425ae74b3656ad17154a72a1f71e2",
+  "htmlSha256": "e03038a2d7932ded30cfb93e0d5d79a3e3dbe26efdadefc1b02b445632933fda",
+  "artifactMode": "SOURCE_NODE_SUITE",
+  "testFile": "tests/wolf_revival.cjs",
+  "testFileSha256": "97c49facb1c5300c7a785ec31ee126ae230ca5c7fa9b6304408476779d478d51",
+  "meaning": "Focused local source cases before complete remote validation; absent local engines remain pending.",
+  "result": {
+    "schema": "ygo-wolf-revival-tests/v1",
+    "pass": true,
+    "total": 69,
+    "tests": [
+      {
+        "name": "Pinned CDB and secondary Lua reference distinguish arrival triggers, resolution selection and current Link eligibility",
+        "pass": true
+      },
+      {
+        "name": "Reborn exposes Wolf only as a reviewed Extra profile requiring registered proper Link history",
+        "pass": true
+      },
+      {
+        "name": "Actual Link and battle revive the same physical Wolf in Main 0 with unchanged proper history",
+        "pass": true
+      },
+      {
+        "name": "Actual Link and battle revive the same physical Wolf in Main 1 with unchanged proper history",
+        "pass": true
+      },
+      {
+        "name": "Actual Link and battle revive the same physical Wolf in Main 2 with unchanged proper history",
+        "pass": true
+      },
+      {
+        "name": "Actual Link and battle revive the same physical Wolf in Main 3 with unchanged proper history",
+        "pass": true
+      },
+      {
+        "name": "Actual Link and battle revive the same physical Wolf in Main 4 with unchanged proper history",
+        "pass": true
+      },
+      {
+        "name": "Declared player 0 GY Wolf without qualification cannot replace witnessed Link history",
+        "pass": true
+      },
+      {
+        "name": "Declared player 0 GY Wolf with forged qualification cannot replace witnessed Link history",
+        "pass": true
+      },
+      {
+        "name": "Declared player 1 GY Wolf without qualification cannot replace witnessed Link history",
+        "pass": true
+      },
+      {
+        "name": "Declared player 1 GY Wolf with forged qualification cannot replace witnessed Link history",
+        "pass": true
+      },
+      {
+        "name": "Actual battle of a declared field Wolf still cannot manufacture a registered Link qualification",
+        "pass": true
+      },
+      {
+        "name": "Wolf rejects Defense, facedown, EMZ, wrong UID and occupied revival destinations before spending Reborn",
+        "pass": true
+      },
+      {
+        "name": "QA-only complete fixed-left-EMZ geometry for controller 0 Wolf zone 0",
+        "pass": true
+      },
+      {
+        "name": "QA-only complete fixed-left-EMZ geometry for controller 0 Wolf zone 1",
+        "pass": true
+      },
+      {
+        "name": "QA-only complete fixed-left-EMZ geometry for controller 0 Wolf zone 2",
+        "pass": true
+      },
+      {
+        "name": "QA-only complete fixed-left-EMZ geometry for controller 0 Wolf zone 3",
+        "pass": true
+      },
+      {
+        "name": "QA-only complete fixed-left-EMZ geometry for controller 0 Wolf zone 4",
+        "pass": true
+      },
+      {
+        "name": "QA-only complete fixed-left-EMZ geometry for controller 0 Wolf zone 5",
+        "pass": true
+      },
+      {
+        "name": "QA-only complete fixed-left-EMZ geometry for controller 1 Wolf zone 0",
+        "pass": true
+      },
+      {
+        "name": "QA-only complete fixed-left-EMZ geometry for controller 1 Wolf zone 1",
+        "pass": true
+      },
+      {
+        "name": "QA-only complete fixed-left-EMZ geometry for controller 1 Wolf zone 2",
+        "pass": true
+      },
+      {
+        "name": "QA-only complete fixed-left-EMZ geometry for controller 1 Wolf zone 3",
+        "pass": true
+      },
+      {
+        "name": "QA-only complete fixed-left-EMZ geometry for controller 1 Wolf zone 4",
+        "pass": true
+      },
+      {
+        "name": "QA-only complete fixed-left-EMZ geometry for controller 1 Wolf zone 5",
+        "pass": true
+      },
+      {
+        "name": "Central observer recognizes player 0 actual Normal ATTACK and ignores setup and Normal Set",
+        "pass": true
+      },
+      {
+        "name": "Central observer recognizes player 0 actual Normal SET and ignores setup and Normal Set",
+        "pass": true
+      },
+      {
+        "name": "Central observer recognizes player 1 actual Normal ATTACK and ignores setup and Normal Set",
+        "pass": true
+      },
+      {
+        "name": "Central observer recognizes player 1 actual Normal SET and ignores setup and Normal Set",
+        "pass": true
+      },
+      {
+        "name": "Central observer recognizes actual player 0 Spark Special Summon once and FIRE resolves in its real phase",
+        "pass": true
+      },
+      {
+        "name": "Central observer recognizes actual player 1 Spark Special Summon once and FIRE resolves in its real phase",
+        "pass": true
+      },
+      {
+        "name": "Opponent Main 3 Normal arrival triggers controller 0 EMZ Wolf, with controller-local recovery",
+        "pass": true
+      },
+      {
+        "name": "Opponent Main 3 Normal arrival triggers controller 1 EMZ Wolf, with controller-local recovery",
+        "pass": true
+      },
+      {
+        "name": "Both controllers can use their independent Wolf FIRE HOPT on different actual arrival transitions in the same turn",
+        "pass": true
+      },
+      {
+        "name": "A revived Wolf in Main 1 observes the subsequent real Artemis EMZ Link only when its up arrow reaches it",
+        "pass": true
+      },
+      {
+        "name": "A revived Wolf in Main 0 observes the subsequent real Artemis EMZ Link only when its up arrow reaches it",
+        "pass": true
+      },
+      {
+        "name": "A revived Wolf in Main 2 observes the subsequent real Artemis EMZ Link only when its up arrow reaches it",
+        "pass": true
+      },
+      {
+        "name": "A revived Wolf in Main 4 observes the subsequent real Artemis EMZ Link only when its up arrow reaches it",
+        "pass": true
+      },
+      {
+        "name": "Repeated enumeration neither duplicates an observed Wolf trigger nor invents another after its explicit decline",
+        "pass": true
+      },
+      {
+        "name": "Actual battle destruction and Shthana revival remain in the Damage Step and never create Wolf FIRE recovery",
+        "pass": true
+      },
+      {
+        "name": "A real Aleister arrival requires an explicit SALAMANGREAT_WOLF_FIRE decline before the other trigger can resolve",
+        "pass": true
+      },
+      {
+        "name": "A real Aleister arrival requires an explicit ALEISTER_SEARCH decline before the other trigger can resolve",
+        "pass": true
+      },
+      {
+        "name": "A mandatory Azure arrival into a pointed zone remains excluded before its Spirit tribute cost while Spark is a supported choice",
+        "pass": true
+      },
+      {
+        "name": "QA-only two-controller simultaneous Wolf geometry rejects an unregistered joint packet before Artemis materials",
+        "pass": true
+      },
+      {
+        "name": "FIRE recovery selects a technically matched non-Salamangreat monster at resolution and emits no TARGET event",
+        "pass": true
+      },
+      {
+        "name": "Legacy targetUid recovery input is normalized to a non-targeting resolution selection",
+        "pass": true
+      },
+      {
+        "name": "A recovered FIRE Link returns to Extra and installs no same-name summon restriction",
+        "pass": true
+      },
+      {
+        "name": "FIRE recovery admits a technically matched FIRE monster outside every registered summon family",
+        "pass": true
+      },
+      {
+        "name": "QA-only a pending Wolf source which leaves or becomes facedown cannot activate an old arrival opportunity",
+        "pass": true
+      },
+      {
+        "name": "QA-only player 1 control with player 0 ownership uses player 1 HOPT, player 0 physical response costs and owner-directed departure",
+        "pass": true
+      },
+      {
+        "name": "A physical FIRE hand recovery blocks alias-family Normal Summon, Normal Set and Reborn before spending resources",
+        "pass": true
+      },
+      {
+        "name": "Actual CED Wolf departure preserves its installed hand-recovery name lock through End Phase and turn cleanup removes it",
+        "pass": true
+      },
+      {
+        "name": "A real MECHABA response consumes Wolf FIRE use and its physical response without inventing recovery or a name lock",
+        "pass": true
+      },
+      {
+        "name": "A real ROAR response consumes Wolf FIRE use and its physical response without inventing recovery or a name lock",
+        "pass": true
+      },
+      {
+        "name": "A real IMPERM response consumes Wolf FIRE use and its physical response without inventing recovery or a name lock",
+        "pass": true
+      },
+      {
+        "name": "A real VEILER response consumes Wolf FIRE use and its physical response without inventing recovery or a name lock",
+        "pass": true
+      },
+      {
+        "name": "Physical Impermanence negation leaves Wolf arrows and permits a later observed trigger which resolves negated and consumes USE",
+        "pass": true
+      },
+      {
+        "name": "An ordinary two-material Link using Wolf qualifies for ST recovery and Roar GY set without Sanctuary",
+        "pass": true
+      },
+      {
+        "name": "Ordinary Wolf-as-material Link also permits the actual optional Roar GY set packet",
+        "pass": true
+      },
+      {
+        "name": "A genuine Wolf-as-material Link can recover technically matched Salamangreat S/T 52155219 outside the old named allowlist",
+        "pass": true
+      },
+      {
+        "name": "A genuine Wolf-as-material Link can recover technically matched Salamangreat S/T 20788863 outside the old named allowlist",
+        "pass": true
+      },
+      {
+        "name": "A properly reincarnated Wolf loses current Link ST eligibility after actual battle and Reborn while preserving qualification",
+        "pass": true
+      },
+      {
+        "name": "FIRE HOPT persists across actual Wolf battle and revival and a different physical Wolf copy",
+        "pass": true
+      },
+      {
+        "name": "ST HOPT is USE even when a real Mechaba response negates activation and banishes the physical Wolf",
+        "pass": true
+      },
+      {
+        "name": "ST HOPT spans a third genuine Link copy and revival of the previous properly summoned Wolf after a real Veiler response",
+        "pass": true
+      },
+      {
+        "name": "A paid real Shaman prohibition excludes an Extra-summoned Wolf activation before payment with an explicit reason",
+        "pass": true
+      },
+      {
+        "name": "Unreviewed face-up continuous restrictions exclude Wolf GY recovery without spending the physical source, selection or use",
+        "pass": true
+      },
+      {
+        "name": "Fresh replay rejects forged Wolf qualification, geometry, recovery UID, response cost and reported name lock",
+        "pass": true
+      },
+      {
+        "name": "Closed bounded search finds a genuine Wolf Link battle revival continuation and every returned line freshly replays",
+        "pass": true
+      }
+    ],
+    "limitations": [
+      "Pinned CDB and ProjectIgnis Lua are secondary technical evidence, not a newly authenticated official ruling; Lua is never evaluated.",
+      "Only actual registered Link, battle and Reborn actions witness Wolf qualification. Declared initial fields are assumptions; QA-only mutations never establish a legal witness.",
+      "The fixed left Extra Monster Zone model and reviewed action registry are bounded. General SEGOC, control transfer, arbitrary response priority and unsupported continuous/GY restrictions are excluded.",
+      "Both-player Normal and Special arrivals use real registered actions. Opponent Spirit prior history in the Spark arrival fixture is a declared scenario assumption, not a registered opponent Synchro proof.",
+      "Search is bounded, uncertified and does not prove global optimality or competitive tournament performance."
+    ]
+  }
+}

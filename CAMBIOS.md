@@ -1,4 +1,25 @@
-# Cambios de la revisión 18
+# Cambios de la revisión 19
+
+La revisión 19 amplía Sunlight Wolf con historial Link ejecutado, salida al GY y Monster Reborn en una zona principal, únicamente en Ataque. La llegada actual es Especial desde GY y conserva UID, propietario y cualificación apropiada, pero no restaura la condición de una presencia actual invocada por Link usando Wolf.
+
+VALIDACION_R19_PENDIENTE
+
+Cuando un disparo de Wolf coincide con otra clase de disparo opcional, el subconjunto exige declinar explícitamente hasta conservar una sola clase antes de resolver; no permite representar una cadena simultánea mediante resoluciones independientes sucesivas. La selección de recuperación enumera cartas admitidas ya presentes en GY al activar y las vuelve a validar al resolver; no amplía automáticamente las opciones con cartas que entren en GY por costes de respuestas.
+
+- Registra la geometría declarada de Wolf y sus llegadas reales a zonas apuntadas para ambos controladores.
+- Amplía la recuperación FIRE y conserva selección no dirigida al resolver, destino físico y bloqueo sólo cuando la carta llega a mano.
+- Comprueba usos por nombre/controlador y restricciones de invocación antes de pagar; la resurrección no reinicia los presupuestos.
+- Distingue Link usando Wolf de su posterior resurrección y conserva las condiciones de la recuperación de Magia/Trampa y el disparo pertinente de Roar.
+- Añade wolf-reborn y mantiene los dieciocho ejemplos anteriores, el HTML único y la puntuación provisional.
+- Amplía únicamente el presupuesto de la etapa completa de pruebas en CI de 20 a 25 minutos; los comandos, puertas de navegador y límites de cada tarea permanecen iguales.
+
+Las seis familias siguen parciales. Cadenas generales, prioridad, SEGOC, elecciones simultáneas de varios disparos y Damage Step completo requieren modelos propios; los paquetes sin continuación registrada se excluyen explícitamente. Se mantienen los perfiles de campo y movimientos del GY revisados. Albaz al ser invocado conserva su ampliación pendiente y su exclusión pertinente de Reborn. La emulación móvil no acredita dispositivos físicos ni conformidad WCAG completa.
+
+La referencia fijada de [ProjectIgnis/CardScripts](https://raw.githubusercontent.com/ProjectIgnis/CardScripts/915c6ff63518a04e18d16ee45962d75a8c8be264/official/c87871125.lua) se conserva como datos en src/data/technical-references/wolf-c87871125.lua y wolf-reference.json: 3.224 bytes, SHA-256 da3a4b8edced408ae778dc6098fb8e2e37d83e86bc690e726514ee3674a1133f. Es una referencia técnica secundaria contrastada con el texto impreso del catálogo; no es una nueva autenticación de rulings oficiales y el analizador no ejecuta Lua.
+
+La revisión 18 conserva su aceptación remota de 69 grupos sobre el candidato 0807cd758ee30c3824330bcf59eb11f5d298df60 ([workflow](https://github.com/socramgns/MODERN/actions/runs/42152616194)). El commit final 89968d77be3cd4c7058c05b17e8fd9c103713269 conserva el [HTML publicado y descargado](https://github.com/socramgns/MODERN/raw/89968d77be3cd4c7058c05b17e8fd9c103713269/Analizador_YuGiOh.html?download=1), SHA-256 622328ee699c2a6407c5f20e724fe0f613bc6479858d4c2b4f222c86e8fdc9bb. Su informe local original mantiene pass: false, 67/69 grupos y Firefox/WebKit no disponibles. Esta evidencia pertenece a la revisión 18; la aceptación de los bytes nuevos se registra por separado.
+
+# Antecedente: cambios de la revisión 18
 
 La revisión `2026.11-stable.18` integra Spirit with Eyes of Blue con Monster Reborn después de una Invocación Link real y comprueba su restricción continua antes de las Invocaciones Especiales registradas. Conserva el HTML único sin comprimir y la puntuación provisional.
 

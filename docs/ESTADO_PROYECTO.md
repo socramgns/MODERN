@@ -1,36 +1,34 @@
-# Estado de la revisión 18
+# Estado de la revisión 19
 
-La aplicación se entrega como un único `Analizador_YuGiOh.html` sin comprimir. El original y las entregas anteriores se conservan. Cada ampliación cerrada genera una entrega HTML actualizada, como solicitó el usuario; la puntuación sigue estructural y provisional.
+La aplicación se entrega como un único Analizador_YuGiOh.html sin comprimir. Las revisiones anteriores y el original se conservan; cada ampliación cerrada genera un HTML actualizado.
 
-La aceptación de la revisión 18 se apoya en la ejecución remota del commit `0807cd758ee30c3824330bcf59eb11f5d298df60`: el [workflow de GitHub Actions](https://github.com/socramgns/MODERN/actions/runs/42152616194) completó con éxito las etapas obligatorias de instalación de los tres motores, compilación y comparación del HTML, batería de **69 grupos** y comprobación entre motores. El recuento corresponde al runner versionado y sus salidas obligatorias; los informes remotos individuales no se descargaron. Las fuentes incluyen **121 archivos JavaScript**. La ejecución local completa conserva su resultado **67/69 grupos aprobados**, con Firefox y WebKit no disponibles; su informe original permanece con `pass: false`, sin conciliación ni conversión a éxito. Build `7b027eadfd3aa793f479a4225b6a52e3e96471d9a11276ed8ad7754f6c9f16ab`; SHA-256 `622328ee699c2a6407c5f20e724fe0f613bc6479858d4c2b4f222c86e8fdc9bb`; tamaño **7,114,591 bytes**. La puntuación competitiva sigue provisional; no se acreditan todas las reglas, dispositivos físicos ni conformidad WCAG completa.
+VALIDACION_R19_PENDIENTE
 
-El tributo de Spirit comprueba también las restricciones vigentes de Wyrm y de nombre antes de pagar, y en el HTML completo excluye campos continuos no revisados. Su llegada automática a la zona apuntada por un Wolf activo con recuperación disponible queda fuera del subconjunto hasta registrar ese disparo; no se omite silenciosamente. Una negación de Veiler/Imperm ya resuelta sigue negando el efecto activado en campo aunque Spirit salga como coste; una nueva respuesta que lo apunte después del tributo no se ofrece. Mechaba y Roar conservan sus costes y la negación de activación sin retirar de nuevo una fuente ya tributada.
+Cuando un disparo de Wolf coincide con otra clase de disparo opcional, el subconjunto exige declinar explícitamente hasta conservar una sola clase antes de resolver; no permite representar una cadena simultánea mediante resoluciones independientes sucesivas. La selección de recuperación enumera cartas admitidas ya presentes en GY al activar y las vuelve a validar al resolver; no amplía automáticamente las opciones con cartas que entren en GY por costes de respuestas.
 
-| Área | Implementación de esta revisión | Alcance |
+| Área | Trabajo de esta revisión | Alcance |
 | --- | --- | --- |
-| Historial Link de Spirit | La Invocación Link ejecutada acredita la cualificación de la misma copia | Una preparación inicial o una bandera importada no sustituyen el procedimiento |
-| Monster Reborn | Spirit con historial válido vuelve desde GY a una zona principal en Ataque | UID, propietario e historial retenidos; llegada actual Especial desde GY bajo control del actor admitido |
-| Disparo y usos | La búsqueda de Mausoleum sólo corresponde a la llegada Link | Reborn no la repite ni reinicia el límite por nombre y turno del tributo |
-| Restricción continua | Sólo Dragones mientras Spirit propio esté boca arriba con efectos activos | Se comprueba antes del intento registrado; negación, controlador y salida cambian su vigencia |
-| Laboratorio | Dieciocho ejemplos, con `spirit-reborn` y los diecisiete anteriores | Cinco pasos previstos con Guard, Link, búsqueda, tributo y Reborn; objetivos, deshacer y replay |
-| Rutas conservadas | Azure, Spark, seis familias parciales y respuestas físicas | Cuatro Mágicas Normales, dos de Campo y dos Trampas Normales registradas; no prioridad general |
-| Datos e incertidumbre | 21.986 registros y análisis hipotético de un próximo robo | Propuestas e hipótesis explícitas; no migración global ni tasa de victoria |
-| Calibración | Importador preparado; puntuación provisional | Requiere resultados externos reales para validar métricas competitivas |
+| Historial de Wolf | Link ejecutado, GY y Monster Reborn | Misma copia y propietario; llegada actual Especial en Main, sólo Ataque |
+| Flechas | EMZ izquierda fija por controlador | Geometría declarada para EMZ, Main 1 y Main 3, incluidos destinos del rival |
+| Disparos | Llegadas reales Normales/Especiales | Ambos controladores, sin setup, Set o Damage Step ficticios |
+| Recuperación FIRE | Selección no dirigida al resolver | Perfiles técnicos admitidos; destino a mano o Extra y bloqueo sólo tras llegar a mano |
+| Límites | Uso por nombre y controlador | Normal/Set/Especiales comprobadas antes de costes, duración y replay |
+| Magia/Trampa | Condición de Link usando Wolf | La resurrección no recupera esa habilitación; receta de dos materiales revisada |
+| Laboratorio | Diecinueve ejemplos | wolf-reborn y los dieciocho anteriores; objetivos, deshacer e informes |
+| Datos | 21.986 registros | 98 identidades sin cotejo, 51 monstruos con estadísticas desconocidas y 32 propuestas sin aplicar automáticamente |
+| Puntuación | Importador preparado | Estructural y provisional hasta disponer de resultados reales |
 
-La aceptación local, remota, publicación y descarga son comprobaciones distintas ligadas al build y commit. Una cantidad prevista o un workflow configurado no acredita su aprobación. Las ausencias locales de Firefox/WebKit se conservan como tales; la validación remota tiene su propia evidencia. La emulación móvil no acredita hardware físico ni conformidad WCAG completa.
-
-## Antecedente verificado
-
-La revisión 17 conserva su [aceptación remota de 67 grupos](https://github.com/socramgns/MODERN/actions/runs/42084234037) sobre el candidato `b77b4ddd61885f8ed6e49df231ed305ad70d5b11`. El commit final `d964eb57322dce3a78339f6ae6541ed18323792e` conserva el [HTML publicado y descargado](https://github.com/socramgns/MODERN/raw/d964eb57322dce3a78339f6ae6541ed18323792e/Analizador_YuGiOh.html?download=1), SHA-256 `41c301b7ec88125cf6403756a69406873fbfebce9fc96d90ef4739af20633312`. La ejecución local de esa revisión permanece con `pass: false`, 65/67 grupos y Firefox/WebKit no disponibles. El workflow del candidato validó el mismo código, pruebas, configuración y HTML; el resultado de un commit posterior de documentación se observa por separado. Esa evidencia pertenece a revisión 17 y no sustituye la aceptación de los bytes nuevos.
+Las seis familias siguen parciales. Cadenas generales, prioridad, SEGOC, elecciones simultáneas de varios disparos y Damage Step completo requieren modelos propios; los paquetes sin continuación registrada se excluyen explícitamente. Se mantienen los perfiles de campo y movimientos del GY revisados. Albaz al ser invocado conserva su ampliación pendiente y su exclusión pertinente de Reborn. La emulación móvil no acredita dispositivos físicos ni conformidad WCAG completa.
 
 ## Trabajo posterior
 
-- Ampliar materiales, procedimientos, disparos y perfiles de salida revisados. Albaz y Sunlight Wolf conservan sus exclusiones pertinentes de Reborn; las seis familias siguen parciales.
-- Prioridad y cadenas generales, efectos simultáneos, Damage Step, Flip, ataques múltiples, Xyz y Pendulum.
-- Varios robos y eventos de azar con decisiones rivales, pesos y masa desconocida conservados.
-- Revisar 98 identidades sin cotejo técnico, 51 monstruos con estadísticas desconocidas y 32 propuestas sin aplicarlas automáticamente.
-- Completar disponibilidad, pools y reglas de otros formatos, Skills, desbloqueos, Legend e impresión/evento.
-- Ampliar rulings, dispositivos físicos y accesibilidad; renovar evidencia de cada entrega.
-- Incorporar resultados competitivos reales, separando ajuste y validación y manteniendo provisional la puntuación mientras falten.
+- Albaz al invocarse y más materiales, perfiles y consecuencias de las seis familias parciales.
+- Prioridad, cadenas y efectos simultáneos generales; Damage Step, Flip, ataques múltiples, Xyz y Péndulo.
+- Probabilidades de varios robos y eventos de azar con decisiones rivales, pesos y masa desconocida explícitos.
+- Revisión documentada de identidades, estadísticas, disponibilidad y reglas por formato.
+- Dispositivos físicos, accesibilidad y mantenimiento de la evidencia de cada entrega.
+- Resultados competitivos reales para separar ajuste y validación sin inventar datos de torneo.
 
-El análisis actual está en [ANALISIS_PENDIENTES_REVISION18.md](ANALISIS_PENDIENTES_REVISION18.md). Los análisis anteriores conservan su revisión y evidencia. No existe un porcentaje global fiable de todas las reglas del juego.
+La revisión 18 conserva su aceptación remota de 69 grupos sobre el candidato 0807cd758ee30c3824330bcf59eb11f5d298df60 ([workflow](https://github.com/socramgns/MODERN/actions/runs/42152616194)). El commit final 89968d77be3cd4c7058c05b17e8fd9c103713269 conserva el [HTML publicado y descargado](https://github.com/socramgns/MODERN/raw/89968d77be3cd4c7058c05b17e8fd9c103713269/Analizador_YuGiOh.html?download=1), SHA-256 622328ee699c2a6407c5f20e724fe0f613bc6479858d4c2b4f222c86e8fdc9bb. Su informe local original mantiene pass: false, 67/69 grupos y Firefox/WebKit no disponibles. Esta evidencia pertenece a la revisión 18; la aceptación de los bytes nuevos se registra por separado.
+
+Los criterios concretos están en [ANALISIS_PENDIENTES_REVISION19.md](ANALISIS_PENDIENTES_REVISION19.md). El avance se mide por capacidades y criterios de cierre; no existe un porcentaje fiable de todas las reglas del juego.

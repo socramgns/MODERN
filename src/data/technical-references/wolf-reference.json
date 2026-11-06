@@ -1,0 +1,18 @@
+{
+  "schema": "ygo-secondary-technical-reference/v1",
+  "cardId": 87871125,
+  "source": "ProjectIgnis/CardScripts",
+  "commit": "915c6ff63518a04e18d16ee45962d75a8c8be264",
+  "url": "https://raw.githubusercontent.com/ProjectIgnis/CardScripts/915c6ff63518a04e18d16ee45962d75a8c8be264/official/c87871125.lua",
+  "httpStatus": 200,
+  "sha256": "da3a4b8edced408ae778dc6098fb8e2e37d83e86bc690e726514ee3674a1133f",
+  "bytes": 3224,
+  "retrievedAt": "2026-11-06T22:20:34.384105+00:00",
+  "sourceRole": "SECONDARY_TECHNICAL_IMPLEMENTATION_REFERENCE",
+  "officialRulingAuthentication": false,
+  "executableInAnalyzer": false,
+  "notes": [
+    "Printed card text remains pinned in cards.json. This Lua file is reviewed reference data, never evaluated by the analyzer.",
+    "Resolution selection is non-targeting; same-name restriction applies only when the selected card reaches HAND; Link using same-name material is distinct from revival."
+  ]
+}

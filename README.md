@@ -1,45 +1,43 @@
-# Analizador de barajas Yu-Gi-Oh · revisión 18
+# Analizador de barajas Yu-Gi-Oh · revisión 19
 
-La entrega sigue siendo **un único `Analizador_YuGiOh.html` sin comprimir**, con catálogo y motores incorporados. La revisión `2026.11-stable.18` conecta una Invocación Link real de Spirit with Eyes of Blue con su tributo, resurrección mediante Monster Reborn y restricción continua de Invocaciones Especiales. El original y las entregas anteriores se conservan.
+La entrega sigue siendo **un único Analizador_YuGiOh.html sin comprimir**, con catálogo y motores incorporados. El original y las revisiones anteriores se conservan. Cada ampliación cerrada se entrega como otro HTML actualizado, como solicitó el usuario.
 
-[Descargar el HTML de esta rama: revisión 18](https://github.com/socramgns/MODERN/raw/refs/heads/entrega/analizador-yugioh-estable18/Analizador_YuGiOh.html?download=1)
+[Descargar el HTML de esta rama: revisión 19](https://github.com/socramgns/MODERN/raw/refs/heads/entrega/analizador-yugioh-estable19/Analizador_YuGiOh.html?download=1)
 
-La aceptación de la revisión 18 se apoya en la ejecución remota del commit `0807cd758ee30c3824330bcf59eb11f5d298df60`: el [workflow de GitHub Actions](https://github.com/socramgns/MODERN/actions/runs/42152616194) completó con éxito las etapas obligatorias de instalación de los tres motores, compilación y comparación del HTML, batería de **69 grupos** y comprobación entre motores. El recuento corresponde al runner versionado y sus salidas obligatorias; los informes remotos individuales no se descargaron. Las fuentes incluyen **121 archivos JavaScript**. La ejecución local completa conserva su resultado **67/69 grupos aprobados**, con Firefox y WebKit no disponibles; su informe original permanece con `pass: false`, sin conciliación ni conversión a éxito. Build `7b027eadfd3aa793f479a4225b6a52e3e96471d9a11276ed8ad7754f6c9f16ab`; SHA-256 `622328ee699c2a6407c5f20e724fe0f613bc6479858d4c2b4f222c86e8fdc9bb`; tamaño **7,114,591 bytes**. La puntuación competitiva sigue provisional; no se acreditan todas las reglas, dispositivos físicos ni conformidad WCAG completa.
+VALIDACION_R19_PENDIENTE
 
-El tributo de Spirit comprueba también las restricciones vigentes de Wyrm y de nombre antes de pagar, y en el HTML completo excluye campos continuos no revisados. Su llegada automática a la zona apuntada por un Wolf activo con recuperación disponible queda fuera del subconjunto hasta registrar ese disparo; no se omite silenciosamente. Una negación de Veiler/Imperm ya resuelta sigue negando el efecto activado en campo aunque Spirit salga como coste; una nueva respuesta que lo apunte después del tributo no se ofrece. Mechaba y Roar conservan sus costes y la negación de activación sin retirar de nuevo una fuente ya tributada.
+Cuando un disparo de Wolf coincide con otra clase de disparo opcional, el subconjunto exige declinar explícitamente hasta conservar una sola clase antes de resolver; no permite representar una cadena simultánea mediante resoluciones independientes sucesivas. La selección de recuperación enumera cartas admitidas ya presentes en GY al activar y las vuelve a validar al resolver; no amplía automáticamente las opciones con cartas que entren en GY por costes de respuestas.
 
-## Cómo usarlo
+La revisión 19 amplía Sunlight Wolf con historial Link ejecutado, salida al GY y Monster Reborn en una zona principal, únicamente en Ataque. La llegada actual es Especial desde GY y conserva UID, propietario y cualificación apropiada, pero no restaura la condición de una presencia actual invocada por Link usando Wolf.
 
-1. Guarda el archivo con extensión `.html` y ábrelo en un navegador reciente. Si el enlace muestra código, usa **Guardar como** y conserva `Analizador_YuGiOh.html`.
-2. Importa una baraja JSON o YDK en **Baraja y zonas por formato**, revisa sus incidencias y pulsa **CALCULAR**.
-3. En **Probar un ejemplo incluido**, elige `spirit-reborn` y pulsa **Cargar ejemplo en el laboratorio**. Sustituye la baraja actual y prepara una mano física; no declara una historia anterior de Invocación de Spirit.
-4. Invoca de modo Normal a Flamvell Guard. Úsalo para la Invocación Link registrada de Spirit with Eyes of Blue y resuelve su búsqueda de Mausoleum of White. Esa transición acredita el historial apropiado de la copia.
-5. Tributa Spirit para invocar Blue-Eyes White Dragon desde la mano. Después revive el mismo Spirit con Monster Reborn en una zona principal libre y en Ataque. La llegada actual es Especial desde GY, conserva el historial Link y no repite la búsqueda exclusiva de la Invocación Link.
-6. Observa que el tributo de Spirit sigue gastado ese turno. Mientras controles a Spirit boca arriba y con efectos activos, sólo se ofrecen las Invocaciones Especiales de Dragones admitidas; su salida o negación de efectos cambia esa restricción. Longyuan en la mano del ejemplo permite comparar la disponibilidad antes y después de esas llegadas.
-7. Revisa objetivos, ejecuta o deshaz pasos y exporta o reanuda el informe. Las decisiones y estados importados vuelven a verificarse desde el origen.
-8. Consulta **Acciones registradas de esta baraja**, **Calidad de los datos**, las copias revisadas de identidades y las continuaciones hipotéticas después de barajar. Una hipótesis de robo no se convierte en un robo observado ni en tasa de victoria.
+## Cómo probar la ampliación
 
-Se conservan los diecisiete ejemplos anteriores, incluidos `azure`, `synchro`, `reborn` y `shuffle`. Catálogo y cálculos están incorporados; imágenes y actualizaciones remotas necesitan conexión. JSON conserva contexto y Skills; YDK transporta Main, Extra y Side. La sesión pertenece al navegador y origen donde se abrió el archivo.
+1. Guarda el archivo con extensión .html y ábrelo en un navegador reciente. Si el enlace muestra código, usa Guardar como y conserva Analizador_YuGiOh.html.
+2. En Probar un ejemplo incluido, selecciona wolf-reborn y carga el escenario en el laboratorio. Sustituye la baraja actual y declara sus materiales iniciales.
+3. Sigue la guía para invocar Wolf por Link, enviarlo al GY por batalla y revivir la misma copia mediante Monster Reborn en la segunda zona principal.
+4. Invoca Aleister, declina su búsqueda opcional e invoca Artemis en EMZ. Resuelve después la recuperación FIRE de Wolf para añadir Ash a la mano.
+5. Comprueba objetivos, costes, bloqueo de nombre, deshacer y replay; exporta o reimporta el informe para volver a verificarlo desde su origen.
 
-## Qué incluye esta revisión
+Se conservan los dieciocho ejemplos anteriores, incluidos azure, spark, spirit-reborn y shuffle. También siguen disponibles edición, importación JSON/YDK, formatos, estadísticas, probabilidades, calidad de datos, revisión de identidades y exportación. Catálogo y cálculos están incorporados; las imágenes y actualizaciones remotas necesitan conexión.
 
-- Monster Reborn admite Spirit with Eyes of Blue (42097666) con historial Link apropiado obtenido por el procedimiento registrado. Una colocación inicial en GY o una bandera importada no sustituyen esa historia.
-- Spirit revivido conserva UID, propietario e historial; entra bajo control del actor admitido en una zona principal, en Ataque y como Invocación Especial desde GY. No crea otra búsqueda de Mausoleum ni reinicia el uso por nombre y turno de su tributo.
-- La restricción continua se comprueba antes del intento de Invocación Especial registrado, con el controlador actual, la presencia boca arriba y la negación de efectos. No basta quitar a Spirit como material para autorizar un intento prohibido. No se confunde esa restricción con una prohibición de Invocación Normal.
-- El ejemplo `spirit-reborn` conserva los diecisiete anteriores, los objetivos, deshacer y replay. Conserva Azure, Spark, Spirit Dragon, Mechaba/Roar, Impermanence, Compulsory, edición, cálculo, importación, exportación y búsqueda acotada.
+## Alcance de Sunlight Wolf
 
-La puntuación competitiva permanece **estructural y provisional**, por decisión del usuario. El importador de resultados reales está preparado. Albaz y Sunlight Wolf conservan sus exclusiones pertinentes de Reborn; las seis familias siguen parciales y esta ampliación no acredita todas las cartas, reglas o cadenas.
+El tablero declara una EMZ izquierda fija por controlador. Con índices principales 0–4 y EMZ 5, Wolf en EMZ apunta a Main 1 propio y Main 3 rival; Wolf en Main 1 apunta a EMZ propia, y en Main 3 a EMZ rival. Main 0, 2 y 4 no apuntan a una Zona de Monstruos. Estas coordenadas son del modelo registrado y no añaden una elección general de las dos EMZ ni Extra Link.
 
-## Evidencia y desarrollo
+El disparo se deriva de llegadas reales Normales, por Tributo o Especiales a una zona apuntada. No nace de un campo inicial, un Set ni una invocación durante Damage Step. Las flechas permanecen aunque Wolf tenga sus efectos negados. Negación aplicada y prohibición de activar por Shaman conservan tratamientos distintos. Los presupuestos de uso pertenecen al nombre y al controlador, y no se reinician al revivir o cambiar de copia.
 
-Los informes distinguen pruebas Node sobre fuentes, tareas sobre el HTML compilado y evidencia remota. Las ausencias de motores locales conservan sus resultados originales. La emulación móvil no acredita teléfonos físicos ni conformidad WCAG completa. Publicación, descarga HTTP y CI se verifican para el build y commit correspondientes.
+La recuperación FIRE es no dirigida y selecciona al resolver una carta técnica admitida del GY; no se limita a Salamangreat. Una carta del Extra puede volver al Extra, pero sólo la llegada efectiva a la mano instala el bloqueo de nombre. Ese bloqueo se comprueba antes de costes y materiales para Normal, Set y Especiales, dura el resto del turno y persiste aunque salga Wolf. La recuperación de Magia/Trampa requiere una presencia actual obtenida por Link con Wolf como material; la receta de dos materiales también puede satisfacerla. Las recuperaciones del GY no son búsquedas del Deck.
 
-La revisión 17 conserva su [aceptación remota de 67 grupos](https://github.com/socramgns/MODERN/actions/runs/42084234037) sobre el candidato `b77b4ddd61885f8ed6e49df231ed305ad70d5b11`. El commit final `d964eb57322dce3a78339f6ae6541ed18323792e` conserva el [HTML publicado y descargado](https://github.com/socramgns/MODERN/raw/d964eb57322dce3a78339f6ae6541ed18323792e/Analizador_YuGiOh.html?download=1), SHA-256 `41c301b7ec88125cf6403756a69406873fbfebce9fc96d90ef4739af20633312`. La ejecución local de esa revisión permanece con `pass: false`, 65/67 grupos y Firefox/WebKit no disponibles. El workflow del candidato validó el mismo código, pruebas, configuración y HTML; el resultado de un commit posterior de documentación se observa por separado. Esa evidencia pertenece a revisión 17 y no sustituye la aceptación de los bytes nuevos.
+Las seis familias siguen parciales. Cadenas generales, prioridad, SEGOC, elecciones simultáneas de varios disparos y Damage Step completo requieren modelos propios; los paquetes sin continuación registrada se excluyen explícitamente. Se mantienen los perfiles de campo y movimientos del GY revisados. Albaz al ser invocado conserva su ampliación pendiente y su exclusión pertinente de Reborn. La emulación móvil no acredita dispositivos físicos ni conformidad WCAG completa.
 
-- [Estado del proyecto](docs/ESTADO_PROYECTO.md)
-- [Análisis de pendientes](docs/ANALISIS_PENDIENTES_REVISION18.md)
-- [Alcance de reglas y búsquedas](docs/ALCANCE_COMBOS.md)
-- [Fuentes oficiales](docs/FUENTES_OFICIALES.md)
-- [Compilación, datos y pruebas](docs/DESARROLLO.md)
+La puntuación competitiva permanece estructural y provisional, por decisión del usuario. El importador de resultados reales está preparado; los fixtures técnicos no sustituyen resultados de torneos con formato, banlist, fecha y procedencia.
 
-El avance se mide por capacidades y criterios de aceptación; no se asigna un porcentaje global a todas las cartas y reglas del juego.
+## Fuentes y evidencia
+
+La referencia fijada de [ProjectIgnis/CardScripts](https://raw.githubusercontent.com/ProjectIgnis/CardScripts/915c6ff63518a04e18d16ee45962d75a8c8be264/official/c87871125.lua) se conserva como datos en src/data/technical-references/wolf-c87871125.lua y wolf-reference.json: 3.224 bytes, SHA-256 da3a4b8edced408ae778dc6098fb8e2e37d83e86bc690e726514ee3674a1133f. Es una referencia técnica secundaria contrastada con el texto impreso del catálogo; no es una nueva autenticación de rulings oficiales y el analizador no ejecuta Lua.
+
+La aceptación distingue pruebas Node sobre fuentes, tareas sobre el HTML compilado, ejecución remota, publicación y descarga HTTP. Los fallos locales originales se conservan; configurar un workflow o prever una cantidad de pruebas no acredita que hayan pasado. Fuentes, pruebas y HTML se ligan al commit y build correspondiente.
+
+La revisión 18 conserva su aceptación remota de 69 grupos sobre el candidato 0807cd758ee30c3824330bcf59eb11f5d298df60 ([workflow](https://github.com/socramgns/MODERN/actions/runs/42152616194)). El commit final 89968d77be3cd4c7058c05b17e8fd9c103713269 conserva el [HTML publicado y descargado](https://github.com/socramgns/MODERN/raw/89968d77be3cd4c7058c05b17e8fd9c103713269/Analizador_YuGiOh.html?download=1), SHA-256 622328ee699c2a6407c5f20e724fe0f613bc6479858d4c2b4f222c86e8fdc9bb. Su informe local original mantiene pass: false, 67/69 grupos y Firefox/WebKit no disponibles. Esta evidencia pertenece a la revisión 18; la aceptación de los bytes nuevos se registra por separado.
+
+Consulta [estado](docs/ESTADO_PROYECTO.md), [pendientes](docs/ANALISIS_PENDIENTES_REVISION19.md), [desarrollo](docs/DESARROLLO.md) y [alcance](docs/ALCANCE_COMBOS.md).

@@ -196,7 +196,23 @@ const spiritReborn=base('spirit-reborn','Spirit Link: tributar, revivir y conser
  'Activa Monster Reborn sobre la misma copia de Spirit, en Ataque y en tu zona principal 3. Su llegada actual es Especial desde el Cementerio, no otra Invocación Link. No genera una nueva búsqueda de Mausoleum ni reinicia el uso de su tributo; la restricción de sólo Dragones vuelve a aplicarse y Longyuan desaparece.',
  'El objetivo exige Spirit y Blue-Eyes en tu campo y Mausoleum en tu mano. Comprueba las cinco acciones, el tributo pagado, la Mágica enviada al Cementerio y el replay. El ejemplo no certifica ganar la partida ni registra todas las interacciones de Spirit.'
 ]);
-const templates=new Map([spark,spirit,invoked,swordsoul,branded,tenyi,salamangreat,roar,crow,droll,field,trap,evacuation,shuffle,reborn,synchro,azure,spiritReborn].map(value=>[value.id,value]));
+const wolfRebornDeck=deck([[83764718,1],[86120751,1],[26889158,1],[52277807,1],[14558127,1],[51339637,1]],[[87871125,1],[34755994,1]]),wolfRebornOpening=[83764718,86120751,...NORMALS.slice(0,3)],wolfRebornRivalDeck=deck([[89631139,1]],[]),wolfRebornRivalOpening=NORMALS.slice(0,5);
+const wolfReborn=base('wolf-reborn','Sunlight Wolf: Link, batalla y recuperación de FUEGO','Invoca a Wolf por Link, revive la misma copia y recupera Ash al invocar en la zona de Monstruos Extra a la que apunta.',physical(wolfRebornDeck,wolfRebornOpening),physical(wolfRebornRivalDeck,wolfRebornRivalOpening),{turn:2,activePlayer:0,phase:'MAIN 1',placements:[
+ {player:0,from:'deck',cardId:26889158,zone:'monster',zoneIndex:0,position:'ATTACK',faceUp:true,summonTurn:1},
+ {player:0,from:'deck',cardId:52277807,zone:'monster',zoneIndex:2,position:'ATTACK',faceUp:true,summonTurn:1},
+ {player:0,from:'deck',cardId:14558127,zone:'gy'},
+ {player:0,from:'deck',cardId:51339637,zone:'gy'},
+ {player:1,from:'deck',cardId:89631139,zone:'monster',zoneIndex:0,position:'ATTACK',faceUp:true,summonTurn:1}
+ ]},{requiredFieldIds:[87871125,34755994],requiredHandIds:[14558127],phase:'MAIN 2'},[
+ 'Gazelle en tu zona principal 1, Spinny en la 3, Ash Blossom y Roar en tu Cementerio y Blue-Eyes rival son supuestos iniciales declarados. Wolf y Artemis siguen en el Extra sin historial apropiado. Invoca por Link a Sunlight Wolf con Gazelle y Spinny: esta acción acredita su historial Link real.',
+ 'Pasa a Battle Phase y ataca al Blue-Eyes rival con Wolf. Sus 1800 ATK pierden frente a 3000: recibes 1200 de daño y la misma copia de Wolf va al Cementerio conservando su historial Link.',
+ 'Pasa a Main Phase 2 y activa Monster Reborn sobre ese Wolf, en Ataque y en tu zona principal 2. Su llegada actual es Especial desde el Cementerio. No es una nueva Invocación Link ni una reincarnación y no permite recuperar Roar.',
+ 'Desde esa zona principal 2, Wolf apunta a tu zona de Monstruos Extra. En este tablero se usa la zona de Monstruos Extra izquierda de cada controlador: desde allí Wolf apunta a su zona principal 2 y a la zona principal 4 rival; desde la principal 4 apunta a la zona de Monstruos Extra rival; desde las principales 1, 3 y 5 no apunta a una zona disponible.',
+ 'Invoca normalmente a Aleister en tu zona principal 1 y declina su búsqueda opcional. Invoca por Link a Artemis con ese Aleister en tu zona de Monstruos Extra. Esa llegada real a una zona apuntada abre la recuperación de FUEGO del Wolf revivido.',
+ 'Resuelve la recuperación de Wolf eligiendo Ash Blossom en tu Cementerio. No selecciona objetivo al activar: la carta se elige al resolver y puede ser cualquier monstruo FUEGO, aunque no sea Salamangreat. Ash vuelve a la mano y no puedes Invocar de Modo Normal, Colocar ni Invocar de Modo Especial monstruos con su nombre durante el resto de este turno.',
+ 'El objetivo exige Wolf y Artemis en tu campo y Ash en tu mano durante Main Phase 2. Comprueba las nueve acciones, los materiales físicos, la pérdida de 1200 LP, la Mágica en el Cementerio y el replay. Revivir no reinicia los límites por turno; devolver un Link al Extra mediante esta recuperación no aplicaría el bloqueo de nombre.'
+]);
+const templates=new Map([spark,spirit,invoked,swordsoul,branded,tenyi,salamangreat,roar,crow,droll,field,trap,evacuation,shuffle,reborn,synchro,azure,spiritReborn,wolfReborn].map(value=>[value.id,value]));
 const describe=value=>({id:value.id,name:value.name,description:value.description,scope:value.scope,steps:clone(value.tutorial.steps),replacesDeck:true,initialHistoryCertified:false,competitiveRecommendation:false});
 function list(){return[...templates.values()].map(describe);}
 function get(id){if(typeof id!=='string'||!templates.has(id))throw Error('SCENARIO_EXAMPLE_UNKNOWN');return clone(templates.get(id));}
@@ -216,5 +232,5 @@ async function load(id){const spec=get(id);if(loading)throw Error('SCENARIO_EXAM
  await A.initialize({goal:spec.goal});
  return{pass:true,status:'SCENARIO_EXAMPLE_LOADED',id,name:spec.name,message:'Ejemplo cargado. El campo inicial es un supuesto declarado; selecciona y ejecuta cada acción en el laboratorio.',steps:clone(spec.tutorial.steps),report:clone(A.report())};
  }finally{loading=false;}}
-W.YGOScenarioExamples=Object.freeze({version:'self-contained-physical-examples-v6',list,get,load,get isBusy(){return loading;}});
+W.YGOScenarioExamples=Object.freeze({version:'self-contained-physical-examples-v7',list,get,load,get isBusy(){return loading;}});
 })();

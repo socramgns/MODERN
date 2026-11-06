@@ -91,8 +91,8 @@ def run(url=None):
               and hashlib.sha256(response.body()).hexdigest() == digest
               and page.evaluate('()=>navigator.onLine===false&&YGO_BUILD_MANIFEST.buildId') == build['buildId'])
         expected_ids = ['spark', 'spirit', 'invoked', 'swordsoul', 'branded', 'tenyi', 'salamangreat',
-                        'roar', 'crow', 'droll', 'field', 'trap', 'evacuation', 'shuffle', 'reborn', 'synchro', 'azure', 'spirit-reborn']
-        check('eighteen_examples_preserve_all_seventeen_previous_identifiers',
+                        'roar', 'crow', 'droll', 'field', 'trap', 'evacuation', 'shuffle', 'reborn', 'synchro', 'azure', 'spirit-reborn', 'wolf-reborn']
+        check('nineteen_examples_preserve_all_eighteen_previous_identifiers',
               page.locator('#ygoExampleSelect').evaluate('(el)=>[...el.options].map(o=>o.value)') == expected_ids)
         capabilities = page.evaluate('()=>({core:YGOComboEngine.capabilities(),responses:YGOResponses.capabilities()})')
         check('reborn_is_the_fourth_registered_normal_spell_with_its_real_identity',

@@ -24,7 +24,8 @@ function material(s,x){
 function reviewedField(s){return s.zones.every(z=>arr(z.monster).every(x=>!face(x)||normal(x,12)||knownFieldMonsters.has(id(x)))&&arr(z.spelltrap).every(x=>!face(x)||knownFaceUpSpells.has(id(x))));}
 function liveLock(s,lock){if(lock.untilTurn!==undefined&&Number(lock.untilTurn)<s.turn)return false;const source=H.locate(s,lock.sourceUid),player=lock.appliesToPlayer??lock.player??source?.player??0;if(player!==0)return false;return lock.wholeTurn===true||!lock.sourceUid||source?.zone==='monster'&&face(source.item)&&source.item.effectsNegated!==true;}
 function allowed(s,azure){
- for(const lock of arr(s.locks).filter(l=>liveLock(s,l))){if(lock.kind==='FUSION_ONLY')return false;if(lock.kind==='WYRM_ONLY'&&Number(C(azure).race)!==0x800000)return false;if(lock.kind==='SALAMANGREAT_WOLF_NAME_LOCK'&&Number(lock.cardId)===id(azure))return false;}
+ if(!H.wolfNameAllowed(s,0,azure))return false;
+ for(const lock of arr(s.locks).filter(l=>liveLock(s,l))){if(lock.kind==='FUSION_ONLY')return false;if(lock.kind==='WYRM_ONLY'&&Number(C(azure).race)!==0x800000)return false;}
  return H.spiritSpecialAllowed(s,0,azure);
 }
 function destinations(s,uids){const occupied=new Set(own(s,'monster').filter(x=>!uids.includes(x.uid)).map(x=>x.zoneIndex));return[0,1,2,3,4].filter(zone=>!occupied.has(zone)&&W.YGOBlueEyesDuel.azureSummonDestinationSupported(s,0,zone));}
