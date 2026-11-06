@@ -93,8 +93,8 @@ def run(url=None):
               and hashlib.sha256(response.body()).hexdigest() == digest
               and page.evaluate('()=>navigator.onLine===false&&YGO_BUILD_MANIFEST.buildId') == build['buildId'])
         expected_ids = ['spark', 'spirit', 'invoked', 'swordsoul', 'branded', 'tenyi', 'salamangreat',
-                        'roar', 'crow', 'droll', 'field', 'trap', 'evacuation', 'shuffle', 'reborn', 'synchro', 'azure']
-        check('seventeen_visible_examples_preserve_all_sixteen_previous_identifiers',
+                        'roar', 'crow', 'droll', 'field', 'trap', 'evacuation', 'shuffle', 'reborn', 'synchro', 'azure', 'spirit-reborn']
+        check('eighteen_visible_examples_preserve_all_seventeen_previous_identifiers',
               page.locator('#ygoExampleSelect').evaluate('(el)=>[...el.options].map(o=>o.value)') == expected_ids)
         registry = page.evaluate('()=>YGOComboEngine.capabilities()')
         check('azure_adds_a_summon_without_widening_spell_or_trap_activation_registries',

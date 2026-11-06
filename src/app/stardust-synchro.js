@@ -42,12 +42,11 @@ function allowed(s,spark){
  for(const lock of arr(s.locks).filter(l=>liveLock(s,l))){
   if(lock.kind==='FUSION_ONLY')return false;
   if(lock.kind==='WYRM_ONLY'&&Number(C(spark).race)!==0x800000)return false;
-  if(lock.kind==='DRAGON_ONLY'&&Number(C(spark).race)!==8192)return false;
   if(lock.kind==='SALAMANGREAT_WOLF_NAME_LOCK'&&Number(lock.cardId)===id(spark))return false;
  }
- // SYNCHRO_ONLY permits this procedure. Spirit with Eyes of Blue can also
- // exist in a declared field before its live Dragon lock was installed.
- return !own(s,'monster').some(x=>face(x)&&id(x)===42097666&&!x.effectsNegated)||Number(C(spark).race)===8192;
+ // SYNCHRO_ONLY permits this procedure. Spirit's live restriction is shared
+ // with all other registered summons, including declared and revived copies.
+ return H.spiritSpecialAllowed(s,0,spark);
 }
 function destinations(s,uids){const occupied=new Set(own(s,'monster').filter(x=>!uids.includes(x.uid)).map(x=>x.zoneIndex));return[0,1,2,3,4].filter(zone=>!occupied.has(zone));}
 function open(s){return !s.duelEnded&&s.activePlayer===0&&['MAIN 1','MAIN 2'].includes(s.phase)&&!arr(s.pendingTriggers).length&&!arr(s.chain).length&&reviewedField(s);}

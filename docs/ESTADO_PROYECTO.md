@@ -1,30 +1,31 @@
-# Estado de la revisión 17
+# Estado de la revisión 18
 
 La aplicación se entrega como un único `Analizador_YuGiOh.html` sin comprimir. El original y las entregas anteriores se conservan. Cada ampliación cerrada genera una entrega HTML actualizada, como solicitó el usuario; la puntuación sigue estructural y provisional.
 
-La aceptación de la revisión 17 se apoya en la ejecución remota del commit `b77b4ddd61885f8ed6e49df231ed305ad70d5b11`: el [workflow de GitHub Actions](https://github.com/socramgns/MODERN/actions/runs/42084234037) completó con éxito las etapas obligatorias de instalación de los tres motores, compilación y comparación del HTML, batería de **67 grupos** y comprobación entre motores. El recuento corresponde al runner versionado y sus salidas obligatorias; los informes remotos individuales no se descargaron. Las fuentes incluyen **121 archivos JavaScript**. La ejecución local completa conserva su resultado **65/67 grupos aprobados**, con Firefox y WebKit no disponibles; su informe original permanece con `pass: false`, sin conciliación ni conversión a éxito. Build `44adab61fe289978ed72e0ab2a116f521387641584ecb77a4a9e097ecc194ae1`; SHA-256 `41c301b7ec88125cf6403756a69406873fbfebce9fc96d90ef4739af20633312`; tamaño **7,107,206 bytes**. La puntuación competitiva sigue provisional; no se acreditan todas las reglas, dispositivos físicos ni conformidad WCAG completa.
+VALIDACION_R18_PENDIENTE
+
+El tributo de Spirit comprueba también las restricciones vigentes de Wyrm y de nombre antes de pagar, y en el HTML completo excluye campos continuos no revisados. Su llegada automática a la zona apuntada por un Wolf activo con recuperación disponible queda fuera del subconjunto hasta registrar ese disparo; no se omite silenciosamente. Una negación de Veiler/Imperm ya resuelta sigue negando el efecto activado en campo aunque Spirit salga como coste; una nueva respuesta que lo apunte después del tributo no se ofrece. Mechaba y Roar conservan sus costes y la negación de activación sin retirar de nuevo una fuente ya tributada.
 
 | Área | Implementación de esta revisión | Alcance |
 | --- | --- | --- |
-| Synchro de Azure | Procedimiento registrado con un Tuner y uno o más no Tuner Normales, nivel total 9 | Materiales físicos admitidos, boca arriba, restricciones y espacio tras retirarlos; contexto DUEL explícito |
-| Historial apropiado | La transición ejecutada acredita la cualificación de la misma copia | Un campo inicial declarado o la invocación prestada por Spirit no sustituyen el procedimiento |
-| Protección obligatoria | Pendiente compartido por Spirit, Synchro y Reborn después de una Invocación Especial real | Dragones actuales al resolver, hasta fin del turno siguiente; no OPT inventado ni inmunidad a batalla |
-| Monster Reborn | Azure con historial válido puede revivir desde GY bajo el control del actor admitido | UID, propietario e historial conservados; llegada actual Especial desde GY y nueva protección pendiente |
-| Standby | Azure revive un Normal admitido en su Standby propia | Copia física, turno/fase, uso y respuestas registrados; futuras invocaciones no heredan el escudo anterior |
-| Laboratorio | Diecisiete ejemplos, con `azure` y los dieciséis anteriores | Inicio declarado y acciones posteriores ejecutadas, deshacer, objetivos y replay |
-| Rutas conservadas | Seis familias parciales, Spark y respuestas físicas | Cuatro Mágicas Normales, dos de Campo y dos Trampas Normales registradas; no prioridad general |
-| Datos e incertidumbre | 21.986 registros, copias revisadas y análisis hipotético de un próximo robo | Propuestas e hipótesis explícitas; no una migración global ni una tasa de victoria |
+| Historial Link de Spirit | La Invocación Link ejecutada acredita la cualificación de la misma copia | Una preparación inicial o una bandera importada no sustituyen el procedimiento |
+| Monster Reborn | Spirit con historial válido vuelve desde GY a una zona principal en Ataque | UID, propietario e historial retenidos; llegada actual Especial desde GY bajo control del actor admitido |
+| Disparo y usos | La búsqueda de Mausoleum sólo corresponde a la llegada Link | Reborn no la repite ni reinicia el límite por nombre y turno del tributo |
+| Restricción continua | Sólo Dragones mientras Spirit propio esté boca arriba con efectos activos | Se comprueba antes del intento registrado; negación, controlador y salida cambian su vigencia |
+| Laboratorio | Dieciocho ejemplos, con `spirit-reborn` y los diecisiete anteriores | Cinco pasos previstos con Guard, Link, búsqueda, tributo y Reborn; objetivos, deshacer y replay |
+| Rutas conservadas | Azure, Spark, seis familias parciales y respuestas físicas | Cuatro Mágicas Normales, dos de Campo y dos Trampas Normales registradas; no prioridad general |
+| Datos e incertidumbre | 21.986 registros y análisis hipotético de un próximo robo | Propuestas e hipótesis explícitas; no migración global ni tasa de victoria |
 | Calibración | Importador preparado; puntuación provisional | Requiere resultados externos reales para validar métricas competitivas |
 
-La aceptación local, remota, publicación y descarga son comprobaciones distintas ligadas al build y commit. Una cantidad prevista no acredita su aprobación. Las ausencias de Firefox/WebKit en el entorno local conservan sus informes originales cuando correspondan; la validación remota se registra con su propia evidencia. La emulación móvil no acredita hardware físico ni conformidad WCAG completa.
+La aceptación local, remota, publicación y descarga son comprobaciones distintas ligadas al build y commit. Una cantidad prevista o un workflow configurado no acredita su aprobación. Las ausencias locales de Firefox/WebKit se conservan como tales; la validación remota tiene su propia evidencia. La emulación móvil no acredita hardware físico ni conformidad WCAG completa.
 
 ## Antecedente verificado
 
-La revisión 16 conserva su [aceptación remota de 65 grupos](https://github.com/socramgns/MODERN/blob/309a8bdb983807d622c1ad5df8106a09688babf3/evidence/remote-acceptance.json) sobre el candidato `329f1ba15e960a949ceecc971005eee0fb622e03`, con 120 archivos JavaScript, 58 casos de Spark y 38 tareas de su interfaz. Su [workflow de aceptación](https://github.com/socramgns/MODERN/actions/runs/41889817768) y el [CI del commit final](https://github.com/socramgns/MODERN/actions/runs/41893149441) terminaron correctamente. El commit final `309a8bdb983807d622c1ad5df8106a09688babf3` conserva el [HTML descargado y verificado](https://github.com/socramgns/MODERN/raw/309a8bdb983807d622c1ad5df8106a09688babf3/Analizador_YuGiOh.html?download=1), SHA-256 `fab64088c402372a2cf8d3c8c997bdf13612c11701640bb8172694fcf00aa0cc`. Su informe local permanece con `pass: false`, 63/65 grupos y Firefox/WebKit no disponibles por el bloqueo de descarga. Esa evidencia pertenece a revisión 16; no sustituye la aceptación de los bytes nuevos.
+La revisión 17 conserva su [aceptación remota de 67 grupos](https://github.com/socramgns/MODERN/actions/runs/42084234037) sobre el candidato `b77b4ddd61885f8ed6e49df231ed305ad70d5b11`. El commit final `d964eb57322dce3a78339f6ae6541ed18323792e` conserva el [HTML publicado y descargado](https://github.com/socramgns/MODERN/raw/d964eb57322dce3a78339f6ae6541ed18323792e/Analizador_YuGiOh.html?download=1), SHA-256 `41c301b7ec88125cf6403756a69406873fbfebce9fc96d90ef4739af20633312`. La ejecución local de esa revisión permanece con `pass: false`, 65/67 grupos y Firefox/WebKit no disponibles. El workflow del candidato validó el mismo código, pruebas, configuración y HTML; el resultado de un commit posterior de documentación se observa por separado. Esa evidencia pertenece a revisión 17 y no sustituye la aceptación de los bytes nuevos.
 
 ## Trabajo posterior
 
-- Ampliar materiales, procedimientos, disparos y perfiles de salida revisados; las seis familias siguen parciales. Albaz, Sunlight Wolf y Spirit Link conservan sus exclusiones pertinentes de Reborn.
+- Ampliar materiales, procedimientos, disparos y perfiles de salida revisados. Albaz y Sunlight Wolf conservan sus exclusiones pertinentes de Reborn; las seis familias siguen parciales.
 - Prioridad y cadenas generales, efectos simultáneos, Damage Step, Flip, ataques múltiples, Xyz y Pendulum.
 - Varios robos y eventos de azar con decisiones rivales, pesos y masa desconocida conservados.
 - Revisar 98 identidades sin cotejo técnico, 51 monstruos con estadísticas desconocidas y 32 propuestas sin aplicarlas automáticamente.
@@ -32,4 +33,4 @@ La revisión 16 conserva su [aceptación remota de 65 grupos](https://github.com
 - Ampliar rulings, dispositivos físicos y accesibilidad; renovar evidencia de cada entrega.
 - Incorporar resultados competitivos reales, separando ajuste y validación y manteniendo provisional la puntuación mientras falten.
 
-El análisis actual está en [ANALISIS_PENDIENTES_REVISION17.md](ANALISIS_PENDIENTES_REVISION17.md). Los análisis anteriores conservan su revisión y evidencia. No existe un porcentaje global fiable de todas las reglas del juego.
+El análisis actual está en [ANALISIS_PENDIENTES_REVISION18.md](ANALISIS_PENDIENTES_REVISION18.md). Los análisis anteriores conservan su revisión y evidencia. No existe un porcentaje global fiable de todas las reglas del juego.

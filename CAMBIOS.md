@@ -1,4 +1,23 @@
-# Cambios de la revisión 17
+# Cambios de la revisión 18
+
+La revisión `2026.11-stable.18` integra Spirit with Eyes of Blue con Monster Reborn después de una Invocación Link real y comprueba su restricción continua antes de las Invocaciones Especiales registradas. Conserva el HTML único sin comprimir y la puntuación provisional.
+
+VALIDACION_R18_PENDIENTE
+
+El tributo de Spirit comprueba también las restricciones vigentes de Wyrm y de nombre antes de pagar, y en el HTML completo excluye campos continuos no revisados. Su llegada automática a la zona apuntada por un Wolf activo con recuperación disponible queda fuera del subconjunto hasta registrar ese disparo; no se omite silenciosamente. Una negación de Veiler/Imperm ya resuelta sigue negando el efecto activado en campo aunque Spirit salga como coste; una nueva respuesta que lo apunte después del tributo no se ofrece. Mechaba y Roar conservan sus costes y la negación de activación sin retirar de nuevo una fuente ya tributada.
+
+- Admite Spirit (42097666) con cualificación Link auténtica como objetivo de Monster Reborn, en una zona principal libre y sólo en Ataque. Conserva UID, propietario e historial y registra su origen actual GY.
+- No vuelve a crear el disparo de búsqueda exclusivo de la Invocación Link ni reinicia el límite por nombre y turno del tributo de Spirit.
+- Aplica la restricción continua con la presencia viva: controlador actual, cara arriba y efectos activos. Una copia negada o fuera del campo no mantiene un bloqueo por un registro antiguo; la restauración pertinente de sus efectos vuelve a someter las jugadas a la restricción.
+- Comprueba el intento registrado antes de pagar costes o retirar materiales; usar al propio Spirit como material no permite eludir su prohibición. No restringe por inferencia las Invocaciones Normales.
+- Añade `spirit-reborn`: Guard Normal → Link Spirit → búsqueda de Mausoleum → tributo para Blue-Eyes desde mano → Reborn del mismo Spirit. El ejemplo conserva los diecisiete anteriores y permite observar el límite de tributo gastado y la disponibilidad de Longyuan.
+- Conserva el paquete de Reborn, respuestas físicas, costes, historia, búsqueda acotada y replay. Albaz y Wolf mantienen sus exclusiones pertinentes; no se añade prioridad general ni una geometría Link de Wolf revivido.
+
+Las pruebas de fuentes y del HTML compilado deben comprobar reglas, ruta, deshacer, búsqueda y reimportación sin sustituir funciones del motor. La aceptación local, remota, publicación y descarga quedan ligadas a sus propios bytes y commit; las cantidades previstas no acreditan aprobación.
+
+La revisión 17 conserva su [aceptación remota de 67 grupos](https://github.com/socramgns/MODERN/actions/runs/42084234037) sobre el candidato `b77b4ddd61885f8ed6e49df231ed305ad70d5b11`. El commit final `d964eb57322dce3a78339f6ae6541ed18323792e` conserva el [HTML publicado y descargado](https://github.com/socramgns/MODERN/raw/d964eb57322dce3a78339f6ae6541ed18323792e/Analizador_YuGiOh.html?download=1), SHA-256 `41c301b7ec88125cf6403756a69406873fbfebce9fc96d90ef4739af20633312`. La ejecución local de esa revisión permanece con `pass: false`, 65/67 grupos y Firefox/WebKit no disponibles. El workflow del candidato validó el mismo código, pruebas, configuración y HTML; el resultado de un commit posterior de documentación se observa por separado. Esa evidencia pertenece a revisión 17 y no sustituye la aceptación de los bytes nuevos.
+
+# Antecedente: cambios de la revisión 17
 
 La revisión `2026.11-stable.17` añade la Synchro registrada de Azure-Eyes Silver Dragon y conecta su historia real con Monster Reborn, protección obligatoria y resurrección en Standby. Conserva la entrega de un único HTML sin comprimir y la puntuación provisional.
 

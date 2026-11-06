@@ -16,10 +16,9 @@ const inMonster=(st,uid)=>{const hit=H.locate(st,uid);return hit?.player===0&&hi
 const knownGY=new Set([I.SAGE,I.ANCIENTS,I.ALBAZ,I.BF,I.MAUSOLEUM,I.ALEISTER,I.INVOCATION,I.VEILER]);
 const safeDiscard=x=>normal(x)||knownGY.has(id(x));
 const safeLinkMaterial=x=>normal(x)||[I.SAGE,I.ANCIENTS,I.VEILER,I.ALBAZ,I.ALEISTER].includes(id(x));
-function isExtraAllowed(st,kind,target){return st.locks.every(lock=>{
+function isExtraAllowed(st,kind,target){return H.spiritSpecialAllowed(st,0,target)&&st.locks.every(lock=>{
  if(lock.kind==='FUSION_ONLY')return kind==='FUSION';
  if(lock.kind==='SYNCHRO_ONLY'&&H.locate(st,lock.sourceUid)?.zone==='monster')return kind==='SYNCHRO';
- if(lock.kind==='DRAGON_ONLY'&&H.locate(st,lock.sourceUid)?.zone==='monster')return race(target)===8192;
  return true;
 });}
 function sent(st,uid,zone,extra={}){const x=H.move(st,uid,zone,extra);if(zone==='gy')x.sentToGyTurn=st.turn;return x;}
@@ -77,7 +76,7 @@ register({type:'LINK_SPIRIT_WITH_EYES_OF_BLUE',enumerate:st=>{
  if(!idle(st)||own(st,'monster',x=>x.zoneIndex===5).length)return[];
  return own(st,'extra',x=>id(x)===I.SPIRIT&&isExtraAllowed(st,'LINK',x)).flatMap(target=>own(st,'monster',x=>face(x)&&safeLinkMaterial(x)&&[2,8192].includes(race(x))&&level(x)>=1&&level(x)<=4).map(x=>({type:'LINK_SPIRIT_WITH_EYES_OF_BLUE',sourceUid:target.uid,materialUids:[x.uid]})));
 },apply:(st,a)=>{
- for(const uid of a.materialUids)sent(st,uid,'gy');const x=H.move(st,a.sourceUid,'monster',{zoneIndex:5});x.summonType='LINK';x.properlySummoned=true;x.properSummonType='LINK';st.extraHistory.push('LINK');st.locks.push({kind:'DRAGON_ONLY',sourceUid:x.uid});H.queueTrigger(st,'SPIRIT_MAUSOLEUM',x.uid);
+ for(const uid of a.materialUids)sent(st,uid,'gy');const x=H.move(st,a.sourceUid,'monster',{zoneIndex:5});x.summonType='LINK';x.properlySummoned=true;x.properSummonType='LINK';st.extraHistory.push('LINK');H.queueTrigger(st,'SPIRIT_MAUSOLEUM',x.uid);
  return{paid:a.materialUids.map(uid=>({kind:'LINK_MATERIAL',uid,to:'gy'})),events:[{type:'LINK_SUMMON',uid:x.uid,materials:a.materialUids}]};
 }});
 register({type:'SPIRIT_SEARCH_MAUSOLEUM',ashable:true,enumerate:st=>!H.isUsed(st,'SPIRIT_MAUSOLEUM')?pending(st,'SPIRIT_MAUSOLEUM').flatMap(t=>own(st,'deck',x=>id(x)===I.MAUSOLEUM).map(x=>({type:'SPIRIT_SEARCH_MAUSOLEUM',sourceUid:t.sourceUid,selectionUid:x.uid}))):[],apply:(st,a)=>{
@@ -114,11 +113,31 @@ register({type:'MAUSOLEUM_SEND_NORMAL_MONSTER',ashable:true,enumerate:st=>{
  target.temporaryModifiers=[...arr(target.temporaryModifiers),{kind:'ATK_DEF_GAIN',amount:gain,untilTurn:st.turn,sourceUid:a.sourceUid}];
  return{activationEvents,events:[{type:'SEND_TO_GY_BY_EFFECT',uid:a.selectionUid,from:origin,to:'gy',sourceUid:a.sourceUid},{type:'TEMPORARY_ATK_DEF_GAIN',uid:a.targetUid,amount:gain,untilTurn:st.turn}]};
 }});
-register({type:'SPIRIT_TRIBUTE_BLUE_EYES',enumerate:st=>{
- if(!idle(st)||H.isUsed(st,'SPIRIT_TRIBUTE'))return[];const out=[];
+function spiritTributeTargetAllowed(st,target){
+ if(!H.spiritSpecialAllowed(st,0,target))return false;
+ return st.locks.every(lock=>{
+  const source=H.locate(st,lock.sourceUid),player=lock.appliesToPlayer??lock.player??source?.player??0;
+  if(player!==0||lock.untilTurn!==undefined&&Number(lock.untilTurn)<st.turn)return true;
+  if(!lock.wholeTurn&&lock.sourceUid&&(source?.zone!=='monster'||!face(source.item)||source.item.effectsNegated===true))return true;
+  if(lock.kind==='WYRM_ONLY'&&race(target)!==0x800000)return false;
+  if(lock.kind==='SALAMANGREAT_WOLF_NAME_LOCK'&&Number(lock.cardId)===id(target))return false;
+  // Fusion/Synchro-only locks govern Extra Deck summons, not hand/GY targets.
+  return true;
+ });
+}
+function spiritTributeDestinationSupported(st,sourceUid){
+ if(typeof W.YGOBlueEyesDuel?.azureSummonDestinationSupported!=='function')return true;
+ const occupied=new Set(own(st,'monster',x=>x.uid!==sourceUid).map(x=>x.zoneIndex)),destination=[0,1,2,3,4].find(zone=>!occupied.has(zone));
+ // The arrival is automatic after the tribute. Exclude an unregistered Wolf
+ // trigger arrangement instead of silently omitting its recovery opportunity.
+ return destination!==undefined&&W.YGOBlueEyesDuel.azureSummonDestinationSupported(st,0,destination);
+}
+register({type:'SPIRIT_TRIBUTE_BLUE_EYES',fieldMonsterEffect:true,sourceLeavesFieldAsCost:true,enumerate:st=>{
+ if(!idle(st)||H.isUsed(st,'SPIRIT_TRIBUTE')||W.YGOBlueEyesDuel?.azureFieldSupported&&!W.YGOBlueEyesDuel.azureFieldSupported(st))return[];const out=[];
  for(const spirit of own(st,'monster',x=>face(x)&&id(x)===I.SPIRIT)){
   if(!H.mainRoom(st)&&spirit.zoneIndex===5)continue;
-  for(const target of ['hand','gy'].flatMap(z=>own(st,z,x=>id(x)===I.BEWD)))out.push({type:'SPIRIT_TRIBUTE_BLUE_EYES',sourceUid:spirit.uid,summonUid:target.uid});
+  if(!spiritTributeDestinationSupported(st,spirit.uid))continue;
+  for(const target of ['hand','gy'].flatMap(z=>own(st,z,x=>id(x)===I.BEWD&&spiritTributeTargetAllowed(st,x))))out.push({type:'SPIRIT_TRIBUTE_BLUE_EYES',sourceUid:spirit.uid,summonUid:target.uid});
  }
  return out;
 },apply:(st,a)=>{
@@ -132,5 +151,5 @@ register({type:'SYNCHRO_BLUE_EYES_SPIRIT_DRAGON',enumerate:st=>{
  for(const uid of a.materialUids)sent(st,uid,'gy');const x=H.move(st,a.sourceUid,'monster');x.summonType='SYNCHRO';x.properlySummoned=true;x.properSummonType='SYNCHRO';st.extraHistory.push('SYNCHRO');
  return{paid:a.materialUids.map(uid=>({kind:'SYNCHRO_MATERIAL',uid,to:'gy'})),events:[{type:'SYNCHRO_SUMMON',uid:x.uid,materials:a.materialUids},{type:'MAIN_PHASE_STOP',note:'White Stone of Ancients End Phase effect is not resolved in this Main Phase analysis.'}]};
 }});
-W.YGOArchetypeRules=Object.freeze({revision:'branded-blue-eyes-v1',cards:Object.freeze(I),archetypes:['Branded','Blue-Eyes'],scope:'Exact registered transitions in Main Phase 1, explicit opponent policy; no universal rule certification.',limitations:['Branded DARK materials are Normal Monsters or Fallen of Albaz; other material triggers are not inferred.','Discard costs use known safe cards; unrelated graveyard triggers are not silently resolved.','End Phase, combat and Pendulum material replacement are outside these handlers.','Mausoleum extra Normal Summon supports Sage, Ancients and Effect Veiler.']});
+W.YGOArchetypeRules=Object.freeze({revision:'branded-blue-eyes-v1',cards:Object.freeze(I),archetypes:['Branded','Blue-Eyes'],scope:'Exact registered transitions in Main Phase 1, explicit opponent policy; no universal rule certification.',limitations:['Branded DARK materials are Normal Monsters or Fallen of Albaz; other material triggers are not inferred.','Discard costs use known safe cards; unrelated graveyard triggers are not silently resolved.','End Phase, combat and Pendulum material replacement are outside these handlers.','Mausoleum extra Normal Summon supports Sage, Ancients and Effect Veiler.','Spirit tribute supports only the reviewed Blue-Eyes White Dragon target and checks current summon restrictions before paying. In the complete HTML, unknown face-up continuous profiles and automatic arrivals into a live eligible Wolf pointed zone are excluded. It is a field effect whose source leaves as cost; prior applied negation and registered non-targeting activation responses preserve that distinction.']});
 })();
