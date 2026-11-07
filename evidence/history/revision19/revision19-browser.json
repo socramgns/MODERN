@@ -1,0 +1,177 @@
+{
+  "schema": "ygo-release19-browser/v1",
+  "pass": true,
+  "buildId": "1da146dc7d27821a750f484b8c9d5177358425ae74b3656ad17154a72a1f71e2",
+  "htmlSha256": "e03038a2d7932ded30cfb93e0d5d79a3e3dbe26efdadefc1b02b445632933fda",
+  "artifactMode": "DELIVERED_BYTES",
+  "sourceInjection": false,
+  "checks": [
+    {
+      "name": "release19_runs_the_manifest_bound_document_without_network",
+      "pass": true
+    },
+    {
+      "name": "nineteen_visible_examples_preserve_all_eighteen_previous_identifiers",
+      "pass": true
+    },
+    {
+      "name": "wolf_revival_preserves_the_existing_registered_spell_and_trap_packets",
+      "pass": true
+    },
+    {
+      "name": "the_example_loads_declared_materials_and_graveyards_without_autoplay",
+      "pass": true
+    },
+    {
+      "name": "the_visible_guide_declares_setup_indices_fixed_geometry_and_non_targeting_selection",
+      "pass": true
+    },
+    {
+      "name": "the_initial_extra_copy_has_no_invented_link_qualification_or_reborn_target",
+      "pass": true
+    },
+    {
+      "name": "the_rendered_link_choice_names_both_physical_materials_and_the_extra_zone",
+      "pass": true
+    },
+    {
+      "name": "the_genuine_link_procedure_certifies_the_same_wolf_and_sends_both_materials",
+      "pass": true
+    },
+    {
+      "name": "the_extra_wolf_board_displays_both_real_pointed_zones",
+      "pass": true
+    },
+    {
+      "name": "the_actual_battle_destroys_wolf_and_charges_1200_lp_without_losing_link_history",
+      "pass": true
+    },
+    {
+      "name": "the_witnessed_wolf_is_revivable_only_in_attack_in_main_monster_zones",
+      "pass": true
+    },
+    {
+      "name": "the_intermediate_download_binds_real_materials_battle_history_and_build",
+      "pass": true
+    },
+    {
+      "name": "the_visible_revive_choice_names_own_graveyard_attack_and_main_zone_two",
+      "pass": true
+    },
+    {
+      "name": "the_revived_wolf_retains_identity_owner_and_proper_link_history_with_current_gy_origin",
+      "pass": true
+    },
+    {
+      "name": "revival_creates_no_reincarnation_spell_trap_recovery_or_fire_trigger",
+      "pass": true
+    },
+    {
+      "name": "the_main_zone_wolf_board_shows_its_extra_zone_arrow_and_reborn_cleanup",
+      "pass": true
+    },
+    {
+      "name": "a_real_normal_summon_outside_the_arrow_does_not_open_wolfs_fire_window",
+      "pass": true
+    },
+    {
+      "name": "declining_aleisters_optional_search_does_not_invent_a_deck_card_or_wolf_trigger",
+      "pass": true
+    },
+    {
+      "name": "the_actual_artemis_link_into_the_pointed_extra_zone_opens_one_wolf_window",
+      "pass": true
+    },
+    {
+      "name": "the_non_targeting_resolution_choices_include_non_salamangreat_ash_and_exclude_roar",
+      "pass": true
+    },
+    {
+      "name": "the_visible_recovery_label_describes_a_choice_at_resolution_without_targeting",
+      "pass": true
+    },
+    {
+      "name": "fire_recovery_moves_the_same_ash_to_hand_and_consumes_the_wolf_hard_once_per_turn",
+      "pass": true
+    },
+    {
+      "name": "hand_recovery_records_the_same_name_summon_lock_for_the_rest_of_this_turn",
+      "pass": true
+    },
+    {
+      "name": "the_advertised_goal_is_achieved_only_after_nine_real_actions_with_a_fresh_replay",
+      "pass": true
+    },
+    {
+      "name": "an_independent_read_only_replay_reexecutes_the_exportable_nine_action_line",
+      "pass": true
+    },
+    {
+      "name": "the_final_download_preserves_physical_identity_goal_lock_and_replay",
+      "pass": true
+    },
+    {
+      "name": "undo_restores_the_real_arrival_window_ash_in_grave_and_unspent_recovery",
+      "pass": true
+    },
+    {
+      "name": "import_rebuilds_the_eight_action_summon_window_instead_of_trusting_a_saved_summary",
+      "pass": true
+    },
+    {
+      "name": "import_replays_nine_actions_and_restores_the_consumed_use_name_lock_and_goal",
+      "pass": true
+    },
+    {
+      "name": "an_altered_material_is_rejected_without_replacing_the_active_route",
+      "pass": true
+    },
+    {
+      "name": "an_altered_qualification_is_rejected_without_replacing_the_active_route",
+      "pass": true
+    },
+    {
+      "name": "an_altered_revival_origin_is_rejected_without_replacing_the_active_route",
+      "pass": true
+    },
+    {
+      "name": "an_altered_resolution_choice_is_rejected_without_replacing_the_active_route",
+      "pass": true
+    },
+    {
+      "name": "the_wolf_guide_and_board_remain_readable_at_mobile_width_without_mutating_state",
+      "pass": true
+    },
+    {
+      "name": "release19_raises_no_javascript_page_errors",
+      "pass": true
+    },
+    {
+      "name": "release19_leaves_the_compiled_artifact_unchanged",
+      "pass": true
+    }
+  ],
+  "details": {
+    "the_wolf_guide_and_board_remain_readable_at_mobile_width_without_mutating_state": {
+      "left": 16,
+      "right": 374,
+      "selectHeight": 44,
+      "buttonHeight": 44,
+      "width": 390
+    },
+    "release19_raises_no_javascript_page_errors": []
+  },
+  "browser": {
+    "engine": "chromium",
+    "version": "154.0.8037.57"
+  },
+  "externalRequestsBlocked": 18,
+  "limitations": [
+    "The initial Gazelle, Spinny, Ash, Roar and rival Blue-Eyes are declared assumptions. Wolf proper Link history is created by the executed route.",
+    "The same physical Wolf is destroyed by a real battle, revived from the GY and observes an actual Artemis arrival in its pointed Extra Monster Zone.",
+    "The fixed left Extra Monster Zone per controller geometry and non-targeting recovery choice are displayed. Other board topologies and arbitrary chain priority are not certified.",
+    "Hand recovery and its name lock are witnessed; broader name-lock and returning-Link alternatives are covered by the source-model tests.",
+    "Mobile width is emulated; competitive scoring remains provisional."
+  ],
+  "elapsedSeconds": 39.52
+}

@@ -1,0 +1,184 @@
+{
+  "schema": "ygo-release16-browser/v1",
+  "pass": true,
+  "buildId": "1da146dc7d27821a750f484b8c9d5177358425ae74b3656ad17154a72a1f71e2",
+  "htmlSha256": "e03038a2d7932ded30cfb93e0d5d79a3e3dbe26efdadefc1b02b445632933fda",
+  "artifactMode": "DELIVERED_BYTES",
+  "sourceInjection": false,
+  "checks": [
+    {
+      "name": "release16_runs_the_manifest_bound_document_without_network",
+      "pass": true
+    },
+    {
+      "name": "nineteen_visible_examples_preserve_all_eighteen_previous_identifiers",
+      "pass": true
+    },
+    {
+      "name": "spark_adds_a_summon_without_widening_spell_or_trap_activation_registries",
+      "pass": true
+    },
+    {
+      "name": "the_example_starts_with_declared_materials_and_no_autoplay",
+      "pass": true
+    },
+    {
+      "name": "the_extra_copy_has_no_claim_of_a_previous_proper_summon",
+      "pass": true
+    },
+    {
+      "name": "monster_reborn_does_not_offer_an_unwitnessed_extra_copy",
+      "pass": true
+    },
+    {
+      "name": "the_normal_tuner_is_summoned_from_the_hand_and_spends_the_normal_summon",
+      "pass": true
+    },
+    {
+      "name": "the_visible_synchro_choice_names_both_materials_position_and_destination",
+      "pass": true
+    },
+    {
+      "name": "a_successful_synchro_creates_the_actual_proper_history",
+      "pass": true
+    },
+    {
+      "name": "the_two_real_material_copies_are_sent_to_their_graveyard",
+      "pass": true
+    },
+    {
+      "name": "the_summon_records_no_card_activation_or_response_and_no_extra_normal_summon",
+      "pass": true
+    },
+    {
+      "name": "the_main_two_goal_does_not_claim_success_for_an_earlier_synchro",
+      "pass": true
+    },
+    {
+      "name": "the_first_real_battle_destroys_spark_and_pays_five_hundred_life_points",
+      "pass": true
+    },
+    {
+      "name": "the_physical_graveyard_copy_retains_its_witnessed_synchro_qualification",
+      "pass": true
+    },
+    {
+      "name": "the_goal_is_still_false_when_main_two_starts_without_spark",
+      "pass": true
+    },
+    {
+      "name": "monster_reborn_revives_the_same_copy_as_special_and_keeps_only_its_prior_qualification",
+      "pass": true
+    },
+    {
+      "name": "the_spell_goes_to_graveyard_without_repaying_materials_or_adding_an_extra_summon",
+      "pass": true
+    },
+    {
+      "name": "the_revived_spark_satisfies_the_visible_main_two_goal",
+      "pass": true
+    },
+    {
+      "name": "the_turn_boundary_creates_no_undeclared_protection_or_free_draw",
+      "pass": true
+    },
+    {
+      "name": "the_rival_draw_uses_the_next_known_physical_copy",
+      "pass": true
+    },
+    {
+      "name": "the_protection_is_activated_on_the_rival_turn_after_the_actual_draw",
+      "pass": true
+    },
+    {
+      "name": "the_once_per_turn_protection_budget_is_spent_without_preventing_battle_damage",
+      "pass": true
+    },
+    {
+      "name": "the_downloaded_protection_report_binds_build_materials_history_and_turn",
+      "pass": true
+    },
+    {
+      "name": "the_registered_phase_path_keeps_the_current_turn_protection_available",
+      "pass": true
+    },
+    {
+      "name": "the_first_rival_attack_spends_one_shield_but_still_deals_damage",
+      "pass": true
+    },
+    {
+      "name": "the_second_physical_attacker_destroys_spark_without_another_free_charge",
+      "pass": true
+    },
+    {
+      "name": "the_entire_fifteen_action_route_replays_without_global_or_competitive_certification",
+      "pass": true
+    },
+    {
+      "name": "the_final_download_preserves_the_two_distinct_attackers_and_qualified_graveyard_copy",
+      "pass": true
+    },
+    {
+      "name": "undoing_the_second_attack_restores_the_spent_shield_and_correct_damage",
+      "pass": true
+    },
+    {
+      "name": "undoing_the_first_attack_restores_the_one_available_charge",
+      "pass": true
+    },
+    {
+      "name": "importing_the_saved_protection_reconstructs_its_history_and_single_charge",
+      "pass": true
+    },
+    {
+      "name": "importing_the_final_route_replays_all_fifteen_actions",
+      "pass": true
+    },
+    {
+      "name": "an_altered_materials_is_rejected_without_replacing_the_active_route",
+      "pass": true
+    },
+    {
+      "name": "an_altered_history_is_rejected_without_replacing_the_active_route",
+      "pass": true
+    },
+    {
+      "name": "an_altered_payment_is_rejected_without_replacing_the_active_route",
+      "pass": true
+    },
+    {
+      "name": "the_synchro_route_remains_readable_at_mobile_width_without_changing_state",
+      "pass": true
+    },
+    {
+      "name": "release16_raises_no_javascript_page_errors",
+      "pass": true
+    },
+    {
+      "name": "release16_leaves_the_compiled_artifact_unchanged",
+      "pass": true
+    }
+  ],
+  "details": {
+    "the_synchro_route_remains_readable_at_mobile_width_without_changing_state": {
+      "left": 16,
+      "right": 374,
+      "selectHeight": 44,
+      "buttonHeight": 44,
+      "width": 390
+    },
+    "release16_raises_no_javascript_page_errors": []
+  },
+  "browser": {
+    "engine": "chromium",
+    "version": "154.0.8037.57"
+  },
+  "externalRequestsBlocked": 16,
+  "limitations": [
+    "The initial Dark Magician and rival fields are declared, while the Spark Synchro, materials, graveyard departure and revival are executed and replayed.",
+    "The protection is activated after the rival turn draw; no previous-turn shield is carried across a turn boundary.",
+    "These tasks cover the registered physical route, not arbitrary Synchro procedures, priority or all card effects.",
+    "Mobile width is emulated; competitive scoring remains provisional."
+  ],
+  "elapsedSeconds": 70.68
+}

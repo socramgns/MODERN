@@ -1,8 +1,8 @@
 {
   "schema": "ygo-release19-browser/v1",
   "pass": true,
-  "buildId": "1da146dc7d27821a750f484b8c9d5177358425ae74b3656ad17154a72a1f71e2",
-  "htmlSha256": "e03038a2d7932ded30cfb93e0d5d79a3e3dbe26efdadefc1b02b445632933fda",
+  "buildId": "e4dc45b2fdd677c73e6933fe380f5ff036c105d59accc26016656b55fcb30102",
+  "htmlSha256": "1bcd4ee98c2d8b694c7fd31b8c948fd4387ae94c0a944171f9dc1385aa8d9ac0",
   "artifactMode": "DELIVERED_BYTES",
   "sourceInjection": false,
   "checks": [
@@ -11,7 +11,7 @@
       "pass": true
     },
     {
-      "name": "nineteen_visible_examples_preserve_all_eighteen_previous_identifiers",
+      "name": "twenty_visible_examples_preserve_all_nineteen_previous_identifiers",
       "pass": true
     },
     {
@@ -173,5 +173,5 @@
     "Hand recovery and its name lock are witnessed; broader name-lock and returning-Link alternatives are covered by the source-model tests.",
     "Mobile width is emulated; competitive scoring remains provisional."
   ],
-  "elapsedSeconds": 39.52
+  "elapsedSeconds": 38.43
 }

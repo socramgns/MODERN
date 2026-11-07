@@ -2,7 +2,7 @@
 
 La revisión 20 registra el disparo opcional de Fallen of Albaz después de una llegada real por Invocación Normal o Monster Reborn bajo el control del actor 0. El descarte se paga al activar. La Fusión usa la misma copia de Albaz y un único monstruo rival boca arriba de perfil admitido; conserva propietarios, destinos, restricciones y reproducción desde el origen.
 
-VALIDACION_R20_PENDIENTE
+La aceptación de la revisión 20 se apoya en la ejecución remota del commit `6718b425b90f5db988593ab61a976c9a98626fd1`: el [workflow de GitHub Actions](https://github.com/socramgns/MODERN/actions/runs/42337909290) completó con éxito las etapas obligatorias de instalación de los tres motores, compilación y comparación del HTML, batería de **73 grupos** y comprobación entre motores. El recuento corresponde al runner versionado y sus salidas obligatorias; los informes remotos individuales no se descargaron. Las fuentes incluyen **122 archivos JavaScript**. La ejecución local completa conserva su resultado **71/73 grupos aprobados**, con Firefox y WebKit no disponibles; su informe original permanece con `pass: false`, sin conciliación ni conversión a éxito. Build `e4dc45b2fdd677c73e6933fe380f5ff036c105d59accc26016656b55fcb30102`; SHA-256 `1bcd4ee98c2d8b694c7fd31b8c948fd4387ae94c0a944171f9dc1385aa8d9ac0`; tamaño **7,150,325 bytes**. La puntuación competitiva sigue provisional; no se acreditan todas las reglas, dispositivos físicos ni conformidad WCAG completa.
 
 - Registra ALBAZ_FUSION, la llegada real, el descarte como coste y el uso por nombre.
 - Admite Albaz como objetivo de Reborn cuando está instalado su observador y conserva origen/propietario.

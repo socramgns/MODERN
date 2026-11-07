@@ -1,0 +1,257 @@
+{
+  "schema": "ygo-node-source-suite-evidence/v1",
+  "pass": true,
+  "buildId": "1da146dc7d27821a750f484b8c9d5177358425ae74b3656ad17154a72a1f71e2",
+  "htmlSha256": "e03038a2d7932ded30cfb93e0d5d79a3e3dbe26efdadefc1b02b445632933fda",
+  "artifactMode": "SOURCE_NODE_SUITE",
+  "executionEnvironment": "LOCAL_NODE_SOURCE_TESTS",
+  "testFile": "tests/stardust_synchro.cjs",
+  "testFileSha256": "932592562791a68c006ac1676638243d8c0f2fe76fc1b4477d23f17dd138988d",
+  "result": {
+    "schema": "ygo-stardust-synchro-tests/v1",
+    "pass": true,
+    "total": 58,
+    "tests": [
+      {
+        "name": "Spark exposes a bounded, non-chain Synchro procedure without adding a Spell activation or certification",
+        "pass": true
+      },
+      {
+        "name": "Real Normal Summon and Spark Synchro in Main 0 ATTACK",
+        "pass": true
+      },
+      {
+        "name": "Real Normal Summon and Spark Synchro in Main 0 DEFENSE",
+        "pass": true
+      },
+      {
+        "name": "Real Normal Summon and Spark Synchro in Main 1 ATTACK",
+        "pass": true
+      },
+      {
+        "name": "Real Normal Summon and Spark Synchro in Main 1 DEFENSE",
+        "pass": true
+      },
+      {
+        "name": "Real Normal Summon and Spark Synchro in Main 2 ATTACK",
+        "pass": true
+      },
+      {
+        "name": "Real Normal Summon and Spark Synchro in Main 2 DEFENSE",
+        "pass": true
+      },
+      {
+        "name": "Real Normal Summon and Spark Synchro in Main 3 ATTACK",
+        "pass": true
+      },
+      {
+        "name": "Real Normal Summon and Spark Synchro in Main 3 DEFENSE",
+        "pass": true
+      },
+      {
+        "name": "Real Normal Summon and Spark Synchro in Main 4 ATTACK",
+        "pass": true
+      },
+      {
+        "name": "Real Normal Summon and Spark Synchro in Main 4 DEFENSE",
+        "pass": true
+      },
+      {
+        "name": "Complete witnessed Spark route revives and prevents exactly one later battle destruction without preventing damage",
+        "pass": true
+      },
+      {
+        "name": "A resolved shield survives source departure and revived Spark receives a new field-instance activation budget",
+        "pass": true
+      },
+      {
+        "name": "Declared proper flags and direct Extra-to-GY placement never substitute for the real Spark Synchro",
+        "pass": true
+      },
+      {
+        "name": "Spirit-borrowed Spark has no proper Synchro history and cannot be revived after actual battle departure",
+        "pass": true
+      },
+      {
+        "name": "Main Phase 2 supports the same procedure without requiring an Extra Monster Zone or Link arrows",
+        "pass": true
+      },
+      {
+        "name": "Full five Main zones are checked after physical materials leave, not before",
+        "pass": true
+      },
+      {
+        "name": "One Tuner plus four non-Tuners can consume all five zones for an exact total of eight",
+        "pass": true
+      },
+      {
+        "name": "A full Spell/Trap row does not require an activation column for the Synchro procedure",
+        "pass": true
+      },
+      {
+        "name": "Duplicate material UID, an invented UID, and source outside Extra are rejected atomically",
+        "pass": true
+      },
+      {
+        "name": "A material in hand, GY or the rival field cannot be injected into the procedure",
+        "pass": true
+      },
+      {
+        "name": "The material subset rejects no Tuner",
+        "pass": true
+      },
+      {
+        "name": "The material subset rejects two Tuners",
+        "pass": true
+      },
+      {
+        "name": "The material subset rejects wrong total",
+        "pass": true
+      },
+      {
+        "name": "The material subset rejects face-down material",
+        "pass": true
+      },
+      {
+        "name": "The material subset rejects unknown effect material",
+        "pass": true
+      },
+      {
+        "name": "The material subset rejects Pendulum material",
+        "pass": true
+      },
+      {
+        "name": "The material subset rejects Xyz material",
+        "pass": true
+      },
+      {
+        "name": "The material subset rejects Link material",
+        "pass": true
+      },
+      {
+        "name": "QA-only state with level override cannot silently supply a legal material",
+        "pass": true
+      },
+      {
+        "name": "QA-only state with level modifier cannot silently supply a legal material",
+        "pass": true
+      },
+      {
+        "name": "QA-only state with unreviewed attachment cannot silently supply a legal material",
+        "pass": true
+      },
+      {
+        "name": "QA-only state with material restriction cannot silently supply a legal material",
+        "pass": true
+      },
+      {
+        "name": "QA-only state with unknown redirect cannot silently supply a legal material",
+        "pass": true
+      },
+      {
+        "name": "Printed levels cannot be spoofed by altering the physical card snapshot",
+        "pass": true
+      },
+      {
+        "name": "The procedure stays unavailable during opponent Main",
+        "pass": true
+      },
+      {
+        "name": "The procedure stays unavailable during Battle",
+        "pass": true
+      },
+      {
+        "name": "The procedure stays unavailable during Standby",
+        "pass": true
+      },
+      {
+        "name": "The procedure stays unavailable during End",
+        "pass": true
+      },
+      {
+        "name": "A pending registered optional effect must be resolved or declined before the procedure",
+        "pass": true
+      },
+      {
+        "name": "An opponent-owned Normal revived by a real Reborn is sent to its owner GY as a physical Synchro material",
+        "pass": true
+      },
+      {
+        "name": "A rival-owned 20001443 is excluded when its GY material trigger would require an unregistered owner actor",
+        "pass": true
+      },
+      {
+        "name": "A rival-owned 93490856 is excluded when its GY material trigger would require an unregistered owner actor",
+        "pass": true
+      },
+      {
+        "name": "Real Mo Ye Token is consumed once, ceases physically, and leaves the registered Mo Ye draw pending",
+        "pass": true
+      },
+      {
+        "name": "A forged Token ledger cannot create a material outside a real generated Token record",
+        "pass": true
+      },
+      {
+        "name": "Longyuan material invokes its existing real GY burn without turning Spark into a monster-effect activation",
+        "pass": true
+      },
+      {
+        "name": "Ancients sent as a real material retains the existing optional End Phase opportunity",
+        "pass": true
+      },
+      {
+        "name": "Real Spinny revival redirects a Synchro material to banishment and records its actual destination",
+        "pass": true
+      },
+      {
+        "name": "A live EMZ Wolf keeps its pending opportunity when Spark is Synchro Summoned into its reviewed arrow",
+        "pass": true
+      },
+      {
+        "name": "A real Branded Fusion resolution locks out the subsequent Spark Extra Deck procedure",
+        "pass": true
+      },
+      {
+        "name": "A real Ashuna restriction blocks Dragon Spark even though its levels and Tuner recipe remain valid",
+        "pass": true
+      },
+      {
+        "name": "Live Dragon-only Spirit and the opposing Spirit Dragon one-at-a-time limit both allow a single Dragon Synchro",
+        "pass": true
+      },
+      {
+        "name": "The procedure offers no Ash, Spirit GY, Mechaba or Roar activation-response packet despite real available sources and costs",
+        "pass": true
+      },
+      {
+        "name": "An actual Spark Synchro remains under the paid Shaman restriction on effects of monsters summoned from Extra",
+        "pass": true
+      },
+      {
+        "name": "An actual proper Spark revived from GY can protect under Shaman while the real discard and lock remain paid",
+        "pass": true
+      },
+      {
+        "name": "Fresh replay rejects a forged revival origin instead of treating the printed Extra type as summoning evidence",
+        "pass": true
+      },
+      {
+        "name": "Fresh replay rejects forged Synchro materials, paid destinations and final proper history",
+        "pass": true
+      },
+      {
+        "name": "A real CED return clears Spark qualification in the hidden Extra and a new procedure creates it anew",
+        "pass": true
+      }
+    ],
+    "limitations": [
+      "Fixtures use the pinned technical catalogue and dated TCG application snapshot, not independently authenticated universal rulings.",
+      "Initial Main Deck fields are declared physical assumptions; Spark proper history is established by executed procedures and fresh replay.",
+      "QA-only altered states test rejection and are not certified game lines.",
+      "Only registered material profiles, responses, Main Zone destinations and timing are tested; general summon negation, priority and all simultaneous triggers remain outside scope.",
+      "Competitive scoring remains provisional by user request."
+    ]
+  },
+  "meaning": "Passed local Node source cases from the preserved complete local run; remote whole-release acceptance is recorded separately through mandatory CI gates. These are not downloaded remote result files."
+}

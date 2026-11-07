@@ -189,7 +189,7 @@
     "engine": "chromium",
     "version": "154.0.8037.57"
   },
-  "externalRequestsBlocked": 107,
+  "externalRequestsBlocked": 90,
   "limitations": [
     "Rival Mechaba, Dark Magician and the prior set Infinite Impermanence are declared setup assumptions, with physical hand response costs.",
     "The main guide executes Normal Summon, a non-targeting Fusion with a rival material and revival of the same Albaz without resetting its spent use.",
@@ -197,5 +197,5 @@
     "Physical Mechaba, Veiler and prior-set Impermanence branches and explicit optional decline are exercised; arbitrary priority and SEGOC are outside scope.",
     "Mobile width is emulated; competitive scoring remains provisional."
   ],
-  "elapsedSeconds": 58.34
+  "elapsedSeconds": 57.99
 }

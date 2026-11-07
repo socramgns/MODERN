@@ -1,0 +1,225 @@
+{
+  "schema": "ygo-node-source-suite-evidence/v1",
+  "pass": true,
+  "buildId": "1da146dc7d27821a750f484b8c9d5177358425ae74b3656ad17154a72a1f71e2",
+  "htmlSha256": "e03038a2d7932ded30cfb93e0d5d79a3e3dbe26efdadefc1b02b445632933fda",
+  "artifactMode": "SOURCE_NODE_SUITE",
+  "executionEnvironment": "LOCAL_NODE_SOURCE_TESTS",
+  "testFile": "tests/spirit_revival.cjs",
+  "testFileSha256": "4a71707f55be3792d06734eabac9160b12ee22f18d6db6f8224d93e2cca2ac11",
+  "result": {
+    "schema": "ygo-spirit-revival-tests/v1",
+    "pass": true,
+    "total": 50,
+    "tests": [
+      {
+        "name": "Pinned Spirit text distinguishes a continuous Dragon-only restriction and a Link-only search",
+        "pass": true
+      },
+      {
+        "name": "Reborn admits Spirit only as a reviewed properly Link Summoned Extra profile",
+        "pass": true
+      },
+      {
+        "name": "A witnessed Link and paid tribute revive the same Spirit into Main 0 in Attack",
+        "pass": true
+      },
+      {
+        "name": "A witnessed Link and paid tribute revive the same Spirit into Main 1 in Attack",
+        "pass": true
+      },
+      {
+        "name": "A witnessed Link and paid tribute revive the same Spirit into Main 2 in Attack",
+        "pass": true
+      },
+      {
+        "name": "A witnessed Link and paid tribute revive the same Spirit into Main 3 in Attack",
+        "pass": true
+      },
+      {
+        "name": "A witnessed Link and paid tribute revive the same Spirit into Main 4 in Attack",
+        "pass": true
+      },
+      {
+        "name": "Real battle departure retains Spirit Link qualification and takes actual damage before revival",
+        "pass": true
+      },
+      {
+        "name": "Declared GY Spirit owner 0 with absent history cannot become a legal witnessed revival",
+        "pass": true
+      },
+      {
+        "name": "Declared GY Spirit owner 0 with forged history cannot become a legal witnessed revival",
+        "pass": true
+      },
+      {
+        "name": "Declared GY Spirit owner 1 with absent history cannot become a legal witnessed revival",
+        "pass": true
+      },
+      {
+        "name": "Declared GY Spirit owner 1 with forged history cannot become a legal witnessed revival",
+        "pass": true
+      },
+      {
+        "name": "A declared starting Spirit sent to GY by actual tribute still has no witnessed Link qualification",
+        "pass": true
+      },
+      {
+        "name": "Spirit cannot be revived in Defense, facedown, an EMZ, with a wrong UID or over an occupied destination",
+        "pass": true
+      },
+      {
+        "name": "No reviewed Spirit Special Summon OPT is invented by its genuine Link or later GY revival",
+        "pass": true
+      },
+      {
+        "name": "A revived Spirit from battle can pay its unused tribute for a physical Blue-Eyes in GY",
+        "pass": true
+      },
+      {
+        "name": "Roar activation negation still pays the revived Spirit tribute and consumes its HOPT without moving Blue-Eyes",
+        "pass": true
+      },
+      {
+        "name": "Mechaba answers Reborn with a real hand Spell cost and never creates a revived Spirit or its restriction",
+        "pass": true
+      },
+      {
+        "name": "The live restriction starts on a witnessed Link, leaves on paid tribute and returns immediately on Reborn",
+        "pass": true
+      },
+      {
+        "name": "A declared live Spirit imposes its continuous restriction without any dynamically installed lock",
+        "pass": true
+      },
+      {
+        "name": "Opponent-controlled Spirit restricts its controller and does not forbid the actor non-Dragon revival",
+        "pass": true
+      },
+      {
+        "name": "A live Spirit never forbids Normal Summoning a non-Dragon Spellcaster",
+        "pass": true
+      },
+      {
+        "name": "The active Spirit excludes Artemis Link before payment; removing Spirit restores a genuine choice",
+        "pass": true
+      },
+      {
+        "name": "The active Spirit excludes Invoked Mechaba Fusion before payment; removing Spirit restores a genuine choice",
+        "pass": true
+      },
+      {
+        "name": "The active Spirit excludes Longyuan hand Special Summon before payment; removing Spirit restores a genuine choice",
+        "pass": true
+      },
+      {
+        "name": "The active Spirit excludes Ashuna Deck Special Summon before payment; removing Spirit restores a genuine choice",
+        "pass": true
+      },
+      {
+        "name": "The active Spirit excludes Spinny GY Special Summon before payment; removing Spirit restores a genuine choice",
+        "pass": true
+      },
+      {
+        "name": "The active Spirit excludes Balelynx Link before payment; removing Spirit restores a genuine choice",
+        "pass": true
+      },
+      {
+        "name": "A Spirit used as material cannot evade its own pre-attempt non-Dragon Fusion restriction",
+        "pass": true
+      },
+      {
+        "name": "A Dragon Lubellion Fusion remains available under the live restriction while its Wyrm continuation is excluded",
+        "pass": true
+      },
+      {
+        "name": "A real Impermanence response suppresses Spirit restriction until turn cleanup and preserves physical cards",
+        "pass": true
+      },
+      {
+        "name": "A prior resolved IMPERM still negates Spirit tribute despite its physical cost departure",
+        "pass": true
+      },
+      {
+        "name": "A prior resolved VEILER still negates Spirit tribute despite its physical cost departure",
+        "pass": true
+      },
+      {
+        "name": "A fresh IMPERM cannot target Spirit after its tribute activation cost is paid",
+        "pass": true
+      },
+      {
+        "name": "A fresh VEILER cannot target Spirit after its tribute activation cost is paid",
+        "pass": true
+      },
+      {
+        "name": "Real CED returns a revived Spirit to Extra, clears qualification, and immediately releases its restriction",
+        "pass": true
+      },
+      {
+        "name": "QA-only negated and facedown field instances do not sustain a stale Dragon-only lock",
+        "pass": true
+      },
+      {
+        "name": "QA-only controller and physical owner differ without applying the continuous effect to the owner",
+        "pass": true
+      },
+      {
+        "name": "QA-only redirected or attached Spirit target remains outside the revival packet {\"leaveFieldRedirect\":\"banished\"}",
+        "pass": true
+      },
+      {
+        "name": "QA-only redirected or attached Spirit target remains outside the revival packet {\"attachedUids\":[\"unregistered\"]}",
+        "pass": true
+      },
+      {
+        "name": "QA-only unknown face-up restriction excludes an otherwise witnessed Spirit revival without spending the spell or target",
+        "pass": true
+      },
+      {
+        "name": "Fresh replay rejects forged revived history, origin, ownership, repeated Link search and tribute costs",
+        "pass": true
+      },
+      {
+        "name": "Bounded search finds only a genuine GY Spirit revival and every returned continuation freshly replays",
+        "pass": true
+      },
+      {
+        "name": "A real resolved Veiler permits using the witnessed Spirit as LIGHT Fusion material without evading an active restriction",
+        "pass": true
+      },
+      {
+        "name": "Mechaba negates a revived Spirit tribute using a physical Monster cost and never banishes the already-tributed copy again",
+        "pass": true
+      },
+      {
+        "name": "Restriction witnesses derive the real current Spirit presence across Link, tribute and revival without persistent synthetic locks",
+        "pass": true
+      },
+      {
+        "name": "An actual paid Ashuna Wyrm-only restriction excludes Spirit tribute before its cost even while Spirit is negated",
+        "pass": true
+      },
+      {
+        "name": "An unreviewed face-up summon restriction excludes Spirit tribute without spending its source, target or use",
+        "pass": true
+      },
+      {
+        "name": "Witnessed Wolf and revived Spirit automatic arrival records a new observed Wolf opportunity after the paid tribute",
+        "pass": true
+      },
+      {
+        "name": "Witnessed Wolf and revived Spirit automatic arrival permits tribute after actual FIRE recovery",
+        "pass": true
+      }
+    ],
+    "limitations": [
+      "Pinned technical CDB and dated TCG restriction snapshot do not independently authenticate new official rulings.",
+      "Witnessed Spirit history comes from actual registered Link and tribute or battle actions; declared history remains unqualified.",
+      "No registered opponent Link procedure or control-transfer action is added. Owner/controller differences are explicitly QA-only diagnostics, never an invented opponent-owned witnessed line.",
+      "Only registered summon profiles, physical response packets and bounded continuations are covered; unknown effects, general priority and arbitrary simultaneous-trigger chains remain outside scope.",
+      "Competitive scoring remains provisional; these diagnostic decks do not constitute tournament results."
+    ]
+  },
+  "meaning": "Passed local Node source cases from the preserved complete local run; remote whole-release acceptance is recorded separately through mandatory CI gates. These are not downloaded remote result files."
+}

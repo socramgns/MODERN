@@ -4,9 +4,9 @@
   "buildId": "e4dc45b2fdd677c73e6933fe380f5ff036c105d59accc26016656b55fcb30102",
   "htmlSha256": "1bcd4ee98c2d8b694c7fd31b8c948fd4387ae94c0a944171f9dc1385aa8d9ac0",
   "artifactMode": "SOURCE_NODE_SUITE",
+  "executionEnvironment": "LOCAL_NODE_SOURCE_TESTS",
   "testFile": "tests/albaz_fusion.cjs",
   "testFileSha256": "b3dc42070bd529313083eddf001d218b4cc1d7dbb4bb2619509dc9ea404aa924",
-  "meaning": "Focused local source cases before complete remote validation; absent local engines remain pending.",
   "result": {
     "schema": "ygo-albaz-fusion-tests/v1",
     "pass": true,
@@ -1496,5 +1496,6 @@
       "Actor 0 alone uses the bounded Albaz packet: one safe physical hand discard, itself plus a reviewed rival field material, and own Extra Lubellion or Mirrorjade in a free Main zone. General Fusion selection, Xyz/Pendulum, attachments, redirects, unreviewed departures, Damage Step and general SEGOC remain excluded.",
       "Lubellion continuation uses the existing bounded own field/GY/face-up-banished packet; competitive quality, universal rules correctness and global search optimality are not certified."
     ]
-  }
+  },
+  "meaning": "Passed local Node source cases from the preserved complete local run; remote whole-release acceptance is recorded separately through mandatory CI gates. These are not downloaded remote result files."
 }

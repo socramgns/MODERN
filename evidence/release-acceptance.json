@@ -2,18 +2,18 @@
   "schema": "ygo-release-acceptance/v1",
   "pass": true,
   "acceptanceMode": "REMOTE_FULL_EXECUTION_OBSERVED",
-  "candidateCommit": "c5bfa6d74aec0d6ae1661170cd712c0daa49fe32",
-  "candidateBindingSha256": "3e46597bb9c0e18c085d1158f12e904e607fec3c2583be58c8b8bfbcd8cc353d",
-  "buildId": "1da146dc7d27821a750f484b8c9d5177358425ae74b3656ad17154a72a1f71e2",
-  "htmlSha256": "e03038a2d7932ded30cfb93e0d5d79a3e3dbe26efdadefc1b02b445632933fda",
-  "bytes": 7133022,
-  "validatedRemoteGroups": 71,
-  "remoteRunUrl": "https://github.com/socramgns/MODERN/actions/runs/42305553910",
+  "candidateCommit": "6718b425b90f5db988593ab61a976c9a98626fd1",
+  "candidateBindingSha256": "b3f8aa767781a050d5e4837e8d0df4d6c6d3382622f7d0cfc93930bb61529ba1",
+  "buildId": "e4dc45b2fdd677c73e6933fe380f5ff036c105d59accc26016656b55fcb30102",
+  "htmlSha256": "1bcd4ee98c2d8b694c7fd31b8c948fd4387ae94c0a944171f9dc1385aa8d9ac0",
+  "bytes": 7150325,
+  "validatedRemoteGroups": 73,
+  "remoteRunUrl": "https://github.com/socramgns/MODERN/actions/runs/42337909290",
   "individualRemoteReportsDownloaded": false,
   "localValidationPass": false,
-  "localPassedGroups": 69,
-  "localTotalGroups": 71,
-  "localValidationSummarySha256": "85ee50ded666323543ea540c0592c64485592de5b8a990abd65b8e3b45132b29",
+  "localPassedGroups": 71,
+  "localTotalGroups": 73,
+  "localValidationSummarySha256": "1b9a1e30c13e08a1a55f89f57124923bae4c3362e8e7fe2bb9e106356feed970",
   "localUnavailableEngines": [
     "firefox",
     "webkit"
@@ -23,9 +23,7 @@
   "remoteFullExecutionEvidence": "SUCCESSFUL_MANDATORY_GITHUB_ACTIONS_GATES",
   "physicalDevicesValidated": false,
   "competitiveScoring": "PROVISIONAL_BY_USER_REQUEST",
-  "workflowUnchangedFromAcceptedPredecessor": false,
-  "reviewedWorkflowChanges": [
-    "DELIVERED_TEST_STEP_TIMEOUT_20_TO_25_ONLY"
-  ],
+  "workflowUnchangedFromAcceptedPredecessor": true,
+  "reviewedWorkflowChanges": [],
   "mandatoryGateCommandsUnchanged": true
 }
