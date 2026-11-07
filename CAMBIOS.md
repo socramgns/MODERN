@@ -1,4 +1,28 @@
-# Cambios de la revisión 19
+# Cambios de la revisión 20
+
+La revisión 20 registra el disparo opcional de Fallen of Albaz después de una llegada real por Invocación Normal o Monster Reborn bajo el control del actor 0. El descarte se paga al activar. La Fusión usa la misma copia de Albaz y un único monstruo rival boca arriba de perfil admitido; conserva propietarios, destinos, restricciones y reproducción desde el origen.
+
+VALIDACION_R20_PENDIENTE
+
+- Registra ALBAZ_FUSION, la llegada real, el descarte como coste y el uso por nombre.
+- Admite Albaz como objetivo de Reborn cuando está instalado su observador y conserva origen/propietario.
+- Registra Fusión apropiada de los destinos Lubellion/Mirrorjade y la continuación existente de Lubellion.
+- Conserva respuestas físicas, restricciones previas al coste, declinaciones explícitas y replay.
+- Añade albaz y mantiene diecinueve ejemplos anteriores y el HTML único.
+- Fija una lista cerrada de 32 criterios para seguir el proyecto con evidencia y pendientes identificados.
+- Conserva exactamente el workflow R19, incluido el presupuesto de 25 minutos; no modifica comandos ni puertas de navegadores.
+
+El uso por nombre de Albaz se consume incluso al negar su activación. Reborn conserva UID y propietario de la copia, registra su nueva llegada desde GY y no reinicia un uso gastado. La activación de Albaz ocurre en campo; no se presenta como activación en GY por haber sido revivido. No se deducen respuestas de Ash o Spirit donde el paquete no cumple sus condiciones.
+
+Las respuestas físicas registradas de Mechaba, Roar, Veiler e Impermanence mantienen sus costes y consecuencias. El descarte de Albaz no se devuelve por una negación; los materiales de Fusión sólo se mueven cuando la Fusión resuelve. Los disparos opcionales superpuestos exigen declinaciones explícitas hasta conservar un paquete resoluble. Si existe un pendiente obligatorio junto al de Albaz/Lubellion, se debe declinar la oportunidad opcional antes de resolver el obligatorio; no se inventa una cadena SEGOC.
+
+Las seis familias y el motor general siguen parciales. Esta ampliación no modela todos los destinos de Fusión de Albaz, todos los materiales o efectos de salida, prioridad general, SEGOC completo, Damage Step, Flip, ataques múltiples, Xyz o Péndulo. Las fases, perfiles de campo y consecuencias sin revisar se excluyen de las transiciones afectadas. Los campos iniciales declarados son supuestos; una historia apropiada se acredita mediante acciones registradas.
+
+La referencia fijada de [ProjectIgnis/CardScripts](https://raw.githubusercontent.com/ProjectIgnis/CardScripts/915c6ff63518a04e18d16ee45962d75a8c8be264/official/c68468459.lua) se conserva como datos en src/data/technical-references/albaz-c68468459.lua y albaz-reference.json: 1.289 bytes, SHA-256 99d39a6a0b1ef2ab7355898dac3046a5c2086732c18f8ca7b8c6bc914132695d. Se contrasta con el texto fijado del catálogo. Es evidencia técnica secundaria; no autentica nuevos rulings oficiales y nunca se ejecuta como código del analizador.
+
+La revisión 19 conserva la aceptación remota de 71 grupos sobre el candidato c5bfa6d74aec0d6ae1661170cd712c0daa49fe32 ([workflow](https://github.com/socramgns/MODERN/actions/runs/42305553910)). El commit final a0e283f0e5e3c66ccdd6b18a708d1840b222217c conserva el [HTML descargado y verificado](https://github.com/socramgns/MODERN/raw/a0e283f0e5e3c66ccdd6b18a708d1840b222217c/Analizador_YuGiOh.html?download=1), SHA-256 e03038a2d7932ded30cfb93e0d5d79a3e3dbe26efdadefc1b02b445632933fda. Su informe local original permanece con pass: false, 69/71 grupos y Firefox/WebKit no disponibles. Esa evidencia pertenece a R19; la aceptación de la ampliación actual se registra por separado.
+
+# Antecedente: cambios de la revisión 19
 
 La revisión 19 amplía Sunlight Wolf con historial Link ejecutado, salida al GY y Monster Reborn en una zona principal, únicamente en Ataque. La llegada actual es Especial desde GY y conserva UID, propietario y cualificación apropiada, pero no restaura la condición de una presencia actual invocada por Link usando Wolf.
 

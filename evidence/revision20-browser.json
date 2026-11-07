@@ -1,0 +1,201 @@
+{
+  "schema": "ygo-release20-browser/v1",
+  "pass": true,
+  "buildId": "e4dc45b2fdd677c73e6933fe380f5ff036c105d59accc26016656b55fcb30102",
+  "htmlSha256": "1bcd4ee98c2d8b694c7fd31b8c948fd4387ae94c0a944171f9dc1385aa8d9ac0",
+  "artifactMode": "DELIVERED_BYTES",
+  "sourceInjection": false,
+  "checks": [
+    {
+      "name": "release20_runs_the_manifest_bound_document_without_network",
+      "pass": true
+    },
+    {
+      "name": "twenty_visible_examples_preserve_all_nineteen_previous_identifiers",
+      "pass": true
+    },
+    {
+      "name": "albaz_starts_in_a_real_five_card_hand_with_declared_rival_materials_and_no_autoplay",
+      "pass": true
+    },
+    {
+      "name": "the_visible_guide_explains_rival_ownership_cost_optional_decline_and_non_targeting",
+      "pass": true
+    },
+    {
+      "name": "declared_setup_creates_neither_an_albaz_window_nor_fusion_qualification",
+      "pass": true
+    },
+    {
+      "name": "a_real_normal_summon_opens_exactly_one_optional_albaz_window",
+      "pass": true
+    },
+    {
+      "name": "rendered_fusion_choices_use_only_source_albaz_plus_a_physical_rival_material",
+      "pass": true
+    },
+    {
+      "name": "both_reviewed_recipes_and_main_zone_positions_are_visible",
+      "pass": true
+    },
+    {
+      "name": "the_optional_albaz_window_offers_three_physical_response_families",
+      "pass": true
+    },
+    {
+      "name": "the_fusion_label_names_albaz_rival_mechaba_discard_recipe_zone_and_non_targeting",
+      "pass": true
+    },
+    {
+      "name": "a_true_fusion_certifies_the_same_extra_copy_without_declared_history",
+      "pass": true
+    },
+    {
+      "name": "each_material_goes_to_its_owners_graveyard_and_the_real_discard_stays_paid",
+      "pass": true
+    },
+    {
+      "name": "albaz_records_field_origin_non_targeting_and_a_spent_hard_once_per_turn_use",
+      "pass": true
+    },
+    {
+      "name": "reborn_revives_the_same_main_deck_albaz_into_the_chosen_main_zone_and_position",
+      "pass": true
+    },
+    {
+      "name": "revival_preserves_the_spent_albaz_use_and_opens_no_second_fusion_window",
+      "pass": true
+    },
+    {
+      "name": "three_ui_actions_achieve_the_advertised_goal_with_an_independent_replay",
+      "pass": true
+    },
+    {
+      "name": "the_download_binds_real_uids_owner_fusion_history_goal_and_delivered_build",
+      "pass": true
+    },
+    {
+      "name": "undo_restores_the_optional_window_material_owners_hand_cost_and_unspent_use",
+      "pass": true
+    },
+    {
+      "name": "import_reconstructs_the_real_normal_summon_window_and_choices",
+      "pass": true
+    },
+    {
+      "name": "import_reexecutes_all_three_actions_and_restores_spent_use_and_goal",
+      "pass": true
+    },
+    {
+      "name": "forged_discard_is_rejected_without_replacing_the_active_route",
+      "pass": true
+    },
+    {
+      "name": "forged_rival_material_is_rejected_without_replacing_the_active_route",
+      "pass": true
+    },
+    {
+      "name": "forged_owner_is_rejected_without_replacing_the_active_route",
+      "pass": true
+    },
+    {
+      "name": "forged_fusion_history_is_rejected_without_replacing_the_active_route",
+      "pass": true
+    },
+    {
+      "name": "forged_non_targeting_is_rejected_without_replacing_the_active_route",
+      "pass": true
+    },
+    {
+      "name": "forged_activation_origin_is_rejected_without_replacing_the_active_route",
+      "pass": true
+    },
+    {
+      "name": "the_albaz_guide_board_and_controls_remain_readable_at_mobile_width",
+      "pass": true
+    },
+    {
+      "name": "explicit_optional_decline_names_albaz_and_spends_neither_discard_nor_use",
+      "pass": true
+    },
+    {
+      "name": "mechaba_negation_preserves_albaz_discard_consumes_use_and_does_not_fuse",
+      "pass": true
+    },
+    {
+      "name": "mechaba_uses_a_real_matching_monster_cost_and_banishes_the_field_source",
+      "pass": true
+    },
+    {
+      "name": "veiler_negation_preserves_albaz_discard_consumes_use_and_does_not_fuse",
+      "pass": true
+    },
+    {
+      "name": "veiler_pays_its_actual_hand_copy_and_negates_the_current_field_albaz",
+      "pass": true
+    },
+    {
+      "name": "imperm_negation_preserves_albaz_discard_consumes_use_and_does_not_fuse",
+      "pass": true
+    },
+    {
+      "name": "imperm_uses_the_prior_set_physical_trap_and_cleans_it_to_its_owners_graveyard",
+      "pass": true
+    },
+    {
+      "name": "a_physical_json_scenario_import_declares_albaz_in_grave_without_inventing_a_trigger",
+      "pass": true
+    },
+    {
+      "name": "reborn_first_opens_the_optional_albaz_window_from_an_actual_main_deck_revival",
+      "pass": true
+    },
+    {
+      "name": "reborn_albaz_fuses_with_the_rival_dark_material_and_opens_real_lubellion_continuation",
+      "pass": true
+    },
+    {
+      "name": "lubellion_pays_a_second_physical_discard_and_shuffles_only_own_materials",
+      "pass": true
+    },
+    {
+      "name": "the_imported_reborn_first_lubellion_route_achieves_mirrorjade_in_three_replayed_actions",
+      "pass": true
+    },
+    {
+      "name": "report_import_reconstructs_the_reborn_generated_optional_window",
+      "pass": true
+    },
+    {
+      "name": "release20_raises_no_javascript_page_errors",
+      "pass": true
+    },
+    {
+      "name": "release20_leaves_the_compiled_artifact_unchanged",
+      "pass": true
+    }
+  ],
+  "details": {
+    "the_albaz_guide_board_and_controls_remain_readable_at_mobile_width": {
+      "left": 16,
+      "right": 374,
+      "selectHeight": 44,
+      "buttonHeight": 44,
+      "width": 390
+    },
+    "release20_raises_no_javascript_page_errors": []
+  },
+  "browser": {
+    "engine": "chromium",
+    "version": "154.0.8037.57"
+  },
+  "externalRequestsBlocked": 107,
+  "limitations": [
+    "Rival Mechaba, Dark Magician and the prior set Infinite Impermanence are declared setup assumptions, with physical hand response costs.",
+    "The main guide executes Normal Summon, a non-targeting Fusion with a rival material and revival of the same Albaz without resetting its spent use.",
+    "A separate physical scenario JSON import witnesses Reborn-first Albaz, Lubellion and its existing own-material continuation into Mirrorjade.",
+    "Physical Mechaba, Veiler and prior-set Impermanence branches and explicit optional decline are exercised; arbitrary priority and SEGOC are outside scope.",
+    "Mobile width is emulated; competitive scoring remains provisional."
+  ],
+  "elapsedSeconds": 58.34
+}

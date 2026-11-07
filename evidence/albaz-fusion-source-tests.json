@@ -1,0 +1,1500 @@
+{
+  "schema": "ygo-node-source-suite-evidence/v1",
+  "pass": true,
+  "buildId": "e4dc45b2fdd677c73e6933fe380f5ff036c105d59accc26016656b55fcb30102",
+  "htmlSha256": "1bcd4ee98c2d8b694c7fd31b8c948fd4387ae94c0a944171f9dc1385aa8d9ac0",
+  "artifactMode": "SOURCE_NODE_SUITE",
+  "testFile": "tests/albaz_fusion.cjs",
+  "testFileSha256": "b3dc42070bd529313083eddf001d218b4cc1d7dbb4bb2619509dc9ea404aa924",
+  "meaning": "Focused local source cases before complete remote validation; absent local engines remain pending.",
+  "result": {
+    "schema": "ygo-albaz-fusion-tests/v1",
+    "pass": true,
+    "total": 33,
+    "tests": [
+      {
+        "name": "The Albaz registry exposes a bounded actor-0 field effect and Reborn profile without executing card text",
+        "pass": true
+      },
+      {
+        "name": "Pinned secondary Albaz Lua bytes and printed text identify the optional summon trigger, discard, forced source and opponent materials",
+        "pass": true
+      },
+      {
+        "name": "Actual normal Albaz exposes the complete 70534340 Main-zone/position screen and every selected line freshly replays",
+        "pass": true
+      },
+      {
+        "name": "Actual reborn Albaz exposes the complete 70534340 Main-zone/position screen and every selected line freshly replays",
+        "pass": true
+      },
+      {
+        "name": "Actual normal Albaz exposes the complete 44146295 Main-zone/position screen and every selected line freshly replays",
+        "pass": true
+      },
+      {
+        "name": "Actual reborn Albaz exposes the complete 44146295 Main-zone/position screen and every selected line freshly replays",
+        "pass": true
+      },
+      {
+        "name": "Actual opponent-owned Reborn Albaz pays actor-0 cost and its Fusion material returns to the owner-1 GY",
+        "pass": true
+      },
+      {
+        "name": "Main Phase 2 admits the actual Normal arrival and a face-up Defense Reborn Albaz without changing trigger timing",
+        "pass": true
+      },
+      {
+        "name": "Material capacity is checked after Albaz leaves a full Main field, retaining the occupied zones",
+        "pass": true
+      },
+      {
+        "name": "The source itself is required and own field/hand/Deck/GY copies never substitute for the rival material",
+        "pass": true
+      },
+      {
+        "name": "The DARK and Extra recipes use printed physical types: reviewed Fusion, Synchro and Link rivals qualify for Mirrorjade",
+        "pass": true
+      },
+      {
+        "name": "Setup Albaz and a real Normal Set create no synthetic summon-trigger opportunity",
+        "pass": true
+      },
+      {
+        "name": "Explicit optional decline consumes only the observed opportunity and enumeration cannot recreate it",
+        "pass": true
+      },
+      {
+        "name": "No safe physical hand cost records the optional effect outside scope without borrowing a field or Deck card",
+        "pass": true
+      },
+      {
+        "name": "The genuine Lubellion continuation pays another discard and returns only actor-0 field/GY/face-up-banished materials",
+        "pass": true
+      },
+      {
+        "name": "Real MECHABA pays its physical response and preserves Albaz discard plus printed USE on negation",
+        "pass": true
+      },
+      {
+        "name": "Real ROAR pays its physical response and preserves Albaz discard plus printed USE on negation",
+        "pass": true
+      },
+      {
+        "name": "Real VEILER pays its physical response and preserves Albaz discard plus printed USE on negation",
+        "pass": true
+      },
+      {
+        "name": "Real IMPERM pays its physical response and preserves Albaz discard plus printed USE on negation",
+        "pass": true
+      },
+      {
+        "name": "Albaz is a field activation with no Ash or Spirit GY reply despite a real Reborn arrival",
+        "pass": true
+      },
+      {
+        "name": "QA-only prior field negation still permits activation, pays the physical cost and consumes USE without moving materials",
+        "pass": true
+      },
+      {
+        "name": "Printed Albaz USE persists across real activation negation, physical revival and another actual arrival in the same turn",
+        "pass": true
+      },
+      {
+        "name": "Actual Albaz and Wolf overlap requires explicit decline before either optional packet can resolve",
+        "pass": true
+      },
+      {
+        "name": "QA-only an appended known or unknown mandatory packet cannot be skipped by Albaz activation or paid costs",
+        "pass": true
+      },
+      {
+        "name": "Mirrorjade control maximum is checked before payment, and an actual Albaz Fusion establishes later GY revival qualification",
+        "pass": true
+      },
+      {
+        "name": "QA-only full stale controls and forged source/material/cost/target/destination declarations are rejected atomically",
+        "pass": true
+      },
+      {
+        "name": "QA-only attachments, leave redirects and unreviewed opponent departures never become admitted Fusion materials",
+        "pass": true
+      },
+      {
+        "name": "An unknown face-up continuous field excludes the packet before cost while facedown unknown cards disclose no effect",
+        "pass": true
+      },
+      {
+        "name": "Spirit with Eyes of Blue and QA-only Wyrm, Synchro and Wolf-name locks are checked before discard; Fusion-only permits Fusion",
+        "pass": true
+      },
+      {
+        "name": "An actual paid Ashuna Wyrm restriction excludes Lubellion before any Albaz cost is spent",
+        "pass": true
+      },
+      {
+        "name": "An actual Branded Fusion whole-turn Fusion-only restriction permits the subsequent real Albaz Fusion",
+        "pass": true
+      },
+      {
+        "name": "JSON-imported actual Fusion reports freshly replay and reject altered physical source, discard, material, ownership and proper history",
+        "pass": true
+      },
+      {
+        "name": "Bounded search from a real opening discovers the Normal Albaz Fusion route and every returned witness freshly replays",
+        "pass": true
+      }
+    ],
+    "witnesses": [
+      {
+        "kind": "EXECUTED_ALBAZ_FUSION",
+        "initialHistoryCertified": false,
+        "freshReplayPassed": true,
+        "actions": [
+          {
+            "type": "BRANDED_NORMAL_SUMMON_ALBAZ",
+            "sourceUid": "P0:main:68468459:1",
+            "paid": [],
+            "activationOrigin": {
+              "sourceUid": "P0:main:68468459:1",
+              "player": 0,
+              "zone": "hand",
+              "handler": "BRANDED_NORMAL_SUMMON_ALBAZ",
+              "registeredForGyNegation": false,
+              "restriction": null,
+              "packet": null,
+              "cardActivation": null
+            },
+            "activationNegated": false,
+            "effectNegated": false
+          },
+          {
+            "type": "ALBAZ_FUSION",
+            "sourceUid": "P0:main:68468459:1",
+            "discardUid": "P0:main:23771716:1",
+            "fusionUid": "P0:extra:70534340:1",
+            "materialUids": [
+              "P0:main:68468459:1",
+              "P1:main:46986414:1"
+            ],
+            "destination": 0,
+            "position": "ATTACK",
+            "paid": [
+              {
+                "kind": "DISCARD",
+                "uid": "P0:main:23771716:1",
+                "player": 0,
+                "from": "hand",
+                "to": "gy",
+                "toPlayer": 0
+              },
+              {
+                "kind": "FUSION_MATERIAL",
+                "uid": "P0:main:68468459:1",
+                "from": "monster",
+                "fromPlayer": 0,
+                "ownerPlayer": 0,
+                "to": "gy",
+                "toPlayer": 0
+              },
+              {
+                "kind": "FUSION_MATERIAL",
+                "uid": "P1:main:46986414:1",
+                "from": "monster",
+                "fromPlayer": 1,
+                "ownerPlayer": 1,
+                "to": "gy",
+                "toPlayer": 1
+              }
+            ],
+            "activationOrigin": {
+              "sourceUid": "P0:main:68468459:1",
+              "player": 0,
+              "zone": "monster",
+              "handler": "ALBAZ_FUSION",
+              "registeredForGyNegation": false,
+              "restriction": "USE",
+              "packet": "SINGLE",
+              "cardActivation": null
+            },
+            "activationNegated": false,
+            "effectNegated": false
+          }
+        ]
+      },
+      {
+        "kind": "EXECUTED_ALBAZ_FUSION",
+        "initialHistoryCertified": false,
+        "freshReplayPassed": true,
+        "actions": [
+          {
+            "type": "ACTIVATE_MONSTER_REBORN",
+            "sourceUid": "P0:main:83764718:1",
+            "targetUid": "P0:main:68468459:1",
+            "destination": 0,
+            "position": "ATTACK",
+            "paid": [],
+            "activationOrigin": {
+              "sourceUid": "P0:main:83764718:1",
+              "player": 0,
+              "zone": "hand",
+              "handler": "ACTIVATE_MONSTER_REBORN",
+              "registeredForGyNegation": false,
+              "restriction": "NONE",
+              "packet": "SINGLE",
+              "cardActivation": "NORMAL_SPELL"
+            },
+            "activationNegated": false,
+            "effectNegated": false
+          },
+          {
+            "type": "ALBAZ_FUSION",
+            "sourceUid": "P0:main:68468459:1",
+            "discardUid": "P0:main:23771716:1",
+            "fusionUid": "P0:extra:70534340:1",
+            "materialUids": [
+              "P0:main:68468459:1",
+              "P1:main:46986414:1"
+            ],
+            "destination": 0,
+            "position": "ATTACK",
+            "paid": [
+              {
+                "kind": "DISCARD",
+                "uid": "P0:main:23771716:1",
+                "player": 0,
+                "from": "hand",
+                "to": "gy",
+                "toPlayer": 0
+              },
+              {
+                "kind": "FUSION_MATERIAL",
+                "uid": "P0:main:68468459:1",
+                "from": "monster",
+                "fromPlayer": 0,
+                "ownerPlayer": 0,
+                "to": "gy",
+                "toPlayer": 0
+              },
+              {
+                "kind": "FUSION_MATERIAL",
+                "uid": "P1:main:46986414:1",
+                "from": "monster",
+                "fromPlayer": 1,
+                "ownerPlayer": 1,
+                "to": "gy",
+                "toPlayer": 1
+              }
+            ],
+            "activationOrigin": {
+              "sourceUid": "P0:main:68468459:1",
+              "player": 0,
+              "zone": "monster",
+              "handler": "ALBAZ_FUSION",
+              "registeredForGyNegation": false,
+              "restriction": "USE",
+              "packet": "SINGLE",
+              "cardActivation": null
+            },
+            "activationNegated": false,
+            "effectNegated": false
+          }
+        ]
+      },
+      {
+        "kind": "EXECUTED_ALBAZ_FUSION",
+        "initialHistoryCertified": false,
+        "freshReplayPassed": true,
+        "actions": [
+          {
+            "type": "BRANDED_NORMAL_SUMMON_ALBAZ",
+            "sourceUid": "P0:main:68468459:1",
+            "paid": [],
+            "activationOrigin": {
+              "sourceUid": "P0:main:68468459:1",
+              "player": 0,
+              "zone": "hand",
+              "handler": "BRANDED_NORMAL_SUMMON_ALBAZ",
+              "registeredForGyNegation": false,
+              "restriction": null,
+              "packet": null,
+              "cardActivation": null
+            },
+            "activationNegated": false,
+            "effectNegated": false
+          },
+          {
+            "type": "ALBAZ_FUSION",
+            "sourceUid": "P0:main:68468459:1",
+            "discardUid": "P0:main:23771716:1",
+            "fusionUid": "P0:extra:44146295:1",
+            "materialUids": [
+              "P0:main:68468459:1",
+              "P1:extra:75286621:1"
+            ],
+            "destination": 0,
+            "position": "ATTACK",
+            "paid": [
+              {
+                "kind": "DISCARD",
+                "uid": "P0:main:23771716:1",
+                "player": 0,
+                "from": "hand",
+                "to": "gy",
+                "toPlayer": 0
+              },
+              {
+                "kind": "FUSION_MATERIAL",
+                "uid": "P0:main:68468459:1",
+                "from": "monster",
+                "fromPlayer": 0,
+                "ownerPlayer": 0,
+                "to": "gy",
+                "toPlayer": 0
+              },
+              {
+                "kind": "FUSION_MATERIAL",
+                "uid": "P1:extra:75286621:1",
+                "from": "monster",
+                "fromPlayer": 1,
+                "ownerPlayer": 1,
+                "to": "gy",
+                "toPlayer": 1
+              }
+            ],
+            "activationOrigin": {
+              "sourceUid": "P0:main:68468459:1",
+              "player": 0,
+              "zone": "monster",
+              "handler": "ALBAZ_FUSION",
+              "registeredForGyNegation": false,
+              "restriction": "USE",
+              "packet": "SINGLE",
+              "cardActivation": null
+            },
+            "activationNegated": false,
+            "effectNegated": false
+          }
+        ]
+      },
+      {
+        "kind": "EXECUTED_ALBAZ_FUSION",
+        "initialHistoryCertified": false,
+        "freshReplayPassed": true,
+        "actions": [
+          {
+            "type": "ACTIVATE_MONSTER_REBORN",
+            "sourceUid": "P0:main:83764718:1",
+            "targetUid": "P0:main:68468459:1",
+            "destination": 0,
+            "position": "ATTACK",
+            "paid": [],
+            "activationOrigin": {
+              "sourceUid": "P0:main:83764718:1",
+              "player": 0,
+              "zone": "hand",
+              "handler": "ACTIVATE_MONSTER_REBORN",
+              "registeredForGyNegation": false,
+              "restriction": "NONE",
+              "packet": "SINGLE",
+              "cardActivation": "NORMAL_SPELL"
+            },
+            "activationNegated": false,
+            "effectNegated": false
+          },
+          {
+            "type": "ALBAZ_FUSION",
+            "sourceUid": "P0:main:68468459:1",
+            "discardUid": "P0:main:23771716:1",
+            "fusionUid": "P0:extra:44146295:1",
+            "materialUids": [
+              "P0:main:68468459:1",
+              "P1:extra:75286621:1"
+            ],
+            "destination": 0,
+            "position": "ATTACK",
+            "paid": [
+              {
+                "kind": "DISCARD",
+                "uid": "P0:main:23771716:1",
+                "player": 0,
+                "from": "hand",
+                "to": "gy",
+                "toPlayer": 0
+              },
+              {
+                "kind": "FUSION_MATERIAL",
+                "uid": "P0:main:68468459:1",
+                "from": "monster",
+                "fromPlayer": 0,
+                "ownerPlayer": 0,
+                "to": "gy",
+                "toPlayer": 0
+              },
+              {
+                "kind": "FUSION_MATERIAL",
+                "uid": "P1:extra:75286621:1",
+                "from": "monster",
+                "fromPlayer": 1,
+                "ownerPlayer": 1,
+                "to": "gy",
+                "toPlayer": 1
+              }
+            ],
+            "activationOrigin": {
+              "sourceUid": "P0:main:68468459:1",
+              "player": 0,
+              "zone": "monster",
+              "handler": "ALBAZ_FUSION",
+              "registeredForGyNegation": false,
+              "restriction": "USE",
+              "packet": "SINGLE",
+              "cardActivation": null
+            },
+            "activationNegated": false,
+            "effectNegated": false
+          }
+        ]
+      },
+      {
+        "kind": "EXECUTED_ALBAZ_FUSION",
+        "initialHistoryCertified": false,
+        "freshReplayPassed": true,
+        "actions": [
+          {
+            "type": "ACTIVATE_MONSTER_REBORN",
+            "sourceUid": "P0:main:83764718:1",
+            "targetUid": "P1:main:68468459:1",
+            "destination": 0,
+            "position": "ATTACK",
+            "paid": [],
+            "activationOrigin": {
+              "sourceUid": "P0:main:83764718:1",
+              "player": 0,
+              "zone": "hand",
+              "handler": "ACTIVATE_MONSTER_REBORN",
+              "registeredForGyNegation": false,
+              "restriction": "NONE",
+              "packet": "SINGLE",
+              "cardActivation": "NORMAL_SPELL"
+            },
+            "activationNegated": false,
+            "effectNegated": false
+          },
+          {
+            "type": "ALBAZ_FUSION",
+            "sourceUid": "P1:main:68468459:1",
+            "discardUid": "P0:main:23771716:1",
+            "fusionUid": "P0:extra:70534340:1",
+            "materialUids": [
+              "P1:main:68468459:1",
+              "P1:main:46986414:1"
+            ],
+            "destination": 4,
+            "position": "DEFENSE",
+            "paid": [
+              {
+                "kind": "DISCARD",
+                "uid": "P0:main:23771716:1",
+                "player": 0,
+                "from": "hand",
+                "to": "gy",
+                "toPlayer": 0
+              },
+              {
+                "kind": "FUSION_MATERIAL",
+                "uid": "P1:main:68468459:1",
+                "from": "monster",
+                "fromPlayer": 0,
+                "ownerPlayer": 1,
+                "to": "gy",
+                "toPlayer": 1
+              },
+              {
+                "kind": "FUSION_MATERIAL",
+                "uid": "P1:main:46986414:1",
+                "from": "monster",
+                "fromPlayer": 1,
+                "ownerPlayer": 1,
+                "to": "gy",
+                "toPlayer": 1
+              }
+            ],
+            "activationOrigin": {
+              "sourceUid": "P1:main:68468459:1",
+              "player": 0,
+              "zone": "monster",
+              "handler": "ALBAZ_FUSION",
+              "registeredForGyNegation": false,
+              "restriction": "USE",
+              "packet": "SINGLE",
+              "cardActivation": null
+            },
+            "activationNegated": false,
+            "effectNegated": false
+          }
+        ]
+      },
+      {
+        "kind": "EXECUTED_ALBAZ_FUSION",
+        "initialHistoryCertified": false,
+        "freshReplayPassed": true,
+        "actions": [
+          {
+            "type": "ACTIVATE_MONSTER_REBORN",
+            "sourceUid": "P0:main:83764718:1",
+            "targetUid": "P1:main:68468459:1",
+            "destination": 0,
+            "position": "ATTACK",
+            "paid": [],
+            "activationOrigin": {
+              "sourceUid": "P0:main:83764718:1",
+              "player": 0,
+              "zone": "hand",
+              "handler": "ACTIVATE_MONSTER_REBORN",
+              "registeredForGyNegation": false,
+              "restriction": "NONE",
+              "packet": "SINGLE",
+              "cardActivation": "NORMAL_SPELL"
+            },
+            "activationNegated": false,
+            "effectNegated": false
+          },
+          {
+            "type": "ALBAZ_FUSION",
+            "sourceUid": "P1:main:68468459:1",
+            "discardUid": "P0:main:23771716:1",
+            "fusionUid": "P0:extra:44146295:1",
+            "materialUids": [
+              "P1:main:68468459:1",
+              "P1:extra:75286621:1"
+            ],
+            "destination": 4,
+            "position": "DEFENSE",
+            "paid": [
+              {
+                "kind": "DISCARD",
+                "uid": "P0:main:23771716:1",
+                "player": 0,
+                "from": "hand",
+                "to": "gy",
+                "toPlayer": 0
+              },
+              {
+                "kind": "FUSION_MATERIAL",
+                "uid": "P1:main:68468459:1",
+                "from": "monster",
+                "fromPlayer": 0,
+                "ownerPlayer": 1,
+                "to": "gy",
+                "toPlayer": 1
+              },
+              {
+                "kind": "FUSION_MATERIAL",
+                "uid": "P1:extra:75286621:1",
+                "from": "monster",
+                "fromPlayer": 1,
+                "ownerPlayer": 1,
+                "to": "gy",
+                "toPlayer": 1
+              }
+            ],
+            "activationOrigin": {
+              "sourceUid": "P1:main:68468459:1",
+              "player": 0,
+              "zone": "monster",
+              "handler": "ALBAZ_FUSION",
+              "registeredForGyNegation": false,
+              "restriction": "USE",
+              "packet": "SINGLE",
+              "cardActivation": null
+            },
+            "activationNegated": false,
+            "effectNegated": false
+          }
+        ]
+      },
+      {
+        "kind": "EXECUTED_ALBAZ_FUSION",
+        "initialHistoryCertified": false,
+        "freshReplayPassed": true,
+        "actions": [
+          {
+            "type": "BRANDED_NORMAL_SUMMON_ALBAZ",
+            "sourceUid": "P0:main:68468459:1",
+            "paid": [],
+            "activationOrigin": {
+              "sourceUid": "P0:main:68468459:1",
+              "player": 0,
+              "zone": "hand",
+              "handler": "BRANDED_NORMAL_SUMMON_ALBAZ",
+              "registeredForGyNegation": false,
+              "restriction": null,
+              "packet": null,
+              "cardActivation": null
+            },
+            "activationNegated": false,
+            "effectNegated": false
+          },
+          {
+            "type": "ALBAZ_FUSION",
+            "sourceUid": "P0:main:68468459:1",
+            "discardUid": "P0:main:23771716:1",
+            "fusionUid": "P0:extra:70534340:1",
+            "materialUids": [
+              "P0:main:68468459:1",
+              "P1:main:46986414:1"
+            ],
+            "destination": 0,
+            "position": "DEFENSE",
+            "paid": [
+              {
+                "kind": "DISCARD",
+                "uid": "P0:main:23771716:1",
+                "player": 0,
+                "from": "hand",
+                "to": "gy",
+                "toPlayer": 0
+              },
+              {
+                "kind": "FUSION_MATERIAL",
+                "uid": "P0:main:68468459:1",
+                "from": "monster",
+                "fromPlayer": 0,
+                "ownerPlayer": 0,
+                "to": "gy",
+                "toPlayer": 0
+              },
+              {
+                "kind": "FUSION_MATERIAL",
+                "uid": "P1:main:46986414:1",
+                "from": "monster",
+                "fromPlayer": 1,
+                "ownerPlayer": 1,
+                "to": "gy",
+                "toPlayer": 1
+              }
+            ],
+            "activationOrigin": {
+              "sourceUid": "P0:main:68468459:1",
+              "player": 0,
+              "zone": "monster",
+              "handler": "ALBAZ_FUSION",
+              "registeredForGyNegation": false,
+              "restriction": "USE",
+              "packet": "SINGLE",
+              "cardActivation": null
+            },
+            "activationNegated": false,
+            "effectNegated": false
+          }
+        ]
+      },
+      {
+        "kind": "EXECUTED_ALBAZ_FUSION",
+        "initialHistoryCertified": false,
+        "freshReplayPassed": true,
+        "actions": [
+          {
+            "type": "ACTIVATE_MONSTER_REBORN",
+            "sourceUid": "P0:main:83764718:1",
+            "targetUid": "P0:main:68468459:1",
+            "destination": 3,
+            "position": "DEFENSE",
+            "paid": [],
+            "activationOrigin": {
+              "sourceUid": "P0:main:83764718:1",
+              "player": 0,
+              "zone": "hand",
+              "handler": "ACTIVATE_MONSTER_REBORN",
+              "registeredForGyNegation": false,
+              "restriction": "NONE",
+              "packet": "SINGLE",
+              "cardActivation": "NORMAL_SPELL"
+            },
+            "activationNegated": false,
+            "effectNegated": false
+          },
+          {
+            "type": "ALBAZ_FUSION",
+            "sourceUid": "P0:main:68468459:1",
+            "discardUid": "P0:main:23771716:1",
+            "fusionUid": "P0:extra:44146295:1",
+            "materialUids": [
+              "P0:main:68468459:1",
+              "P1:extra:75286621:1"
+            ],
+            "destination": 3,
+            "position": "ATTACK",
+            "paid": [
+              {
+                "kind": "DISCARD",
+                "uid": "P0:main:23771716:1",
+                "player": 0,
+                "from": "hand",
+                "to": "gy",
+                "toPlayer": 0
+              },
+              {
+                "kind": "FUSION_MATERIAL",
+                "uid": "P0:main:68468459:1",
+                "from": "monster",
+                "fromPlayer": 0,
+                "ownerPlayer": 0,
+                "to": "gy",
+                "toPlayer": 0
+              },
+              {
+                "kind": "FUSION_MATERIAL",
+                "uid": "P1:extra:75286621:1",
+                "from": "monster",
+                "fromPlayer": 1,
+                "ownerPlayer": 1,
+                "to": "gy",
+                "toPlayer": 1
+              }
+            ],
+            "activationOrigin": {
+              "sourceUid": "P0:main:68468459:1",
+              "player": 0,
+              "zone": "monster",
+              "handler": "ALBAZ_FUSION",
+              "registeredForGyNegation": false,
+              "restriction": "USE",
+              "packet": "SINGLE",
+              "cardActivation": null
+            },
+            "activationNegated": false,
+            "effectNegated": false
+          }
+        ]
+      },
+      {
+        "kind": "EXECUTED_ALBAZ_FUSION",
+        "initialHistoryCertified": false,
+        "freshReplayPassed": true,
+        "actions": [
+          {
+            "type": "BRANDED_NORMAL_SUMMON_ALBAZ",
+            "sourceUid": "P0:main:68468459:1",
+            "paid": [],
+            "activationOrigin": {
+              "sourceUid": "P0:main:68468459:1",
+              "player": 0,
+              "zone": "hand",
+              "handler": "BRANDED_NORMAL_SUMMON_ALBAZ",
+              "registeredForGyNegation": false,
+              "restriction": null,
+              "packet": null,
+              "cardActivation": null
+            },
+            "activationNegated": false,
+            "effectNegated": false
+          },
+          {
+            "type": "ALBAZ_FUSION",
+            "sourceUid": "P0:main:68468459:1",
+            "discardUid": "P0:main:23771716:1",
+            "fusionUid": "P0:extra:70534340:1",
+            "materialUids": [
+              "P0:main:68468459:1",
+              "P1:main:46986414:1"
+            ],
+            "destination": 0,
+            "position": "ATTACK",
+            "paid": [
+              {
+                "kind": "DISCARD",
+                "uid": "P0:main:23771716:1",
+                "player": 0,
+                "from": "hand",
+                "to": "gy",
+                "toPlayer": 0
+              },
+              {
+                "kind": "FUSION_MATERIAL",
+                "uid": "P0:main:68468459:1",
+                "from": "monster",
+                "fromPlayer": 0,
+                "ownerPlayer": 0,
+                "to": "gy",
+                "toPlayer": 0
+              },
+              {
+                "kind": "FUSION_MATERIAL",
+                "uid": "P1:main:46986414:1",
+                "from": "monster",
+                "fromPlayer": 1,
+                "ownerPlayer": 1,
+                "to": "gy",
+                "toPlayer": 1
+              }
+            ],
+            "activationOrigin": {
+              "sourceUid": "P0:main:68468459:1",
+              "player": 0,
+              "zone": "monster",
+              "handler": "ALBAZ_FUSION",
+              "registeredForGyNegation": false,
+              "restriction": "USE",
+              "packet": "SINGLE",
+              "cardActivation": null
+            },
+            "activationNegated": false,
+            "effectNegated": false
+          },
+          {
+            "type": "LUBELLION_FUSION_MIRRORJADE",
+            "sourceUid": "P0:extra:70534340:1",
+            "discardUid": "P0:main:23771716:2",
+            "fusionUid": "P0:extra:44146295:1",
+            "materialUids": [
+              "P0:main:68468459:1",
+              "P0:extra:70534340:1"
+            ],
+            "paid": [
+              {
+                "kind": "DISCARD",
+                "uid": "P0:main:23771716:2",
+                "to": "gy"
+              },
+              {
+                "kind": "FUSION_MATERIAL_RETURN",
+                "uid": "P0:main:68468459:1",
+                "to": "deck"
+              },
+              {
+                "kind": "FUSION_MATERIAL_RETURN",
+                "uid": "P0:extra:70534340:1",
+                "to": "extra"
+              }
+            ],
+            "activationOrigin": {
+              "sourceUid": "P0:extra:70534340:1",
+              "player": 0,
+              "zone": "monster",
+              "handler": "LUBELLION_FUSION_MIRRORJADE",
+              "registeredForGyNegation": false,
+              "restriction": null,
+              "packet": null,
+              "cardActivation": null
+            },
+            "activationNegated": false,
+            "effectNegated": false
+          }
+        ]
+      },
+      {
+        "kind": "EXECUTED_ALBAZ_FUSION",
+        "initialHistoryCertified": false,
+        "freshReplayPassed": true,
+        "actions": [
+          {
+            "type": "BRANDED_NORMAL_SUMMON_ALBAZ",
+            "sourceUid": "P0:main:68468459:1",
+            "paid": [],
+            "activationOrigin": {
+              "sourceUid": "P0:main:68468459:1",
+              "player": 0,
+              "zone": "hand",
+              "handler": "BRANDED_NORMAL_SUMMON_ALBAZ",
+              "registeredForGyNegation": false,
+              "restriction": null,
+              "packet": null,
+              "cardActivation": null
+            },
+            "activationNegated": false,
+            "effectNegated": false
+          },
+          {
+            "type": "ALBAZ_FUSION",
+            "sourceUid": "P0:main:68468459:1",
+            "discardUid": "P0:main:23771716:1",
+            "fusionUid": "P0:extra:70534340:1",
+            "materialUids": [
+              "P0:main:68468459:1",
+              "P1:main:46986414:1"
+            ],
+            "destination": 0,
+            "position": "ATTACK",
+            "response": {
+              "type": "MECHABA",
+              "uid": "P1:extra:75286621:1",
+              "costUid": "P1:main:97268402:1"
+            },
+            "paid": [
+              {
+                "kind": "DISCARD",
+                "uid": "P0:main:23771716:1",
+                "player": 0,
+                "from": "hand",
+                "to": "gy",
+                "toPlayer": 0
+              },
+              {
+                "kind": "SEND_GY",
+                "uid": "P1:main:97268402:1",
+                "player": 1,
+                "from": "hand",
+                "to": "gy"
+              }
+            ],
+            "activationOrigin": {
+              "sourceUid": "P0:main:68468459:1",
+              "player": 0,
+              "zone": "monster",
+              "handler": "ALBAZ_FUSION",
+              "registeredForGyNegation": false,
+              "restriction": "USE",
+              "packet": "SINGLE",
+              "cardActivation": null
+            },
+            "activationNegated": true,
+            "effectNegated": true
+          }
+        ]
+      },
+      {
+        "kind": "EXECUTED_ALBAZ_FUSION",
+        "initialHistoryCertified": false,
+        "freshReplayPassed": true,
+        "actions": [
+          {
+            "type": "BRANDED_NORMAL_SUMMON_ALBAZ",
+            "sourceUid": "P0:main:68468459:1",
+            "paid": [],
+            "activationOrigin": {
+              "sourceUid": "P0:main:68468459:1",
+              "player": 0,
+              "zone": "hand",
+              "handler": "BRANDED_NORMAL_SUMMON_ALBAZ",
+              "registeredForGyNegation": false,
+              "restriction": null,
+              "packet": null,
+              "cardActivation": null
+            },
+            "activationNegated": false,
+            "effectNegated": false
+          },
+          {
+            "type": "ALBAZ_FUSION",
+            "sourceUid": "P0:main:68468459:1",
+            "discardUid": "P0:main:23771716:1",
+            "fusionUid": "P0:extra:70534340:1",
+            "materialUids": [
+              "P0:main:68468459:1",
+              "P1:main:46986414:1"
+            ],
+            "destination": 0,
+            "position": "ATTACK",
+            "response": {
+              "type": "ROAR",
+              "uid": "P1:main:51339637:1"
+            },
+            "paid": [
+              {
+                "kind": "DISCARD",
+                "uid": "P0:main:23771716:1",
+                "player": 0,
+                "from": "hand",
+                "to": "gy",
+                "toPlayer": 0
+              }
+            ],
+            "activationOrigin": {
+              "sourceUid": "P0:main:68468459:1",
+              "player": 0,
+              "zone": "monster",
+              "handler": "ALBAZ_FUSION",
+              "registeredForGyNegation": false,
+              "restriction": "USE",
+              "packet": "SINGLE",
+              "cardActivation": null
+            },
+            "activationNegated": true,
+            "effectNegated": true
+          }
+        ]
+      },
+      {
+        "kind": "EXECUTED_ALBAZ_FUSION",
+        "initialHistoryCertified": false,
+        "freshReplayPassed": true,
+        "actions": [
+          {
+            "type": "BRANDED_NORMAL_SUMMON_ALBAZ",
+            "sourceUid": "P0:main:68468459:1",
+            "paid": [],
+            "activationOrigin": {
+              "sourceUid": "P0:main:68468459:1",
+              "player": 0,
+              "zone": "hand",
+              "handler": "BRANDED_NORMAL_SUMMON_ALBAZ",
+              "registeredForGyNegation": false,
+              "restriction": null,
+              "packet": null,
+              "cardActivation": null
+            },
+            "activationNegated": false,
+            "effectNegated": false
+          },
+          {
+            "type": "ALBAZ_FUSION",
+            "sourceUid": "P0:main:68468459:1",
+            "discardUid": "P0:main:23771716:1",
+            "fusionUid": "P0:extra:70534340:1",
+            "materialUids": [
+              "P0:main:68468459:1",
+              "P1:main:46986414:1"
+            ],
+            "destination": 0,
+            "position": "ATTACK",
+            "response": {
+              "type": "VEILER",
+              "uid": "P1:main:97268402:1"
+            },
+            "paid": [
+              {
+                "kind": "DISCARD",
+                "uid": "P0:main:23771716:1",
+                "player": 0,
+                "from": "hand",
+                "to": "gy",
+                "toPlayer": 0
+              },
+              {
+                "kind": "SEND_GY",
+                "uid": "P1:main:97268402:1",
+                "player": 1,
+                "from": "hand",
+                "to": "gy"
+              }
+            ],
+            "activationOrigin": {
+              "sourceUid": "P0:main:68468459:1",
+              "player": 0,
+              "zone": "monster",
+              "handler": "ALBAZ_FUSION",
+              "registeredForGyNegation": false,
+              "restriction": "USE",
+              "packet": "SINGLE",
+              "cardActivation": null
+            },
+            "activationNegated": false,
+            "effectNegated": true
+          }
+        ]
+      },
+      {
+        "kind": "EXECUTED_ALBAZ_FUSION",
+        "initialHistoryCertified": false,
+        "freshReplayPassed": true,
+        "actions": [
+          {
+            "type": "BRANDED_NORMAL_SUMMON_ALBAZ",
+            "sourceUid": "P0:main:68468459:1",
+            "paid": [],
+            "activationOrigin": {
+              "sourceUid": "P0:main:68468459:1",
+              "player": 0,
+              "zone": "hand",
+              "handler": "BRANDED_NORMAL_SUMMON_ALBAZ",
+              "registeredForGyNegation": false,
+              "restriction": null,
+              "packet": null,
+              "cardActivation": null
+            },
+            "activationNegated": false,
+            "effectNegated": false
+          },
+          {
+            "type": "ALBAZ_FUSION",
+            "sourceUid": "P0:main:68468459:1",
+            "discardUid": "P0:main:23771716:1",
+            "fusionUid": "P0:extra:70534340:1",
+            "materialUids": [
+              "P0:main:68468459:1",
+              "P1:main:46986414:1"
+            ],
+            "destination": 0,
+            "position": "ATTACK",
+            "response": {
+              "type": "IMPERM",
+              "uid": "P1:main:10045474:1"
+            },
+            "paid": [
+              {
+                "kind": "DISCARD",
+                "uid": "P0:main:23771716:1",
+                "player": 0,
+                "from": "hand",
+                "to": "gy",
+                "toPlayer": 0
+              }
+            ],
+            "activationOrigin": {
+              "sourceUid": "P0:main:68468459:1",
+              "player": 0,
+              "zone": "monster",
+              "handler": "ALBAZ_FUSION",
+              "registeredForGyNegation": false,
+              "restriction": "USE",
+              "packet": "SINGLE",
+              "cardActivation": null
+            },
+            "activationNegated": false,
+            "effectNegated": true
+          }
+        ]
+      },
+      {
+        "kind": "EXECUTED_ALBAZ_FUSION",
+        "initialHistoryCertified": false,
+        "freshReplayPassed": true,
+        "actions": [
+          {
+            "type": "BRANDED_NORMAL_SUMMON_ALBAZ",
+            "sourceUid": "P0:main:68468459:1",
+            "paid": [],
+            "activationOrigin": {
+              "sourceUid": "P0:main:68468459:1",
+              "player": 0,
+              "zone": "hand",
+              "handler": "BRANDED_NORMAL_SUMMON_ALBAZ",
+              "registeredForGyNegation": false,
+              "restriction": null,
+              "packet": null,
+              "cardActivation": null
+            },
+            "activationNegated": false,
+            "effectNegated": false
+          },
+          {
+            "type": "ALBAZ_FUSION",
+            "sourceUid": "P0:main:68468459:1",
+            "discardUid": "P0:main:23771716:1",
+            "fusionUid": "P0:extra:44146295:1",
+            "materialUids": [
+              "P0:main:68468459:1",
+              "P1:extra:75286621:1"
+            ],
+            "destination": 0,
+            "position": "ATTACK",
+            "paid": [
+              {
+                "kind": "DISCARD",
+                "uid": "P0:main:23771716:1",
+                "player": 0,
+                "from": "hand",
+                "to": "gy",
+                "toPlayer": 0
+              },
+              {
+                "kind": "FUSION_MATERIAL",
+                "uid": "P0:main:68468459:1",
+                "from": "monster",
+                "fromPlayer": 0,
+                "ownerPlayer": 0,
+                "to": "gy",
+                "toPlayer": 0
+              },
+              {
+                "kind": "FUSION_MATERIAL",
+                "uid": "P1:extra:75286621:1",
+                "from": "monster",
+                "fromPlayer": 1,
+                "ownerPlayer": 1,
+                "to": "gy",
+                "toPlayer": 1
+              }
+            ],
+            "activationOrigin": {
+              "sourceUid": "P0:main:68468459:1",
+              "player": 0,
+              "zone": "monster",
+              "handler": "ALBAZ_FUSION",
+              "registeredForGyNegation": false,
+              "restriction": "USE",
+              "packet": "SINGLE",
+              "cardActivation": null
+            },
+            "activationNegated": false,
+            "effectNegated": false
+          },
+          {
+            "type": "DUEL_ADVANCE_PHASE",
+            "paid": [],
+            "activationOrigin": null,
+            "activationNegated": false,
+            "effectNegated": false
+          },
+          {
+            "type": "DUEL_ATTACK",
+            "targetUid": "P1:main:89631139:1",
+            "paid": [],
+            "activationOrigin": null,
+            "activationNegated": false,
+            "effectNegated": false
+          },
+          {
+            "type": "DUEL_ADVANCE_PHASE",
+            "paid": [],
+            "activationOrigin": null,
+            "activationNegated": false,
+            "effectNegated": false
+          },
+          {
+            "type": "ACTIVATE_MONSTER_REBORN",
+            "sourceUid": "P0:main:83764718:1",
+            "targetUid": "P0:extra:44146295:1",
+            "destination": 4,
+            "position": "DEFENSE",
+            "paid": [],
+            "activationOrigin": {
+              "sourceUid": "P0:main:83764718:1",
+              "player": 0,
+              "zone": "hand",
+              "handler": "ACTIVATE_MONSTER_REBORN",
+              "registeredForGyNegation": false,
+              "restriction": "NONE",
+              "packet": "SINGLE",
+              "cardActivation": "NORMAL_SPELL"
+            },
+            "activationNegated": false,
+            "effectNegated": false
+          }
+        ]
+      },
+      {
+        "kind": "EXPLICIT_RESTRICTION_WITNESS",
+        "initialHistoryCertified": false,
+        "freshReplayPassed": true,
+        "actions": [
+          {
+            "type": "TENYI_HAND_SPECIAL",
+            "sourceUid": "P0:main:87052196:1",
+            "destination": 0,
+            "paid": [],
+            "activationOrigin": {
+              "sourceUid": "P0:main:87052196:1",
+              "player": 0,
+              "zone": "hand",
+              "handler": "TENYI_HAND_SPECIAL",
+              "registeredForGyNegation": false,
+              "restriction": "USE",
+              "packet": "SINGLE",
+              "cardActivation": null
+            },
+            "activationNegated": false,
+            "effectNegated": false
+          },
+          {
+            "type": "TENYI_LINK_MONK",
+            "sourceUid": "P0:extra:32519092:1",
+            "materialUids": [
+              "P0:main:87052196:1"
+            ],
+            "destination": 5,
+            "paid": [
+              {
+                "kind": "LINK_MATERIAL",
+                "uid": "P0:main:87052196:1",
+                "from": "monster",
+                "to": "gy"
+              }
+            ],
+            "activationOrigin": {
+              "sourceUid": "P0:extra:32519092:1",
+              "player": 0,
+              "zone": "extra",
+              "handler": "TENYI_LINK_MONK",
+              "registeredForGyNegation": false,
+              "restriction": null,
+              "packet": null,
+              "cardActivation": null
+            },
+            "activationNegated": false,
+            "effectNegated": false
+          },
+          {
+            "type": "TENYI_ASHUNA_DECK",
+            "sourceUid": "P0:main:87052196:1",
+            "destination": 0,
+            "paid": [
+              {
+                "kind": "BANISH",
+                "uid": "P0:main:87052196:1",
+                "from": "gy",
+                "to": "banished"
+              }
+            ],
+            "activationOrigin": {
+              "sourceUid": "P0:main:87052196:1",
+              "player": 0,
+              "zone": "gy",
+              "handler": "TENYI_ASHUNA_DECK",
+              "registeredForGyNegation": true,
+              "restriction": "USE",
+              "packet": "SINGLE",
+              "cardActivation": null
+            },
+            "activationNegated": false,
+            "effectNegated": false
+          },
+          {
+            "type": "BRANDED_NORMAL_SUMMON_ALBAZ",
+            "sourceUid": "P0:main:68468459:1",
+            "paid": [],
+            "activationOrigin": {
+              "sourceUid": "P0:main:68468459:1",
+              "player": 0,
+              "zone": "hand",
+              "handler": "BRANDED_NORMAL_SUMMON_ALBAZ",
+              "registeredForGyNegation": false,
+              "restriction": null,
+              "packet": null,
+              "cardActivation": null
+            },
+            "activationNegated": false,
+            "effectNegated": false
+          }
+        ]
+      },
+      {
+        "kind": "EXECUTED_ALBAZ_FUSION",
+        "initialHistoryCertified": false,
+        "freshReplayPassed": true,
+        "actions": [
+          {
+            "type": "BRANDED_FUSION_LUBELLION",
+            "sourceUid": "P0:main:44362883:1",
+            "fusionUid": "P0:extra:70534340:1",
+            "materialUids": [
+              "P0:main:68468459:2",
+              "P0:main:46986414:1"
+            ],
+            "paid": [
+              {
+                "uid": "P0:main:68468459:2",
+                "from": "deck",
+                "to": "gy",
+                "kind": "FUSION_MATERIAL"
+              },
+              {
+                "uid": "P0:main:46986414:1",
+                "from": "deck",
+                "to": "gy",
+                "kind": "FUSION_MATERIAL"
+              }
+            ],
+            "activationOrigin": {
+              "sourceUid": "P0:main:44362883:1",
+              "player": 0,
+              "zone": "hand",
+              "handler": "BRANDED_FUSION_LUBELLION",
+              "registeredForGyNegation": false,
+              "restriction": "ACTIVATION",
+              "packet": "SINGLE",
+              "cardActivation": "NORMAL_SPELL"
+            },
+            "activationNegated": false,
+            "effectNegated": false
+          },
+          {
+            "type": "DECLINE_OPTIONAL_TRIGGER",
+            "sourceUid": "P0:extra:70534340:1",
+            "triggerKind": "LUBELLION_FUSION",
+            "paid": [],
+            "activationOrigin": {
+              "sourceUid": "P0:extra:70534340:1",
+              "player": 0,
+              "zone": "monster",
+              "handler": "DECLINE_OPTIONAL_TRIGGER",
+              "registeredForGyNegation": false,
+              "restriction": null,
+              "packet": null,
+              "cardActivation": null
+            },
+            "activationNegated": false,
+            "effectNegated": false
+          },
+          {
+            "type": "BRANDED_NORMAL_SUMMON_ALBAZ",
+            "sourceUid": "P0:main:68468459:1",
+            "paid": [],
+            "activationOrigin": {
+              "sourceUid": "P0:main:68468459:1",
+              "player": 0,
+              "zone": "hand",
+              "handler": "BRANDED_NORMAL_SUMMON_ALBAZ",
+              "registeredForGyNegation": false,
+              "restriction": null,
+              "packet": null,
+              "cardActivation": null
+            },
+            "activationNegated": false,
+            "effectNegated": false
+          },
+          {
+            "type": "ALBAZ_FUSION",
+            "sourceUid": "P0:main:68468459:1",
+            "discardUid": "P0:main:23771716:1",
+            "fusionUid": "P0:extra:70534340:2",
+            "materialUids": [
+              "P0:main:68468459:1",
+              "P1:main:46986414:1"
+            ],
+            "destination": 1,
+            "position": "ATTACK",
+            "paid": [
+              {
+                "kind": "DISCARD",
+                "uid": "P0:main:23771716:1",
+                "player": 0,
+                "from": "hand",
+                "to": "gy",
+                "toPlayer": 0
+              },
+              {
+                "kind": "FUSION_MATERIAL",
+                "uid": "P0:main:68468459:1",
+                "from": "monster",
+                "fromPlayer": 0,
+                "ownerPlayer": 0,
+                "to": "gy",
+                "toPlayer": 0
+              },
+              {
+                "kind": "FUSION_MATERIAL",
+                "uid": "P1:main:46986414:1",
+                "from": "monster",
+                "fromPlayer": 1,
+                "ownerPlayer": 1,
+                "to": "gy",
+                "toPlayer": 1
+              }
+            ],
+            "activationOrigin": {
+              "sourceUid": "P0:main:68468459:1",
+              "player": 0,
+              "zone": "monster",
+              "handler": "ALBAZ_FUSION",
+              "registeredForGyNegation": false,
+              "restriction": "USE",
+              "packet": "SINGLE",
+              "cardActivation": null
+            },
+            "activationNegated": false,
+            "effectNegated": false
+          }
+        ]
+      }
+    ],
+    "limitations": [
+      "Pinned CDB metadata, technical Lua and the dated TCG application restriction snapshot are secondary evidence; no new official ruling authentication is asserted, and Lua/card descriptions are never evaluated.",
+      "Only actual registered Normal and Monster Reborn arrivals establish Albaz opportunities. Starting fields and GYs remain declared physical assumptions; QA-only mutations are diagnostics, never legal witnesses.",
+      "Actor 0 alone uses the bounded Albaz packet: one safe physical hand discard, itself plus a reviewed rival field material, and own Extra Lubellion or Mirrorjade in a free Main zone. General Fusion selection, Xyz/Pendulum, attachments, redirects, unreviewed departures, Damage Step and general SEGOC remain excluded.",
+      "Lubellion continuation uses the existing bounded own field/GY/face-up-banished packet; competitive quality, universal rules correctness and global search optimality are not certified."
+    ]
+  }
+}

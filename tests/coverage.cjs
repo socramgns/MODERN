@@ -22,7 +22,7 @@ const {harness,ROOT}=require('./combo_engine.cjs');
  await test('Albaz summon, Artemis summon and Chengying summon do not claim complete source effects',()=>{
   const r=C.report(deck([{id:68468459,qty:1}],[{id:34755994,qty:1},{id:96633955,qty:1}]));
   for(const [id,zone]of [[68468459,'main'],[34755994,'extra'],[96633955,'extra']]){assert.equal(row(r,id,zone).actionCoverage,'REGISTERED_SUMMON_ONLY');assert(!row(r,id,zone).actions.some(a=>a.kind==='EFFECT'));}
-  assert(row(r,68468459).notes.some(x=>x.includes('declina')));
+  assert(row(r,68468459).notes.some(x=>x.includes('Fusión no dirigida')));
  });
  await test('Safe-cost membership and catalogue metadata never manufacture a card effect',()=>{
   const r=C.report(deck([{id:14934922,qty:2},{id:38033121,qty:1}]));for(const entry of r.entries){assert.equal(entry.technicalData.status,'TECHNICAL_SOURCE_MATCHED');assert.equal(entry.actionCoverage,'NO_REGISTERED_CARD_ACTIONS');assert.equal(entry.actions.length,0);}assert.equal(r.counts.noRegisteredActionCopies,3);

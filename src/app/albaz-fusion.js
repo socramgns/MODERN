@@ -1,0 +1,68 @@
+/* Fallen of Albaz's registered on-summon Fusion effect. The physical summon
+ * is observed after a real transition; printed text is never executable rules.
+ * This packet deliberately uses exactly Albaz and one opposing field monster. */
+(()=>{'use strict';
+const W=window,E=W.YGOComboEngine;if(!E?.registerHandler||!E?.registerLifecycle)throw Error('ALBAZ_FUSION_CORE_REQUIRED');
+const H=E.helpers,arr=x=>Array.isArray(x)?x:[],C=x=>H.card(x),id=x=>H.baseId(x),TYPE='ALBAZ_FUSION';
+const I={ALBAZ:68468459,LUBELLION:70534340,MIRRORJADE:44146295};
+const extraMaterials=new Set([34755994,75286621,69248256,96633955,I.LUBELLION,59822133,83994433,40908371,42097666,32519092,78917791,5402805,14812471,87871125]);
+// These identities already have registered GY/end-phase consequences. In
+// particular, Ancients and Salamangreat sends keep their existing observers.
+const discardCards=new Set([14558127,97268402,94145021,24508238,86120751,74063034,20001443,93490856,I.ALBAZ,8240199,71039903,24382602,10045474,94192409,44362883,26889158,52277807,87052196,98159737,23431858,24557335,65124425,1295111,51339637,14934922,83764718]);
+const fieldCards=new Set([...discardCards,...extraMaterials,I.MIRRORJADE,20001444]);
+const faceUpSpells=new Set([24382602,1295111,83764718,74063034,44362883,65124425,10045474,94192409,51339637,14934922]);
+const attachmentKeys=['overlay','overlays','overlayUids','xyzMaterials','materials','materialUids','attachments','attachedUids','equips','equipUids','equippedCards','equippedTo','equipTargetUid'];
+const restrictionKeys=['cannotBeFusionMaterial','cannotBeMaterial','cannotBeUsedAsMaterial','fusionMaterialRestrictions','materialRestrictions'];
+const meaningful=x=>x!==undefined&&x!==null&&x!==false&&(!Array.isArray(x)||x.length>0),present=(x,keys)=>keys.some(k=>meaningful(x[k]));
+const rows=(s,p,z)=>arr(s.zones[p]?.[z]),own=(s,z)=>rows(s,0,z),face=x=>x.faceUp===true;
+const attribute=x=>({EARTH:1,TIERRA:1,WATER:2,AGUA:2,FIRE:4,FUEGO:4,WIND:8,VIENTO:8,LIGHT:16,LUZ:16,DARK:32,OSCURIDAD:32,DIVINE:64,DIVINA:64}[String(C(x).attribute).toUpperCase()]??Number(C(x).attribute));
+function printed(x){const c=C(x),p=H.lookup(Number(c.id));return p&&c.technicalSourceMatched===true&&p.technicalSourceMatched===true&&Number(c.typeBits)===Number(p.typeBits)&&attribute(c)===attribute(p)&&Number(c.race)===Number(p.race)?p:null;}
+function normal(x){const c=C(x),bits=Number(c.typeBits),p=printed(x);return!!p&&!x.token&&(bits&17)===17&&!(bits&(0x20|0x40|0x80|0x2000|0x4000|0x800000|0x1000000|0x4000000|0x8000000))&&c.statsKnown===true&&Number.isInteger(Number(c.level))&&Number(c.level)>=1&&Number(c.level)<=12&&Number(c.level)===Number(p.level)&&Number.isFinite(c.atk)&&c.atk>=0&&Number.isFinite(c.def)&&c.def>=0;}
+function cleanMaterial(x){return!x.token&&!x.leaveFieldRedirect&&!present(x,attachmentKeys)&&!present(x,restrictionKeys);}
+function extra(x){return!!(Number(C(x).typeBits)&(0x40|0x2000|0x800000|0x4000000));}
+function opponentMaterial(x){return face(x)&&cleanMaterial(x)&&(normal(x)||extraMaterials.has(id(x))&&!!printed(x)&&extra(x)&&!(Number(C(x).typeBits)&(0x80|0x4000|0x800000|0x1000000|0x8000000)));}
+function safeDiscard(x){return!x.token&&!x.leaveFieldRedirect&&!present(x,attachmentKeys)&&(normal(x)||discardCards.has(id(x))&&!!printed(x)&&!extra(x));}
+function fieldSupported(s){if(typeof W.YGOBlueEyesDuel?.azureFieldSupported==='function')return W.YGOBlueEyesDuel.azureFieldSupported(s);return s.zones.every(z=>arr(z.monster).every(x=>!face(x)||normal(x)||fieldCards.has(id(x)))&&arr(z.spelltrap).every(x=>!face(x)||faceUpSpells.has(id(x))));}
+function liveLock(s,l){if(l.untilTurn!==undefined&&Number(l.untilTurn)<s.turn)return false;const source=H.locate(s,l.sourceUid),p=l.appliesToPlayer??l.player??source?.player??0;return p===0&&(l.wholeTurn===true||!l.sourceUid||source?.zone==='monster'&&face(source.item)&&source.item.effectsNegated!==true);}
+function allowed(s,target){if(!H.spiritSpecialAllowed(s,0,target)||!H.wolfNameAllowed(s,0,target))return false;return!arr(s.locks).filter(l=>liveLock(s,l)).some(l=>l.kind==='SYNCHRO_ONLY'||l.kind==='WYRM_ONLY'&&Number(C(target).race)!==0x800000);}
+function source(s,uid){const hit=H.locate(s,uid);return hit?.player===0&&hit.zone==='monster'&&face(hit.item)&&id(hit.item)===I.ALBAZ&&!!printed(hit.item)&&cleanMaterial(hit.item)?hit:null;}
+function destinations(s,sourceUid){const occupied=new Set(own(s,'monster').filter(x=>x.uid!==sourceUid).map(x=>x.zoneIndex));return[0,1,2,3,4].filter(zone=>!occupied.has(zone));}
+function recipe(target,material){return id(target)===I.LUBELLION?attribute(material)===32:id(target)===I.MIRRORJADE&&extra(material);}
+function target(s,uid){const hit=H.locate(s,uid);return hit?.player===0&&hit.zone==='extra'&&hit.item.ownerPlayer===0&&[I.LUBELLION,I.MIRRORJADE].includes(id(hit.item))&&!!printed(hit.item)&&(Number(C(hit.item).typeBits)&0x40)&&allowed(s,hit.item)&&!(id(hit.item)===I.MIRRORJADE&&own(s,'monster').some(x=>face(x)&&id(x)===I.MIRRORJADE))?hit:null;}
+function arrivalSupported(s,a){const supported=W.YGOExpandedArchetypes?.wolfSummonDestinationSupported;return typeof supported!=='function'||supported(s,0,a.destination,{departingUids:a.materialUids});}
+function choices(s,sourceUid){
+ if(s.duelEnded||s.activePlayer!==0||!['MAIN 1','MAIN 2'].includes(s.phase)||arr(s.chain).length||H.isUsed(s,TYPE)||!source(s,sourceUid)||!fieldSupported(s))return[];
+ const out=[];for(const discard of own(s,'hand').filter(safeDiscard))for(const fusion of own(s,'extra').filter(x=>target(s,x.uid)))for(const material of rows(s,1,'monster').filter(opponentMaterial)){
+  if(!recipe(fusion,material))continue;for(const destination of destinations(s,sourceUid))for(const position of ['ATTACK','DEFENSE']){const a={type:TYPE,sourceUid,discardUid:discard.uid,fusionUid:fusion.uid,materialUids:[sourceUid,material.uid],destination,position,nonTargeting:true};if(arrivalSupported(s,a))out.push(a);}
+ }return out;
+}
+function validResolution(s,a){const albaz=source(s,a.sourceUid),fusion=target(s,a.fusionUid),opponent=H.locate(s,a.materialUids?.[1]);return!!albaz&&!!fusion&&a.materialUids?.length===2&&a.materialUids[0]===a.sourceUid&&opponent?.player===1&&opponent.zone==='monster'&&opponentMaterial(opponent.item)&&recipe(fusion.item,opponent.item)&&destinations(s,a.sourceUid).includes(a.destination)&&['ATTACK','DEFENSE'].includes(a.position)&&fieldSupported(s)&&arrivalSupported(s,a);}
+E.registerHandler({type:TYPE,fieldMonsterEffect:true,nonTargeting:true,activationZones:['monster'],activationPacket:'SINGLE',activationRestriction:'USE',spellSpeed:1,enumerate:s=>s.pendingTriggers.filter(t=>t.kind===TYPE&&(t.player??0)===0).flatMap(t=>choices(s,t.sourceUid)),apply:(s,a)=>{
+ H.popTrigger(s,TYPE,a.sourceUid);H.markUsed(s,TYPE);
+ const discard=H.locate(s,a.discardUid);if(discard?.player!==0||discard.zone!=='hand'||!safeDiscard(discard.item))throw Error('ALBAZ_REVIEWED_DISCARD_COST_REQUIRED');
+ H.move(s,a.discardUid,'gy');const cost=H.locate(s,a.discardUid),paid=[{kind:'DISCARD',uid:a.discardUid,player:0,from:'hand',to:cost?.zone,toPlayer:cost?.player}],activationEvents=[{type:'ACTIVATE_TRIGGER_EFFECT',effect:TYPE,uid:a.sourceUid,player:0,costUid:a.discardUid,nonTargeting:true,activationZone:'monster',restriction:'USE'}];
+ if(a.effectNegated||a.activationNegated)return{paid,activationEvents,events:[{type:'ALBAZ_FUSION_NEGATED',uid:a.sourceUid,activationNegated:!!a.activationNegated,materialsMoved:false}]};
+ if(!validResolution(s,a))return{paid,activationEvents,events:[{type:'ALBAZ_FUSION_MATERIALS_UNAVAILABLE',uid:a.sourceUid,summoned:false,materialsMoved:false}]};
+ const materials=[];for(const uid of a.materialUids){const hit=H.locate(s,uid),record={kind:'FUSION_MATERIAL',uid,from:hit.zone,fromPlayer:hit.player,ownerPlayer:hit.item.ownerPlayer};H.move(s,uid,'gy');const moved=H.locate(s,uid);materials.push({...record,to:moved?.zone,toPlayer:moved?.player});}
+ paid.push(...materials);
+ const fusion=H.move(s,a.fusionUid,'monster',{player:0,zoneIndex:a.destination,position:a.position,faceUp:true});fusion.summonType='FUSION';fusion.properlySummoned=true;fusion.properSummonType='FUSION';s.extraHistory.push('FUSION');
+ if(id(fusion)===I.LUBELLION&&!H.isUsed(s,'LUBELLION_FUSION'))H.queueTrigger(s,'LUBELLION_FUSION',fusion.uid,{player:0});
+ return{paid,activationEvents,events:[...materials.map(m=>({type:'SENT_TO_GY_AS_FUSION_MATERIAL',...m,effect:TYPE})),{type:'FUSION_SUMMON',uid:fusion.uid,player:0,materials:a.materialUids,materialEvidence:materials,effect:TYPE,zoneIndex:a.destination,position:a.position,properlySummoned:true,properSummonType:'FUSION',nonTargeting:true}]};
+}});
+E.registerLifecycle({id:'albaz-observed-on-summon-fusion-v1',validateChoice(s,a){
+ const kinds=new Set(s.pendingTriggers.filter(t=>!t.mandatory).map(t=>t.kind)),related=[TYPE,'LUBELLION_FUSION'].some(k=>kinds.has(k));
+ if(related&&s.pendingTriggers.some(t=>t.mandatory)&&a.type!=='DECLINE_OPTIONAL_TRIGGER')throw Error('ALBAZ_MANDATORY_COMPOUND_REQUIRES_EXPLICIT_OPTIONAL_DECLINE');
+ if(related&&kinds.size>1&&a.type!=='DECLINE_OPTIONAL_TRIGGER')throw Error('ALBAZ_SIMULTANEOUS_OPTIONAL_TRIGGERS_REQUIRE_EXPLICIT_DECLINE');
+ return{pass:true};
+},validateTransition(before,after,a){
+ if(!['BRANDED_NORMAL_SUMMON_ALBAZ','ACTIVATE_MONSTER_REBORN'].includes(a.type)||W.YGOExpandedArchetypes?.damageStepAction?.(before,a))return{pass:true};
+ const uid=a.type==='ACTIVATE_MONSTER_REBORN'?a.targetUid:a.sourceUid,hit=H.locate(after,uid),events=after.events.slice(before.events.length),eventType=a.type==='ACTIVATE_MONSTER_REBORN'?'SPECIAL_SUMMON_FROM_GY':'NORMAL_SUMMON';
+ if(hit?.player!==0||hit.zone!=='monster'||!face(hit.item)||id(hit.item)!==I.ALBAZ||H.locate(before,uid)?.zone==='monster'||!H.registeredSummonArrivals(before,a).some(x=>x.uid===uid&&!x.isSet)||!events.some(e=>e.type===eventType&&e.uid===uid&&(e.player??0)===0))return{pass:true};
+ if(H.isUsed(after,TYPE)){after.events.push({type:'ALBAZ_FUSION_TRIGGER_UNAVAILABLE',uid,player:0,reason:'NAME_USE_ALREADY_SPENT',optional:true});return{pass:true};}
+ if(!choices(after,uid).length){after.events.push({type:'ALBAZ_FUSION_TRIGGER_OUTSIDE_SCOPE',uid,player:0,reason:'NO_REVIEWED_LEGAL_CONTINUATION',optional:true});return{pass:true};}
+ if(!after.pendingTriggers.some(t=>t.kind===TYPE&&t.sourceUid===uid)){H.queueTrigger(after,TYPE,uid,{player:0,observedAction:a.type});after.events.push({type:'ALBAZ_FUSION_OPTIONAL_TRIGGER_PENDING',uid,player:0,observedAction:a.type});}
+ return{pass:true};
+}});
+const capabilities=()=>({version:'registered-albaz-fusion-v1',observerInstalled:true,action:TYPE,cardId:I.ALBAZ,players:[0],phases:['MAIN 1','MAIN 2'],triggerKind:TYPE,arrivalObserver:'ACTUAL_REGISTERED_NORMAL_OR_MONSTER_REBORN_FACE_UP_ARRIVAL',arrivalActions:['BRANDED_NORMAL_SUMMON_ALBAZ','ACTIVATE_MONSTER_REBORN'],initialSetupCreatesTrigger:false,damageStepTriggers:false,activationZone:'monster',activationPacket:'SINGLE',activationRestriction:'USE',spellSpeed:1,nonTargeting:true,cost:{kind:'DISCARD',count:1,normalProfile:'TECHNICALLY_MATCHED_KNOWN_STATS_MAIN_NORMAL',reviewedCardIds:[...discardCards]},oncePerTurn:'CARD_NAME_USE_PER_PLAYER_PER_TURN',budgetKey:TYPE,materialRequirement:{source:'EXACT_PHYSICAL_SUMMONED_ALBAZ_UID',opponentFaceUp:1,total:2,otherOwnMonsters:false,hand:false,deck:false,gy:false},opponentNormalMaterialProfile:'TECHNICALLY_MATCHED_KNOWN_STATS_MAIN_NORMAL',opponentExtraMaterialCardIds:[...extraMaterials],excludedOpponentMaterialCardIds:[I.MIRRORJADE],fusionTargets:[{cardId:I.LUBELLION,recipe:'FALLEN_OF_ALBAZ_PLUS_DARK'},{cardId:I.MIRRORJADE,recipe:'FALLEN_OF_ALBAZ_PLUS_FUSION_SYNCHRO_XYZ_LINK'}],destinations:[0,1,2,3,4],positions:['ATTACK','DEFENSE'],properSummonType:'FUSION',requiresLinkArrows:false,preservesOwnership:true,lubellionContinuation:'LUBELLION_FUSION_MIRRORJADE',samePlayerDifferentOptionalTriggers:'EXPLICIT_DECLINE_UNTIL_ONLY_ONE_OPTIONAL_KIND_REMAINS',mandatoryCompoundTriggers:'DECLINE_RELATED_OPTIONAL_BEFORE_MANDATORY_RESOLUTION',certified:false,limitations:['Only a witnessed registered player-zero Albaz Normal Summon or Monster Reborn arrival opens this optional field trigger; setup and Damage Step do not.','The packet discards one reviewed physical hand card, then uses that Albaz and exactly one reviewed opposing face-up field monster. Unregistered materials, Xyz profiles, attachments, material restrictions and leave-field redirects are excluded.','Opposing Mirrorjade is excluded because its departure needs a separately reviewed delayed-effect packet. Opposing reviewed Salamangreat materials retain the existing Gazelle observer; Ancients discard retains its registered End Phase opportunity.','Main Monster Zones are checked after Albaz leaves; modern Fusion Summons require no Link arrows. Current Spirit, Wyrm, Extra summon and Wolf name restrictions are checked before costs.','Negation consumes the discard and named use. A missing source or changed material at resolution does not restore paid cards. No Ash or GY activation response is inferred for this field effect.','Lubellion retains its separate discard, named use and Fusion-only restriction; it cannot use an opponent-owned Albaz that returned to the opponent GY. Different optional trigger kinds require explicit declines. A mandatory trigger coexisting with Albaz or Lubellion requires declining the related optional opportunity before the mandatory packet can resolve; no arbitrary simultaneous-trigger ordering is certified.']});
+W.YGOAlbazFusion=Object.freeze({version:'registered-albaz-fusion-v1',cards:Object.freeze(I),observerInstalled:()=>true,capabilities});
+})();

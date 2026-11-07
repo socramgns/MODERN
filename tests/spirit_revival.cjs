@@ -127,7 +127,7 @@ const I={REBORN:83764718,CED:94192409,IMPERM:10045474,MECHABA:75286621,
  await test('Reborn admits Spirit only as a reviewed properly Link Summoned Extra profile',()=>{
   const c=W.YGOMonsterReborn.capabilities(),p=c.extraProfiles.find(x=>x.cardId===I.SPIRIT_LINK);assert(p);
   assert.equal(p.properSummonType,'LINK');assert.equal(p.requiresRegisteredProperSummon,true);
-  assert(!c.excludedProfiles.some(x=>x.id===I.SPIRIT_LINK));assert(!c.excludedProfiles.some(x=>x.id===I.WOLF));assert(c.extraProfiles.some(x=>x.cardId===I.WOLF&&x.properSummonType==='LINK'));assert(c.excludedProfiles.some(x=>x.id===I.ALBAZ));
+  assert(!c.excludedProfiles.some(x=>x.id===I.SPIRIT_LINK));assert(!c.excludedProfiles.some(x=>x.id===I.WOLF));assert(c.extraProfiles.some(x=>x.cardId===I.WOLF&&x.properSummonType==='LINK'));assert(c.mainEffectCardIds.includes(I.ALBAZ));assert.equal(c.albazRequiresObserver,true);
  });
  for(const destination of [0,1,2,3,4])await test('A witnessed Link and paid tribute revive the same Spirit into Main '+destination+' in Attack',()=>{
   const {t,spirit}=tributeRoute(destination===0?{placements:[set(0,I.CED,0)]}:{}),beforeHistory=copy(t.state.extraHistory),blue=uid(t,0,'monster',I.BEWD),source=uid(t,0,'hand',I.REBORN);

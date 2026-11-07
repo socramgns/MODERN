@@ -130,7 +130,7 @@ const actorOf=(st,action)=>Number(action.player??locate(st,action.sourceUid)?.pl
 const SPECIAL_SUMMON_TARGETS=new Map([
  ['LINK_ARTEMIS','sourceUid'],['INVOCATION_MECHABA','fusionUid'],['MOYE_TOKEN','TOKEN'],
  ['SYNCHRO_CHIXIAO','sourceUid'],['LONGYUAN_SPECIAL','sourceUid'],['SYNCHRO_CHENGYING','sourceUid'],
- ['BRANDED_FUSION_LUBELLION','fusionUid'],['LUBELLION_FUSION_MIRRORJADE','fusionUid'],
+ ['BRANDED_FUSION_LUBELLION','fusionUid'],['LUBELLION_FUSION_MIRRORJADE','fusionUid'],['ALBAZ_FUSION','fusionUid'],
  ['LINK_SPIRIT_WITH_EYES_OF_BLUE','sourceUid'],['SPIRIT_TRIBUTE_BLUE_EYES','summonUid'],['SYNCHRO_BLUE_EYES_SPIRIT_DRAGON','sourceUid'],
  ['TENYI_HAND_SPECIAL','sourceUid'],['TENYI_LINK_MONK','sourceUid'],['TENYI_ASHUNA_DECK','selectionUid'],
  ['TENYI_LINK_SHAMAN','sourceUid'],['TENYI_SHAMAN_REVIVE','targetUid'],['TENYI_LINK_BERSERKER','sourceUid'],

@@ -26,7 +26,7 @@ function pending(st,kind){return st.pendingTriggers.filter(t=>t.kind===kind);}
 function register(def){E.registerHandler(def);}
 register({type:'BRANDED_NORMAL_SUMMON_ALBAZ',enumerate:st=>idle(st)&&st.normalSummonAvailable[0]&&H.mainRoom(st)?own(st,'hand',x=>id(x)===I.ALBAZ).map(x=>({type:'BRANDED_NORMAL_SUMMON_ALBAZ',sourceUid:x.uid})):[],apply:(st,a)=>{
  const x=H.move(st,a.sourceUid,'monster');x.summonType='NORMAL';st.normalSummonAvailable[0]=false;
- return{events:[{type:'NORMAL_SUMMON',uid:x.uid,player:0},{type:'OPTIONAL_EFFECT_DECLINED',uid:x.uid,effect:'ALBAZ_ON_SUMMON_FUSION',scope:'The Albaz summon effect is not resolved by this handler.'}]};
+ return{events:[{type:'NORMAL_SUMMON',uid:x.uid,player:0},...(!W.YGOAlbazFusion?[{type:'OPTIONAL_EFFECT_DECLINED',uid:x.uid,effect:'ALBAZ_ON_SUMMON_FUSION',scope:'Legacy partial-module harness: the registered Albaz observer module is absent.'}]:[])]};
 }});
 register({type:'BRANDED_FUSION_LUBELLION',cardActivation:'NORMAL_SPELL',activationCardId:I.BF,activationPacket:'SINGLE',activationRestriction:'ACTIVATION',ashable:true,enumerate:st=>{
  if(!idle(st)||H.isUsed(st,'BRANDED_FUSION_ACTIVATED')||st.extraHistory.some(kind=>kind!=='FUSION'))return[];

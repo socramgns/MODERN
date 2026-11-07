@@ -18,7 +18,7 @@ const definitions=[
  {id:69248256,actions:[summon('SYNCHRO_CHIXIAO','Invocación Synchro de Chixiao'),effect('CHIXIAO_SEARCH','Búsqueda de Chixiao'),effect('CHIXIAO_CL1_MOYE_CL2','Paquete conjunto Chixiao/Mo Ye'),effect('CHIXIAO_NEGATE','Negación con coste físico'),response('CHIXIAO','Respuesta física de Chixiao')]},
  {id:93490856,actions:[effect('LONGYUAN_SPECIAL','Descartar e invocar Longyuan'),effect('LONGYUAN_BURN','Daño de Longyuan')]},
  {id:96633955,actions:[summon('SYNCHRO_CHENGYING','Invocación Synchro de Chengying')],notes:['Sus estadísticas continuas se modelan; este inventario no acredita todos sus efectos ni su reemplazo de destrucción.']},
- {id:68468459,actions:[summon('BRANDED_NORMAL_SUMMON_ALBAZ','Invocación Normal de Albaz')],notes:['La Fusión al invocarse de Albaz se declina en esta ruta; no está implementada por su invocación Normal.']},
+ {id:68468459,actions:[summon('BRANDED_NORMAL_SUMMON_ALBAZ','Invocación Normal de Albaz'),effect('ALBAZ_FUSION','Fusión de Albaz con un material rival admitido')],notes:['Fusión no dirigida con un descarte, el propio Albaz y un monstruo rival admitido. Las rutas registradas llegan a Lubellion o Mirrorjade y conservan el uso por nombre; Monster Reborn no reinicia un uso gastado.']},
  {id:44362883,actions:[effect('BRANDED_FUSION_LUBELLION','Branded Fusion hacia Lubellion')]},
  {id:70534340,actions:[effect('LUBELLION_FUSION_MIRRORJADE','Fusión de Mirrorjade con descarte')]},
  {id:44146295,actions:[effect('MIRRORJADE_BANISH','Destierro registrado de Mirrorjade'),effect('DUEL_RESOLVE_MIRRORJADE_END_DESTRUCTION','Destrucción diferida registrada')]},

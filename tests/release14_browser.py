@@ -88,8 +88,8 @@ def run(url=None):
               response is not None and hashlib.sha256(response.body()).hexdigest() == digest
               and page.evaluate('()=>navigator.onLine===false&&YGO_BUILD_MANIFEST.buildId') == build['buildId'])
         expected_ids = ['spark', 'spirit', 'invoked', 'swordsoul', 'branded', 'tenyi', 'salamangreat',
-                        'roar', 'crow', 'droll', 'field', 'trap', 'evacuation', 'shuffle', 'reborn', 'synchro', 'azure', 'spirit-reborn', 'wolf-reborn']
-        check('nineteen_examples_preserve_all_previous_identifiers',
+                        'roar', 'crow', 'droll', 'field', 'trap', 'evacuation', 'shuffle', 'reborn', 'synchro', 'azure', 'spirit-reborn', 'wolf-reborn', 'albaz']
+        check('twenty_examples_preserve_all_previous_identifiers',
               page.locator('#ygoExampleSelect').evaluate('(el)=>[...el.options].map(o=>o.value)') == expected_ids)
         try:
             initial = load_example(page, 'shuffle')

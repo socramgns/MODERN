@@ -212,7 +212,20 @@ const wolfReborn=base('wolf-reborn','Sunlight Wolf: Link, batalla y recuperació
  'Resuelve la recuperación de Wolf eligiendo Ash Blossom en tu Cementerio. No selecciona objetivo al activar: la carta se elige al resolver y puede ser cualquier monstruo FUEGO, aunque no sea Salamangreat. Ash vuelve a la mano y no puedes Invocar de Modo Normal, Colocar ni Invocar de Modo Especial monstruos con su nombre durante el resto de este turno.',
  'El objetivo exige Wolf y Artemis en tu campo y Ash en tu mano durante Main Phase 2. Comprueba las nueve acciones, los materiales físicos, la pérdida de 1200 LP, la Mágica en el Cementerio y el replay. Revivir no reinicia los límites por turno; devolver un Link al Extra mediante esta recuperación no aplicaría el bloqueo de nombre.'
 ]);
-const templates=new Map([spark,spirit,invoked,swordsoul,branded,tenyi,salamangreat,roar,crow,droll,field,trap,evacuation,shuffle,reborn,synchro,azure,spiritReborn,wolfReborn].map(value=>[value.id,value]));
+const albazDeck=deck([[68468459,1],[83764718,1]],[[70534340,1],[44146295,1]]),albazOpening=[68468459,83764718,...NORMALS.slice(0,3)],albazRivalDeck=deck([[46986414,1],[97268402,1],[10045474,1]],[[75286621,1]]),albazRivalOpening=[97268402,...NORMALS.slice(0,4)];
+const albaz=base('albaz','Albaz: Fusión rival, descarte y resurrección','Invoca a Albaz, usa un monstruo rival como material de una Fusión real y revive la misma copia sin reiniciar su uso por turno.',physical(albazDeck,albazOpening),physical(albazRivalDeck,albazRivalOpening),{turn:2,activePlayer:0,phase:'MAIN 1',placements:[
+ {player:1,from:'extra',cardId:75286621,zone:'monster',zoneIndex:0,position:'ATTACK',faceUp:true,summonTurn:1},
+ {player:1,from:'deck',cardId:46986414,zone:'monster',zoneIndex:1,position:'ATTACK',faceUp:true,summonTurn:1},
+ {player:1,from:'deck',cardId:10045474,zone:'spelltrap',zoneIndex:2,faceUp:false,setTurn:1}
+ ]},{requiredFieldIds:[44146295,68468459]},[
+ 'Mechaba y Dark Magician rivales, junto con Infinite Impermanence colocada desde el turno anterior, son supuestos iniciales declarados. Albaz empieza en tu mano y no hay un efecto pendiente por preparar ese campo. Invoca normalmente a Fallen of Albaz sin respuesta.',
+ 'Activa la Fusión opcional de Albaz: descarta 7 Colored Fish de tu mano como coste, elige Mirrorjade de tu Extra y usa únicamente al propio Albaz y al Mechaba rival como materiales. No selecciona objetivo al activar. La receta de Mirrorjade exige, además de Albaz, un monstruo de Fusión, Synchro o Link revisado del rival; Lubellion permite el Dark Magician OSCURIDAD rival.',
+ 'Ejecuta esa Fusión sin respuesta, en Ataque y en tu zona principal 1. El descarte permanece pagado. Albaz va a tu Cementerio y Mechaba al Cementerio de su propietario rival; Mirrorjade obtiene su historial apropiado de Fusión de esta acción real.',
+ 'Activa Monster Reborn sin respuesta sobre la misma copia de Albaz en tu Cementerio, en Defensa y en tu zona principal 2. Un monstruo del Main como Albaz no necesita historial de invocación apropiada previo. Revivirlo no reinicia el uso por turno de su Fusión: no aparece otra activación de Albaz este turno.',
+ 'El objetivo exige Mirrorjade y Albaz en tu campo después de estas tres acciones. Comprueba la identidad, los propietarios, el coste físico, Monster Reborn en el Cementerio y el replay. Puedes deshacer la Fusión para comparar Mechaba con un monstruo real de su mano, Effect Veiler o la Infinite Impermanence colocada: negar conserva el descarte y consume el uso de Albaz.',
+ 'También puedes declinar el efecto opcional recién abierto sin pagar descarte ni consumir su uso. Una llegada real por Monster Reborn puede abrirlo si Albaz todavía no lo ha usado; la colocación inicial declarada no lo abre. La Fusión de Lubellion posterior necesita otro descarte y sólo devuelve tus propios materiales admitidos del campo o Cementerio.'
+ ],'RESPONSES_EXPLICIT',['MECHABA','VEILER','IMPERM'],'CHOICE_BRANCHES');
+const templates=new Map([spark,spirit,invoked,swordsoul,branded,tenyi,salamangreat,roar,crow,droll,field,trap,evacuation,shuffle,reborn,synchro,azure,spiritReborn,wolfReborn,albaz].map(value=>[value.id,value]));
 const describe=value=>({id:value.id,name:value.name,description:value.description,scope:value.scope,steps:clone(value.tutorial.steps),replacesDeck:true,initialHistoryCertified:false,competitiveRecommendation:false});
 function list(){return[...templates.values()].map(describe);}
 function get(id){if(typeof id!=='string'||!templates.has(id))throw Error('SCENARIO_EXAMPLE_UNKNOWN');return clone(templates.get(id));}
@@ -232,5 +245,5 @@ async function load(id){const spec=get(id);if(loading)throw Error('SCENARIO_EXAM
  await A.initialize({goal:spec.goal});
  return{pass:true,status:'SCENARIO_EXAMPLE_LOADED',id,name:spec.name,message:'Ejemplo cargado. El campo inicial es un supuesto declarado; selecciona y ejecuta cada acción en el laboratorio.',steps:clone(spec.tutorial.steps),report:clone(A.report())};
  }finally{loading=false;}}
-W.YGOScenarioExamples=Object.freeze({version:'self-contained-physical-examples-v7',list,get,load,get isBusy(){return loading;}});
+W.YGOScenarioExamples=Object.freeze({version:'self-contained-physical-examples-v8',list,get,load,get isBusy(){return loading;}});
 })();

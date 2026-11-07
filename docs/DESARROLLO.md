@@ -1,4 +1,36 @@
-# Desarrollo del analizador · revisión 19
+# Desarrollo del analizador · revisión 20
+
+VALIDACION_R20_PENDIENTE
+
+La revisión 20 registra el disparo opcional de Fallen of Albaz después de una llegada real por Invocación Normal o Monster Reborn bajo el control del actor 0. El descarte se paga al activar. La Fusión usa la misma copia de Albaz y un único monstruo rival boca arriba de perfil admitido; conserva propietarios, destinos, restricciones y reproducción desde el origen.
+
+Los destinos revisados son Lubellion the Searing Dragon (Albaz + un material DARK rival) y Mirrorjade the Iceblade Dragon (Albaz + un Fusion/Synchro/Link rival admitido). Se comprueban espacio tras retirar al propio Albaz, posición Ataque/Defensa y cualificación apropiada obtenida por la Fusión ejecutada. No se usan otros monstruos propios, ni materiales de mano, Deck o GY por inferencia. Los perfiles con consecuencias no registradas, incluido Mirrorjade rival como material, Xyz, adjuntos, redirecciones y otros materiales, siguen fuera de este paquete.
+
+El uso por nombre de Albaz se consume incluso al negar su activación. Reborn conserva UID y propietario de la copia, registra su nueva llegada desde GY y no reinicia un uso gastado. La activación de Albaz ocurre en campo; no se presenta como activación en GY por haber sido revivido. No se deducen respuestas de Ash o Spirit donde el paquete no cumple sus condiciones.
+
+Las respuestas físicas registradas de Mechaba, Roar, Veiler e Impermanence mantienen sus costes y consecuencias. El descarte de Albaz no se devuelve por una negación; los materiales de Fusión sólo se mueven cuando la Fusión resuelve. Los disparos opcionales superpuestos exigen declinaciones explícitas hasta conservar un paquete resoluble. Si existe un pendiente obligatorio junto al de Albaz/Lubellion, se debe declinar la oportunidad opcional antes de resolver el obligatorio; no se inventa una cadena SEGOC.
+
+## API y pruebas de Albaz
+
+El módulo src/app/albaz-fusion.js se carga después de Monster Reborn. Registra ALBAZ_FUSION con sourceUid, discardUid, fusionUid, materialUids [Albaz, rival], destination 0–4, position ATTACK/DEFENSE y nonTargeting true. Su observador distingue una llegada real del setup; Reborn exige el observador instalado para admitir ese perfil. La invocación registra FUSION y cualificación apropiada; el material rival se envía a su propietario.
+
+Las pruebas específicas son tests/albaz_fusion.cjs y tests/release20_browser.py; el runner añade sólo esos dos grupos. El workflow conserva exactamente los bytes de R19, su plazo de 25 minutos y todas las puertas de instalación/ejecución de los tres motores y comparación del HTML. Los informes locales originales se conservan separados de la aceptación remota.
+
+El nuevo ejemplo albaz parte de Albaz y Reborn en mano y Mechaba/Dark Magician rivales declarados. Ejecuta Normal de Albaz, descarta una carta Normal y usa el Mechaba rival para invocar Mirrorjade por Fusión; después revive el mismo Albaz con Reborn. El objetivo exige Mirrorjade y Albaz en campo. El uso ya gastado impide una segunda activación de Albaz ese turno. Las pruebas también contrastan una llegada inicial por Reborn y Lubellion seguido de su continuación registrada a Mirrorjade.
+
+La lista cerrada de 32 criterios está en ESTADO_PROYECTO.md y ANALISIS_PENDIENTES_REVISION20.md. Se cuentan entregables verificados, no tiempo, esfuerzo ni todas las reglas del juego.
+
+Las seis familias y el motor general siguen parciales. Esta ampliación no modela todos los destinos de Fusión de Albaz, todos los materiales o efectos de salida, prioridad general, SEGOC completo, Damage Step, Flip, ataques múltiples, Xyz o Péndulo. Las fases, perfiles de campo y consecuencias sin revisar se excluyen de las transiciones afectadas. Los campos iniciales declarados son supuestos; una historia apropiada se acredita mediante acciones registradas.
+
+La referencia fijada de [ProjectIgnis/CardScripts](https://raw.githubusercontent.com/ProjectIgnis/CardScripts/915c6ff63518a04e18d16ee45962d75a8c8be264/official/c68468459.lua) se conserva como datos en src/data/technical-references/albaz-c68468459.lua y albaz-reference.json: 1.289 bytes, SHA-256 99d39a6a0b1ef2ab7355898dac3046a5c2086732c18f8ca7b8c6bc914132695d. Se contrasta con el texto fijado del catálogo. Es evidencia técnica secundaria; no autentica nuevos rulings oficiales y nunca se ejecuta como código del analizador.
+
+La puntuación competitiva permanece estructural y provisional por decisión del usuario. El importador de resultados reales está preparado. Las barajas y fixtures de prueba no son resultados de torneo.
+
+## Referencia histórica hasta la revisión 19
+
+Los apartados siguientes conservan la revisión que identifican. Las exclusiones antiguas de Albaz corresponden a esas entregas y no sustituyen el alcance actual descrito arriba.
+
+## Desarrollo del analizador · revisión 19
 
 La aceptación de la revisión 19 se apoya en la ejecución remota del commit `c5bfa6d74aec0d6ae1661170cd712c0daa49fe32`: el [workflow de GitHub Actions](https://github.com/socramgns/MODERN/actions/runs/42305553910) completó con éxito las etapas obligatorias de instalación de los tres motores, compilación y comparación del HTML, batería de **71 grupos** y comprobación entre motores. El recuento corresponde al runner versionado y sus salidas obligatorias; los informes remotos individuales no se descargaron. Las fuentes incluyen **121 archivos JavaScript**. La ejecución local completa conserva su resultado **69/71 grupos aprobados**, con Firefox y WebKit no disponibles; su informe original permanece con `pass: false`, sin conciliación ni conversión a éxito. Build `1da146dc7d27821a750f484b8c9d5177358425ae74b3656ad17154a72a1f71e2`; SHA-256 `e03038a2d7932ded30cfb93e0d5d79a3e3dbe26efdadefc1b02b445632933fda`; tamaño **7,133,022 bytes**. La puntuación competitiva sigue provisional; no se acreditan todas las reglas, dispositivos físicos ni conformidad WCAG completa.
 

@@ -1,0 +1,18 @@
+{
+  "schema": "ygo-secondary-technical-reference/v1",
+  "cardId": 68468459,
+  "source": "ProjectIgnis/CardScripts",
+  "commit": "915c6ff63518a04e18d16ee45962d75a8c8be264",
+  "url": "https://raw.githubusercontent.com/ProjectIgnis/CardScripts/915c6ff63518a04e18d16ee45962d75a8c8be264/official/c68468459.lua",
+  "httpStatus": 200,
+  "sha256": "99d39a6a0b1ef2ab7355898dac3046a5c2086732c18f8ca7b8c6bc914132695d",
+  "bytes": 1289,
+  "retrievedAt": "2026-11-07T04:06:54.213968+00:00",
+  "sourceRole": "SECONDARY_TECHNICAL_IMPLEMENTATION_REFERENCE",
+  "officialRulingAuthentication": false,
+  "executableInAnalyzer": false,
+  "notes": [
+    "Reviewed alongside pinned printed card text, not evaluated by the analyzer.",
+    "Normal/Special summon trigger, discard as cost, source must be used and other own field monsters are excluded."
+  ]
+}
