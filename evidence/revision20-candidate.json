@@ -71,7 +71,7 @@
       "tests/response_windows.cjs": "d06bd6de6a0511c168edd0e3ed078366e0a7916332c68431e9aa7fb3979972a1",
       "tests/responses.cjs": "0356cf45ba82cc28603b7caf61299711ecb7ed9685ea62961ce4cc6af3535158",
       "tests/run_all.py": "d4414bcc1af860e029327e8f35ddf754cec879b5f73f6e498c04dd2ba183601b",
-      "tests/scenario_examples.cjs": "c1031091f1b6dafad3dd70c6fca0b4b690a95df451b1eb19858474dbc06f9637",
+      "tests/scenario_examples.cjs": "364b6e0d1a798a9e1fd98191bbc5bcd686eb01978aa6fe47226141664928c55f",
       "tests/search_limits.cjs": "0633a5d319d515b79282bc7a821b88cca9bb10810b25bb74abe289e86b63d6db",
       "tests/spirit_revival.cjs": "b8e6d70879baead875a3224c4a4e06fa56a387e390ed28d896dbf38e7ee346b6",
       "tests/stardust_synchro.cjs": "932592562791a68c006ac1676638243d8c0f2fe76fc1b4477d23f17dd138988d",
@@ -92,5 +92,7 @@
   "localValidation": "RUNNING_WITH_FIREFOX_WEBKIT_UNAVAILABLE",
   "remoteValidation": "PENDING",
   "previousAcceptedCommit": "a0e283f0e5e3c66ccdd6b18a708d1840b222217c",
-  "competitiveScoring": "PROVISIONAL_BY_USER_REQUEST"
+  "competitiveScoring": "PROVISIONAL_BY_USER_REQUEST",
+  "previousCandidateCommit": "a28a3807ca668e658e25ea130e031105ef501e5b",
+  "correction": "Only expected embedded-scenario ID list updated19to20, including real load loop; allrule/source/HTML/workflow bytesunchanged"
 }
