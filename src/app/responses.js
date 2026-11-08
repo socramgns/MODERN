@@ -12,6 +12,9 @@ const regularWindow=st=>['DRAW','STANDBY','MAIN 1','BATTLE','MAIN 2','END'].incl
 const open=st=>regularWindow(st)&&!arr(st.pendingTriggers).length&&!arr(st.chain).length;
 const isNormal=x=>(Number(c(x).typeBits)&17)===17&&!(Number(c(x).typeBits)&0x1000000)&&!x.token;
 const knownSafe=new Set([14558127,97268402,94145021,24508238,86120751,74063034,34755994,75286621,20001443,69248256,93490856,96633955,68468459,70534340,8240199,71039903,89631139,42097666,24382602,10045474,94192409,44362883,26889158,14812471,52277807,87871125,59822133,83994433,40908371,65124425,1295111,51339637,83764718]);
+// Root Impermanence may suppress these reviewed continuous attack effects.
+// This does not admit their costs, departures or other response packets.
+const impermReviewedTargets=new Set([...knownSafe,21015833,74157028]);
 const safeZoneDeparture=x=>!x.token&&(isNormal(x)||knownSafe.has(id(x)));
 const swordOrWyrm=x=>/swordsoul/i.test(String(c(x).name))||Number(c(x).race)===0x800000;
 const usedKey=(name,p)=>p===0?name:name+':'+p;
@@ -184,7 +187,7 @@ E.registerResponse({id:'MECHABA',modeledCardTypes:['MONSTER','SPELL','TRAP'],cos
 
 // Direct activations use the same registered between-action windows as the
 // reviewed Quick Effects. They do not add Damage Step or arbitrary priority.
-function impermTarget(st,player,targetUid){const hit=H.locate(st,targetUid);return hit?.player===1-player&&hit.zone==='monster'&&face(hit.item)&&!!(Number(c(hit.item).typeBits)&0x20)&&!hit.item.effectsNegated&&!hit.item.token&&knownSafe.has(id(hit.item))&&!(Number(hit.item.effectTargetImmuneUntilTurn)>=st.turn)?hit:null;}
+function impermTarget(st,player,targetUid){const hit=H.locate(st,targetUid);return hit?.player===1-player&&hit.zone==='monster'&&face(hit.item)&&!!(Number(c(hit.item).typeBits)&0x20)&&!hit.item.effectsNegated&&!hit.item.token&&impermReviewedTargets.has(id(hit.item))&&!(Number(hit.item.effectTargetImmuneUntilTurn)>=st.turn)?hit:null;}
 E.registerHandler({type:'ACTIVATE_INFINITE_IMPERMANENCE',scope:'DUEL',quickEffect:true,cardActivation:'NORMAL_TRAP',activationCardId:I.IMPERM,activationZones:['hand','spelltrap'],activationPacket:'SINGLE',activationRestriction:'NONE',spellSpeed:2,enumerate:st=>open(st)?(st.context.manualBothPlayers===true?[0,1]:[0]).flatMap(player=>['hand','spelltrap'].flatMap(zone=>rows(st,player,zone,x=>id(x)===I.IMPERM).flatMap(source=>(zone==='hand'?[0,1,2,3,4]:[source.zoneIndex]).filter(column=>H.normalTrapActivationEligible?.(st,source.uid,I.IMPERM,column)).flatMap(column=>rows(st,1-player,'monster',target=>!!impermTarget(st,player,target.uid)).map(target=>({type:'ACTIVATE_INFINITE_IMPERMANENCE',player,sourceUid:source.uid,targetUid:target.uid,column})))))):[],apply:(st,a)=>{
  const source=H.locate(st,a.sourceUid),packet=a.normalTrapActivation;if(!packet||packet.kind!=='NORMAL_TRAP_CARD_ACTIVATION'||packet.sourceUid!==a.sourceUid||packet.cardId!==I.IMPERM||packet.player!==a.player||packet.column!==a.column||packet.activationZone!=='spelltrap'||packet.spellSpeed!==2||packet.targetUid!==a.targetUid||packet.targetPlayer!==1-a.player||packet.fromSet!==(packet.originZone==='spelltrap')||!['hand','spelltrap'].includes(packet.originZone)||source?.player!==a.player||source.zone!=='spelltrap'||!face(source.item)||id(source.item)!==I.IMPERM||source.item.fieldSpell===true||source.item.zoneIndex!==a.column||packet.fromSet&&(!Number.isInteger(packet.setTurn)||packet.setTurn<0||packet.setTurn>=st.turn||source.item.setTurn!==packet.setTurn)||!packet.fromSet&&packet.setTurn!==null)throw Error('IMPERM_PREPARED_NORMAL_TRAP_REQUIRED');
  const activationEvents=[{type:'ACTIVATE_ACTION',actionType:a.type,sourceUid:a.sourceUid},{type:'TARGET',player:a.player,uid:a.targetUid,zone:'monster',sourceUid:a.sourceUid}],events=[];

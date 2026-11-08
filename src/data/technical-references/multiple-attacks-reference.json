@@ -1,0 +1,40 @@
+{
+  "schema": "ygo-secondary-technical-profile-reference/v1",
+  "source": "ProjectIgnis/BabelCDB",
+  "sourceCommit": "ae5dedb957c2c48ab86554fee08a0fca73d8b1cf",
+  "catalogueSha256": "cc265022039bba09fc31e8e3a48afb0030e5a81cab0c30c386843fcd75e1cba6",
+  "sourceFile": "cards.cdb",
+  "sourceSha256": "d5166c35296a6c65dcc0230c7bc0e9f25721639159b80fa78bf724be61183a6a",
+  "profiles": [
+    {
+      "cardId": 74157028,
+      "name": "Cyber Twin Dragon",
+      "text": "\"Cyber Dragon\" + \"Cyber Dragon\"\nA Fusion Summon of this card can only be done with the above Fusion Materials. This card can make a second attack during each Battle Phase.",
+      "typeBits": 97,
+      "atk": 2800,
+      "def": 2100,
+      "level": 8,
+      "source": "cards.cdb"
+    },
+    {
+      "cardId": 21015833,
+      "name": "Hayabusa Knight",
+      "text": "This card can make a second attack during each Battle Phase.",
+      "typeBits": 33,
+      "atk": 1000,
+      "def": 700,
+      "level": 3,
+      "source": "cards.cdb"
+    }
+  ],
+  "attackRule": "SECOND_ATTACK_DURING_EACH_BATTLE_PHASE",
+  "effectKind": "CONTINUOUS_NON_ACTIVATING",
+  "profileScope": "REGISTERED_FIXED_ATTACK_BUDGET_ONLY",
+  "officialRulingAuthentication": false,
+  "cyberTwinFusionProcedureImplemented": false,
+  "notes": [
+    "An effect negation removes the additional allowance without deleting attacks already declared.",
+    "Initial fields are declared assumptions; no Fusion history is inferred.",
+    "This reference quotes the existing pinned technical catalogue; it is not a new official ruling."
+  ]
+}

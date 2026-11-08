@@ -43,7 +43,7 @@ function move(st,uid,toZone,options={}){const hit=locate(st,uid);if(!hit)throw E
  // always receive the card under its owner, including battle and materials.
  const item=hit.item;if(['monster','spelltrap'].includes(hit.zone)&&!['monster','spelltrap'].includes(toZone)&&item.leaveFieldRedirect){toZone=item.leaveFieldRedirect;delete item.leaveFieldRedirect;}if(hit.zone==='monster'&&toZone!=='monster'){for(const k of ['summonOriginZone','currentAtk','currentDef','temporaryModifiers','effectsNegated','negatedUntilTurn','effectsNegatedUntilTurn','negationUntilTurn','cannotAttackTurn','lastPositionChangeTurn','summonTurn','destroyAtEndPhaseTurn','continuousStatsApplied','mirrorjadeUnavailableTurn','reincarnated','effectTargetImmuneUntilTurn','effectDestructionImmuneUntilTurn'])delete item[k];}hit.item.previousZone=hit.zone;st.zones[hit.player][hit.zone].splice(hit.index,1);const player=['monster','spelltrap'].includes(toZone)?(options.player??hit.player):item.ownerPlayer;
  if(hit.zone==='monster'&&(toZone!=='monster'||options.faceUp===false))for(const k of Object.keys(st.used))if(k.endsWith(':'+uid))delete st.used[k];
- if(hit.zone==='monster'&&toZone!=='monster'&&st.duel){delete st.duel.attacked?.[uid];delete st.duel.positionChanged?.[uid];}
+ if(hit.zone==='monster'&&toZone!=='monster'&&st.duel){delete st.duel.attacked?.[uid];delete st.duel.attackDeclarations?.[uid];delete st.duel.positionChanged?.[uid];}
  if(item.token&&toZone!=='monster'){st.tokenLedger[item.uid].destroyed=true;return item;}
  // Returning to a hidden zone resets this physical card's summon qualification.
  // Only registered successful Extra Deck summons create properSummonType;
