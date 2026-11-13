@@ -1,0 +1,55 @@
+{
+  "schema": "ygo-r21-recovered-candidate-review/v1",
+  "pass": true,
+  "candidateCommit": "c3c2ebeb9aaaf7df57481fdefadabf93292d66b3",
+  "predecessorCommit": "71b244b7594b5bae1f5042d1248bcf5fa4a50a64",
+  "buildId": "8e2f493167e60a1752237885db37d72063514109118aa937707e93c9819c4908",
+  "htmlSha256": "3838c78ea58ec52af9019fbc5ad2f132db26b6022eb3d9c1ff939543d8894531",
+  "htmlBytes": 7165831,
+  "sourceJavaScriptFiles": 123,
+  "validationCommandCount": 75,
+  "validationGroupCount": 77,
+  "newGroups": [
+    "accessibility_workflow",
+    "multiple_attacks",
+    "release21_in_browser",
+    "unresolved_source_audit"
+  ],
+  "runnerOnlyAddsFourReviewedGroups": true,
+  "workflowUnchanged": true,
+  "browserGatesUnchanged": true,
+  "testFilesBound": 75,
+  "sourceFingerprintBound": true,
+  "priorFocusedEvidence": [
+    {
+      "file": "evidence/multiple-attacks-source-tests.json",
+      "sha256": "76fc6044a29d4425c7bd912f59c57fffd030e276cd85e32febb7ab0c0654fa71",
+      "cases": 86,
+      "pass": true
+    },
+    {
+      "file": "evidence/revision21-browser.json",
+      "sha256": "bfe1f9c9888bb0a57c5bc0ca485480873a12a8c1e0fde72cb0b15f3f1a2bbe71",
+      "cases": 39,
+      "pass": true
+    },
+    {
+      "file": "evidence/accessibility-workflow.json",
+      "sha256": "9fa497d978d576ec65e5796920391ba9e00615f1817f26ab6296e183af9a1962",
+      "cases": 30,
+      "pass": true
+    }
+  ],
+  "scenarioSuite": {
+    "pass": true,
+    "cases": 29,
+    "includedExamples": 21,
+    "reportPath": "tests/scenario-examples-results.json",
+    "reportSha256": "da6b1c350ba5eefca089c10c5176046cfe3059ae3903923eef260bcd0cd239ee",
+    "logPath": "/workspace/r21-recovery-evidence/scenario-examples-recovery.log",
+    "environment": "CURRENT_RECOVERED_NODE_SOURCE_RUN",
+    "firstTest": "Twenty-one self-contained examples preserve original IDs and advertise replacement and declared-history scope"
+  },
+  "criteriaClosedByThisReview": [],
+  "competitiveScoring": "PROVISIONAL_BY_USER_REQUEST"
+}

@@ -1,9 +1,9 @@
 {
   "schema": "ygo-release-candidate/v1",
   "revision": "2026.11-stable.21",
-  "pass": null,
-  "releaseAccepted": false,
-  "status": "REMOTE_FULL_VALIDATION_PENDING",
+  "pass": true,
+  "releaseAccepted": true,
+  "status": "ACCEPTED_BY_EXACT_CANDIDATE_CI",
   "bindings": {
     "buildId": "8e2f493167e60a1752237885db37d72063514109118aa937707e93c9819c4908",
     "htmlSha256": "3838c78ea58ec52af9019fbc5ad2f132db26b6022eb3d9c1ff939543d8894531",
@@ -92,8 +92,10 @@
   },
   "newSourceCasesPassed": 86,
   "newGuiChecksPassed": 39,
-  "localValidation": "RUNNING_WITH_FIREFOX_WEBKIT_UNAVAILABLE",
-  "remoteValidation": "PENDING",
+  "localValidation": "ORIGINAL_FULL_LOCAL_RUN_NOT_RECOVERED",
+  "remoteValidation": "PASS_77_GROUPS_FROM_MANDATORY_GATES",
   "previousAcceptedCommit": "71b244b7594b5bae1f5042d1248bcf5fa4a50a64",
-  "competitiveScoring": "PROVISIONAL_BY_USER_REQUEST"
+  "competitiveScoring": "PROVISIONAL_BY_USER_REQUEST",
+  "candidateCommit": "c3c2ebeb9aaaf7df57481fdefadabf93292d66b3",
+  "localRecoveryValidation": "evidence/local-recovery-validation.json"
 }

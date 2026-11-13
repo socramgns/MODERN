@@ -1,0 +1,123 @@
+{
+  "schema": "ygo-scenario-examples-tests/v1",
+  "pass": true,
+  "total": 29,
+  "tests": [
+    {
+      "name": "Twenty-one self-contained examples preserve original IDs and advertise replacement and declared-history scope",
+      "pass": true
+    },
+    {
+      "name": "Each example has two valid physical forty-card decks with five-card openings and remaining order",
+      "pass": true
+    },
+    {
+      "name": "get and list return fresh copies, without changing the active baraja",
+      "pass": true
+    },
+    {
+      "name": "Unknown or prototype-like example identifiers are rejected",
+      "pass": true
+    },
+    {
+      "name": "Spark example executes one protection and two real attacks, preserving both damage payments and fresh replay",
+      "pass": true
+    },
+    {
+      "name": "Spirit example keeps the Ashuna cost banished while denying its summon, without assuming prior Synchro history",
+      "pass": true
+    },
+    {
+      "name": "Invoked example reaches the advertised physical field and recovery through registered manual actions",
+      "pass": true
+    },
+    {
+      "name": "Swordsoul guide performs its seven physical steps and draws before the search shuffles",
+      "pass": true
+    },
+    {
+      "name": "Branded guide uses Deck materials and a separate physical discard in two steps",
+      "pass": true
+    },
+    {
+      "name": "Tenyi guide spends the Ashuna banish and Shaman discard while reviving its actually Link Summoned Monk",
+      "pass": true
+    },
+    {
+      "name": "Salamangreat guide distinguishes declining Roar Set from recovering Roar with reincarnated Wolf",
+      "pass": true
+    },
+    {
+      "name": "Roar guide resolves the physical Counter Trap chain before using Fusion materials",
+      "pass": true
+    },
+    {
+      "name": "Declining the own Roar counter leaves Fusion materials in hand and prevents Mechaba",
+      "pass": true
+    },
+    {
+      "name": "Roar example does not invent a counter from a Trap set this turn or without the own Link",
+      "pass": true
+    },
+    {
+      "name": "Crow guide keeps both hand costs in GY and preserves Aleister for a second physical Mechaba",
+      "pass": true
+    },
+    {
+      "name": "Crow guide without Mechaba pays the same discard and removes the material needed by Invocation",
+      "pass": true
+    },
+    {
+      "name": "Droll guide opens only after the physical search and preserves both costs when Mechaba negates it",
+      "pass": true
+    },
+    {
+      "name": "Droll guide without response applies the symmetric lock and closes the old search window",
+      "pass": true
+    },
+    {
+      "name": "Field Spell guide replaces the prior field before the counter chain and reaches reincarnated Wolf with recovered Roar",
+      "pass": true
+    },
+    {
+      "name": "Field Spell guide without its Roar counter never restores the prior field after Mechaba negates Sanctuary",
+      "pass": true
+    },
+    {
+      "name": "Field Spell guide does not invent the own Roar counter from a card Set this turn",
+      "pass": true
+    },
+    {
+      "name": "load waits for both workbenches and initializes the chosen example without executing actions",
+      "pass": true
+    },
+    {
+      "name": "Every added example loads its declared initial state without autoplay or external fixture files",
+      "pass": true
+    },
+    {
+      "name": "Busy search or comparison is rejected before any deck change",
+      "pass": true
+    },
+    {
+      "name": "Failed readiness and missing APIs cannot partially import the baraja",
+      "pass": true
+    },
+    {
+      "name": "A custom banlist context is rejected before replacing the deck",
+      "pass": true
+    },
+    {
+      "name": "Skills or malformed Skills are rejected before replacing the deck",
+      "pass": true
+    },
+    {
+      "name": "Concurrent load calls are rejected while the first waits for readiness",
+      "pass": true
+    },
+    {
+      "name": "A rejected import releases the loading guard and never starts the laboratory",
+      "pass": true
+    }
+  ]
+}

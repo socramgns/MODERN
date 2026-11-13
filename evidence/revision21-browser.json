@@ -186,12 +186,12 @@
     "engine": "chromium",
     "version": "154.0.8037.57"
   },
-  "externalRequestsBlocked": 56,
+  "externalRequestsBlocked": 42,
   "limitations": [
     "Only Hayabusa Knight and Cyber Twin Dragon have a reviewed continuous second-attack profile; other attack patterns are not inferred.",
     "The built-in guide executes a real Normal Summon and two direct attacks; the separate Cyber Twin field is a declared assumption without prior Fusion proof.",
     "Impermanence uses a physical opponent hand copy and a registered activation; general battle priority and Damage Step chains remain outside scope.",
     "Mobile width is emulated; physical devices, full accessibility and competitive calibration remain unverified."
   ],
-  "elapsedSeconds": 40.08
+  "elapsedSeconds": 37.55
 }

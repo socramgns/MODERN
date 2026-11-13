@@ -7,103 +7,103 @@
       "id": "C01",
       "deliverable": "Entrega HTML única",
       "acceptance": "Abrir el archivo sin instalación; catálogo y cálculo incorporados.",
-      "status": "VERIFICADO_R20"
+      "status": "VERIFICADO_R21"
     },
     {
       "id": "C02",
       "deliverable": "Compilación y descarga",
       "acceptance": "Build reproducible, hash del HTML y bytes publicados/descargados iguales.",
-      "status": "VERIFICADO_R20"
+      "status": "VERIFICADO_R21"
     },
     {
       "id": "C03",
       "deliverable": "Catálogo técnico",
       "acceptance": "Fuente CDB fijada, integridad y procedencia contrastadas; incertidumbre explícita.",
-      "status": "VERIFICADO_R20"
+      "status": "VERIFICADO_R21"
     },
     {
       "id": "C04",
       "deliverable": "Editor y construcción",
       "acceptance": "Main, Extra, Side y Skills conservan cantidades y validación de construcción por formato.",
-      "status": "VERIFICADO_R20"
+      "status": "VERIFICADO_R21"
     },
     {
       "id": "C05",
       "deliverable": "Importación",
       "acceptance": "JSON/YDK y escenarios físicos se importan con validación y rechazo de entradas inválidas.",
-      "status": "VERIFICADO_R20"
+      "status": "VERIFICADO_R21"
     },
     {
       "id": "C06",
       "deliverable": "Exportación",
       "acceptance": "JSON/YDK e informes conservan lo que admite cada formato; las limitaciones de YDK se indican.",
-      "status": "VERIFICADO_R20"
+      "status": "VERIFICADO_R21"
     },
     {
       "id": "C07",
       "deliverable": "Estadísticas",
       "acceptance": "Cálculos base verificados y estadísticas desconocidas diferenciadas de cero y variable.",
-      "status": "VERIFICADO_R20"
+      "status": "VERIFICADO_R21"
     },
     {
       "id": "C08",
       "deliverable": "Probabilidad inicial",
       "acceptance": "Probabilidades y muestreo de mano inicial con supuestos, semilla y límites explícitos.",
-      "status": "VERIFICADO_R20"
+      "status": "VERIFICADO_R21"
     },
     {
       "id": "C09",
       "deliverable": "Estado físico y costes",
       "acceptance": "UID, propietario/controlador, inventario, costes y presupuestos se conservan en paquetes registrados.",
-      "status": "VERIFICADO_R20"
+      "status": "VERIFICADO_R21"
     },
     {
       "id": "C10",
       "deliverable": "Búsqueda y replay",
       "acceptance": "Búsqueda acotada y reproducción desde el origen rechazan costes/estados/historias falsificados.",
-      "status": "VERIFICADO_R20"
+      "status": "VERIFICADO_R21"
     },
     {
       "id": "C11",
       "deliverable": "Seis rutas de familias",
       "acceptance": "Los seis ejemplos de familias registradas alcanzan sus objetivos y se reproducen; no todas sus cartas.",
-      "status": "VERIFICADO_R20"
+      "status": "VERIFICADO_R21"
     },
     {
       "id": "C12",
       "deliverable": "Spark y Azure",
       "acceptance": "Synchro real, protección, historial, Reborn y ventanas registradas con sus restricciones.",
-      "status": "VERIFICADO_R20"
+      "status": "VERIFICADO_R21"
     },
     {
       "id": "C13",
       "deliverable": "Spirit",
       "acceptance": "Negación GY y resurrección de Spirit Link conservan costes, origen, uso y restricción continua.",
-      "status": "VERIFICADO_R20"
+      "status": "VERIFICADO_R21"
     },
     {
       "id": "C14",
       "deliverable": "Sunlight Wolf",
       "acceptance": "Geometría declarada, recuperación no dirigida, historial, usos por jugador y bloqueos de nombre.",
-      "status": "VERIFICADO_R20"
+      "status": "VERIFICADO_R21"
     },
     {
       "id": "C15",
       "deliverable": "Tres motores y archivo local",
       "acceptance": "CI completo y comprobación entre Chromium/Firefox/WebKit; entrega por archivo local verificada.",
-      "status": "VERIFICADO_R20"
+      "status": "VERIFICADO_R21"
     },
     {
       "id": "C16",
       "deliverable": "Albaz al invocarse Normal",
       "acceptance": "Descarte real y Fusión a perfiles Lubellion/Mirrorjade usando el propio Albaz y un material rival admitido.",
-      "status": "VERIFICADO_R20"
+      "status": "VERIFICADO_R21"
     },
     {
       "id": "C17",
       "deliverable": "Albaz tras Reborn",
       "acceptance": "Llegada real desde GY, propietario conservado, disparo pertinente, coste/negación/HOPT y replay.",
-      "status": "VERIFICADO_R20"
+      "status": "VERIFICADO_R21"
     },
     {
       "id": "C18",
@@ -133,7 +133,7 @@
       "id": "C22",
       "deliverable": "Ataques múltiples",
       "acceptance": "Presupuestos de ataques adicionales, objetivos y cambios de estado para perfiles registrados.",
-      "status": "PENDIENTE"
+      "status": "VERIFICADO_R21"
     },
     {
       "id": "C23",
@@ -193,17 +193,20 @@
       "id": "C32",
       "deliverable": "Puntuación provisional e importador",
       "acceptance": "Mantener puntuación estructural claramente provisional e importador de resultados reales; no exigir calibración que el usuario dejó provisional.",
-      "status": "VERIFICADO_R20"
+      "status": "VERIFICADO_R21"
     }
   ],
-  "revision": "2026.11-stable.20",
-  "buildId": "e4dc45b2fdd677c73e6933fe380f5ff036c105d59accc26016656b55fcb30102",
-  "htmlSha256": "1bcd4ee98c2d8b694c7fd31b8c948fd4387ae94c0a944171f9dc1385aa8d9ac0",
-  "acceptedCandidateCommit": "6718b425b90f5db988593ab61a976c9a98626fd1",
-  "verifiedCriteria": 18,
+  "revision": "2026.11-stable.21",
+  "buildId": "8e2f493167e60a1752237885db37d72063514109118aa937707e93c9819c4908",
+  "htmlSha256": "3838c78ea58ec52af9019fbc5ad2f132db26b6022eb3d9c1ff939543d8894531",
+  "acceptedCandidateCommit": "c3c2ebeb9aaaf7df57481fdefadabf93292d66b3",
+  "verifiedCriteria": 19,
   "totalCriteria": 32,
-  "pendingCriteria": 14,
-  "unweightedClosedRatio": 0.5625,
+  "pendingCriteria": 13,
+  "unweightedClosedRatio": 0.59375,
   "wholeGameCoveragePercent": null,
-  "remainingEffortPercent": null
+  "remainingEffortPercent": null,
+  "newlyVerifiedCriteria": [
+    "C22"
+  ]
 }

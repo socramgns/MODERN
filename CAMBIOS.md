@@ -1,6 +1,6 @@
 # Cambios · revisión 21
 
-VALIDACION_R21_PENDIENTE
+La revisión 21 queda aceptada por la ejecución remota del commit `c3c2ebeb9aaaf7df57481fdefadabf93292d66b3`: el [workflow de GitHub Actions](https://github.com/socramgns/MODERN/actions/runs/42440271007) completó los diez pasos obligatorios, incluida la batería de **77 grupos** y la comprobación estricta entre Chromium, Firefox y WebKit. El recuento se contrasta con el runner versionado; no se descargaron los informes remotos individuales. Las fuentes incluyen **123 archivos JavaScript** y se conservan **21 ejemplos**. Build `8e2f493167e60a1752237885db37d72063514109118aa937707e93c9819c4908`; SHA-256 `3838c78ea58ec52af9019fbc5ad2f132db26b6022eb3d9c1ff939543d8894531`; tamaño **7.165.831 bytes**. La recuperación actual reprodujo el HTML y aprobó **86 casos Node**, **29 casos de escenarios** y **39 comprobaciones GUI**. El informe completo local R21 no se recuperó al reemplazarse el ejecutor: se registra como no disponible, sin atribuirle resultados. La evidencia R20 original permanece íntegra en `evidence/history/revision20`. Las 30 comprobaciones previas de teclado/foco y la auditoría previa siguen vinculadas a los mismos bytes; no se presentan como ejecuciones nuevas. La puntuación continúa provisional; C30 y C31 siguen pendientes.
 
 - Presupuesto físico de dos ataques para Hayabusa Knight y Cyber Twin Dragon; el resto conserva un ataque.
 - Gasto por declaración, negación sin reembolso, nueva estancia y turno; se conserva el bloqueo de posición después de atacar.

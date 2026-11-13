@@ -1,12 +1,11 @@
 {
   "schema": "ygo-node-source-suite-evidence/v1",
-  "pass": true,
   "buildId": "8e2f493167e60a1752237885db37d72063514109118aa937707e93c9819c4908",
   "htmlSha256": "3838c78ea58ec52af9019fbc5ad2f132db26b6022eb3d9c1ff939543d8894531",
   "artifactMode": "SOURCE_NODE_SUITE",
+  "executionEnvironment": "RECOVERED_LOCAL_NODE_SOURCE_RUN",
   "testFile": "tests/multiple_attacks.cjs",
   "testFileSha256": "703e90d59478a4e8a7cbc712bd4fa6f2a1876179c7297b3be7100b1ac4cfdc52",
-  "meaning": "Focused local source cases before complete remote validation; absent local engines remain pending.",
   "result": {
     "schema": "ygo-multiple-attacks-source-tests/v1",
     "pass": true,
@@ -1161,5 +1160,7 @@
       "Attack packets remain atomic and do not claim general Damage Step priority.",
       "Explicit QA-only counter/movement/legacy microstates are not accepted replay histories."
     ]
-  }
+  },
+  "meaning": "86 source cases repeated in the recovered executor; complete release acceptance is independently established by exact-candidate CI.",
+  "pass": true
 }
