@@ -1,0 +1,172 @@
+{
+  "schema": "ygo-incomplete-full-run-observation/v1",
+  "candidateCommit": "07aca73835ca4ce326279f9b36d3f8b45d6a1c75",
+  "buildId": "c78465e4db220a3ce147c5969d31b4ff221263013ac25ca700ef3d5ad784d375",
+  "pass": false,
+  "complete": false,
+  "status": "INTERRUPTED_RUN_SESSION_NOT_AVAILABLE_AFTER_ENVIRONMENT_CONTEXT_CHANGE",
+  "completedGroupsObserved": [
+    {
+      "name": "release6_in_browser",
+      "pass": true
+    },
+    {
+      "name": "laboratory_usability",
+      "pass": true
+    },
+    {
+      "name": "local_file_delivery",
+      "pass": false
+    },
+    {
+      "name": "registered_response_chains",
+      "pass": true
+    },
+    {
+      "name": "response_windows",
+      "pass": true
+    },
+    {
+      "name": "new_card_effects",
+      "pass": true
+    },
+    {
+      "name": "official_context_at_build",
+      "pass": true
+    },
+    {
+      "name": "search_horizons",
+      "pass": true
+    },
+    {
+      "name": "catalogue_expansion",
+      "pass": true
+    },
+    {
+      "name": "draw_uncertainty",
+      "pass": true
+    },
+    {
+      "name": "draw_continuation",
+      "pass": true
+    },
+    {
+      "name": "data_quality",
+      "pass": true
+    },
+    {
+      "name": "deck_identity_review",
+      "pass": true
+    },
+    {
+      "name": "monster_reborn",
+      "pass": true
+    },
+    {
+      "name": "stardust_synchro",
+      "pass": true
+    },
+    {
+      "name": "azure_eyes",
+      "pass": true
+    },
+    {
+      "name": "spirit_revival",
+      "pass": true
+    },
+    {
+      "name": "wolf_revival",
+      "pass": true
+    },
+    {
+      "name": "albaz_fusion",
+      "pass": true
+    },
+    {
+      "name": "multiple_attacks",
+      "pass": true
+    },
+    {
+      "name": "flip_effects",
+      "pass": true
+    },
+    {
+      "name": "unresolved_source_audit",
+      "pass": true
+    },
+    {
+      "name": "official_documents",
+      "pass": true
+    },
+    {
+      "name": "duel_phases",
+      "pass": true
+    },
+    {
+      "name": "physical_responses",
+      "pass": true
+    },
+    {
+      "name": "expanded_archetypes",
+      "pass": true
+    },
+    {
+      "name": "blue_eyes_duel",
+      "pass": true
+    },
+    {
+      "name": "blue_eyes_protection_and_gy",
+      "pass": true
+    },
+    {
+      "name": "mechaba_spell_activations",
+      "pass": true
+    },
+    {
+      "name": "mechaba_monster_zones",
+      "pass": false
+    },
+    {
+      "name": "mechaba_quick_hand",
+      "pass": false
+    },
+    {
+      "name": "field_spell_activations",
+      "pass": false
+    },
+    {
+      "name": "normal_trap_activations",
+      "pass": false
+    },
+    {
+      "name": "compulsory_evacuation",
+      "pass": true
+    },
+    {
+      "name": "typed_field_goals",
+      "pass": true
+    },
+    {
+      "name": "goal_progress",
+      "pass": false
+    },
+    {
+      "name": "mechaba_official_references",
+      "pass": true
+    },
+    {
+      "name": "card_action_coverage",
+      "pass": true
+    },
+    {
+      "name": "builtin_scenarios",
+      "pass": true
+    },
+    {
+      "name": "expanded_examples_in_browser",
+      "pass": false
+    }
+  ],
+  "meaning": "Only completed log rows are reported. No full-suite result is fabricated. Confirmed non-field registry contamination and null-state bug require a superseding candidate.",
+  "unfinishedGroupObserved": "release8_in_browser"
+}

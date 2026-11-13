@@ -1,0 +1,170 @@
+{
+  "schema": "ygo-field-spell-activation-tests/v1",
+  "pass": false,
+  "total": 39,
+  "tests": [
+    {
+      "name": "Capabilities add exactly two Field Spell activations without changing prior registries",
+      "pass": false,
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n16 !== 15\n\n    at /workspace/MODERN/tests/field_spell_activations.cjs:144:12\n    at test (/workspace/MODERN/tests/field_spell_activations.cjs:132:17)\n    at /workspace/MODERN/tests/field_spell_activations.cjs:136:9"
+    },
+    {
+      "name": "A successful Field Spell remains in the separate Field Zone: 24382602",
+      "pass": true
+    },
+    {
+      "name": "Mechaba pays a physical Spell hand cost and banishes the newly activated Field Spell: 24382602",
+      "pass": true
+    },
+    {
+      "name": "Replacement remains sent by rule after Mechaba negation: 24382602/24382602/true",
+      "pass": true
+    },
+    {
+      "name": "Replacement remains sent by rule after Mechaba negation: 24382602/24382602/false",
+      "pass": true
+    },
+    {
+      "name": "Replacement remains sent by rule after Mechaba negation: 1295111/24382602/true",
+      "pass": true
+    },
+    {
+      "name": "Replacement remains sent by rule after Mechaba negation: 1295111/24382602/false",
+      "pass": true
+    },
+    {
+      "name": "A successful Field Spell remains in the separate Field Zone: 1295111",
+      "pass": true
+    },
+    {
+      "name": "Mechaba pays a physical Spell hand cost and banishes the newly activated Field Spell: 1295111",
+      "pass": true
+    },
+    {
+      "name": "Replacement remains sent by rule after Mechaba negation: 24382602/1295111/true",
+      "pass": true
+    },
+    {
+      "name": "Replacement remains sent by rule after Mechaba negation: 24382602/1295111/false",
+      "pass": true
+    },
+    {
+      "name": "Replacement remains sent by rule after Mechaba negation: 1295111/1295111/true",
+      "pass": true
+    },
+    {
+      "name": "Replacement remains sent by rule after Mechaba negation: 1295111/1295111/false",
+      "pass": true
+    },
+    {
+      "name": "Replacement and staging are recorded before the opposing response resolves",
+      "pass": true
+    },
+    {
+      "name": "Replacing one player Field Spell leaves the opposing Field Zone intact",
+      "pass": true
+    },
+    {
+      "name": "Five occupied regular Spell/Trap columns do not block the separate Field Zone: 24382602",
+      "pass": true
+    },
+    {
+      "name": "Five occupied regular Spell/Trap columns do not block the separate Field Zone: 1295111",
+      "pass": true
+    },
+    {
+      "name": "A real set Impermanence column lock does not negate a Field Spell activation",
+      "pass": true
+    },
+    {
+      "name": "Negating only an activation effect does not remove a successfully activated Field Spell",
+      "pass": true
+    },
+    {
+      "name": "Mechaba cannot pay a Monster instead of the required Spell cost",
+      "pass": true
+    },
+    {
+      "name": "FIRST_ELIGIBLE forces the valid Mechaba response but CHOICE_BRANCHES preserves passing",
+      "pass": true
+    },
+    {
+      "name": "Roar negates the Field Spell card activation and sends its destroyed card to GY: 24382602",
+      "pass": true
+    },
+    {
+      "name": "Roar negates the Field Spell card activation and sends its destroyed card to GY: 1295111",
+      "pass": true
+    },
+    {
+      "name": "A prior Spark shield does not prevent replacement of the old Field Spell",
+      "pass": true
+    },
+    {
+      "name": "A second physical copy of Mausoleum can be activated in the same turn without inventing a card-activation limit",
+      "pass": true
+    },
+    {
+      "name": "Replacing Mausoleum does not reset the global additional Normal Summon allowance",
+      "pass": true
+    },
+    {
+      "name": "A resolved Mausoleum ATK and DEF gain survives replacement of its Field Spell source",
+      "pass": true
+    },
+    {
+      "name": "Replacing Sanctuary does not reset its globally shared reincarnation allowance",
+      "pass": true
+    },
+    {
+      "name": "Roar countering Mechaba restores the new Field Spell without restoring the old one",
+      "pass": true
+    },
+    {
+      "name": "Two opposing Roar counters restore Mechaba resolution in LIFO order while replacement remains paid by rule",
+      "pass": true
+    },
+    {
+      "name": "A Counter Trap countering the opposing root Roar restores Field Spell resolution",
+      "pass": true
+    },
+    {
+      "name": "An activation-negated Mechaba kept by Spark can activate again after the Field Spell packet",
+      "pass": true
+    },
+    {
+      "name": "Field Spell effects already on the field are not mistaken for card activations",
+      "pass": true
+    },
+    {
+      "name": "Sanctuary is an admitted physical Spell hand cost for the registered Mechaba packet",
+      "pass": true
+    },
+    {
+      "name": "An unreviewed previous Field Spell blocks this registered replacement before mutation",
+      "pass": true
+    },
+    {
+      "name": "An unreviewed departure redirect is not silently applied to Field Zone replacement",
+      "pass": true
+    },
+    {
+      "name": "Forged actors, cost identity and Field Spell packet claims are rejected atomically",
+      "pass": true
+    },
+    {
+      "name": "Fresh replay rejects altered pre-cost origins, replacement descriptors, staging and response payments",
+      "pass": true
+    },
+    {
+      "name": "Bounded search discovers a physical Field Spell negation and verifies its replay",
+      "pass": true
+    }
+  ],
+  "limitations": [
+    "Only Mausoleum of White and Salamangreat Sanctuary card activations and reviewed previous Field Spells are registered.",
+    "Declared initial fields are physical assumptions, not certified preceding summon histories.",
+    "The QA_FIELD_EFFECT_ONLY provider is a marked test fixture for effect-versus-activation cleanup, not an implemented TCG card or product response.",
+    "Field Spell effect activations, arbitrary priority, Trap Card coverage and universal rulings remain outside this extension."
+  ]
+}

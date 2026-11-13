@@ -1,0 +1,10 @@
+{
+  "schema": "ygo-preserved-focused-report/v1",
+  "source": "tests/flip-effects-results.json",
+  "archivedAt": "evidence/history/revision22-first-focused/flip-effects-results.json",
+  "sha256": "7d0a84d0cf8b07fffa121b247f9458124b3cc9b19a4864d23b11c426d350070c",
+  "bytes": 37936,
+  "pass": true,
+  "total": 60,
+  "reason": "Preserve first passing focused report before null-state and registry regression fixes; later validation has different source identity."
+}

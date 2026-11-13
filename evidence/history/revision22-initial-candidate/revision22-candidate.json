@@ -1,0 +1,28 @@
+{
+  "schema": "ygo-revision-candidate/v1",
+  "revision": "2026.11-stable.22",
+  "buildId": "c78465e4db220a3ce147c5969d31b4ff221263013ac25ca700ef3d5ad784d375",
+  "htmlSha256": "a2bd1fcadc52b4d434ecc027647e021496918d30c42ce90885e6419ca642989a",
+  "bytes": 7191776,
+  "sourceJavaScriptFiles": 124,
+  "includedExampleCount": 22,
+  "requiredRunnerGroups": 79,
+  "requiredCommands": 77,
+  "pass": null,
+  "phase": "FOCUSED_VALIDATION_PASSED_FULL_RUN_IN_PROGRESS",
+  "previousAcceptedCommit": "5d1a44c4bca27ec81c78983bfa29a969813a15a8",
+  "workflowUnchangedFromPredecessor": true,
+  "competitiveScoring": "PROVISIONAL_BY_USER_REQUEST",
+  "generalDamageStepVerified": false,
+  "generalSEGOCVerified": false,
+  "officialTcgRulingCertified": false,
+  "createdAt": "2026-11-13T18:45:56.111668+00:00",
+  "focusedValidation": {
+    "nodePass": true,
+    "nodeCases": 60,
+    "browserPass": true,
+    "browserChecks": 30,
+    "independentAuditPass": true,
+    "independentAuditChecks": 9
+  }
+}

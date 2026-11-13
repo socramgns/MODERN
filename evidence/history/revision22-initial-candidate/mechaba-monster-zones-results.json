@@ -1,0 +1,145 @@
+{
+  "schema": "ygo-mechaba-monster-zones-tests/v1",
+  "pass": false,
+  "total": 33,
+  "tests": [
+    {
+      "name": "The non-field registry preserves thirteen handlers and adds the two no-OPT hand effects",
+      "pass": false,
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n16 !== 15\n\n    at /workspace/MODERN/tests/mechaba_monster_zones.cjs:24:190\n    at test (/workspace/MODERN/tests/mechaba_monster_zones.cjs:22:41)\n    at /workspace/MODERN/tests/mechaba_monster_zones.cjs:24:8"
+    },
+    {
+      "name": "Mechaba negates the activated Tenyi hand summon for exact identity 87052196",
+      "pass": true
+    },
+    {
+      "name": "Mechaba negates the activated Tenyi hand summon for exact identity 98159737",
+      "pass": true
+    },
+    {
+      "name": "Mechaba negates the activated Tenyi hand summon for exact identity 23431858",
+      "pass": true
+    },
+    {
+      "name": "Mechaba negates the activated Tenyi hand summon for exact identity 24557335",
+      "pass": true
+    },
+    {
+      "name": "A second physical Tenyi copy cannot bypass its per-name USE restriction after activation negation",
+      "pass": true
+    },
+    {
+      "name": "Ashuna hand self-banish cost remains paid without a second Mechaba banish",
+      "pass": true
+    },
+    {
+      "name": "Ashuna gy self-banish cost remains paid without a second Mechaba banish",
+      "pass": true
+    },
+    {
+      "name": "TENYI_ADHARA_RECOVER captures hand before its source banish cost",
+      "pass": true
+    },
+    {
+      "name": "TENYI_ADHARA_RECOVER captures gy before its source banish cost",
+      "pass": true
+    },
+    {
+      "name": "TENYI_VISHUDA_BOUNCE captures hand before its source banish cost",
+      "pass": true
+    },
+    {
+      "name": "TENYI_VISHUDA_BOUNCE captures gy before its source banish cost",
+      "pass": true
+    },
+    {
+      "name": "Spinny activates in hand and remains discarded in GY when Mechaba negates it",
+      "pass": true
+    },
+    {
+      "name": "Gazelle hand trigger is banished from hand without summoning or creating its send trigger",
+      "pass": true
+    },
+    {
+      "name": "Spinny GY revival is negated and its source is banished from the same GY location",
+      "pass": true
+    },
+    {
+      "name": "Shthana hand activation retains its banish cost and cannot revive or destroy after negation",
+      "pass": true
+    },
+    {
+      "name": "Shthana gy activation retains its banish cost and cannot revive or destroy after negation",
+      "pass": true
+    },
+    {
+      "name": "Ancients End Phase activation is negated without summoning or consuming an activation count",
+      "pass": true
+    },
+    {
+      "name": "Ancients recovery still pays its own GY banish and consumes USE when Mechaba negates it",
+      "pass": true
+    },
+    {
+      "name": "Longyuan hand activation retains its discard and USE but creates neither monster, Token nor lock",
+      "pass": true
+    },
+    {
+      "name": "Longyuan GY trigger is negated without 1200 damage and its physical GY source is banished",
+      "pass": true
+    },
+    {
+      "name": "Spirit recognizes Longyuan GY burn as a single USE packet and negates without destruction",
+      "pass": true
+    },
+    {
+      "name": "Mechaba negates the separate known-order Mo Ye GY draw without drawing or changing the next card",
+      "pass": true
+    },
+    {
+      "name": "Unknown post-shuffle Mo Ye order is not invented and the compound Chixiao/Mo Ye packet remains excluded",
+      "pass": true
+    },
+    {
+      "name": "Roar countering Mechaba restores a Gazelle hand summon while preserving both response costs",
+      "pass": true
+    },
+    {
+      "name": "A second physical Roar restores Mechaba and its hand-source banish in LIFO order",
+      "pass": true
+    },
+    {
+      "name": "FIRST_ELIGIBLE forces a real Mechaba response while choice branches still permit passing",
+      "pass": true
+    },
+    {
+      "name": "No Monster hand cost means no Mechaba response to a registered hand activation",
+      "pass": true
+    },
+    {
+      "name": "Veiler and Imperm do not acquire hand/GY windows merely because Mechaba now has them",
+      "pass": true
+    },
+    {
+      "name": "Normal Summons and unregistered hand effects are excluded by the explicit packet registry",
+      "pass": true
+    },
+    {
+      "name": "Bounded search discovers a replay-verified physical hand-source negation",
+      "pass": true
+    },
+    {
+      "name": "Forged source identity, zone, actor and hand cost fail atomically",
+      "pass": true
+    },
+    {
+      "name": "Fresh replay rejects edited pre-cost origin, send cost and same-location banish evidence",
+      "pass": true
+    }
+  ],
+  "limitations": [
+    "Registered packet coverage only; the two no-OPT Crow/Droll hand packets have their own focused suite, and unregistered monster effects remain outside this extension.",
+    "The separate Mo Ye draw still requires the known order supported by its handler; no post-shuffle draw is invented.",
+    "Supporting Japanese database FAQ is explicitly scoped and does not certify all TCG rulings."
+  ]
+}

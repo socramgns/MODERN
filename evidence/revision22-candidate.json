@@ -1,15 +1,15 @@
 {
   "schema": "ygo-revision-candidate/v1",
   "revision": "2026.11-stable.22",
-  "buildId": "c78465e4db220a3ce147c5969d31b4ff221263013ac25ca700ef3d5ad784d375",
-  "htmlSha256": "a2bd1fcadc52b4d434ecc027647e021496918d30c42ce90885e6419ca642989a",
-  "bytes": 7191776,
+  "buildId": "afe53b8932901869aae05b80e3605ca6cb18625ec7984e41484ce71bf212fa94",
+  "htmlSha256": "7ec0ed4d6bee8ef655445bc7831aa6f5ad9fd6db332722212abbc43d316c1b04",
+  "bytes": 7192465,
   "sourceJavaScriptFiles": 124,
   "includedExampleCount": 22,
   "requiredRunnerGroups": 79,
   "requiredCommands": 77,
   "pass": null,
-  "phase": "FOCUSED_VALIDATION_PASSED_FULL_RUN_IN_PROGRESS",
+  "phase": "CORRECTED_FOCUSED_VALIDATION_PASSED_FULL_RUN_IN_PROGRESS",
   "previousAcceptedCommit": "5d1a44c4bca27ec81c78983bfa29a969813a15a8",
   "workflowUnchangedFromPredecessor": true,
   "competitiveScoring": "PROVISIONAL_BY_USER_REQUEST",
@@ -19,10 +19,17 @@
   "createdAt": "2026-11-13T18:45:56.111668+00:00",
   "focusedValidation": {
     "nodePass": true,
-    "nodeCases": 60,
+    "nodeCases": 63,
     "browserPass": true,
     "browserChecks": 30,
     "independentAuditPass": true,
     "independentAuditChecks": 9
+  },
+  "supersedesCommit": "07aca73835ca4ce326279f9b36d3f8b45d6a1c75",
+  "correctiveFocusedValidation": {
+    "pass": true,
+    "suites": 6,
+    "cases": 240,
+    "meaning": "New tests and unchanged prior regressions; not a full-suite result."
   }
 }

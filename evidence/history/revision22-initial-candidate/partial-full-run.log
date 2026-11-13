@@ -1,0 +1,441 @@
+RUN release6_in_browser
+release6_in_browser PASS 
+RUN laboratory_usability
+laboratory_usability PASS 
+RUN local_file_delivery
+local_file_delivery FAIL {"pass": false, "complete": false, "browsers": [{"engine": "firefox", "status": "UNAVAILABLE"}]}
+
+Task was destroyed but it is pending!
+task: <Task cancelling name='Task-3' coro=<Connection.run.<locals>.init() running at /opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/playwright/_impl/_connection.py:344> wait_for=<Future finished result=None>>
+Future exception was never retrieved
+future: <Future finished exception=TargetClosedError('Target page, context or browser has been closed')>
+playwright._impl._errors.TargetClosedError: Target page, context or browser has been closed
+
+RUN registered_response_chains
+registered_response_chains PASS 
+RUN response_windows
+response_windows PASS 
+RUN new_card_effects
+new_card_effects PASS 
+RUN official_context_at_build
+official_context_at_build PASS 
+RUN search_horizons
+search_horizons PASS 
+RUN catalogue_expansion
+catalogue_expansion PASS 
+RUN draw_uncertainty
+draw_uncertainty PASS 
+RUN draw_continuation
+draw_continuation PASS 
+RUN data_quality
+data_quality PASS 
+RUN deck_identity_review
+deck_identity_review PASS 
+RUN monster_reborn
+monster_reborn PASS 
+RUN stardust_synchro
+stardust_synchro PASS 
+RUN azure_eyes
+azure_eyes PASS 
+RUN spirit_revival
+spirit_revival PASS 
+RUN wolf_revival
+wolf_revival PASS 
+RUN albaz_fusion
+albaz_fusion PASS 
+RUN multiple_attacks
+multiple_attacks PASS 
+RUN flip_effects
+flip_effects PASS 
+RUN unresolved_source_audit
+unresolved_source_audit PASS 
+RUN official_documents
+official_documents PASS 
+RUN duel_phases
+duel_phases PASS 
+RUN physical_responses
+physical_responses PASS 
+RUN expanded_archetypes
+expanded_archetypes PASS 
+RUN blue_eyes_duel
+blue_eyes_duel PASS 
+RUN blue_eyes_protection_and_gy
+blue_eyes_protection_and_gy PASS 
+RUN mechaba_spell_activations
+mechaba_spell_activations PASS 
+RUN mechaba_monster_zones
+mechaba_monster_zones FAIL ount",
+      "pass": true
+    },
+    {
+      "name": "Ancients recovery still pays its own GY banish and consumes USE when Mechaba negates it",
+      "pass": true
+    },
+    {
+      "name": "Longyuan hand activation retains its discard and USE but creates neither monster, Token nor lock",
+      "pass": true
+    },
+    {
+      "name": "Longyuan GY trigger is negated without 1200 damage and its physical GY source is banished",
+      "pass": true
+    },
+    {
+      "name": "Spirit recognizes Longyuan GY burn as a single USE packet and negates without destruction",
+      "pass": true
+    },
+    {
+      "name": "Mechaba negates the separate known-order Mo Ye GY draw without drawing or changing the next card",
+      "pass": true
+    },
+    {
+      "name": "Unknown post-shuffle Mo Ye order is not invented and the compound Chixiao/Mo Ye packet remains excluded",
+      "pass": true
+    },
+    {
+      "name": "Roar countering Mechaba restores a Gazelle hand summon while preserving both response costs",
+      "pass": true
+    },
+    {
+      "name": "A second physical Roar restores Mechaba and its hand-source banish in LIFO order",
+      "pass": true
+    },
+    {
+      "name": "FIRST_ELIGIBLE forces a real Mechaba response while choice branches still permit passing",
+      "pass": true
+    },
+    {
+      "name": "No Monster hand cost means no Mechaba response to a registered hand activation",
+      "pass": true
+    },
+    {
+      "name": "Veiler and Imperm do not acquire hand/GY windows merely because Mechaba now has them",
+      "pass": true
+    },
+    {
+      "name": "Normal Summons and unregistered hand effects are excluded by the explicit packet registry",
+      "pass": true
+    },
+    {
+      "name": "Bounded search discovers a replay-verified physical hand-source negation",
+      "pass": true
+    },
+    {
+      "name": "Forged source identity, zone, actor and hand cost fail atomically",
+      "pass": true
+    },
+    {
+      "name": "Fresh replay rejects edited pre-cost origin, send cost and same-location banish evidence",
+      "pass": true
+    }
+  ],
+  "limitations": [
+    "Registered packet coverage only; the two no-OPT Crow/Droll hand packets have their own focused suite, and unregistered monster effects remain outside this extension.",
+    "The separate Mo Ye draw still requires the known order supported by its handler; no post-shuffle draw is invented.",
+    "Supporting Japanese database FAQ is explicitly scoped and does not certify all TCG rulings."
+  ]
+}
+
+
+RUN mechaba_quick_hand
+mechaba_quick_hand FAIL he searched card or applying a lock",
+      "pass": true
+    },
+    {
+      "name": "The pinned TCG snapshot rejects a fixture with two Droll copies",
+      "pass": true
+    },
+    {
+      "name": "A negated Droll closes its old search window even if a test fixture returns the same physical UID",
+      "pass": true
+    },
+    {
+      "name": "The same Droll UID can use a new Sage search after a marked test-only recovery, without an invented OPT",
+      "pass": true
+    },
+    {
+      "name": "A resolved Droll lock blocks redundant activation after a marked recovery of its one physical copy",
+      "pass": true
+    },
+    {
+      "name": "FIRST_ELIGIBLE can force Mechaba at the real Droll response window",
+      "pass": true
+    },
+    {
+      "name": "Roar negates Droll without destroying the source that paid its hand-to-GY cost",
+      "pass": true
+    },
+    {
+      "name": "Roar countering Mechaba allows Droll to resolve while every paid hand card remains spent",
+      "pass": true
+    },
+    {
+      "name": "Droll actor zero uses an explicit physical opponent-search fixture with fresh replay",
+      "pass": true
+    },
+    {
+      "name": "Forged Crow origin, actor, target and response cost fail atomically",
+      "pass": true
+    },
+    {
+      "name": "Forged Droll event witness, actor and source identity fail atomically",
+      "pass": true
+    },
+    {
+      "name": "Fresh Crow replay rejects changed discard, target declaration and activation origin",
+      "pass": true
+    },
+    {
+      "name": "Fresh Droll replay rejects changed send cost, event witness and activation origin",
+      "pass": true
+    },
+    {
+      "name": "Bounded search discovers the physical Mechaba-negated Crow branch and replays it",
+      "pass": true
+    }
+  ],
+  "limitations": [
+    "The actor-zero Droll regression uses an explicit test-only physical opponent-search provider; it does not claim mirrored product family routes.",
+    "Repeat-use Droll regressions return the same UID through a marked test-only recovery provider. This is not a claimed TCG-legal combo or an implemented recovery effect. The actual snapshot and its one-copy Droll limit are unchanged.",
+    "Droll has no per-turn use limit, but an old search window closes after resolving a packet; arbitrary same-chain Droll counter-responses remain outside scope.",
+    "Registered hand effects, matching physical costs and bounded Mechaba/Roar chains only; no universal priority or competitive certification."
+  ]
+}
+
+
+RUN field_spell_activations
+field_spell_activations FAIL  without inventing a card-activation limit",
+      "pass": true
+    },
+    {
+      "name": "Replacing Mausoleum does not reset the global additional Normal Summon allowance",
+      "pass": true
+    },
+    {
+      "name": "A resolved Mausoleum ATK and DEF gain survives replacement of its Field Spell source",
+      "pass": true
+    },
+    {
+      "name": "Replacing Sanctuary does not reset its globally shared reincarnation allowance",
+      "pass": true
+    },
+    {
+      "name": "Roar countering Mechaba restores the new Field Spell without restoring the old one",
+      "pass": true
+    },
+    {
+      "name": "Two opposing Roar counters restore Mechaba resolution in LIFO order while replacement remains paid by rule",
+      "pass": true
+    },
+    {
+      "name": "A Counter Trap countering the opposing root Roar restores Field Spell resolution",
+      "pass": true
+    },
+    {
+      "name": "An activation-negated Mechaba kept by Spark can activate again after the Field Spell packet",
+      "pass": true
+    },
+    {
+      "name": "Field Spell effects already on the field are not mistaken for card activations",
+      "pass": true
+    },
+    {
+      "name": "Sanctuary is an admitted physical Spell hand cost for the registered Mechaba packet",
+      "pass": true
+    },
+    {
+      "name": "An unreviewed previous Field Spell blocks this registered replacement before mutation",
+      "pass": true
+    },
+    {
+      "name": "An unreviewed departure redirect is not silently applied to Field Zone replacement",
+      "pass": true
+    },
+    {
+      "name": "Forged actors, cost identity and Field Spell packet claims are rejected atomically",
+      "pass": true
+    },
+    {
+      "name": "Fresh replay rejects altered pre-cost origins, replacement descriptors, staging and response payments",
+      "pass": true
+    },
+    {
+      "name": "Bounded search discovers a physical Field Spell negation and verifies its replay",
+      "pass": true
+    }
+  ],
+  "limitations": [
+    "Only Mausoleum of White and Salamangreat Sanctuary card activations and reviewed previous Field Spells are registered.",
+    "Declared initial fields are physical assumptions, not certified preceding summon histories.",
+    "The QA_FIELD_EFFECT_ONLY provider is a marked test fixture for effect-versus-activation cleanup, not an implemented TCG card or product response.",
+    "Field Spell effect activations, arbitrary priority, Trap Card coverage and universal rulings remain outside this extension."
+  ]
+}
+
+
+RUN normal_trap_activations
+normal_trap_activations FAIL arture metadata and source identity are excluded by the exact core eligibility gate",
+      "pass": true
+    },
+    {
+      "name": "Forged actor, source, target and column are rejected without modifying the physical state",
+      "pass": true
+    },
+    {
+      "name": "Forged matching cost type, cost UID and counter provider cannot enter a registered response packet",
+      "pass": true
+    },
+    {
+      "name": "Fresh replay rejects altered Trap origin, Set status, column, target and recorded cleanup evidence",
+      "pass": true
+    },
+    {
+      "name": "Restoring a recorded before-state restores the same physical Set source and target without retaining later locks",
+      "pass": true
+    },
+    {
+      "name": "Bounded search finds the actual registered Trap transition and every resulting line replays freshly",
+      "pass": true
+    },
+    {
+      "name": "A mirrored blocked first Roar response preserves activation use and obeys the real prior Impermanence lock",
+      "pass": true
+    },
+    {
+      "name": "A different-column first Roar response preserves activation use and obeys the real prior Impermanence lock",
+      "pass": true
+    },
+    {
+      "name": "A blocked Roar counter to Mechaba retains the real Monster cost and correct root resolution",
+      "pass": true
+    },
+    {
+      "name": "A unblocked Roar counter to Mechaba retains the real Monster cost and correct root resolution",
+      "pass": true
+    },
+    {
+      "name": "A higher unblocked Roar can negate the activation of a column-blocked Roar without refunding either shared use",
+      "pass": true
+    },
+    {
+      "name": "A higher column-blocked Roar fails to negate a lower unblocked Roar while both cards and uses are consumed",
+      "pass": true
+    }
+  ],
+  "limitations": [
+    "The registered Normal Trap roots are Impermanence and Compulsory Evacuation Device; this suite preserves Impermanence and the separate CED suite checks its return rules.",
+    "The catalogue and fixture fields are technical data, not full TCG ruling or prior-history certification.",
+    "Target-immunity, malformed-source, phase and pending-chain gate probes are explicitly un-replayed state probes. The all-five blocked-column case uses an explicitly marked QA-only aggregate lock fixture, not a physically certified five-copy route; other positive scenarios use actual physical cards and registered transitions.",
+    "General priority, arbitrary chains and Damage Step remain outside scope."
+  ]
+}
+
+
+RUN compulsory_evacuation
+compulsory_evacuation PASS 
+RUN typed_field_goals
+typed_field_goals PASS 
+RUN goal_progress
+goal_progress FAIL 
+    {
+      "name": "A physical identity present in contradictory face-up and Set rows is counted only once",
+      "pass": true
+    },
+    {
+      "name": "Exact booleans control visible and Set progress, including undeclared visibility",
+      "pass": true
+    },
+    {
+      "name": "Rival cards and own cards in hand, GY or banishment do not fill field requirements",
+      "pass": true
+    },
+    {
+      "name": "Legacy monster goals still require face-up monster zone membership",
+      "pass": true
+    },
+    {
+      "name": "Legacy recovered-hand keys remain visible and equal dual aliases are not counted twice",
+      "pass": true
+    },
+    {
+      "name": "State requirements report expected and actual values at both LP boundaries",
+      "pass": true
+    },
+    {
+      "name": "Absent state information stays unfulfilled rather than becoming a fabricated result",
+      "pass": false,
+      "error": "TypeError: Cannot read properties of null (reading 'pendingTriggers')\n    at Object.faithPending (flip-effects.js:12:29)\n    at Object.goalProgress (recommendations.js:96:88)\n    at Object.goalProgress (combo-workbench.js:33:57)\n    at assess (/workspace/MODERN/tests/goal_progress.cjs:31:68)\n    at /workspace/MODERN/tests/goal_progress.cjs:143:12\n    at test (/workspace/MODERN/tests/goal_progress.cjs:19:41)\n    at /workspace/MODERN/tests/goal_progress.cjs:140:8"
+    },
+    {
+      "name": "Returned progress is an independent snapshot and never mutates a frozen state or goal",
+      "pass": true
+    },
+    {
+      "name": "Progress has no competitive score, percentage, win-rate, certificate or autoplay result",
+      "pass": true
+    },
+    {
+      "name": "Resolving Sanctuary updates the required copy from missing to present with fresh replay",
+      "pass": true
+    },
+    {
+      "name": "The actual Roar counter moves one goal backward while allowing the Field goal to advance",
+      "pass": true
+    },
+    {
+      "name": "A negated Field activation remains missing and does not recover the replaced Field goal",
+      "pass": true
+    },
+    {
+      "name": "Recovering and physically Setting the same Roar updates the correct requirements",
+      "pass": true
+    },
+    {
+      "name": "Undo by a recorded before-state recomputes progress and preserves the independent snapshot",
+      "pass": true
+    },
+    {
+      "name": "Progress and matcher agree for every observed state in the registered four-step Field route",
+      "pass": true
+    }
+  ]
+}
+
+
+RUN mechaba_official_references
+mechaba_official_references PASS 
+RUN card_action_coverage
+card_action_coverage PASS 
+RUN builtin_scenarios
+builtin_scenarios PASS 
+RUN expanded_examples_in_browser
+expanded_examples_in_browser FAIL embedded_tutorials_boot_offline_with_expected_document_bytes PASS
+dynamic_example_menu_preserves_originals_and_lists_every_registered_tutorial PASS
+delivered_mechaba_references_show_three_official_faq_links_and_honest_ocg_scope PASS
+delivered_mechaba_reference_evidence_is_bound_to_build_without_new_transport_claim PASS
+delivered_mechaba_registry_contains_the_fifteen_reviewed_hand_and_gy_handlers FAIL
+delivered_mechaba_hand_packet_preserves_physical_cost_origin_and_fresh_replay PASS
+delivered_mechaba_gy_packet_preserves_physical_cost_origin_and_fresh_replay PASS
+swordsoul_loads_physical_deck_and_guide_without_autoplay PASS
+swordsoul_known_physical_draw_precedes_search_shuffle PASS
+swordsoul_seven_visible_actions_reach_two_synchros_and_real_damage PASS
+swordsoul_final_report_has_fresh_replay_and_provisional_score PASS
+branded_loads_physical_deck_and_guide_without_autoplay PASS
+branded_two_visible_actions_keep_the_real_discard_and_fusion_lock PASS
+branded_final_report_has_fresh_replay_and_provisional_score PASS
+tenyi_loads_physical_deck_and_guide_without_autoplay PASS
+tenyi_five_visible_actions_conserve_banish_discard_and_normal_summon PASS
+tenyi_final_report_has_fresh_replay_and_provisional_score PASS
+salamangreat_loads_physical_deck_and_guide_without_autoplay PASS
+salamangreat_eleven_visible_actions_recover_roar_and_preserve_spinny_banish PASS
+salamangreat_final_report_has_fresh_replay_and_provisional_score PASS
+roar_loads_physical_deck_and_guide_without_autoplay PASS
+roar_tutorial_preserves_explicit_physical_counter_response_policy PASS
+roar_counter_chain_reaches_mechaba_and_moves_both_real_traps_to_gy PASS
+roar_alternative_after_undo_preserves_fusion_materials_when_activation_is_negated PASS
+roar_final_report_has_fresh_replay_and_provisional_score PASS
+expanded_tutorials_raise_no_javascript_page_errors PASS
+compiled_artifact_unchanged_during_browser_test PASS
+{"pass": false, "checks": 27, "failed": ["delivered_mechaba_registry_contains_the_fifteen_reviewed_hand_and_gy_handlers"], "artifactMode": "DELIVERED_BYTES"}
+
+
+RUN release8_in_browser

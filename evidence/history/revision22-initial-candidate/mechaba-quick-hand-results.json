@@ -1,0 +1,126 @@
+{
+  "schema": "ygo-mechaba-quick-hand-tests/v1",
+  "pass": false,
+  "total": 28,
+  "tests": [
+    {
+      "name": "Crow and Droll register exact hand packets with NONE rather than invented per-turn usage",
+      "pass": false,
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n16 !== 15\n\n    at /workspace/MODERN/tests/mechaba_quick_hand.cjs:73:89\n    at test (/workspace/MODERN/tests/mechaba_quick_hand.cjs:63:42)\n    at /workspace/MODERN/tests/mechaba_quick_hand.cjs:72:8"
+    },
+    {
+      "name": "Mechaba negates player 0 Crow while preserving discard, hand origin and the GY target",
+      "pass": true
+    },
+    {
+      "name": "Mechaba negates player 1 Crow while preserving discard, hand origin and the GY target",
+      "pass": true
+    },
+    {
+      "name": "An unopposed Crow discards one physical source and banishes the selected physical target",
+      "pass": true
+    },
+    {
+      "name": "A second Crow remains usable after the first is negated and pays a separate single discard",
+      "pass": true
+    },
+    {
+      "name": "Crow supports the registered Battle window without inferring Damage Step",
+      "pass": true
+    },
+    {
+      "name": "FIRST_ELIGIBLE requires the available real Mechaba response to Crow",
+      "pass": true
+    },
+    {
+      "name": "Crow cannot activate without an opposing admitted physical GY target",
+      "pass": true
+    },
+    {
+      "name": "Mechaba cannot answer Crow without a matching physical Monster in hand",
+      "pass": true
+    },
+    {
+      "name": "Crow does not acquire Veiler, Impermanence or Spirit responses from its hand metadata",
+      "pass": true
+    },
+    {
+      "name": "Roar can negate Crow but does not destroy its discarded source in the GY",
+      "pass": true
+    },
+    {
+      "name": "Roar countering Mechaba restores Crow resolution while retaining both physical costs",
+      "pass": true
+    },
+    {
+      "name": "A second Roar restores Mechaba against Crow in reverse chain order",
+      "pass": true
+    },
+    {
+      "name": "Droll cannot activate without a newly registered search or effect draw window",
+      "pass": true
+    },
+    {
+      "name": "Mechaba negates Droll after a real Sage search without removing the searched card or applying a lock",
+      "pass": true
+    },
+    {
+      "name": "The pinned TCG snapshot rejects a fixture with two Droll copies",
+      "pass": true
+    },
+    {
+      "name": "A negated Droll closes its old search window even if a test fixture returns the same physical UID",
+      "pass": true
+    },
+    {
+      "name": "The same Droll UID can use a new Sage search after a marked test-only recovery, without an invented OPT",
+      "pass": true
+    },
+    {
+      "name": "A resolved Droll lock blocks redundant activation after a marked recovery of its one physical copy",
+      "pass": true
+    },
+    {
+      "name": "FIRST_ELIGIBLE can force Mechaba at the real Droll response window",
+      "pass": true
+    },
+    {
+      "name": "Roar negates Droll without destroying the source that paid its hand-to-GY cost",
+      "pass": true
+    },
+    {
+      "name": "Roar countering Mechaba allows Droll to resolve while every paid hand card remains spent",
+      "pass": true
+    },
+    {
+      "name": "Droll actor zero uses an explicit physical opponent-search fixture with fresh replay",
+      "pass": true
+    },
+    {
+      "name": "Forged Crow origin, actor, target and response cost fail atomically",
+      "pass": true
+    },
+    {
+      "name": "Forged Droll event witness, actor and source identity fail atomically",
+      "pass": true
+    },
+    {
+      "name": "Fresh Crow replay rejects changed discard, target declaration and activation origin",
+      "pass": true
+    },
+    {
+      "name": "Fresh Droll replay rejects changed send cost, event witness and activation origin",
+      "pass": true
+    },
+    {
+      "name": "Bounded search discovers the physical Mechaba-negated Crow branch and replays it",
+      "pass": true
+    }
+  ],
+  "limitations": [
+    "The actor-zero Droll regression uses an explicit test-only physical opponent-search provider; it does not claim mirrored product family routes.",
+    "Repeat-use Droll regressions return the same UID through a marked test-only recovery provider. This is not a claimed TCG-legal combo or an implemented recovery effect. The actual snapshot and its one-copy Droll limit are unchanged.",
+    "Droll has no per-turn use limit, but an old search window closes after resolving a packet; arbitrary same-chain Droll counter-responses remain outside scope.",
+    "Registered hand effects, matching physical costs and bounded Mechaba/Roar chains only; no universal priority or competitive certification."
+  ]
+}

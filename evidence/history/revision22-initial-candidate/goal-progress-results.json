@@ -1,0 +1,104 @@
+{
+  "schema": "ygo-goal-progress-tests/v1",
+  "pass": false,
+  "total": 24,
+  "tests": [
+    {
+      "name": "Recommendations expose state progress before a workbench or browser is present",
+      "pass": true
+    },
+    {
+      "name": "Both progress APIs reject empty, unknown, executable and malformed goal definitions",
+      "pass": true
+    },
+    {
+      "name": "All seventeen physical starting scenarios retain matcher and progress agreement",
+      "pass": true
+    },
+    {
+      "name": "The Field guide reports its actual initial card shortfalls without playing an action",
+      "pass": true
+    },
+    {
+      "name": "A declared initial Mausoleum and Set Roar satisfy the state without generating a replay",
+      "pass": true
+    },
+    {
+      "name": "Field Spells and ordinary Spell/Trap rows use the same own physical zone",
+      "pass": true
+    },
+    {
+      "name": "Canonical aliases group requested quantities while preserving the physical shortage",
+      "pass": true
+    },
+    {
+      "name": "Three required copies do not become satisfied by a duplicated physical UID",
+      "pass": true
+    },
+    {
+      "name": "A shared UID cannot satisfy both a hand requirement and a Set requirement",
+      "pass": true
+    },
+    {
+      "name": "A physical identity present in contradictory face-up and Set rows is counted only once",
+      "pass": true
+    },
+    {
+      "name": "Exact booleans control visible and Set progress, including undeclared visibility",
+      "pass": true
+    },
+    {
+      "name": "Rival cards and own cards in hand, GY or banishment do not fill field requirements",
+      "pass": true
+    },
+    {
+      "name": "Legacy monster goals still require face-up monster zone membership",
+      "pass": true
+    },
+    {
+      "name": "Legacy recovered-hand keys remain visible and equal dual aliases are not counted twice",
+      "pass": true
+    },
+    {
+      "name": "State requirements report expected and actual values at both LP boundaries",
+      "pass": true
+    },
+    {
+      "name": "Absent state information stays unfulfilled rather than becoming a fabricated result",
+      "pass": false,
+      "error": "TypeError: Cannot read properties of null (reading 'pendingTriggers')\n    at Object.faithPending (flip-effects.js:12:29)\n    at Object.goalProgress (recommendations.js:96:88)\n    at Object.goalProgress (combo-workbench.js:33:57)\n    at assess (/workspace/MODERN/tests/goal_progress.cjs:31:68)\n    at /workspace/MODERN/tests/goal_progress.cjs:143:12\n    at test (/workspace/MODERN/tests/goal_progress.cjs:19:41)\n    at /workspace/MODERN/tests/goal_progress.cjs:140:8"
+    },
+    {
+      "name": "Returned progress is an independent snapshot and never mutates a frozen state or goal",
+      "pass": true
+    },
+    {
+      "name": "Progress has no competitive score, percentage, win-rate, certificate or autoplay result",
+      "pass": true
+    },
+    {
+      "name": "Resolving Sanctuary updates the required copy from missing to present with fresh replay",
+      "pass": true
+    },
+    {
+      "name": "The actual Roar counter moves one goal backward while allowing the Field goal to advance",
+      "pass": true
+    },
+    {
+      "name": "A negated Field activation remains missing and does not recover the replaced Field goal",
+      "pass": true
+    },
+    {
+      "name": "Recovering and physically Setting the same Roar updates the correct requirements",
+      "pass": true
+    },
+    {
+      "name": "Undo by a recorded before-state recomputes progress and preserves the independent snapshot",
+      "pass": true
+    },
+    {
+      "name": "Progress and matcher agree for every observed state in the registered four-step Field route",
+      "pass": true
+    }
+  ]
+}

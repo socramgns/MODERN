@@ -1,0 +1,1248 @@
+{
+  "schema": "ygo-flip-effects-source-tests/v1",
+  "pass": true,
+  "total": 60,
+  "tests": [
+    {
+      "name": "Printed Faith identity is a real FLIP effect with known 300/400 stats",
+      "pass": true
+    },
+    {
+      "name": "Physical Flip Summon and mandatory recovery work for controller 0 MAIN 1",
+      "pass": true
+    },
+    {
+      "name": "Physical Flip Summon and mandatory recovery work for controller 0 MAIN 2",
+      "pass": true
+    },
+    {
+      "name": "Physical Flip Summon and mandatory recovery work for controller 1 MAIN 1",
+      "pass": true
+    },
+    {
+      "name": "Physical Flip Summon and mandatory recovery work for controller 1 MAIN 2",
+      "pass": true
+    },
+    {
+      "name": "Normal ATTACK of Faith consumes a real hand and summon budget without a FLIP trigger for 0",
+      "pass": true
+    },
+    {
+      "name": "Normal SET of Faith consumes a real hand and summon budget without a FLIP trigger for 0",
+      "pass": true
+    },
+    {
+      "name": "Normal ATTACK of Faith consumes a real hand and summon budget without a FLIP trigger for 1",
+      "pass": true
+    },
+    {
+      "name": "Normal SET of Faith consumes a real hand and summon budget without a FLIP trigger for 1",
+      "pass": true
+    },
+    {
+      "name": "Faith Set, two actual turn changes, Flip and recovery form one fresh replay",
+      "pass": true
+    },
+    {
+      "name": "Illegal Flip same-turn is rejected atomically (marker cases are QA only)",
+      "pass": true
+    },
+    {
+      "name": "Illegal Flip face-up is rejected atomically (marker cases are QA only)",
+      "pass": true
+    },
+    {
+      "name": "Illegal Flip inactive is rejected atomically (marker cases are QA only)",
+      "pass": true
+    },
+    {
+      "name": "Illegal Flip battle is rejected atomically (marker cases are QA only)",
+      "pass": true
+    },
+    {
+      "name": "Illegal Flip draw is rejected atomically (marker cases are QA only)",
+      "pass": true
+    },
+    {
+      "name": "Illegal Flip standby is rejected atomically (marker cases are QA only)",
+      "pass": true
+    },
+    {
+      "name": "Illegal Flip end is rejected atomically (marker cases are QA only)",
+      "pass": true
+    },
+    {
+      "name": "Illegal Flip manual-position is rejected atomically (marker cases are QA only)",
+      "pass": true
+    },
+    {
+      "name": "Illegal Flip attacked is rejected atomically (marker cases are QA only)",
+      "pass": true
+    },
+    {
+      "name": "Reviewed non-FLIP monster 89631139 flips without invented triggers or proper Extra history",
+      "pass": true
+    },
+    {
+      "name": "Reviewed non-FLIP monster 21015833 flips without invented triggers or proper Extra history",
+      "pass": true
+    },
+    {
+      "name": "Reviewed non-FLIP monster 74157028 flips without invented triggers or proper Extra history",
+      "pass": true
+    },
+    {
+      "name": "Aleister is excluded instead of silently dropping its own flip-face-up trigger",
+      "pass": true
+    },
+    {
+      "name": "Recovery selects the physical reviewed Spell 74063034 from its controller GY",
+      "pass": true
+    },
+    {
+      "name": "Recovery selects the physical reviewed Spell 83764718 from its controller GY",
+      "pass": true
+    },
+    {
+      "name": "Recovery selects the physical reviewed Spell 44362883 from its controller GY",
+      "pass": true
+    },
+    {
+      "name": "Mandatory zero-target activation is retained and cannot be declined",
+      "pass": true
+    },
+    {
+      "name": "Unreviewed-only Spell in own GY cannot become a fabricated no-target activation",
+      "pass": true
+    },
+    {
+      "name": "Reviewed and unreviewed Spells expose only the reviewed recovery choices",
+      "pass": true
+    },
+    {
+      "name": "Two physical Faith copies each activate and recover in the same turn without an invented HOPT",
+      "pass": true
+    },
+    {
+      "name": "Forged Faith activation without a real flip-derived pending is refused",
+      "pass": true
+    },
+    {
+      "name": "Prior effect negation still produces the mandatory activation and target (QA only)",
+      "pass": true
+    },
+    {
+      "name": "Reviewed Main Phase VEILER negates recovery after real activation and pays its own cost",
+      "pass": true
+    },
+    {
+      "name": "Reviewed Main Phase IMPERM negates recovery after real activation and pays its own cost",
+      "pass": true
+    },
+    {
+      "name": "Reviewed Main Phase CHIXIAO negates recovery after real activation and pays its own cost",
+      "pass": true
+    },
+    {
+      "name": "GY recovery is neither an Ash Deck-search effect nor a Spirit GY activation",
+      "pass": true
+    },
+    {
+      "name": "Battle reveals inactive controller 1 Faith, delays destruction until after recovery, and consumes damage and attack first",
+      "pass": true
+    },
+    {
+      "name": "Battle reveals inactive controller 0 Faith, delays destruction until after recovery, and consumes damage and attack first",
+      "pass": true
+    },
+    {
+      "name": "Battle zero-target Faith still opens its mandatory packet and then completes destruction",
+      "pass": true
+    },
+    {
+      "name": "Battle preflight excludes unsupported-only GY Spells instead of losing a mandatory trigger",
+      "pass": true
+    },
+    {
+      "name": "Surviving Faith resolves recovery and remains on the field after damage calculation",
+      "pass": true
+    },
+    {
+      "name": "Lethal damage ends the duel before the delayed FLIP activation",
+      "pass": true
+    },
+    {
+      "name": "Attack can reveal reviewed non-FLIP 21015833 atomically without a Faith packet",
+      "pass": true
+    },
+    {
+      "name": "Attack can reveal reviewed non-FLIP 74157028 atomically without a Faith packet",
+      "pass": true
+    },
+    {
+      "name": "After-damage-calculation Mechaba banishes marked Faith from the field after its real monster cost",
+      "pass": true
+    },
+    {
+      "name": "After-damage-calculation Roar negates and destroys marked Faith once before battle cleanup",
+      "pass": true
+    },
+    {
+      "name": "Registered Roar counter can negate Mechaba while preserving its cost and completing the original battle FLIP",
+      "pass": true
+    },
+    {
+      "name": "Unregistered Damage Step responses and every unrelated root action remain unavailable",
+      "pass": true
+    },
+    {
+      "name": "Corrupted battle packet identities, provenance and mandatory trigger records are rejected atomically (QA only)",
+      "pass": true
+    },
+    {
+      "name": "Source and target forgery cannot switch the controller, identity or target of a mandatory activation",
+      "pass": true
+    },
+    {
+      "name": "Fresh replay rejects a forged FLIP event, target, intermediate packet and premature final cleanup",
+      "pass": true
+    },
+    {
+      "name": "Bounded search cannot report a face-up Faith goal before its mandatory recovery is resolved",
+      "pass": true
+    },
+    {
+      "name": "Bounded battle search returns only completed battle packets and fresh replay witnesses",
+      "pass": true
+    },
+    {
+      "name": "Two identical physical GY Spells remain distinct target choices and recover only the chosen UID",
+      "pass": true
+    },
+    {
+      "name": "Borrowed Faith recovers from its controller GY and battle departure returns it to its physical owner (QA only)",
+      "pass": true
+    },
+    {
+      "name": "Goal progress explains the unresolved mandatory effect instead of treating a face-up Faith as complete",
+      "pass": true
+    },
+    {
+      "name": "Recommendation evaluation retains a replayable intermediate outcome but never recommends its unresolved goal",
+      "pass": true
+    },
+    {
+      "name": "Runtime action inventory reports Faith and basic Normal Flip as partial registered capabilities",
+      "pass": true
+    },
+    {
+      "name": "Removing the Flip runtime or its actual handlers cannot leave advertised Faith actions",
+      "pass": true
+    },
+    {
+      "name": "Recovery rechecks its selected target at resolution without retargeting (QA-only synthetic response)",
+      "pass": true
+    }
+  ],
+  "witnesses": [
+    {
+      "actionTypes": [
+        "DUEL_FLIP_SUMMON",
+        "DUEL_FLIP_FAITH_RECOVER"
+      ],
+      "events": [
+        {
+          "type": "FLIP_SUMMON",
+          "uid": "P0:main:31560081:1",
+          "player": 0,
+          "cardId": 31560081,
+          "turn": 2,
+          "fromPosition": "SET",
+          "position": "ATTACK",
+          "zoneIndex": 0,
+          "normalSummonConsumed": false,
+          "startsChain": false
+        },
+        {
+          "type": "FAITH_FLIP_TRIGGER_PENDING",
+          "sourceUid": "P0:main:31560081:1",
+          "uid": "P0:main:31560081:1",
+          "cardId": 31560081,
+          "player": 0,
+          "turn": 2,
+          "triggerId": "2:P0:main:31560081:1:1",
+          "origin": "FLIP_SUMMON",
+          "mandatory": true,
+          "activationZone": "monster",
+          "packetId": null
+        },
+        {
+          "type": "FLIP_EFFECT_ACTIVATION",
+          "effect": "DUEL_FLIP_FAITH_RECOVER",
+          "uid": "P0:main:31560081:1",
+          "sourceUid": "P0:main:31560081:1",
+          "player": 0,
+          "activationZone": "monster",
+          "mandatory": true,
+          "spellSpeed": 1,
+          "triggerId": "2:P0:main:31560081:1:1"
+        },
+        {
+          "type": "FAITH_RECOVER_SPELL",
+          "uid": "P0:main:74063034:1",
+          "targetUid": "P0:main:74063034:1",
+          "sourceUid": "P0:main:31560081:1",
+          "cardId": 74063034,
+          "player": 0,
+          "from": "gy",
+          "to": "hand",
+          "targeted": true,
+          "revealed": true
+        }
+      ],
+      "replayPass": true
+    },
+    {
+      "actionTypes": [
+        "DUEL_FLIP_SUMMON",
+        "DUEL_FLIP_FAITH_RECOVER"
+      ],
+      "events": [
+        {
+          "type": "FLIP_SUMMON",
+          "uid": "P0:main:31560081:1",
+          "player": 0,
+          "cardId": 31560081,
+          "turn": 2,
+          "fromPosition": "SET",
+          "position": "ATTACK",
+          "zoneIndex": 0,
+          "normalSummonConsumed": false,
+          "startsChain": false
+        },
+        {
+          "type": "FAITH_FLIP_TRIGGER_PENDING",
+          "sourceUid": "P0:main:31560081:1",
+          "uid": "P0:main:31560081:1",
+          "cardId": 31560081,
+          "player": 0,
+          "turn": 2,
+          "triggerId": "2:P0:main:31560081:1:1",
+          "origin": "FLIP_SUMMON",
+          "mandatory": true,
+          "activationZone": "monster",
+          "packetId": null
+        },
+        {
+          "type": "FLIP_EFFECT_ACTIVATION",
+          "effect": "DUEL_FLIP_FAITH_RECOVER",
+          "uid": "P0:main:31560081:1",
+          "sourceUid": "P0:main:31560081:1",
+          "player": 0,
+          "activationZone": "monster",
+          "mandatory": true,
+          "spellSpeed": 1,
+          "triggerId": "2:P0:main:31560081:1:1"
+        },
+        {
+          "type": "FAITH_RECOVER_SPELL",
+          "uid": "P0:main:74063034:1",
+          "targetUid": "P0:main:74063034:1",
+          "sourceUid": "P0:main:31560081:1",
+          "cardId": 74063034,
+          "player": 0,
+          "from": "gy",
+          "to": "hand",
+          "targeted": true,
+          "revealed": true
+        }
+      ],
+      "replayPass": true
+    },
+    {
+      "actionTypes": [
+        "DUEL_FLIP_SUMMON",
+        "DUEL_FLIP_FAITH_RECOVER"
+      ],
+      "events": [
+        {
+          "type": "FLIP_SUMMON",
+          "uid": "P1:main:31560081:1",
+          "player": 1,
+          "cardId": 31560081,
+          "turn": 2,
+          "fromPosition": "SET",
+          "position": "ATTACK",
+          "zoneIndex": 0,
+          "normalSummonConsumed": false,
+          "startsChain": false
+        },
+        {
+          "type": "FAITH_FLIP_TRIGGER_PENDING",
+          "sourceUid": "P1:main:31560081:1",
+          "uid": "P1:main:31560081:1",
+          "cardId": 31560081,
+          "player": 1,
+          "turn": 2,
+          "triggerId": "2:P1:main:31560081:1:1",
+          "origin": "FLIP_SUMMON",
+          "mandatory": true,
+          "activationZone": "monster",
+          "packetId": null
+        },
+        {
+          "type": "FLIP_EFFECT_ACTIVATION",
+          "effect": "DUEL_FLIP_FAITH_RECOVER",
+          "uid": "P1:main:31560081:1",
+          "sourceUid": "P1:main:31560081:1",
+          "player": 1,
+          "activationZone": "monster",
+          "mandatory": true,
+          "spellSpeed": 1,
+          "triggerId": "2:P1:main:31560081:1:1"
+        },
+        {
+          "type": "FAITH_RECOVER_SPELL",
+          "uid": "P1:main:74063034:1",
+          "targetUid": "P1:main:74063034:1",
+          "sourceUid": "P1:main:31560081:1",
+          "cardId": 74063034,
+          "player": 1,
+          "from": "gy",
+          "to": "hand",
+          "targeted": true,
+          "revealed": true
+        }
+      ],
+      "replayPass": true
+    },
+    {
+      "actionTypes": [
+        "DUEL_FLIP_SUMMON",
+        "DUEL_FLIP_FAITH_RECOVER"
+      ],
+      "events": [
+        {
+          "type": "FLIP_SUMMON",
+          "uid": "P1:main:31560081:1",
+          "player": 1,
+          "cardId": 31560081,
+          "turn": 2,
+          "fromPosition": "SET",
+          "position": "ATTACK",
+          "zoneIndex": 0,
+          "normalSummonConsumed": false,
+          "startsChain": false
+        },
+        {
+          "type": "FAITH_FLIP_TRIGGER_PENDING",
+          "sourceUid": "P1:main:31560081:1",
+          "uid": "P1:main:31560081:1",
+          "cardId": 31560081,
+          "player": 1,
+          "turn": 2,
+          "triggerId": "2:P1:main:31560081:1:1",
+          "origin": "FLIP_SUMMON",
+          "mandatory": true,
+          "activationZone": "monster",
+          "packetId": null
+        },
+        {
+          "type": "FLIP_EFFECT_ACTIVATION",
+          "effect": "DUEL_FLIP_FAITH_RECOVER",
+          "uid": "P1:main:31560081:1",
+          "sourceUid": "P1:main:31560081:1",
+          "player": 1,
+          "activationZone": "monster",
+          "mandatory": true,
+          "spellSpeed": 1,
+          "triggerId": "2:P1:main:31560081:1:1"
+        },
+        {
+          "type": "FAITH_RECOVER_SPELL",
+          "uid": "P1:main:74063034:1",
+          "targetUid": "P1:main:74063034:1",
+          "sourceUid": "P1:main:31560081:1",
+          "cardId": 74063034,
+          "player": 1,
+          "from": "gy",
+          "to": "hand",
+          "targeted": true,
+          "revealed": true
+        }
+      ],
+      "replayPass": true
+    },
+    {
+      "actionTypes": [
+        "DUEL_NORMAL_SUMMON_OR_SET",
+        "DUEL_ADVANCE_PHASE",
+        "DUEL_NEXT_TURN",
+        "DUEL_DRAW_FOR_TURN",
+        "DUEL_ADVANCE_PHASE",
+        "DUEL_ADVANCE_PHASE",
+        "DUEL_ADVANCE_PHASE",
+        "DUEL_NEXT_TURN",
+        "DUEL_DRAW_FOR_TURN",
+        "DUEL_ADVANCE_PHASE",
+        "DUEL_ADVANCE_PHASE",
+        "DUEL_FLIP_SUMMON",
+        "DUEL_FLIP_FAITH_RECOVER"
+      ],
+      "events": [
+        {
+          "type": "FLIP_SUMMON",
+          "uid": "P0:main:31560081:1",
+          "player": 0,
+          "cardId": 31560081,
+          "turn": 4,
+          "fromPosition": "SET",
+          "position": "ATTACK",
+          "zoneIndex": 0,
+          "normalSummonConsumed": false,
+          "startsChain": false
+        },
+        {
+          "type": "FAITH_FLIP_TRIGGER_PENDING",
+          "sourceUid": "P0:main:31560081:1",
+          "uid": "P0:main:31560081:1",
+          "cardId": 31560081,
+          "player": 0,
+          "turn": 4,
+          "triggerId": "4:P0:main:31560081:1:1",
+          "origin": "FLIP_SUMMON",
+          "mandatory": true,
+          "activationZone": "monster",
+          "packetId": null
+        },
+        {
+          "type": "FLIP_EFFECT_ACTIVATION",
+          "effect": "DUEL_FLIP_FAITH_RECOVER",
+          "uid": "P0:main:31560081:1",
+          "sourceUid": "P0:main:31560081:1",
+          "player": 0,
+          "activationZone": "monster",
+          "mandatory": true,
+          "spellSpeed": 1,
+          "triggerId": "4:P0:main:31560081:1:1"
+        },
+        {
+          "type": "FAITH_RECOVER_SPELL",
+          "uid": "P0:main:74063034:1",
+          "targetUid": "P0:main:74063034:1",
+          "sourceUid": "P0:main:31560081:1",
+          "cardId": 74063034,
+          "player": 0,
+          "from": "gy",
+          "to": "hand",
+          "targeted": true,
+          "revealed": true
+        }
+      ],
+      "replayPass": true
+    },
+    {
+      "actionTypes": [
+        "DUEL_FLIP_SUMMON",
+        "DUEL_FLIP_FAITH_RECOVER",
+        "DUEL_FLIP_SUMMON",
+        "DUEL_FLIP_FAITH_RECOVER"
+      ],
+      "events": [
+        {
+          "type": "FLIP_SUMMON",
+          "uid": "P0:main:31560081:1",
+          "player": 0,
+          "cardId": 31560081,
+          "turn": 2,
+          "fromPosition": "SET",
+          "position": "ATTACK",
+          "zoneIndex": 0,
+          "normalSummonConsumed": false,
+          "startsChain": false
+        },
+        {
+          "type": "FAITH_FLIP_TRIGGER_PENDING",
+          "sourceUid": "P0:main:31560081:1",
+          "uid": "P0:main:31560081:1",
+          "cardId": 31560081,
+          "player": 0,
+          "turn": 2,
+          "triggerId": "2:P0:main:31560081:1:1",
+          "origin": "FLIP_SUMMON",
+          "mandatory": true,
+          "activationZone": "monster",
+          "packetId": null
+        },
+        {
+          "type": "FLIP_EFFECT_ACTIVATION",
+          "effect": "DUEL_FLIP_FAITH_RECOVER",
+          "uid": "P0:main:31560081:1",
+          "sourceUid": "P0:main:31560081:1",
+          "player": 0,
+          "activationZone": "monster",
+          "mandatory": true,
+          "spellSpeed": 1,
+          "triggerId": "2:P0:main:31560081:1:1"
+        },
+        {
+          "type": "FAITH_RECOVER_SPELL",
+          "uid": "P0:main:74063034:1",
+          "targetUid": "P0:main:74063034:1",
+          "sourceUid": "P0:main:31560081:1",
+          "cardId": 74063034,
+          "player": 0,
+          "from": "gy",
+          "to": "hand",
+          "targeted": true,
+          "revealed": true
+        },
+        {
+          "type": "FLIP_SUMMON",
+          "uid": "P0:main:31560081:2",
+          "player": 0,
+          "cardId": 31560081,
+          "turn": 2,
+          "fromPosition": "SET",
+          "position": "ATTACK",
+          "zoneIndex": 1,
+          "normalSummonConsumed": false,
+          "startsChain": false
+        },
+        {
+          "type": "FAITH_FLIP_TRIGGER_PENDING",
+          "sourceUid": "P0:main:31560081:2",
+          "uid": "P0:main:31560081:2",
+          "cardId": 31560081,
+          "player": 0,
+          "turn": 2,
+          "triggerId": "2:P0:main:31560081:2:2",
+          "origin": "FLIP_SUMMON",
+          "mandatory": true,
+          "activationZone": "monster",
+          "packetId": null
+        },
+        {
+          "type": "FLIP_EFFECT_ACTIVATION",
+          "effect": "DUEL_FLIP_FAITH_RECOVER",
+          "uid": "P0:main:31560081:2",
+          "sourceUid": "P0:main:31560081:2",
+          "player": 0,
+          "activationZone": "monster",
+          "mandatory": true,
+          "spellSpeed": 1,
+          "triggerId": "2:P0:main:31560081:2:2"
+        },
+        {
+          "type": "FAITH_RECOVER_SPELL",
+          "uid": "P0:main:83764718:1",
+          "targetUid": "P0:main:83764718:1",
+          "sourceUid": "P0:main:31560081:2",
+          "cardId": 83764718,
+          "player": 0,
+          "from": "gy",
+          "to": "hand",
+          "targeted": true,
+          "revealed": true
+        }
+      ],
+      "replayPass": true
+    },
+    {
+      "actionTypes": [
+        "DUEL_FLIP_SUMMON",
+        "DUEL_FLIP_FAITH_RECOVER"
+      ],
+      "events": [
+        {
+          "type": "FLIP_SUMMON",
+          "uid": "P0:main:31560081:1",
+          "player": 0,
+          "cardId": 31560081,
+          "turn": 2,
+          "fromPosition": "SET",
+          "position": "ATTACK",
+          "zoneIndex": 0,
+          "normalSummonConsumed": false,
+          "startsChain": false
+        },
+        {
+          "type": "FAITH_FLIP_TRIGGER_PENDING",
+          "sourceUid": "P0:main:31560081:1",
+          "uid": "P0:main:31560081:1",
+          "cardId": 31560081,
+          "player": 0,
+          "turn": 2,
+          "triggerId": "2:P0:main:31560081:1:1",
+          "origin": "FLIP_SUMMON",
+          "mandatory": true,
+          "activationZone": "monster",
+          "packetId": null
+        },
+        {
+          "type": "FLIP_EFFECT_ACTIVATION",
+          "effect": "DUEL_FLIP_FAITH_RECOVER",
+          "uid": "P0:main:31560081:1",
+          "sourceUid": "P0:main:31560081:1",
+          "player": 0,
+          "activationZone": "monster",
+          "mandatory": true,
+          "spellSpeed": 1,
+          "triggerId": "2:P0:main:31560081:1:1"
+        },
+        {
+          "type": "FAITH_EFFECT_NEGATED",
+          "uid": "P0:main:31560081:1",
+          "sourceUid": "P0:main:31560081:1",
+          "player": 0,
+          "targetUid": "P0:main:74063034:1",
+          "activationNegated": false,
+          "effectNegated": true
+        }
+      ],
+      "replayPass": true
+    },
+    {
+      "actionTypes": [
+        "DUEL_FLIP_SUMMON",
+        "DUEL_FLIP_FAITH_RECOVER"
+      ],
+      "events": [
+        {
+          "type": "FLIP_SUMMON",
+          "uid": "P0:main:31560081:1",
+          "player": 0,
+          "cardId": 31560081,
+          "turn": 2,
+          "fromPosition": "SET",
+          "position": "ATTACK",
+          "zoneIndex": 0,
+          "normalSummonConsumed": false,
+          "startsChain": false
+        },
+        {
+          "type": "FAITH_FLIP_TRIGGER_PENDING",
+          "sourceUid": "P0:main:31560081:1",
+          "uid": "P0:main:31560081:1",
+          "cardId": 31560081,
+          "player": 0,
+          "turn": 2,
+          "triggerId": "2:P0:main:31560081:1:1",
+          "origin": "FLIP_SUMMON",
+          "mandatory": true,
+          "activationZone": "monster",
+          "packetId": null
+        },
+        {
+          "type": "FLIP_EFFECT_ACTIVATION",
+          "effect": "DUEL_FLIP_FAITH_RECOVER",
+          "uid": "P0:main:31560081:1",
+          "sourceUid": "P0:main:31560081:1",
+          "player": 0,
+          "activationZone": "monster",
+          "mandatory": true,
+          "spellSpeed": 1,
+          "triggerId": "2:P0:main:31560081:1:1"
+        },
+        {
+          "type": "FAITH_EFFECT_NEGATED",
+          "uid": "P0:main:31560081:1",
+          "sourceUid": "P0:main:31560081:1",
+          "player": 0,
+          "targetUid": "P0:main:74063034:1",
+          "activationNegated": false,
+          "effectNegated": true
+        }
+      ],
+      "replayPass": true
+    },
+    {
+      "actionTypes": [
+        "DUEL_FLIP_SUMMON",
+        "DUEL_FLIP_FAITH_RECOVER"
+      ],
+      "events": [
+        {
+          "type": "FLIP_SUMMON",
+          "uid": "P0:main:31560081:1",
+          "player": 0,
+          "cardId": 31560081,
+          "turn": 2,
+          "fromPosition": "SET",
+          "position": "ATTACK",
+          "zoneIndex": 0,
+          "normalSummonConsumed": false,
+          "startsChain": false
+        },
+        {
+          "type": "FAITH_FLIP_TRIGGER_PENDING",
+          "sourceUid": "P0:main:31560081:1",
+          "uid": "P0:main:31560081:1",
+          "cardId": 31560081,
+          "player": 0,
+          "turn": 2,
+          "triggerId": "2:P0:main:31560081:1:1",
+          "origin": "FLIP_SUMMON",
+          "mandatory": true,
+          "activationZone": "monster",
+          "packetId": null
+        },
+        {
+          "type": "FLIP_EFFECT_ACTIVATION",
+          "effect": "DUEL_FLIP_FAITH_RECOVER",
+          "uid": "P0:main:31560081:1",
+          "sourceUid": "P0:main:31560081:1",
+          "player": 0,
+          "activationZone": "monster",
+          "mandatory": true,
+          "spellSpeed": 1,
+          "triggerId": "2:P0:main:31560081:1:1"
+        },
+        {
+          "type": "FAITH_EFFECT_NEGATED",
+          "uid": "P0:main:31560081:1",
+          "sourceUid": "P0:main:31560081:1",
+          "player": 0,
+          "targetUid": "P0:main:74063034:1",
+          "activationNegated": false,
+          "effectNegated": true
+        }
+      ],
+      "replayPass": true
+    },
+    {
+      "actionTypes": [
+        "DUEL_ATTACK",
+        "DUEL_FLIP_FAITH_RECOVER"
+      ],
+      "events": [
+        {
+          "type": "FLIP_MONSTER_REVEALED_BY_ATTACK",
+          "uid": "P1:main:31560081:1",
+          "cardId": 31560081,
+          "player": 1,
+          "turn": 2,
+          "triggerEffects": "MANDATORY_REGISTERED_FLIP"
+        },
+        {
+          "type": "BATTLE_PACKET_OPENED",
+          "packetId": "2:P0:main:89631139:1:1",
+          "turn": 2,
+          "player": 0,
+          "attackerUid": "P0:main:89631139:1",
+          "targetUid": "P1:main:31560081:1",
+          "stage": "AFTER_DAMAGE_CALCULATION",
+          "destroyVictimUids": [
+            "P1:main:31560081:1"
+          ]
+        },
+        {
+          "type": "FAITH_FLIP_TRIGGER_PENDING",
+          "sourceUid": "P1:main:31560081:1",
+          "uid": "P1:main:31560081:1",
+          "cardId": 31560081,
+          "player": 1,
+          "turn": 2,
+          "triggerId": "2:P1:main:31560081:1:1",
+          "origin": "BATTLE_REVEAL",
+          "mandatory": true,
+          "activationZone": "monster",
+          "packetId": "2:P0:main:89631139:1:1"
+        },
+        {
+          "type": "FLIP_EFFECT_ACTIVATION",
+          "effect": "DUEL_FLIP_FAITH_RECOVER",
+          "uid": "P1:main:31560081:1",
+          "sourceUid": "P1:main:31560081:1",
+          "player": 1,
+          "activationZone": "monster",
+          "mandatory": true,
+          "spellSpeed": 1,
+          "triggerId": "2:P1:main:31560081:1:1",
+          "packetId": "2:P0:main:89631139:1:1",
+          "damageStep": "AFTER_DAMAGE_CALCULATION"
+        },
+        {
+          "type": "FAITH_RECOVER_SPELL",
+          "uid": "P1:main:74063034:1",
+          "targetUid": "P1:main:74063034:1",
+          "sourceUid": "P1:main:31560081:1",
+          "cardId": 74063034,
+          "player": 1,
+          "from": "gy",
+          "to": "hand",
+          "targeted": true,
+          "revealed": true
+        },
+        {
+          "type": "DESTROYED_BY_BATTLE",
+          "uid": "P1:main:31560081:1",
+          "player": 1,
+          "from": "monster",
+          "cardId": 31560081,
+          "wasFaceUp": true,
+          "priorFaceUp": true,
+          "wasNonEffect": false,
+          "destination": "gy",
+          "packetId": "2:P0:main:89631139:1:1"
+        },
+        {
+          "type": "BATTLE_PACKET_COMPLETED",
+          "packetId": "2:P0:main:89631139:1:1",
+          "turn": 2,
+          "stage": "END_DAMAGE_STEP",
+          "attackerUid": "P0:main:89631139:1",
+          "targetUid": "P1:main:31560081:1"
+        }
+      ],
+      "replayPass": true
+    },
+    {
+      "actionTypes": [
+        "DUEL_ATTACK",
+        "DUEL_FLIP_FAITH_RECOVER"
+      ],
+      "events": [
+        {
+          "type": "FLIP_MONSTER_REVEALED_BY_ATTACK",
+          "uid": "P0:main:31560081:1",
+          "cardId": 31560081,
+          "player": 0,
+          "turn": 2,
+          "triggerEffects": "MANDATORY_REGISTERED_FLIP"
+        },
+        {
+          "type": "BATTLE_PACKET_OPENED",
+          "packetId": "2:P1:main:89631139:1:1",
+          "turn": 2,
+          "player": 1,
+          "attackerUid": "P1:main:89631139:1",
+          "targetUid": "P0:main:31560081:1",
+          "stage": "AFTER_DAMAGE_CALCULATION",
+          "destroyVictimUids": [
+            "P0:main:31560081:1"
+          ]
+        },
+        {
+          "type": "FAITH_FLIP_TRIGGER_PENDING",
+          "sourceUid": "P0:main:31560081:1",
+          "uid": "P0:main:31560081:1",
+          "cardId": 31560081,
+          "player": 0,
+          "turn": 2,
+          "triggerId": "2:P0:main:31560081:1:1",
+          "origin": "BATTLE_REVEAL",
+          "mandatory": true,
+          "activationZone": "monster",
+          "packetId": "2:P1:main:89631139:1:1"
+        },
+        {
+          "type": "FLIP_EFFECT_ACTIVATION",
+          "effect": "DUEL_FLIP_FAITH_RECOVER",
+          "uid": "P0:main:31560081:1",
+          "sourceUid": "P0:main:31560081:1",
+          "player": 0,
+          "activationZone": "monster",
+          "mandatory": true,
+          "spellSpeed": 1,
+          "triggerId": "2:P0:main:31560081:1:1",
+          "packetId": "2:P1:main:89631139:1:1",
+          "damageStep": "AFTER_DAMAGE_CALCULATION"
+        },
+        {
+          "type": "FAITH_RECOVER_SPELL",
+          "uid": "P0:main:74063034:1",
+          "targetUid": "P0:main:74063034:1",
+          "sourceUid": "P0:main:31560081:1",
+          "cardId": 74063034,
+          "player": 0,
+          "from": "gy",
+          "to": "hand",
+          "targeted": true,
+          "revealed": true
+        },
+        {
+          "type": "DESTROYED_BY_BATTLE",
+          "uid": "P0:main:31560081:1",
+          "player": 0,
+          "from": "monster",
+          "cardId": 31560081,
+          "wasFaceUp": true,
+          "priorFaceUp": true,
+          "wasNonEffect": false,
+          "destination": "gy",
+          "packetId": "2:P1:main:89631139:1:1"
+        },
+        {
+          "type": "BATTLE_PACKET_COMPLETED",
+          "packetId": "2:P1:main:89631139:1:1",
+          "turn": 2,
+          "stage": "END_DAMAGE_STEP",
+          "attackerUid": "P1:main:89631139:1",
+          "targetUid": "P0:main:31560081:1"
+        }
+      ],
+      "replayPass": true
+    },
+    {
+      "actionTypes": [
+        "DUEL_ATTACK",
+        "DUEL_FLIP_FAITH_RECOVER"
+      ],
+      "events": [
+        {
+          "type": "FLIP_MONSTER_REVEALED_BY_ATTACK",
+          "uid": "P0:main:31560081:1",
+          "cardId": 31560081,
+          "player": 0,
+          "turn": 2,
+          "triggerEffects": "MANDATORY_REGISTERED_FLIP"
+        },
+        {
+          "type": "BATTLE_PACKET_OPENED",
+          "packetId": "2:P1:extra:75286621:1:1",
+          "turn": 2,
+          "player": 1,
+          "attackerUid": "P1:extra:75286621:1",
+          "targetUid": "P0:main:31560081:1",
+          "stage": "AFTER_DAMAGE_CALCULATION",
+          "destroyVictimUids": [
+            "P0:main:31560081:1"
+          ]
+        },
+        {
+          "type": "FAITH_FLIP_TRIGGER_PENDING",
+          "sourceUid": "P0:main:31560081:1",
+          "uid": "P0:main:31560081:1",
+          "cardId": 31560081,
+          "player": 0,
+          "turn": 2,
+          "triggerId": "2:P0:main:31560081:1:1",
+          "origin": "BATTLE_REVEAL",
+          "mandatory": true,
+          "activationZone": "monster",
+          "packetId": "2:P1:extra:75286621:1:1"
+        },
+        {
+          "type": "FLIP_EFFECT_ACTIVATION",
+          "effect": "DUEL_FLIP_FAITH_RECOVER",
+          "uid": "P0:main:31560081:1",
+          "sourceUid": "P0:main:31560081:1",
+          "player": 0,
+          "activationZone": "monster",
+          "mandatory": true,
+          "spellSpeed": 1,
+          "triggerId": "2:P0:main:31560081:1:1",
+          "packetId": "2:P1:extra:75286621:1:1",
+          "damageStep": "AFTER_DAMAGE_CALCULATION"
+        },
+        {
+          "type": "FAITH_EFFECT_NEGATED",
+          "uid": "P0:main:31560081:1",
+          "sourceUid": "P0:main:31560081:1",
+          "player": 0,
+          "targetUid": "P0:main:74063034:1",
+          "activationNegated": true,
+          "effectNegated": true
+        },
+        {
+          "type": "MECHABA_BANISH_ACTIVATED_CARD",
+          "player": 1,
+          "uid": "P1:extra:75286621:1",
+          "targetUid": "P0:main:31560081:1",
+          "from": "monster",
+          "activationKind": "MONSTER_EFFECT",
+          "registeredMonsterPacket": "DUEL_FLIP_FAITH_RECOVER",
+          "banished": true
+        },
+        {
+          "type": "BATTLE_PACKET_COMPLETED",
+          "packetId": "2:P1:extra:75286621:1:1",
+          "turn": 2,
+          "stage": "END_DAMAGE_STEP",
+          "attackerUid": "P1:extra:75286621:1",
+          "targetUid": "P0:main:31560081:1"
+        }
+      ],
+      "replayPass": true
+    },
+    {
+      "actionTypes": [
+        "DUEL_ATTACK",
+        "DUEL_FLIP_FAITH_RECOVER"
+      ],
+      "events": [
+        {
+          "type": "FLIP_MONSTER_REVEALED_BY_ATTACK",
+          "uid": "P0:main:31560081:1",
+          "cardId": 31560081,
+          "player": 0,
+          "turn": 2,
+          "triggerEffects": "MANDATORY_REGISTERED_FLIP"
+        },
+        {
+          "type": "BATTLE_PACKET_OPENED",
+          "packetId": "2:P1:main:89631139:1:1",
+          "turn": 2,
+          "player": 1,
+          "attackerUid": "P1:main:89631139:1",
+          "targetUid": "P0:main:31560081:1",
+          "stage": "AFTER_DAMAGE_CALCULATION",
+          "destroyVictimUids": [
+            "P0:main:31560081:1"
+          ]
+        },
+        {
+          "type": "FAITH_FLIP_TRIGGER_PENDING",
+          "sourceUid": "P0:main:31560081:1",
+          "uid": "P0:main:31560081:1",
+          "cardId": 31560081,
+          "player": 0,
+          "turn": 2,
+          "triggerId": "2:P0:main:31560081:1:1",
+          "origin": "BATTLE_REVEAL",
+          "mandatory": true,
+          "activationZone": "monster",
+          "packetId": "2:P1:main:89631139:1:1"
+        },
+        {
+          "type": "FLIP_EFFECT_ACTIVATION",
+          "effect": "DUEL_FLIP_FAITH_RECOVER",
+          "uid": "P0:main:31560081:1",
+          "sourceUid": "P0:main:31560081:1",
+          "player": 0,
+          "activationZone": "monster",
+          "mandatory": true,
+          "spellSpeed": 1,
+          "triggerId": "2:P0:main:31560081:1:1",
+          "packetId": "2:P1:main:89631139:1:1",
+          "damageStep": "AFTER_DAMAGE_CALCULATION"
+        },
+        {
+          "type": "FAITH_EFFECT_NEGATED",
+          "uid": "P0:main:31560081:1",
+          "sourceUid": "P0:main:31560081:1",
+          "player": 0,
+          "targetUid": "P0:main:74063034:1",
+          "activationNegated": true,
+          "effectNegated": true
+        },
+        {
+          "type": "ROAR_ACTIVATION_NEGATED",
+          "uid": "P1:main:51339637:1",
+          "targetUid": "P0:main:31560081:1",
+          "sourceStillOnField": true
+        },
+        {
+          "type": "BATTLE_PACKET_COMPLETED",
+          "packetId": "2:P1:main:89631139:1:1",
+          "turn": 2,
+          "stage": "END_DAMAGE_STEP",
+          "attackerUid": "P1:main:89631139:1",
+          "targetUid": "P0:main:31560081:1"
+        }
+      ],
+      "replayPass": true
+    },
+    {
+      "actionTypes": [
+        "DUEL_ATTACK",
+        "DUEL_FLIP_FAITH_RECOVER"
+      ],
+      "events": [
+        {
+          "type": "FLIP_MONSTER_REVEALED_BY_ATTACK",
+          "uid": "P0:main:31560081:1",
+          "cardId": 31560081,
+          "player": 0,
+          "turn": 2,
+          "triggerEffects": "MANDATORY_REGISTERED_FLIP"
+        },
+        {
+          "type": "BATTLE_PACKET_OPENED",
+          "packetId": "2:P1:extra:75286621:1:1",
+          "turn": 2,
+          "player": 1,
+          "attackerUid": "P1:extra:75286621:1",
+          "targetUid": "P0:main:31560081:1",
+          "stage": "AFTER_DAMAGE_CALCULATION",
+          "destroyVictimUids": [
+            "P0:main:31560081:1"
+          ]
+        },
+        {
+          "type": "FAITH_FLIP_TRIGGER_PENDING",
+          "sourceUid": "P0:main:31560081:1",
+          "uid": "P0:main:31560081:1",
+          "cardId": 31560081,
+          "player": 0,
+          "turn": 2,
+          "triggerId": "2:P0:main:31560081:1:1",
+          "origin": "BATTLE_REVEAL",
+          "mandatory": true,
+          "activationZone": "monster",
+          "packetId": "2:P1:extra:75286621:1:1"
+        },
+        {
+          "type": "FLIP_EFFECT_ACTIVATION",
+          "effect": "DUEL_FLIP_FAITH_RECOVER",
+          "uid": "P0:main:31560081:1",
+          "sourceUid": "P0:main:31560081:1",
+          "player": 0,
+          "activationZone": "monster",
+          "mandatory": true,
+          "spellSpeed": 1,
+          "triggerId": "2:P0:main:31560081:1:1",
+          "packetId": "2:P1:extra:75286621:1:1",
+          "damageStep": "AFTER_DAMAGE_CALCULATION"
+        },
+        {
+          "type": "ROAR_ACTIVATION_NEGATED",
+          "uid": "P0:main:51339637:1",
+          "targetUid": "P1:extra:75286621:1",
+          "sourceStillOnField": true
+        },
+        {
+          "type": "FAITH_RECOVER_SPELL",
+          "uid": "P0:main:74063034:1",
+          "targetUid": "P0:main:74063034:1",
+          "sourceUid": "P0:main:31560081:1",
+          "cardId": 74063034,
+          "player": 0,
+          "from": "gy",
+          "to": "hand",
+          "targeted": true,
+          "revealed": true
+        },
+        {
+          "type": "DESTROYED_BY_BATTLE",
+          "uid": "P0:main:31560081:1",
+          "player": 0,
+          "from": "monster",
+          "cardId": 31560081,
+          "wasFaceUp": true,
+          "priorFaceUp": true,
+          "wasNonEffect": false,
+          "destination": "gy",
+          "packetId": "2:P1:extra:75286621:1:1"
+        },
+        {
+          "type": "BATTLE_PACKET_COMPLETED",
+          "packetId": "2:P1:extra:75286621:1:1",
+          "turn": 2,
+          "stage": "END_DAMAGE_STEP",
+          "attackerUid": "P1:extra:75286621:1",
+          "targetUid": "P0:main:31560081:1"
+        }
+      ],
+      "replayPass": true
+    }
+  ],
+  "limitations": [
+    "Magician of Faith is the sole reviewed FLIP effect; only three named GY Spells are recovery choices.",
+    "Declared starting fields do not certify earlier setting or summon histories; a separate real Set-to-Flip history is tested.",
+    "The after-damage-calculation packet is registered specifically for Faith and applicable activation negation; general Damage Step priority and arbitrary SEGOC are not certified.",
+    "QA-labelled corruptions and helper mutations are diagnostics rather than witnessed legal game histories.",
+    "Technical source references do not establish authenticated official TCG rulings."
+  ]
+}

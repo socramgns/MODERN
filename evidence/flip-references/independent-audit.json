@@ -41,33 +41,5 @@
     }
   ],
   "scope": "FOCUSED_INDEPENDENT_AUDIT_NOT_FULL_SUITE",
-  "qaMicrostatesNotWitnessedHistory": true,
-  "observedAfterRunAt": "2026-11-13T18:45:55.078381+00:00",
-  "sourceHashesObservedAfterRun": {
-    "src/app/combo-engine.js": "648635d335e22ae5e048bfa6b89477eee3454af30ccb906a79117ee8b9ecb953",
-    "src/app/duel-phases.js": "90dea0c20f1686be5a3867c78272ab8580cc41edff652399424b28ae303ac822",
-    "src/app/flip-effects.js": "62d80f2b3d9b1d4c565c5b64a5901fcd5b494a62f9d38395cb47ccff30b23b52",
-    "src/app/responses.js": "68d2a4be82ab8c86b2c1f04d416ce8d4cd757f5ed7d39354aa83dc672ea47e01",
-    "src/app/archetypes-expanded.js": "8e833cff9f8e71c74eee92910b1892b5f6efb7da807d848dc2f1baee266f9e68"
-  },
-  "witnessedReplayCases": 5,
-  "qaMicrostateCases": 2,
-  "guardGroups": 2,
-  "staticReview": {
-    "afterResolutionHook": "Runs after response postApply and counter cleanup, before refresh and validateTransition observers.",
-    "prevention": "Battle prevention/replacements are decided before queueFaithTrigger; only physical GY departure is deferred.",
-    "pendingProvenance": "Requires one mandatory source/actor/turn/stay-linked pending, matching pending event and prior real flip event; main and battle origins distinguished.",
-    "omittedVictimFinding": "Initial omission risk fixed by design: destroyVictims must match BATTLE_PACKET_OPENED.destroyVictimUids. Runtime mutation is now rejected.",
-    "controllerTarget": "Uses source.player rather than source.ownerPlayer for ownGY candidates, tested QA control transfer.",
-    "noTarget": "Unknown-only Book of Moon GY excludes affected Flip; opponent GY Spell does not block a true ownGY-null mandatory activation.",
-    "negation": "Inherent true negation retains mandatory activation and suppresses recovery.",
-    "officialReferences": "Technical secondary source only; no newly captured official Konami reference."
-  },
-  "limitations": [
-    "Focused source-model audit, not the full suite or browser verification.",
-    "Two explicit QA microstates are not witnessed game histories.",
-    "Source hashes were observed after the run; parent integration validation remains responsible for the final exact commit.",
-    "An initial invalid Spark-on-facedown-Faith QA scenario was corrected; initial report preserved separately with explicit audit-scenario error explanation.",
-    "General DamageStep, SEGOC and all Spell recovery identities remain outside this scoped profile."
-  ]
+  "qaMicrostatesNotWitnessedHistory": true
 }
