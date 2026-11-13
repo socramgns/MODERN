@@ -27,7 +27,7 @@ function addPending(s,kind,sourceUid,extra={}){if(!s.pendingTriggers.some(t=>t.k
 const pending=(s,kind)=>s.pendingTriggers.filter(t=>t.kind===kind);
 const triggerWindow={phases:['DRAW','STANDBY','MAIN 1','BATTLE','MAIN 2','END'],actor:'ANY'};
 const playerRows=(s,p,z,f=()=>true)=>arr(s.zones[p]?.[z]).filter(f),budget=(kind,p)=>p===0?kind:kind+':'+p;
-function damageStepAction(s,action){return action.type==='DUEL_ATTACK'||action.type==='TENYI_SHTHANA_REVIVE'&&s.pendingTriggers.some(t=>t.kind==='TENYI_SHTHANA_REVIVE'&&t.sourceUid===action.sourceUid&&(t.damageStep===true||t.destructionAction==='DUEL_ATTACK'));}
+function damageStepAction(s,action){return action.type==='DUEL_ATTACK'||W.YGOFlipEffects?.isDamageStepFaithAction?.(s,action)===true||action.type==='TENYI_SHTHANA_REVIVE'&&s.pendingTriggers.some(t=>t.kind==='TENYI_SHTHANA_REVIVE'&&t.sourceUid===action.sourceUid&&(t.damageStep===true||t.destructionAction==='DUEL_ATTACK'));}
 const mainCapacity=(s,p)=>playerRows(s,p,'monster',x=>x.zoneIndex!==5).length<5;
 function allowedSpecial(s,p,x){if(!H.spiritSpecialAllowed(s,p,x)||!H.wolfNameAllowed(s,p,x))return false;for(const l of s.locks){const actor=l.appliesToPlayer??l.player??H.locate(s,l.sourceUid)?.player??0;if(actor!==p||l.untilTurn!==undefined&&l.untilTurn<s.turn)continue;if(!l.wholeTurn&&l.sourceUid&&H.locate(s,l.sourceUid)?.zone!=='monster')continue;if(l.kind==='WYRM_ONLY'&&!wyrm(x))return false;}return true;}
 function registeredMonster(x){return normal(x)||TENYI.has(id(x))||SALAMA.has(id(x))&&!!(Number(C(x).typeBits)&1)||[86120751,34755994,75286621,14558127,20001443,69248256,93490856,96633955,8240199,42097666,71039903,89631139,59822133,97268402,94145021,24508238,40908371,83994433,68468459,70534340,44146295].includes(id(x));}
@@ -227,6 +227,7 @@ function roarNormalTrapCardPacket(s,handler,a,executionContext){
  return{player:p,sourceUid:a.sourceUid,sourceCardId:expected,activationZone:'spelltrap',kind:'TRAP_CARD_ACTIVATION',cardType:'TRAP',spellSpeed:2};
 }
 function roarRootPacket(s,handler,a,executionContext){const hit=H.locate(s,a.sourceUid);if(!hit)return null;const p=a.player??hit.player,bits=Number(C(hit.item).typeBits);if(p!==hit.player||handler.type==='CHIXIAO_CL1_MOYE_CL2')return null;
+ if(handler.type==='DUEL_FLIP_FAITH_RECOVER'){const packet=W.YGOFlipEffects?.faithActivationPacket?.(s,handler,a,executionContext);return packet?{player:p,sourceUid:a.sourceUid,sourceCardId:31560081,activationZone:'monster',kind:'MONSTER_EFFECT',cardType:'MONSTER',spellSpeed:1}:null;}
  if(bits&1){if(!(handler.monsterEffect===true||handler.fieldMonsterEffect===true||roarFieldPackets.has(handler.type)||handler.gyActivationNegatable===true&&handler.activationPacket==='SINGLE'))return null;if(!registeredMonster(hit.item))return null;return{player:p,sourceUid:a.sourceUid,sourceCardId:id(hit.item),activationZone:hit.zone,kind:'MONSTER_EFFECT',cardType:'MONSTER',spellSpeed:handler.quickEffect?2:1};}
  return roarNormalSpellPacket(s,handler,a,executionContext)||roarNormalTrapCardPacket(s,handler,a,executionContext)||roarFieldCardPacket(s,handler,a,executionContext);
 }

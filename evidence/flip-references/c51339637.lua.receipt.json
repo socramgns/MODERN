@@ -1,0 +1,12 @@
+{
+  "requestedUrl": "https://raw.githubusercontent.com/ProjectIgnis/CardScripts/915c6ff63518a04e18d16ee45962d75a8c8be264/official/c51339637.lua",
+  "resolvedUrl": "https://raw.githubusercontent.com/ProjectIgnis/CardScripts/915c6ff63518a04e18d16ee45962d75a8c8be264/official/c51339637.lua",
+  "status": 200,
+  "bytes": 2934,
+  "sha256": "91a8a8b80d0b979062efb301687dc9426a85956623e55698d9abbfe1d39b109e",
+  "retrievedAt": "2026-11-13T18:27:15.876540+00:00",
+  "commit": "915c6ff63518a04e18d16ee45962d75a8c8be264",
+  "sourceRole": "SECONDARY_TECHNICAL_IMPLEMENTATION_REFERENCE",
+  "officialRulingAuthentication": false,
+  "executableInAnalyzer": false
+}

@@ -1,0 +1,119 @@
+{
+  "schema": "ygo-remote-full-acceptance/v1",
+  "candidateCommit": "c3c2ebeb9aaaf7df57481fdefadabf93292d66b3",
+  "acceptanceMode": "REMOTE_FULL_EXECUTION_OBSERVED",
+  "validatedRemoteGroups": 77,
+  "sourceRunnerGroupCountVerified": true,
+  "remoteGroupCountInferredFromVersionedRunner": true,
+  "individualRemoteReportsDownloaded": false,
+  "sourceJavaScriptFiles": 123,
+  "publicObservation": "evidence/recovery/remote-acceptance-observation.json",
+  "publicObservationSha256": "c7670dd014e6199ef07dfe395f5a8ba7b6769e70d01d31f9b13f0221e46803ef",
+  "sourceReview": "evidence/recovery/candidate-source-review.json",
+  "sourceReviewSha256": "7d595a3fb1e63e23a414142d1815ee938277946730be5a6a478af6ad11dcc78a",
+  "snapshots": {
+    "run": {
+      "url": "https://github.com/socramgns/MODERN/actions/runs/42440271007",
+      "snapshotPath": "evidence/remote-ci/c3c2ebeb9aaaf7df57481fdefadabf93292d66b3-run-42440271007.html",
+      "sha256": "9a232127823d98206cf9597bed1938ebe708c8a8a10089fea2b05b818726abf2",
+      "bytes": 157956
+    },
+    "job": {
+      "url": "https://github.com/socramgns/MODERN/actions/runs/42440271007/job/128607806669",
+      "snapshotPath": "evidence/remote-ci/c3c2ebeb9aaaf7df57481fdefadabf93292d66b3-job-128607806669.html",
+      "sha256": "103c3b15e42a45ba6722bb9c08518ca5bfa9745cd4bb3e9b782fe4a16049dccc",
+      "bytes": 166017
+    }
+  },
+  "requiredSteps": [
+    {
+      "data-name": "Instalar dependencias Python de comprobación",
+      "data-conclusion": "success",
+      "data-log-url": "/socramgns/MODERN/commit/c3c2ebeb9aaaf7df57481fdefadabf93292d66b3/checks/128607806669/logs/5",
+      "data-started-at": "2026-11-08T02:51:35Z",
+      "data-completed-at": "2026-11-08T02:51:39Z",
+      "data-job-completed": null
+    },
+    {
+      "data-name": "Instalar dependencias del sistema para los tres motores",
+      "data-conclusion": "success",
+      "data-log-url": "/socramgns/MODERN/commit/c3c2ebeb9aaaf7df57481fdefadabf93292d66b3/checks/128607806669/logs/7",
+      "data-started-at": "2026-11-08T02:51:39Z",
+      "data-completed-at": "2026-11-08T02:52:05Z",
+      "data-job-completed": null
+    },
+    {
+      "data-name": "Preparar Chromium",
+      "data-conclusion": "success",
+      "data-log-url": "/socramgns/MODERN/commit/c3c2ebeb9aaaf7df57481fdefadabf93292d66b3/checks/128607806669/logs/8",
+      "data-started-at": "2026-11-08T02:52:05Z",
+      "data-completed-at": "2026-11-08T02:52:13Z",
+      "data-job-completed": null
+    },
+    {
+      "data-name": "Preparar Firefox",
+      "data-conclusion": "success",
+      "data-log-url": "/socramgns/MODERN/commit/c3c2ebeb9aaaf7df57481fdefadabf93292d66b3/checks/128607806669/logs/9",
+      "data-started-at": "2026-11-08T02:52:13Z",
+      "data-completed-at": "2026-11-08T02:52:19Z",
+      "data-job-completed": null
+    },
+    {
+      "data-name": "Preparar WebKit",
+      "data-conclusion": "success",
+      "data-log-url": "/socramgns/MODERN/commit/c3c2ebeb9aaaf7df57481fdefadabf93292d66b3/checks/128607806669/logs/10",
+      "data-started-at": "2026-11-08T02:52:19Z",
+      "data-completed-at": "2026-11-08T02:52:23Z",
+      "data-job-completed": null
+    },
+    {
+      "data-name": "Registrar la ruta de Chromium para las pruebas existentes",
+      "data-conclusion": "success",
+      "data-log-url": "/socramgns/MODERN/commit/c3c2ebeb9aaaf7df57481fdefadabf93292d66b3/checks/128607806669/logs/11",
+      "data-started-at": "2026-11-08T02:52:23Z",
+      "data-completed-at": "2026-11-08T02:52:24Z",
+      "data-job-completed": null
+    },
+    {
+      "data-name": "Recuperar la fuente técnica fijada y comprobar idempotencia",
+      "data-conclusion": "success",
+      "data-log-url": "/socramgns/MODERN/commit/c3c2ebeb9aaaf7df57481fdefadabf93292d66b3/checks/128607806669/logs/12",
+      "data-started-at": "2026-11-08T02:52:24Z",
+      "data-completed-at": "2026-11-08T02:52:25Z",
+      "data-job-completed": null
+    },
+    {
+      "data-name": "Compilar y comparar el HTML publicado",
+      "data-conclusion": "success",
+      "data-log-url": "/socramgns/MODERN/commit/c3c2ebeb9aaaf7df57481fdefadabf93292d66b3/checks/128607806669/logs/13",
+      "data-started-at": "2026-11-08T02:52:25Z",
+      "data-completed-at": "2026-11-08T02:52:27Z",
+      "data-job-completed": null
+    },
+    {
+      "data-name": "Ejecutar pruebas del entregable",
+      "data-conclusion": "success",
+      "data-log-url": "/socramgns/MODERN/commit/c3c2ebeb9aaaf7df57481fdefadabf93292d66b3/checks/128607806669/logs/14",
+      "data-started-at": "2026-11-08T02:52:27Z",
+      "data-completed-at": "2026-11-08T03:10:17Z",
+      "data-job-completed": null
+    },
+    {
+      "data-name": "Exigir comprobación entre motores",
+      "data-conclusion": "success",
+      "data-log-url": "/socramgns/MODERN/commit/c3c2ebeb9aaaf7df57481fdefadabf93292d66b3/checks/128607806669/logs/15",
+      "data-started-at": "2026-11-08T03:10:17Z",
+      "data-completed-at": "2026-11-08T03:11:29Z",
+      "data-job-completed": null
+    }
+  ],
+  "workflowUnchangedFromAcceptedPredecessor": true,
+  "mandatoryGateCommandsUnchanged": true,
+  "engineCoverageEstablishedByVersionedGates": [
+    "chromium",
+    "firefox",
+    "webkit"
+  ],
+  "physicalDevicesValidated": false,
+  "pass": true
+}

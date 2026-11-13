@@ -2,7 +2,7 @@
   "version": "Alpha 1263",
   "format": "ygo-deferred-bundle-v22",
   "canonicalId": "ygo-alpha-1263-canonical-release",
-  "revision": "2026.11-stable.21",
+  "revision": "2026.11-stable.22",
   "scripts": [
     0,
     1,
@@ -458,6 +458,7 @@
     "src/app/combo-engine.js",
     "src/app/duel-phases.js",
     "src/app/responses.js",
+    "src/app/flip-effects.js",
     "src/app/archetypes.js",
     "src/app/archetypes-expanded.js",
     "src/app/blue-eyes-duel.js",

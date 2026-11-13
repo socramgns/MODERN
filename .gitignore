@@ -13,3 +13,4 @@ tests/context-provenance-template.json
 tests/release5-coverage-export.json
 tests/format-interface-export.*
 tests/blue-eyes-browser-export.json
+tests/release22-*-report.json

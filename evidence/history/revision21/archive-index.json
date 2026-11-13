@@ -1,0 +1,119 @@
+{
+  "schema": "ygo-historical-evidence-archive/v1",
+  "revision": "2026.11-stable.21",
+  "sourceCommit": "5d1a44c4bca27ec81c78983bfa29a969813a15a8",
+  "preservedByteIdentically": true,
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 2321,
+      "sha256": "5252da16011fbe5d90569557d2ba157e1e4ee65812938b279abc2c40c103d5cb"
+    },
+    {
+      "path": "accessibility-workflow.json",
+      "bytes": 21172,
+      "sha256": "9fa497d978d576ec65e5796920391ba9e00615f1817f26ab6296e183af9a1962"
+    },
+    {
+      "path": "build-manifest.json",
+      "bytes": 9776,
+      "sha256": "2438e4bffb6f42d431746545da7dd881880892b865d517361c078d1ee90d5795"
+    },
+    {
+      "path": "local-recovery-validation.json",
+      "bytes": 1855,
+      "sha256": "6dc79a4a9e283cebe67de4aa9e40bc18d0298fd3cfd920f75dc5e01d4e48df59"
+    },
+    {
+      "path": "multiple-attacks-source-tests.json",
+      "bytes": 36160,
+      "sha256": "fce80aa54c6afe742fc5f20bbf050fd6099cad10ce0a068d0bda0e3854a5e0e8"
+    },
+    {
+      "path": "project-criteria.json",
+      "bytes": 7953,
+      "sha256": "5fc0911ffe1f24cb656b0567a3df65f8cfc22e52d6b651ccd50a877119f08051"
+    },
+    {
+      "path": "release-acceptance.json",
+      "bytes": 1555,
+      "sha256": "a21ec4c2248daa39070496d8e1620ccd89b7841364fd6d3caae37491ddce7e70"
+    },
+    {
+      "path": "remote-acceptance.json",
+      "bytes": 5239,
+      "sha256": "2e240d717d0f8a55ab7247b3310c12b17689dbbfe157d0c5f4bacf37fceed2b2"
+    },
+    {
+      "path": "revision21-browser.json",
+      "bytes": 6205,
+      "sha256": "1ed636ce26c1d87d6d8cbbf7c5a1f423977c7b55c4f0cb4e2e65f8ec2097b3d5"
+    },
+    {
+      "path": "revision21-candidate.json",
+      "bytes": 8846,
+      "sha256": "9d1e30a3c2e56b16c154e4339fb31961a78284ee4f6148ec8542f9f784dbaf68"
+    },
+    {
+      "path": "unresolved-source-audit.json",
+      "bytes": 47167,
+      "sha256": "bcd38fa3f510c9b5c16ebd5fb8332ade5aa510d95d3b72992a328fc0c71e3f59"
+    },
+    {
+      "path": "validation-summary.json",
+      "bytes": 962,
+      "sha256": "81c80b76e1f4f989cd6ec4b205525c61ad1d3990966fd2932b8c28505284d1f2"
+    },
+    {
+      "path": "recovery/candidate-download-verification.json",
+      "bytes": 614,
+      "sha256": "f6808891e79eb680ed52e46efbc4eb3cfa7f9b0b72d83fdfc4d508c1720c3be9"
+    },
+    {
+      "path": "recovery/candidate-source-review.json",
+      "bytes": 1980,
+      "sha256": "7d595a3fb1e63e23a414142d1815ee938277946730be5a6a478af6ad11dcc78a"
+    },
+    {
+      "path": "recovery/closure-record.json",
+      "bytes": 1075,
+      "sha256": "57f242fae23bd4df9838d16e2c2ef3321fa6176e1dfc7ed5c562d7847bbc2625"
+    },
+    {
+      "path": "recovery/remote-acceptance-observation.json",
+      "bytes": 5783,
+      "sha256": "c7670dd014e6199ef07dfe395f5a8ba7b6769e70d01d31f9b13f0221e46803ef"
+    },
+    {
+      "path": "recovery/scenario-examples-results.json",
+      "bytes": 4068,
+      "sha256": "da6b1c350ba5eefca089c10c5176046cfe3059ae3903923eef260bcd0cd239ee"
+    },
+    {
+      "path": "recovery-gui-exports/release21-before-negation-report.json",
+      "bytes": 1249594,
+      "sha256": "47a46917530283ce74abad80135801c10611d2dc65a3e9a80d41b40e333bc24f"
+    },
+    {
+      "path": "recovery-gui-exports/release21-final-report.json",
+      "bytes": 1460784,
+      "sha256": "12f8f8ee991e26e1557452afb806fcc325ecbf29eff7da8ecb092e7228b50cac"
+    },
+    {
+      "path": "recovery-gui-exports/release21-first-attack-report.json",
+      "bytes": 1247208,
+      "sha256": "acb081c4b0d070fbce5e6103c4d762cd99b370b70b227b20e9049c703034f17d"
+    },
+    {
+      "path": "remote-ci/c3c2ebeb9aaaf7df57481fdefadabf93292d66b3-job-128607806669.html",
+      "bytes": 166017,
+      "sha256": "103c3b15e42a45ba6722bb9c08518ca5bfa9745cd4bb3e9b782fe4a16049dccc"
+    },
+    {
+      "path": "remote-ci/c3c2ebeb9aaaf7df57481fdefadabf93292d66b3-run-42440271007.html",
+      "bytes": 157956,
+      "sha256": "9a232127823d98206cf9597bed1938ebe708c8a8a10089fea2b05b818726abf2"
+    }
+  ],
+  "meaning": "R21 records copied without rewriting; original paths inside records remain historical references to their R21 tree."
+}

@@ -1,0 +1,31 @@
+{
+  "schema": "ygo-release-acceptance/v1",
+  "pass": true,
+  "revision": "2026.11-stable.21",
+  "candidateCommit": "c3c2ebeb9aaaf7df57481fdefadabf93292d66b3",
+  "acceptanceMode": "REMOTE_FULL_EXECUTION_OBSERVED",
+  "buildId": "8e2f493167e60a1752237885db37d72063514109118aa937707e93c9819c4908",
+  "htmlSha256": "3838c78ea58ec52af9019fbc5ad2f132db26b6022eb3d9c1ff939543d8894531",
+  "bytes": 7165831,
+  "validatedRemoteGroups": 77,
+  "remoteRunUrl": "https://github.com/socramgns/MODERN/actions/runs/42440271007",
+  "sourceJavaScriptFiles": 123,
+  "includedExampleCount": 21,
+  "individualRemoteReportsDownloaded": false,
+  "remoteGroupCountInferredFromVersionedRunner": true,
+  "sourceRunnerGroupCountVerified": true,
+  "originalR21LocalFullRun": {
+    "status": "NOT_RECOVERED_AFTER_EXECUTOR_REPLACEMENT",
+    "pass": null,
+    "totalGroups": null,
+    "passedGroups": null,
+    "meaning": "The original full R21 local run report was not recovered. No outcome or engine failures are reconstructed. R20 raw failures remain archived under history/revision20."
+  },
+  "localRecoveryValidation": "evidence/local-recovery-validation.json",
+  "localRecoveryPass": true,
+  "workflowUnchangedFromAcceptedPredecessor": true,
+  "mandatoryGateCommandsUnchanged": true,
+  "physicalDevicesValidated": false,
+  "competitiveScoring": "PROVISIONAL_BY_USER_REQUEST",
+  "meaning": "Full acceptance belongs to the exact candidate mandatory CI gates. Recovery checks are a local subset; neither missing full-local reports nor individual remote result files are fabricated."
+}

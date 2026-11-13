@@ -91,7 +91,7 @@ def run(url=None):
               and hashlib.sha256(response.body()).hexdigest() == digest
               and page.evaluate('()=>navigator.onLine===false&&YGO_BUILD_MANIFEST.buildId') == build['buildId'])
         expected_ids = ['spark', 'spirit', 'invoked', 'swordsoul', 'branded', 'tenyi', 'salamangreat',
-                        'roar', 'crow', 'droll', 'field', 'trap', 'evacuation', 'shuffle', 'reborn', 'synchro', 'azure', 'spirit-reborn', 'wolf-reborn', 'albaz', 'hayabusa']
+                        'roar', 'crow', 'droll', 'field', 'trap', 'evacuation', 'shuffle', 'reborn', 'synchro', 'azure', 'spirit-reborn', 'wolf-reborn', 'albaz', 'hayabusa', 'faith-flip']
         check('twenty_one_examples_preserve_all_twenty_previous_identifiers',
               page.locator('#ygoExampleSelect').evaluate('(el)=>[...el.options].map(o=>o.value)') == expected_ids)
         capabilities = page.evaluate('()=>({core:YGOComboEngine.capabilities(),responses:YGOResponses.capabilities()})')

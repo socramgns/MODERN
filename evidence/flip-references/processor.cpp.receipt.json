@@ -1,0 +1,12 @@
+{
+  "requestedUrl": "https://raw.githubusercontent.com/edo9300/ygopro-core/c2e0b697e031d3560c077c9cd2cc76474969dedf/processor.cpp",
+  "resolvedUrl": "https://raw.githubusercontent.com/edo9300/ygopro-core/c2e0b697e031d3560c077c9cd2cc76474969dedf/processor.cpp",
+  "status": 200,
+  "bytes": 192222,
+  "sha256": "083b4da8e33f22890d186c7d19ebbcf0113aa4c89d59e30f73cef0d2dd8cda90",
+  "retrievedAt": "2026-11-13T18:26:41.000618+00:00",
+  "commit": "c2e0b697e031d3560c077c9cd2cc76474969dedf",
+  "sourceRole": "SECONDARY_TECHNICAL_IMPLEMENTATION_REFERENCE",
+  "officialRulingAuthentication": false,
+  "executableInAnalyzer": false
+}

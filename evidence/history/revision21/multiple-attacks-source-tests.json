@@ -1,0 +1,1166 @@
+{
+  "schema": "ygo-node-source-suite-evidence/v1",
+  "buildId": "8e2f493167e60a1752237885db37d72063514109118aa937707e93c9819c4908",
+  "htmlSha256": "3838c78ea58ec52af9019fbc5ad2f132db26b6022eb3d9c1ff939543d8894531",
+  "artifactMode": "SOURCE_NODE_SUITE",
+  "executionEnvironment": "RECOVERED_LOCAL_NODE_SOURCE_RUN",
+  "testFile": "tests/multiple_attacks.cjs",
+  "testFileSha256": "703e90d59478a4e8a7cbc712bd4fa6f2a1876179c7297b3be7100b1ac4cfdc52",
+  "result": {
+    "schema": "ygo-multiple-attacks-source-tests/v1",
+    "pass": true,
+    "total": 86,
+    "tests": [
+      {
+        "name": "Second-attack profiles agree with the fixed real catalogue and retain Cyber Twin Fusion restrictions",
+        "pass": true
+      },
+      {
+        "name": "Two direct attacks consume exactly two declarations for 21015833 controller 0",
+        "pass": true
+      },
+      {
+        "name": "Second attack chooses a distinct physical monster for 21015833 controller 0",
+        "pass": true
+      },
+      {
+        "name": "Destroying the last defender permits a direct second attack for 21015833 controller 0",
+        "pass": true
+      },
+      {
+        "name": "A surviving Defense target may be attacked twice without invented piercing for 21015833 controller 0",
+        "pass": true
+      },
+      {
+        "name": "Actual Chixiao negation before attacking allows one attack for 21015833 controller 0",
+        "pass": true
+      },
+      {
+        "name": "Actual Chixiao negation after the first attack removes only the unspent extra attack for 21015833 controller 0",
+        "pass": true
+      },
+      {
+        "name": "Actual Chixiao negation after two attacks never refunds a declaration for 21015833 controller 0",
+        "pass": true
+      },
+      {
+        "name": "Spark protection of the defender spends no attack refund for 21015833 controller 0",
+        "pass": true
+      },
+      {
+        "name": "Two direct attacks consume exactly two declarations for 21015833 controller 1",
+        "pass": true
+      },
+      {
+        "name": "Second attack chooses a distinct physical monster for 21015833 controller 1",
+        "pass": true
+      },
+      {
+        "name": "Destroying the last defender permits a direct second attack for 21015833 controller 1",
+        "pass": true
+      },
+      {
+        "name": "A surviving Defense target may be attacked twice without invented piercing for 21015833 controller 1",
+        "pass": true
+      },
+      {
+        "name": "Actual Chixiao negation before attacking allows one attack for 21015833 controller 1",
+        "pass": true
+      },
+      {
+        "name": "Actual Chixiao negation after the first attack removes only the unspent extra attack for 21015833 controller 1",
+        "pass": true
+      },
+      {
+        "name": "Actual Chixiao negation after two attacks never refunds a declaration for 21015833 controller 1",
+        "pass": true
+      },
+      {
+        "name": "Spark protection of the defender spends no attack refund for 21015833 controller 1",
+        "pass": true
+      },
+      {
+        "name": "Two direct attacks consume exactly two declarations for 74157028 controller 0",
+        "pass": true
+      },
+      {
+        "name": "Second attack chooses a distinct physical monster for 74157028 controller 0",
+        "pass": true
+      },
+      {
+        "name": "Destroying the last defender permits a direct second attack for 74157028 controller 0",
+        "pass": true
+      },
+      {
+        "name": "A surviving Defense target may be attacked twice without invented piercing for 74157028 controller 0",
+        "pass": true
+      },
+      {
+        "name": "Actual Chixiao negation before attacking allows one attack for 74157028 controller 0",
+        "pass": true
+      },
+      {
+        "name": "Actual Chixiao negation after the first attack removes only the unspent extra attack for 74157028 controller 0",
+        "pass": true
+      },
+      {
+        "name": "Actual Chixiao negation after two attacks never refunds a declaration for 74157028 controller 0",
+        "pass": true
+      },
+      {
+        "name": "Spark protection of the defender spends no attack refund for 74157028 controller 0",
+        "pass": true
+      },
+      {
+        "name": "Two direct attacks consume exactly two declarations for 74157028 controller 1",
+        "pass": true
+      },
+      {
+        "name": "Second attack chooses a distinct physical monster for 74157028 controller 1",
+        "pass": true
+      },
+      {
+        "name": "Destroying the last defender permits a direct second attack for 74157028 controller 1",
+        "pass": true
+      },
+      {
+        "name": "A surviving Defense target may be attacked twice without invented piercing for 74157028 controller 1",
+        "pass": true
+      },
+      {
+        "name": "Actual Chixiao negation before attacking allows one attack for 74157028 controller 1",
+        "pass": true
+      },
+      {
+        "name": "Actual Chixiao negation after the first attack removes only the unspent extra attack for 74157028 controller 1",
+        "pass": true
+      },
+      {
+        "name": "Actual Chixiao negation after two attacks never refunds a declaration for 74157028 controller 1",
+        "pass": true
+      },
+      {
+        "name": "Spark protection of the defender spends no attack refund for 74157028 controller 1",
+        "pass": true
+      },
+      {
+        "name": "Hayabusa Normal Summon uses the actual hand and summon budget for actor 0 MAIN 1",
+        "pass": true
+      },
+      {
+        "name": "Hayabusa Normal Summon uses the actual hand and summon budget for actor 0 MAIN 2",
+        "pass": true
+      },
+      {
+        "name": "Hayabusa Normal Summon uses the actual hand and summon budget for actor 1 MAIN 1",
+        "pass": true
+      },
+      {
+        "name": "Hayabusa Normal Summon uses the actual hand and summon budget for actor 1 MAIN 2",
+        "pass": true
+      },
+      {
+        "name": "Hayabusa Normal Set is face-down and cannot attack through a forged request",
+        "pass": true
+      },
+      {
+        "name": "A declared Cyber Twin field is not a witnessed Fusion history or a new Fusion procedure",
+        "pass": true
+      },
+      {
+        "name": "First-turn Battle is blocked for 21015833",
+        "pass": true
+      },
+      {
+        "name": "First-turn Battle is blocked for 74157028",
+        "pass": true
+      },
+      {
+        "name": "Ordinary BEWD remains limited to one attack for actor 0",
+        "pass": true
+      },
+      {
+        "name": "Ordinary BEWD remains limited to one attack for actor 1",
+        "pass": true
+      },
+      {
+        "name": "Attack position and face-up requirements remain binding for 21015833 DEFENSE",
+        "pass": true
+      },
+      {
+        "name": "Attack position and face-up requirements remain binding for 21015833 SET",
+        "pass": true
+      },
+      {
+        "name": "Attack position and face-up requirements remain binding for 74157028 DEFENSE",
+        "pass": true
+      },
+      {
+        "name": "Attack position and face-up requirements remain binding for 74157028 SET",
+        "pass": true
+      },
+      {
+        "name": "Other multiattack text does not register unreviewed behavior for 22609617",
+        "pass": true
+      },
+      {
+        "name": "Other multiattack text does not register unreviewed behavior for 10526791",
+        "pass": true
+      },
+      {
+        "name": "Physical Balelynx replacement consumes its real card and the first Cyber Twin attack",
+        "pass": true
+      },
+      {
+        "name": "Any declared attack blocks manual position change in Main Phase 2 for 21015833",
+        "pass": true
+      },
+      {
+        "name": "Any declared attack blocks manual position change in Main Phase 2 for 74157028",
+        "pass": true
+      },
+      {
+        "name": "Lethal second attack ends the duel immediately for 21015833",
+        "pass": true
+      },
+      {
+        "name": "Lethal second attack ends the duel immediately for 74157028",
+        "pass": true
+      },
+      {
+        "name": "A new actual own turn restores the second-attack budget for 21015833",
+        "pass": true
+      },
+      {
+        "name": "A new actual own turn restores the second-attack budget for 74157028",
+        "pass": true
+      },
+      {
+        "name": "Actual turn cleanup expires effect negation without carrying old attack declarations",
+        "pass": true
+      },
+      {
+        "name": "Undo through the saved state restores exactly the second-attack choice",
+        "pass": true
+      },
+      {
+        "name": "Fresh replay rejects forged final budgets, inter-step budgets and attack-number evidence",
+        "pass": true
+      },
+      {
+        "name": "Outcome identity distinguishes one from two spent attacks even when LP and zones are identical (QA only)",
+        "pass": true
+      },
+      {
+        "name": "Legacy attacked marker spends one attack when no new counter is present (QA only)",
+        "pass": true
+      },
+      {
+        "name": "Leaving the Monster Zone clears the instance budget and preserves physical owner and inventory (QA only)",
+        "pass": true
+      },
+      {
+        "name": "Moving on the field or changing controller does not refund an existing instance attack (QA only)",
+        "pass": true
+      },
+      {
+        "name": "Pending triggers, unresolved chains and cannot-attack markers block extra attacks (QA only)",
+        "pass": true
+      },
+      {
+        "name": "Bounded search finds a two-attack goal and replays its physical declarations for 21015833",
+        "pass": true
+      },
+      {
+        "name": "Bounded search finds a two-attack goal and replays its physical declarations for 74157028",
+        "pass": true
+      },
+      {
+        "name": "Capabilities expose precisely the two reviewed continuous profiles without registering an activation",
+        "pass": true
+      },
+      {
+        "name": "Truthy effect-negation flag 1 cannot create a spare attack inconsistent with outcome identity (QA only)",
+        "pass": true
+      },
+      {
+        "name": "Truthy effect-negation flag \"true\" cannot create a spare attack inconsistent with outcome identity (QA only)",
+        "pass": true
+      },
+      {
+        "name": "Malformed attack ledgers are rejected atomically before another transition (QA only)",
+        "pass": true
+      },
+      {
+        "name": "Physical opposing Impermanence after 0 attacks preserves the spent budget for 21015833 controller 0",
+        "pass": true
+      },
+      {
+        "name": "Physical opposing Impermanence after 1 attacks preserves the spent budget for 21015833 controller 0",
+        "pass": true
+      },
+      {
+        "name": "Physical opposing Impermanence after 2 attacks preserves the spent budget for 21015833 controller 0",
+        "pass": true
+      },
+      {
+        "name": "Physical opposing Impermanence after 0 attacks preserves the spent budget for 21015833 controller 1",
+        "pass": true
+      },
+      {
+        "name": "Physical opposing Impermanence after 1 attacks preserves the spent budget for 21015833 controller 1",
+        "pass": true
+      },
+      {
+        "name": "Physical opposing Impermanence after 2 attacks preserves the spent budget for 21015833 controller 1",
+        "pass": true
+      },
+      {
+        "name": "Physical opposing Impermanence after 0 attacks preserves the spent budget for 74157028 controller 0",
+        "pass": true
+      },
+      {
+        "name": "Physical opposing Impermanence after 1 attacks preserves the spent budget for 74157028 controller 0",
+        "pass": true
+      },
+      {
+        "name": "Physical opposing Impermanence after 2 attacks preserves the spent budget for 74157028 controller 0",
+        "pass": true
+      },
+      {
+        "name": "Physical opposing Impermanence after 0 attacks preserves the spent budget for 74157028 controller 1",
+        "pass": true
+      },
+      {
+        "name": "Physical opposing Impermanence after 1 attacks preserves the spent budget for 74157028 controller 1",
+        "pass": true
+      },
+      {
+        "name": "Physical opposing Impermanence after 2 attacks preserves the spent budget for 74157028 controller 1",
+        "pass": true
+      },
+      {
+        "name": "Impermanence target negation and column lock expire on an actual turn change for 21015833",
+        "pass": true
+      },
+      {
+        "name": "Impermanence target negation and column lock expire on an actual turn change for 74157028",
+        "pass": true
+      },
+      {
+        "name": "Narrow Impermanence review does not admit unreviewed Compulsory departures for 21015833",
+        "pass": true
+      },
+      {
+        "name": "Narrow Impermanence review does not admit unreviewed Compulsory departures for 74157028",
+        "pass": true
+      }
+    ],
+    "witnesses": [
+      {
+        "actions": [
+          {
+            "type": "DUEL_ATTACK",
+            "player": 0,
+            "attackerUid": "P0:main:21015833:1",
+            "targetUid": null,
+            "events": [
+              {
+                "type": "ATTACK_DECLARED",
+                "player": 0,
+                "attackerUid": "P0:main:21015833:1",
+                "targetUid": null,
+                "turn": 2,
+                "attackNumber": 1,
+                "attackLimit": 2
+              }
+            ]
+          },
+          {
+            "type": "DUEL_ATTACK",
+            "player": 0,
+            "attackerUid": "P0:main:21015833:1",
+            "targetUid": null,
+            "events": [
+              {
+                "type": "ATTACK_DECLARED",
+                "player": 0,
+                "attackerUid": "P0:main:21015833:1",
+                "targetUid": null,
+                "turn": 2,
+                "attackNumber": 2,
+                "attackLimit": 2
+              },
+              {
+                "type": "ADDITIONAL_ATTACK_CONSUMED",
+                "player": 0,
+                "attackerUid": "P0:main:21015833:1",
+                "cardId": 21015833,
+                "turn": 2,
+                "attackNumber": 2,
+                "attackLimit": 2,
+                "rule": "REVIEWED_CONTINUOUS_SECOND_ATTACK",
+                "startsChain": false
+              }
+            ]
+          }
+        ],
+        "finalLP": [
+          8000,
+          6000
+        ],
+        "replayPass": true
+      },
+      {
+        "actions": [
+          {
+            "type": "DUEL_ATTACK",
+            "player": 0,
+            "attackerUid": "P0:main:21015833:1",
+            "targetUid": null,
+            "events": [
+              {
+                "type": "ATTACK_DECLARED",
+                "player": 0,
+                "attackerUid": "P0:main:21015833:1",
+                "targetUid": null,
+                "turn": 2,
+                "attackNumber": 1,
+                "attackLimit": 2
+              }
+            ]
+          },
+          {
+            "type": "CHIXIAO_NEGATE",
+            "player": 0,
+            "targetUid": "P0:main:21015833:1",
+            "events": [
+              {
+                "type": "CHIXIAO_NEGATE_EFFECT",
+                "player": 0,
+                "uid": "P0:extra:69248256:1",
+                "targetUid": "P0:main:21015833:1",
+                "negated": true,
+                "untilTurn": 2
+              }
+            ]
+          }
+        ],
+        "finalLP": [
+          8000,
+          7000
+        ],
+        "replayPass": true
+      },
+      {
+        "actions": [
+          {
+            "type": "STARDUST_SPARK_PROTECTION",
+            "player": 1,
+            "targetUid": "P1:main:27125110:1",
+            "events": []
+          },
+          {
+            "type": "DUEL_ATTACK",
+            "player": 0,
+            "attackerUid": "P0:main:21015833:1",
+            "targetUid": "P1:main:27125110:1",
+            "events": [
+              {
+                "type": "ATTACK_DECLARED",
+                "player": 0,
+                "attackerUid": "P0:main:21015833:1",
+                "targetUid": "P1:main:27125110:1",
+                "turn": 2,
+                "attackNumber": 1,
+                "attackLimit": 2
+              },
+              {
+                "type": "SPARK_DESTRUCTION_PREVENTED",
+                "uid": "P1:main:27125110:1",
+                "targetUid": "P1:main:27125110:1",
+                "sourceUid": "P1:extra:83994433:1",
+                "player": 1,
+                "kind": "BATTLE",
+                "turn": 2,
+                "remaining": 0,
+                "battleDamagePrevented": false
+              }
+            ]
+          },
+          {
+            "type": "DUEL_ATTACK",
+            "player": 0,
+            "attackerUid": "P0:main:21015833:1",
+            "targetUid": "P1:main:27125110:1",
+            "events": [
+              {
+                "type": "ATTACK_DECLARED",
+                "player": 0,
+                "attackerUid": "P0:main:21015833:1",
+                "targetUid": "P1:main:27125110:1",
+                "turn": 2,
+                "attackNumber": 2,
+                "attackLimit": 2
+              },
+              {
+                "type": "ADDITIONAL_ATTACK_CONSUMED",
+                "player": 0,
+                "attackerUid": "P0:main:21015833:1",
+                "cardId": 21015833,
+                "turn": 2,
+                "attackNumber": 2,
+                "attackLimit": 2,
+                "rule": "REVIEWED_CONTINUOUS_SECOND_ATTACK",
+                "startsChain": false
+              }
+            ]
+          }
+        ],
+        "finalLP": [
+          8000,
+          6000
+        ],
+        "replayPass": true
+      },
+      {
+        "actions": [
+          {
+            "type": "DUEL_ATTACK",
+            "player": 1,
+            "attackerUid": "P1:main:21015833:1",
+            "targetUid": null,
+            "events": [
+              {
+                "type": "ATTACK_DECLARED",
+                "player": 1,
+                "attackerUid": "P1:main:21015833:1",
+                "targetUid": null,
+                "turn": 2,
+                "attackNumber": 1,
+                "attackLimit": 2
+              }
+            ]
+          },
+          {
+            "type": "DUEL_ATTACK",
+            "player": 1,
+            "attackerUid": "P1:main:21015833:1",
+            "targetUid": null,
+            "events": [
+              {
+                "type": "ATTACK_DECLARED",
+                "player": 1,
+                "attackerUid": "P1:main:21015833:1",
+                "targetUid": null,
+                "turn": 2,
+                "attackNumber": 2,
+                "attackLimit": 2
+              },
+              {
+                "type": "ADDITIONAL_ATTACK_CONSUMED",
+                "player": 1,
+                "attackerUid": "P1:main:21015833:1",
+                "cardId": 21015833,
+                "turn": 2,
+                "attackNumber": 2,
+                "attackLimit": 2,
+                "rule": "REVIEWED_CONTINUOUS_SECOND_ATTACK",
+                "startsChain": false
+              }
+            ]
+          }
+        ],
+        "finalLP": [
+          6000,
+          8000
+        ],
+        "replayPass": true
+      },
+      {
+        "actions": [
+          {
+            "type": "DUEL_ATTACK",
+            "player": 1,
+            "attackerUid": "P1:main:21015833:1",
+            "targetUid": null,
+            "events": [
+              {
+                "type": "ATTACK_DECLARED",
+                "player": 1,
+                "attackerUid": "P1:main:21015833:1",
+                "targetUid": null,
+                "turn": 2,
+                "attackNumber": 1,
+                "attackLimit": 2
+              }
+            ]
+          },
+          {
+            "type": "CHIXIAO_NEGATE",
+            "player": 1,
+            "targetUid": "P1:main:21015833:1",
+            "events": [
+              {
+                "type": "CHIXIAO_NEGATE_EFFECT",
+                "player": 1,
+                "uid": "P1:extra:69248256:1",
+                "targetUid": "P1:main:21015833:1",
+                "negated": true,
+                "untilTurn": 2
+              }
+            ]
+          }
+        ],
+        "finalLP": [
+          7000,
+          8000
+        ],
+        "replayPass": true
+      },
+      {
+        "actions": [
+          {
+            "type": "STARDUST_SPARK_PROTECTION",
+            "player": 0,
+            "targetUid": "P0:main:27125110:1",
+            "events": []
+          },
+          {
+            "type": "DUEL_ATTACK",
+            "player": 1,
+            "attackerUid": "P1:main:21015833:1",
+            "targetUid": "P0:main:27125110:1",
+            "events": [
+              {
+                "type": "ATTACK_DECLARED",
+                "player": 1,
+                "attackerUid": "P1:main:21015833:1",
+                "targetUid": "P0:main:27125110:1",
+                "turn": 2,
+                "attackNumber": 1,
+                "attackLimit": 2
+              },
+              {
+                "type": "SPARK_DESTRUCTION_PREVENTED",
+                "uid": "P0:main:27125110:1",
+                "targetUid": "P0:main:27125110:1",
+                "sourceUid": "P0:extra:83994433:1",
+                "player": 0,
+                "kind": "BATTLE",
+                "turn": 2,
+                "remaining": 0,
+                "battleDamagePrevented": false
+              }
+            ]
+          },
+          {
+            "type": "DUEL_ATTACK",
+            "player": 1,
+            "attackerUid": "P1:main:21015833:1",
+            "targetUid": "P0:main:27125110:1",
+            "events": [
+              {
+                "type": "ATTACK_DECLARED",
+                "player": 1,
+                "attackerUid": "P1:main:21015833:1",
+                "targetUid": "P0:main:27125110:1",
+                "turn": 2,
+                "attackNumber": 2,
+                "attackLimit": 2
+              },
+              {
+                "type": "ADDITIONAL_ATTACK_CONSUMED",
+                "player": 1,
+                "attackerUid": "P1:main:21015833:1",
+                "cardId": 21015833,
+                "turn": 2,
+                "attackNumber": 2,
+                "attackLimit": 2,
+                "rule": "REVIEWED_CONTINUOUS_SECOND_ATTACK",
+                "startsChain": false
+              }
+            ]
+          }
+        ],
+        "finalLP": [
+          6000,
+          8000
+        ],
+        "replayPass": true
+      },
+      {
+        "actions": [
+          {
+            "type": "DUEL_ATTACK",
+            "player": 0,
+            "attackerUid": "P0:extra:74157028:1",
+            "targetUid": null,
+            "events": [
+              {
+                "type": "ATTACK_DECLARED",
+                "player": 0,
+                "attackerUid": "P0:extra:74157028:1",
+                "targetUid": null,
+                "turn": 2,
+                "attackNumber": 1,
+                "attackLimit": 2
+              }
+            ]
+          },
+          {
+            "type": "DUEL_ATTACK",
+            "player": 0,
+            "attackerUid": "P0:extra:74157028:1",
+            "targetUid": null,
+            "events": [
+              {
+                "type": "ATTACK_DECLARED",
+                "player": 0,
+                "attackerUid": "P0:extra:74157028:1",
+                "targetUid": null,
+                "turn": 2,
+                "attackNumber": 2,
+                "attackLimit": 2
+              },
+              {
+                "type": "ADDITIONAL_ATTACK_CONSUMED",
+                "player": 0,
+                "attackerUid": "P0:extra:74157028:1",
+                "cardId": 74157028,
+                "turn": 2,
+                "attackNumber": 2,
+                "attackLimit": 2,
+                "rule": "REVIEWED_CONTINUOUS_SECOND_ATTACK",
+                "startsChain": false
+              }
+            ]
+          }
+        ],
+        "finalLP": [
+          8000,
+          2400
+        ],
+        "replayPass": true
+      },
+      {
+        "actions": [
+          {
+            "type": "DUEL_ATTACK",
+            "player": 0,
+            "attackerUid": "P0:extra:74157028:1",
+            "targetUid": null,
+            "events": [
+              {
+                "type": "ATTACK_DECLARED",
+                "player": 0,
+                "attackerUid": "P0:extra:74157028:1",
+                "targetUid": null,
+                "turn": 2,
+                "attackNumber": 1,
+                "attackLimit": 2
+              }
+            ]
+          },
+          {
+            "type": "CHIXIAO_NEGATE",
+            "player": 0,
+            "targetUid": "P0:extra:74157028:1",
+            "events": [
+              {
+                "type": "CHIXIAO_NEGATE_EFFECT",
+                "player": 0,
+                "uid": "P0:extra:69248256:1",
+                "targetUid": "P0:extra:74157028:1",
+                "negated": true,
+                "untilTurn": 2
+              }
+            ]
+          }
+        ],
+        "finalLP": [
+          8000,
+          5200
+        ],
+        "replayPass": true
+      },
+      {
+        "actions": [
+          {
+            "type": "STARDUST_SPARK_PROTECTION",
+            "player": 1,
+            "targetUid": "P1:main:27125110:1",
+            "events": []
+          },
+          {
+            "type": "DUEL_ATTACK",
+            "player": 0,
+            "attackerUid": "P0:extra:74157028:1",
+            "targetUid": "P1:main:27125110:1",
+            "events": [
+              {
+                "type": "ATTACK_DECLARED",
+                "player": 0,
+                "attackerUid": "P0:extra:74157028:1",
+                "targetUid": "P1:main:27125110:1",
+                "turn": 2,
+                "attackNumber": 1,
+                "attackLimit": 2
+              },
+              {
+                "type": "SPARK_DESTRUCTION_PREVENTED",
+                "uid": "P1:main:27125110:1",
+                "targetUid": "P1:main:27125110:1",
+                "sourceUid": "P1:extra:83994433:1",
+                "player": 1,
+                "kind": "BATTLE",
+                "turn": 2,
+                "remaining": 0,
+                "battleDamagePrevented": false
+              }
+            ]
+          },
+          {
+            "type": "DUEL_ATTACK",
+            "player": 0,
+            "attackerUid": "P0:extra:74157028:1",
+            "targetUid": "P1:main:27125110:1",
+            "events": [
+              {
+                "type": "ATTACK_DECLARED",
+                "player": 0,
+                "attackerUid": "P0:extra:74157028:1",
+                "targetUid": "P1:main:27125110:1",
+                "turn": 2,
+                "attackNumber": 2,
+                "attackLimit": 2
+              },
+              {
+                "type": "ADDITIONAL_ATTACK_CONSUMED",
+                "player": 0,
+                "attackerUid": "P0:extra:74157028:1",
+                "cardId": 74157028,
+                "turn": 2,
+                "attackNumber": 2,
+                "attackLimit": 2,
+                "rule": "REVIEWED_CONTINUOUS_SECOND_ATTACK",
+                "startsChain": false
+              }
+            ]
+          }
+        ],
+        "finalLP": [
+          8000,
+          2400
+        ],
+        "replayPass": true
+      },
+      {
+        "actions": [
+          {
+            "type": "DUEL_ATTACK",
+            "player": 1,
+            "attackerUid": "P1:extra:74157028:1",
+            "targetUid": null,
+            "events": [
+              {
+                "type": "ATTACK_DECLARED",
+                "player": 1,
+                "attackerUid": "P1:extra:74157028:1",
+                "targetUid": null,
+                "turn": 2,
+                "attackNumber": 1,
+                "attackLimit": 2
+              }
+            ]
+          },
+          {
+            "type": "DUEL_ATTACK",
+            "player": 1,
+            "attackerUid": "P1:extra:74157028:1",
+            "targetUid": null,
+            "events": [
+              {
+                "type": "ATTACK_DECLARED",
+                "player": 1,
+                "attackerUid": "P1:extra:74157028:1",
+                "targetUid": null,
+                "turn": 2,
+                "attackNumber": 2,
+                "attackLimit": 2
+              },
+              {
+                "type": "ADDITIONAL_ATTACK_CONSUMED",
+                "player": 1,
+                "attackerUid": "P1:extra:74157028:1",
+                "cardId": 74157028,
+                "turn": 2,
+                "attackNumber": 2,
+                "attackLimit": 2,
+                "rule": "REVIEWED_CONTINUOUS_SECOND_ATTACK",
+                "startsChain": false
+              }
+            ]
+          }
+        ],
+        "finalLP": [
+          2400,
+          8000
+        ],
+        "replayPass": true
+      },
+      {
+        "actions": [
+          {
+            "type": "DUEL_ATTACK",
+            "player": 1,
+            "attackerUid": "P1:extra:74157028:1",
+            "targetUid": null,
+            "events": [
+              {
+                "type": "ATTACK_DECLARED",
+                "player": 1,
+                "attackerUid": "P1:extra:74157028:1",
+                "targetUid": null,
+                "turn": 2,
+                "attackNumber": 1,
+                "attackLimit": 2
+              }
+            ]
+          },
+          {
+            "type": "CHIXIAO_NEGATE",
+            "player": 1,
+            "targetUid": "P1:extra:74157028:1",
+            "events": [
+              {
+                "type": "CHIXIAO_NEGATE_EFFECT",
+                "player": 1,
+                "uid": "P1:extra:69248256:1",
+                "targetUid": "P1:extra:74157028:1",
+                "negated": true,
+                "untilTurn": 2
+              }
+            ]
+          }
+        ],
+        "finalLP": [
+          5200,
+          8000
+        ],
+        "replayPass": true
+      },
+      {
+        "actions": [
+          {
+            "type": "STARDUST_SPARK_PROTECTION",
+            "player": 0,
+            "targetUid": "P0:main:27125110:1",
+            "events": []
+          },
+          {
+            "type": "DUEL_ATTACK",
+            "player": 1,
+            "attackerUid": "P1:extra:74157028:1",
+            "targetUid": "P0:main:27125110:1",
+            "events": [
+              {
+                "type": "ATTACK_DECLARED",
+                "player": 1,
+                "attackerUid": "P1:extra:74157028:1",
+                "targetUid": "P0:main:27125110:1",
+                "turn": 2,
+                "attackNumber": 1,
+                "attackLimit": 2
+              },
+              {
+                "type": "SPARK_DESTRUCTION_PREVENTED",
+                "uid": "P0:main:27125110:1",
+                "targetUid": "P0:main:27125110:1",
+                "sourceUid": "P0:extra:83994433:1",
+                "player": 0,
+                "kind": "BATTLE",
+                "turn": 2,
+                "remaining": 0,
+                "battleDamagePrevented": false
+              }
+            ]
+          },
+          {
+            "type": "DUEL_ATTACK",
+            "player": 1,
+            "attackerUid": "P1:extra:74157028:1",
+            "targetUid": "P0:main:27125110:1",
+            "events": [
+              {
+                "type": "ATTACK_DECLARED",
+                "player": 1,
+                "attackerUid": "P1:extra:74157028:1",
+                "targetUid": "P0:main:27125110:1",
+                "turn": 2,
+                "attackNumber": 2,
+                "attackLimit": 2
+              },
+              {
+                "type": "ADDITIONAL_ATTACK_CONSUMED",
+                "player": 1,
+                "attackerUid": "P1:extra:74157028:1",
+                "cardId": 74157028,
+                "turn": 2,
+                "attackNumber": 2,
+                "attackLimit": 2,
+                "rule": "REVIEWED_CONTINUOUS_SECOND_ATTACK",
+                "startsChain": false
+              }
+            ]
+          }
+        ],
+        "finalLP": [
+          2400,
+          8000
+        ],
+        "replayPass": true
+      },
+      {
+        "actions": [
+          {
+            "type": "DUEL_ATTACK",
+            "player": 0,
+            "attackerUid": "P0:extra:74157028:1",
+            "targetUid": "P1:main:52277807:1",
+            "events": [
+              {
+                "type": "ATTACK_DECLARED",
+                "player": 0,
+                "attackerUid": "P0:extra:74157028:1",
+                "targetUid": "P1:main:52277807:1",
+                "turn": 2,
+                "attackNumber": 1,
+                "attackLimit": 2
+              },
+              {
+                "type": "BALELYNX_DESTRUCTION_REPLACED",
+                "uid": "P1:extra:14812471:1",
+                "player": 1,
+                "targetUids": [
+                  "P1:main:52277807:1"
+                ],
+                "kind": "BATTLE",
+                "chainCreated": false
+              }
+            ]
+          },
+          {
+            "type": "DUEL_ATTACK",
+            "player": 0,
+            "attackerUid": "P0:extra:74157028:1",
+            "targetUid": "P1:main:52277807:1",
+            "events": [
+              {
+                "type": "ATTACK_DECLARED",
+                "player": 0,
+                "attackerUid": "P0:extra:74157028:1",
+                "targetUid": "P1:main:52277807:1",
+                "turn": 2,
+                "attackNumber": 2,
+                "attackLimit": 2
+              },
+              {
+                "type": "ADDITIONAL_ATTACK_CONSUMED",
+                "player": 0,
+                "attackerUid": "P0:extra:74157028:1",
+                "cardId": 74157028,
+                "turn": 2,
+                "attackNumber": 2,
+                "attackLimit": 2,
+                "rule": "REVIEWED_CONTINUOUS_SECOND_ATTACK",
+                "startsChain": false
+              }
+            ]
+          }
+        ],
+        "finalLP": [
+          8000,
+          8000
+        ],
+        "replayPass": true
+      },
+      {
+        "actions": [
+          {
+            "type": "DUEL_ATTACK",
+            "player": 0,
+            "attackerUid": "P0:main:21015833:1",
+            "targetUid": null,
+            "events": [
+              {
+                "type": "ATTACK_DECLARED",
+                "player": 0,
+                "attackerUid": "P0:main:21015833:1",
+                "targetUid": null,
+                "turn": 2,
+                "attackNumber": 1,
+                "attackLimit": 2
+              }
+            ]
+          },
+          {
+            "type": "ACTIVATE_INFINITE_IMPERMANENCE",
+            "player": 1,
+            "targetUid": "P0:main:21015833:1",
+            "events": []
+          }
+        ],
+        "finalLP": [
+          8000,
+          7000
+        ],
+        "replayPass": true
+      },
+      {
+        "actions": [
+          {
+            "type": "DUEL_ATTACK",
+            "player": 0,
+            "attackerUid": "P0:extra:74157028:1",
+            "targetUid": null,
+            "events": [
+              {
+                "type": "ATTACK_DECLARED",
+                "player": 0,
+                "attackerUid": "P0:extra:74157028:1",
+                "targetUid": null,
+                "turn": 2,
+                "attackNumber": 1,
+                "attackLimit": 2
+              }
+            ]
+          },
+          {
+            "type": "ACTIVATE_INFINITE_IMPERMANENCE",
+            "player": 1,
+            "targetUid": "P0:extra:74157028:1",
+            "events": []
+          }
+        ],
+        "finalLP": [
+          8000,
+          5200
+        ],
+        "replayPass": true
+      }
+    ],
+    "profiles": [
+      21015833,
+      74157028
+    ],
+    "limitations": [
+      "Only the two reviewed second-attack profiles are added; other battle effects remain outside scope.",
+      "Declared starting fields do not certify prior summon history, including Cyber Twin Fusion material restrictions.",
+      "Attack packets remain atomic and do not claim general Damage Step priority.",
+      "Explicit QA-only counter/movement/legacy microstates are not accepted replay histories."
+    ]
+  },
+  "meaning": "86 source cases repeated in the recovered executor; complete release acceptance is independently established by exact-candidate CI.",
+  "pass": true
+}

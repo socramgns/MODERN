@@ -52,6 +52,7 @@ function validateGoal(goal){
 }
 function goalMatches(state,goal){
  if(!state||!goal||typeof goal!=='object'||Array.isArray(goal))return false;
+ if(state.duel?.battlePacket||W.YGOFlipEffects?.faithPending?.(state)?.length)return false;
  // A physical UID can satisfy only one requested copy, including across zones.
  const claimed=new Set(),contains=(items,ids)=>{const available=new Map();for(const item of arr(items)){const id=canonicalGoalId(card(item).id),identity=item?.uid??item;if(claimed.has(identity))continue;let row=available.get(id);if(!row)available.set(id,row=[]);if(!row.some(x=>x.identity===identity))row.push({identity});}for(const id of arr(ids)){const row=available.get(canonicalGoalId(id));while(row?.length&&claimed.has(row[0].identity))row.shift();const copy=row?.shift();if(!copy)return false;claimed.add(copy.identity);}return true;};
  const zones=state.zones?.[0]||{};
@@ -92,6 +93,8 @@ function goalProgress(state,goal){
   }
   requirements.push({kind:'STATE',key,expected:value[key],actual,fulfilled});
  }
+ const pendingResolution=!!(state?.duel?.battlePacket||W.YGOFlipEffects?.faithPending?.(state)?.length);
+ if(pendingResolution)requirements.push({kind:'STATE',key:'pendingResolution',expected:false,actual:true,fulfilled:false});
  const cardRows=requirements.filter(row=>row.kind==='CARD'),fulfilledRequirements=requirements.filter(row=>row.fulfilled).length;
  return{schema:'ygo-goal-progress/v1',achieved:present&&fulfilledRequirements===requirements.length,requirements,
   totals:{fulfilledRequirements,totalRequirements:requirements.length,matchedCopies:cardRows.reduce((total,row)=>total+row.matched,0),requiredCopies:cardRows.reduce((total,row)=>total+row.required,0)}};
@@ -163,7 +166,7 @@ function evaluate({deck,scenarios,context={},goal,goalLabel}={}){
     if(scenarioBaseline!==null&&key!==scenarioBaseline){rejected.push({scenarioId:id,lineIndex:indices[entry.index],issues:['SCENARIO_CONTAINS_DIFFERENT_PHYSICAL_OPENINGS']});continue;}
     if(sharedBaseline!==null&&key!==sharedBaseline){rejected.push({scenarioId:id,lineIndex:indices[entry.index],issues:['SCENARIO_OPENING_OR_OPPONENT_INVENTORY_MISMATCH']});continue;}
     scenarioBaseline=key;sharedBaseline??=key;
-    let goalReached=false;try{goalReached=target.test(line,entry.metrics)===true;}catch(e){rejected.push({scenarioId:id,lineIndex:indices[entry.index],issues:['GOAL_EVALUATION_FAILED:'+String(e?.message||e)]});continue;}
+    let goalReached=false;try{const final=finalState(line),pendingResolution=!!(final?.duel?.battlePacket||W.YGOFlipEffects?.faithPending?.(final)?.length);goalReached=!pendingResolution&&target.test(line,entry.metrics)===true;}catch(e){rejected.push({scenarioId:id,lineIndex:indices[entry.index],issues:['GOAL_EVALUATION_FAILED:'+String(e?.message||e)]});continue;}
     const first=firstOwnAction(line),end=finalDomain(finalState(line)),outcome={scenarioId:id,lineIndex:indices[entry.index],lineId:entry.lineId,goalReached,steps:entry.steps,metrics:clone(entry.metrics),vector:observedVector(entry.metrics),endDomain:end,firstAction:first,policy:actualPolicy(line.context),replayFresh:true,copiesConserved:true};
     const finalView=clone(finalState(line));delete finalView.events;delete finalView.provenance;const outcomeKey=stable({first:first?.key??null,final:finalView,metrics:entry.metrics});if(seenOutcomes.has(outcomeKey))continue;seenOutcomes.add(outcomeKey);outcomes.push(outcome);
     if(first&&goalReached){const planKey=stable({first:first.key,end});let p=plans.get(planKey);if(!p){p={planId:'plan-'+(plans.size+1),firstAction:clone(first),endDomain:end,outcomes:[]};plans.set(planKey,p);}p.outcomes.push(outcome);}

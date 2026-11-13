@@ -234,7 +234,19 @@ const hayabusa=base('hayabusa','Hayabusa: dos ataques con la misma copia','Invoc
  'El objetivo se cumple tras cuatro acciones: Invocación Normal, cambio a Battle Phase y dos ataques. Deshaz el segundo para recuperar exactamente ese paso y exporta el informe para reanudarlo con el mismo historial. La búsqueda también conserva ese gasto; la puntuación competitiva sigue provisional.',
  'Cyber Twin Dragon dispone del mismo segundo ataque en su perfil de batalla registrado. Declararlo inicialmente en campo no acredita una Invocación por Fusión anterior; este ejemplo no añade su receta de Fusión ni nuevos objetivos de Monster Reborn.'
 ]);
-const templates=new Map([spark,spirit,invoked,swordsoul,branded,tenyi,salamangreat,roar,crow,droll,field,trap,evacuation,shuffle,reborn,synchro,azure,spiritReborn,wolfReborn,albaz,hayabusa].map(value=>[value.id,value]));
+const faithDeck=deck([[31560081,1],[74063034,1]],[]),faithOpening=NORMALS.slice(0,5);
+const faithFlip=base('faith-flip','Magician of Faith: voltear y recuperar una Magia','Realiza una Invocación por Volteo y recupera la misma copia física de Invocation desde tu Cementerio.',physical(faithDeck,faithOpening),blue(),{turn:2,activePlayer:0,phase:'MAIN 1',placements:[
+ {player:0,from:'deck',cardId:31560081,zone:'monster',zoneIndex:0,position:'DEFENSE',faceUp:false,summonTurn:1},
+ {player:0,from:'deck',cardId:74063034,zone:'gy'}
+ ]},{requiredFieldIds:[31560081],requiredHandIds:[74063034],phase:'MAIN 1'},[
+ 'El campo inicial declara a Magician of Faith colocada en Defensa desde el turno anterior e Invocation en tu Cementerio. Este supuesto no acredita la colocación ni las jugadas anteriores; el ejemplo no ejecuta acciones automáticamente.',
+ 'Elige Invocar por Volteo a Magician of Faith. La misma copia pasa a Ataque boca arriba sin consumir tu Invocación Normal y sin acreditar una Invocación Especial previa.',
+ 'Su efecto FLIP es obligatorio: elige Recuperar Magia con Magician of Faith y selecciona la Invocation de tu Cementerio. La carta se muestra y vuelve a tu mano; no se busca en el Deck, no se baraja y no se paga coste ni se consume un límite por turno.',
+ 'Mientras este efecto está pendiente no se permiten otras acciones de raíz ni se declara cumplido el objetivo. Incluso sin una Magia legal, el efecto obligatorio se activa y resuelve sin recuperar; no puedes declinarlo.',
+ 'El objetivo exige dos acciones verificadas y esa misma Invocation física en tu mano. Revisa el replay, deshaz la recuperación y exporta el informe para reanudarlo con su pendiente intacto. La puntuación competitiva sigue provisional.',
+ 'El motor también registra el FLIP de Faith al ser atacada: calcula el daño y la destrucción antes de resolver su efecto, y completa después el envío pendiente al Cementerio. Esa ventana sólo admite las respuestas revisadas; no representa todo el Damage Step ni SEGOC general. Sólo se ofrecen Magias de recuperación revisadas.'
+]);
+const templates=new Map([spark,spirit,invoked,swordsoul,branded,tenyi,salamangreat,roar,crow,droll,field,trap,evacuation,shuffle,reborn,synchro,azure,spiritReborn,wolfReborn,albaz,hayabusa,faithFlip].map(value=>[value.id,value]));
 const describe=value=>({id:value.id,name:value.name,description:value.description,scope:value.scope,steps:clone(value.tutorial.steps),replacesDeck:true,initialHistoryCertified:false,competitiveRecommendation:false});
 function list(){return[...templates.values()].map(describe);}
 function get(id){if(typeof id!=='string'||!templates.has(id))throw Error('SCENARIO_EXAMPLE_UNKNOWN');return clone(templates.get(id));}

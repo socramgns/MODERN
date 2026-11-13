@@ -1,0 +1,323 @@
+{
+  "schema": "ygo-flip-technical-reference-review/v1",
+  "reviewedAt": "2026-11-13T18:31:02.549596+00:00",
+  "cardId": 31560081,
+  "scope": "BOUNDED_REGISTERED_FLIP_PROFILE_NOT_GENERAL_DAMAGE_STEP_OR_SEGOC",
+  "sourceRole": "SECONDARY_TECHNICAL_IMPLEMENTATION_REFERENCE",
+  "officialRulingAuthentication": false,
+  "officialTcgRulingCertified": false,
+  "executableInAnalyzer": false,
+  "sources": [
+    {
+      "requestedUrl": "https://raw.githubusercontent.com/ProjectIgnis/CardScripts/915c6ff63518a04e18d16ee45962d75a8c8be264/official/c31560081.lua",
+      "resolvedUrl": "https://raw.githubusercontent.com/ProjectIgnis/CardScripts/915c6ff63518a04e18d16ee45962d75a8c8be264/official/c31560081.lua",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "sha256": "43134bf40309f7c067b0e738fe2d6e48088aa3187c0bb3bb36975568e1c57682",
+      "bytes": 982,
+      "retrievedAt": "2026-11-13T18:25:36.799415+00:00",
+      "transport": "HTTPS_TLS_VALIDATED",
+      "localFile": "faith-c31560081.lua",
+      "sourceRole": "SECONDARY_TECHNICAL_IMPLEMENTATION_REFERENCE",
+      "officialRulingAuthentication": false,
+      "executableInAnalyzer": false
+    },
+    {
+      "requestedUrl": "https://raw.githubusercontent.com/ProjectIgnis/CardScripts/915c6ff63518a04e18d16ee45962d75a8c8be264/official/c75286621.lua",
+      "resolvedUrl": "https://raw.githubusercontent.com/ProjectIgnis/CardScripts/915c6ff63518a04e18d16ee45962d75a8c8be264/official/c75286621.lua",
+      "status": 200,
+      "bytes": 1910,
+      "sha256": "14ab80a51e638427b99d977c16584d454ac6825a78dd0491db08173353ceecd9",
+      "retrievedAt": "2026-11-13T18:27:15.864799+00:00",
+      "commit": "915c6ff63518a04e18d16ee45962d75a8c8be264",
+      "sourceRole": "SECONDARY_TECHNICAL_IMPLEMENTATION_REFERENCE",
+      "officialRulingAuthentication": false,
+      "executableInAnalyzer": false,
+      "localFile": "c75286621.lua"
+    },
+    {
+      "requestedUrl": "https://raw.githubusercontent.com/ProjectIgnis/CardScripts/915c6ff63518a04e18d16ee45962d75a8c8be264/official/c51339637.lua",
+      "resolvedUrl": "https://raw.githubusercontent.com/ProjectIgnis/CardScripts/915c6ff63518a04e18d16ee45962d75a8c8be264/official/c51339637.lua",
+      "status": 200,
+      "bytes": 2934,
+      "sha256": "91a8a8b80d0b979062efb301687dc9426a85956623e55698d9abbfe1d39b109e",
+      "retrievedAt": "2026-11-13T18:27:15.876540+00:00",
+      "commit": "915c6ff63518a04e18d16ee45962d75a8c8be264",
+      "sourceRole": "SECONDARY_TECHNICAL_IMPLEMENTATION_REFERENCE",
+      "officialRulingAuthentication": false,
+      "executableInAnalyzer": false,
+      "localFile": "c51339637.lua"
+    },
+    {
+      "requestedUrl": "https://raw.githubusercontent.com/ProjectIgnis/CardScripts/915c6ff63518a04e18d16ee45962d75a8c8be264/official/c10045474.lua",
+      "resolvedUrl": "https://raw.githubusercontent.com/ProjectIgnis/CardScripts/915c6ff63518a04e18d16ee45962d75a8c8be264/official/c10045474.lua",
+      "status": 200,
+      "bytes": 4011,
+      "sha256": "3e7a6a44bfcc399b3f7d910930fa9144dbe0baf1ba4893a84c0afad94b5e5fc0",
+      "retrievedAt": "2026-11-13T18:27:15.980626+00:00",
+      "commit": "915c6ff63518a04e18d16ee45962d75a8c8be264",
+      "sourceRole": "SECONDARY_TECHNICAL_IMPLEMENTATION_REFERENCE",
+      "officialRulingAuthentication": false,
+      "executableInAnalyzer": false,
+      "localFile": "c10045474.lua"
+    },
+    {
+      "requestedUrl": "https://raw.githubusercontent.com/ProjectIgnis/CardScripts/915c6ff63518a04e18d16ee45962d75a8c8be264/official/c24508238.lua",
+      "resolvedUrl": "https://raw.githubusercontent.com/ProjectIgnis/CardScripts/915c6ff63518a04e18d16ee45962d75a8c8be264/official/c24508238.lua",
+      "status": 200,
+      "bytes": 1145,
+      "sha256": "010c4fd95d1026a05d19fa59bcf4454d0aea2d04014e4c432963d63da60c4694",
+      "retrievedAt": "2026-11-13T18:27:15.869283+00:00",
+      "commit": "915c6ff63518a04e18d16ee45962d75a8c8be264",
+      "sourceRole": "SECONDARY_TECHNICAL_IMPLEMENTATION_REFERENCE",
+      "officialRulingAuthentication": false,
+      "executableInAnalyzer": false,
+      "localFile": "c24508238.lua"
+    },
+    {
+      "requestedUrl": "https://raw.githubusercontent.com/ProjectIgnis/CardScripts/915c6ff63518a04e18d16ee45962d75a8c8be264/official/c97268402.lua",
+      "resolvedUrl": "https://raw.githubusercontent.com/ProjectIgnis/CardScripts/915c6ff63518a04e18d16ee45962d75a8c8be264/official/c97268402.lua",
+      "status": 200,
+      "bytes": 1817,
+      "sha256": "1f907b1c34a9efca7b6d161ade3076ad3be8cd6d32847119d6b780be6964e4e5",
+      "retrievedAt": "2026-11-13T18:27:15.865101+00:00",
+      "commit": "915c6ff63518a04e18d16ee45962d75a8c8be264",
+      "sourceRole": "SECONDARY_TECHNICAL_IMPLEMENTATION_REFERENCE",
+      "officialRulingAuthentication": false,
+      "executableInAnalyzer": false,
+      "localFile": "c97268402.lua"
+    },
+    {
+      "requestedUrl": "https://raw.githubusercontent.com/ProjectIgnis/CardScripts/915c6ff63518a04e18d16ee45962d75a8c8be264/official/c69248256.lua",
+      "resolvedUrl": "https://raw.githubusercontent.com/ProjectIgnis/CardScripts/915c6ff63518a04e18d16ee45962d75a8c8be264/official/c69248256.lua",
+      "status": 200,
+      "bytes": 3368,
+      "sha256": "161b95d57726944024f297f5a118afec62f88fdc76d49f907d39c369bf983eda",
+      "retrievedAt": "2026-11-13T18:27:16.149653+00:00",
+      "commit": "915c6ff63518a04e18d16ee45962d75a8c8be264",
+      "sourceRole": "SECONDARY_TECHNICAL_IMPLEMENTATION_REFERENCE",
+      "officialRulingAuthentication": false,
+      "executableInAnalyzer": false,
+      "localFile": "c69248256.lua"
+    },
+    {
+      "requestedUrl": "https://raw.githubusercontent.com/edo9300/ygopro-core/c2e0b697e031d3560c077c9cd2cc76474969dedf/processor.cpp",
+      "resolvedUrl": "https://raw.githubusercontent.com/edo9300/ygopro-core/c2e0b697e031d3560c077c9cd2cc76474969dedf/processor.cpp",
+      "status": 200,
+      "bytes": 192222,
+      "sha256": "083b4da8e33f22890d186c7d19ebbcf0113aa4c89d59e30f73cef0d2dd8cda90",
+      "retrievedAt": "2026-11-13T18:26:41.000618+00:00",
+      "commit": "c2e0b697e031d3560c077c9cd2cc76474969dedf",
+      "sourceRole": "SECONDARY_TECHNICAL_IMPLEMENTATION_REFERENCE",
+      "officialRulingAuthentication": false,
+      "executableInAnalyzer": false,
+      "localFile": "processor.cpp"
+    },
+    {
+      "requestedUrl": "https://raw.githubusercontent.com/edo9300/ygopro-core/c2e0b697e031d3560c077c9cd2cc76474969dedf/operations.cpp",
+      "resolvedUrl": "https://raw.githubusercontent.com/edo9300/ygopro-core/c2e0b697e031d3560c077c9cd2cc76474969dedf/operations.cpp",
+      "status": 200,
+      "bytes": 228557,
+      "sha256": "2293f5693d3832561cc0395ab4ece8134b33560b522a38ab6d7133ea0bd31ad4",
+      "retrievedAt": "2026-11-13T18:26:41.000089+00:00",
+      "commit": "c2e0b697e031d3560c077c9cd2cc76474969dedf",
+      "sourceRole": "SECONDARY_TECHNICAL_IMPLEMENTATION_REFERENCE",
+      "officialRulingAuthentication": false,
+      "executableInAnalyzer": false,
+      "localFile": "operations.cpp"
+    },
+    {
+      "requestedUrl": "https://raw.githubusercontent.com/edo9300/ygopro-core/c2e0b697e031d3560c077c9cd2cc76474969dedf/effect.cpp",
+      "resolvedUrl": "https://raw.githubusercontent.com/edo9300/ygopro-core/c2e0b697e031d3560c077c9cd2cc76474969dedf/effect.cpp",
+      "status": 200,
+      "bytes": 31958,
+      "sha256": "5d76eeafd10260bc2d25a2297a635dd14d166ba418e22188806b33ceca82fe03",
+      "retrievedAt": "2026-11-13T18:26:41.028645+00:00",
+      "commit": "c2e0b697e031d3560c077c9cd2cc76474969dedf",
+      "sourceRole": "SECONDARY_TECHNICAL_IMPLEMENTATION_REFERENCE",
+      "officialRulingAuthentication": false,
+      "executableInAnalyzer": false,
+      "localFile": "effect.cpp"
+    },
+    {
+      "requestedUrl": "https://raw.githubusercontent.com/edo9300/ygopro-core/c2e0b697e031d3560c077c9cd2cc76474969dedf/card.cpp",
+      "resolvedUrl": "https://raw.githubusercontent.com/edo9300/ygopro-core/c2e0b697e031d3560c077c9cd2cc76474969dedf/card.cpp",
+      "status": 200,
+      "bytes": 144978,
+      "sha256": "7903a19f84ddadf9fc792c7cb7eb3d8331c6fdab01e7c07fe00f16518902826b",
+      "retrievedAt": "2026-11-13T18:28:50.608059+00:00",
+      "commit": "c2e0b697e031d3560c077c9cd2cc76474969dedf",
+      "sourceRole": "SECONDARY_TECHNICAL_IMPLEMENTATION_REFERENCE",
+      "officialRulingAuthentication": false,
+      "executableInAnalyzer": false,
+      "localFile": "card.cpp"
+    },
+    {
+      "requestedUrl": "https://raw.githubusercontent.com/edo9300/ygopro-core/c2e0b697e031d3560c077c9cd2cc76474969dedf/field.h",
+      "resolvedUrl": "https://raw.githubusercontent.com/edo9300/ygopro-core/c2e0b697e031d3560c077c9cd2cc76474969dedf/field.h",
+      "status": 200,
+      "bytes": 34518,
+      "sha256": "ad825eebc93bcadb7fefcf8d8458c09cd4953b2e75c10eabe7bd8e0822e9a3fa",
+      "retrievedAt": "2026-11-13T18:26:40.994807+00:00",
+      "commit": "c2e0b697e031d3560c077c9cd2cc76474969dedf",
+      "sourceRole": "SECONDARY_TECHNICAL_IMPLEMENTATION_REFERENCE",
+      "officialRulingAuthentication": false,
+      "executableInAnalyzer": false,
+      "localFile": "field.h"
+    }
+  ],
+  "claims": [
+    {
+      "id": "faith-identity",
+      "statement": "Catalog row is exact passcode31560081 Magician of Faith, FLIP Spellcaster LIGHT level1 ATK300 DEF400; source is cards.cdb from immutable BabelCDB snapshot.",
+      "evidence": [
+        "catalogue-excerpt.json"
+      ]
+    },
+    {
+      "id": "mandatory-no-cost-no-hopt",
+      "statement": "SINGLE+FLIP without optional marker, SetCost or SetCountLimit. Card text has no you-can.",
+      "evidence": [
+        "faith-c31560081.lua:6-13",
+        "catalogue-excerpt.json"
+      ]
+    },
+    {
+      "id": "mandatory-no-target",
+      "statement": "Target activation check returns true unconditionally; selection attempts ownGYSpell abletohand; operation only moves an existing related firsttarget. Technical implementation therefore creates mandatory activation even with zero legal Spell targets, resolving without adding. Do not reject Flip procedure or omit mandatory effect solely for zero targets.",
+      "evidence": [
+        "faith-c31560081.lua:15-29"
+      ],
+      "qualification": "Secondary technical contract, no new official Konami ruling captured. Other global activation prohibitions still require their reviewed rules."
+    },
+    {
+      "id": "all-legal-targets",
+      "statement": "A zero-target branch requires genuinely zero legal targets across ownGY. A Spell omitted from a reviewed allowlist is not evidence of zero legal targets; unsupported movement must exclude the affected packet instead.",
+      "evidence": [
+        "faith-c31560081.lua:15-23"
+      ]
+    },
+    {
+      "id": "target-resolution",
+      "statement": "Target own controllerGYSpell abletohand. Recheck same physical copy and relation at resolution; no retarget if moved. SendtoHand nil means target owner hand; explicitly reveal to opponent. Faith itself need not remain onfield for its separately resolving effect unless negated by a registered response.",
+      "evidence": [
+        "faith-c31560081.lua:18-29"
+      ]
+    },
+    {
+      "id": "real-flip-procedure",
+      "statement": "FlipSummon engine sets faceupATTACK and raises EVENT_FLIP+FLIP_SUMMON_SUCCESS+CHANGE_POS on actual successful procedure. This is not Normal/Special arrival or manufactured by initialfaceupsetup.",
+      "evidence": [
+        "operations.cpp:2362-2365",
+        "operations.cpp:2414-2419"
+      ]
+    },
+    {
+      "id": "battle-flip-timing",
+      "statement": "Battle sets flip_delayed before turning facedown target up. Damage calculation and LPdamage happen first. Destruction prevention/replacements and BATTLE_DESTROYED marking happen before releasing delayed FLIP events. PointEvent resolves before battleDestroy sends remaining victims.",
+      "evidence": [
+        "processor.cpp:2280",
+        "processor.cpp:2324-2330",
+        "processor.cpp:2484-2606",
+        "processor.cpp:2605-2655"
+      ]
+    },
+    {
+      "id": "prevention-before-flip",
+      "statement": "Consume/decide Spark or other reviewed first-destruction prevention against the battle event before releasing Flip responses. Delay physical graveyard departure, not prevention selection; otherwise a later Roar could wrongly consume protection meant for earlier battle.",
+      "evidence": [
+        "processor.cpp:2507-2606"
+      ]
+    },
+    {
+      "id": "mechaba-damage",
+      "statement": "Mechaba Quick has explicit DAMAGE_STEP+DAMAGE_CAL flags. Its negcon own e:GetHandler() (Mechaba) must not be BATTLE_DESTROYED. This does NOT prohibit Faith re:GetHandler() from triggering while battleDestroyed. Cost is same type as activatedeffect: a Monster fromhand for Faith. Successful activation negation non-target banishes related source.",
+      "evidence": [
+        "c75286621.lua:12-16",
+        "c75286621.lua:24-34",
+        "c75286621.lua:48-50"
+      ]
+    },
+    {
+      "id": "roar-damage",
+      "statement": "Roar is CounterTrap per catalog and ACTIVATE on CHAINING, negating activation then non-target destroying still-related source. Core exempts TYPE_COUNTER from ordinary DamageStepflags requirement.",
+      "evidence": [
+        "c51339637.lua:10-16",
+        "c51339637.lua:38-54",
+        "effect.cpp:156-163",
+        "catalogue-excerpt.json"
+      ]
+    },
+    {
+      "id": "roar-battle-destroyed",
+      "statement": "Technical static call path permits Roar effect-destroying a Faith already marked battleDestroyed: processor clears DESTROY_CONFIRMED when setting BATTLE_DESTROYED; Destroy only skips existing DESTROY_CONFIRMED; is_destructable rejects overlay/GY/banished, not battleDestroyed; is_affect_by_effect likewise does not reject battleDestroyed. Targeting a battleDestroyed card is separately prohibited, irrelevant to non-target Roar/Mechaba.",
+      "evidence": [
+        "processor.cpp:2578-2579",
+        "operations.cpp:255-281",
+        "operations.cpp:3804-3820",
+        "card.cpp:3436-3463",
+        "card.cpp:3883-3886"
+      ],
+      "qualification": "Static source review, not running the engine or official ruling certification."
+    },
+    {
+      "id": "cleanup-location",
+      "statement": "After response chain completes, battlecleanup removes victim from destructiongroup if no longer MZONE or no longer same field stay. Thus Mechaba banish or Roar effectGY must not be followed by a second battleGY transition.",
+      "evidence": [
+        "processor.cpp:2643-2656"
+      ]
+    },
+    {
+      "id": "excluded-damage-responses",
+      "statement": "Imperm, Crow and Chixiao Quick have no applicable DAMAGE_STEP flags. Veiler explicitly requires opponentMain. Core rejects these normal activations in DamageStep without reviewed exceptions. Do not infer these response permissions just from phaseBATTLE.",
+      "evidence": [
+        "c10045474.lua:8-12",
+        "c24508238.lua:8-14",
+        "c97268402.lua:21-22",
+        "c69248256.lua:24-31",
+        "effect.cpp:156-163",
+        "effect.cpp:246-251"
+      ]
+    },
+    {
+      "id": "controller-not-owner",
+      "statement": "GY target belongs to the triggering controller, not original owner of Faith. The target callback uses IsControler(tp) and SelectTarget(tp,... ownGY=LOCATION_GRAVE, opposingGY=0). Core assigns triggering_player from the triggering controller (or previous controller for temporary reason).",
+      "evidence": [
+        "faith-c31560081.lua:19-22",
+        "processor.cpp:1422-1430"
+      ]
+    },
+    {
+      "id": "mandatory-effect-negated",
+      "statement": "Core queues a mandatory FLIP chain, then if its source has EFFECT_DISABLE_EFFECT creates EFFECT_DISABLE_CHAIN for that chain. Negated effects still activate unless a separate reviewed activation prohibition applies; do not omit pending or incorrectly treat zero-target as a reason to skip the mandatory chain.",
+      "evidence": [
+        "processor.cpp:1405-1443"
+      ]
+    }
+  ],
+  "officialCaptureAttempts": [
+    {
+      "requestedUrl": "https://www.db.yugioh-card.com/yugiohdb/card_search.action?ope=1&keyword=Magician%20of%20Faith&stype=1&request_locale=en",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "requestedUrl": "https://www.yugioh-card.com/en/gameplay/damage_step/",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "requestedUrl": "https://www.yugioh-card.com/en/play/damage-step/",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "requestedUrl": "https://img.yugioh-card.com/en/downloads/rulebook/SD_RuleBook_EN_10.pdf",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    }
+  ],
+  "limitations": [
+    "All official Konami HTTPS capture attempts were rejected403 by the environment proxy; no bypass or alternate-host evasion attempted.",
+    "The immutable technical card scripts and engine texts are data only and have not been executed.",
+    "Core commit is separately pinned from the existing CardScripts snapshot; this is reviewed static corroboration, not a claim that those snapshots were integration tested together.",
+    "No general SEGOC, arbitrary response-chain, global activation prohibitions, all card types or full DamageStep coverage follows from this bounded profile.",
+    "Do not claim source technical OTflags certify contemporary format availability or tournament scoring."
+  ]
+}

@@ -1,0 +1,460 @@
+{
+  "schema": "ygo-accessibility-workflow/v1",
+  "pass": true,
+  "buildId": "8e2f493167e60a1752237885db37d72063514109118aa937707e93c9819c4908",
+  "htmlSha256": "3838c78ea58ec52af9019fbc5ad2f132db26b6022eb3d9c1ff939543d8894531",
+  "artifactMode": "DELIVERED_BYTES",
+  "sourceInjection": false,
+  "checks": [
+    {
+      "name": "keyboard_tasks_boot_exact_delivered_bytes_offline",
+      "pass": true
+    },
+    {
+      "name": "presentation_module_keeps_uncertainty_explicit",
+      "pass": true
+    },
+    {
+      "name": "legacy_deck_catalog_and_restriction_controls_have_names",
+      "pass": true
+    },
+    {
+      "name": "first_keyboard_stop_is_the_visible_skip_link",
+      "pass": true
+    },
+    {
+      "name": "skip_link_moves_focus_to_deck_data",
+      "pass": true
+    },
+    {
+      "name": "all_skip_link_destinations_are_focusable_existing_sections",
+      "pass": true
+    },
+    {
+      "name": "legacy_name_input_has_visible_keyboard_focus",
+      "pass": true
+    },
+    {
+      "name": "name_input_text_and_focus_meet_sampled_contrast_thresholds",
+      "pass": true
+    },
+    {
+      "name": "format_selection_exposes_exactly_one_pressed_button",
+      "pass": true
+    },
+    {
+      "name": "format_selection_can_return_to_tcg_with_keyboard",
+      "pass": true
+    },
+    {
+      "name": "deck_zone_buttons_expose_selection_and_controlled_list",
+      "pass": true
+    },
+    {
+      "name": "deck_zone_can_return_to_main_with_keyboard",
+      "pass": true
+    },
+    {
+      "name": "laboratory_buttons_expose_selection_and_controlled_panel",
+      "pass": true
+    },
+    {
+      "name": "laboratory_can_return_to_catalog_with_keyboard",
+      "pass": true
+    },
+    {
+      "name": "legacy_catalog_search_has_global_visible_focus",
+      "pass": true
+    },
+    {
+      "name": "toast_exposes_a_polite_atomic_status",
+      "pass": true
+    },
+    {
+      "name": "keyboard_fixture_starts_from_a_physical_unplayed_example",
+      "pass": true
+    },
+    {
+      "name": "retained_preview_shell_exposes_a_named_modal_dialog",
+      "pass": true
+    },
+    {
+      "name": "preview_close_control_is_a_named_native_button",
+      "pass": true
+    },
+    {
+      "name": "preview_opens_with_focus_inside_and_background_inert",
+      "pass": true
+    },
+    {
+      "name": "preview_tab_wraps_inside_the_dialog",
+      "pass": true
+    },
+    {
+      "name": "preview_shift_tab_wraps_inside_the_dialog",
+      "pass": true
+    },
+    {
+      "name": "inert_background_cannot_steal_preview_focus",
+      "pass": true
+    },
+    {
+      "name": "preview_escape_restores_original_focus_and_background",
+      "pass": true
+    },
+    {
+      "name": "preview_native_close_button_works_with_enter",
+      "pass": true
+    },
+    {
+      "name": "preview_backdrop_closes_and_restores_focus",
+      "pass": true
+    },
+    {
+      "name": "legacy_class_removal_also_restores_focus",
+      "pass": true
+    },
+    {
+      "name": "keyboard_and_modal_tasks_preserve_the_physical_scenario",
+      "pass": true
+    },
+    {
+      "name": "keyboard_tasks_raise_no_uncaught_page_errors",
+      "pass": true
+    },
+    {
+      "name": "keyboard_tasks_leave_the_delivered_artifact_unchanged",
+      "pass": true
+    }
+  ],
+  "details": {
+    "legacy_deck_catalog_and_restriction_controls_have_names": [
+      {
+        "id": "name",
+        "named": true
+      },
+      {
+        "id": "arch",
+        "named": true
+      },
+      {
+        "id": "date",
+        "named": true
+      },
+      {
+        "id": "archAutoMode",
+        "named": true
+      },
+      {
+        "id": "cardSearch",
+        "named": true
+      },
+      {
+        "id": "cardType",
+        "named": true
+      },
+      {
+        "id": "cardRole",
+        "named": true
+      },
+      {
+        "id": "dbSearch",
+        "named": true
+      },
+      {
+        "id": "dbRole",
+        "named": true
+      },
+      {
+        "id": "dbArchetype",
+        "named": true
+      },
+      {
+        "id": "dbFunction",
+        "named": true
+      },
+      {
+        "id": "banSearch",
+        "named": true
+      },
+      {
+        "id": "banFilter",
+        "named": true
+      }
+    ],
+    "legacy_name_input_has_visible_keyboard_focus": {
+      "style": "solid",
+      "width": 3,
+      "color": "rgb(255, 221, 112)",
+      "foreground": "rgb(255, 255, 255)",
+      "background": "rgb(2, 15, 40)"
+    },
+    "name_input_text_and_focus_meet_sampled_contrast_thresholds": {
+      "textRatio": 19.06,
+      "focusRatio": 14.37,
+      "scope": "Only this opaque sampled input; not a complete contrast audit."
+    },
+    "keyboard_tasks_raise_no_uncaught_page_errors": []
+  },
+  "engine": "chromium",
+  "engineVersion": "154.0.8037.57",
+  "externalRequestsBlocked": [
+    "https://db.ygoprodeck.com/api/v7/cardinfo.php?name=KASHTIRA%20FENRIR",
+    "https://db.ygoprodeck.com/api/v7/cardinfo.php?name=KASHTIRA%20UNICORN",
+    "https://db.ygoprodeck.com/api/v7/cardinfo.php?name=THE%20BYSTIAL%20LUBELLION",
+    "https://db.ygoprodeck.com/api/v7/cardinfo.php?name=BYSTIAL%20DRUISWURM",
+    "https://db.ygoprodeck.com/api/v7/cardinfo.php?name=PERFECT%20TOON%20WORLD",
+    "https://db.ygoprodeck.com/api/v7/cardinfo.php?name=KASHTIRA%20FENRIR",
+    "https://db.ygoprodeck.com/api/v7/cardinfo.php?name=KASHTIRA%20UNICORN",
+    "https://db.ygoprodeck.com/api/v7/cardinfo.php?name=THE%20BYSTIAL%20LUBELLION",
+    "https://db.ygoprodeck.com/api/v7/cardinfo.php?name=BYSTIAL%20DRUISWURM",
+    "https://db.ygoprodeck.com/api/v7/cardinfo.php?name=PERFECT%20TOON%20WORLD",
+    "https://db.ygoprodeck.com/api/v7/cardinfo.php?name=BYSTIAL%20DRUISWURM",
+    "https://db.ygoprodeck.com/api/v7/cardinfo.php?name=BYSTIAL%20DRUISWURM",
+    "https://images.ygoprodeck.com/images/cards/21044178.jpg",
+    "https://images.ygoprodeck.com/images/cards/28143384.jpg",
+    "https://images.ygoprodeck.com/images/cards/62320425.jpg",
+    "https://images.ygoprodeck.com/images/cards/87746184.jpg",
+    "https://images.ygoprodeck.com/images/cards/13332685.jpg",
+    "https://images.ygoprodeck.com/images/cards/69072185.jpg",
+    "https://images.ygoprodeck.com/images/cards/32687071.jpg",
+    "https://images.ygoprodeck.com/images/cards/58921041.jpg",
+    "https://images.ygoprodeck.com/images/cards/4280259.jpg",
+    "https://images.ygoprodeck.com/images/cards/43262273.jpg",
+    "https://images.ygoprodeck.com/images/cards/59509952.jpg",
+    "https://images.ygoprodeck.com/images/cards/6728559.jpg",
+    "https://images.ygoprodeck.com/images/cards/80237445.jpg",
+    "https://images.ygoprodeck.com/images/cards/20292186.jpg",
+    "https://images.ygoprodeck.com/images/cards/46396218.jpg",
+    "https://images.ygoprodeck.com/images/cards/440556.jpg",
+    "https://images.ygoprodeck.com/images/cards/84815190.jpg",
+    "https://images.ygoprodeck.com/images/cards/19740112.jpg",
+    "https://images.ygoprodeck.com/images/cards/47961808.jpg",
+    "https://images.ygoprodeck.com/images/cards/73356503.jpg",
+    "https://images.ygoprodeck.com/images/cards/10963799.jpg",
+    "https://images.ygoprodeck.com/images/cards/27552504.jpg",
+    "https://images.ygoprodeck.com/images/cards/34408491.jpg",
+    "https://images.ygoprodeck.com/images/cards/9929398.jpg",
+    "https://images.ygoprodeck.com/images/cards/94689206.jpg",
+    "https://images.ygoprodeck.com/images/cards/27548199.jpg",
+    "https://images.ygoprodeck.com/images/cards/1041278.jpg",
+    "https://images.ygoprodeck.com/images/cards/69243953.jpg",
+    "https://images.ygoprodeck.com/images/cards/24224831.jpg",
+    "https://images.ygoprodeck.com/images/cards/57953380.jpg",
+    "https://images.ygoprodeck.com/images/cards/3040496.jpg",
+    "https://images.ygoprodeck.com/images/cards/27519978.jpg",
+    "https://images.ygoprodeck.com/images/cards/60682203.jpg",
+    "https://images.ygoprodeck.com/images/cards/17375316.jpg",
+    "https://images.ygoprodeck.com/images/cards/50277355.jpg",
+    "https://images.ygoprodeck.com/images/cards/65681983.jpg",
+    "https://images.ygoprodeck.com/images/cards/50954680.jpg",
+    "https://images.ygoprodeck.com/images/cards/50588353.jpg",
+    "https://images.ygoprodeck.com/images/cards/31603289.jpg",
+    "https://images.ygoprodeck.com/images/cards/98095162.jpg",
+    "https://images.ygoprodeck.com/images/cards/3685372.jpg",
+    "https://images.ygoprodeck.com/images/cards/69015963.jpg",
+    "https://images.ygoprodeck.com/images/cards/79559912.jpg",
+    "https://images.ygoprodeck.com/images/cards/15341821.jpg",
+    "https://images.ygoprodeck.com/images/cards/44763025.jpg",
+    "https://images.ygoprodeck.com/images/cards/23557835.jpg",
+    "https://images.ygoprodeck.com/images/cards/91800273.jpg",
+    "https://images.ygoprodeck.com/images/cards/83326048.jpg",
+    "https://images.ygoprodeck.com/images/cards/8903700.jpg",
+    "https://images.ygoprodeck.com/images/cards/51858306.jpg",
+    "https://images.ygoprodeck.com/images/cards/59581480.jpg",
+    "https://images.ygoprodeck.com/images/cards/38273745.jpg",
+    "https://images.ygoprodeck.com/images/cards/33158448.jpg",
+    "https://images.ygoprodeck.com/images/cards/78706415.jpg",
+    "https://images.ygoprodeck.com/images/cards/93369354.jpg",
+    "https://images.ygoprodeck.com/images/cards/42009836.jpg",
+    "https://images.ygoprodeck.com/images/cards/42703248.jpg",
+    "https://images.ygoprodeck.com/images/cards/55204071.jpg",
+    "https://images.ygoprodeck.com/images/cards/53334471.jpg",
+    "https://images.ygoprodeck.com/images/cards/79571449.jpg",
+    "https://images.ygoprodeck.com/images/cards/75732622.jpg",
+    "https://images.ygoprodeck.com/images/cards/59537380.jpg",
+    "https://images.ygoprodeck.com/images/cards/86148577.jpg",
+    "https://images.ygoprodeck.com/images/cards/87639778.jpg",
+    "https://images.ygoprodeck.com/images/cards/19613556.jpg",
+    "https://images.ygoprodeck.com/images/cards/24094258.jpg",
+    "https://images.ygoprodeck.com/images/cards/79606837.jpg",
+    "https://images.ygoprodeck.com/images/cards/62242678.jpg",
+    "https://images.ygoprodeck.com/images/cards/61740673.jpg",
+    "https://images.ygoprodeck.com/images/cards/59934749.jpg",
+    "https://images.ygoprodeck.com/images/cards/41855169.jpg",
+    "https://images.ygoprodeck.com/images/cards/47960073.jpg",
+    "https://images.ygoprodeck.com/images/cards/35059553.jpg",
+    "https://images.ygoprodeck.com/images/cards/48626373.jpg",
+    "https://images.ygoprodeck.com/images/cards/25926710.jpg",
+    "https://images.ygoprodeck.com/images/cards/17209452.jpg",
+    "https://images.ygoprodeck.com/images/cards/11398059.jpg",
+    "https://images.ygoprodeck.com/images/cards/39064822.jpg",
+    "https://images.ygoprodeck.com/images/cards/65330383.jpg",
+    "https://images.ygoprodeck.com/images/cards/3679218.jpg",
+    "https://images.ygoprodeck.com/images/cards/28566710.jpg",
+    "https://images.ygoprodeck.com/images/cards/85602018.jpg",
+    "https://images.ygoprodeck.com/images/cards/34086406.jpg",
+    "https://images.ygoprodeck.com/images/cards/57421866.jpg",
+    "https://images.ygoprodeck.com/images/cards/30342076.jpg",
+    "https://images.ygoprodeck.com/images/cards/85243784.jpg",
+    "https://images.ygoprodeck.com/images/cards/34206604.jpg",
+    "https://images.ygoprodeck.com/images/cards/97631303.jpg",
+    "https://images.ygoprodeck.com/images/cards/95454996.jpg",
+    "https://images.ygoprodeck.com/images/cards/34906152.jpg",
+    "https://images.ygoprodeck.com/images/cards/23434538.jpg",
+    "https://images.ygoprodeck.com/images/cards/44097050.jpg",
+    "https://images.ygoprodeck.com/images/cards/71818935.jpg",
+    "https://images.ygoprodeck.com/images/cards/76375976.jpg",
+    "https://images.ygoprodeck.com/images/cards/33198837.jpg",
+    "https://images.ygoprodeck.com/images/cards/61049315.jpg",
+    "https://images.ygoprodeck.com/images/cards/54719828.jpg",
+    "https://images.ygoprodeck.com/images/cards/90590304.jpg",
+    "https://images.ygoprodeck.com/images/cards/10389142.jpg",
+    "https://images.ygoprodeck.com/images/cards/66011101.jpg",
+    "https://images.ygoprodeck.com/images/cards/35772782.jpg",
+    "https://images.ygoprodeck.com/images/cards/63504681.jpg",
+    "https://images.ygoprodeck.com/images/cards/95474755.jpg",
+    "https://images.ygoprodeck.com/images/cards/58820923.jpg",
+    "https://images.ygoprodeck.com/images/cards/52653092.jpg",
+    "https://images.ygoprodeck.com/images/cards/89023486.jpg",
+    "https://images.ygoprodeck.com/images/cards/34945480.jpg",
+    "https://images.ygoprodeck.com/images/cards/74191942.jpg",
+    "https://images.ygoprodeck.com/images/cards/90884403.jpg",
+    "https://images.ygoprodeck.com/images/cards/23099524.jpg",
+    "https://images.ygoprodeck.com/images/cards/23558733.jpg",
+    "https://images.ygoprodeck.com/images/cards/55144522.jpg",
+    "https://images.ygoprodeck.com/images/cards/25725326.jpg",
+    "https://images.ygoprodeck.com/images/cards/70369116.jpg",
+    "https://images.ygoprodeck.com/images/cards/58036229.jpg",
+    "https://images.ygoprodeck.com/images/cards/74586817.jpg",
+    "https://images.ygoprodeck.com/images/cards/23002292.jpg",
+    "https://images.ygoprodeck.com/images/cards/37818794.jpg",
+    "https://images.ygoprodeck.com/images/cards/34989413.jpg",
+    "https://images.ygoprodeck.com/images/cards/27174286.jpg",
+    "https://images.ygoprodeck.com/images/cards/90846359.jpg",
+    "https://images.ygoprodeck.com/images/cards/1357146.jpg",
+    "https://images.ygoprodeck.com/images/cards/93016201.jpg",
+    "https://images.ygoprodeck.com/images/cards/74997493.jpg",
+    "https://images.ygoprodeck.com/images/cards/68462976.jpg",
+    "https://images.ygoprodeck.com/images/cards/57585212.jpg",
+    "https://images.ygoprodeck.com/images/cards/72330894.jpg",
+    "https://images.ygoprodeck.com/images/cards/3280747.jpg",
+    "https://images.ygoprodeck.com/images/cards/63789924.jpg",
+    "https://images.ygoprodeck.com/images/cards/54447022.jpg",
+    "https://images.ygoprodeck.com/images/cards/84636823.jpg",
+    "https://images.ygoprodeck.com/images/cards/59859086.jpg",
+    "https://images.ygoprodeck.com/images/cards/27381364.jpg",
+    "https://images.ygoprodeck.com/images/cards/91258852.jpg",
+    "https://images.ygoprodeck.com/images/cards/23516703.jpg",
+    "https://images.ygoprodeck.com/images/cards/33918636.jpg",
+    "https://images.ygoprodeck.com/images/cards/43387895.jpg",
+    "https://images.ygoprodeck.com/images/cards/92731385.jpg",
+    "https://images.ygoprodeck.com/images/cards/63101919.jpg",
+    "https://images.ygoprodeck.com/images/cards/42829885.jpg",
+    "https://images.ygoprodeck.com/images/cards/80181649.jpg",
+    "https://images.ygoprodeck.com/images/cards/301262144.jpg",
+    "https://images.ygoprodeck.com/images/cards/301131072.jpg",
+    "https://images.ygoprodeck.com/images/cards/34541863.jpg",
+    "https://images.ygoprodeck.com/images/cards/64163367.jpg",
+    "https://images.ygoprodeck.com/images/cards/91231901.jpg",
+    "https://images.ygoprodeck.com/images/cards/73262676.jpg",
+    "https://images.ygoprodeck.com/images/cards/98319530.jpg",
+    "https://images.ygoprodeck.com/images/cards/37478723.jpg",
+    "https://images.ygoprodeck.com/images/cards/64867422.jpg",
+    "https://images.ygoprodeck.com/images/cards/90861137.jpg",
+    "https://images.ygoprodeck.com/images/cards/11738490.jpg",
+    "https://images.ygoprodeck.com/images/cards/511009399.jpg",
+    "https://images.ygoprodeck.com/images/cards/160001050.jpg",
+    "https://images.ygoprodeck.com/images/cards/511000267.jpg",
+    "https://images.ygoprodeck.com/images/cards/44256816.jpg",
+    "https://images.ygoprodeck.com/images/cards/511002490.jpg",
+    "https://images.ygoprodeck.com/images/cards/86988864.jpg",
+    "https://images.ygoprodeck.com/images/cards/11714098.jpg",
+    "https://images.ygoprodeck.com/images/cards/160010051.jpg",
+    "https://images.ygoprodeck.com/images/cards/511310029.jpg",
+    "https://images.ygoprodeck.com/images/cards/83994646.jpg",
+    "https://images.ygoprodeck.com/images/cards/67048711.jpg",
+    "https://images.ygoprodeck.com/images/cards/160006058.jpg",
+    "https://images.ygoprodeck.com/images/cards/23771716.jpg",
+    "https://images.ygoprodeck.com/images/cards/86198326.jpg",
+    "https://images.ygoprodeck.com/images/cards/14261867.jpg",
+    "https://images.ygoprodeck.com/images/cards/4731783.jpg",
+    "https://images.ygoprodeck.com/images/cards/4731784.jpg",
+    "https://images.ygoprodeck.com/images/cards/24140059.jpg",
+    "https://images.ygoprodeck.com/images/cards/6850209.jpg",
+    "https://images.ygoprodeck.com/images/cards/49140998.jpg",
+    "https://images.ygoprodeck.com/images/cards/68170903.jpg",
+    "https://images.ygoprodeck.com/images/cards/21597117.jpg",
+    "https://images.ygoprodeck.com/images/cards/8949584.jpg",
+    "https://images.ygoprodeck.com/images/cards/295517.jpg",
+    "https://images.ygoprodeck.com/images/cards/151000026.jpg",
+    "https://images.ygoprodeck.com/images/cards/32207100.jpg",
+    "https://images.ygoprodeck.com/images/cards/51351302.jpg",
+    "https://raw.githubusercontent.com/ProjectIgnis/CardScripts/master/archetype_setcode_constants.lua",
+    "https://images.ygoprodeck.com/images/cards/301262144.jpg",
+    "https://images.ygoprodeck.com/images/cards/301131072.jpg",
+    "https://images.ygoprodeck.com/images/cards/34541863.jpg",
+    "https://images.ygoprodeck.com/images/cards/64163367.jpg",
+    "https://images.ygoprodeck.com/images/cards/91231901.jpg",
+    "https://images.ygoprodeck.com/images/cards/73262676.jpg",
+    "https://images.ygoprodeck.com/images/cards/98319530.jpg",
+    "https://images.ygoprodeck.com/images/cards/37478723.jpg",
+    "https://images.ygoprodeck.com/images/cards/64867422.jpg",
+    "https://images.ygoprodeck.com/images/cards/90861137.jpg",
+    "https://images.ygoprodeck.com/images/cards/11738490.jpg",
+    "https://images.ygoprodeck.com/images/cards/511009399.jpg",
+    "https://images.ygoprodeck.com/images/cards/160001050.jpg",
+    "https://images.ygoprodeck.com/images/cards/511000267.jpg",
+    "https://images.ygoprodeck.com/images/cards/44256816.jpg",
+    "https://images.ygoprodeck.com/images/cards/511002490.jpg",
+    "https://images.ygoprodeck.com/images/cards/86988864.jpg",
+    "https://images.ygoprodeck.com/images/cards/11714098.jpg",
+    "https://images.ygoprodeck.com/images/cards/160010051.jpg",
+    "https://images.ygoprodeck.com/images/cards/511310029.jpg",
+    "https://images.ygoprodeck.com/images/cards/83994646.jpg",
+    "https://images.ygoprodeck.com/images/cards/67048711.jpg",
+    "https://images.ygoprodeck.com/images/cards/160006058.jpg",
+    "https://images.ygoprodeck.com/images/cards/23771716.jpg",
+    "https://images.ygoprodeck.com/images/cards/86198326.jpg",
+    "https://images.ygoprodeck.com/images/cards/14261867.jpg",
+    "https://images.ygoprodeck.com/images/cards/4731783.jpg",
+    "https://images.ygoprodeck.com/images/cards/4731784.jpg",
+    "https://images.ygoprodeck.com/images/cards/80181649.jpg",
+    "https://images.ygoprodeck.com/images/cards/24140059.jpg",
+    "https://images.ygoprodeck.com/images/cards/6850209.jpg",
+    "https://images.ygoprodeck.com/images/cards/49140998.jpg",
+    "https://images.ygoprodeck.com/images/cards/68170903.jpg",
+    "https://images.ygoprodeck.com/images/cards/21597117.jpg",
+    "https://images.ygoprodeck.com/images/cards/8949584.jpg",
+    "https://images.ygoprodeck.com/images/cards/295517.jpg",
+    "https://images.ygoprodeck.com/images/cards/151000026.jpg",
+    "https://images.ygoprodeck.com/images/cards/32207100.jpg",
+    "https://images.ygoprodeck.com/images/cards/51351302.jpg",
+    "https://images.ygoprodeck.com/images/cards/86120751.jpg",
+    "https://images.ygoprodeck.com/images/cards/74063034.jpg",
+    "https://images.ygoprodeck.com/images/cards/23771716.jpg",
+    "https://images.ygoprodeck.com/images/cards/47372349.jpg",
+    "https://images.ygoprodeck.com/images/cards/97127906.jpg",
+    "https://images.ygoprodeck.com/images/cards/70924884.jpg",
+    "https://images.ygoprodeck.com/images/cards/64428736.jpg",
+    "https://images.ygoprodeck.com/images/cards/99785935.jpg",
+    "https://images.ygoprodeck.com/images/cards/17968114.jpg",
+    "https://images.ygoprodeck.com/images/cards/42431843.jpg",
+    "https://images.ygoprodeck.com/images/cards/43230671.jpg",
+    "https://images.ygoprodeck.com/images/cards/89904598.jpg",
+    "https://images.ygoprodeck.com/images/cards/85639257.jpg",
+    "https://images.ygoprodeck.com/images/cards/75889523.jpg"
+  ],
+  "presentationFixture": "The retained preview shell is opened by its existing class; no retained public opener is asserted.",
+  "completeAccessibilityCertified": false,
+  "assistiveTechnologyTested": false,
+  "physicalDevicesTested": false,
+  "limitations": [
+    "Keyboard and naming tasks cover the listed controls and modal infrastructure only.",
+    "The sampled opaque input contrast does not establish a complete text, graphic or focus-contrast audit.",
+    "No screen reader, native OS file picker or physical device was tested.",
+    "The preview fixture does not establish a complete publicly triggered card-preview workflow.",
+    "Criterion C30 remains pending; these tasks do not certify complete WCAG conformance."
+  ],
+  "elapsedSeconds": 19.33
+}

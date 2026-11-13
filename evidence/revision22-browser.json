@@ -1,0 +1,145 @@
+{
+  "schema": "ygo-release22-browser/v1",
+  "pass": true,
+  "buildId": "c78465e4db220a3ce147c5969d31b4ff221263013ac25ca700ef3d5ad784d375",
+  "htmlSha256": "a2bd1fcadc52b4d434ecc027647e021496918d30c42ce90885e6419ca642989a",
+  "artifactMode": "DELIVERED_BYTES",
+  "sourceInjection": false,
+  "checks": [
+    {
+      "name": "release22_runs_manifest_bound_bytes_offline",
+      "pass": true
+    },
+    {
+      "name": "twenty_two_visible_examples_preserve_all_previous_ids",
+      "pass": true
+    },
+    {
+      "name": "faith_example_starts_as_an_unplayed_declared_set_field",
+      "pass": true
+    },
+    {
+      "name": "the_visible_guide_explains_mandatory_target_recovery_and_partial_damage_step",
+      "pass": true
+    },
+    {
+      "name": "visible_flip_preserves_the_copy_and_normal_summon_budget",
+      "pass": true
+    },
+    {
+      "name": "only_the_mandatory_faith_resolution_can_continue_after_flip",
+      "pass": true
+    },
+    {
+      "name": "a_field_only_goal_remains_pending_until_the_flip_is_resolved",
+      "pass": true
+    },
+    {
+      "name": "faith_recovers_the_same_targeted_gy_copy_to_the_hand",
+      "pass": true
+    },
+    {
+      "name": "recovery_is_revealed_without_deck_search_or_shuffle",
+      "pass": true
+    },
+    {
+      "name": "the_two_action_goal_replays_with_provisional_competitive_scoring",
+      "pass": true
+    },
+    {
+      "name": "import_reexecutes_the_flip_and_restores_its_mandatory_pending_target",
+      "pass": true
+    },
+    {
+      "name": "completed_export_reimports_with_identical_physical_state",
+      "pass": true
+    },
+    {
+      "name": "a_changed_target_is_rejected_without_replacing_the_accepted_state",
+      "pass": true
+    },
+    {
+      "name": "undoing_the_recovery_restores_the_unresolved_flip",
+      "pass": true
+    },
+    {
+      "name": "the_search_contains_a_complete_two_action_flip_recovery_line",
+      "pass": true
+    },
+    {
+      "name": "continuing_a_search_result_replays_both_mandatory_actions",
+      "pass": true
+    },
+    {
+      "name": "without_a_legal_spell_the_obligatory_resolution_is_still_visible",
+      "pass": true
+    },
+    {
+      "name": "the_no_target_effect_resolves_without_a_decline_or_fabricated_recovery",
+      "pass": true
+    },
+    {
+      "name": "a_real_opponent_attack_reveals_faith_and_keeps_her_on_field_for_the_flip",
+      "pass": true
+    },
+    {
+      "name": "the_attack_budget_is_spent_before_the_defenders_mandatory_flip",
+      "pass": true
+    },
+    {
+      "name": "battle_faith_recovers_before_the_same_copy_is_sent_to_the_graveyard",
+      "pass": true
+    },
+    {
+      "name": "the_record_orders_recovery_before_one_final_battle_departure",
+      "pass": true
+    },
+    {
+      "name": "import_reconstructs_the_physical_attack_and_deferred_battle_packet",
+      "pass": true
+    },
+    {
+      "name": "a_resumed_battle_reaches_the_same_final_state_and_fresh_replay",
+      "pass": true
+    },
+    {
+      "name": "the_visible_damage_step_mechaba_response_pays_a_physical_monster",
+      "pass": true
+    },
+    {
+      "name": "mechaba_negates_and_banishes_the_field_faith_before_battle_cleanup",
+      "pass": true
+    },
+    {
+      "name": "battle_cleanup_does_not_send_the_banished_faith_to_the_graveyard_again",
+      "pass": true
+    },
+    {
+      "name": "the_mechaba_battle_export_reexecutes_cost_banish_and_cleanup",
+      "pass": true
+    },
+    {
+      "name": "release22_raises_no_javascript_page_errors",
+      "pass": true
+    },
+    {
+      "name": "release22_leaves_the_compiled_artifact_unchanged",
+      "pass": true
+    }
+  ],
+  "details": {
+    "release22_raises_no_javascript_page_errors": []
+  },
+  "browser": {
+    "engine": "chromium",
+    "version": "154.0.8037.57"
+  },
+  "externalRequestsBlocked": 75,
+  "limitations": [
+    "The initial set and graveyard are explicit assumptions; prior play is not reconstructed.",
+    "Faith recovers only reviewed own-graveyard Spell targets; no general FLIP catalogue is inferred.",
+    "This GUI witness covers manual Flip, no-target resolution, search, deferred battle, Mechaba negation, export and replay; other response combinations are checked separately.",
+    "General Damage Step, SEGOC, physical devices and competitive calibration remain outside this GUI witness."
+  ],
+  "elapsedSeconds": 33.74
+}

@@ -1,0 +1,212 @@
+{
+  "schema": "ygo-project-acceptance-checklist/v1",
+  "scope": "VERSION_OPERATIVA_DE_PERFILES_REGISTRADOS",
+  "method": "UNWEIGHTED_ACCEPTANCE_CRITERIA_COUNT_NOT_TIME_EFFORT_OR_ALL_GAME_RULES",
+  "criteria": [
+    {
+      "id": "C01",
+      "deliverable": "Entrega HTML única",
+      "acceptance": "Abrir el archivo sin instalación; catálogo y cálculo incorporados.",
+      "status": "VERIFICADO_R21"
+    },
+    {
+      "id": "C02",
+      "deliverable": "Compilación y descarga",
+      "acceptance": "Build reproducible, hash del HTML y bytes publicados/descargados iguales.",
+      "status": "VERIFICADO_R21"
+    },
+    {
+      "id": "C03",
+      "deliverable": "Catálogo técnico",
+      "acceptance": "Fuente CDB fijada, integridad y procedencia contrastadas; incertidumbre explícita.",
+      "status": "VERIFICADO_R21"
+    },
+    {
+      "id": "C04",
+      "deliverable": "Editor y construcción",
+      "acceptance": "Main, Extra, Side y Skills conservan cantidades y validación de construcción por formato.",
+      "status": "VERIFICADO_R21"
+    },
+    {
+      "id": "C05",
+      "deliverable": "Importación",
+      "acceptance": "JSON/YDK y escenarios físicos se importan con validación y rechazo de entradas inválidas.",
+      "status": "VERIFICADO_R21"
+    },
+    {
+      "id": "C06",
+      "deliverable": "Exportación",
+      "acceptance": "JSON/YDK e informes conservan lo que admite cada formato; las limitaciones de YDK se indican.",
+      "status": "VERIFICADO_R21"
+    },
+    {
+      "id": "C07",
+      "deliverable": "Estadísticas",
+      "acceptance": "Cálculos base verificados y estadísticas desconocidas diferenciadas de cero y variable.",
+      "status": "VERIFICADO_R21"
+    },
+    {
+      "id": "C08",
+      "deliverable": "Probabilidad inicial",
+      "acceptance": "Probabilidades y muestreo de mano inicial con supuestos, semilla y límites explícitos.",
+      "status": "VERIFICADO_R21"
+    },
+    {
+      "id": "C09",
+      "deliverable": "Estado físico y costes",
+      "acceptance": "UID, propietario/controlador, inventario, costes y presupuestos se conservan en paquetes registrados.",
+      "status": "VERIFICADO_R21"
+    },
+    {
+      "id": "C10",
+      "deliverable": "Búsqueda y replay",
+      "acceptance": "Búsqueda acotada y reproducción desde el origen rechazan costes/estados/historias falsificados.",
+      "status": "VERIFICADO_R21"
+    },
+    {
+      "id": "C11",
+      "deliverable": "Seis rutas de familias",
+      "acceptance": "Los seis ejemplos de familias registradas alcanzan sus objetivos y se reproducen; no todas sus cartas.",
+      "status": "VERIFICADO_R21"
+    },
+    {
+      "id": "C12",
+      "deliverable": "Spark y Azure",
+      "acceptance": "Synchro real, protección, historial, Reborn y ventanas registradas con sus restricciones.",
+      "status": "VERIFICADO_R21"
+    },
+    {
+      "id": "C13",
+      "deliverable": "Spirit",
+      "acceptance": "Negación GY y resurrección de Spirit Link conservan costes, origen, uso y restricción continua.",
+      "status": "VERIFICADO_R21"
+    },
+    {
+      "id": "C14",
+      "deliverable": "Sunlight Wolf",
+      "acceptance": "Geometría declarada, recuperación no dirigida, historial, usos por jugador y bloqueos de nombre.",
+      "status": "VERIFICADO_R21"
+    },
+    {
+      "id": "C15",
+      "deliverable": "Tres motores y archivo local",
+      "acceptance": "CI completo y comprobación entre Chromium/Firefox/WebKit; entrega por archivo local verificada.",
+      "status": "VERIFICADO_R21"
+    },
+    {
+      "id": "C16",
+      "deliverable": "Albaz al invocarse Normal",
+      "acceptance": "Descarte real y Fusión a perfiles Lubellion/Mirrorjade usando el propio Albaz y un material rival admitido.",
+      "status": "VERIFICADO_R21"
+    },
+    {
+      "id": "C17",
+      "deliverable": "Albaz tras Reborn",
+      "acceptance": "Llegada real desde GY, propietario conservado, disparo pertinente, coste/negación/HOPT y replay.",
+      "status": "VERIFICADO_R21"
+    },
+    {
+      "id": "C18",
+      "deliverable": "Prioridad y cadenas generales",
+      "acceptance": "Componer activaciones y respuestas generales de los perfiles revisados con controles de prioridad.",
+      "status": "PENDIENTE"
+    },
+    {
+      "id": "C19",
+      "deliverable": "Efectos simultáneos generales",
+      "acceptance": "Registrar SEGOC y cadenas conjuntas de ambos jugadores, además de declinaciones explícitas.",
+      "status": "PENDIENTE"
+    },
+    {
+      "id": "C20",
+      "deliverable": "Damage Step completo",
+      "acceptance": "Ventanas, respuestas y efectos pertinentes de los perfiles revisados se modelan explícitamente.",
+      "status": "PENDIENTE"
+    },
+    {
+      "id": "C21",
+      "deliverable": "Flip",
+      "acceptance": "Invocación por Volteo y efectos Flip con sus oportunidades, costes y respuestas.",
+      "status": "PENDIENTE"
+    },
+    {
+      "id": "C22",
+      "deliverable": "Ataques múltiples",
+      "acceptance": "Presupuestos de ataques adicionales, objetivos y cambios de estado para perfiles registrados.",
+      "status": "VERIFICADO_R21"
+    },
+    {
+      "id": "C23",
+      "deliverable": "Xyz",
+      "acceptance": "Procedimiento, rangos, materiales superpuestos, costes y consecuencias de perfiles revisados.",
+      "status": "PENDIENTE"
+    },
+    {
+      "id": "C24",
+      "deliverable": "Péndulo",
+      "acceptance": "Escalas, espacios y llegadas simultáneas desde mano/Extra para perfiles revisados.",
+      "status": "PENDIENTE"
+    },
+    {
+      "id": "C25",
+      "deliverable": "Varios robos inciertos",
+      "acceptance": "Probabilidades conjuntas con varios eventos de azar, testigos, pesos y masa desconocida.",
+      "status": "PENDIENTE"
+    },
+    {
+      "id": "C26",
+      "deliverable": "Decisiones rivales",
+      "acceptance": "Ampliar decisiones dentro de rutas probabilísticas, más allá de los paquetes y políticas actuales.",
+      "status": "PENDIENTE"
+    },
+    {
+      "id": "C27",
+      "deliverable": "Identidades y propuestas",
+      "acceptance": "Revisión documentada de las 98 identidades heredadas y 32 propuestas sin sustituciones silenciosas.",
+      "status": "PENDIENTE"
+    },
+    {
+      "id": "C28",
+      "deliverable": "Estadísticas por revisar",
+      "acceptance": "Contrastar los 51 monstruos con estadísticas desconocidas mediante fuentes y decisiones documentadas.",
+      "status": "PENDIENTE"
+    },
+    {
+      "id": "C29",
+      "deliverable": "Disponibilidad y reglas por formato",
+      "acceptance": "Completar pools, fuentes fechadas, Skills/desbloqueos/Legend y reglas particulares anunciadas.",
+      "status": "PENDIENTE"
+    },
+    {
+      "id": "C30",
+      "deliverable": "Accesibilidad completa del flujo",
+      "acceptance": "Cerrar evaluación de teclado, foco, contraste y tecnologías de asistencia del flujo admitido.",
+      "status": "PENDIENTE"
+    },
+    {
+      "id": "C31",
+      "deliverable": "Dispositivos físicos",
+      "acceptance": "Registrar pruebas en equipos reales; la emulación y los tres motores no sustituyen esa evidencia.",
+      "status": "PENDIENTE"
+    },
+    {
+      "id": "C32",
+      "deliverable": "Puntuación provisional e importador",
+      "acceptance": "Mantener puntuación estructural claramente provisional e importador de resultados reales; no exigir calibración que el usuario dejó provisional.",
+      "status": "VERIFICADO_R21"
+    }
+  ],
+  "revision": "2026.11-stable.21",
+  "buildId": "8e2f493167e60a1752237885db37d72063514109118aa937707e93c9819c4908",
+  "htmlSha256": "3838c78ea58ec52af9019fbc5ad2f132db26b6022eb3d9c1ff939543d8894531",
+  "acceptedCandidateCommit": "c3c2ebeb9aaaf7df57481fdefadabf93292d66b3",
+  "verifiedCriteria": 19,
+  "totalCriteria": 32,
+  "pendingCriteria": 13,
+  "unweightedClosedRatio": 0.59375,
+  "wholeGameCoveragePercent": null,
+  "remainingEffortPercent": null,
+  "newlyVerifiedCriteria": [
+    "C22"
+  ]
+}

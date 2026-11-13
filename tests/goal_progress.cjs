@@ -14,7 +14,7 @@ const I={MAUSOLEUM:24382602,SANCTUARY:1295111,ROAR:51339637,WOLF:87871125,
  const {W,E}=await harness(true),tests=[];
  const load=(name,extra={})=>vm.runInNewContext(fs.readFileSync(path.join(ROOT,'src/app/'+name+'.js'),'utf8'),
   {window:W,structuredClone,console,Date,Promise,setTimeout,clearTimeout,performance,...extra},{filename:name+'.js'});
- for(const name of ['duel-phases','responses','archetypes-expanded','blue-eyes-duel','strategy','recommendations','scenario-examples'])load(name);
+ for(const name of ['duel-phases','responses','flip-effects','archetypes-expanded','blue-eyes-duel','strategy','recommendations','scenario-examples'])load(name);
  const R=W.YGORecommendations;
  async function test(name,fn){try{await fn();tests.push({name,pass:true});}catch(error){tests.push({name,pass:false,error:error.stack});}}
  await test('Recommendations expose state progress before a workbench or browser is present',()=>{

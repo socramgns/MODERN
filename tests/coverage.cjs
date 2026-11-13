@@ -3,7 +3,7 @@ const fs=require('node:fs'),path=require('node:path'),vm=require('node:vm'),asse
 const {harness,ROOT}=require('./combo_engine.cjs');
 (async()=>{
  const {W,E,fixture}=await harness(true),copy=structuredClone,tests=[];
- for(const module of ['duel-phases','responses','archetypes-expanded','blue-eyes-duel'])vm.runInNewContext(fs.readFileSync(path.join(ROOT,'src/app/'+module+'.js'),'utf8'),{window:W,structuredClone,console});
+ for(const module of ['duel-phases','responses','flip-effects','archetypes-expanded','blue-eyes-duel'])vm.runInNewContext(fs.readFileSync(path.join(ROOT,'src/app/'+module+'.js'),'utf8'),{window:W,structuredClone,console});
  let format='tcg',context={format:'tcg',cardPool:{status:'DECLARED'}},contextVersion=4;
  W.YGOAlpha973={activeFormatKey:()=>format};W.YGOUIState={ready:Promise.resolve(),getFormatContext:()=>copy(context),get contextVersion(){return contextVersion}};
  vm.runInNewContext(fs.readFileSync(path.join(ROOT,'src/app/coverage.js'),'utf8'),{window:W,structuredClone,console});

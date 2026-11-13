@@ -1,0 +1,39 @@
+{
+  "schema": "ygo-r22-independent-reference-audit/v1",
+  "pass": false,
+  "total": 7,
+  "tests": [
+    {
+      "name": "Own controller GY is selected after control changes, not Faith owner GY (QA microstate)",
+      "pass": true
+    },
+    {
+      "name": "No ownGYSpell keeps mandatory null activation with opponentGYSpell present",
+      "pass": true
+    },
+    {
+      "name": "Unknown reviewed movement does not create false null Spell branch",
+      "pass": true
+    },
+    {
+      "name": "Mandatory activation persists but resolves negated with inherent true flag (QA microstate)",
+      "pass": true
+    },
+    {
+      "name": "Battle pending retains source field, prevents other actions, rejects omitted victim, then finishesGY",
+      "pass": true
+    },
+    {
+      "name": "Battle Mechaba banishes field Faith before cleanup and never sends itGY afterward",
+      "pass": true
+    },
+    {
+      "name": "Spark prevents earlier battle and is spent before later Roar destroys Faith",
+      "pass": false,
+      "error": "AssertionError [ERR_ASSERTION]: Missing STARDUST_SPARK_PROTECTION: [{\"type\":\"DUEL_ATTACK\",\"attackerUid\":\"P0:main:89631139:1\",\"targetUid\":\"P1:main:31560081:1\"},{\"type\":\"DUEL_ATTACK\",\"attackerUid\":\"P0:main:89631139:1\",\"targetUid\":\"P1:extra:83994433:1\"},{\"type\":\"DUEL_ATTACK\",\"attackerUid\":\"P0:extra:14812471:1\",\"targetUid\":\"P1:main:31560081:1\"},{\"type\":\"DUEL_ATTACK\",\"attackerUid\":\"P0:extra:14812471:1\",\"targetUid\":\"P1:extra:83994433:1\"},{\"type\":\"DUEL_ADVANCE_PHASE\",\"toPhase\":\"MAIN 2\"},{\"type\":\"DUEL_ADVANCE_PHASE\",\"toPhase\":\"END\"},{\"type\":\"STARDUST_SPARK_PROTECTION\",\"targetUid\":\"P1:extra:83994433:1\"},{\"type\":\"STARDUST_SPARK_PROTECTION\",\"targetUid\":\"P1:extra:83994433:1\"}]\n    at step (/workspace/r22-reference-evidence/independent-audit.cjs:44:100)\n    at /workspace/r22-reference-evidence/independent-audit.cjs:71:330\n    at test (/workspace/r22-reference-evidence/independent-audit.cjs:57:41)\n    at /workspace/r22-reference-evidence/independent-audit.cjs:71:8"
+    }
+  ],
+  "scope": "FOCUSED_INDEPENDENT_AUDIT_NOT_FULL_SUITE",
+  "qaMicrostatesNotWitnessedHistory": true,
+  "invalidTestCorrection": "Seventh scenario attempted Spark targeting facedown Faith, which is illegal; this is an audit-scenario error, not an application failure."
+}

@@ -1,0 +1,52 @@
+{
+  "schema": "ygo-local-recovery-validation/v1",
+  "pass": true,
+  "buildId": "8e2f493167e60a1752237885db37d72063514109118aa937707e93c9819c4908",
+  "htmlSha256": "3838c78ea58ec52af9019fbc5ad2f132db26b6022eb3d9c1ff939543d8894531",
+  "subsetOnly": true,
+  "completeLocalRun": false,
+  "originalFullLocalRun": {
+    "status": "NOT_RECOVERED_AFTER_EXECUTOR_REPLACEMENT",
+    "pass": null,
+    "totalGroups": null,
+    "passedGroups": null,
+    "meaning": "The original full R21 local run report was not recovered. No outcome or engine failures are reconstructed. R20 raw failures remain archived under history/revision20."
+  },
+  "checks": [
+    {
+      "name": "reproducible_build_matches_candidate_html",
+      "pass": true,
+      "bytes": 7165831,
+      "buildManifest": "evidence/build-manifest.json"
+    },
+    {
+      "name": "multiple_attacks",
+      "pass": true,
+      "cases": 86,
+      "evidence": "evidence/multiple-attacks-source-tests.json"
+    },
+    {
+      "name": "scenario_examples",
+      "pass": true,
+      "cases": 29,
+      "includedExamples": 21,
+      "evidence": "evidence/recovery/scenario-examples-results.json"
+    },
+    {
+      "name": "release21_in_browser",
+      "pass": true,
+      "checks": 39,
+      "evidence": "evidence/revision21-browser.json",
+      "testFileSha256": "c74d64f9b641bcf0ffe7d2d3136336a3c616360e55cda08d9248a37a4cdf6edd"
+    }
+  ],
+  "previousFocusedEvidence": {
+    "archive": "evidence/history/revision21-candidate-focused",
+    "accessibilityChecks": 30,
+    "accessibilityRepeatedOnRecovery": false,
+    "sourceAuditRepeatedOnRecovery": false,
+    "meaning": "Prior focused accessibility and five-CDB audit evidence remains valid for the same bound code/data/HTML; it is not represented as a new local execution."
+  },
+  "locallyExercisedBrowser": "chromium",
+  "physicalDevicesValidated": false
+}
