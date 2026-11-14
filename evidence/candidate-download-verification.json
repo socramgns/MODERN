@@ -1,0 +1,16 @@
+{
+  "schema": "ygo-html-download-verification/v1",
+  "pass": true,
+  "observedAt": "2026-11-14T04:55:39.836366+00:00",
+  "commit": "86b8f848635d1ac392625b6d9c1a6bb5674e5b04",
+  "url": "https://github.com/socramgns/MODERN/raw/86b8f848635d1ac392625b6d9c1a6bb5674e5b04/Analizador_YuGiOh.html?download=1",
+  "resolvedUrl": "https://raw.githubusercontent.com/socramgns/MODERN/86b8f848635d1ac392625b6d9c1a6bb5674e5b04/Analizador_YuGiOh.html",
+  "httpStatus": 200,
+  "contentType": "text/plain; charset=utf-8",
+  "buildId": "afe53b8932901869aae05b80e3605ca6cb18625ec7984e41484ce71bf212fa94",
+  "htmlSha256": "7ec0ed4d6bee8ef655445bc7831aa6f5ad9fd6db332722212abbc43d316c1b04",
+  "bytes": 7192465,
+  "exactCommittedBytes": true,
+  "tlsValidationDisabled": false,
+  "scope": "TRANSPORT_AND_COMMITTED_HTML_BYTES_NOT_FULL_RULES_ACCEPTANCE"
+}

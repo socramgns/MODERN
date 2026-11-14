@@ -1,31 +1,77 @@
 {
   "schema": "ygo-release-acceptance/v1",
   "pass": true,
-  "revision": "2026.11-stable.21",
-  "candidateCommit": "c3c2ebeb9aaaf7df57481fdefadabf93292d66b3",
+  "revision": "2026.11-stable.22",
+  "candidateCommit": "86b8f848635d1ac392625b6d9c1a6bb5674e5b04",
+  "buildId": "afe53b8932901869aae05b80e3605ca6cb18625ec7984e41484ce71bf212fa94",
+  "htmlSha256": "7ec0ed4d6bee8ef655445bc7831aa6f5ad9fd6db332722212abbc43d316c1b04",
+  "bytes": 7192465,
+  "acceptedAt": "2026-11-14T05:13:25.652144+00:00",
   "acceptanceMode": "REMOTE_FULL_EXECUTION_OBSERVED",
-  "buildId": "8e2f493167e60a1752237885db37d72063514109118aa937707e93c9819c4908",
-  "htmlSha256": "3838c78ea58ec52af9019fbc5ad2f132db26b6022eb3d9c1ff939543d8894531",
-  "bytes": 7165831,
-  "validatedRemoteGroups": 77,
-  "remoteRunUrl": "https://github.com/socramgns/MODERN/actions/runs/42440271007",
-  "sourceJavaScriptFiles": 123,
-  "includedExampleCount": 21,
+  "validatedRemoteGroups": 79,
+  "remoteRunUrl": "https://github.com/socramgns/MODERN/actions/runs/43558962065",
+  "verifiedRemoteJobUrls": [
+    "https://github.com/socramgns/MODERN/actions/runs/43558962065/job/132338118949"
+  ],
+  "sourceJavaScriptFiles": 124,
+  "includedExampleCount": 22,
   "individualRemoteReportsDownloaded": false,
   "remoteGroupCountInferredFromVersionedRunner": true,
   "sourceRunnerGroupCountVerified": true,
-  "originalR21LocalFullRun": {
-    "status": "NOT_RECOVERED_AFTER_EXECUTOR_REPLACEMENT",
-    "pass": null,
-    "totalGroups": null,
-    "passedGroups": null,
-    "meaning": "The original full R21 local run report was not recovered. No outcome or engine failures are reconstructed. R20 raw failures remain archived under history/revision20."
-  },
-  "localRecoveryValidation": "evidence/local-recovery-validation.json",
-  "localRecoveryPass": true,
   "workflowUnchangedFromAcceptedPredecessor": true,
   "mandatoryGateCommandsUnchanged": true,
+  "remoteThreeBrowserInstallationsPassed": true,
+  "remoteCrossBrowserGatePassed": true,
+  "engineCoverageInferredFromWorkflowAndSource": true,
+  "remoteIndividualBrowserResultJsonObserved": false,
+  "crossBrowserGateContract": "AT_LEAST_TWO_EXECUTED_ENGINES_AND_ALL_EXECUTED_ENGINES_PASS",
+  "localFullRun": {
+    "pass": false,
+    "totalGroups": 79,
+    "passedGroups": 76,
+    "rawReport": "evidence/local-validation/full-run-raw.json",
+    "rawReportSha256": "32b3f8c325e8c550a5736f7b24b2c1508c1deb5f77aca049277710f8dccbda5c",
+    "focusedInventoryFollowup": "evidence/local-validation/release21-inventory-followup.json",
+    "focusedInventoryFollowupPass": true,
+    "focusedInventoryFollowupChecks": 39,
+    "remainingEnvironmentGaps": [
+      "FIREFOX_LOCAL_FILE_DELIVERY",
+      "WEBKIT_MOBILE_TASKS"
+    ],
+    "meaning": "The complete local run remains pass:false,76/79. The separate 39-check follow-up passes; it does not rewrite the full-run result."
+  },
+  "localCompatibilitySubset": {
+    "path": "evidence/local-validation/compatibility-results.json",
+    "pass": true,
+    "complete": false,
+    "executedEngines": [
+      "chromium"
+    ],
+    "pendingEngines": [
+      "firefox",
+      "webkit"
+    ],
+    "crossBrowserVerified": false,
+    "chromiumDirectFileNavigationVerified": false
+  },
+  "localDeliveryScope": {
+    "chromiumOfflineRouteInterceptionVerified": true,
+    "chromiumDirectFileNavigationVerified": false,
+    "chromiumDirectFileNavigationStatus": "BLOCKED_BY_BROWSER_POLICY",
+    "firefoxDirectFileDeliveryBelongsToMandatoryRemoteRunner": true,
+    "meaning": "Offline served-byte GUI checks do not establish direct file:// navigation in Chromium. No browser policy was bypassed."
+  },
+  "focusedValidation": {
+    "nodePass": true,
+    "nodeCases": 63,
+    "replayWitnesses": 14,
+    "browserPass": true,
+    "browserChecks": 30
+  },
+  "candidateDownloadVerification": "evidence/candidate-download-verification.json",
+  "reproducibleBuildVerification": "evidence/reproducible-build.json",
   "physicalDevicesValidated": false,
+  "completeAccessibilityCertified": false,
   "competitiveScoring": "PROVISIONAL_BY_USER_REQUEST",
-  "meaning": "Full acceptance belongs to the exact candidate mandatory CI gates. Recovery checks are a local subset; neither missing full-local reports nor individual remote result files are fabricated."
+  "meaning": "Acceptance belongs to all ten mandatory steps of this exact candidate. The 79-group count follows the exact exit-zero runner contract. Three browser installation steps and the cross-browser gate passed; individual remote result JSON files were not downloaded."
 }

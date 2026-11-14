@@ -1,0 +1,31 @@
+{
+  "schema": "ygo-remote-evidence-index/v1",
+  "revision": "2026.11-stable.22",
+  "candidateCommit": "86b8f848635d1ac392625b6d9c1a6bb5674e5b04",
+  "buildId": "afe53b8932901869aae05b80e3605ca6cb18625ec7984e41484ce71bf212fa94",
+  "htmlSha256": "7ec0ed4d6bee8ef655445bc7831aa6f5ad9fd6db332722212abbc43d316c1b04",
+  "bytes": 7192465,
+  "pass": true,
+  "observation": "evidence/remote-acceptance.json",
+  "runUrl": "https://github.com/socramgns/MODERN/actions/runs/43558962065",
+  "individualRemoteReportsDownloaded": false,
+  "captures": [
+    {
+      "observedPath": "/workspace/r22-validation/remote-ci/86b8f848635d1ac392625b6d9c1a6bb5674e5b04-run-43558962065.html",
+      "storedPath": "evidence/remote-ci/86b8f848635d1ac392625b6d9c1a6bb5674e5b04-run-43558962065.html",
+      "sha256": "e5cac09370967ef2e528e6d5b10b36595395a007f03367f474bd1439743984d9",
+      "bytes": 157901,
+      "url": "https://github.com/socramgns/MODERN/actions/runs/43558962065",
+      "rawBytesPreserved": true
+    },
+    {
+      "observedPath": "/workspace/r22-validation/remote-ci/86b8f848635d1ac392625b6d9c1a6bb5674e5b04-job-132338118949.html",
+      "storedPath": "evidence/remote-ci/86b8f848635d1ac392625b6d9c1a6bb5674e5b04-job-132338118949.html",
+      "sha256": "6ae0cdaa962c007da0c99a9e5f9ebd2a7ab338ca1a8efd1c50ba0628e43e0d26",
+      "bytes": 165967,
+      "url": "https://github.com/socramgns/MODERN/actions/runs/43558962065/job/132338118949",
+      "rawBytesPreserved": true
+    }
+  ],
+  "meaning": "Copies preserve raw public HTML and its observed absolute paths; this index supplies portable paths without rewriting receipts."
+}

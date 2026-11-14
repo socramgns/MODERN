@@ -1,0 +1,9 @@
+{
+  "schema": "ygo-reproducible-build-check/v1",
+  "pass": true,
+  "buildId": "afe53b8932901869aae05b80e3605ca6cb18625ec7984e41484ce71bf212fa94",
+  "htmlSha256": "7ec0ed4d6bee8ef655445bc7831aa6f5ad9fd6db332722212abbc43d316c1b04",
+  "bytes": 7192465,
+  "buildManifestIdentical": true,
+  "htmlBytesIdentical": true
+}

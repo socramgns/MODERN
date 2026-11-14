@@ -8,8 +8,8 @@
   "includedExampleCount": 22,
   "requiredRunnerGroups": 79,
   "requiredCommands": 77,
-  "pass": null,
-  "phase": "CORRECTED_LOCAL_RUN_COMPLETE_TWO_ENVIRONMENT_GAPS_PENDING_FINAL_CI",
+  "pass": true,
+  "phase": "ACCEPTED_BY_EXACT_MANDATORY_REMOTE_CI",
   "previousAcceptedCommit": "5d1a44c4bca27ec81c78983bfa29a969813a15a8",
   "workflowUnchangedFromPredecessor": true,
   "competitiveScoring": "PROVISIONAL_BY_USER_REQUEST",
@@ -47,5 +47,9 @@
   "supersedesCommits": [
     "07aca73835ca4ce326279f9b36d3f8b45d6a1c75",
     "a2a99aabd009ba5556a7404d43e54a3242795775"
-  ]
+  ],
+  "acceptedCandidateCommit": "86b8f848635d1ac392625b6d9c1a6bb5674e5b04",
+  "acceptedRunUrl": "https://github.com/socramgns/MODERN/actions/runs/43558962065",
+  "acceptedRemoteGroups": 79,
+  "acceptedAt": "2026-11-14T05:13:25.652144+00:00"
 }
