@@ -125,10 +125,12 @@ def run(url=None):
                   and cards(summoned, 0, 'monster', HAYABUSA)[0]['summonType'] == 'NORMAL'
                   and summoned['current']['normalSummonAvailable'][0] is False)
             coverage = page.evaluate('()=>YGOCardCoverage.report().entries.find(x=>x.id===21015833)')
-            check('hayabusa_action_inventory_names_the_registered_normal_summon_and_continuous_attack',
+            check('hayabusa_action_inventory_preserves_summon_and_second_attack_and_adds_reviewed_flip',
                   coverage is not None and coverage['completeCardRules'] is False
-                  and {a['id'] for a in coverage['actions']} == {'DUEL_NORMAL_SUMMON_OR_SET', 'DUEL_ATTACK'}
-                  and all(a['registration'] == 'BATTLE_PROFILE' for a in coverage['actions']))
+                  and len(coverage['actions']) == 3
+                  and {(a['id'], a['registration']) for a in coverage['actions']} == {
+                      ('DUEL_NORMAL_SUMMON_OR_SET', 'BATTLE_PROFILE'),
+                      ('DUEL_ATTACK', 'BATTLE_PROFILE'), ('DUEL_FLIP_SUMMON', 'FLIP_PROFILE')})
             check('the_board_shows_an_unspent_two_attack_budget', budget(page, uid)['limit'] == 2
                   and budget(page, uid)['spent'] == 0 and budget(page, uid)['remaining'] == 2
                   and 'ataques declarados 0/2' in page.locator('#ygoDuelBoard').inner_text())
@@ -251,10 +253,11 @@ def run(url=None):
                   twin['summonType'] == 'DECLARED_STARTING_FIELD' and twin['properlySummoned'] is False
                   and initial['current']['extraHistory'] == [] and budget(page, twin['uid'])['limit'] == 2)
             coverage = page.evaluate('()=>YGOCardCoverage.report().entries.find(x=>x.id===74157028)')
-            check('cyber_twin_action_inventory_declares_only_its_partial_continuous_battle_profile',
+            check('cyber_twin_action_inventory_declares_its_partial_attack_and_reviewed_flip_profiles',
                   coverage is not None and coverage['completeCardRules'] is False
-                  and len(coverage['actions']) == 1 and coverage['actions'][0]['id'] == 'DUEL_ATTACK'
-                  and coverage['actions'][0]['registration'] == 'BATTLE_PROFILE'
+                  and len(coverage['actions']) == 2
+                  and {(a['id'], a['registration']) for a in coverage['actions']} == {
+                      ('DUEL_ATTACK', 'BATTLE_PROFILE'), ('DUEL_FLIP_SUMMON', 'FLIP_PROFILE')}
                   and any('no añade su receta' in note for note in coverage['notes']))
             first, _ = step(page, 'DUEL_ATTACK', player=0, attackerUid=twin['uid'], targetUid=targets[0]['uid'])
             check('cyber_twin_first_attack_sends_the_first_physical_rival_to_its_owners_grave',

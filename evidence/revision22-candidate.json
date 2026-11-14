@@ -9,7 +9,7 @@
   "requiredRunnerGroups": 79,
   "requiredCommands": 77,
   "pass": null,
-  "phase": "CORRECTED_FOCUSED_VALIDATION_PASSED_FULL_RUN_IN_PROGRESS",
+  "phase": "CORRECTED_LOCAL_RUN_COMPLETE_TWO_ENVIRONMENT_GAPS_PENDING_FINAL_CI",
   "previousAcceptedCommit": "5d1a44c4bca27ec81c78983bfa29a969813a15a8",
   "workflowUnchangedFromPredecessor": true,
   "competitiveScoring": "PROVISIONAL_BY_USER_REQUEST",
@@ -31,5 +31,21 @@
     "suites": 6,
     "cases": 240,
     "meaning": "New tests and unchanged prior regressions; not a full-suite result."
-  }
+  },
+  "localFullRun": {
+    "pass": false,
+    "passedGroups": 76,
+    "totalGroups": 79,
+    "rawReport": "evidence/local-validation/full-run-raw.json",
+    "followupSuitePass": true,
+    "followupSuiteChecks": 39,
+    "remainingEnvironmentGaps": [
+      "FIREFOX_LOCAL_FILE_DELIVERY",
+      "WEBKIT_MOBILE_TASKS"
+    ]
+  },
+  "supersedesCommits": [
+    "07aca73835ca4ce326279f9b36d3f8b45d6a1c75",
+    "a2a99aabd009ba5556a7404d43e54a3242795775"
+  ]
 }

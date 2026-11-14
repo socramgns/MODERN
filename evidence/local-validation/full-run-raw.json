@@ -1,0 +1,484 @@
+{
+  "schema": "ygo-validation-summary/v1",
+  "buildId": "afe53b8932901869aae05b80e3605ca6cb18625ec7984e41484ce71bf212fa94",
+  "htmlSha256": "7ec0ed4d6bee8ef655445bc7831aa6f5ad9fd6db332722212abbc43d316c1b04",
+  "pass": false,
+  "suites": [
+    {
+      "name": "source_syntax",
+      "pass": true,
+      "files": 124
+    },
+    {
+      "name": "release6_in_browser",
+      "pass": true,
+      "elapsedMs": 21098,
+      "log": "tests/release6_in_browser.log"
+    },
+    {
+      "name": "laboratory_usability",
+      "pass": true,
+      "elapsedMs": 34322,
+      "log": "tests/laboratory_usability.log"
+    },
+    {
+      "name": "local_file_delivery",
+      "pass": false,
+      "elapsedMs": 459,
+      "log": "tests/local_file_delivery.log"
+    },
+    {
+      "name": "registered_response_chains",
+      "pass": true,
+      "elapsedMs": 1759,
+      "log": "tests/registered_response_chains.log"
+    },
+    {
+      "name": "response_windows",
+      "pass": true,
+      "elapsedMs": 1633,
+      "log": "tests/response_windows.log"
+    },
+    {
+      "name": "new_card_effects",
+      "pass": true,
+      "elapsedMs": 1490,
+      "log": "tests/new_card_effects.log"
+    },
+    {
+      "name": "official_context_at_build",
+      "pass": true,
+      "elapsedMs": 429,
+      "log": "tests/official_context_at_build.log"
+    },
+    {
+      "name": "search_horizons",
+      "pass": true,
+      "elapsedMs": 658,
+      "log": "tests/search_horizons.log"
+    },
+    {
+      "name": "catalogue_expansion",
+      "pass": true,
+      "elapsedMs": 2872,
+      "log": "tests/catalogue_expansion.log"
+    },
+    {
+      "name": "draw_uncertainty",
+      "pass": true,
+      "elapsedMs": 595,
+      "log": "tests/draw_uncertainty.log"
+    },
+    {
+      "name": "draw_continuation",
+      "pass": true,
+      "elapsedMs": 20997,
+      "log": "tests/draw_continuation.log"
+    },
+    {
+      "name": "data_quality",
+      "pass": true,
+      "elapsedMs": 1415,
+      "log": "tests/data_quality.log"
+    },
+    {
+      "name": "deck_identity_review",
+      "pass": true,
+      "elapsedMs": 6060,
+      "log": "tests/deck_identity_review.log"
+    },
+    {
+      "name": "monster_reborn",
+      "pass": true,
+      "elapsedMs": 3498,
+      "log": "tests/monster_reborn.log"
+    },
+    {
+      "name": "stardust_synchro",
+      "pass": true,
+      "elapsedMs": 2795,
+      "log": "tests/stardust_synchro.log"
+    },
+    {
+      "name": "azure_eyes",
+      "pass": true,
+      "elapsedMs": 4696,
+      "log": "tests/azure_eyes.log"
+    },
+    {
+      "name": "spirit_revival",
+      "pass": true,
+      "elapsedMs": 4878,
+      "log": "tests/spirit_revival.log"
+    },
+    {
+      "name": "wolf_revival",
+      "pass": true,
+      "elapsedMs": 9984,
+      "log": "tests/wolf_revival.log"
+    },
+    {
+      "name": "albaz_fusion",
+      "pass": true,
+      "elapsedMs": 4912,
+      "log": "tests/albaz_fusion.log"
+    },
+    {
+      "name": "multiple_attacks",
+      "pass": true,
+      "elapsedMs": 4046,
+      "log": "tests/multiple_attacks.log"
+    },
+    {
+      "name": "flip_effects",
+      "pass": true,
+      "elapsedMs": 2622,
+      "log": "tests/flip_effects.log"
+    },
+    {
+      "name": "unresolved_source_audit",
+      "pass": true,
+      "elapsedMs": 381,
+      "log": "tests/unresolved_source_audit.log"
+    },
+    {
+      "name": "official_documents",
+      "pass": true,
+      "elapsedMs": 256,
+      "log": "tests/official_documents.log"
+    },
+    {
+      "name": "duel_phases",
+      "pass": true,
+      "elapsedMs": 1190,
+      "log": "tests/duel_phases.log"
+    },
+    {
+      "name": "physical_responses",
+      "pass": true,
+      "elapsedMs": 1570,
+      "log": "tests/physical_responses.log"
+    },
+    {
+      "name": "expanded_archetypes",
+      "pass": true,
+      "elapsedMs": 12833,
+      "log": "tests/expanded_archetypes.log"
+    },
+    {
+      "name": "blue_eyes_duel",
+      "pass": true,
+      "elapsedMs": 1157,
+      "log": "tests/blue_eyes_duel.log"
+    },
+    {
+      "name": "blue_eyes_protection_and_gy",
+      "pass": true,
+      "elapsedMs": 2137,
+      "log": "tests/blue_eyes_protection_and_gy.log"
+    },
+    {
+      "name": "mechaba_spell_activations",
+      "pass": true,
+      "elapsedMs": 1181,
+      "log": "tests/mechaba_spell_activations.log"
+    },
+    {
+      "name": "mechaba_monster_zones",
+      "pass": true,
+      "elapsedMs": 3488,
+      "log": "tests/mechaba_monster_zones.log"
+    },
+    {
+      "name": "mechaba_quick_hand",
+      "pass": true,
+      "elapsedMs": 2157,
+      "log": "tests/mechaba_quick_hand.log"
+    },
+    {
+      "name": "field_spell_activations",
+      "pass": true,
+      "elapsedMs": 1954,
+      "log": "tests/field_spell_activations.log"
+    },
+    {
+      "name": "normal_trap_activations",
+      "pass": true,
+      "elapsedMs": 2528,
+      "log": "tests/normal_trap_activations.log"
+    },
+    {
+      "name": "compulsory_evacuation",
+      "pass": true,
+      "elapsedMs": 2591,
+      "log": "tests/compulsory_evacuation.log"
+    },
+    {
+      "name": "typed_field_goals",
+      "pass": true,
+      "elapsedMs": 1052,
+      "log": "tests/typed_field_goals.log"
+    },
+    {
+      "name": "goal_progress",
+      "pass": true,
+      "elapsedMs": 866,
+      "log": "tests/goal_progress.log"
+    },
+    {
+      "name": "mechaba_official_references",
+      "pass": true,
+      "elapsedMs": 131,
+      "log": "tests/mechaba_official_references.log"
+    },
+    {
+      "name": "card_action_coverage",
+      "pass": true,
+      "elapsedMs": 421,
+      "log": "tests/card_action_coverage.log"
+    },
+    {
+      "name": "builtin_scenarios",
+      "pass": true,
+      "elapsedMs": 1775,
+      "log": "tests/builtin_scenarios.log"
+    },
+    {
+      "name": "expanded_examples_in_browser",
+      "pass": true,
+      "elapsedMs": 72287,
+      "log": "tests/expanded_examples_in_browser.log"
+    },
+    {
+      "name": "release8_in_browser",
+      "pass": true,
+      "elapsedMs": 22985,
+      "log": "tests/release8_in_browser.log"
+    },
+    {
+      "name": "release9_in_browser",
+      "pass": true,
+      "elapsedMs": 18545,
+      "log": "tests/release9_in_browser.log"
+    },
+    {
+      "name": "release10_in_browser",
+      "pass": true,
+      "elapsedMs": 28561,
+      "log": "tests/release10_in_browser.log"
+    },
+    {
+      "name": "release11_in_browser",
+      "pass": true,
+      "elapsedMs": 31462,
+      "log": "tests/release11_in_browser.log"
+    },
+    {
+      "name": "release12_in_browser",
+      "pass": true,
+      "elapsedMs": 23266,
+      "log": "tests/release12_in_browser.log"
+    },
+    {
+      "name": "release13_in_browser",
+      "pass": true,
+      "elapsedMs": 23456,
+      "log": "tests/release13_in_browser.log"
+    },
+    {
+      "name": "release14_in_browser",
+      "pass": true,
+      "elapsedMs": 65305,
+      "log": "tests/release14_in_browser.log"
+    },
+    {
+      "name": "release15_in_browser",
+      "pass": true,
+      "elapsedMs": 29885,
+      "log": "tests/release15_in_browser.log"
+    },
+    {
+      "name": "release16_in_browser",
+      "pass": true,
+      "elapsedMs": 65632,
+      "log": "tests/release16_in_browser.log"
+    },
+    {
+      "name": "release17_in_browser",
+      "pass": true,
+      "elapsedMs": 79930,
+      "log": "tests/release17_in_browser.log"
+    },
+    {
+      "name": "release18_in_browser",
+      "pass": true,
+      "elapsedMs": 24821,
+      "log": "tests/release18_in_browser.log"
+    },
+    {
+      "name": "release19_in_browser",
+      "pass": true,
+      "elapsedMs": 40320,
+      "log": "tests/release19_in_browser.log"
+    },
+    {
+      "name": "release20_in_browser",
+      "pass": true,
+      "elapsedMs": 59741,
+      "log": "tests/release20_in_browser.log"
+    },
+    {
+      "name": "release21_in_browser",
+      "pass": false,
+      "elapsedMs": 39162,
+      "log": "tests/release21_in_browser.log"
+    },
+    {
+      "name": "release22_in_browser",
+      "pass": true,
+      "elapsedMs": 31575,
+      "log": "tests/release22_in_browser.log"
+    },
+    {
+      "name": "accessibility_workflow",
+      "pass": true,
+      "elapsedMs": 15418,
+      "log": "tests/accessibility_workflow.log"
+    },
+    {
+      "name": "mobile_accessibility",
+      "pass": false,
+      "elapsedMs": 20235,
+      "log": "tests/mobile_accessibility.log"
+    },
+    {
+      "name": "release5_in_browser",
+      "pass": true,
+      "elapsedMs": 24710,
+      "log": "tests/release5_in_browser.log"
+    },
+    {
+      "name": "blue_eyes_in_browser",
+      "pass": true,
+      "elapsedMs": 18253,
+      "log": "tests/blue_eyes_in_browser.log"
+    },
+    {
+      "name": "recommendations",
+      "pass": true,
+      "elapsedMs": 2840,
+      "log": "tests/recommendations.log"
+    },
+    {
+      "name": "format_interface",
+      "pass": true,
+      "elapsedMs": 27126,
+      "log": "tests/format_interface.log"
+    },
+    {
+      "name": "advanced_interface",
+      "pass": true,
+      "elapsedMs": 35071,
+      "log": "tests/advanced_interface.log"
+    },
+    {
+      "name": "browser_compatibility",
+      "pass": true,
+      "elapsedMs": 18298,
+      "log": "tests/browser_compatibility.log"
+    },
+    {
+      "name": "formats",
+      "pass": true,
+      "elapsedMs": 64,
+      "log": "tests/formats.log"
+    },
+    {
+      "name": "provenance",
+      "pass": true,
+      "elapsedMs": 124,
+      "log": "tests/provenance.log"
+    },
+    {
+      "name": "strategy",
+      "pass": true,
+      "elapsedMs": 247,
+      "log": "tests/strategy.log"
+    },
+    {
+      "name": "causal_core",
+      "pass": true,
+      "elapsedMs": 670,
+      "log": "tests/causal_core.log"
+    },
+    {
+      "name": "archetype_rules",
+      "pass": true,
+      "elapsedMs": 5187,
+      "log": "tests/archetype_rules.log"
+    },
+    {
+      "name": "causal_browser",
+      "pass": true,
+      "elapsedMs": 38120,
+      "log": "tests/causal_browser.log"
+    },
+    {
+      "name": "catalogue",
+      "pass": true,
+      "elapsedMs": 855,
+      "log": "tests/catalogue.log"
+    },
+    {
+      "name": "probability_and_calibration",
+      "pass": true,
+      "elapsedMs": 61,
+      "log": "tests/probability_and_calibration.log"
+    },
+    {
+      "name": "probability_in_browser",
+      "pass": true,
+      "elapsedMs": 3736,
+      "log": "tests/probability_in_browser.log"
+    },
+    {
+      "name": "ui_and_persistence",
+      "pass": true,
+      "elapsedMs": 28091,
+      "log": "tests/ui_and_persistence.log"
+    },
+    {
+      "name": "worker",
+      "pass": true,
+      "elapsedMs": 12950,
+      "log": "tests/worker.log"
+    },
+    {
+      "name": "supported_search",
+      "pass": true,
+      "elapsedMs": 9994,
+      "log": "tests/supported_search.log"
+    },
+    {
+      "name": "delivered_bytes_e2e",
+      "pass": true,
+      "elapsedMs": 70536,
+      "log": "tests/delivered_bytes_e2e.log"
+    },
+    {
+      "name": "context_in_browser",
+      "pass": true,
+      "elapsedMs": 29820,
+      "log": "tests/context_in_browser.log"
+    },
+    {
+      "name": "artifact_unchanged_during_tests",
+      "pass": true
+    }
+  ],
+  "elapsedSeconds": 1193.46,
+  "limitations": [
+    "Registered TCG routes include six archetypes, declared physical fields, registered responses, phases and battle; unknown effects remain outside verified transitions; an explicit one-turn-draw hypothetical analysis uses separate weighted assumptions and never reveals unknown order.",
+    "Competitive score remains provisional until external datasets are supplied."
+  ]
+}

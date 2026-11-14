@@ -1,0 +1,20 @@
+{
+  "schema": "ygo-browser-preparation-observation/v1",
+  "observedAt": "2026-11-13T18:44:47.096882+00:00",
+  "commands": [
+    "python3 -m playwright install chromium firefox webkit",
+    "python3 -m playwright install firefox webkit"
+  ],
+  "result": "OFFICIAL_DOWNLOAD_BLOCKED",
+  "httpStatus": 403,
+  "message": "Domain forbidden",
+  "hosts": [
+    "cdn.playwright.dev",
+    "playwright.download.prss.microsoft.com"
+  ],
+  "tlsValidationDisabled": false,
+  "proxyBypassed": false,
+  "systemChromium": "/usr/bin/chromium",
+  "webkitDownloadAttempted": false,
+  "meaning": "Sequence stopped at blocked Chromium/Firefox. Full cross-engine acceptance requires unchanged CI gate; local unavailable engines cannot be counted as passed."
+}
