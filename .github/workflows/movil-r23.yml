@@ -1,0 +1,75 @@
+name: Verificar corrección móvil R23
+on:
+  push:
+    branches: ['diagnostico/r23-movil']
+permissions:
+  contents: read
+jobs:
+  mobile:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    env:
+      PLAYWRIGHT_BROWSERS_PATH: ${{ github.workspace }}/.cache/ms-playwright
+      PLAYWRIGHT_DOWNLOAD_CONNECTION_TIMEOUT: '90000'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Preparar las dependencias de prueba
+        run: python -m pip install --timeout 45 --retries 2 -r requirements-dev.txt
+      - uses: actions/cache@v4
+        with:
+          path: ${{ env.PLAYWRIGHT_BROWSERS_PATH }}
+          key: ${{ runner.os }}-playwright-${{ hashFiles('requirements-dev.txt') }}
+      - name: Preparar Chromium y WebKit
+        run: |
+          python -m playwright install-deps chromium webkit
+          python -m playwright install chromium webkit
+          python - <<'PY'
+          import os
+          from playwright.sync_api import sync_playwright
+          with sync_playwright() as runtime:
+              with open(os.environ['GITHUB_ENV'], 'a') as env:
+                  env.write('YGO_CHROMIUM=' + runtime.chromium.executable_path + '\n')
+          PY
+      - name: Compilar los bytes que se van a probar
+        run: |
+          python tools/build.py
+          cmp Analizador_YuGiOh.html dist/Calculadora_de_Barajas_YuGiOh_Alpha_1263_Corregida.html
+      - name: Ejecutar el flujo móvil y el aumento de texto
+        run: python tests/mobile_accessibility.py > mobile-r23.log 2>&1
+      - name: Publicar el resultado vinculado al HTML
+        if: always()
+        run: |
+          python3 - <<'PY'
+          import html,json,os
+          from pathlib import Path
+          p=Path('tests/mobile-accessibility-results.json')
+          if p.exists():
+              report=json.loads(p.read_text())
+              failed=[row for row in report['checks'] if not row['pass']]
+              result={key:report.get(key) for key in ['pass','buildId','htmlSha256','executedEngines']}
+              result['checks']=len(report['checks'])
+              result['failed']=failed
+              result['details']={row['name']:report.get('details',{}).get(row['name']) for row in failed}
+          else:
+              result={'pass':False,'error':'No se generó el informe móvil.'}
+          text=json.dumps(result,ensure_ascii=False)
+          print('::warning title=R23_MOBILE_RESULT::'+text.replace('%','%25').replace('\n','%0A').replace('\r','%0D'))
+          summary='<h1>Corrección móvil R23</h1><pre>'+html.escape(text)+'</pre>'
+          if Path('mobile-r23.log').exists():
+              summary+='<pre>'+html.escape(Path('mobile-r23.log').read_text(errors='replace')[-18000:])+'</pre>'
+          Path(os.environ['GITHUB_STEP_SUMMARY']).write_text(summary)
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: movil-r23
+          path: |
+            dist/build-manifest.json
+            tests/mobile-accessibility-results.json
+            mobile-r23.log
