@@ -1,0 +1,73 @@
+name: Diagnosticar informe de R23
+
+on:
+  push:
+    branches: ['diagnostico/r23-ci']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  read-evidence:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    env:
+      GH_TOKEN: ${{ github.token }}
+      YGO_SOURCE_RUN: '44385656176'
+      YGO_EVIDENCE_DIR: ${{ runner.temp }}/ygo-r23-evidence
+    steps:
+      - name: Descargar los informes ya generados
+        run: gh run download "$YGO_SOURCE_RUN" --repo "$GITHUB_REPOSITORY" --name pruebas-analizador-yugioh --dir "$YGO_EVIDENCE_DIR"
+      - name: Publicar el diagnóstico de los resultados
+        if: always()
+        run: |
+          python3 - <<'PY'
+          import base64, hashlib, html, json, os
+          from pathlib import Path
+          root = Path(os.environ['YGO_EVIDENCE_DIR']).resolve()
+          report_path = root / 'dist/validation-summary.json'
+          def warning(title, message):
+              escaped = str(message).replace('%', '%25').replace('\r', '%0D').replace('\n', '%0A')
+              print('::warning title=' + title + '::' + escaped, flush=True)
+          if not report_path.is_file():
+              warning('R23_DIAGNOSTIC_MISSING_REPORT', 'No se descargó el informe del run ' + os.environ['YGO_SOURCE_RUN'])
+              raise SystemExit(1)
+          raw = report_path.read_bytes()
+          report = json.loads(raw)
+          assert report['buildId'] == 'bdaf08b1741d9615ab5c81ededfff5b9fd1eba110c0aa25db75fd4b11a44dabd'
+          assert report['htmlSha256'] == '92cbd3384c3a1807fac9e52fc9abfcc4ecb3cbc21413678e57b2d713ba54cd1b'
+          assert len(report['suites']) == 88
+          failed = [row for row in report['suites'] if not row['pass']]
+          warning('R23_FAILED_GROUPS', json.dumps({'sourceRun':os.environ['YGO_SOURCE_RUN'], 'failed':failed}, ensure_ascii=False))
+          # One bounded annotation exposes the original summary without requiring
+          # a viewer to obtain a token or a direct artifact-download session.
+          encoded = base64.b64encode(raw).decode()
+          if len(encoded) < 50000:
+              warning('R23_VALIDATION_SUMMARY_BASE64', encoded)
+          summary = ['# Diagnóstico R23', 'Run original: ' + os.environ['YGO_SOURCE_RUN'],
+                     'SHA-256 del informe original: `' + hashlib.sha256(raw).hexdigest() + '`',
+                     'Grupos: ' + str(len(report['suites'])),
+                     'Fallidos: ' + ', '.join(row['name'] for row in failed),
+                     '<pre>' + html.escape(raw.decode()) + '</pre>']
+          for row in failed:
+              path = (root / row.get('log', '')).resolve()
+              if path.is_relative_to(root) and path.is_file():
+                  tail = path.read_text(errors='replace')[-18000:]
+                  warning('R23_LOG_' + row['name'], tail[-6000:])
+                  summary.extend(['## ' + row['name'], '<pre>' + html.escape(tail) + '</pre>'])
+          for path in sorted((root / 'tests').glob('*-results.json')):
+              try:
+                  value = json.loads(path.read_text())
+              except (ValueError, OSError):
+                  continue
+              if value.get('pass') is False:
+                  rows = value.get('tests', value.get('checks', []))
+                  issues = [row for row in rows if row.get('pass') is False]
+                  detail = {'file': path.name, 'failed': issues,
+                            'details': {row.get('name'):value.get('details',{}).get(row.get('name')) for row in issues}}
+                  warning('R23_RESULT_' + path.stem, json.dumps(detail, ensure_ascii=False)[:12000])
+                  summary.extend(['## ' + path.name, '<pre>' + html.escape(json.dumps(detail,ensure_ascii=False,indent=2)) + '</pre>'])
+          Path(os.environ['GITHUB_STEP_SUMMARY']).write_text('\n\n'.join(summary))
+          PY
