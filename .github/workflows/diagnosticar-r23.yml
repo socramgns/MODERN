@@ -16,7 +16,7 @@ jobs:
     env:
       GH_TOKEN: ${{ github.token }}
       YGO_SOURCE_RUN: '44385656176'
-      YGO_EVIDENCE_DIR: ${{ runner.temp }}/ygo-r23-evidence
+      YGO_EVIDENCE_DIR: /tmp/ygo-r23-evidence
     steps:
       - name: Descargar los informes ya generados
         run: gh run download "$YGO_SOURCE_RUN" --repo "$GITHUB_REPOSITORY" --name pruebas-analizador-yugioh --dir "$YGO_EVIDENCE_DIR"
