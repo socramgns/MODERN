@@ -311,11 +311,12 @@ def run(url=None, evidence_dir=None):
 
         def simultaneous_flow():
             spec = fixture(page, own_main=[MOYE, LONGYUAN, 56465981], own_extra=[CHIXIAO, LIBRARIAN],
-                rival_extra=[LIBRARIAN], own_hand=[MOYE, LONGYUAN], modes=True,
+                rival_extra=[LIBRARIAN], own_hand=[MOYE, LONGYUAN, FISH, FISH, FISH], modes=True,
                 placements=[monster(0, LIBRARIAN, 5, True), monster(1, LIBRARIAN, 5, True)],
                 goal={'requiredFieldIds': [CHIXIAO]})
             import_scenario(page, spec)
             initial = report(page)
+            assert cards(initial, 0, 'deck', 56465981), 'The declared opening must leave a real Swordsoul search target in Deck'
             longyuan = cards(initial, 0, 'hand', LONGYUAN)[0]['uid']
             step(page, 'NORMAL_SUMMON', sourceCard=MOYE)
             step(page, 'TRIGGER_ORDER_ACTIVATE', effectId='TRIGGER_MOYE_TOKEN', revealUid=longyuan)
