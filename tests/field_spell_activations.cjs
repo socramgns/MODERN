@@ -302,14 +302,16 @@ const TYPES = new Map([[I.MAUSOLEUM,'ACTIVATE_MAUSOLEUM_OF_WHITE'],
     assert.equal(r.action.proof.registeredResponseChain.packets[0].spellSpeed,3);
     assert.equal(r.action.proof.registeredResponseChain.firstResponseNegated,true); replay(t);
   });
-  await test('An activation-negated Mechaba kept by Spark can activate again after the Field Spell packet',()=>{
+  await test('An activation-negated Mechaba kept by Spark retains its spent use after the Field Spell packet',()=>{
     const t=make({oldField:I.SANCTUARY,ownRoar:true,opponentExtra:[I.SPARK],
       responseTypes:['MECHABA','ROAR'],placements:[placement(1,I.SPARK,'monster','extra',{zoneIndex:1})]}),mechabaUid=uid(t,1,'monster',I.MECHABA),source=uid(t,0,'hand',I.MAUSOLEUM);
     step(t,'STARDUST_SPARK_PROTECTION',a=>pass(a)&&a.player===1&&a.targetUid===mechabaUid);
     const r=step(t,undefined,a=>a.response?.type==='MECHABA'&&a.counterResponses?.length===1);
     assertField(t,source); assert.equal(locate(t,mechabaUid).zone,'monster');
-    assert.equal(t.state.used['MECHABA_NEGATE:'+mechabaUid],undefined);
-    assert(r.action.events.some(event=>event.type==='MECHABA_ACTIVATION_LIMIT_RELEASED'));
+    assert.equal(t.state.used['MECHABA_NEGATE:'+mechabaUid],true);
+    assert(r.action.events.some(event=>event.type==='MECHABA_USE_LIMIT_RETAINED'));
+    assert(!E.enumerate(t.state).some(action=>action.response?.type==='MECHABA'));
+    assert.equal(r.action.proof.registeredResponseChain.firstResponseNegated,true);
     assert.equal(locate(t,r.action.response.costUid).zone,'gy'); replay(t);
   });
   await test('Field Spell effects already on the field are not mistaken for card activations',()=>{
