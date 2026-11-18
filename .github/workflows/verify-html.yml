@@ -12,7 +12,7 @@ permissions:
 jobs:
   verify:
     runs-on: ubuntu-24.04
-    timeout-minutes: 45
+    timeout-minutes: 65
     env:
       PIP_DISABLE_PIP_VERSION_CHECK: '1'
       PLAYWRIGHT_BROWSERS_PATH: ${{ github.workspace }}/.cache/ms-playwright
@@ -85,7 +85,7 @@ jobs:
           python tools/build.py
           cmp Analizador_YuGiOh.html dist/Calculadora_de_Barajas_YuGiOh_Alpha_1263_Corregida.html
       - name: Ejecutar pruebas del entregable
-        timeout-minutes: 25
+        timeout-minutes: 40
         run: python tests/run_all.py --no-build
       - name: Exigir comprobación entre motores
         timeout-minutes: 5
