@@ -74,14 +74,47 @@ function identity(card){
  let id=Number(card?.id??card?.cardId),alias=Number(card?.alias);if(Number.isSafeInteger(alias)&&alias>0)id=alias;
  return Number.isSafeInteger(id)&&id>0?String(id):null;
 }
+function normalizePoolSnapshot(input,format,context={}){
+ const key=keyOf(format),pool=input&&typeof input==='object'&&!Array.isArray(input)?input:{},issues=[],ids=[];
+ const effectiveDate=date(pool.effectiveDate||pool.date),selectedDate=date(context.historicalDate||context.date||policies[key]?.defaultHistoricalDate),asOfDate=date(context.asOfDate)||new Date().toISOString().slice(0,10),source=String(pool.source||''),version=String(pool.version||'').trim();
+ if(!key||keyOf(pool.format)!==key)issues.push('POOL_FORMAT_MISMATCH');
+ for(const field of ['asOfDate','historicalDate','date'])if(context[field]!==undefined&&!date(context[field]))issues.push('FORMAT_CONTEXT_DATE_INVALID:'+field);
+ if(!effectiveDate)issues.push('POOL_DATE_REQUIRED');if(!version||version.length>240)issues.push('POOL_VERSION_REQUIRED');
+ if(!/^https:\/\/[^\s/?#]+(?:[/?#][^\s]*)?$/.test(source)||source.length>2048)issues.push('POOL_SOURCE_REQUIRED');
+ if(pool.complete!==true)issues.push('POOL_COMPLETENESS_DECLARATION_REQUIRED');
+ if(!Array.isArray(pool.ids)||pool.ids.length>100000)issues.push('POOL_IDS_REQUIRED');
+ else{const seen=new Set();for(const id of pool.ids){if(!Number.isSafeInteger(id)||id<1){issues.push('POOL_INVALID_PASSCODE');continue;}if(seen.has(id)){issues.push('POOL_DUPLICATE_PASSCODE');continue;}seen.add(id);ids.push(id);}}
+ if(effectiveDate&&selectedDate&&effectiveDate>selectedDate)issues.push('POOL_SNAPSHOT_AFTER_SELECTED_DATE');
+ else if(effectiveDate&&!selectedDate&&effectiveDate>asOfDate)issues.push('POOL_SNAPSHOT_NOT_YET_EFFECTIVE');
+ return{format:key,version:version||null,effectiveDate,source,ids,complete:issues.length===0,issues:[...new Set(issues)],selectedDate,asOfDate,scope:'DECLARED_VERSIONED_POOL_NOT_AUTHENTICATED_OFFICIAL_AVAILABILITY',officiallyCertified:false,currentPoolProven:false};
+}
+function contextEvidence(context={}){
+ const format=keyOf(context.format||'tcg');if(!format)return{schema:'ygo-format-context-evidence/v1',format:null,declaredInputsValid:false,issues:['UNKNOWN_FORMAT'],officiallyCertified:false,currentListProven:false};
+ const snapshot=selectedSnapshot(format,context),issues=[...snapshot.issues],pool=context.poolSnapshot?normalizePoolSnapshot(context.poolSnapshot,format,context):null,asOfDate=date(context.asOfDate)||new Date().toISOString().slice(0,10),selectedDate=date(context.historicalDate||context.date||policies[format].defaultHistoricalDate);
+ for(const field of ['asOfDate','historicalDate','date'])if(context[field]!==undefined&&!date(context[field]))issues.push('FORMAT_CONTEXT_DATE_INVALID:'+field);
+ if(snapshot.effectiveDate&&(selectedDate||asOfDate)<snapshot.effectiveDate)issues.push(selectedDate?'SNAPSHOT_AFTER_SELECTED_DATE':'SNAPSHOT_NOT_YET_EFFECTIVE');
+ const requestedVersion=context.banlistVersion||context.snapshotVersion;if(requestedVersion&&String(requestedVersion)!==snapshot.version)issues.push('SNAPSHOT_VERSION_MISMATCH');
+ if(pool)issues.push(...pool.issues);else if(policies[format].pool==='DIGITAL_VERSIONED')issues.push('DIGITAL_POOL_SNAPSHOT_REQUIRED');else if(policies[format].pool==='HISTORICAL_VERSIONED')issues.push('HISTORICAL_POOL_SNAPSHOT_REQUIRED');
+ return{schema:'ygo-format-context-evidence/v1',format,asOfDate,selectedDate,declaredInputsValid:issues.length===0,issues:[...new Set(issues)],restrictionSnapshot:{complete:snapshot.complete,version:snapshot.version,effectiveDate:snapshot.effectiveDate,source:snapshot.source,identity:snapshotIdentity(snapshot,format),authority:'DECLARED_RESTRICTION_SNAPSHOT'},poolSnapshot:pool?{provided:true,complete:pool.complete,version:pool.version,effectiveDate:pool.effectiveDate,source:pool.source,cardCount:pool.ids.length,issues:pool.issues}:{provided:false,status:'NO_AUTHENTICATED_FORMAT_POOL_SUPPLIED'},scope:'DATED_INPUT_AND_PROVENANCE_REVIEW_NOT_OFFICIAL_LEGALITY',officiallyCertified:false,officialAvailabilityVerified:false,currentListProven:false,competitiveCertified:false};
+}
+function restrictionEvidence(card,context={}){
+ const format=keyOf(context.format||'tcg');if(!format)return{status:'UNKNOWN_FORMAT',maximum:null,officiallyCertified:false};const snapshot=selectedSnapshot(format,context),evidence=contextEvidence(context);
+ if(!snapshot.complete||evidence.issues.some(x=>/^SNAPSHOT_|FORMAT_CONTEXT_DATE_INVALID/.test(x)))return{status:'RESTRICTION_UNDETERMINED',maximum:null,source:snapshot.source,effectiveDate:snapshot.effectiveDate,officiallyCertified:false};
+ if(snapshot.noGeneralList)return{status:'NO_GENERAL_LIST_DECLARED_REQUIRES_EVENT_CONTEXT',maximum:null,source:snapshot.source,effectiveDate:snapshot.effectiveDate,officiallyCertified:false,currentListProven:false};
+ const family=identity(card),names=[card?.name,card?.canonicalName,...arr(card?.legacyNames)].filter(Boolean).map(normalize),matched=snapshot.data.filter(row=>row.id?identity({id:row.id,alias:W.YGODataCatalog?.lookup?.(row.id)?.alias})===family:row.name&&names.includes(normalize(row.name)));
+ const maximum=matched.length?Math.min(...matched.map(row=>row.max)):3;
+ return{status:maximum===0?'FORBIDDEN_IN_PROVIDED_RESTRICTIONS':matched.length?'LIMIT_IN_PROVIDED_RESTRICTIONS':'NO_RESTRICTION_ROW_IN_PROVIDED_SNAPSHOT',maximum,matchedRows:clone(matched),source:snapshot.source,effectiveDate:snapshot.effectiveDate,version:snapshot.version,officiallyCertified:false,currentListProven:false};
+}
+function availabilityEvidence(card,context={}){const pool=availability(card,context),restriction=restrictionEvidence(card,context);return{schema:'ygo-card-format-evidence/v1',cardId:Number(card?.id??card?.cardId),format:keyOf(context.format||'tcg'),pool,restriction,poolDecision:pool.eligible===null||pool.eligible===undefined?'UNKNOWN_AVAILABILITY':pool.eligible?'MATCHES_DECLARED_OR_TECHNICAL_POOL':'OUTSIDE_DECLARED_OR_TECHNICAL_POOL',restrictionDecision:restriction.status,officialLegalityCertified:false,competitiveCertified:false};}
 function availability(card,context={}){
  const format=keyOf(context.format||'tcg'),policy=policies[format];if(!policy)return{eligible:null,status:'UNKNOWN_FORMAT'};
  const id=Number(card?.id??card?.cardId),when=date(context.historicalDate||context.date||policy.defaultHistoricalDate);
  const pool=context.poolSnapshot;
  if(pool){
-  const poolFormat=keyOf(pool.format),dated=date(pool.effectiveDate||pool.date),valid=poolFormat===format&&!!String(pool.version||'').trim()&&!!dated&&/^https:\/\//i.test(String(pool.source||''))&&pool.complete===true&&Array.isArray(pool.ids);
-  if(valid){if(when&&dated>when)return{eligible:null,status:'POOL_SNAPSHOT_AFTER_SELECTED_DATE'};return{eligible:pool.ids.some(x=>Number(x)===id),status:pool.ids.some(x=>Number(x)===id)?'PROVIDED_POOL_MATCH':'OUTSIDE_PROVIDED_POOL',snapshotDate:dated,source:pool.source,officiallyCertified:false}}
-  return{eligible:null,status:'POOL_SNAPSHOT_INCOMPLETE'};
+  const checked=normalizePoolSnapshot(pool,format,context),timing=checked.issues.find(x=>x==='POOL_SNAPSHOT_AFTER_SELECTED_DATE'||x==='POOL_SNAPSHOT_NOT_YET_EFFECTIVE');
+  if(timing)return{eligible:null,status:timing,snapshotDate:checked.effectiveDate,source:checked.source,officiallyCertified:false};
+  if(checked.complete){const present=checked.ids.includes(id);return{eligible:present,status:present?'PROVIDED_POOL_MATCH':'OUTSIDE_PROVIDED_POOL',snapshotDate:checked.effectiveDate,source:checked.source,officiallyCertified:false};}
+  return{eligible:null,status:'POOL_SNAPSHOT_INCOMPLETE',issues:checked.issues};
  }
  if(policy.pool==='DIGITAL_VERSIONED')return{eligible:null,status:'DIGITAL_POOL_SNAPSHOT_REQUIRED'};
  if(policy.pool==='HISTORICAL_VERSIONED'){
@@ -163,6 +196,7 @@ function validateDeck(deck,context={}){
  const requestedVersion=context.banlistVersion||context.snapshotVersion;
  if(requestedVersion&&String(requestedVersion)!==snapshot.version)addPending('SNAPSHOT_VERSION_MISMATCH');
  if(historicalDate&&snapshot.effectiveDate&&snapshot.effectiveDate>historicalDate)addPending('SNAPSHOT_AFTER_SELECTED_DATE');
+ for(const field of ['asOfDate','historicalDate','date'])if(context[field]!==undefined&&!date(context[field]))addPending('FORMAT_CONTEXT_DATE_INVALID',{field});
  const asOf=date(context.asOfDate)||new Date().toISOString().slice(0,10);
  if(!historicalDate&&snapshot.effectiveDate&&snapshot.effectiveDate>asOf)addPending('SNAPSHOT_NOT_YET_EFFECTIVE',{effectiveDate:snapshot.effectiveDate,asOfDate:asOf});
  const shared=new Map([[1,{copies:0,ids:new Set()}],[2,{copies:0,ids:new Set()}],[3,{copies:0,ids:new Set()}]]);
@@ -182,7 +216,7 @@ function validateDeck(deck,context={}){
  return{schema:'ygo-format-validation/v1',format,policy,counts,activeSkills,sideSkills,extraLimit:extraMax,sideLimit:sideMax,errors,pending,warnings,
   pass:errors.length===0&&pending.length===0,constructionValid:errors.length===0,complete:pending.length===0,legality:errors.length?false:null,
   snapshot:{version:snapshot.version,effectiveDate:snapshot.effectiveDate,source:snapshot.source,identity:snapshotId,complete:snapshot.complete},
-  sharedBudgets:Object.fromEntries([...shared].map(([n,v])=>[n,{maximum:n,copies:v.copies}])),historicalDate,scope:'MODELED_CONSTRUCTION_AND_PROVIDED_RESTRICTIONS',certified:false,officialLegalityCertified:false};
+  sharedBudgets:Object.fromEntries([...shared].map(([n,v])=>[n,{maximum:n,copies:v.copies}])),historicalDate,scope:'MODELED_CONSTRUCTION_AND_PROVIDED_RESTRICTIONS',provenance:contextEvidence({...context,format}),certified:false,officialLegalityCertified:false};
 }
 async function refreshSnapshot(format,loader){
  const key=keyOf(format);if(!key)return{pass:false,status:'UNKNOWN_FORMAT'};
@@ -208,6 +242,6 @@ function installSnapshotGuard(){
   const result=await refreshSnapshot(key,stage=>base.call(this,stage));if(!result.pass){const error=Error(result.error);error.previousSnapshotPreserved=result.previousPreserved;throw error}return profile.data;};
  guard.__ygoFormatsGuard=true;W.fetchBanData=guard;return true;
 }
-W.YGOFormats=Object.freeze({version:'construction-formats-v1',policies,references,keyOf,normalizeDate:date,validateDeck,snapshotIdentity,recordSnapshot,refreshSnapshot,availability,installSnapshotGuard,getSnapshot:format=>{seedSnapshots();const value=snapshots.get(keyOf(format));return value?clone(value):null}});
+W.YGOFormats=Object.freeze({version:'construction-formats-v1',policies,references,keyOf,normalizeDate:date,normalizeSnapshot,validateDeck,snapshotIdentity,recordSnapshot,refreshSnapshot,availability,normalizePoolSnapshot,contextEvidence,restrictionEvidence,availabilityEvidence,installSnapshotGuard,getSnapshot:format=>{seedSnapshots();const value=snapshots.get(keyOf(format));return value?clone(value):null}});
 Promise.resolve(W.__YGO_ENGINE_READY).then(()=>{installSnapshotGuard();if(typeof W.dispatchEvent==='function'&&typeof W.CustomEvent==='function')W.dispatchEvent(new W.CustomEvent('ygo-formats-ready'))}).catch(()=>{});
 })();

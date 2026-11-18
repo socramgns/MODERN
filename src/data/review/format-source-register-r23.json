@@ -1,0 +1,250 @@
+{
+  "schema": "ygo-r23-format-source-register/v1",
+  "role": "REQUIREMENTS_AND_REFERENCE_LINK_REGISTER_NOT_AUTHENTICATED_RULE_TEXT",
+  "causalEngineFormats": [
+    "tcg"
+  ],
+  "formats": [
+    {
+      "format": "tcg",
+      "constructionPolicy": {
+        "mainMin": 40,
+        "mainMax": 60,
+        "extraMax": 15,
+        "sideMax": 15,
+        "skills": 0,
+        "restrictionMode": "PER_IDENTITY",
+        "pool": "TCG"
+      },
+      "requiredEvidence": [
+        "DATED_RESTRICTION_SOURCE",
+        "AUTHENTICATED_REGIONAL_POOL"
+      ],
+      "status": "EXTERNAL_EVIDENCE_PENDING",
+      "officiallyCertified": false,
+      "currentListProven": false
+    },
+    {
+      "format": "tcgTraditional",
+      "constructionPolicy": {
+        "mainMin": 40,
+        "mainMax": 60,
+        "extraMax": 15,
+        "sideMax": 15,
+        "skills": 0,
+        "restrictionMode": "PER_IDENTITY",
+        "pool": "TCG"
+      },
+      "requiredEvidence": [
+        "DATED_RESTRICTION_SOURCE",
+        "TRADITIONAL_RULE_CONTEXT",
+        "AUTHENTICATED_REGIONAL_POOL"
+      ],
+      "status": "EXTERNAL_EVIDENCE_PENDING",
+      "officiallyCertified": false,
+      "currentListProven": false
+    },
+    {
+      "format": "ocg",
+      "constructionPolicy": {
+        "mainMin": 40,
+        "mainMax": 60,
+        "extraMax": 15,
+        "sideMax": 15,
+        "skills": 0,
+        "restrictionMode": "PER_IDENTITY",
+        "pool": "OCG"
+      },
+      "requiredEvidence": [
+        "DATED_RESTRICTION_SOURCE",
+        "AUTHENTICATED_REGIONAL_POOL"
+      ],
+      "status": "EXTERNAL_EVIDENCE_PENDING",
+      "officiallyCertified": false,
+      "currentListProven": false
+    },
+    {
+      "format": "master",
+      "constructionPolicy": {
+        "mainMin": 40,
+        "mainMax": 60,
+        "extraMax": 15,
+        "sideMax": 0,
+        "skills": 0,
+        "restrictionMode": "PER_IDENTITY",
+        "pool": "DIGITAL_VERSIONED"
+      },
+      "requiredEvidence": [
+        "DATED_DIGITAL_VERSIONED_POOL",
+        "DATED_REGULATION_SNAPSHOT"
+      ],
+      "status": "EXTERNAL_EVIDENCE_PENDING",
+      "officiallyCertified": false,
+      "currentListProven": false
+    },
+    {
+      "format": "duelLinksSpeed",
+      "constructionPolicy": {
+        "mainMin": 20,
+        "mainMax": 30,
+        "extraMax": null,
+        "extraSafetyMax": 15,
+        "sideMax": 0,
+        "skills": 1,
+        "restrictionMode": "SHARED_LIMIT_GROUPS",
+        "pool": "DIGITAL_VERSIONED",
+        "extraLimitRequiresContext": true,
+        "skillMayChangeConstruction": true
+      },
+      "requiredEvidence": [
+        "DATED_DIGITAL_POOL",
+        "SHARED_LIMIT_REGULATION",
+        "EXTRA_UNLOCK_AND_SKILL_CONTEXT"
+      ],
+      "status": "EXTERNAL_EVIDENCE_PENDING",
+      "officiallyCertified": false,
+      "currentListProven": false
+    },
+    {
+      "format": "duelLinksRush",
+      "constructionPolicy": {
+        "mainMin": 30,
+        "mainMax": 40,
+        "extraMax": null,
+        "extraSafetyMax": 15,
+        "sideMax": 0,
+        "skills": 1,
+        "restrictionMode": "SHARED_LIMIT_GROUPS",
+        "pool": "DIGITAL_VERSIONED",
+        "extraLimitRequiresContext": true,
+        "skillMayChangeConstruction": true,
+        "legend": true
+      },
+      "requiredEvidence": [
+        "DATED_DIGITAL_POOL",
+        "SHARED_LIMIT_REGULATION",
+        "LEGEND_METADATA",
+        "EXTRA_UNLOCK_AND_SKILL_CONTEXT"
+      ],
+      "status": "EXTERNAL_EVIDENCE_PENDING",
+      "officiallyCertified": false,
+      "currentListProven": false
+    },
+    {
+      "format": "rush",
+      "constructionPolicy": {
+        "mainMin": 40,
+        "mainMax": 60,
+        "extraMax": 15,
+        "sideMax": 15,
+        "skills": 0,
+        "restrictionMode": "PER_IDENTITY",
+        "pool": "RUSH",
+        "legend": true
+      },
+      "requiredEvidence": [
+        "DATED_RUSH_POOL",
+        "LEGEND_METADATA",
+        "DATED_RESTRICTIONS"
+      ],
+      "status": "EXTERNAL_EVIDENCE_PENDING",
+      "officiallyCertified": false,
+      "currentListProven": false
+    },
+    {
+      "format": "speedDuel",
+      "constructionPolicy": {
+        "mainMin": 20,
+        "mainMax": 30,
+        "extraMax": 6,
+        "sideMax": 6,
+        "skills": 1,
+        "restrictionMode": "SHARED_LIMIT_GROUPS",
+        "pool": "SPEED_PRINT_AND_EVENT",
+        "sideSkills": true,
+        "eventContext": true
+      },
+      "requiredEvidence": [
+        "VERIFIED_SPEED_PRINT",
+        "DATED_EVENT_RULES",
+        "SIDE_SKILL_CONTEXT"
+      ],
+      "status": "EXTERNAL_EVIDENCE_PENDING",
+      "officiallyCertified": false,
+      "currentListProven": false
+    },
+    {
+      "format": "goat",
+      "constructionPolicy": {
+        "mainMin": 40,
+        "mainMax": 60,
+        "extraMax": null,
+        "extraUnlimited": true,
+        "sideMax": 15,
+        "skills": 0,
+        "restrictionMode": "PER_IDENTITY",
+        "pool": "HISTORICAL_VERSIONED",
+        "defaultHistoricalDate": "2005-04-01",
+        "fusionOnly": true
+      },
+      "requiredEvidence": [
+        "HISTORICAL_RELEASE_POOL",
+        "DATED_RESTRICTIONS",
+        "HISTORICAL_FUSION_DECK_RULES"
+      ],
+      "status": "EXTERNAL_EVIDENCE_PENDING",
+      "officiallyCertified": false,
+      "currentListProven": false
+    },
+    {
+      "format": "timeWizard",
+      "constructionPolicy": {
+        "mainMin": 40,
+        "mainMax": 60,
+        "extraMax": null,
+        "sideMax": 15,
+        "skills": 0,
+        "restrictionMode": "PER_IDENTITY",
+        "pool": "HISTORICAL_VERSIONED",
+        "historicalRulesRequireContext": true
+      },
+      "requiredEvidence": [
+        "SELECTED_HISTORICAL_DATE",
+        "EVENT_EXTRA_RULES",
+        "HISTORICAL_POOL_AND_RESTRICTIONS"
+      ],
+      "status": "EXTERNAL_EVIDENCE_PENDING",
+      "officiallyCertified": false,
+      "currentListProven": false
+    }
+  ],
+  "referenceLinks": [
+    {
+      "name": "standard",
+      "url": "https://www.yugioh-card.com/en/rulebook/",
+      "contentAuthenticatedInThisReview": false
+    },
+    {
+      "name": "speed",
+      "url": "https://www.yugioh-card.com/en/play/speed-duel/",
+      "contentAuthenticatedInThisReview": false
+    },
+    {
+      "name": "digital",
+      "url": "https://www.konami.com/yugioh/duel_links/en/",
+      "contentAuthenticatedInThisReview": false
+    },
+    {
+      "name": "historical",
+      "url": "https://www.yugioh-card.com/en/play/organizedplay/time-wizard/",
+      "contentAuthenticatedInThisReview": false
+    },
+    {
+      "name": "rush",
+      "url": "https://www.konami.com/yugioh/rushduel/howto/",
+      "contentAuthenticatedInThisReview": false
+    }
+  ],
+  "criteriaClosed": [],
+  "officialAvailabilityVerified": false
+}

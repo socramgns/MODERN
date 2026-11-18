@@ -20,23 +20,23 @@ function reviewedTarget(x){
 // facedown card does not contribute an unannounced continuous restriction.
 function reviewedField(s){return s.zones.every(z=>arr(z.monster).every(x=>!face(x)||mainNormal(x)||knownFieldMonsters.has(id(x)))&&arr(z.spelltrap).every(x=>!face(x)||[24382602,1295111,REBORN,74063034,44362883,65124425,10045474,94192409,51339637,14934922].includes(id(x))));}
 function freeMain(s){const occupied=new Set(rows(s,0,'monster').map(x=>x.zoneIndex));return[0,1,2,3,4].filter(zone=>!occupied.has(zone));}
-function allowedSpecial(s,x){
- if(!H.spiritSpecialAllowed(s,0,x)||!H.wolfNameAllowed(s,0,x))return false;
+function allowedSpecial(s,x,controller=0){
+ if(!H.spiritSpecialAllowed(s,controller,x)||!H.wolfNameAllowed(s,controller,x))return false;
  if(id(x)===68468459&&W.YGOAlbazFusion?.observerInstalled?.()!==true)return false;
  if(id(x)===40908371&&(s.context.duelMode!==true||typeof W.YGOBlueEyesDuel?.queueAzureProtection!=='function'||typeof W.YGOBlueEyesDuel?.azureSummonDestinationSupported!=='function'))return false;
- if(id(x)===34755994&&H.isUsed(s,'ARTEMIS_SPECIAL_SUMMON'))return false;
+ if(id(x)===34755994&&H.isUsed(s,controller===0?'ARTEMIS_SPECIAL_SUMMON':'ARTEMIS_SPECIAL_SUMMON:'+controller))return false;
  for(const lock of arr(s.locks)){
-  const source=H.locate(s,lock.sourceUid),player=lock.appliesToPlayer??lock.player??source?.player??0;if(player!==0||lock.untilTurn!==undefined&&lock.untilTurn<s.turn)continue;
+  const source=H.locate(s,lock.sourceUid),player=lock.appliesToPlayer??lock.player??source?.player??0;if(player!==controller||lock.untilTurn!==undefined&&lock.untilTurn<s.turn)continue;
   if(!lock.wholeTurn&&lock.sourceUid&&(source?.zone!=='monster'||!face(source.item)||source.item.effectsNegated===true))continue;
   if(lock.kind==='WYRM_ONLY'&&Number(C(x).race)!==0x800000)return false;
   // Branded/Lubellion FUSION_ONLY and Token SYNCHRO_ONLY restrict the Extra
   // Deck. This target is in a GY and does not use Extra Deck summon space.
  }
- if(id(x)===44146295&&rows(s,0,'monster').some(m=>face(m)&&id(m)===44146295))return false;
+ if(id(x)===44146295&&rows(s,controller,'monster').some(m=>face(m)&&id(m)===44146295))return false;
  return true;
 }
-function target(s,uid){const hit=H.locate(s,uid);return hit?.zone==='gy'&&[0,1].includes(hit.player)&&[0,1].includes(hit.item.ownerPlayer)&&reviewedTarget(hit.item)&&allowedSpecial(s,hit.item)?hit:null;}
-function summonDestinationSupported(s,x,destination){return id(x)!==40908371||W.YGOBlueEyesDuel.azureSummonDestinationSupported(s,0,destination);}
+function target(s,uid,controller=0){const hit=H.locate(s,uid);return hit?.zone==='gy'&&[0,1].includes(hit.player)&&[0,1].includes(hit.item.ownerPlayer)&&reviewedTarget(hit.item)&&allowedSpecial(s,hit.item,controller)?hit:null;}
+function summonDestinationSupported(s,x,destination,controller=0){return id(x)!==40908371||W.YGOBlueEyesDuel.azureSummonDestinationSupported(s,controller,destination);}
 function open(s){return !s.duelEnded&&s.activePlayer===0&&['MAIN 1','MAIN 2'].includes(s.phase)&&!arr(s.pendingTriggers).length&&!arr(s.chain).length&&reviewedField(s);}
 function queueSummonTriggers(s,x){
  const azureEvents=id(x)===40908371?W.YGOBlueEyesDuel.queueAzureProtection(s,0,x.uid).events:[];
@@ -57,6 +57,6 @@ E.registerHandler({type:TYPE,cardActivation:'NORMAL_SPELL',activationCardId:REBO
  return{activationEvents,events:[{type:'SPECIAL_SUMMON_FROM_GY',uid:x.uid,sourceUid:a.sourceUid,from:'gy',fromPlayer:targetPlayer,player:0,ownerPlayer,zoneIndex:a.destination,position:a.position,summonType:'SPECIAL',properSummonType:x.properSummonType??null,newProperSummon:false},...summonEvents]};
 }});
 const capabilities=()=>({version:'registered-monster-reborn-v3',action:TYPE,cardId:REBORN,activationZone:'hand',activationPacket:'SINGLE',spellSpeed:1,activationRestriction:'NONE',players:[0],phases:['MAIN 1','MAIN 2'],targetZones:['OWN_GY','OPPONENT_GY'],destinations:[0,1,2,3,4],positions:['ATTACK','DEFENSE'],linkPositions:['ATTACK'],mainNormalProfile:'TECHNICALLY_MATCHED_KNOWN_STATS_MAIN_NORMAL',mainEffectCardIds:[...mainEffects],extraProfiles:[...extraProfiles].map(([cardId,properSummonType])=>({cardId,properSummonType,requiresRegisteredProperSummon:true})),excludedProfiles:excludedProfiles.map(x=>({...x})),albazRequiresObserver:true,preservesOwnership:true,summonType:'SPECIAL',oncePerTurn:false,azureRequiresDuelMode:true,azureMandatoryProtection:true,spiritLinkRevival:true,spiritLinkOnlySearchRetriggered:false,wolfLinkRevival:true,wolfGeometry:'FIXED_LEFT_EMZ_PER_CONTROLLER',wolfRevivalReincarnated:false,wolfRevivalCurrentSummonType:'SPECIAL',wolfProperHistoryRetained:true,spiritContinuousRestriction:'CURRENT_CONTROLLER_FACEUP_NONNEGATED_DRAGON_ONLY',certified:false,limitations:['Reviewed summon profiles only; Xyz, Pendulum, Tokens, unreviewed summon conditions, attachments and leave-field redirects are excluded.','Extra targets require a genuine registered proper summon, not a declared setup flag or direct Extra-to-GY placement. Stardust Spark Dragon can qualify through its registered Synchro procedure when that module is available.','Unknown face-up monster or Spell/Trap continuous effects exclude this packet. Optional responses are limited to the existing explicit registered policies.','Albaz requires the installed registered actual-arrival observer; it is excluded from partial-module harnesses without that module. Mo Ye and Gazelle keep their registered Special Summon triggers. Sunlight Wolf arrivals use the central registered observer and fixed left Extra Monster Zone per controller geometry.','Artemis shares its printed once-per-turn Special Summon limit with its registered Link Summon; Monster Reborn itself has no once-per-turn limit.','Azure-Eyes requires duel mode, a registered proper Synchro history and its mandatory Special Summon protection; its arrival into a live eligible Wolf pointed zone is excluded without a registered simultaneous-trigger chain.','Spirit with Eyes of Blue retains genuine Link qualification but arrives as a Special Summon from GY, in Attack Position only. Its Link-only search is not triggered; its continuous Dragon-only restriction follows the current controller and ends or is suppressed with the current field presence or negation. Its tribute use remains the same named hard once per turn.','Sunlight Wolf requires witnessed registered Link qualification and revives into a Main Monster Zone in Attack Position as a current Special Summon from the GY. Ownership, UID and genuine proper history remain; reincarnation and its Link-only Spell/Trap recovery qualification do not carry over. Its arrows remain active under effect negation. A target is fixed by physical UID at activation and must remain eligible in a GY at resolution. No arbitrary chain priority is inferred.']});
-W.YGOMonsterReborn=Object.freeze({version:'registered-monster-reborn-v3',capabilities});
+W.YGOMonsterReborn=Object.freeze({version:'registered-monster-reborn-v3',capabilities,reviewedTarget,allowedSpecial,target,summonDestinationSupported});
 Promise.resolve(W.YGODataCatalog?.ready).then(()=>{W.YGODuelPhases?.registerProfile(REBORN,{endPhaseSafe:true,note:'Registered Monster Reborn Normal Spell; no mandatory End Phase or continuous effect.'});}).catch(error=>console.error('MONSTER_REBORN_DUEL_PROFILE',error));
 })();

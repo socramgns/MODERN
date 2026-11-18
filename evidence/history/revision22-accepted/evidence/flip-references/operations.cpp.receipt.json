@@ -1,0 +1,12 @@
+{
+  "requestedUrl": "https://raw.githubusercontent.com/edo9300/ygopro-core/c2e0b697e031d3560c077c9cd2cc76474969dedf/operations.cpp",
+  "resolvedUrl": "https://raw.githubusercontent.com/edo9300/ygopro-core/c2e0b697e031d3560c077c9cd2cc76474969dedf/operations.cpp",
+  "status": 200,
+  "bytes": 228557,
+  "sha256": "2293f5693d3832561cc0395ab4ece8134b33560b522a38ab6d7133ea0bd31ad4",
+  "retrievedAt": "2026-11-13T18:26:41.000089+00:00",
+  "commit": "c2e0b697e031d3560c077c9cd2cc76474969dedf",
+  "sourceRole": "SECONDARY_TECHNICAL_IMPLEMENTATION_REFERENCE",
+  "officialRulingAuthentication": false,
+  "executableInAnalyzer": false
+}

@@ -1,34 +1,12 @@
-# Analizador de barajas Yu-Gi-Oh · revisión 22
+# Analizador de barajas Yu-Gi-Oh · revisión 23 en validación
 
-La entrega es **un único Analizador_YuGiOh.html sin comprimir**, con catálogo y cálculo incorporados. La revisión 22 integra la Invocación por Volteo y el perfil FLIP de Magician of Faith; su aceptación está vinculada al candidato exacto y a los mismos bytes publicados y descargados.
+La entrega sigue siendo **un único Analizador_YuGiOh.html sin comprimir**, con catálogo y cálculo incorporados. R23 integra modos opcionales de prioridad, efectos simultáneos y pasos de daño, procedimientos Xyz/Péndulo revisados y análisis hipotético de varios robos. Conserva los 22 ejemplos anteriores y añade seis: **28 ejemplos**.
 
-[Descargar el HTML de la revisión 22](https://github.com/socramgns/MODERN/raw/86b8f848635d1ac392625b6d9c1a6bb5674e5b04/Analizador_YuGiOh.html?download=1)
+Esta rama contiene un candidato en comprobación. La aceptación anterior R22 está preservada y [su HTML sigue disponible](https://github.com/socramgns/MODERN/raw/35ad8188207f6a47be47b6bc361a011cf01c948b/Analizador_YuGiOh.html?download=1). La batería actual consta de **88 grupos**; el informe original de una ejecución incompleta o fallida no se convierte en éxito por un seguimiento.
 
-## Probar el nuevo perfil de Volteo
+La [guía de uso de R23](docs/USO_REGLAS_REVISION23.md) describe los controles y ejemplos. Las [referencias técnicas](docs/REFERENCIAS_REGLAS_REVISION23.md) delimitan los perfiles; no certifican todas las reglas del juego. La [revisión de datos y formatos](docs/REVISION_DATOS_FORMATOS_R23.md) prepara expedientes sin atribuir identidades o estadísticas no comprobadas. El [protocolo manual](docs/PRUEBAS_MANUALES_ACCESIBILIDAD_DISPOSITIVOS_R23.md) mantiene pendientes las pruebas con tecnologías de asistencia y equipos físicos.
 
-1. Abre Analizador_YuGiOh.html en un navegador reciente.
-2. Selecciona el ejemplo `faith-flip` y carga su baraja y escenario. El estado inicial declara una Faith colocada en un turno anterior y una Magia propia en el Cementerio; no inventa las jugadas de esos turnos.
-3. Realiza la Invocación por Volteo. Conserva la misma copia física, la coloca boca arriba en Ataque y no consume la Invocación Normal disponible.
-4. Resuelve su efecto obligatorio seleccionando una Magia admitida de tu Cementerio. La copia elegida pasa a la mano y se muestra al rival; no se busca ni se baraja el Deck.
-5. Comprueba la búsqueda, la reproducción desde el origen y la exportación e importación del informe.
-
-El efecto de Faith no tiene coste ni límite de uso por turno. Una Invocación Normal boca arriba, colocarla o declararla en el campo inicial no genera un efecto FLIP. Si no existe ninguna Magia legal en su Cementerio, el efecto se activa obligatoriamente sin objetivo y resuelve sin recuperar. Si sólo hay Magias cuyo movimiento no está revisado, la ruta afectada queda fuera de las transiciones verificadas.
-
-Al ser volteada por un ataque, el perfil registra cálculo, daño y prevención antes de resolver el FLIP; el envío pendiente por batalla se completa después. Mechaba y Salamangreat Roar conservan sus costes, condiciones y límites en esa ventana. Esto no implementa todas las ventanas de Damage Step, la prioridad general ni SEGOC. El resto de los monstruos de Efecto no recibe permiso de Volteo por compartir catálogo o familia.
-
-Se conservan los ejemplos y funciones anteriores, incluidos los dos ataques de Hayabusa Knight y Cyber Twin Dragon, Albaz, Wolf, Spirit, Azure y Spark. Catálogo y cálculo funcionan sin conexión; las imágenes y actualizaciones remotas la necesitan. El Volteo admitido de Cyber Twin no incorpora su procedimiento de Fusión ni acredita una invocación apropiada previa.
-
-La puntuación competitiva permanece estructural y provisional por decisión del usuario. El importador de resultados reales está preparado; los escenarios diagnósticos no son resultados de torneos.
-
-El [estado del proyecto](docs/ESTADO_PROYECTO.md) conserva los 32 criterios. Los [pendientes de R22](docs/ANALISIS_PENDIENTES_REVISION22.md) registran 20/32 criterios verificados y 12 pendientes del alcance operativo; ese recuento no mide todas las reglas del juego. Las [referencias de Volteo](docs/REFERENCIAS_FLIP_REVISION22.md) son evidencia técnica secundaria: no autentican rulings oficiales TCG. La [auditoría de datos de R21](docs/AUDITORIA_DATOS_REVISION21.md) conserva las identidades y estadísticas todavía sin resolver.
-
-## Verificación de R22
-
-La revisión 22 queda aceptada por la ejecución remota del commit `86b8f848635d1ac392625b6d9c1a6bb5674e5b04`: el [workflow de GitHub Actions](https://github.com/socramgns/MODERN/actions/runs/43558962065) completó los diez pasos obligatorios, incluida la batería de **79 grupos**, las instalaciones de Chromium, Firefox y WebKit y la puerta estricta entre motores. El recuento se contrasta con el runner versionado; no se descargaron los informes remotos individuales. Las fuentes incluyen **124 archivos JavaScript** y se conservan **22 ejemplos**. Build `afe53b8932901869aae05b80e3605ca6cb18625ec7984e41484ce71bf212fa94`; SHA-256 `7ec0ed4d6bee8ef655445bc7831aa6f5ad9fd6db332722212abbc43d316c1b04`; tamaño **7.192.465 bytes**. La descarga del candidato se comprobó por HTTP 200 y coincidencia exacta de bytes.
-
-La batería local completa conserva su resultado original **76/79, `pass:false`**. Dos grupos no pudieron completarse por Firefox y WebKit ausentes. El tercero contenía expectativas del inventario de acciones anteriores al Volteo; tras actualizarlas para exigir las acciones previas y el perfil Flip, su ejecución focal aprobó **39/39** sobre los mismos bytes. Ese seguimiento no convierte la batería original en un resultado 77/79 ni en éxito local completo. El informe íntegro y el seguimiento se conservan en `evidence/local-validation/`. La navegación `file://` de Chromium quedó bloqueada por la política del navegador; las pruebas con bytes entregados sin conexión no se presentan como navegación de archivo verificada en Chromium. El grupo de entrega por archivo mediante Firefox forma parte de la batería remota aprobada. No se elude la política del navegador.
-
-La verificación focal aprobó **63/63 casos Node**, con **14 testigos reproducidos**, y **30/30 comprobaciones del HTML en Chromium**. Las seis suites correctivas sumaron **240 casos**, incluidos los 63 del perfil Flip; son resultados que se solapan y no se suman como pruebas distintas. La auditoría técnica independiente aprobó **9/9** casos; sus microestados diagnósticos no acreditan historiales de juego. Estas comprobaciones complementan la aceptación remota del candidato exacto.
+La puntuación competitiva permanece estructural y provisional por decisión del usuario. El importador de resultados reales está preparado. Catálogo y cálculo funcionan sin conexión; las imágenes y las actualizaciones remotas requieren conexión.
 
 ## Aceptaciones anteriores
 

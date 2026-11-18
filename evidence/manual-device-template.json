@@ -1,0 +1,32 @@
+{
+  "schema": "ygo-manual-device-accessibility/v1",
+  "buildId": null,
+  "htmlSha256": null,
+  "testedAt": null,
+  "testerAlias": "",
+  "environment": {
+    "deviceKind": null,
+    "deviceModel": "",
+    "os": "",
+    "osVersion": "",
+    "browser": "",
+    "browserVersion": "",
+    "physicalDeviceConfirmed": false,
+    "emulationUsed": false,
+    "assistiveTechnology": {
+      "name": "NONE",
+      "version": null,
+      "actualUse": false
+    }
+  },
+  "performedByReporter": false,
+  "flows": [
+    {"id": "open-import", "tasks": ["Abrir el HTML descargado e importar JSON o YDK.", "Revisar Main, Extra y Side, nombres de controles y mensajes del selector de archivos."], "result": "NOT_RUN", "observed": "", "evidenceReference": ""},
+    {"id": "play-save-resume", "tasks": ["Cargar un ejemplo físico, ejecutar sus pasos, comprobar objetivo y replay.", "Deshacer, exportar y reanudar; rechazar un informe inválido conservando la partida."], "result": "NOT_RUN", "observed": "", "evidenceReference": ""},
+    {"id": "keyboard-assistive", "tasks": ["Recorrer controles sin ratón; comprobar saltos, foco, selección y diálogos.", "Si se usa un lector, registrar anuncios reales; probar contraste, movimiento y ampliación."], "result": "NOT_RUN", "observed": "", "evidenceReference": ""}
+  ],
+  "limitations": [
+    "Plantilla sin ejecución. No acredita ningún dispositivo físico ni tecnología de asistencia.",
+    "La plantilla descargada desde el HTML incorpora su buildId; el SHA-256 debe calcularse sobre el archivo realmente probado."
+  ]
+}

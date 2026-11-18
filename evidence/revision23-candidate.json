@@ -1,0 +1,31 @@
+{
+  "schema": "ygo-release-candidate/v1",
+  "revision": "2026.11-stable.23",
+  "buildId": "bdaf08b1741d9615ab5c81ededfff5b9fd1eba110c0aa25db75fd4b11a44dabd",
+  "htmlSha256": "92cbd3384c3a1807fac9e52fc9abfcc4ecb3cbc21413678e57b2d713ba54cd1b",
+  "bytes": 7434527,
+  "status": "VALIDATION_IN_PROGRESS_NOT_ACCEPTED",
+  "sourceJavaScriptFiles": 131,
+  "examples": 28,
+  "mandatoryValidationGroups": 88,
+  "acceptedBaselineCommit": "35ad8188207f6a47be47b6bc361a011cf01c948b",
+  "score": "STRUCTURAL_PROVISIONAL",
+  "newCriteriaPendingVerification": [
+    "C18",
+    "C19",
+    "C20",
+    "C23",
+    "C24",
+    "C25",
+    "C26"
+  ],
+  "externalEvidenceStillPending": [
+    "C27",
+    "C28",
+    "C29",
+    "C30",
+    "C31"
+  ],
+  "historyPreserved": "evidence/history/revision22-accepted/",
+  "generatedAt": "2026-11-18T19:43:06.720876+00:00"
+}

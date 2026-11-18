@@ -1,0 +1,12 @@
+{
+  "requestedUrl": "https://raw.githubusercontent.com/edo9300/ygopro-core/c2e0b697e031d3560c077c9cd2cc76474969dedf/field.h",
+  "resolvedUrl": "https://raw.githubusercontent.com/edo9300/ygopro-core/c2e0b697e031d3560c077c9cd2cc76474969dedf/field.h",
+  "status": 200,
+  "bytes": 34518,
+  "sha256": "ad825eebc93bcadb7fefcf8d8458c09cd4953b2e75c10eabe7bd8e0822e9a3fa",
+  "retrievedAt": "2026-11-13T18:26:40.994807+00:00",
+  "commit": "c2e0b697e031d3560c077c9cd2cc76474969dedf",
+  "sourceRole": "SECONDARY_TECHNICAL_IMPLEMENTATION_REFERENCE",
+  "officialRulingAuthentication": false,
+  "executableInAnalyzer": false
+}

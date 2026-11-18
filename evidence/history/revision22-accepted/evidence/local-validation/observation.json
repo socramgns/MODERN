@@ -1,0 +1,24 @@
+{
+  "schema": "ygo-local-full-run-observation/v1",
+  "sourceCommit": "a2a99aabd009ba5556a7404d43e54a3242795775",
+  "buildId": "afe53b8932901869aae05b80e3605ca6cb18625ec7984e41484ce71bf212fa94",
+  "htmlSha256": "7ec0ed4d6bee8ef655445bc7831aa6f5ad9fd6db332722212abbc43d316c1b04",
+  "pass": false,
+  "complete": true,
+  "groups": 79,
+  "passedGroups": 76,
+  "failedGroups": [
+    "local_file_delivery",
+    "release21_in_browser",
+    "mobile_accessibility"
+  ],
+  "rawReportSha256": "32b3f8c325e8c550a5736f7b24b2c1508c1deb5f77aca049277710f8dccbda5c",
+  "meaning": "Raw result preserved without rewriting. Two missing-browser groups and one legacy action-inventory expectation require separate follow-up; a focused rerun cannot turn this full run into a pass.",
+  "followup": {
+    "legacyInventoryExpectationsUpdated": true,
+    "release21BrowserPass": true,
+    "release21BrowserChecks": 39,
+    "sameHtmlSha256": "7ec0ed4d6bee8ef655445bc7831aa6f5ad9fd6db332722212abbc43d316c1b04",
+    "meaning": "Focused rerun passes after requiring the reviewed Flip action alongside all prior actions. The original full report stays pass:false,76/79."
+  }
+}

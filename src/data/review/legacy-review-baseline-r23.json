@@ -1,0 +1,3099 @@
+{
+  "schema": "ygo-r23-review-baseline/v1",
+  "reviewedAt": "2026-11-15T02:30:12.233753+00:00",
+  "catalogueSha256": "cc265022039bba09fc31e8e3a48afb0030e5a81cab0c30c386843fcd75e1cba6",
+  "sourceCommit": "ae5dedb957c2c48ab86554fee08a0fca73d8b1cf",
+  "sourceFiles": [
+    {
+      "file": "cards.cdb",
+      "sha256": "d5166c35296a6c65dcc0230c7bc0e9f25721639159b80fa78bf724be61183a6a",
+      "url": "https://raw.githubusercontent.com/ProjectIgnis/BabelCDB/ae5dedb957c2c48ab86554fee08a0fca73d8b1cf/cards.cdb"
+    },
+    {
+      "file": "cards-rush.cdb",
+      "sha256": "3aa1263985e5f3cee74e3439977eb330b65e55a9ab1c4746a163d85cb772ecc9",
+      "url": "https://raw.githubusercontent.com/ProjectIgnis/BabelCDB/ae5dedb957c2c48ab86554fee08a0fca73d8b1cf/cards-rush.cdb"
+    },
+    {
+      "file": "cards-skills.cdb",
+      "sha256": "4bb2e1ad111d780a9dc217e865c3a915c4a8ea6606ea60c7141646c0ed443009",
+      "url": "https://raw.githubusercontent.com/ProjectIgnis/BabelCDB/ae5dedb957c2c48ab86554fee08a0fca73d8b1cf/cards-skills.cdb"
+    },
+    {
+      "file": "cards-unofficial.cdb",
+      "sha256": "ca4de42364bf872f4fefb04bfe4b5c5d278210141350e86517565e359ae6b281",
+      "url": "https://raw.githubusercontent.com/ProjectIgnis/BabelCDB/ae5dedb957c2c48ab86554fee08a0fca73d8b1cf/cards-unofficial.cdb"
+    },
+    {
+      "file": "cards-skills-unofficial.cdb",
+      "sha256": "d64bd027d347e3aa0bad2ab00af3d4749623542ab4323f5c1ce43593e674d933",
+      "url": "https://raw.githubusercontent.com/ProjectIgnis/BabelCDB/ae5dedb957c2c48ab86554fee08a0fca73d8b1cf/cards-skills-unofficial.cdb"
+    }
+  ],
+  "counts": {
+    "unresolvedIdentities": 98,
+    "unknownMonsterStats": 51,
+    "migrationProposals": 32,
+    "distinctIncidentRecords": 181,
+    "newIdentityEvidence": 0,
+    "humanDecisionsRecorded": 0
+  },
+  "records": [
+    {
+      "id": 100000023,
+      "name": "Fossil Machine Skull Convoy",
+      "classification": "EXCLUDED_UNOFFICIAL_LEGACY",
+      "declaredLegacySource": "cards-unofficial(2).cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "MIGRATION_PROPOSAL:100000023",
+      "kind": "MIGRATION_PROPOSAL",
+      "missingFields": [],
+      "candidateIds": [
+        57157964
+      ]
+    },
+    {
+      "id": 100000620,
+      "name": "Fossil Machine Skull Buggy",
+      "classification": "EXCLUDED_UNOFFICIAL_LEGACY",
+      "declaredLegacySource": "cards-unofficial(2).cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "MIGRATION_PROPOSAL:100000620",
+      "kind": "MIGRATION_PROPOSAL",
+      "missingFields": [],
+      "candidateIds": [
+        10040267
+      ]
+    },
+    {
+      "id": 100000621,
+      "name": "Fossil Dragon Skullgar",
+      "classification": "EXCLUDED_UNOFFICIAL_LEGACY",
+      "declaredLegacySource": "cards-unofficial(2).cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "MIGRATION_PROPOSAL:100000621",
+      "kind": "MIGRATION_PROPOSAL",
+      "missingFields": [],
+      "candidateIds": [
+        12015000
+      ]
+    },
+    {
+      "id": 100000622,
+      "name": "Fossil Machine Skull Wagon",
+      "classification": "EXCLUDED_UNOFFICIAL_LEGACY",
+      "declaredLegacySource": "cards-unofficial(2).cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "MIGRATION_PROPOSAL:100000622",
+      "kind": "MIGRATION_PROPOSAL",
+      "missingFields": [],
+      "candidateIds": [
+        83656563
+      ]
+    },
+    {
+      "id": 100293096,
+      "name": "Switch Point",
+      "classification": "OBSOLETE_PRERELEASE_PASSCODE_REVIEW",
+      "declaredLegacySource": "prerelease-slf1.cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "MIGRATION_PROPOSAL:100293096",
+      "kind": "MIGRATION_PROPOSAL",
+      "missingFields": [],
+      "candidateIds": [
+        47961342
+      ]
+    },
+    {
+      "id": 100293099,
+      "name": "Sweet Room-Maid",
+      "classification": "OBSOLETE_PRERELEASE_PASSCODE_REVIEW",
+      "declaredLegacySource": "prerelease-slf1.cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "MIGRATION_PROPOSAL:100293099",
+      "kind": "MIGRATION_PROPOSAL",
+      "missingFields": [],
+      "candidateIds": [
+        36848764
+      ]
+    },
+    {
+      "id": 100293273,
+      "name": "The Revived Sky God",
+      "classification": "OBSOLETE_PRERELEASE_PASSCODE_REVIEW",
+      "declaredLegacySource": "prerelease-mp22.cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "MIGRATION_PROPOSAL:100293273",
+      "kind": "MIGRATION_PROPOSAL",
+      "missingFields": [],
+      "candidateIds": [
+        59094601
+      ]
+    },
+    {
+      "id": 100293274,
+      "name": "The Breaking Ruin God",
+      "classification": "OBSOLETE_PRERELEASE_PASSCODE_REVIEW",
+      "declaredLegacySource": "prerelease-mp22.cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "MIGRATION_PROPOSAL:100293274",
+      "kind": "MIGRATION_PROPOSAL",
+      "missingFields": [],
+      "candidateIds": [
+        85182315
+      ]
+    },
+    {
+      "id": 100293275,
+      "name": "The True Sun God",
+      "classification": "OBSOLETE_PRERELEASE_PASSCODE_REVIEW",
+      "declaredLegacySource": "prerelease-mp22.cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "MIGRATION_PROPOSAL:100293275",
+      "kind": "MIGRATION_PROPOSAL",
+      "missingFields": [],
+      "candidateIds": [
+        11587414
+      ]
+    },
+    {
+      "id": 101111001,
+      "name": "Photon Emperor",
+      "classification": "OBSOLETE_PRERELEASE_PASSCODE_REVIEW",
+      "declaredLegacySource": "prerelease-phhy.cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "MIGRATION_PROPOSAL:101111001",
+      "kind": "MIGRATION_PROPOSAL",
+      "missingFields": [],
+      "candidateIds": [
+        73478096
+      ]
+    },
+    {
+      "id": 101111002,
+      "name": "Galaxy Summoner",
+      "classification": "OBSOLETE_PRERELEASE_PASSCODE_REVIEW",
+      "declaredLegacySource": "prerelease-phhy.cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "MIGRATION_PROPOSAL:101111002",
+      "kind": "MIGRATION_PROPOSAL",
+      "missingFields": [],
+      "candidateIds": [
+        863795
+      ]
+    },
+    {
+      "id": 101111009,
+      "name": "Chaos Witch",
+      "classification": "OBSOLETE_PRERELEASE_PASSCODE_REVIEW",
+      "declaredLegacySource": "prerelease-phhy.cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "MIGRATION_PROPOSAL:101111009",
+      "kind": "MIGRATION_PROPOSAL",
+      "missingFields": [],
+      "candidateIds": [
+        30327674
+      ]
+    },
+    {
+      "id": 101111010,
+      "name": "Shell of Chaos",
+      "classification": "OBSOLETE_PRERELEASE_PASSCODE_REVIEW",
+      "declaredLegacySource": "prerelease-phhy.cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "MIGRATION_PROPOSAL:101111010",
+      "kind": "MIGRATION_PROPOSAL",
+      "missingFields": [],
+      "candidateIds": [
+        77312273
+      ]
+    },
+    {
+      "id": 101111011,
+      "name": "Core of Chaos",
+      "classification": "OBSOLETE_PRERELEASE_PASSCODE_REVIEW",
+      "declaredLegacySource": "prerelease-phhy.cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "MIGRATION_PROPOSAL:101111011",
+      "kind": "MIGRATION_PROPOSAL",
+      "missingFields": [],
+      "candidateIds": [
+        3806388
+      ]
+    },
+    {
+      "id": 101111013,
+      "name": "Chaos Mirage Dragon",
+      "classification": "OBSOLETE_PRERELEASE_PASSCODE_REVIEW",
+      "declaredLegacySource": "prerelease-phhy.cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "MIGRATION_PROPOSAL:101111013",
+      "kind": "MIGRATION_PROPOSAL",
+      "missingFields": [],
+      "candidateIds": [
+        66699781
+      ]
+    },
+    {
+      "id": 101111019,
+      "name": "Basiltrice, Familiar of the Evil Eye",
+      "classification": "OBSOLETE_PRERELEASE_PASSCODE_REVIEW",
+      "declaredLegacySource": "prerelease-phhy.cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "MIGRATION_PROPOSAL:101111019",
+      "kind": "MIGRATION_PROPOSAL",
+      "missingFields": [],
+      "candidateIds": [
+        65351555
+      ]
+    },
+    {
+      "id": 101111039,
+      "name": "Chaos Archfiend",
+      "classification": "OBSOLETE_PRERELEASE_PASSCODE_REVIEW",
+      "declaredLegacySource": "prerelease-phhy.cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "MIGRATION_PROPOSAL:101111039",
+      "kind": "MIGRATION_PROPOSAL",
+      "missingFields": [],
+      "candidateIds": [
+        13076804
+      ]
+    },
+    {
+      "id": 101111040,
+      "name": "Chaos Beast",
+      "classification": "OBSOLETE_PRERELEASE_PASSCODE_REVIEW",
+      "declaredLegacySource": "prerelease-phhy.cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "MIGRATION_PROPOSAL:101111040",
+      "kind": "MIGRATION_PROPOSAL",
+      "missingFields": [],
+      "candidateIds": [
+        49565413
+      ]
+    },
+    {
+      "id": 101111043,
+      "name": "Number C62: Neo Galaxy-Eyes Prime Photon Dragon",
+      "classification": "OBSOLETE_PRERELEASE_PASSCODE_REVIEW",
+      "declaredLegacySource": "prerelease-phhy.cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "MIGRATION_PROPOSAL:101111043",
+      "kind": "MIGRATION_PROPOSAL",
+      "missingFields": [],
+      "candidateIds": [
+        48348921
+      ]
+    },
+    {
+      "id": 101111044,
+      "name": "Galaxy Photon Dragon",
+      "classification": "OBSOLETE_PRERELEASE_PASSCODE_REVIEW",
+      "declaredLegacySource": "prerelease-phhy.cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "MIGRATION_PROPOSAL:101111044",
+      "kind": "MIGRATION_PROPOSAL",
+      "missingFields": [],
+      "candidateIds": [
+        85747929
+      ]
+    },
+    {
+      "id": 101111051,
+      "name": "Galaxy Hundred",
+      "classification": "OBSOLETE_PRERELEASE_PASSCODE_REVIEW",
+      "declaredLegacySource": "prerelease-phhy.cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "MIGRATION_PROPOSAL:101111051",
+      "kind": "MIGRATION_PROPOSAL",
+      "missingFields": [],
+      "candidateIds": [
+        897409
+      ]
+    },
+    {
+      "id": 101111052,
+      "name": "Numeron Creation",
+      "classification": "OBSOLETE_PRERELEASE_PASSCODE_REVIEW",
+      "declaredLegacySource": "prerelease-phhy.cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "MIGRATION_PROPOSAL:101111052",
+      "kind": "MIGRATION_PROPOSAL",
+      "missingFields": [],
+      "candidateIds": [
+        46382143
+      ]
+    },
+    {
+      "id": 101111074,
+      "name": "Trivikarma",
+      "classification": "OBSOLETE_PRERELEASE_PASSCODE_REVIEW",
+      "declaredLegacySource": "prerelease-phhy.cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "MIGRATION_PROPOSAL:101111074",
+      "kind": "MIGRATION_PROPOSAL",
+      "missingFields": [],
+      "candidateIds": [
+        7436169
+      ]
+    },
+    {
+      "id": 101111076,
+      "name": "Chaos Phantasm",
+      "classification": "OBSOLETE_PRERELEASE_PASSCODE_REVIEW",
+      "declaredLegacySource": "prerelease-phhy.cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "MIGRATION_PROPOSAL:101111076",
+      "kind": "MIGRATION_PROPOSAL",
+      "missingFields": [],
+      "candidateIds": [
+        60329973
+      ]
+    },
+    {
+      "id": 511000292,
+      "name": "Infernity Sage",
+      "classification": "EXCLUDED_UNOFFICIAL_LEGACY",
+      "declaredLegacySource": "cards-unofficial(2).cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "MIGRATION_PROPOSAL:511000292",
+      "kind": "MIGRATION_PROPOSAL",
+      "missingFields": [],
+      "candidateIds": [
+        46435376
+      ]
+    },
+    {
+      "id": 511000725,
+      "name": "Summon Storm",
+      "classification": "EXCLUDED_UNOFFICIAL_LEGACY",
+      "declaredLegacySource": "cards-unofficial(2).cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "MIGRATION_PROPOSAL:511000725",
+      "kind": "MIGRATION_PROPOSAL",
+      "missingFields": [],
+      "candidateIds": [
+        71459861
+      ]
+    },
+    {
+      "id": 511001664,
+      "name": "Numeron Wall",
+      "classification": "EXCLUDED_UNOFFICIAL_LEGACY",
+      "declaredLegacySource": "cards-unofficial(2).cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "MIGRATION_PROPOSAL:511001664",
+      "kind": "MIGRATION_PROPOSAL",
+      "missingFields": [],
+      "candidateIds": [
+        42352091
+      ]
+    },
+    {
+      "id": 511009112,
+      "name": "Doll Monster Bear-Bear",
+      "classification": "EXCLUDED_UNOFFICIAL_LEGACY",
+      "declaredLegacySource": "cards-unofficial(2).cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "MIGRATION_PROPOSAL:511009112",
+      "kind": "MIGRATION_PROPOSAL",
+      "missingFields": [],
+      "candidateIds": [
+        18106132
+      ]
+    },
+    {
+      "id": 511009116,
+      "name": "Doll Monster Miss MadChen",
+      "classification": "EXCLUDED_UNOFFICIAL_LEGACY",
+      "declaredLegacySource": "cards-unofficial(2).cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "MIGRATION_PROPOSAL:511009116",
+      "kind": "MIGRATION_PROPOSAL",
+      "missingFields": [],
+      "candidateIds": [
+        72717433
+      ]
+    },
+    {
+      "id": 511009215,
+      "name": "Slime Token",
+      "classification": "NON_DECK_TOKEN_OR_PLACEHOLDER",
+      "declaredLegacySource": "cards-unofficial(2).cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "MIGRATION_PROPOSAL:511009215",
+      "kind": "MIGRATION_PROPOSAL",
+      "missingFields": [],
+      "candidateIds": [
+        21770261,
+        79387393
+      ]
+    },
+    {
+      "id": 511009679,
+      "name": "Sunseed Genius Loci",
+      "classification": "EXCLUDED_UNOFFICIAL_LEGACY",
+      "declaredLegacySource": "cards-unofficial(2).cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "MIGRATION_PROPOSAL:511009679",
+      "kind": "MIGRATION_PROPOSAL",
+      "missingFields": [],
+      "candidateIds": [
+        27520594
+      ]
+    },
+    {
+      "id": 511030041,
+      "name": "Appliancer Vacculephant",
+      "classification": "EXCLUDED_UNOFFICIAL_LEGACY",
+      "declaredLegacySource": "cards-unofficial(2).cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "MIGRATION_PROPOSAL:511030041",
+      "kind": "MIGRATION_PROPOSAL",
+      "missingFields": [],
+      "candidateIds": [
+        30118200
+      ]
+    },
+    {
+      "id": 100000023,
+      "name": "Fossil Machine Skull Convoy",
+      "classification": "EXCLUDED_UNOFFICIAL_LEGACY",
+      "declaredLegacySource": "cards-unofficial(2).cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNKNOWN_MONSTER_STATS:100000023",
+      "kind": "UNKNOWN_MONSTER_STATS",
+      "missingFields": [
+        "atk",
+        "def",
+        "packedLevel"
+      ],
+      "candidateIds": []
+    },
+    {
+      "id": 100000026,
+      "name": "Cenozoic Fossil Knight - Skullger",
+      "classification": "EXCLUDED_UNOFFICIAL_LEGACY",
+      "declaredLegacySource": "cards-unofficial(2).cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNKNOWN_MONSTER_STATS:100000026",
+      "kind": "UNKNOWN_MONSTER_STATS",
+      "missingFields": [
+        "atk",
+        "def",
+        "packedLevel"
+      ],
+      "candidateIds": []
+    },
+    {
+      "id": 100000028,
+      "name": "Paleozoic Fossil Knight - Skullking",
+      "classification": "EXCLUDED_UNOFFICIAL_LEGACY",
+      "declaredLegacySource": "cards-unofficial(2).cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNKNOWN_MONSTER_STATS:100000028",
+      "kind": "UNKNOWN_MONSTER_STATS",
+      "missingFields": [
+        "atk",
+        "def",
+        "packedLevel"
+      ],
+      "candidateIds": []
+    },
+    {
+      "id": 100000041,
+      "name": "Efflorescent Knight",
+      "classification": "EXCLUDED_UNOFFICIAL_LEGACY",
+      "declaredLegacySource": "cards-unofficial(2).cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNKNOWN_MONSTER_STATS:100000041",
+      "kind": "UNKNOWN_MONSTER_STATS",
+      "missingFields": [
+        "atk",
+        "def",
+        "packedLevel"
+      ],
+      "candidateIds": []
+    },
+    {
+      "id": 100000159,
+      "name": "Assault Dog (TF6)",
+      "classification": "EXCLUDED_UNOFFICIAL_LEGACY",
+      "declaredLegacySource": "cards-unofficial(2).cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNKNOWN_MONSTER_STATS:100000159",
+      "kind": "UNKNOWN_MONSTER_STATS",
+      "missingFields": [
+        "atk",
+        "def",
+        "packedLevel"
+      ],
+      "candidateIds": []
+    },
+    {
+      "id": 100000620,
+      "name": "Fossil Machine Skull Buggy",
+      "classification": "EXCLUDED_UNOFFICIAL_LEGACY",
+      "declaredLegacySource": "cards-unofficial(2).cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNKNOWN_MONSTER_STATS:100000620",
+      "kind": "UNKNOWN_MONSTER_STATS",
+      "missingFields": [
+        "atk",
+        "def",
+        "packedLevel"
+      ],
+      "candidateIds": []
+    },
+    {
+      "id": 100000621,
+      "name": "Fossil Dragon Skullgar",
+      "classification": "EXCLUDED_UNOFFICIAL_LEGACY",
+      "declaredLegacySource": "cards-unofficial(2).cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNKNOWN_MONSTER_STATS:100000621",
+      "kind": "UNKNOWN_MONSTER_STATS",
+      "missingFields": [
+        "atk",
+        "def",
+        "packedLevel"
+      ],
+      "candidateIds": []
+    },
+    {
+      "id": 100000622,
+      "name": "Fossil Machine Skull Wagon",
+      "classification": "EXCLUDED_UNOFFICIAL_LEGACY",
+      "declaredLegacySource": "cards-unofficial(2).cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNKNOWN_MONSTER_STATS:100000622",
+      "kind": "UNKNOWN_MONSTER_STATS",
+      "missingFields": [
+        "atk",
+        "def",
+        "packedLevel"
+      ],
+      "candidateIds": []
+    },
+    {
+      "id": 101111001,
+      "name": "Photon Emperor",
+      "classification": "OBSOLETE_PRERELEASE_PASSCODE_REVIEW",
+      "declaredLegacySource": "prerelease-phhy.cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNKNOWN_MONSTER_STATS:101111001",
+      "kind": "UNKNOWN_MONSTER_STATS",
+      "missingFields": [
+        "atk",
+        "def",
+        "packedLevel"
+      ],
+      "candidateIds": []
+    },
+    {
+      "id": 101111002,
+      "name": "Galaxy Summoner",
+      "classification": "OBSOLETE_PRERELEASE_PASSCODE_REVIEW",
+      "declaredLegacySource": "prerelease-phhy.cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNKNOWN_MONSTER_STATS:101111002",
+      "kind": "UNKNOWN_MONSTER_STATS",
+      "missingFields": [
+        "atk",
+        "def",
+        "packedLevel"
+      ],
+      "candidateIds": []
+    },
+    {
+      "id": 101111003,
+      "name": "Galakuriboh",
+      "classification": "OBSOLETE_PRERELEASE_PASSCODE_REVIEW",
+      "declaredLegacySource": "prerelease-phhy.cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNKNOWN_MONSTER_STATS:101111003",
+      "kind": "UNKNOWN_MONSTER_STATS",
+      "missingFields": [
+        "atk",
+        "def",
+        "packedLevel"
+      ],
+      "candidateIds": []
+    },
+    {
+      "id": 101111006,
+      "name": "Kshatri-La Riseheart",
+      "classification": "OBSOLETE_PRERELEASE_PASSCODE_REVIEW",
+      "declaredLegacySource": "prerelease-phhy.cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNKNOWN_MONSTER_STATS:101111006",
+      "kind": "UNKNOWN_MONSTER_STATS",
+      "missingFields": [
+        "atk",
+        "def",
+        "packedLevel"
+      ],
+      "candidateIds": []
+    },
+    {
+      "id": 101111007,
+      "name": "Scareclaw Kshatri-La",
+      "classification": "OBSOLETE_PRERELEASE_PASSCODE_REVIEW",
+      "declaredLegacySource": "prerelease-phhy.cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNKNOWN_MONSTER_STATS:101111007",
+      "kind": "UNKNOWN_MONSTER_STATS",
+      "missingFields": [
+        "atk",
+        "def",
+        "packedLevel"
+      ],
+      "candidateIds": []
+    },
+    {
+      "id": 101111008,
+      "name": "Tearlaments Kshatri-La",
+      "classification": "OBSOLETE_PRERELEASE_PASSCODE_REVIEW",
+      "declaredLegacySource": "prerelease-phhy.cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNKNOWN_MONSTER_STATS:101111008",
+      "kind": "UNKNOWN_MONSTER_STATS",
+      "missingFields": [
+        "atk",
+        "def",
+        "packedLevel"
+      ],
+      "candidateIds": []
+    },
+    {
+      "id": 101111009,
+      "name": "Chaos Witch",
+      "classification": "OBSOLETE_PRERELEASE_PASSCODE_REVIEW",
+      "declaredLegacySource": "prerelease-phhy.cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNKNOWN_MONSTER_STATS:101111009",
+      "kind": "UNKNOWN_MONSTER_STATS",
+      "missingFields": [
+        "atk",
+        "def",
+        "packedLevel"
+      ],
+      "candidateIds": []
+    },
+    {
+      "id": 101111010,
+      "name": "Shell of Chaos",
+      "classification": "OBSOLETE_PRERELEASE_PASSCODE_REVIEW",
+      "declaredLegacySource": "prerelease-phhy.cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNKNOWN_MONSTER_STATS:101111010",
+      "kind": "UNKNOWN_MONSTER_STATS",
+      "missingFields": [
+        "atk",
+        "def",
+        "packedLevel"
+      ],
+      "candidateIds": []
+    },
+    {
+      "id": 101111011,
+      "name": "Core of Chaos",
+      "classification": "OBSOLETE_PRERELEASE_PASSCODE_REVIEW",
+      "declaredLegacySource": "prerelease-phhy.cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNKNOWN_MONSTER_STATS:101111011",
+      "kind": "UNKNOWN_MONSTER_STATS",
+      "missingFields": [
+        "atk",
+        "def",
+        "packedLevel"
+      ],
+      "candidateIds": []
+    },
+    {
+      "id": 101111012,
+      "name": "Mind Tuner",
+      "classification": "OBSOLETE_PRERELEASE_PASSCODE_REVIEW",
+      "declaredLegacySource": "prerelease-phhy.cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNKNOWN_MONSTER_STATS:101111012",
+      "kind": "UNKNOWN_MONSTER_STATS",
+      "missingFields": [
+        "atk",
+        "def",
+        "packedLevel"
+      ],
+      "candidateIds": []
+    },
+    {
+      "id": 101111013,
+      "name": "Chaos Mirage Dragon",
+      "classification": "OBSOLETE_PRERELEASE_PASSCODE_REVIEW",
+      "declaredLegacySource": "prerelease-phhy.cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNKNOWN_MONSTER_STATS:101111013",
+      "kind": "UNKNOWN_MONSTER_STATS",
+      "missingFields": [
+        "atk",
+        "def",
+        "packedLevel"
+      ],
+      "candidateIds": []
+    },
+    {
+      "id": 101111018,
+      "name": "Grim Gishki",
+      "classification": "OBSOLETE_PRERELEASE_PASSCODE_REVIEW",
+      "declaredLegacySource": "prerelease-phhy.cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNKNOWN_MONSTER_STATS:101111018",
+      "kind": "UNKNOWN_MONSTER_STATS",
+      "missingFields": [
+        "atk",
+        "def",
+        "packedLevel"
+      ],
+      "candidateIds": []
+    },
+    {
+      "id": 101111019,
+      "name": "Basiltrice, Familiar of the Evil Eye",
+      "classification": "OBSOLETE_PRERELEASE_PASSCODE_REVIEW",
+      "declaredLegacySource": "prerelease-phhy.cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNKNOWN_MONSTER_STATS:101111019",
+      "kind": "UNKNOWN_MONSTER_STATS",
+      "missingFields": [
+        "atk",
+        "def",
+        "packedLevel"
+      ],
+      "candidateIds": []
+    },
+    {
+      "id": 101111020,
+      "name": "Vara, Seidhr of the Generaider Bosses",
+      "classification": "OBSOLETE_PRERELEASE_PASSCODE_REVIEW",
+      "declaredLegacySource": "prerelease-phhy.cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNKNOWN_MONSTER_STATS:101111020",
+      "kind": "UNKNOWN_MONSTER_STATS",
+      "missingFields": [
+        "atk",
+        "def",
+        "packedLevel"
+      ],
+      "candidateIds": []
+    },
+    {
+      "id": 101111032,
+      "name": "Evigishki Nereimanas",
+      "classification": "OBSOLETE_PRERELEASE_PASSCODE_REVIEW",
+      "declaredLegacySource": "prerelease-phhy.cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNKNOWN_MONSTER_STATS:101111032",
+      "kind": "UNKNOWN_MONSTER_STATS",
+      "missingFields": [
+        "atk",
+        "def",
+        "packedLevel"
+      ],
+      "candidateIds": []
+    },
+    {
+      "id": 101111039,
+      "name": "Chaos Archfiend",
+      "classification": "OBSOLETE_PRERELEASE_PASSCODE_REVIEW",
+      "declaredLegacySource": "prerelease-phhy.cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNKNOWN_MONSTER_STATS:101111039",
+      "kind": "UNKNOWN_MONSTER_STATS",
+      "missingFields": [
+        "atk",
+        "def",
+        "packedLevel"
+      ],
+      "candidateIds": []
+    },
+    {
+      "id": 101111040,
+      "name": "Chaos Beast",
+      "classification": "OBSOLETE_PRERELEASE_PASSCODE_REVIEW",
+      "declaredLegacySource": "prerelease-phhy.cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNKNOWN_MONSTER_STATS:101111040",
+      "kind": "UNKNOWN_MONSTER_STATS",
+      "missingFields": [
+        "atk",
+        "def",
+        "packedLevel"
+      ],
+      "candidateIds": []
+    },
+    {
+      "id": 101111043,
+      "name": "Number C62: Neo Galaxy-Eyes Prime Photon Dragon",
+      "classification": "OBSOLETE_PRERELEASE_PASSCODE_REVIEW",
+      "declaredLegacySource": "prerelease-phhy.cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNKNOWN_MONSTER_STATS:101111043",
+      "kind": "UNKNOWN_MONSTER_STATS",
+      "missingFields": [
+        "atk",
+        "def",
+        "packedLevel"
+      ],
+      "candidateIds": []
+    },
+    {
+      "id": 101111044,
+      "name": "Galaxy Photon Dragon",
+      "classification": "OBSOLETE_PRERELEASE_PASSCODE_REVIEW",
+      "declaredLegacySource": "prerelease-phhy.cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNKNOWN_MONSTER_STATS:101111044",
+      "kind": "UNKNOWN_MONSTER_STATS",
+      "missingFields": [
+        "atk",
+        "def",
+        "packedLevel"
+      ],
+      "candidateIds": []
+    },
+    {
+      "id": 101111046,
+      "name": "Kshatri-La Ariseheart",
+      "classification": "OBSOLETE_PRERELEASE_PASSCODE_REVIEW",
+      "declaredLegacySource": "prerelease-phhy.cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNKNOWN_MONSTER_STATS:101111046",
+      "kind": "UNKNOWN_MONSTER_STATS",
+      "missingFields": [
+        "atk",
+        "def",
+        "packedLevel"
+      ],
+      "candidateIds": []
+    },
+    {
+      "id": 101111047,
+      "name": "Laevateinn, Generaider Boss of Shadows",
+      "classification": "OBSOLETE_PRERELEASE_PASSCODE_REVIEW",
+      "declaredLegacySource": "prerelease-phhy.cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNKNOWN_MONSTER_STATS:101111047",
+      "kind": "UNKNOWN_MONSTER_STATS",
+      "missingFields": [
+        "atk",
+        "def",
+        "packedLevel"
+      ],
+      "candidateIds": []
+    },
+    {
+      "id": 101111109,
+      "name": "Black Beast Token",
+      "classification": "NON_DECK_TOKEN_OR_PLACEHOLDER",
+      "declaredLegacySource": "prerelease-phhy.cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNKNOWN_MONSTER_STATS:101111109",
+      "kind": "UNKNOWN_MONSTER_STATS",
+      "missingFields": [
+        "atk",
+        "def",
+        "packedLevel"
+      ],
+      "candidateIds": []
+    },
+    {
+      "id": 101111209,
+      "name": "White Beast Token",
+      "classification": "NON_DECK_TOKEN_OR_PLACEHOLDER",
+      "declaredLegacySource": "prerelease-phhy.cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNKNOWN_MONSTER_STATS:101111209",
+      "kind": "UNKNOWN_MONSTER_STATS",
+      "missingFields": [
+        "atk",
+        "def",
+        "packedLevel"
+      ],
+      "candidateIds": []
+    },
+    {
+      "id": 511000292,
+      "name": "Infernity Sage",
+      "classification": "EXCLUDED_UNOFFICIAL_LEGACY",
+      "declaredLegacySource": "cards-unofficial(2).cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNKNOWN_MONSTER_STATS:511000292",
+      "kind": "UNKNOWN_MONSTER_STATS",
+      "missingFields": [
+        "atk",
+        "def",
+        "packedLevel"
+      ],
+      "candidateIds": []
+    },
+    {
+      "id": 511000576,
+      "name": "Trap Sluzer",
+      "classification": "EXCLUDED_UNOFFICIAL_LEGACY",
+      "declaredLegacySource": "cards-unofficial(2).cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNKNOWN_MONSTER_STATS:511000576",
+      "kind": "UNKNOWN_MONSTER_STATS",
+      "missingFields": [
+        "atk",
+        "def",
+        "packedLevel"
+      ],
+      "candidateIds": []
+    },
+    {
+      "id": 511000911,
+      "name": "Smile Angel",
+      "classification": "EXCLUDED_UNOFFICIAL_LEGACY",
+      "declaredLegacySource": "cards-unofficial(2).cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNKNOWN_MONSTER_STATS:511000911",
+      "kind": "UNKNOWN_MONSTER_STATS",
+      "missingFields": [
+        "atk",
+        "def",
+        "packedLevel"
+      ],
+      "candidateIds": []
+    },
+    {
+      "id": 511001365,
+      "name": "Tellus Wing",
+      "classification": "NON_DECK_TOKEN_OR_PLACEHOLDER",
+      "declaredLegacySource": "cards-unofficial(2).cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNKNOWN_MONSTER_STATS:511001365",
+      "kind": "UNKNOWN_MONSTER_STATS",
+      "missingFields": [
+        "atk",
+        "def",
+        "packedLevel"
+      ],
+      "candidateIds": []
+    },
+    {
+      "id": 511001664,
+      "name": "Numeron Wall",
+      "classification": "EXCLUDED_UNOFFICIAL_LEGACY",
+      "declaredLegacySource": "cards-unofficial(2).cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNKNOWN_MONSTER_STATS:511001664",
+      "kind": "UNKNOWN_MONSTER_STATS",
+      "missingFields": [
+        "atk",
+        "def",
+        "packedLevel"
+      ],
+      "candidateIds": []
+    },
+    {
+      "id": 511001966,
+      "name": "Iron Chain Dragon (Anime)",
+      "classification": "EXCLUDED_UNOFFICIAL_LEGACY",
+      "declaredLegacySource": "cards-unofficial(2).cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNKNOWN_MONSTER_STATS:511001966",
+      "kind": "UNKNOWN_MONSTER_STATS",
+      "missingFields": [
+        "atk",
+        "def",
+        "packedLevel"
+      ],
+      "candidateIds": []
+    },
+    {
+      "id": 511002613,
+      "name": "Black Luster Soldier (DM)",
+      "classification": "EXCLUDED_UNOFFICIAL_LEGACY",
+      "declaredLegacySource": "cards-unofficial(2).cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNKNOWN_MONSTER_STATS:511002613",
+      "kind": "UNKNOWN_MONSTER_STATS",
+      "missingFields": [
+        "atk",
+        "def",
+        "packedLevel"
+      ],
+      "candidateIds": []
+    },
+    {
+      "id": 511005062,
+      "name": "Hat Token",
+      "classification": "NON_DECK_TOKEN_OR_PLACEHOLDER",
+      "declaredLegacySource": "cards-unofficial(2).cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNKNOWN_MONSTER_STATS:511005062",
+      "kind": "UNKNOWN_MONSTER_STATS",
+      "missingFields": [
+        "atk",
+        "def",
+        "packedLevel"
+      ],
+      "candidateIds": []
+    },
+    {
+      "id": 511009112,
+      "name": "Doll Monster Bear-Bear",
+      "classification": "EXCLUDED_UNOFFICIAL_LEGACY",
+      "declaredLegacySource": "cards-unofficial(2).cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNKNOWN_MONSTER_STATS:511009112",
+      "kind": "UNKNOWN_MONSTER_STATS",
+      "missingFields": [
+        "atk",
+        "def",
+        "packedLevel"
+      ],
+      "candidateIds": []
+    },
+    {
+      "id": 511009116,
+      "name": "Doll Monster Miss MadChen",
+      "classification": "EXCLUDED_UNOFFICIAL_LEGACY",
+      "declaredLegacySource": "cards-unofficial(2).cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNKNOWN_MONSTER_STATS:511009116",
+      "kind": "UNKNOWN_MONSTER_STATS",
+      "missingFields": [
+        "atk",
+        "def",
+        "packedLevel"
+      ],
+      "candidateIds": []
+    },
+    {
+      "id": 511009215,
+      "name": "Slime Token",
+      "classification": "NON_DECK_TOKEN_OR_PLACEHOLDER",
+      "declaredLegacySource": "cards-unofficial(2).cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNKNOWN_MONSTER_STATS:511009215",
+      "kind": "UNKNOWN_MONSTER_STATS",
+      "missingFields": [
+        "atk",
+        "def",
+        "packedLevel"
+      ],
+      "candidateIds": []
+    },
+    {
+      "id": 511009679,
+      "name": "Sunseed Genius Loci",
+      "classification": "EXCLUDED_UNOFFICIAL_LEGACY",
+      "declaredLegacySource": "cards-unofficial(2).cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNKNOWN_MONSTER_STATS:511009679",
+      "kind": "UNKNOWN_MONSTER_STATS",
+      "missingFields": [
+        "atk",
+        "def",
+        "packedLevel"
+      ],
+      "candidateIds": []
+    },
+    {
+      "id": 511030041,
+      "name": "Appliancer Vacculephant",
+      "classification": "EXCLUDED_UNOFFICIAL_LEGACY",
+      "declaredLegacySource": "cards-unofficial(2).cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNKNOWN_MONSTER_STATS:511030041",
+      "kind": "UNKNOWN_MONSTER_STATS",
+      "missingFields": [
+        "atk",
+        "linkMarkers",
+        "packedLevel"
+      ],
+      "candidateIds": []
+    },
+    {
+      "id": 513000168,
+      "name": "Wisel Top (Anime)",
+      "classification": "EXCLUDED_UNOFFICIAL_LEGACY",
+      "declaredLegacySource": "cards-unofficial(2).cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNKNOWN_MONSTER_STATS:513000168",
+      "kind": "UNKNOWN_MONSTER_STATS",
+      "missingFields": [
+        "atk",
+        "def",
+        "packedLevel"
+      ],
+      "candidateIds": []
+    },
+    {
+      "id": 513000169,
+      "name": "Wisel Attack (Anime)",
+      "classification": "EXCLUDED_UNOFFICIAL_LEGACY",
+      "declaredLegacySource": "cards-unofficial(2).cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNKNOWN_MONSTER_STATS:513000169",
+      "kind": "UNKNOWN_MONSTER_STATS",
+      "missingFields": [
+        "atk",
+        "def",
+        "packedLevel"
+      ],
+      "candidateIds": []
+    },
+    {
+      "id": 513000170,
+      "name": "Wisel Guard (Anime)",
+      "classification": "EXCLUDED_UNOFFICIAL_LEGACY",
+      "declaredLegacySource": "cards-unofficial(2).cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNKNOWN_MONSTER_STATS:513000170",
+      "kind": "UNKNOWN_MONSTER_STATS",
+      "missingFields": [
+        "atk",
+        "def",
+        "packedLevel"
+      ],
+      "candidateIds": []
+    },
+    {
+      "id": 513000171,
+      "name": "Wisel Carrier (Anime)",
+      "classification": "EXCLUDED_UNOFFICIAL_LEGACY",
+      "declaredLegacySource": "cards-unofficial(2).cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNKNOWN_MONSTER_STATS:513000171",
+      "kind": "UNKNOWN_MONSTER_STATS",
+      "missingFields": [
+        "atk",
+        "def",
+        "packedLevel"
+      ],
+      "candidateIds": []
+    },
+    {
+      "id": 513000174,
+      "name": "Skiel Top (Anime)",
+      "classification": "EXCLUDED_UNOFFICIAL_LEGACY",
+      "declaredLegacySource": "cards-unofficial(2).cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNKNOWN_MONSTER_STATS:513000174",
+      "kind": "UNKNOWN_MONSTER_STATS",
+      "missingFields": [
+        "atk",
+        "def",
+        "packedLevel"
+      ],
+      "candidateIds": []
+    },
+    {
+      "id": 513000176,
+      "name": "Skiel Guard (Anime)",
+      "classification": "EXCLUDED_UNOFFICIAL_LEGACY",
+      "declaredLegacySource": "cards-unofficial(2).cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNKNOWN_MONSTER_STATS:513000176",
+      "kind": "UNKNOWN_MONSTER_STATS",
+      "missingFields": [
+        "atk",
+        "def",
+        "packedLevel"
+      ],
+      "candidateIds": []
+    },
+    {
+      "id": 513000177,
+      "name": "Skiel Carrier (Anime)",
+      "classification": "EXCLUDED_UNOFFICIAL_LEGACY",
+      "declaredLegacySource": "cards-unofficial(2).cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNKNOWN_MONSTER_STATS:513000177",
+      "kind": "UNKNOWN_MONSTER_STATS",
+      "missingFields": [
+        "atk",
+        "def",
+        "packedLevel"
+      ],
+      "candidateIds": []
+    },
+    {
+      "id": 100000023,
+      "name": "Fossil Machine Skull Convoy",
+      "classification": "EXCLUDED_UNOFFICIAL_LEGACY",
+      "declaredLegacySource": "cards-unofficial(2).cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNRESOLVED_IDENTITY:100000023",
+      "kind": "UNRESOLVED_IDENTITY",
+      "missingFields": [],
+      "candidateIds": [
+        57157964
+      ]
+    },
+    {
+      "id": 100000026,
+      "name": "Cenozoic Fossil Knight - Skullger",
+      "classification": "EXCLUDED_UNOFFICIAL_LEGACY",
+      "declaredLegacySource": "cards-unofficial(2).cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNRESOLVED_IDENTITY:100000026",
+      "kind": "UNRESOLVED_IDENTITY",
+      "missingFields": [],
+      "candidateIds": []
+    },
+    {
+      "id": 100000028,
+      "name": "Paleozoic Fossil Knight - Skullking",
+      "classification": "EXCLUDED_UNOFFICIAL_LEGACY",
+      "declaredLegacySource": "cards-unofficial(2).cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNRESOLVED_IDENTITY:100000028",
+      "kind": "UNRESOLVED_IDENTITY",
+      "missingFields": [],
+      "candidateIds": []
+    },
+    {
+      "id": 100000041,
+      "name": "Efflorescent Knight",
+      "classification": "EXCLUDED_UNOFFICIAL_LEGACY",
+      "declaredLegacySource": "cards-unofficial(2).cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNRESOLVED_IDENTITY:100000041",
+      "kind": "UNRESOLVED_IDENTITY",
+      "missingFields": [],
+      "candidateIds": []
+    },
+    {
+      "id": 100000159,
+      "name": "Assault Dog (TF6)",
+      "classification": "EXCLUDED_UNOFFICIAL_LEGACY",
+      "declaredLegacySource": "cards-unofficial(2).cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNRESOLVED_IDENTITY:100000159",
+      "kind": "UNRESOLVED_IDENTITY",
+      "missingFields": [],
+      "candidateIds": []
+    },
+    {
+      "id": 100000185,
+      "name": "Bonds of Rival",
+      "classification": "EXCLUDED_UNOFFICIAL_LEGACY",
+      "declaredLegacySource": "cards-unofficial(2).cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNRESOLVED_IDENTITY:100000185",
+      "kind": "UNRESOLVED_IDENTITY",
+      "missingFields": [],
+      "candidateIds": []
+    },
+    {
+      "id": 100000620,
+      "name": "Fossil Machine Skull Buggy",
+      "classification": "EXCLUDED_UNOFFICIAL_LEGACY",
+      "declaredLegacySource": "cards-unofficial(2).cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNRESOLVED_IDENTITY:100000620",
+      "kind": "UNRESOLVED_IDENTITY",
+      "missingFields": [],
+      "candidateIds": [
+        10040267
+      ]
+    },
+    {
+      "id": 100000621,
+      "name": "Fossil Dragon Skullgar",
+      "classification": "EXCLUDED_UNOFFICIAL_LEGACY",
+      "declaredLegacySource": "cards-unofficial(2).cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNRESOLVED_IDENTITY:100000621",
+      "kind": "UNRESOLVED_IDENTITY",
+      "missingFields": [],
+      "candidateIds": [
+        12015000
+      ]
+    },
+    {
+      "id": 100000622,
+      "name": "Fossil Machine Skull Wagon",
+      "classification": "EXCLUDED_UNOFFICIAL_LEGACY",
+      "declaredLegacySource": "cards-unofficial(2).cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNRESOLVED_IDENTITY:100000622",
+      "kind": "UNRESOLVED_IDENTITY",
+      "missingFields": [],
+      "candidateIds": [
+        83656563
+      ]
+    },
+    {
+      "id": 100293096,
+      "name": "Switch Point",
+      "classification": "OBSOLETE_PRERELEASE_PASSCODE_REVIEW",
+      "declaredLegacySource": "prerelease-slf1.cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNRESOLVED_IDENTITY:100293096",
+      "kind": "UNRESOLVED_IDENTITY",
+      "missingFields": [],
+      "candidateIds": [
+        47961342
+      ]
+    },
+    {
+      "id": 100293099,
+      "name": "Sweet Room-Maid",
+      "classification": "OBSOLETE_PRERELEASE_PASSCODE_REVIEW",
+      "declaredLegacySource": "prerelease-slf1.cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNRESOLVED_IDENTITY:100293099",
+      "kind": "UNRESOLVED_IDENTITY",
+      "missingFields": [],
+      "candidateIds": [
+        36848764
+      ]
+    },
+    {
+      "id": 100293273,
+      "name": "The Revived Sky God",
+      "classification": "OBSOLETE_PRERELEASE_PASSCODE_REVIEW",
+      "declaredLegacySource": "prerelease-mp22.cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNRESOLVED_IDENTITY:100293273",
+      "kind": "UNRESOLVED_IDENTITY",
+      "missingFields": [],
+      "candidateIds": [
+        59094601
+      ]
+    },
+    {
+      "id": 100293274,
+      "name": "The Breaking Ruin God",
+      "classification": "OBSOLETE_PRERELEASE_PASSCODE_REVIEW",
+      "declaredLegacySource": "prerelease-mp22.cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNRESOLVED_IDENTITY:100293274",
+      "kind": "UNRESOLVED_IDENTITY",
+      "missingFields": [],
+      "candidateIds": [
+        85182315
+      ]
+    },
+    {
+      "id": 100293275,
+      "name": "The True Sun God",
+      "classification": "OBSOLETE_PRERELEASE_PASSCODE_REVIEW",
+      "declaredLegacySource": "prerelease-mp22.cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNRESOLVED_IDENTITY:100293275",
+      "kind": "UNRESOLVED_IDENTITY",
+      "missingFields": [],
+      "candidateIds": [
+        11587414
+      ]
+    },
+    {
+      "id": 101111001,
+      "name": "Photon Emperor",
+      "classification": "OBSOLETE_PRERELEASE_PASSCODE_REVIEW",
+      "declaredLegacySource": "prerelease-phhy.cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNRESOLVED_IDENTITY:101111001",
+      "kind": "UNRESOLVED_IDENTITY",
+      "missingFields": [],
+      "candidateIds": [
+        73478096
+      ]
+    },
+    {
+      "id": 101111002,
+      "name": "Galaxy Summoner",
+      "classification": "OBSOLETE_PRERELEASE_PASSCODE_REVIEW",
+      "declaredLegacySource": "prerelease-phhy.cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNRESOLVED_IDENTITY:101111002",
+      "kind": "UNRESOLVED_IDENTITY",
+      "missingFields": [],
+      "candidateIds": [
+        863795
+      ]
+    },
+    {
+      "id": 101111003,
+      "name": "Galakuriboh",
+      "classification": "OBSOLETE_PRERELEASE_PASSCODE_REVIEW",
+      "declaredLegacySource": "prerelease-phhy.cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNRESOLVED_IDENTITY:101111003",
+      "kind": "UNRESOLVED_IDENTITY",
+      "missingFields": [],
+      "candidateIds": []
+    },
+    {
+      "id": 101111006,
+      "name": "Kshatri-La Riseheart",
+      "classification": "OBSOLETE_PRERELEASE_PASSCODE_REVIEW",
+      "declaredLegacySource": "prerelease-phhy.cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNRESOLVED_IDENTITY:101111006",
+      "kind": "UNRESOLVED_IDENTITY",
+      "missingFields": [],
+      "candidateIds": []
+    },
+    {
+      "id": 101111007,
+      "name": "Scareclaw Kshatri-La",
+      "classification": "OBSOLETE_PRERELEASE_PASSCODE_REVIEW",
+      "declaredLegacySource": "prerelease-phhy.cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNRESOLVED_IDENTITY:101111007",
+      "kind": "UNRESOLVED_IDENTITY",
+      "missingFields": [],
+      "candidateIds": []
+    },
+    {
+      "id": 101111008,
+      "name": "Tearlaments Kshatri-La",
+      "classification": "OBSOLETE_PRERELEASE_PASSCODE_REVIEW",
+      "declaredLegacySource": "prerelease-phhy.cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNRESOLVED_IDENTITY:101111008",
+      "kind": "UNRESOLVED_IDENTITY",
+      "missingFields": [],
+      "candidateIds": []
+    },
+    {
+      "id": 101111009,
+      "name": "Chaos Witch",
+      "classification": "OBSOLETE_PRERELEASE_PASSCODE_REVIEW",
+      "declaredLegacySource": "prerelease-phhy.cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNRESOLVED_IDENTITY:101111009",
+      "kind": "UNRESOLVED_IDENTITY",
+      "missingFields": [],
+      "candidateIds": [
+        30327674
+      ]
+    },
+    {
+      "id": 101111010,
+      "name": "Shell of Chaos",
+      "classification": "OBSOLETE_PRERELEASE_PASSCODE_REVIEW",
+      "declaredLegacySource": "prerelease-phhy.cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNRESOLVED_IDENTITY:101111010",
+      "kind": "UNRESOLVED_IDENTITY",
+      "missingFields": [],
+      "candidateIds": [
+        77312273
+      ]
+    },
+    {
+      "id": 101111011,
+      "name": "Core of Chaos",
+      "classification": "OBSOLETE_PRERELEASE_PASSCODE_REVIEW",
+      "declaredLegacySource": "prerelease-phhy.cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNRESOLVED_IDENTITY:101111011",
+      "kind": "UNRESOLVED_IDENTITY",
+      "missingFields": [],
+      "candidateIds": [
+        3806388
+      ]
+    },
+    {
+      "id": 101111012,
+      "name": "Mind Tuner",
+      "classification": "OBSOLETE_PRERELEASE_PASSCODE_REVIEW",
+      "declaredLegacySource": "prerelease-phhy.cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNRESOLVED_IDENTITY:101111012",
+      "kind": "UNRESOLVED_IDENTITY",
+      "missingFields": [],
+      "candidateIds": []
+    },
+    {
+      "id": 101111013,
+      "name": "Chaos Mirage Dragon",
+      "classification": "OBSOLETE_PRERELEASE_PASSCODE_REVIEW",
+      "declaredLegacySource": "prerelease-phhy.cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNRESOLVED_IDENTITY:101111013",
+      "kind": "UNRESOLVED_IDENTITY",
+      "missingFields": [],
+      "candidateIds": [
+        66699781
+      ]
+    },
+    {
+      "id": 101111018,
+      "name": "Grim Gishki",
+      "classification": "OBSOLETE_PRERELEASE_PASSCODE_REVIEW",
+      "declaredLegacySource": "prerelease-phhy.cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNRESOLVED_IDENTITY:101111018",
+      "kind": "UNRESOLVED_IDENTITY",
+      "missingFields": [],
+      "candidateIds": []
+    },
+    {
+      "id": 101111019,
+      "name": "Basiltrice, Familiar of the Evil Eye",
+      "classification": "OBSOLETE_PRERELEASE_PASSCODE_REVIEW",
+      "declaredLegacySource": "prerelease-phhy.cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNRESOLVED_IDENTITY:101111019",
+      "kind": "UNRESOLVED_IDENTITY",
+      "missingFields": [],
+      "candidateIds": [
+        65351555
+      ]
+    },
+    {
+      "id": 101111020,
+      "name": "Vara, Seidhr of the Generaider Bosses",
+      "classification": "OBSOLETE_PRERELEASE_PASSCODE_REVIEW",
+      "declaredLegacySource": "prerelease-phhy.cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNRESOLVED_IDENTITY:101111020",
+      "kind": "UNRESOLVED_IDENTITY",
+      "missingFields": [],
+      "candidateIds": []
+    },
+    {
+      "id": 101111032,
+      "name": "Evigishki Nereimanas",
+      "classification": "OBSOLETE_PRERELEASE_PASSCODE_REVIEW",
+      "declaredLegacySource": "prerelease-phhy.cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNRESOLVED_IDENTITY:101111032",
+      "kind": "UNRESOLVED_IDENTITY",
+      "missingFields": [],
+      "candidateIds": []
+    },
+    {
+      "id": 101111039,
+      "name": "Chaos Archfiend",
+      "classification": "OBSOLETE_PRERELEASE_PASSCODE_REVIEW",
+      "declaredLegacySource": "prerelease-phhy.cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNRESOLVED_IDENTITY:101111039",
+      "kind": "UNRESOLVED_IDENTITY",
+      "missingFields": [],
+      "candidateIds": [
+        13076804
+      ]
+    },
+    {
+      "id": 101111040,
+      "name": "Chaos Beast",
+      "classification": "OBSOLETE_PRERELEASE_PASSCODE_REVIEW",
+      "declaredLegacySource": "prerelease-phhy.cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNRESOLVED_IDENTITY:101111040",
+      "kind": "UNRESOLVED_IDENTITY",
+      "missingFields": [],
+      "candidateIds": [
+        49565413
+      ]
+    },
+    {
+      "id": 101111043,
+      "name": "Number C62: Neo Galaxy-Eyes Prime Photon Dragon",
+      "classification": "OBSOLETE_PRERELEASE_PASSCODE_REVIEW",
+      "declaredLegacySource": "prerelease-phhy.cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNRESOLVED_IDENTITY:101111043",
+      "kind": "UNRESOLVED_IDENTITY",
+      "missingFields": [],
+      "candidateIds": [
+        48348921
+      ]
+    },
+    {
+      "id": 101111044,
+      "name": "Galaxy Photon Dragon",
+      "classification": "OBSOLETE_PRERELEASE_PASSCODE_REVIEW",
+      "declaredLegacySource": "prerelease-phhy.cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNRESOLVED_IDENTITY:101111044",
+      "kind": "UNRESOLVED_IDENTITY",
+      "missingFields": [],
+      "candidateIds": [
+        85747929
+      ]
+    },
+    {
+      "id": 101111046,
+      "name": "Kshatri-La Ariseheart",
+      "classification": "OBSOLETE_PRERELEASE_PASSCODE_REVIEW",
+      "declaredLegacySource": "prerelease-phhy.cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNRESOLVED_IDENTITY:101111046",
+      "kind": "UNRESOLVED_IDENTITY",
+      "missingFields": [],
+      "candidateIds": []
+    },
+    {
+      "id": 101111047,
+      "name": "Laevateinn, Generaider Boss of Shadows",
+      "classification": "OBSOLETE_PRERELEASE_PASSCODE_REVIEW",
+      "declaredLegacySource": "prerelease-phhy.cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNRESOLVED_IDENTITY:101111047",
+      "kind": "UNRESOLVED_IDENTITY",
+      "missingFields": [],
+      "candidateIds": []
+    },
+    {
+      "id": 101111051,
+      "name": "Galaxy Hundred",
+      "classification": "OBSOLETE_PRERELEASE_PASSCODE_REVIEW",
+      "declaredLegacySource": "prerelease-phhy.cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNRESOLVED_IDENTITY:101111051",
+      "kind": "UNRESOLVED_IDENTITY",
+      "missingFields": [],
+      "candidateIds": [
+        897409
+      ]
+    },
+    {
+      "id": 101111052,
+      "name": "Numeron Creation",
+      "classification": "OBSOLETE_PRERELEASE_PASSCODE_REVIEW",
+      "declaredLegacySource": "prerelease-phhy.cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNRESOLVED_IDENTITY:101111052",
+      "kind": "UNRESOLVED_IDENTITY",
+      "missingFields": [],
+      "candidateIds": [
+        46382143
+      ]
+    },
+    {
+      "id": 101111057,
+      "name": "Kshatri-La Overlap",
+      "classification": "OBSOLETE_PRERELEASE_PASSCODE_REVIEW",
+      "declaredLegacySource": "prerelease-phhy.cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNRESOLVED_IDENTITY:101111057",
+      "kind": "UNRESOLVED_IDENTITY",
+      "missingFields": [],
+      "candidateIds": []
+    },
+    {
+      "id": 101111058,
+      "name": "Kshatri-La Papiyas",
+      "classification": "OBSOLETE_PRERELEASE_PASSCODE_REVIEW",
+      "declaredLegacySource": "prerelease-phhy.cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNRESOLVED_IDENTITY:101111058",
+      "kind": "UNRESOLVED_IDENTITY",
+      "missingFields": [],
+      "candidateIds": []
+    },
+    {
+      "id": 101111059,
+      "name": "Prime Planet Paraisos",
+      "classification": "OBSOLETE_PRERELEASE_PASSCODE_REVIEW",
+      "declaredLegacySource": "prerelease-phhy.cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNRESOLVED_IDENTITY:101111059",
+      "kind": "UNRESOLVED_IDENTITY",
+      "missingFields": [],
+      "candidateIds": []
+    },
+    {
+      "id": 101111060,
+      "name": "Scareclaw Defang",
+      "classification": "OBSOLETE_PRERELEASE_PASSCODE_REVIEW",
+      "declaredLegacySource": "prerelease-phhy.cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNRESOLVED_IDENTITY:101111060",
+      "kind": "UNRESOLVED_IDENTITY",
+      "missingFields": [],
+      "candidateIds": []
+    },
+    {
+      "id": 101111061,
+      "name": "Tearlaments Perlregia",
+      "classification": "OBSOLETE_PRERELEASE_PASSCODE_REVIEW",
+      "declaredLegacySource": "prerelease-phhy.cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNRESOLVED_IDENTITY:101111061",
+      "kind": "UNRESOLVED_IDENTITY",
+      "missingFields": [],
+      "candidateIds": []
+    },
+    {
+      "id": 101111066,
+      "name": "Gishki Icemirror",
+      "classification": "OBSOLETE_PRERELEASE_PASSCODE_REVIEW",
+      "declaredLegacySource": "prerelease-phhy.cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNRESOLVED_IDENTITY:101111066",
+      "kind": "UNRESOLVED_IDENTITY",
+      "missingFields": [],
+      "candidateIds": []
+    },
+    {
+      "id": 101111067,
+      "name": "Aquamirror Focalization",
+      "classification": "OBSOLETE_PRERELEASE_PASSCODE_REVIEW",
+      "declaredLegacySource": "prerelease-phhy.cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNRESOLVED_IDENTITY:101111067",
+      "kind": "UNRESOLVED_IDENTITY",
+      "missingFields": [],
+      "candidateIds": []
+    },
+    {
+      "id": 101111068,
+      "name": "Evil Eye Resurrection",
+      "classification": "OBSOLETE_PRERELEASE_PASSCODE_REVIEW",
+      "declaredLegacySource": "prerelease-phhy.cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNRESOLVED_IDENTITY:101111068",
+      "kind": "UNRESOLVED_IDENTITY",
+      "missingFields": [],
+      "candidateIds": []
+    },
+    {
+      "id": 101111071,
+      "name": "Photon Deceleration",
+      "classification": "OBSOLETE_PRERELEASE_PASSCODE_REVIEW",
+      "declaredLegacySource": "prerelease-phhy.cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNRESOLVED_IDENTITY:101111071",
+      "kind": "UNRESOLVED_IDENTITY",
+      "missingFields": [],
+      "candidateIds": []
+    },
+    {
+      "id": 101111074,
+      "name": "Trivikarma",
+      "classification": "OBSOLETE_PRERELEASE_PASSCODE_REVIEW",
+      "declaredLegacySource": "prerelease-phhy.cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNRESOLVED_IDENTITY:101111074",
+      "kind": "UNRESOLVED_IDENTITY",
+      "missingFields": [],
+      "candidateIds": [
+        7436169
+      ]
+    },
+    {
+      "id": 101111075,
+      "name": "Kshatri-La Big Bang",
+      "classification": "OBSOLETE_PRERELEASE_PASSCODE_REVIEW",
+      "declaredLegacySource": "prerelease-phhy.cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNRESOLVED_IDENTITY:101111075",
+      "kind": "UNRESOLVED_IDENTITY",
+      "missingFields": [],
+      "candidateIds": []
+    },
+    {
+      "id": 101111076,
+      "name": "Chaos Phantasm",
+      "classification": "OBSOLETE_PRERELEASE_PASSCODE_REVIEW",
+      "declaredLegacySource": "prerelease-phhy.cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNRESOLVED_IDENTITY:101111076",
+      "kind": "UNRESOLVED_IDENTITY",
+      "missingFields": [],
+      "candidateIds": [
+        60329973
+      ]
+    },
+    {
+      "id": 101111109,
+      "name": "Black Beast Token",
+      "classification": "NON_DECK_TOKEN_OR_PLACEHOLDER",
+      "declaredLegacySource": "prerelease-phhy.cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNRESOLVED_IDENTITY:101111109",
+      "kind": "UNRESOLVED_IDENTITY",
+      "missingFields": [],
+      "candidateIds": []
+    },
+    {
+      "id": 101111209,
+      "name": "White Beast Token",
+      "classification": "NON_DECK_TOKEN_OR_PLACEHOLDER",
+      "declaredLegacySource": "prerelease-phhy.cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNRESOLVED_IDENTITY:101111209",
+      "kind": "UNRESOLVED_IDENTITY",
+      "missingFields": [],
+      "candidateIds": []
+    },
+    {
+      "id": 300,
+      "name": "Deck Master Functions",
+      "classification": "EXCLUDED_UNOFFICIAL_LEGACY",
+      "declaredLegacySource": "cards-unofficial(2).cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNRESOLVED_IDENTITY:300",
+      "kind": "UNRESOLVED_IDENTITY",
+      "missingFields": [],
+      "candidateIds": []
+    },
+    {
+      "id": 4001,
+      "name": "Strings Placeholder 1",
+      "classification": "NON_DECK_TOKEN_OR_PLACEHOLDER",
+      "declaredLegacySource": "cards-unofficial(2).cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNRESOLVED_IDENTITY:4001",
+      "kind": "UNRESOLVED_IDENTITY",
+      "missingFields": [],
+      "candidateIds": []
+    },
+    {
+      "id": 4002,
+      "name": "Strings Placeholder 2",
+      "classification": "NON_DECK_TOKEN_OR_PLACEHOLDER",
+      "declaredLegacySource": "cards-unofficial(2).cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNRESOLVED_IDENTITY:4002",
+      "kind": "UNRESOLVED_IDENTITY",
+      "missingFields": [],
+      "candidateIds": []
+    },
+    {
+      "id": 4003,
+      "name": "Strings Placeholder 3",
+      "classification": "NON_DECK_TOKEN_OR_PLACEHOLDER",
+      "declaredLegacySource": "cards-unofficial(2).cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNRESOLVED_IDENTITY:4003",
+      "kind": "UNRESOLVED_IDENTITY",
+      "missingFields": [],
+      "candidateIds": []
+    },
+    {
+      "id": 4004,
+      "name": "Strings Placeholder 4",
+      "classification": "NON_DECK_TOKEN_OR_PLACEHOLDER",
+      "declaredLegacySource": "cards-unofficial(2).cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNRESOLVED_IDENTITY:4004",
+      "kind": "UNRESOLVED_IDENTITY",
+      "missingFields": [],
+      "candidateIds": []
+    },
+    {
+      "id": 4005,
+      "name": "Strings Placeholder 5",
+      "classification": "NON_DECK_TOKEN_OR_PLACEHOLDER",
+      "declaredLegacySource": "cards-unofficial(2).cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNRESOLVED_IDENTITY:4005",
+      "kind": "UNRESOLVED_IDENTITY",
+      "missingFields": [],
+      "candidateIds": []
+    },
+    {
+      "id": 4006,
+      "name": "Strings Placeholder 6",
+      "classification": "NON_DECK_TOKEN_OR_PLACEHOLDER",
+      "declaredLegacySource": "cards-unofficial(2).cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNRESOLVED_IDENTITY:4006",
+      "kind": "UNRESOLVED_IDENTITY",
+      "missingFields": [],
+      "candidateIds": []
+    },
+    {
+      "id": 4007,
+      "name": "Strings Placeholder 7",
+      "classification": "NON_DECK_TOKEN_OR_PLACEHOLDER",
+      "declaredLegacySource": "cards-unofficial(2).cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNRESOLVED_IDENTITY:4007",
+      "kind": "UNRESOLVED_IDENTITY",
+      "missingFields": [],
+      "candidateIds": []
+    },
+    {
+      "id": 4008,
+      "name": "Strings Placeholder 8",
+      "classification": "NON_DECK_TOKEN_OR_PLACEHOLDER",
+      "declaredLegacySource": "cards-unofficial(2).cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNRESOLVED_IDENTITY:4008",
+      "kind": "UNRESOLVED_IDENTITY",
+      "missingFields": [],
+      "candidateIds": []
+    },
+    {
+      "id": 4009,
+      "name": "Strings Placeholder 9",
+      "classification": "NON_DECK_TOKEN_OR_PLACEHOLDER",
+      "declaredLegacySource": "cards-unofficial(2).cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNRESOLVED_IDENTITY:4009",
+      "kind": "UNRESOLVED_IDENTITY",
+      "missingFields": [],
+      "candidateIds": []
+    },
+    {
+      "id": 4010,
+      "name": "String Placeholder 10",
+      "classification": "NON_DECK_TOKEN_OR_PLACEHOLDER",
+      "declaredLegacySource": "cards-unofficial(2).cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNRESOLVED_IDENTITY:4010",
+      "kind": "UNRESOLVED_IDENTITY",
+      "missingFields": [],
+      "candidateIds": []
+    },
+    {
+      "id": 4011,
+      "name": "String Placeholder 11",
+      "classification": "NON_DECK_TOKEN_OR_PLACEHOLDER",
+      "declaredLegacySource": "cards-unofficial(2).cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNRESOLVED_IDENTITY:4011",
+      "kind": "UNRESOLVED_IDENTITY",
+      "missingFields": [],
+      "candidateIds": []
+    },
+    {
+      "id": 4012,
+      "name": "String Placeholder 12",
+      "classification": "NON_DECK_TOKEN_OR_PLACEHOLDER",
+      "declaredLegacySource": "cards-unofficial(2).cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNRESOLVED_IDENTITY:4012",
+      "kind": "UNRESOLVED_IDENTITY",
+      "missingFields": [],
+      "candidateIds": []
+    },
+    {
+      "id": 4013,
+      "name": "String Placeholder 13",
+      "classification": "NON_DECK_TOKEN_OR_PLACEHOLDER",
+      "declaredLegacySource": "cards-unofficial(2).cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNRESOLVED_IDENTITY:4013",
+      "kind": "UNRESOLVED_IDENTITY",
+      "missingFields": [],
+      "candidateIds": []
+    },
+    {
+      "id": 4015,
+      "name": "String Placeholder 15",
+      "classification": "NON_DECK_TOKEN_OR_PLACEHOLDER",
+      "declaredLegacySource": "cards-unofficial(2).cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNRESOLVED_IDENTITY:4015",
+      "kind": "UNRESOLVED_IDENTITY",
+      "missingFields": [],
+      "candidateIds": []
+    },
+    {
+      "id": 4016,
+      "name": "String Placeholder 16",
+      "classification": "NON_DECK_TOKEN_OR_PLACEHOLDER",
+      "declaredLegacySource": "cards-unofficial(2).cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNRESOLVED_IDENTITY:4016",
+      "kind": "UNRESOLVED_IDENTITY",
+      "missingFields": [],
+      "candidateIds": []
+    },
+    {
+      "id": 4017,
+      "name": "String Placeholder 17",
+      "classification": "NON_DECK_TOKEN_OR_PLACEHOLDER",
+      "declaredLegacySource": "cards-unofficial(2).cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNRESOLVED_IDENTITY:4017",
+      "kind": "UNRESOLVED_IDENTITY",
+      "missingFields": [],
+      "candidateIds": []
+    },
+    {
+      "id": 511000292,
+      "name": "Infernity Sage",
+      "classification": "EXCLUDED_UNOFFICIAL_LEGACY",
+      "declaredLegacySource": "cards-unofficial(2).cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNRESOLVED_IDENTITY:511000292",
+      "kind": "UNRESOLVED_IDENTITY",
+      "missingFields": [],
+      "candidateIds": [
+        46435376
+      ]
+    },
+    {
+      "id": 511000576,
+      "name": "Trap Sluzer",
+      "classification": "EXCLUDED_UNOFFICIAL_LEGACY",
+      "declaredLegacySource": "cards-unofficial(2).cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNRESOLVED_IDENTITY:511000576",
+      "kind": "UNRESOLVED_IDENTITY",
+      "missingFields": [],
+      "candidateIds": []
+    },
+    {
+      "id": 511000725,
+      "name": "Summon Storm",
+      "classification": "EXCLUDED_UNOFFICIAL_LEGACY",
+      "declaredLegacySource": "cards-unofficial(2).cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNRESOLVED_IDENTITY:511000725",
+      "kind": "UNRESOLVED_IDENTITY",
+      "missingFields": [],
+      "candidateIds": [
+        71459861
+      ]
+    },
+    {
+      "id": 511000911,
+      "name": "Smile Angel",
+      "classification": "EXCLUDED_UNOFFICIAL_LEGACY",
+      "declaredLegacySource": "cards-unofficial(2).cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNRESOLVED_IDENTITY:511000911",
+      "kind": "UNRESOLVED_IDENTITY",
+      "missingFields": [],
+      "candidateIds": []
+    },
+    {
+      "id": 511001233,
+      "name": "Gachi Battle",
+      "classification": "EXCLUDED_UNOFFICIAL_LEGACY",
+      "declaredLegacySource": "cards-unofficial(2).cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNRESOLVED_IDENTITY:511001233",
+      "kind": "UNRESOLVED_IDENTITY",
+      "missingFields": [],
+      "candidateIds": []
+    },
+    {
+      "id": 511001365,
+      "name": "Tellus Wing",
+      "classification": "NON_DECK_TOKEN_OR_PLACEHOLDER",
+      "declaredLegacySource": "cards-unofficial(2).cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNRESOLVED_IDENTITY:511001365",
+      "kind": "UNRESOLVED_IDENTITY",
+      "missingFields": [],
+      "candidateIds": []
+    },
+    {
+      "id": 511001407,
+      "name": "Gagagamirage",
+      "classification": "EXCLUDED_UNOFFICIAL_LEGACY",
+      "declaredLegacySource": "cards-unofficial(2).cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNRESOLVED_IDENTITY:511001407",
+      "kind": "UNRESOLVED_IDENTITY",
+      "missingFields": [],
+      "candidateIds": []
+    },
+    {
+      "id": 511001570,
+      "name": "Tribute Ticket",
+      "classification": "EXCLUDED_UNOFFICIAL_LEGACY",
+      "declaredLegacySource": "cards-unofficial(2).cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNRESOLVED_IDENTITY:511001570",
+      "kind": "UNRESOLVED_IDENTITY",
+      "missingFields": [],
+      "candidateIds": []
+    },
+    {
+      "id": 511001664,
+      "name": "Numeron Wall",
+      "classification": "EXCLUDED_UNOFFICIAL_LEGACY",
+      "declaredLegacySource": "cards-unofficial(2).cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNRESOLVED_IDENTITY:511001664",
+      "kind": "UNRESOLVED_IDENTITY",
+      "missingFields": [],
+      "candidateIds": [
+        42352091
+      ]
+    },
+    {
+      "id": 511001966,
+      "name": "Iron Chain Dragon (Anime)",
+      "classification": "EXCLUDED_UNOFFICIAL_LEGACY",
+      "declaredLegacySource": "cards-unofficial(2).cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNRESOLVED_IDENTITY:511001966",
+      "kind": "UNRESOLVED_IDENTITY",
+      "missingFields": [],
+      "candidateIds": []
+    },
+    {
+      "id": 511002017,
+      "name": "Edge Nightmare",
+      "classification": "EXCLUDED_UNOFFICIAL_LEGACY",
+      "declaredLegacySource": "cards-unofficial(2).cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNRESOLVED_IDENTITY:511002017",
+      "kind": "UNRESOLVED_IDENTITY",
+      "missingFields": [],
+      "candidateIds": []
+    },
+    {
+      "id": 511002094,
+      "name": "Speed World",
+      "classification": "EXCLUDED_UNOFFICIAL_LEGACY",
+      "declaredLegacySource": "cards-unofficial(2).cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNRESOLVED_IDENTITY:511002094",
+      "kind": "UNRESOLVED_IDENTITY",
+      "missingFields": [],
+      "candidateIds": []
+    },
+    {
+      "id": 511002582,
+      "name": "Photon Spear",
+      "classification": "EXCLUDED_UNOFFICIAL_LEGACY",
+      "declaredLegacySource": "cards-unofficial(2).cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNRESOLVED_IDENTITY:511002582",
+      "kind": "UNRESOLVED_IDENTITY",
+      "missingFields": [],
+      "candidateIds": []
+    },
+    {
+      "id": 511002613,
+      "name": "Black Luster Soldier (DM)",
+      "classification": "EXCLUDED_UNOFFICIAL_LEGACY",
+      "declaredLegacySource": "cards-unofficial(2).cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNRESOLVED_IDENTITY:511002613",
+      "kind": "UNRESOLVED_IDENTITY",
+      "missingFields": [],
+      "candidateIds": []
+    },
+    {
+      "id": 511005062,
+      "name": "Hat Token",
+      "classification": "NON_DECK_TOKEN_OR_PLACEHOLDER",
+      "declaredLegacySource": "cards-unofficial(2).cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNRESOLVED_IDENTITY:511005062",
+      "kind": "UNRESOLVED_IDENTITY",
+      "missingFields": [],
+      "candidateIds": []
+    },
+    {
+      "id": 511005063,
+      "name": "Magical Hats (Anime)",
+      "classification": "EXCLUDED_UNOFFICIAL_LEGACY",
+      "declaredLegacySource": "cards-unofficial(2).cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNRESOLVED_IDENTITY:511005063",
+      "kind": "UNRESOLVED_IDENTITY",
+      "missingFields": [],
+      "candidateIds": []
+    },
+    {
+      "id": 511009112,
+      "name": "Doll Monster Bear-Bear",
+      "classification": "EXCLUDED_UNOFFICIAL_LEGACY",
+      "declaredLegacySource": "cards-unofficial(2).cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNRESOLVED_IDENTITY:511009112",
+      "kind": "UNRESOLVED_IDENTITY",
+      "missingFields": [],
+      "candidateIds": [
+        18106132
+      ]
+    },
+    {
+      "id": 511009116,
+      "name": "Doll Monster Miss MadChen",
+      "classification": "EXCLUDED_UNOFFICIAL_LEGACY",
+      "declaredLegacySource": "cards-unofficial(2).cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNRESOLVED_IDENTITY:511009116",
+      "kind": "UNRESOLVED_IDENTITY",
+      "missingFields": [],
+      "candidateIds": [
+        72717433
+      ]
+    },
+    {
+      "id": 511009215,
+      "name": "Slime Token",
+      "classification": "NON_DECK_TOKEN_OR_PLACEHOLDER",
+      "declaredLegacySource": "cards-unofficial(2).cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNRESOLVED_IDENTITY:511009215",
+      "kind": "UNRESOLVED_IDENTITY",
+      "missingFields": [],
+      "candidateIds": [
+        21770261,
+        79387393
+      ]
+    },
+    {
+      "id": 511009679,
+      "name": "Sunseed Genius Loci",
+      "classification": "EXCLUDED_UNOFFICIAL_LEGACY",
+      "declaredLegacySource": "cards-unofficial(2).cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNRESOLVED_IDENTITY:511009679",
+      "kind": "UNRESOLVED_IDENTITY",
+      "missingFields": [],
+      "candidateIds": [
+        27520594
+      ]
+    },
+    {
+      "id": 511030041,
+      "name": "Appliancer Vacculephant",
+      "classification": "EXCLUDED_UNOFFICIAL_LEGACY",
+      "declaredLegacySource": "cards-unofficial(2).cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNRESOLVED_IDENTITY:511030041",
+      "kind": "UNRESOLVED_IDENTITY",
+      "missingFields": [],
+      "candidateIds": [
+        30118200
+      ]
+    },
+    {
+      "id": 513000168,
+      "name": "Wisel Top (Anime)",
+      "classification": "EXCLUDED_UNOFFICIAL_LEGACY",
+      "declaredLegacySource": "cards-unofficial(2).cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNRESOLVED_IDENTITY:513000168",
+      "kind": "UNRESOLVED_IDENTITY",
+      "missingFields": [],
+      "candidateIds": []
+    },
+    {
+      "id": 513000169,
+      "name": "Wisel Attack (Anime)",
+      "classification": "EXCLUDED_UNOFFICIAL_LEGACY",
+      "declaredLegacySource": "cards-unofficial(2).cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNRESOLVED_IDENTITY:513000169",
+      "kind": "UNRESOLVED_IDENTITY",
+      "missingFields": [],
+      "candidateIds": []
+    },
+    {
+      "id": 513000170,
+      "name": "Wisel Guard (Anime)",
+      "classification": "EXCLUDED_UNOFFICIAL_LEGACY",
+      "declaredLegacySource": "cards-unofficial(2).cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNRESOLVED_IDENTITY:513000170",
+      "kind": "UNRESOLVED_IDENTITY",
+      "missingFields": [],
+      "candidateIds": []
+    },
+    {
+      "id": 513000171,
+      "name": "Wisel Carrier (Anime)",
+      "classification": "EXCLUDED_UNOFFICIAL_LEGACY",
+      "declaredLegacySource": "cards-unofficial(2).cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNRESOLVED_IDENTITY:513000171",
+      "kind": "UNRESOLVED_IDENTITY",
+      "missingFields": [],
+      "candidateIds": []
+    },
+    {
+      "id": 513000174,
+      "name": "Skiel Top (Anime)",
+      "classification": "EXCLUDED_UNOFFICIAL_LEGACY",
+      "declaredLegacySource": "cards-unofficial(2).cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNRESOLVED_IDENTITY:513000174",
+      "kind": "UNRESOLVED_IDENTITY",
+      "missingFields": [],
+      "candidateIds": []
+    },
+    {
+      "id": 513000176,
+      "name": "Skiel Guard (Anime)",
+      "classification": "EXCLUDED_UNOFFICIAL_LEGACY",
+      "declaredLegacySource": "cards-unofficial(2).cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNRESOLVED_IDENTITY:513000176",
+      "kind": "UNRESOLVED_IDENTITY",
+      "missingFields": [],
+      "candidateIds": []
+    },
+    {
+      "id": 513000177,
+      "name": "Skiel Carrier (Anime)",
+      "classification": "EXCLUDED_UNOFFICIAL_LEGACY",
+      "declaredLegacySource": "cards-unofficial(2).cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNRESOLVED_IDENTITY:513000177",
+      "kind": "UNRESOLVED_IDENTITY",
+      "missingFields": [],
+      "candidateIds": []
+    },
+    {
+      "id": 810000043,
+      "name": "Amplifier (Anime)",
+      "classification": "EXCLUDED_UNOFFICIAL_LEGACY",
+      "declaredLegacySource": "cards-unofficial(2).cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNRESOLVED_IDENTITY:810000043",
+      "kind": "UNRESOLVED_IDENTITY",
+      "missingFields": [],
+      "candidateIds": []
+    },
+    {
+      "id": 810000094,
+      "name": "Magician's Selection",
+      "classification": "EXCLUDED_UNOFFICIAL_LEGACY",
+      "declaredLegacySource": "cards-unofficial(2).cdb",
+      "exactMatchesInFivePinnedSources": [],
+      "baselineDisposition": "PRESERVE_UNRESOLVED_NO_FIELDS_REPLACED",
+      "reviewDecision": {
+        "status": "UNREVIEWED"
+      },
+      "key": "UNRESOLVED_IDENTITY:810000094",
+      "kind": "UNRESOLVED_IDENTITY",
+      "missingFields": [],
+      "candidateIds": []
+    }
+  ],
+  "newWork": "PROVENANCE_BOUND_REVIEW_WORKFLOW_AND_NEW_TRANSPORT_OBSERVATIONS",
+  "previousNegativeComparisonRepeated": true,
+  "criteriaClosed": [],
+  "changesApplied": false,
+  "officialIdentityCertified": false,
+  "statisticsTransferredByName": false,
+  "meaning": "Every incident is retained for explicit review. Repeating the pinned-CDB negative comparison is not new identity proof and closes no criterion."
+}

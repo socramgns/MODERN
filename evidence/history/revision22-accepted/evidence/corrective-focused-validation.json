@@ -1,0 +1,49 @@
+{
+  "schema": "ygo-r22-corrective-focused-validation/v1",
+  "scope": "SIX_FOCUSED_NODE_SUITES_NOT_FULL_RUN",
+  "results": [
+    {
+      "name": "flip_effects",
+      "pass": true,
+      "total": 63,
+      "failed": [],
+      "log": "/tmp/r22-corrective-flip_effects.log"
+    },
+    {
+      "name": "field_spell_activations",
+      "pass": true,
+      "total": 39,
+      "failed": [],
+      "log": "/tmp/r22-corrective-field_spell_activations.log"
+    },
+    {
+      "name": "normal_trap_activations",
+      "pass": true,
+      "total": 53,
+      "failed": [],
+      "log": "/tmp/r22-corrective-normal_trap_activations.log"
+    },
+    {
+      "name": "mechaba_quick_hand",
+      "pass": true,
+      "total": 28,
+      "failed": [],
+      "log": "/tmp/r22-corrective-mechaba_quick_hand.log"
+    },
+    {
+      "name": "mechaba_monster_zones",
+      "pass": true,
+      "total": 33,
+      "failed": [],
+      "log": "/tmp/r22-corrective-mechaba_monster_zones.log"
+    },
+    {
+      "name": "goal_progress",
+      "pass": true,
+      "total": 24,
+      "failed": [],
+      "log": "/tmp/r22-corrective-goal_progress.log"
+    }
+  ],
+  "pass": true
+}

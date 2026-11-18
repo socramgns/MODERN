@@ -1,0 +1,45 @@
+{
+  "schema": "ygo-r22-independent-reference-audit/v1",
+  "pass": true,
+  "total": 9,
+  "tests": [
+    {
+      "name": "Own controller GY is selected after control changes, not Faith owner GY (QA microstate)",
+      "pass": true
+    },
+    {
+      "name": "No ownGYSpell keeps mandatory null activation with opponentGYSpell present",
+      "pass": true
+    },
+    {
+      "name": "Unknown reviewed movement does not create false null Spell branch",
+      "pass": true
+    },
+    {
+      "name": "Mandatory activation persists but resolves negated with inherent true flag (QA microstate)",
+      "pass": true
+    },
+    {
+      "name": "Battle pending retains source field, prevents other actions, rejects omitted victim, then finishesGY",
+      "pass": true
+    },
+    {
+      "name": "Battle Mechaba banishes field Faith before cleanup and never sends itGY afterward",
+      "pass": true
+    },
+    {
+      "name": "Roar non-target destroys battle-marked Faith before final battleGY, without duplicate departure",
+      "pass": true
+    },
+    {
+      "name": "Legal faceup Faith accepts Spark, consumes shield against battle and does not invent FLIP",
+      "pass": true
+    },
+    {
+      "name": "Mutated mandatory pending actor, zone, origin, turn, id and source stay are rejected",
+      "pass": true
+    }
+  ],
+  "scope": "FOCUSED_INDEPENDENT_AUDIT_NOT_FULL_SUITE",
+  "qaMicrostatesNotWitnessedHistory": true
+}

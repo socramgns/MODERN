@@ -1,0 +1,197 @@
+{
+  "schema": "ygo-release21-browser/v1",
+  "pass": true,
+  "buildId": "8e2f493167e60a1752237885db37d72063514109118aa937707e93c9819c4908",
+  "htmlSha256": "3838c78ea58ec52af9019fbc5ad2f132db26b6022eb3d9c1ff939543d8894531",
+  "artifactMode": "DELIVERED_BYTES",
+  "sourceInjection": false,
+  "checks": [
+    {
+      "name": "release21_runs_the_manifest_bound_document_without_network",
+      "pass": true
+    },
+    {
+      "name": "twenty_one_visible_examples_preserve_all_twenty_previous_identifiers",
+      "pass": true
+    },
+    {
+      "name": "hayabusa_starts_in_a_physical_five_card_hand_without_autoplay_or_prior_history",
+      "pass": true
+    },
+    {
+      "name": "the_visible_guide_explains_second_attack_negation_spent_declarations_and_scope",
+      "pass": true
+    },
+    {
+      "name": "a_real_normal_summon_consumes_the_summon_and_conserves_the_same_copy",
+      "pass": true
+    },
+    {
+      "name": "hayabusa_action_inventory_names_the_registered_normal_summon_and_continuous_attack",
+      "pass": true
+    },
+    {
+      "name": "the_board_shows_an_unspent_two_attack_budget",
+      "pass": true
+    },
+    {
+      "name": "the_second_turn_legally_enters_battle_with_a_fresh_budget",
+      "pass": true
+    },
+    {
+      "name": "the_first_direct_attack_pays_one_declaration_and_causes_printed_damage",
+      "pass": true
+    },
+    {
+      "name": "the_same_copy_offers_one_second_attack_and_the_board_labels_the_remaining_budget",
+      "pass": true
+    },
+    {
+      "name": "the_second_direct_attack_spends_the_second_declaration_without_creating_a_third",
+      "pass": true
+    },
+    {
+      "name": "four_visible_actions_achieve_the_goal_with_a_replayed_same_copy",
+      "pass": true
+    },
+    {
+      "name": "download_binds_delivered_build_goal_attack_history_and_actual_lp",
+      "pass": true
+    },
+    {
+      "name": "undo_restores_exactly_one_spent_attack_and_the_opponents_previous_lp",
+      "pass": true
+    },
+    {
+      "name": "import_reexecutes_all_actions_and_restores_the_exhausted_budget",
+      "pass": true
+    },
+    {
+      "name": "import_of_the_first_attack_preserves_the_one_remaining_legal_declaration",
+      "pass": true
+    },
+    {
+      "name": "report_import_rejects_a_third_attack_appended_to_an_exhausted_trace_without_replacing_the_lab",
+      "pass": true
+    },
+    {
+      "name": "report_import_rejects_a_nonexistent_attacker_copy_without_replacing_the_lab",
+      "pass": true
+    },
+    {
+      "name": "report_import_rejects_an_attack_by_the_inactive_player_without_replacing_the_lab",
+      "pass": true
+    },
+    {
+      "name": "report_import_rejects_an_invented_battle_target_without_replacing_the_lab",
+      "pass": true
+    },
+    {
+      "name": "report_import_rejects_damage_beyond_two_physical_attacks_without_replacing_the_lab",
+      "pass": true
+    },
+    {
+      "name": "report_import_rejects_negation_invented_without_a_registered_transition_without_replacing_the_lab",
+      "pass": true
+    },
+    {
+      "name": "report_import_rejects_a_refunded_attack_without_undoing_its_transition_without_replacing_the_lab",
+      "pass": true
+    },
+    {
+      "name": "a_monster_that_attacked_twice_cannot_change_position_manually",
+      "pass": true
+    },
+    {
+      "name": "visible_search_finds_and_replays_a_line_with_two_attacks_by_the_same_monster",
+      "pass": true
+    },
+    {
+      "name": "continuing_a_verified_search_line_preserves_the_two_spent_attacks",
+      "pass": true
+    },
+    {
+      "name": "the_emulated_mobile_board_exposes_spent_attack_budget_and_goal",
+      "pass": true
+    },
+    {
+      "name": "cyber_twin_import_uses_a_declared_field_without_certifying_prior_fusion",
+      "pass": true
+    },
+    {
+      "name": "cyber_twin_action_inventory_declares_only_its_partial_continuous_battle_profile",
+      "pass": true
+    },
+    {
+      "name": "cyber_twin_first_attack_sends_the_first_physical_rival_to_its_owners_grave",
+      "pass": true
+    },
+    {
+      "name": "cyber_twin_second_attack_targets_the_other_copy_and_exhausts_its_budget",
+      "pass": true
+    },
+    {
+      "name": "both_monster_attacks_replay_without_fabricating_fusion_history",
+      "pass": true
+    },
+    {
+      "name": "a_real_opposing_impermanence_negates_hayabusa_after_its_first_attack",
+      "pass": true
+    },
+    {
+      "name": "negation_reduces_the_limit_without_refunding_the_spent_declaration",
+      "pass": true
+    },
+    {
+      "name": "negation_and_battle_history_replay_from_the_real_hand_copy",
+      "pass": true
+    },
+    {
+      "name": "resuming_before_negation_restores_the_opponents_hand_and_one_remaining_attack",
+      "pass": true
+    },
+    {
+      "name": "negation_after_two_attacks_keeps_both_declarations_spent_even_above_the_new_limit",
+      "pass": true
+    },
+    {
+      "name": "release21_raises_no_javascript_page_errors",
+      "pass": true
+    },
+    {
+      "name": "release21_leaves_the_compiled_artifact_unchanged",
+      "pass": true
+    }
+  ],
+  "details": {
+    "visible_search_finds_and_replays_a_line_with_two_attacks_by_the_same_monster": {
+      "pass": true,
+      "lines": [
+        {
+          "types": [
+            "DUEL_NORMAL_SUMMON_OR_SET",
+            "DUEL_ADVANCE_PHASE",
+            "DUEL_ATTACK",
+            "DUEL_ATTACK"
+          ],
+          "attacks": 2,
+          "replay": true,
+          "goal": true
+        }
+      ]
+    },
+    "release21_raises_no_javascript_page_errors": []
+  },
+  "browser": {
+    "engine": "chromium",
+    "version": "154.0.8037.57"
+  },
+  "externalRequestsBlocked": 42,
+  "limitations": [
+    "Only Hayabusa Knight and Cyber Twin Dragon have a reviewed continuous second-attack profile; other attack patterns are not inferred.",
+    "The built-in guide executes a real Normal Summon and two direct attacks; the separate Cyber Twin field is a declared assumption without prior Fusion proof.",
+    "Impermanence uses a physical opponent hand copy and a registered activation; general battle priority and Damage Step chains remain outside scope.",
+    "Mobile width is emulated; physical devices, full accessibility and competitive calibration remain unverified."
+  ],
+  "elapsedSeconds": 37.55
+}

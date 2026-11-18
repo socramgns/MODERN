@@ -1,0 +1,53 @@
+{
+  "schema": "ygo-r23-source-recheck/v1",
+  "pass": true,
+  "checks": [
+    {
+      "file": "cards.cdb",
+      "sha256": "d5166c35296a6c65dcc0230c7bc0e9f25721639159b80fa78bf724be61183a6a",
+      "records": 14759,
+      "commit": "ae5dedb957c2c48ab86554fee08a0fca73d8b1cf",
+      "url": "https://raw.githubusercontent.com/ProjectIgnis/BabelCDB/ae5dedb957c2c48ab86554fee08a0fca73d8b1cf/cards.cdb",
+      "checkedAt": "2026-11-14T19:18:47.222727+00:00",
+      "exactMatches": []
+    },
+    {
+      "file": "cards-rush.cdb",
+      "sha256": "3aa1263985e5f3cee74e3439977eb330b65e55a9ab1c4746a163d85cb772ecc9",
+      "records": 3586,
+      "commit": "ae5dedb957c2c48ab86554fee08a0fca73d8b1cf",
+      "url": "https://raw.githubusercontent.com/ProjectIgnis/BabelCDB/ae5dedb957c2c48ab86554fee08a0fca73d8b1cf/cards-rush.cdb",
+      "checkedAt": "2026-11-14T19:18:47.236745+00:00",
+      "exactMatches": []
+    },
+    {
+      "file": "cards-skills.cdb",
+      "sha256": "4bb2e1ad111d780a9dc217e865c3a915c4a8ea6606ea60c7141646c0ed443009",
+      "records": 208,
+      "commit": "ae5dedb957c2c48ab86554fee08a0fca73d8b1cf",
+      "url": "https://raw.githubusercontent.com/ProjectIgnis/BabelCDB/ae5dedb957c2c48ab86554fee08a0fca73d8b1cf/cards-skills.cdb",
+      "checkedAt": "2026-11-14T19:18:47.238150+00:00",
+      "exactMatches": []
+    },
+    {
+      "file": "cards-unofficial.cdb",
+      "sha256": "ca4de42364bf872f4fefb04bfe4b5c5d278210141350e86517565e359ae6b281",
+      "records": 5880,
+      "commit": "ae5dedb957c2c48ab86554fee08a0fca73d8b1cf",
+      "url": "https://raw.githubusercontent.com/ProjectIgnis/BabelCDB/ae5dedb957c2c48ab86554fee08a0fca73d8b1cf/cards-unofficial.cdb",
+      "checkedAt": "2026-11-14T19:18:47.246659+00:00",
+      "exactMatches": []
+    },
+    {
+      "file": "cards-skills-unofficial.cdb",
+      "sha256": "d64bd027d347e3aa0bad2ab00af3d4749623542ab4323f5c1ce43593e674d933",
+      "records": 19,
+      "commit": "ae5dedb957c2c48ab86554fee08a0fca73d8b1cf",
+      "url": "https://raw.githubusercontent.com/ProjectIgnis/BabelCDB/ae5dedb957c2c48ab86554fee08a0fca73d8b1cf/cards-skills-unofficial.cdb",
+      "checkedAt": "2026-11-14T19:18:47.247863+00:00",
+      "exactMatches": []
+    }
+  ],
+  "newOfficialIdentityProof": false,
+  "changesApplied": false
+}

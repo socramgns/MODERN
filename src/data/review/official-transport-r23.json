@@ -1,0 +1,23 @@
+{
+  "schema": "ygo-r23-official-transport-observation/v1",
+  "requests": [
+    {
+      "requestedUrl": "https://www.db.yugioh-card.com/yugiohdb/card_search.action?ope=1&keyword=Photon%20Emperor&request_locale=en",
+      "status": "TRANSPORT_ERROR",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "observedAt": "2026-11-14T19:18:53.138964+00:00",
+      "tlsValidationDisabled": false
+    },
+    {
+      "requestedUrl": "https://www.yugioh-card.com/en/limited/index.html",
+      "status": "TRANSPORT_ERROR",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "observedAt": "2026-11-14T19:18:53.143724+00:00",
+      "tlsValidationDisabled": false
+    }
+  ],
+  "meaning": "Transport observation only; a successful HTTP status would still require content authentication and review.",
+  "officialIdentityAuthenticated": false,
+  "currentListProven": false,
+  "criteriaClosed": []
+}
