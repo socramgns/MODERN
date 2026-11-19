@@ -7,7 +7,7 @@ permissions:
 jobs:
   mobile:
     runs-on: ubuntu-24.04
-    timeout-minutes: 20
+    timeout-minutes: 40
     env:
       PLAYWRIGHT_BROWSERS_PATH: ${{ github.workspace }}/.cache/ms-playwright
       PLAYWRIGHT_DOWNLOAD_CONNECTION_TIMEOUT: '90000'
@@ -20,15 +20,30 @@ jobs:
         with:
           node-version: '22'
       - name: Preparar las dependencias de prueba
+        timeout-minutes: 4
         run: python -m pip install --timeout 45 --retries 2 -r requirements-dev.txt
       - uses: actions/cache@v4
+        timeout-minutes: 3
         with:
           path: ${{ env.PLAYWRIGHT_BROWSERS_PATH }}
           key: ${{ runner.os }}-playwright-${{ hashFiles('requirements-dev.txt') }}
-      - name: Preparar Chromium y WebKit
+      - name: Preparar las dependencias del sistema
+        timeout-minutes: 8
         run: |
-          python -m playwright install-deps chromium webkit
-          python -m playwright install chromium webkit
+          sudo tee /etc/apt/apt.conf.d/99-ygo-network-timeouts >/dev/null <<'APT'
+          Acquire::http::Timeout "30";
+          Acquire::https::Timeout "30";
+          Acquire::Retries "2";
+          APT
+          python -m playwright install-deps chromium webkit > /tmp/ygo-system-deps.log 2>&1
+      - name: Preparar Chromium
+        timeout-minutes: 5
+        run: python -m playwright install chromium > /tmp/ygo-chromium-install.log 2>&1
+      - name: Preparar WebKit
+        timeout-minutes: 5
+        run: python -m playwright install webkit > /tmp/ygo-webkit-install.log 2>&1
+      - name: Registrar el Chromium de las pruebas
+        run: |
           python - <<'PY'
           import os
           from playwright.sync_api import sync_playwright
@@ -37,10 +52,12 @@ jobs:
                   env.write('YGO_CHROMIUM=' + runtime.chromium.executable_path + '\n')
           PY
       - name: Compilar los bytes que se van a probar
+        timeout-minutes: 3
         run: |
           python tools/build.py
           cmp Analizador_YuGiOh.html dist/Calculadora_de_Barajas_YuGiOh_Alpha_1263_Corregida.html
       - name: Ejecutar el flujo móvil y el aumento de texto
+        timeout-minutes: 5
         run: python tests/mobile_accessibility.py > mobile-r23.log 2>&1
       - name: Publicar el resultado vinculado al HTML
         if: always()
@@ -58,6 +75,11 @@ jobs:
               result['details']={row['name']:report.get('details',{}).get(row['name']) for row in failed}
           else:
               result={'pass':False,'error':'No se generó el informe móvil.'}
+              for file in ['ygo-system-deps.log','ygo-chromium-install.log','ygo-webkit-install.log']:
+                  log=Path('/tmp')/file
+                  if log.exists():
+                      tail=log.read_text(errors='replace')[-3500:]
+                      print('::warning title=R23_SETUP_'+file+'::'+tail.replace('%','%25').replace('\n','%0A').replace('\r','%0D'))
           text=json.dumps(result,ensure_ascii=False)
           print('::warning title=R23_MOBILE_RESULT::'+text.replace('%','%25').replace('\n','%0A').replace('\r','%0D'))
           summary='<h1>Corrección móvil R23</h1><pre>'+html.escape(text)+'</pre>'
