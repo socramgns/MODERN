@@ -7,10 +7,15 @@ permissions:
 jobs:
   mobile:
     runs-on: ubuntu-24.04
-    timeout-minutes: 40
+    timeout-minutes: 20
+    container:
+      image: mcr.microsoft.com/playwright/python@sha256:aa81288e738725378becba5b3e06cb0f3a7f012a610e87e8d767a090ea3f740d
+      options: --shm-size=1g
+    defaults:
+      run:
+        shell: bash
     env:
-      PLAYWRIGHT_BROWSERS_PATH: ${{ github.workspace }}/.cache/ms-playwright
-      PLAYWRIGHT_DOWNLOAD_CONNECTION_TIMEOUT: '90000'
+      PLAYWRIGHT_BROWSERS_PATH: /ms-playwright
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -22,51 +27,21 @@ jobs:
       - name: Preparar las dependencias de prueba
         timeout-minutes: 4
         run: python -m pip install --timeout 45 --retries 2 -r requirements-dev.txt
-      - uses: actions/cache@v4
-        timeout-minutes: 3
-        with:
-          path: ${{ env.PLAYWRIGHT_BROWSERS_PATH }}
-          key: ${{ runner.os }}-playwright-${{ hashFiles('requirements-dev.txt') }}
-      - name: Preparar las dependencias del sistema
-        timeout-minutes: 8
-        run: |
-          sudo tee /etc/apt/apt.conf.d/99-ygo-network-timeouts >/dev/null <<'APT'
-          Acquire::http::Timeout "30";
-          Acquire::https::Timeout "30";
-          Acquire::Retries "2";
-          APT
-          sudo python3 - <<'PY'
-          from pathlib import Path
-          import re
-          matched = 0
-          for path in [Path('/etc/apt/sources.list'),Path('/etc/apt/sources.list.d/ubuntu.sources')]:
-              if not path.exists():
-                  continue
-              original=path.read_text()
-              updated,count=re.subn(r'https?://(?:[a-zA-Z0-9.-]+\.)?archive\.ubuntu\.com/ubuntu/?',
-                  'https://archive.ubuntu.com/ubuntu/',original)
-              if count:
-                  matched+=count
-                  path.write_text(updated)
-          if not matched:
-              raise SystemExit('No se encontró la fuente oficial de Ubuntu esperada.')
-          print('Fuentes Ubuntu dirigidas al mirror oficial HTTPS; claves y verificación de firmas conservadas.')
-          PY
-          python -m playwright install-deps chromium webkit > /tmp/ygo-system-deps.log 2>&1
-      - name: Preparar Chromium
-        timeout-minutes: 5
-        run: python -m playwright install chromium > /tmp/ygo-chromium-install.log 2>&1
-      - name: Preparar WebKit
-        timeout-minutes: 5
-        run: python -m playwright install webkit > /tmp/ygo-webkit-install.log 2>&1
-      - name: Registrar el Chromium de las pruebas
+      - name: Comprobar los navegadores de la imagen oficial
+        timeout-minutes: 2
         run: |
           python - <<'PY'
-          import os
+          from pathlib import Path
           from playwright.sync_api import sync_playwright
+          import importlib.metadata, os
+          assert importlib.metadata.version('playwright')=='1.62.0'
           with sync_playwright() as runtime:
-              with open(os.environ['GITHUB_ENV'], 'a') as env:
-                  env.write('YGO_CHROMIUM=' + runtime.chromium.executable_path + '\n')
+              for engine in ['chromium','webkit']:
+                  executable=getattr(runtime,engine).executable_path
+                  assert Path(executable).is_file(),executable
+                  print(engine,executable)
+              with open(os.environ['GITHUB_ENV'],'a') as target:
+                  target.write('YGO_CHROMIUM='+runtime.chromium.executable_path+'\n')
           PY
       - name: Compilar los bytes que se van a probar
         timeout-minutes: 3
@@ -92,11 +67,6 @@ jobs:
               result['details']={row['name']:report.get('details',{}).get(row['name']) for row in failed}
           else:
               result={'pass':False,'error':'No se generó el informe móvil.'}
-              for file in ['ygo-system-deps.log','ygo-chromium-install.log','ygo-webkit-install.log']:
-                  log=Path('/tmp')/file
-                  if log.exists():
-                      tail=log.read_text(errors='replace')[-3500:]
-                      print('::warning title=R23_SETUP_'+file+'::'+tail.replace('%','%25').replace('\n','%0A').replace('\r','%0D'))
           text=json.dumps(result,ensure_ascii=False)
           print('::warning title=R23_MOBILE_RESULT::'+text.replace('%','%25').replace('\n','%0A').replace('\r','%0D'))
           summary='<h1>Corrección móvil R23</h1><pre>'+html.escape(text)+'</pre>'
