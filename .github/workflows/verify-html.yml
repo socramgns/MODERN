@@ -12,10 +12,16 @@ permissions:
 jobs:
   verify:
     runs-on: ubuntu-24.04
-    timeout-minutes: 65
+    timeout-minutes: 75
+    container:
+      image: mcr.microsoft.com/playwright/python@sha256:aa81288e738725378becba5b3e06cb0f3a7f012a610e87e8d767a090ea3f740d
+      options: --shm-size=1g
+    defaults:
+      run:
+        shell: bash
     env:
       PIP_DISABLE_PIP_VERSION_CHECK: '1'
-      PLAYWRIGHT_BROWSERS_PATH: ${{ github.workspace }}/.cache/ms-playwright
+      PLAYWRIGHT_BROWSERS_PATH: /ms-playwright
       PLAYWRIGHT_DOWNLOAD_CONNECTION_TIMEOUT: '90000'
     steps:
       - uses: actions/checkout@v4
@@ -34,25 +40,30 @@ jobs:
           python -m pip --version
           python -m pip install --timeout 45 --retries 2 -r requirements-dev.txt
           python -m playwright --version
-      - name: Recuperar la caché de navegadores Playwright
+      # La imagen oficial fijada incorpora los tres navegadores y sus bibliotecas.
+      # El arranque real de cada motor es obligatorio antes de probar el HTML.
+      - name: Verificar dependencias del sistema para los tres motores
         timeout-minutes: 3
-        uses: actions/cache@v4
-        with:
-          path: ${{ env.PLAYWRIGHT_BROWSERS_PATH }}
-          key: ${{ runner.os }}-playwright-${{ hashFiles('requirements-dev.txt') }}
-      # La caché solo contiene binarios. Las dependencias del sistema se
-      # comprueban siempre, incluso cuando los tres navegadores están en caché.
-      - name: Instalar dependencias del sistema para los tres motores
-        timeout-minutes: 8
         run: |
-          sudo tee /etc/apt/apt.conf.d/99-ygo-network-timeouts >/dev/null <<'APT'
-          Acquire::http::Timeout "30";
-          Acquire::https::Timeout "30";
-          Acquire::Retries "2";
-          APT
-          python -m playwright install-deps chromium firefox webkit
-      # Cada instalación comprueba también una caché existente y solo descarga
-      # lo que falte para la versión fijada de Playwright.
+          python - <<'PY'
+          import importlib.metadata, json
+          from pathlib import Path
+          from playwright.sync_api import sync_playwright
+          assert importlib.metadata.version('playwright') == '1.62.0'
+          with sync_playwright() as runtime:
+              for name in ['chromium', 'firefox', 'webkit']:
+                  engine = getattr(runtime, name)
+                  assert Path(engine.executable_path).is_file(), engine.executable_path
+                  browser = engine.launch(headless=True, args=['--no-sandbox'] if name == 'chromium' else [])
+                  try:
+                      page = browser.new_page()
+                      page.set_content('<!doctype html><title>R23 runtime check</title><p>Ready</p>')
+                      assert page.title() == 'R23 runtime check'
+                      print(json.dumps({'engine': name, 'version': browser.version, 'title': page.title(), 'pass': True}))
+                  finally:
+                      browser.close()
+          PY
+      # Estas comprobaciones son idempotentes sobre los binarios de la imagen.
       - name: Preparar Chromium
         timeout-minutes: 5
         run: python -m playwright install chromium
@@ -72,7 +83,7 @@ jobs:
               Path('/tmp/ygo-chromium-path').write_text(runtime.chromium.executable_path)
           PY
           if [ ! -x /usr/bin/chromium ]; then
-            sudo ln -s "$(cat /tmp/ygo-chromium-path)" /usr/bin/chromium
+            ln -s "$(cat /tmp/ygo-chromium-path)" /usr/bin/chromium
           fi
       - name: Recuperar la fuente técnica fijada y comprobar idempotencia
         timeout-minutes: 4
@@ -85,11 +96,40 @@ jobs:
           python tools/build.py
           cmp Analizador_YuGiOh.html dist/Calculadora_de_Barajas_YuGiOh_Alpha_1263_Corregida.html
       - name: Ejecutar pruebas del entregable
-        timeout-minutes: 40
+        timeout-minutes: 45
         run: python tests/run_all.py --no-build
       - name: Exigir comprobación entre motores
         timeout-minutes: 5
         run: python tests/compatibility_browser.py --require-cross-browser
+      - name: Publicar el resultado vinculado de CI
+        if: always()
+        timeout-minutes: 1
+        run: |
+          python - <<'PY'
+          import hashlib, html, json, os
+          from pathlib import Path
+          path = Path('dist/validation-summary.json')
+          build_path = Path('dist/build-manifest.json')
+          build = json.loads(build_path.read_text()) if build_path.is_file() else {}
+          if path.is_file():
+              raw = path.read_bytes()
+              report = json.loads(raw)
+              rows = report.get('suites', [])
+              failed = [row.get('name', 'UNNAMED_GROUP') for row in rows if row.get('pass') is not True]
+              binding_matches = (report.get('buildId') == build.get('buildId') and report.get('htmlSha256') == build.get('htmlSha256'))
+              result = {'schema': 'ygo-ci-result-summary/v1', 'pass': report.get('pass') is True and len(rows) == 88 and not failed and binding_matches,
+                        'buildId': report.get('buildId'), 'htmlSha256': report.get('htmlSha256'), 'groups': len(rows),
+                        'failed': failed, 'buildBindingMatches': binding_matches, 'rawReportSha256': hashlib.sha256(raw).hexdigest(),
+                        'sourceCommit': os.environ.get('GITHUB_SHA'), 'sourceRun': os.environ.get('GITHUB_RUN_ID')}
+          else:
+              result = {'schema': 'ygo-ci-result-summary/v1', 'pass': False, 'buildId': build.get('buildId'),
+                        'htmlSha256': build.get('htmlSha256'), 'groups': None, 'failed': [],
+                        'error': 'No se generó dist/validation-summary.json.', 'sourceCommit': os.environ.get('GITHUB_SHA'),
+                        'sourceRun': os.environ.get('GITHUB_RUN_ID')}
+          text = json.dumps(result, ensure_ascii=False, separators=(',', ':'))
+          print('::warning title=R23_CI_RESULT::' + text.replace('%', '%25').replace('\r', '%0D').replace('\n', '%0A'))
+          Path(os.environ['GITHUB_STEP_SUMMARY']).write_text('<h1>Resultado R23</h1><pre>' + html.escape(text) + '</pre>')
+          PY
       - name: Guardar los informes
         if: always()
         timeout-minutes: 3
