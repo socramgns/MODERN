@@ -35,6 +35,23 @@ jobs:
           Acquire::https::Timeout "30";
           Acquire::Retries "2";
           APT
+          sudo python3 - <<'PY'
+          from pathlib import Path
+          import re
+          matched = 0
+          for path in [Path('/etc/apt/sources.list'),Path('/etc/apt/sources.list.d/ubuntu.sources')]:
+              if not path.exists():
+                  continue
+              original=path.read_text()
+              updated,count=re.subn(r'https?://(?:[a-zA-Z0-9.-]+\.)?archive\.ubuntu\.com/ubuntu/?',
+                  'https://archive.ubuntu.com/ubuntu/',original)
+              if count:
+                  matched+=count
+                  path.write_text(updated)
+          if not matched:
+              raise SystemExit('No se encontró la fuente oficial de Ubuntu esperada.')
+          print('Fuentes Ubuntu dirigidas al mirror oficial HTTPS; claves y verificación de firmas conservadas.')
+          PY
           python -m playwright install-deps chromium webkit > /tmp/ygo-system-deps.log 2>&1
       - name: Preparar Chromium
         timeout-minutes: 5
