@@ -378,7 +378,6 @@ jobs:
                       control['offlineNavigationError'] = offline_error
                       check('real_http_fails_with_internet_disconnected', offline_error is not None and 'net::ERR_INTERNET_DISCONNECTED' in offline_error)
                       check('offline_request_never_reached_server', requests == [online])
-                      control['navigatorAfterFailedOfflineRequest'] = page.evaluate('()=>navigator.onLine')
                       context.set_offline(False)
                       override(session, False)
                       response = page.goto(base + restored, wait_until='domcontentloaded', timeout=15000)
