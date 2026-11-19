@@ -44,10 +44,16 @@ jobs:
         timeout-minutes: 3
         run: |
           python - <<'PY'
-          import importlib.metadata, json
+          import importlib.metadata, json, os
           from pathlib import Path
           from playwright.sync_api import sync_playwright
           assert importlib.metadata.version('playwright') == '1.62.0'
+          # GitHub monta este directorio efímero con el UID del runner anfitrión.
+          # Firefox exige que pertenezca al usuario real del contenedor.
+          runtime_directory = Path('/github/home')
+          assert runtime_directory.is_dir() and not runtime_directory.is_symlink()
+          if runtime_directory.stat().st_uid != os.getuid():
+              os.chown(runtime_directory, os.getuid(), os.getgid())
           checks = []
           with sync_playwright() as runtime:
               for name in ['chromium', 'firefox', 'webkit']:
