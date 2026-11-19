@@ -190,3 +190,136 @@ jobs:
               assert len(text) <= 3900
               print('::warning title=' + row['title'] + '::' + text.replace('%', '%25').replace('\r', '%0D').replace('\n', '%0A'), flush=True)
           PY
+  offline-probe:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    container:
+      image: mcr.microsoft.com/playwright/python@sha256:aa81288e738725378becba5b3e06cb0f3a7f012a610e87e8d767a090ea3f740d
+      options: --shm-size=1g
+    defaults:
+      run:
+        shell: bash
+    env:
+      PIP_DISABLE_PIP_VERSION_CHECK: '1'
+      PLAYWRIGHT_BROWSERS_PATH: /ms-playwright
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: 4faa7a82a7cafb6d0d3f4657ec06b2af74200273
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Instalar dependencias fijadas
+        timeout-minutes: 3
+        run: python -m pip install --timeout 45 --retries 2 -r requirements-dev.txt
+      - name: Compilar y comparar los bytes de AD
+        timeout-minutes: 3
+        run: |
+          python tools/build.py
+          cmp Analizador_YuGiOh.html dist/Calculadora_de_Barajas_YuGiOh_Alpha_1263_Corregida.html
+      - name: Comparar navigator.onLine en ocho contextos aislados
+        timeout-minutes: 8
+        run: |
+          python - <<'PY'
+          import hashlib, importlib.metadata, itertools, json, os, traceback
+          from pathlib import Path
+          from playwright.sync_api import sync_playwright
+          expected_build = 'ad379fc6b8cddeaff64a1895a2eb97fed493b037a7e725a3bd9681a185d94a64'
+          expected_hash = '017f4cd81211d2be486c6634e876254fe6dc2225e6419c02e459d69ea7022c9e'
+          build = json.loads(Path('dist/build-manifest.json').read_text())
+          document = Path(build['output']).read_bytes()
+          digest = hashlib.sha256(document).hexdigest()
+          assert build['buildId'] == expected_build
+          assert digest == build['htmlSha256'] == expected_hash
+          assert importlib.metadata.version('playwright') == '1.62.0'
+          output = Path('/tmp/r23-offline-probe')
+          output.mkdir(parents=True, exist_ok=True)
+          rows = []
+          with sync_playwright() as runtime:
+              executable = runtime.chromium.executable_path
+              assert Path(executable).is_file(), executable
+              assert 'headless_shell' not in executable, executable
+              for binary, origin, timing in itertools.product(['full_chromium', 'default_headless_shell'], ['https_test', 'http_loopback'], ['before_page', 'after_page']):
+                  target = ('https://ygo-offline-probe.test/Analizador_YuGiOh.html' if origin == 'https_test'
+                            else 'http://127.0.0.1:8766/Analizador_YuGiOh.html')
+                  row = {'variant': binary + '_' + origin + '_' + timing, 'binary': binary, 'target': target, 'offlineTiming': timing,
+                         'executable': executable if binary == 'full_chromium' else '<Playwright default headless shell>', 'buildId': build['buildId'], 'htmlSha256': digest,
+                         'executed': False, 'errors': [], 'pageErrors': [], 'blocked': []}
+                  browser = context = None
+                  try:
+                      launch = {'headless': True, 'args': ['--no-sandbox']}
+                      if binary == 'full_chromium':
+                          launch['executable_path'] = executable
+                      browser = runtime.chromium.launch(**launch)
+                      row['engineVersion'] = browser.version
+                      context = browser.new_context(viewport={'width': 1440, 'height': 1000})
+                      def deliver(route):
+                          if route.request.url == target:
+                              route.fulfill(status=200, content_type='text/html; charset=utf-8', body=document)
+                          else:
+                              row['blocked'].append(route.request.url)
+                              route.abort()
+                      context.route('**/*', deliver)
+                      if timing == 'before_page':
+                          context.set_offline(True)
+                      page = context.new_page()
+                      page.on('pageerror', lambda error: row['pageErrors'].append(str(error)))
+                      if timing == 'after_page':
+                          context.set_offline(True)
+                      row['executed'] = True
+                      row['onlineBeforeGoto'] = page.evaluate('()=>navigator.onLine')
+                      response = page.goto(target, wait_until='domcontentloaded', timeout=30000)
+                      row['onlineAfterGoto'] = page.evaluate('()=>navigator.onLine')
+                      row['responseStatus'] = response.status if response else None
+                      row['responseSha256'] = hashlib.sha256(response.body()).hexdigest() if response else None
+                      row['responseHashMatches'] = row['responseSha256'] == digest
+                      row['documentBuildId'] = page.evaluate('()=>window.YGO_BUILD_MANIFEST?.buildId||null')
+                      row['documentBuildMatches'] = row['documentBuildId'] == build['buildId']
+                      try:
+                          page.wait_for_function('()=>!!window.YGOAdvancedWorkbench&&!!window.YGODataCatalog', timeout=30000)
+                          row['advancedWorkbenchReady'] = page.evaluate('''async()=>await Promise.race([
+                            Promise.all([YGODataCatalog.ready,YGOAdvancedWorkbench.ready]).then(()=>true),
+                            new Promise(resolve=>setTimeout(()=>resolve(false),20000))])''')
+                      except Exception:
+                          row['errors'].append({'phase': 'ready', 'traceback': traceback.format_exc()})
+                      row['navigatorOnline'] = page.evaluate('()=>navigator.onLine')
+                      row['offlineAssertionWouldPass'] = row['navigatorOnline'] is False
+                  except Exception:
+                      row['errors'].append({'phase': 'variant', 'traceback': traceback.format_exc()})
+                  finally:
+                      for name, resource in [('context', context), ('browser', browser)]:
+                          if resource is not None:
+                              try:
+                                  resource.close()
+                              except Exception:
+                                  row['errors'].append({'phase': name + '_close', 'traceback': traceback.format_exc()})
+                      rows.append(row)
+                      (output / 'results.json').write_text(json.dumps(rows, ensure_ascii=False, indent=2) + '\n')
+                      compact = {key: value for key, value in row.items() if key not in ['errors', 'pageErrors', 'blocked']}
+                      compact['errors'] = [{'phase': error['phase'], 'traceback': error['traceback'][-1200:]} for error in row['errors'][:1]]
+                      compact['pageErrors'] = [value[-700:] for value in row['pageErrors'][:1]]
+                      compact['rawErrorCount'] = len(row['errors'])
+                      compact['rawPageErrorCount'] = len(row['pageErrors'])
+                      compact['blockedRequests'] = len(row['blocked'])
+                      text = json.dumps(compact, ensure_ascii=False, separators=(',', ':'))
+                      assert len(text) <= 3900, 'Compact probe diagnostic exceeded annotation size'
+                      print('R23_OFFLINE_PROBE ' + text, flush=True)
+                      print('::warning title=R23_OFFLINE_PROBE_' + row['variant'] + '::' + text.replace('%', '%25').replace('\r', '%0D').replace('\n', '%0A'), flush=True)
+          assert len(rows) == 8 and len({row['variant'] for row in rows}) == 8
+          assert all(row['executed'] for row in rows), 'One or more variants could not create a page and set offline; inspect raw errors'
+          summary = {'schema': 'ygo-offline-probe/v1', 'sourceCommit': '4faa7a82a7cafb6d0d3f4657ec06b2af74200273',
+                     'buildId': build['buildId'], 'htmlSha256': digest, 'variantsExecuted': len(rows), 'variants': rows}
+          (output / 'summary.json').write_text(json.dumps(summary, ensure_ascii=False, indent=2) + '\n')
+          Path(os.environ['GITHUB_STEP_SUMMARY']).write_text('```json\n' + json.dumps(summary, ensure_ascii=False, indent=2) + '\n```\n')
+          PY
+      - name: Guardar errores y resultados completos de las ocho variantes
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: r23-offline-probe
+          path: /tmp/r23-offline-probe/
+          if-no-files-found: warn
+          retention-days: 7
