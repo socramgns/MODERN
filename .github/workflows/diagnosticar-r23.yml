@@ -220,121 +220,198 @@ jobs:
         run: |
           python tools/build.py
           cmp Analizador_YuGiOh.html dist/Calculadora_de_Barajas_YuGiOh_Alpha_1263_Corregida.html
-      - name: Comprobar Network.overrideNetworkState en Chromium y headless shell
+      - name: Comparar tres momentos de CDP y controlar la desconexión HTTP real
         timeout-minutes: 8
         run: |
           python - <<'PY'
-          import hashlib, importlib.metadata, itertools, json, os, traceback
+          import hashlib, importlib.metadata, json, os, threading, traceback, uuid
+          from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
           from pathlib import Path
-          from playwright.sync_api import sync_playwright
+          from playwright.sync_api import Error as PlaywrightError, sync_playwright
+
           expected_build = 'ad379fc6b8cddeaff64a1895a2eb97fed493b037a7e725a3bd9681a185d94a64'
           expected_hash = '017f4cd81211d2be486c6634e876254fe6dc2225e6419c02e459d69ea7022c9e'
           build = json.loads(Path('dist/build-manifest.json').read_text())
           document = Path(build['output']).read_bytes()
           digest = hashlib.sha256(document).hexdigest()
-          assert build['buildId'] == expected_build
-          assert digest == build['htmlSha256'] == expected_hash
+          assert build['buildId'] == expected_build and digest == build['htmlSha256'] == expected_hash
           assert importlib.metadata.version('playwright') == '1.62.0'
           output = Path('/tmp/r23-offline-probe')
           output.mkdir(parents=True, exist_ok=True)
           rows = []
+
+          def emit(title, row):
+              (output / (title + '.json')).write_text(json.dumps(row, ensure_ascii=False, indent=2) + '\n')
+              compact = {key: value for key, value in row.items() if key not in ['errors', 'pageErrors', 'blocked', 'events']}
+              compact['errors'] = [str(value)[-800:] for value in row.get('errors', [])[:1]]
+              compact['pageErrors'] = [value[-500:] for value in row.get('pageErrors', [])[:1]]
+              compact['eventCalls'] = [{key: value for key, value in entry.items() if key != 'error'} for entry in row.get('events', [])]
+              compact['eventErrors'] = [entry['error'][-500:] for entry in row.get('events', []) if 'error' in entry][:1]
+              compact['blockedRequests'] = len(row.get('blocked', []))
+              text = json.dumps(compact, ensure_ascii=False, separators=(',', ':'))
+              assert len(text) <= 3900
+              print(title + ' ' + text, flush=True)
+              print('::warning title=' + title + '::' + text.replace('%', '%25').replace('\r', '%0D').replace('\n', '%0A'), flush=True)
+
+          def override(session, offline):
+              return session.send('Network.overrideNetworkState', {
+                  'offline': offline, 'latency': 0, 'downloadThroughput': -1,
+                  'uploadThroughput': -1, 'connectionType': 'none' if offline else 'ethernet',
+              })
+
           with sync_playwright() as runtime:
               executable = runtime.chromium.executable_path
-              assert Path(executable).is_file(), executable
-              assert 'headless_shell' not in executable, executable
-              for binary, origin, timing in itertools.product(['full_chromium', 'default_headless_shell'], ['https_test'], ['after_page']):
-                  target = ('https://ygo-offline-probe.test/Analizador_YuGiOh.html' if origin == 'https_test'
-                            else 'http://127.0.0.1:8766/Analizador_YuGiOh.html')
-                  row = {'variant': binary + '_' + origin + '_' + timing + '_cdp_override', 'binary': binary, 'target': target, 'offlineTiming': timing,
-                         'executable': executable if binary == 'full_chromium' else '<Playwright default headless shell>', 'buildId': build['buildId'], 'htmlSha256': digest,
-                         'executed': False, 'errors': [], 'pageErrors': [], 'blocked': []}
-                  browser = context = cdp = None
-                  try:
-                      launch = {'headless': True, 'args': ['--no-sandbox']}
-                      if binary == 'full_chromium':
-                          launch['executable_path'] = executable
-                      browser = runtime.chromium.launch(**launch)
-                      row['engineVersion'] = browser.version
-                      context = browser.new_context(viewport={'width': 1440, 'height': 1000})
-                      def deliver(route):
-                          if route.request.url == target:
-                              route.fulfill(status=200, content_type='text/html; charset=utf-8', body=document)
-                          else:
-                              row['blocked'].append(route.request.url)
-                              route.abort()
-                      context.route('**/*', deliver)
-                      if timing == 'before_page':
-                          context.set_offline(True)
-                      page = context.new_page()
-                      page.on('pageerror', lambda error: row['pageErrors'].append(str(error)))
-                      if timing == 'after_page':
-                          context.set_offline(True)
-                      row['executed'] = True
-                      row['navigatorBeforeOverride'] = page.evaluate('()=>navigator.onLine')
-                      parameters = {'offline': True, 'latency': 0, 'downloadThroughput': 0,
-                                    'uploadThroughput': 0, 'connectionType': 'none'}
-                      row['cdpCommand'] = 'Network.overrideNetworkState'
-                      row['cdpParameters'] = parameters
+              assert Path(executable).is_file() and 'headless_shell' not in executable
+              browser = runtime.chromium.launch(executable_path=executable, headless=True, args=['--no-sandbox'])
+              try:
+                  for variant in ['after_goto', 'framenavigated', 'domcontentloaded']:
+                      target = 'https://ygo-offline-probe.test/Analizador_YuGiOh.html'
+                      row = {'variant': variant, 'target': target, 'executed': False, 'engineVersion': browser.version,
+                             'buildId': build['buildId'], 'htmlSha256': digest, 'events': [], 'errors': [], 'pageErrors': [], 'blocked': []}
+                      context = None
                       try:
-                          cdp = context.new_cdp_session(page)
-                          cdp.send('Network.enable')
-                          row['cdpResult'] = cdp.send('Network.overrideNetworkState', parameters)
-                          row['cdpOverrideSucceeded'] = True
-                      except Exception:
-                          row['cdpOverrideSucceeded'] = False
-                          row['errors'].append({'phase': 'cdp_override', 'traceback': traceback.format_exc()})
-                      row['navigatorAfterOverride'] = page.evaluate('()=>navigator.onLine')
-                      row['onlineBeforeGoto'] = page.evaluate('()=>navigator.onLine')
-                      response = page.goto(target, wait_until='domcontentloaded', timeout=30000)
-                      row['onlineAfterGoto'] = page.evaluate('()=>navigator.onLine')
-                      row['responseStatus'] = response.status if response else None
-                      row['responseSha256'] = hashlib.sha256(response.body()).hexdigest() if response else None
-                      row['responseHashMatches'] = row['responseSha256'] == digest
-                      row['documentBuildId'] = page.evaluate('()=>window.YGO_BUILD_MANIFEST?.buildId||null')
-                      row['documentBuildMatches'] = row['documentBuildId'] == build['buildId']
-                      try:
-                          page.wait_for_function('()=>!!window.YGOAdvancedWorkbench&&!!window.YGODataCatalog', timeout=30000)
-                          row['advancedWorkbenchReady'] = page.evaluate('''async()=>await Promise.race([
-                            Promise.all([YGODataCatalog.ready,YGOAdvancedWorkbench.ready]).then(()=>true),
-                            new Promise(resolve=>setTimeout(()=>resolve(false),20000))])''')
-                      except Exception:
-                          row['errors'].append({'phase': 'ready', 'traceback': traceback.format_exc()})
-                      row['navigatorOnline'] = page.evaluate('()=>navigator.onLine')
-                      row['offlineAssertionWouldPass'] = row['navigatorOnline'] is False
-                      row['cdpSessionAliveThroughMeasurements'] = cdp is not None
-                  except Exception:
-                      row['errors'].append({'phase': 'variant', 'traceback': traceback.format_exc()})
-                  finally:
-                      for name, resource in [('context', context), ('browser', browser)]:
-                          if resource is not None:
+                          context = browser.new_context(viewport={'width': 1440, 'height': 1000})
+                          def deliver(route):
+                              if route.request.url == target:
+                                  route.fulfill(status=200, content_type='text/html; charset=utf-8', body=document)
+                              else:
+                                  row['blocked'].append(route.request.url)
+                                  route.abort()
+                          context.route('**/*', deliver)
+                          context.set_offline(True)
+                          page = context.new_page()
+                          page.on('pageerror', lambda error: row['pageErrors'].append(str(error)))
+                          session = context.new_cdp_session(page)
+                          page._r23_offline_probe_cdp_session = session
+                          session.send('Network.enable')
+                          def apply(event):
+                              entry = {'event': event, 'completed': False}
+                              row['events'].append(entry)
                               try:
-                                  resource.close()
+                                  entry['result'] = override(session, True)
+                                  entry['completed'] = True
                               except Exception:
-                                  row['errors'].append({'phase': name + '_close', 'traceback': traceback.format_exc()})
-                      rows.append(row)
-                      (output / 'results.json').write_text(json.dumps(rows, ensure_ascii=False, indent=2) + '\n')
-                      compact = {key: value for key, value in row.items() if key not in ['errors', 'pageErrors', 'blocked']}
-                      compact['errors'] = [{'phase': error['phase'], 'traceback': error['traceback'][-1200:]} for error in row['errors'][:1]]
-                      compact['pageErrors'] = [value[-700:] for value in row['pageErrors'][:1]]
-                      compact['rawErrorCount'] = len(row['errors'])
-                      compact['rawPageErrorCount'] = len(row['pageErrors'])
-                      compact['blockedRequests'] = len(row['blocked'])
-                      text = json.dumps(compact, ensure_ascii=False, separators=(',', ':'))
-                      assert len(text) <= 3900, 'Compact probe diagnostic exceeded annotation size'
-                      print('R23_OFFLINE_PROBE ' + text, flush=True)
-                      print('::warning title=R23_OFFLINE_PROBE_' + row['variant'] + '::' + text.replace('%', '%25').replace('\r', '%0D').replace('\n', '%0A'), flush=True)
-          assert len(rows) == 2 and len({row['variant'] for row in rows}) == 2
-          assert all(row['executed'] for row in rows), 'One or more variants could not create a page and set offline; inspect raw errors'
-          summary = {'schema': 'ygo-offline-probe-cdp/v1', 'sourceCommit': '4faa7a82a7cafb6d0d3f4657ec06b2af74200273',
-                     'buildId': build['buildId'], 'htmlSha256': digest, 'variantsExecuted': len(rows), 'variants': rows}
+                                  entry['error'] = traceback.format_exc()
+                          row['navigatorBeforeInitialOverride'] = page.evaluate('()=>navigator.onLine')
+                          apply('before_goto')
+                          row['navigatorAfterInitialOverride'] = page.evaluate('()=>navigator.onLine')
+                          if variant == 'framenavigated':
+                              page.on('framenavigated', lambda frame: apply('main_frame_commit') if frame == page.main_frame else None)
+                          elif variant == 'domcontentloaded':
+                              page.on('domcontentloaded', lambda: apply('domcontentloaded'))
+                          row['executed'] = True
+                          response = page.goto(target, wait_until='domcontentloaded', timeout=30000)
+                          row['navigatorAfterGoto'] = page.evaluate('()=>navigator.onLine')
+                          if variant == 'after_goto':
+                              apply('after_goto')
+                          row['navigatorAfterVariantOverride'] = page.evaluate('()=>navigator.onLine')
+                          row['responseStatus'] = response.status if response else None
+                          row['responseSha256'] = hashlib.sha256(response.body()).hexdigest() if response else None
+                          row['responseHashMatches'] = row['responseSha256'] == digest
+                          row['documentBuildId'] = page.evaluate('()=>window.YGO_BUILD_MANIFEST?.buildId||null')
+                          row['documentBuildMatches'] = row['documentBuildId'] == build['buildId']
+                          try:
+                              page.wait_for_function('()=>!!window.YGOAdvancedWorkbench&&!!window.YGODataCatalog', timeout=30000)
+                              row['advancedWorkbenchReady'] = page.evaluate('''async()=>await Promise.race([
+                                Promise.all([YGODataCatalog.ready,YGOAdvancedWorkbench.ready]).then(()=>true),
+                                new Promise(resolve=>setTimeout(()=>resolve(false),20000))])''')
+                          except Exception:
+                              row['errors'].append(traceback.format_exc())
+                          row['navigatorOnline'] = page.evaluate('()=>navigator.onLine')
+                          row['offlineAssertionWouldPass'] = row['navigatorOnline'] is False
+                      except Exception:
+                          row['errors'].append(traceback.format_exc())
+                      finally:
+                          if context is not None:
+                              try:
+                                  context.close()
+                              except Exception:
+                                  row['errors'].append(traceback.format_exc())
+                          rows.append(row)
+                          emit('R23_OFFLINE_PROBE_' + variant, row)
+
+                  sentinel = b'<!doctype html><link rel="icon" href="data:,"><title>R23 offline control</title><p>r23-offline-control-v1</p>'
+                  requests = []
+                  control = {'variant': 'real_unrouted_http_control', 'pass': False, 'checks': [], 'errors': [], 'pageErrors': []}
+                  class Handler(BaseHTTPRequestHandler):
+                      def do_GET(self):
+                          requests.append(self.path)
+                          self.send_response(200)
+                          self.send_header('Content-Type', 'text/html; charset=utf-8')
+                          self.send_header('Content-Length', str(len(sentinel)))
+                          self.send_header('Cache-Control', 'no-store')
+                          self.end_headers()
+                          self.wfile.write(sentinel)
+                      def log_message(self, *args):
+                          pass
+                  def check(name, passed):
+                      control['checks'].append({'name': name, 'pass': bool(passed)})
+                      assert passed, name
+                  server = ThreadingHTTPServer(('127.0.0.1', 0), Handler)
+                  thread = threading.Thread(target=server.serve_forever, daemon=True)
+                  thread.start()
+                  context = None
+                  try:
+                      # This context has no request routing or interception handlers.
+                      context = browser.new_context()
+                      page = context.new_page()
+                      session = context.new_cdp_session(page)
+                      page._r23_offline_probe_cdp_session = session
+                      session.send('Network.enable')
+                      nonce = uuid.uuid4().hex
+                      base = f'http://127.0.0.1:{server.server_port}'
+                      online = f'/r23-control?phase=online&nonce={nonce}'
+                      blocked = f'/r23-control?phase=offline&nonce={nonce}'
+                      restored = f'/r23-control?phase=restored&nonce={nonce}'
+                      response = page.goto(base + online, wait_until='domcontentloaded', timeout=15000)
+                      check('online_200_sentinel', response is not None and response.status == 200 and response.body() == sentinel)
+                      control['onlineNavigator'] = page.evaluate('()=>navigator.onLine')
+                      check('online_request_reached_server', requests == [online])
+                      context.set_offline(True)
+                      override(session, True)
+                      control['navigatorBeforeOfflineRequest'] = page.evaluate('()=>navigator.onLine')
+                      offline_error = None
+                      try:
+                          page.goto(base + blocked, wait_until='domcontentloaded', timeout=15000)
+                      except PlaywrightError as error:
+                          offline_error = str(error)
+                      control['offlineNavigationError'] = offline_error
+                      check('real_http_fails_with_internet_disconnected', offline_error is not None and 'net::ERR_INTERNET_DISCONNECTED' in offline_error)
+                      check('offline_request_never_reached_server', requests == [online])
+                      control['navigatorAfterFailedOfflineRequest'] = page.evaluate('()=>navigator.onLine')
+                      context.set_offline(False)
+                      override(session, False)
+                      response = page.goto(base + restored, wait_until='domcontentloaded', timeout=15000)
+                      check('restored_200_sentinel', response is not None and response.status == 200 and response.body() == sentinel)
+                      control['restoredNavigator'] = page.evaluate('()=>navigator.onLine')
+                      check('exactly_two_real_requests', requests == [online, restored])
+                      check('restored_navigator_online', control['restoredNavigator'] is True)
+                      control['pass'] = all(value['pass'] for value in control['checks'])
+                  except Exception:
+                      control['errors'].append(traceback.format_exc())
+                  finally:
+                      if context is not None:
+                          context.close()
+                      server.shutdown()
+                      server.server_close()
+                      thread.join(timeout=5)
+                      control['serverRequests'] = requests
+                      control['serverRequestCount'] = len(requests)
+                      emit('R23_OFFLINE_NETWORK_CONTROL', control)
+              finally:
+                  browser.close()
+          assert len(rows) == 3 and all(row['executed'] for row in rows)
+          summary = {'schema': 'ygo-offline-event-probe/v1', 'sourceCommit': '4faa7a82a7cafb6d0d3f4657ec06b2af74200273',
+                     'buildId': build['buildId'], 'htmlSha256': digest, 'variants': rows, 'networkControl': control}
           (output / 'summary.json').write_text(json.dumps(summary, ensure_ascii=False, indent=2) + '\n')
           Path(os.environ['GITHUB_STEP_SUMMARY']).write_text('```json\n' + json.dumps(summary, ensure_ascii=False, indent=2) + '\n```\n')
+          assert control['pass'], 'Real HTTP network isolation control failed; inspect captured errors'
           PY
-      - name: Guardar errores y resultados completos de ambas variantes CDP
+      - name: Guardar eventos nativos y control HTTP real
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: r23-offline-probe-cdp
+          name: r23-offline-probe-events
           path: /tmp/r23-offline-probe/
           if-no-files-found: warn
           retention-days: 7
