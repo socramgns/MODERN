@@ -48,18 +48,26 @@ jobs:
           from pathlib import Path
           from playwright.sync_api import sync_playwright
           assert importlib.metadata.version('playwright') == '1.62.0'
+          checks = []
           with sync_playwright() as runtime:
               for name in ['chromium', 'firefox', 'webkit']:
-                  engine = getattr(runtime, name)
-                  assert Path(engine.executable_path).is_file(), engine.executable_path
-                  browser = engine.launch(headless=True, args=['--no-sandbox'] if name == 'chromium' else [])
                   try:
-                      page = browser.new_page()
-                      page.set_content('<!doctype html><title>R23 runtime check</title><p>Ready</p>')
-                      assert page.title() == 'R23 runtime check'
-                      print(json.dumps({'engine': name, 'version': browser.version, 'title': page.title(), 'pass': True}))
-                  finally:
-                      browser.close()
+                      engine = getattr(runtime, name)
+                      assert Path(engine.executable_path).is_file(), engine.executable_path
+                      browser = engine.launch(headless=True, args=['--no-sandbox'] if name == 'chromium' else [])
+                      try:
+                          page = browser.new_page()
+                          page.set_content('<!doctype html><title>R23 runtime check</title><p>Ready</p>')
+                          assert page.title() == 'R23 runtime check'
+                          checks.append({'engine': name, 'version': browser.version, 'title': page.title(), 'pass': True})
+                      finally:
+                          browser.close()
+                  except Exception as error:
+                      checks.append({'engine': name, 'pass': False, 'error': str(error)[-2400:]})
+          for check in checks:
+              text = json.dumps(check, ensure_ascii=False, separators=(',', ':'))
+              print('::warning title=R23_RUNTIME_CHECK::' + text.replace('%', '%25').replace('\r', '%0D').replace('\n', '%0A'))
+          assert len(checks) == 3 and all(check['pass'] for check in checks), 'One or more browser runtime checks failed'
           PY
       # Estas comprobaciones son idempotentes sobre los binarios de la imagen.
       - name: Preparar Chromium
