@@ -15,59 +15,178 @@ jobs:
     timeout-minutes: 10
     env:
       GH_TOKEN: ${{ github.token }}
-      YGO_SOURCE_RUN: '44385656176'
+      YGO_SOURCE_RUN: '44440213754'
       YGO_EVIDENCE_DIR: /tmp/ygo-r23-evidence
     steps:
       - name: Descargar los informes ya generados
         run: gh run download "$YGO_SOURCE_RUN" --repo "$GITHUB_REPOSITORY" --name pruebas-analizador-yugioh --dir "$YGO_EVIDENCE_DIR"
-      - name: Publicar el diagnóstico de los resultados
+      - name: Preparar los diagnósticos de los fallos reales
         if: always()
         run: |
           python3 - <<'PY'
-          import base64, hashlib, html, json, os
+          import hashlib, html, json, os, re
           from pathlib import Path
           root = Path(os.environ['YGO_EVIDENCE_DIR']).resolve()
-          report_path = root / 'dist/validation-summary.json'
-          def warning(title, message):
-              escaped = str(message).replace('%', '%25').replace('\r', '%0D').replace('\n', '%0A')
-              print('::warning title=' + title + '::' + escaped, flush=True)
-          if not report_path.is_file():
-              warning('R23_DIAGNOSTIC_MISSING_REPORT', 'No se descargó el informe del run ' + os.environ['YGO_SOURCE_RUN'])
-              raise SystemExit(1)
-          raw = report_path.read_bytes()
+          path = root / 'dist/validation-summary.json'
+          assert path.is_file(), 'No se descargó dist/validation-summary.json del run solicitado'
+          raw = path.read_bytes()
           report = json.loads(raw)
-          assert report['buildId'] == 'bdaf08b1741d9615ab5c81ededfff5b9fd1eba110c0aa25db75fd4b11a44dabd'
-          assert report['htmlSha256'] == '92cbd3384c3a1807fac9e52fc9abfcc4ecb3cbc21413678e57b2d713ba54cd1b'
-          assert len(report['suites']) == 88
-          failed = [row for row in report['suites'] if not row['pass']]
-          warning('R23_FAILED_GROUPS', json.dumps({'sourceRun':os.environ['YGO_SOURCE_RUN'], 'failed':failed}, ensure_ascii=False))
-          # One bounded annotation exposes the original summary without requiring
-          # a viewer to obtain a token or a direct artifact-download session.
-          encoded = base64.b64encode(raw).decode()
-          if len(encoded) < 50000:
-              warning('R23_VALIDATION_SUMMARY_BASE64', encoded)
-          summary = ['# Diagnóstico R23', 'Run original: ' + os.environ['YGO_SOURCE_RUN'],
-                     'SHA-256 del informe original: `' + hashlib.sha256(raw).hexdigest() + '`',
-                     'Grupos: ' + str(len(report['suites'])),
-                     'Fallidos: ' + ', '.join(row['name'] for row in failed),
-                     '<pre>' + html.escape(raw.decode()) + '</pre>']
+          assert report['buildId'] == 'ad379fc6b8cddeaff64a1895a2eb97fed493b037a7e725a3bd9681a185d94a64'
+          assert report['htmlSha256'] == '017f4cd81211d2be486c6634e876254fe6dc2225e6419c02e459d69ea7022c9e'
+          assert hashlib.sha256(raw).hexdigest() == '14a6dcdfb59c8c834caa5db2433d23f459d83ceee404d3f084d1548834fbfd39'
+          assert len(report['suites']) == 88 and report['pass'] is False
+          failed = [row for row in report['suites'] if row['pass'] is not True]
+          messages = []
+          def compact(value):
+              return json.dumps(value, ensure_ascii=False, separators=(',', ':'))
+          def add(title, value):
+              shortened = False
+              for key in ['excerpt', 'firstFailureExcerpt', 'detailExcerpt']:
+                  while len(compact(value)) > 3800 and len(value.get(key, '')) > 100:
+                      value[key] = value[key][100:] if key == 'excerpt' else value[key][:-100]
+                      shortened = True
+              if len(compact(value)) > 3800 and 'failedChecks' in value:
+                  value['failedChecksOmitted'] = max(0, len(value['failedChecks']) - 5)
+                  value['failedChecks'] = value['failedChecks'][:5]
+                  shortened = True
+              if shortened:value['diagnosticExcerptTruncated'] = True
+              assert len(compact(value)) <= 3900, 'Diagnostic message exceeded its bounded transport size'
+              messages.append({'title': title, 'payload': value})
+          add('R23_FAILED_GROUPS', {'sourceRun': os.environ['YGO_SOURCE_RUN'], 'sourceCommit': '4faa7a82a7cafb6d0d3f4657ec06b2af74200273', 'buildId': report['buildId'], 'htmlSha256': report['htmlSha256'], 'groups': len(report['suites']), 'failed': [row['name'] for row in failed], 'rawReportSha256': hashlib.sha256(raw).hexdigest()})
           for row in failed:
-              path = (root / row.get('log', '')).resolve()
-              if path.is_relative_to(root) and path.is_file():
-                  tail = path.read_text(errors='replace')[-18000:]
-                  warning('R23_LOG_' + row['name'], tail[-6000:])
-                  summary.extend(['## ' + row['name'], '<pre>' + html.escape(tail) + '</pre>'])
-          for path in sorted((root / 'tests').glob('*-results.json')):
-              try:
-                  value = json.loads(path.read_text())
-              except (ValueError, OSError):
-                  continue
-              if value.get('pass') is False:
-                  rows = value.get('tests', value.get('checks', []))
-                  issues = [row for row in rows if row.get('pass') is False]
-                  detail = {'file': path.name, 'failed': issues,
-                            'details': {row.get('name'):value.get('details',{}).get(row.get('name')) for row in issues}}
-                  warning('R23_RESULT_' + path.stem, json.dumps(detail, ensure_ascii=False)[:12000])
-                  summary.extend(['## ' + path.name, '<pre>' + html.escape(json.dumps(detail,ensure_ascii=False,indent=2)) + '</pre>'])
-          Path(os.environ['GITHUB_STEP_SUMMARY']).write_text('\n\n'.join(summary))
+              log_path = (root / row.get('log', '')).resolve()
+              value = {'sourceRun': os.environ['YGO_SOURCE_RUN'], 'group': row['name'], 'log': row.get('log'), 'logAvailable': log_path.is_relative_to(root) and log_path.is_file()}
+              if value['logAvailable']:
+                  data = log_path.read_bytes()
+                  value.update(logSha256=hashlib.sha256(data).hexdigest(), logBytes=len(data), excerpt=data.decode(errors='replace')[-3000:])
+              add('R23_LOG_' + re.sub('[^A-Za-z0-9_]', '_', row['name']), value)
+          for item in sorted((root / 'tests').glob('*-results.json')):
+              try:value = json.loads(item.read_text())
+              except (ValueError, OSError):continue
+              if value.get('pass') is not False:continue
+              rows = value.get('tests', value.get('checks', []))
+              issues = [row for row in rows if isinstance(row, dict) and row.get('pass') is False]
+              names = [str(row.get('name', 'UNNAMED_CHECK')) for row in issues]
+              first = issues[0] if issues else {}
+              detail = value.get('details', {}).get(first.get('name'))
+              payload = {'sourceRun': os.environ['YGO_SOURCE_RUN'], 'file': str(item.relative_to(root)), 'fileSha256': hashlib.sha256(item.read_bytes()).hexdigest(), 'failedCount': len(issues), 'failedChecks': names, 'buildId': value.get('buildId'), 'htmlSha256': value.get('htmlSha256'), 'firstFailureExcerpt': compact(first)[:1800], 'detailExcerpt': compact(detail)[:1200]}
+              add('R23_RESULT_' + re.sub('[^A-Za-z0-9_]', '_', item.stem), payload)
+          omitted = max(0, len(messages) - 64)
+          messages = messages[:64]
+          messages[0]['payload']['diagnosticMessagesOmitted'] = omitted
+          (root / 'diagnostic-messages.json').write_text(json.dumps(messages, ensure_ascii=False))
+          Path(os.environ['GITHUB_STEP_SUMMARY']).write_text('<h1>Diagnóstico de fallos R23</h1><pre>' + html.escape(json.dumps(messages, ensure_ascii=False, indent=2)) + '</pre>')
+          print('Prepared', len(messages), 'bounded diagnostic annotations; omitted', omitted)
+          PY
+      - name: Publicar diagnósticos 1 a 8
+        if: always()
+        run: |
+          python3 - <<'PY'
+          import json, os
+          from pathlib import Path
+          path = Path(os.environ['YGO_EVIDENCE_DIR']) / 'diagnostic-messages.json'
+          assert path.is_file(), 'No se preparó el diagnóstico vinculado al run solicitado'
+          values = json.loads(path.read_text())
+          for row in values[0:8]:
+              text = json.dumps(row['payload'], ensure_ascii=False, separators=(',', ':'))
+              assert len(text) <= 3900
+              print('::warning title=' + row['title'] + '::' + text.replace('%', '%25').replace('\r', '%0D').replace('\n', '%0A'), flush=True)
+          PY
+      - name: Publicar diagnósticos 9 a 16
+        if: always()
+        run: |
+          python3 - <<'PY'
+          import json, os
+          from pathlib import Path
+          path = Path(os.environ['YGO_EVIDENCE_DIR']) / 'diagnostic-messages.json'
+          assert path.is_file(), 'No se preparó el diagnóstico vinculado al run solicitado'
+          values = json.loads(path.read_text())
+          for row in values[8:16]:
+              text = json.dumps(row['payload'], ensure_ascii=False, separators=(',', ':'))
+              assert len(text) <= 3900
+              print('::warning title=' + row['title'] + '::' + text.replace('%', '%25').replace('\r', '%0D').replace('\n', '%0A'), flush=True)
+          PY
+      - name: Publicar diagnósticos 17 a 24
+        if: always()
+        run: |
+          python3 - <<'PY'
+          import json, os
+          from pathlib import Path
+          path = Path(os.environ['YGO_EVIDENCE_DIR']) / 'diagnostic-messages.json'
+          assert path.is_file(), 'No se preparó el diagnóstico vinculado al run solicitado'
+          values = json.loads(path.read_text())
+          for row in values[16:24]:
+              text = json.dumps(row['payload'], ensure_ascii=False, separators=(',', ':'))
+              assert len(text) <= 3900
+              print('::warning title=' + row['title'] + '::' + text.replace('%', '%25').replace('\r', '%0D').replace('\n', '%0A'), flush=True)
+          PY
+      - name: Publicar diagnósticos 25 a 32
+        if: always()
+        run: |
+          python3 - <<'PY'
+          import json, os
+          from pathlib import Path
+          path = Path(os.environ['YGO_EVIDENCE_DIR']) / 'diagnostic-messages.json'
+          assert path.is_file(), 'No se preparó el diagnóstico vinculado al run solicitado'
+          values = json.loads(path.read_text())
+          for row in values[24:32]:
+              text = json.dumps(row['payload'], ensure_ascii=False, separators=(',', ':'))
+              assert len(text) <= 3900
+              print('::warning title=' + row['title'] + '::' + text.replace('%', '%25').replace('\r', '%0D').replace('\n', '%0A'), flush=True)
+          PY
+      - name: Publicar diagnósticos 33 a 40
+        if: always()
+        run: |
+          python3 - <<'PY'
+          import json, os
+          from pathlib import Path
+          path = Path(os.environ['YGO_EVIDENCE_DIR']) / 'diagnostic-messages.json'
+          assert path.is_file(), 'No se preparó el diagnóstico vinculado al run solicitado'
+          values = json.loads(path.read_text())
+          for row in values[32:40]:
+              text = json.dumps(row['payload'], ensure_ascii=False, separators=(',', ':'))
+              assert len(text) <= 3900
+              print('::warning title=' + row['title'] + '::' + text.replace('%', '%25').replace('\r', '%0D').replace('\n', '%0A'), flush=True)
+          PY
+      - name: Publicar diagnósticos 41 a 48
+        if: always()
+        run: |
+          python3 - <<'PY'
+          import json, os
+          from pathlib import Path
+          path = Path(os.environ['YGO_EVIDENCE_DIR']) / 'diagnostic-messages.json'
+          assert path.is_file(), 'No se preparó el diagnóstico vinculado al run solicitado'
+          values = json.loads(path.read_text())
+          for row in values[40:48]:
+              text = json.dumps(row['payload'], ensure_ascii=False, separators=(',', ':'))
+              assert len(text) <= 3900
+              print('::warning title=' + row['title'] + '::' + text.replace('%', '%25').replace('\r', '%0D').replace('\n', '%0A'), flush=True)
+          PY
+      - name: Publicar diagnósticos 49 a 56
+        if: always()
+        run: |
+          python3 - <<'PY'
+          import json, os
+          from pathlib import Path
+          path = Path(os.environ['YGO_EVIDENCE_DIR']) / 'diagnostic-messages.json'
+          assert path.is_file(), 'No se preparó el diagnóstico vinculado al run solicitado'
+          values = json.loads(path.read_text())
+          for row in values[48:56]:
+              text = json.dumps(row['payload'], ensure_ascii=False, separators=(',', ':'))
+              assert len(text) <= 3900
+              print('::warning title=' + row['title'] + '::' + text.replace('%', '%25').replace('\r', '%0D').replace('\n', '%0A'), flush=True)
+          PY
+      - name: Publicar diagnósticos 57 a 64
+        if: always()
+        run: |
+          python3 - <<'PY'
+          import json, os
+          from pathlib import Path
+          path = Path(os.environ['YGO_EVIDENCE_DIR']) / 'diagnostic-messages.json'
+          assert path.is_file(), 'No se preparó el diagnóstico vinculado al run solicitado'
+          values = json.loads(path.read_text())
+          for row in values[56:64]:
+              text = json.dumps(row['payload'], ensure_ascii=False, separators=(',', ':'))
+              assert len(text) <= 3900
+              print('::warning title=' + row['title'] + '::' + text.replace('%', '%25').replace('\r', '%0D').replace('\n', '%0A'), flush=True)
           PY
