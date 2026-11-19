@@ -220,7 +220,7 @@ jobs:
         run: |
           python tools/build.py
           cmp Analizador_YuGiOh.html dist/Calculadora_de_Barajas_YuGiOh_Alpha_1263_Corregida.html
-      - name: Comparar navigator.onLine en ocho contextos aislados
+      - name: Comprobar Network.overrideNetworkState en Chromium y headless shell
         timeout-minutes: 8
         run: |
           python - <<'PY'
@@ -242,13 +242,13 @@ jobs:
               executable = runtime.chromium.executable_path
               assert Path(executable).is_file(), executable
               assert 'headless_shell' not in executable, executable
-              for binary, origin, timing in itertools.product(['full_chromium', 'default_headless_shell'], ['https_test', 'http_loopback'], ['before_page', 'after_page']):
+              for binary, origin, timing in itertools.product(['full_chromium', 'default_headless_shell'], ['https_test'], ['after_page']):
                   target = ('https://ygo-offline-probe.test/Analizador_YuGiOh.html' if origin == 'https_test'
                             else 'http://127.0.0.1:8766/Analizador_YuGiOh.html')
-                  row = {'variant': binary + '_' + origin + '_' + timing, 'binary': binary, 'target': target, 'offlineTiming': timing,
+                  row = {'variant': binary + '_' + origin + '_' + timing + '_cdp_override', 'binary': binary, 'target': target, 'offlineTiming': timing,
                          'executable': executable if binary == 'full_chromium' else '<Playwright default headless shell>', 'buildId': build['buildId'], 'htmlSha256': digest,
                          'executed': False, 'errors': [], 'pageErrors': [], 'blocked': []}
-                  browser = context = None
+                  browser = context = cdp = None
                   try:
                       launch = {'headless': True, 'args': ['--no-sandbox']}
                       if binary == 'full_chromium':
@@ -270,6 +270,20 @@ jobs:
                       if timing == 'after_page':
                           context.set_offline(True)
                       row['executed'] = True
+                      row['navigatorBeforeOverride'] = page.evaluate('()=>navigator.onLine')
+                      parameters = {'offline': True, 'latency': 0, 'downloadThroughput': 0,
+                                    'uploadThroughput': 0, 'connectionType': 'none'}
+                      row['cdpCommand'] = 'Network.overrideNetworkState'
+                      row['cdpParameters'] = parameters
+                      try:
+                          cdp = context.new_cdp_session(page)
+                          cdp.send('Network.enable')
+                          row['cdpResult'] = cdp.send('Network.overrideNetworkState', parameters)
+                          row['cdpOverrideSucceeded'] = True
+                      except Exception:
+                          row['cdpOverrideSucceeded'] = False
+                          row['errors'].append({'phase': 'cdp_override', 'traceback': traceback.format_exc()})
+                      row['navigatorAfterOverride'] = page.evaluate('()=>navigator.onLine')
                       row['onlineBeforeGoto'] = page.evaluate('()=>navigator.onLine')
                       response = page.goto(target, wait_until='domcontentloaded', timeout=30000)
                       row['onlineAfterGoto'] = page.evaluate('()=>navigator.onLine')
@@ -287,6 +301,7 @@ jobs:
                           row['errors'].append({'phase': 'ready', 'traceback': traceback.format_exc()})
                       row['navigatorOnline'] = page.evaluate('()=>navigator.onLine')
                       row['offlineAssertionWouldPass'] = row['navigatorOnline'] is False
+                      row['cdpSessionAliveThroughMeasurements'] = cdp is not None
                   except Exception:
                       row['errors'].append({'phase': 'variant', 'traceback': traceback.format_exc()})
                   finally:
@@ -308,18 +323,18 @@ jobs:
                       assert len(text) <= 3900, 'Compact probe diagnostic exceeded annotation size'
                       print('R23_OFFLINE_PROBE ' + text, flush=True)
                       print('::warning title=R23_OFFLINE_PROBE_' + row['variant'] + '::' + text.replace('%', '%25').replace('\r', '%0D').replace('\n', '%0A'), flush=True)
-          assert len(rows) == 8 and len({row['variant'] for row in rows}) == 8
+          assert len(rows) == 2 and len({row['variant'] for row in rows}) == 2
           assert all(row['executed'] for row in rows), 'One or more variants could not create a page and set offline; inspect raw errors'
-          summary = {'schema': 'ygo-offline-probe/v1', 'sourceCommit': '4faa7a82a7cafb6d0d3f4657ec06b2af74200273',
+          summary = {'schema': 'ygo-offline-probe-cdp/v1', 'sourceCommit': '4faa7a82a7cafb6d0d3f4657ec06b2af74200273',
                      'buildId': build['buildId'], 'htmlSha256': digest, 'variantsExecuted': len(rows), 'variants': rows}
           (output / 'summary.json').write_text(json.dumps(summary, ensure_ascii=False, indent=2) + '\n')
           Path(os.environ['GITHUB_STEP_SUMMARY']).write_text('```json\n' + json.dumps(summary, ensure_ascii=False, indent=2) + '\n```\n')
           PY
-      - name: Guardar errores y resultados completos de las ocho variantes
+      - name: Guardar errores y resultados completos de ambas variantes CDP
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: r23-offline-probe
+          name: r23-offline-probe-cdp
           path: /tmp/r23-offline-probe/
           if-no-files-found: warn
           retention-days: 7
