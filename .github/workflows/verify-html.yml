@@ -91,6 +91,22 @@ jobs:
           python - <<'PY'
           from playwright.sync_api import sync_playwright
           from pathlib import Path
+          import json, os, subprocess
+          workspace_directory = Path(os.environ['GITHUB_WORKSPACE']).resolve()
+          assert workspace_directory == Path.cwd().resolve()
+          checks = {'gitMetadataPresent': (workspace_directory / '.git').exists()}
+          for name, command in [('version', ['git', '--version']), ('rootBefore', ['git', 'rev-parse', '--show-toplevel'])]:
+              result = subprocess.run(command, capture_output=True, text=True)
+              checks[name] = {'returncode': result.returncode, 'output': (result.stdout + result.stderr)[-1800:]}
+          if checks['gitMetadataPresent']:
+              # Solo se declara confiable el checkout solicitado de este trabajo.
+              subprocess.run(['git', 'config', '--global', '--add', 'safe.directory', str(workspace_directory)], check=True)
+          result = subprocess.run(['git', 'rev-parse', '--show-toplevel'], capture_output=True, text=True)
+          checks['rootAfter'] = {'returncode': result.returncode, 'output': (result.stdout + result.stderr)[-1800:]}
+          text = json.dumps(checks, ensure_ascii=False, separators=(',', ':'))
+          print('::warning title=R23_GIT_RUNTIME::' + text.replace('%', '%25').replace('\r', '%0D').replace('\n', '%0A'))
+          assert checks['gitMetadataPresent'] and result.returncode == 0
+          assert Path(result.stdout.strip()).resolve() == workspace_directory
           with sync_playwright() as runtime:
               Path('/tmp/ygo-chromium-path').write_text(runtime.chromium.executable_path)
           PY
