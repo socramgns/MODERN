@@ -11,6 +11,7 @@ import shutil
 import time
 
 from playwright.sync_api import sync_playwright
+from browser_offline import new_offline_page
 
 from advanced_browser import ready
 
@@ -118,8 +119,7 @@ def run(url=None, source_inject=False):
         context = browser.new_context(viewport={'width': 1440, 'height': 1000})
         context.route('**/*', lambda route: route.fulfill(status=200, content_type='text/html; charset=utf-8', body=html)
                       if route.request.url == target else route.abort())
-        context.set_offline(True)
-        page = context.new_page()
+        page = new_offline_page(context)
         page.on('pageerror', lambda error: errors.append(str(error)))
         response = page.goto(target, wait_until='domcontentloaded')
         ready(page)

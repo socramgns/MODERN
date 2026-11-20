@@ -15,6 +15,7 @@ import shutil
 import time
 
 from playwright.sync_api import sync_playwright
+from browser_offline import new_offline_page
 from release5_browser import load_example, ready
 from expanded_examples_browser import execute_step, report
 
@@ -51,8 +52,7 @@ def run(url=None, diagnostic_source=False):
                 route.abort()
 
         context.route('**/*', deliver)
-        context.set_offline(True)
-        page = context.new_page()
+        page = new_offline_page(context)
         page.on('pageerror', lambda error: errors.append(str(error)))
         response = page.goto(target, wait_until='domcontentloaded')
         ready(page)

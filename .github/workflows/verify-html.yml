@@ -113,6 +113,7 @@ jobs:
           if [ ! -x /usr/bin/chromium ]; then
             ln -s "$(cat /tmp/ygo-chromium-path)" /usr/bin/chromium
           fi
+          python tests/browser_offline.py --probe --output tests/native-offline-preflight-results.json
       - name: Recuperar la fuente técnica fijada y comprobar idempotencia
         timeout-minutes: 4
         run: |
