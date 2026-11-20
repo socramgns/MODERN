@@ -1,0 +1,15 @@
+{
+  "url": "https://github.com/socramgns/MODERN/actions/runs/44394147285/job/135119413246",
+  "observedAt": "2026-11-18T20:51:25.494383+00:00",
+  "method": "GET",
+  "tlsValidationDisabled": false,
+  "explicitAuthorizationAdded": false,
+  "inheritedProxyPreserved": true,
+  "httpStatus": 404,
+  "contentType": "text/html; charset=utf-8",
+  "truncated": false,
+  "path": "/workspace/r23-validation/remote-ci/diagnostic-44394147285-job-135119413246.html",
+  "sha256": "299f08abc48bd41d6a37913a7364822105a1636ad7ba1412e9b22b948ba2262d",
+  "bytes": 223639,
+  "resolvedUrl": "https://github.com/socramgns/MODERN/actions/runs/44394147285/job/135119413246"
+}

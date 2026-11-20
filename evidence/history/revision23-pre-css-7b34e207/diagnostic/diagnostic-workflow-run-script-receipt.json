@@ -1,0 +1,10 @@
+{
+  "url": "https://github.githubassets.com/assets/workflow-run-a63b7e8f0c1474a2.js",
+  "observedAt": "2026-11-18T20:53:28.950974+00:00",
+  "method": "GET",
+  "explicitAuthorizationAdded": false,
+  "tlsValidationDisabled": false,
+  "inheritedProxyPreserved": true,
+  "errorType": "URLError",
+  "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+}

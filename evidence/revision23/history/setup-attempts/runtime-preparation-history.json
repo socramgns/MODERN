@@ -1,0 +1,77 @@
+{
+  "schema": "ygo-r23-runtime-preparation-history/v1",
+  "recordedAt": "2026-11-19T01:58:58.984512+00:00",
+  "scope": "FAILED_SETUP_ATTEMPTS_ARE_NOT_APPLICATION_TEST_FAILURES_OR_SUCCESSES",
+  "attempts": [
+    {
+      "candidateCommit": "b66d46774e4c611b6eeed6563cb602af33234635",
+      "runUrl": "https://github.com/socramgns/MODERN/actions/runs/44439164931",
+      "pass": false,
+      "failureStage": "RUNTIME_PREPARATION",
+      "applicationTestsExecuted": false,
+      "issue": "SETUP_PYTHON_PIP_CACHE_REQUIRES_MISSING_LSB_RELEASE",
+      "captures": [
+        {
+          "path": "/workspace/r23-validation/remote-ci/b66d46774e4c611b6eeed6563cb602af33234635-run-44439164931.html",
+          "sha256": "94ecb02ac44f6f68ab12a00d22726c15199ee7899409e2b5cb49e8a06ae76d8f"
+        }
+      ]
+    },
+    {
+      "candidateCommit": "074cb9b4c8c34ab4dd06afa971db7ab4159a3508",
+      "runUrl": "https://github.com/socramgns/MODERN/actions/runs/44439454848",
+      "pass": false,
+      "failureStage": "RUNTIME_PREPARATION",
+      "applicationTestsExecuted": false,
+      "issue": "FIREFOX_TEMPORARY_DIRECTORY_OWNER_MISMATCH",
+      "captures": [
+        {
+          "path": "/workspace/r23-validation/current-ci-run.html",
+          "sha256": "e67f14b47ddd5a429af3cec6cd009d9fabc4bef30fe6145a8718c4f3d9a1122d"
+        }
+      ]
+    },
+    {
+      "candidateCommit": "e2160a5bf0c259d425f756647a2a55c93c968e59",
+      "runUrl": "https://github.com/socramgns/MODERN/actions/runs/44439668757",
+      "pass": false,
+      "failureStage": "RUNTIME_PREPARATION",
+      "applicationTestsExecuted": false,
+      "issue": "FIREFOX_TEMPORARY_DIRECTORY_OWNER_MISMATCH_DIAGNOSTIC_OBSERVED",
+      "captures": [
+        {
+          "path": "/workspace/r23-validation/smoke-diagnostic-run.html",
+          "sha256": "0ac682c3985792a4de8ef45f1b487b25e553a8332ea1603391482827feaac3ff"
+        }
+      ]
+    },
+    {
+      "candidateCommit": "54a3edf8213554da21b11c9148fb12c45782b1b6",
+      "runUrl": "https://github.com/socramgns/MODERN/actions/runs/44439919797",
+      "pass": false,
+      "failureStage": "CATALOG_GIT_IDEMPOTENCE_PREPARATION",
+      "applicationTestsExecuted": false,
+      "issue": "GIT_WORKSPACE_TRUST_CHECK",
+      "browserRuntimeLaunchesPassed": [
+        "chromium",
+        "firefox",
+        "webkit"
+      ],
+      "captures": [
+        {
+          "path": "/workspace/r23-validation/current-runtime-run.html",
+          "sha256": "71cab9258ceb7c56ce3df718c4553f26464b33b62b9b1754b8fd430d6b4d9c76"
+        },
+        {
+          "path": "/workspace/r23-validation/current-runtime-job.html",
+          "sha256": "0322e66453c4793fcbe36b7bbd84f5db77d0aaef094dc4b0ddc41872cfcdf7b3"
+        }
+      ]
+    }
+  ],
+  "functionalHtmlUnchanged": true,
+  "correctedHtmlSha256": "017f4cd81211d2be486c6634e876254fe6dc2225e6419c02e459d69ea7022c9e",
+  "currentCandidateCommit": "4faa7a82a7cafb6d0d3f4657ec06b2af74200273",
+  "currentCandidateStatus": "RUNTIME_READY_FULL_88_GROUPS_RUNNING",
+  "currentCandidateRun": "https://github.com/socramgns/MODERN/actions/runs/44440213754"
+}

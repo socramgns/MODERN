@@ -1,0 +1,152 @@
+{
+  "schema": "ygo-causal-core-regression/v1",
+  "pass": true,
+  "total": 35,
+  "tests": [
+    {
+      "name": "Real pinned catalogue has expected size and valid fixture construction",
+      "pass": true
+    },
+    {
+      "name": "Rules-card snapshots recover numeric metadata after mutable UI catalogue edits",
+      "pass": true
+    },
+    {
+      "name": "Inherited metadata flags and URLs remain claims rather than official verification",
+      "pass": true
+    },
+    {
+      "name": "No opening card may be invented beyond physical quantities",
+      "pass": true
+    },
+    {
+      "name": "Unmodeled Normal Pendulum summon is explicitly outside the causal action set",
+      "pass": true
+    },
+    {
+      "name": "Invocation cannot silently consume an unmodeled LIGHT graveyard-trigger material",
+      "pass": true
+    },
+    {
+      "name": "Leaving the Monster Zone clears temporary field effects while preserving physical identity",
+      "pass": true
+    },
+    {
+      "name": "Four-copy deck is rejected",
+      "pass": true
+    },
+    {
+      "name": "Stale banlist, model and catalogue contexts are rejected",
+      "pass": true
+    },
+    {
+      "name": "Only declared TCG and explicit opponent policies are accepted",
+      "pass": true
+    },
+    {
+      "name": "Ash policy needs a real full opponent deck and opening",
+      "pass": true
+    },
+    {
+      "name": "Opponent deck is audited against the same dated TCG snapshot",
+      "pass": true
+    },
+    {
+      "name": "Outcome identity preserves live stat changes and whole-turn restrictions",
+      "pass": true
+    },
+    {
+      "name": "Remaining order must be a permutation of the physical remaining cards",
+      "pass": true
+    },
+    {
+      "name": "Invoked goal is reached and every returned line re-executes",
+      "pass": true
+    },
+    {
+      "name": "Same-date restriction-table edits invalidate creation, replay and active search",
+      "pass": true
+    },
+    {
+      "name": "Changed format rules version invalidates creation, replay and active search",
+      "pass": true
+    },
+    {
+      "name": "Fresh replay rejects a changed model build or catalogue fingerprint",
+      "pass": true
+    },
+    {
+      "name": "Invocation sends hand materials to GY and banishes field/GY materials",
+      "pass": true
+    },
+    {
+      "name": "Outcome identity preserves summon history, response columns and delayed protection",
+      "pass": true
+    },
+    {
+      "name": "Fusion rejects duplicate physical material UIDs",
+      "pass": true
+    },
+    {
+      "name": "Fresh replay rejects tampered final state and recorded action cost",
+      "pass": true
+    },
+    {
+      "name": "Replay rejects a changed imported deck even if the trace is unchanged",
+      "pass": true
+    },
+    {
+      "name": "Passing opponent cannot pay an invented Ash cost",
+      "pass": true
+    },
+    {
+      "name": "FIRST_ELIGIBLE forces physical Ash and consumes its once-per-turn use",
+      "pass": true
+    },
+    {
+      "name": "Ash cannot answer Invocation Fusion which does not use Deck materials",
+      "pass": true
+    },
+    {
+      "name": "Shuffle invalidates rather than invents the next draw",
+      "pass": true
+    },
+    {
+      "name": "Search obeys cancellation and deck staleness",
+      "pass": true
+    },
+    {
+      "name": "Mo Ye token summon cannot be negated by Ash",
+      "pass": true
+    },
+    {
+      "name": "Token Extra lock expires by actual token material departure",
+      "pass": true
+    },
+    {
+      "name": "Joint Swordsoul chain draws Mo Ye at CL2 then searches Chixiao at CL1",
+      "pass": true
+    },
+    {
+      "name": "Chixiao search use cannot also be counted as its negate this turn",
+      "pass": true
+    },
+    {
+      "name": "Longyuan discards another physical Sword/Wyrm and token yields Chengying burn",
+      "pass": true
+    },
+    {
+      "name": "Ash CL3 negates Mo Ye draw while leaving Chixiao CL1 search protected",
+      "pass": true
+    },
+    {
+      "name": "Chengying continuously tracks real banished copies through two Fusions and recovery",
+      "pass": true
+    }
+  ],
+  "limitations": [
+    "Pinned application TCG snapshot is not independently authenticated by these tests.",
+    "Supported transitions only; no competitive calibration or universal rules certification."
+  ]
+}
+

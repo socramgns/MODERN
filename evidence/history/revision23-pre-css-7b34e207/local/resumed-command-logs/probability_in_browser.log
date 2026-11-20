@@ -1,0 +1,21 @@
+{
+  "pass": true,
+  "checks": {
+    "ashNotStarter": true,
+    "ashRemainsInteraction": true,
+    "starterProbabilityZero": true,
+    "physicalCopies": true,
+    "correctInteraction": true,
+    "duplicatesRejected": true,
+    "templateAvailable": true,
+    "noPageErrors": true
+  },
+  "sem": {
+    "starter": 0,
+    "extender": 0,
+    "ss": 0,
+    "interaction": 1
+  },
+  "duplicateStatus": "DATASET_REJECTED"
+}
+

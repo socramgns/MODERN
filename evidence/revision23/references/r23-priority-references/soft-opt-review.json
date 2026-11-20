@@ -1,0 +1,61 @@
+{
+  "schema": "ygo-soft-once-per-turn-reference-review/v1",
+  "sourceRole": "SECONDARY_TECHNICAL_IMPLEMENTATION_REFERENCE",
+  "officialTcgRulingCertified": false,
+  "executableInAnalyzer": false,
+  "coreCommit": "c2e0b697e031d3560c077c9cd2cc76474969dedf",
+  "scriptCommit": "915c6ff63518a04e18d16ee45962d75a8c8be264",
+  "coreCompleteFilesScanned": 67,
+  "scriptLuaFilesScanned": 22953,
+  "conclusion": "Plain SetCountLimit(1) consumes its per-instance local count at activation and this limit is not automatically refunded by activation negation. OATH auxiliary restrictions and explicit COUNT_CODE_OATH counters have separate removal/refund paths.",
+  "reviewedCardIds": [
+    75286621,
+    83994433,
+    51735257,
+    44146295
+  ],
+  "citations": [
+    {
+      "path": "core/libeffect.cpp",
+      "lines": "103-132",
+      "meaning": "SetCountLimit default code=0 and flag=0; no implicit OATH flag."
+    },
+    {
+      "path": "core/effect.cpp",
+      "lines": "579-591",
+      "meaning": "dec_count decrements local count_limit for code=flag=0."
+    },
+    {
+      "path": "core/processor.cpp",
+      "lines": "1127-1152,4123-4127",
+      "meaning": "Activation negation removes oath effects and decrements the shared effect-code count only when COUNT_CODE_OATH is set."
+    },
+    {
+      "path": "core/libeffect.cpp",
+      "lines": "452-463",
+      "meaning": "inc_count is exposed only as explicit RestoreCountLimit Lua API in this complete core."
+    },
+    {
+      "path": "cardscript-count-limit-scan.json",
+      "meaning": "All 22953 pinned Lua scripts searched; RestoreCountLimit occurs only 3 times in proc_xyz.lua, not global negation handling."
+    }
+  ],
+  "sourceFileHashes": {
+    "core/libeffect.cpp": "982dea45b688c4cba54caff08096d4dbb866cc449d2a81fffef37dc90ec3f504",
+    "core/effect.cpp": "5d76eeafd10260bc2d25a2297a635dd14d166ba418e22188806b33ceca82fe03",
+    "core/processor.cpp": "083b4da8e33f22890d186c7d19ebbcf0113aa4c89d59e30f73cef0d2dd8cda90",
+    "core/operations.cpp": "2293f5693d3832561cc0395ab4ece8134b33560b522a38ab6d7133ea0bd31ad4",
+    "core/effect.h": "c4c8b674f1567c9643ca9e5efa50bb019811660bf7ed7c89fef69c446a98650a",
+    "core/effect_constants.h": "5fcbba9eb4ad59fbac408f649d01d2dd68bb6df9d9b4b0fd6299852628a69d54"
+  },
+  "reviewedCardScriptHashes": {
+    "reviewed-script/official/c83994433.lua": "21bef8f13edda89986c1da005b3425a64c4027d56347384f375c618e455f182f",
+    "reviewed-script/official/c44146295.lua": "145576dad9dc6405d6eb67535b5f67b0dd0bf6cac50b80212abd1171f8a35875",
+    "reviewed-script/official/c51735257.lua": "f7b5ebdd528d2809fbe4fb28d8201a472caf531fd639a60ff311233469073074",
+    "reviewed-script/official/c75286621.lua": "14ab80a51e638427b99d977c16584d454ac6825a78dd0491db08173353ceecd9"
+  },
+  "limitations": [
+    "Technical secondary implementation references, not newly authenticated Konami rulings.",
+    "The distinction between count limits and an OATH cannot-attack restriction is intentional; removing the latter does not refund the paid detach or local effect count."
+  ]
+}

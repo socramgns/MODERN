@@ -1,0 +1,486 @@
+{
+  "schema": "ygo-priority-chain-tests/v1",
+  "pass": true,
+  "total": 34,
+  "tests": [
+    {
+      "name": "Explicit priority is opt-in and advertises separated activation costs and LIFO resolution",
+      "pass": true
+    },
+    {
+      "name": "Overlay zone is a physical empty inventory for both players without manufacturing cards",
+      "pass": true
+    },
+    {
+      "name": "Only the priority player starts Spark and legacy atomic activation cannot bypass it for 0",
+      "pass": true
+    },
+    {
+      "name": "Only the priority player starts Spark and legacy atomic activation cannot bypass it for 1",
+      "pass": true
+    },
+    {
+      "name": "An opponent receives a real fast-effect opportunity after the active player passes",
+      "pass": true
+    },
+    {
+      "name": "Two consecutive passes close an empty phase-end window before a phase transition",
+      "pass": true
+    },
+    {
+      "name": "Two passes seal a nonempty chain, and no activation or ordinary action is offered between links",
+      "pass": true
+    },
+    {
+      "name": "Mechaba pays its physical monster hand cost when activated, before any response resolves",
+      "pass": true
+    },
+    {
+      "name": "Roar counters Mechaba in a separate activation and all three links resolve in reverse order",
+      "pass": true
+    },
+    {
+      "name": "A second physical Counter Trap can answer a Counter Trap while Spell Speed 2 cannot",
+      "pass": true
+    },
+    {
+      "name": "Veiler sends itself as cost immediately and negates the later field resolution without negating activation",
+      "pass": true
+    },
+    {
+      "name": "Crow locks a physical opposing GY target and preserves its discarded copy after Mechaba negation",
+      "pass": true
+    },
+    {
+      "name": "Crow and Chixiao may form an unrelated legal fast-effect chain while each cost remains distinct",
+      "pass": true
+    },
+    {
+      "name": "Impermanence from a previous-turn Set pays no discard, resolves column negation, then cleans up",
+      "pass": true
+    },
+    {
+      "name": "A Trap Set this turn cannot activate even after the active player passes",
+      "pass": true
+    },
+    {
+      "name": "The same player may add another quick effect after the other player declines the immediate response",
+      "pass": true
+    },
+    {
+      "name": "Activation actor, source, target, cost, link target and arbitrary payload changes are rejected atomically",
+      "pass": true
+    },
+    {
+      "name": "Cost, source location, choice, turn, priority and pass-ledger corruption cannot continue a saved chain (QA states)",
+      "pass": true
+    },
+    {
+      "name": "Fresh replay rejects refunded costs, changed link spell speed, altered passes and reordered resolutions",
+      "pass": true
+    },
+    {
+      "name": "A still-open chain never appears as a completed search goal",
+      "pass": true
+    },
+    {
+      "name": "Legacy non-priority actions remain available when the new mode is disabled",
+      "pass": true
+    },
+    {
+      "name": "Monster Reborn is a Speed 1 Spell activation with a fixed physical target and delayed summon for controller 0",
+      "pass": true
+    },
+    {
+      "name": "Monster Reborn is a Speed 1 Spell activation with a fixed physical target and delayed summon for controller 1",
+      "pass": true
+    },
+    {
+      "name": "Crow can remove the actual Reborn target before resolution without recovering or substituting another copy",
+      "pass": true
+    },
+    {
+      "name": "Mechaba matches a real Spell hand cost against Reborn and banishes the activated Spell without summoning",
+      "pass": true
+    },
+    {
+      "name": "Reborn refuses an Extra monster placed directly in GY without a witnessed proper summon",
+      "pass": true
+    },
+    {
+      "name": "Compulsory returns the same opposing Extra monster to its owner and cleans its activated Trap at chain end",
+      "pass": true
+    },
+    {
+      "name": "A second Compulsory can return the target first, making the earlier target unavailable without a second return",
+      "pass": true
+    },
+    {
+      "name": "Mechaba matches a Trap cost and negates Compulsory while its physical target remains on the field",
+      "pass": true
+    },
+    {
+      "name": "A target leaving GY and returning during resolution is a different relation (QA helper mutation)",
+      "pass": true
+    },
+    {
+      "name": "Mechaba retains its per-instance use after activation negation while a real Spark shield preserves its source",
+      "pass": true
+    },
+    {
+      "name": "Spark retains its per-instance use after a Counter Trap negates its activation and its shield prevents destruction",
+      "pass": true
+    },
+    {
+      "name": "A manually supplied procedure uses its strict validator without silently enumerating a truncated subset (QA adapter)",
+      "pass": true
+    },
+    {
+      "name": "Search reports incomplete registered action enumeration rather than an exhaustive result (QA adapter)",
+      "pass": true
+    }
+  ],
+  "witnesses": [
+    {
+      "steps": 6,
+      "types": [
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "steps": 6,
+      "types": [
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "steps": 7,
+      "types": [
+        "PRIORITY_PASS",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "steps": 5,
+      "types": [
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_PHASE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "steps": 6,
+      "types": [
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "steps": 8,
+      "types": [
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "steps": 10,
+      "types": [
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "steps": 12,
+      "types": [
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "steps": 8,
+      "types": [
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "steps": 8,
+      "types": [
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "steps": 8,
+      "types": [
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "steps": 8,
+      "types": [
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "steps": 6,
+      "types": [
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "steps": 10,
+      "types": [
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "steps": 6,
+      "types": [
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "steps": 6,
+      "types": [
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "steps": 8,
+      "types": [
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "steps": 8,
+      "types": [
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "steps": 6,
+      "types": [
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "steps": 8,
+      "types": [
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "steps": 8,
+      "types": [
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "steps": 26,
+      "types": [
+        "PRIORITY_PASS",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_PHASE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "steps": 14,
+      "types": [
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    }
+  ],
+  "limitations": [
+    "Registered explicit-priority adapters only; no card-text evaluation or all-card rule certification.",
+    "QA-labelled synthetic adapters and state corruption tests are not witnessed legal card histories.",
+    "Resolution is LIFO with no response window between links, while effect-specific resolution choices remain explicit."
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "url": "https://github.com/socramgns/MODERN/actions/runs/44394147285/job_groups_batch?attempt=1",
+  "observedAt": "2026-11-18T20:52:19.144440+00:00",
+  "method": "GET",
+  "tlsValidationDisabled": false,
+  "explicitAuthorizationAdded": false,
+  "inheritedProxyPreserved": true,
+  "httpStatus": 400,
+  "contentType": "application/json; charset=utf-8",
+  "truncated": false,
+  "path": "/workspace/r23-validation/remote-ci/diagnostic-44394147285-job-groups.html",
+  "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "bytes": 0,
+  "resolvedUrl": "https://github.com/socramgns/MODERN/actions/runs/44394147285/job_groups_batch?attempt=1"
+}

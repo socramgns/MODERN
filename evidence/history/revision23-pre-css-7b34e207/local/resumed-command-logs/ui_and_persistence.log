@@ -1,0 +1,2 @@
+{"pass": true, "checks": ["import_composition", "ordinary_roundtrip_and_session", "diagnostic_roundtrip", "session_restore", "stale_score_rejected", "pageErrors"], "evidence": "/workspace/MODERN/tests/ui-results.json"}
+

@@ -1,0 +1,169 @@
+{
+  "schema": "ygo-draw-sequences-tests/v1",
+  "pass": true,
+  "total": 39,
+  "tests": [
+    {
+      "name": "Capabilities expose chronological one-to-three events and conditional goal probability rather than a win rate",
+      "pass": true
+    },
+    {
+      "name": "Two audited physical decks have a declared unknown order and no fabricated prior shuffle",
+      "pass": true
+    },
+    {
+      "name": "One draw branches over each remaining physical copy with exact one-in-three mass",
+      "pass": true
+    },
+    {
+      "name": "Analysis never changes its physical source, real unknown deck order or the global laboratory",
+      "pass": true
+    },
+    {
+      "name": "Already having a goal before the requested number of events does not end the tree early",
+      "pass": true
+    },
+    {
+      "name": "Three chronological events contain two own draws without replacement and one intervening rival draw",
+      "pass": true
+    },
+    {
+      "name": "Repeated physical copies keep separate UIDs and sum to the correct joint probability",
+      "pass": true
+    },
+    {
+      "name": "Explicit-priority PASS windows settle before each draw checkpoint and support the real multi-turn history",
+      "pass": true
+    },
+    {
+      "name": "The rival controls real attack choices and minimizes the goal rather than being chosen cooperatively",
+      "pass": true
+    },
+    {
+      "name": "The goal-probability report keeps its explicit information, action-domain and provisional-score assumptions",
+      "pass": true
+    },
+    {
+      "name": "A one-node budget conserves all omitted physical mass as unknown rather than failure",
+      "pass": true
+    },
+    {
+      "name": "A chance-branch limit keeps uncovered copies as exact aggregate unknown weight",
+      "pass": true
+    },
+    {
+      "name": "A depth horizon before the second event retains uncertainty instead of a fabricated probability",
+      "pass": true
+    },
+    {
+      "name": "An explicit empty-of-applicable-actions policy is reported unknown",
+      "pass": true
+    },
+    {
+      "name": "Cancellation before analysis does not return a partial tree disguised as accepted evidence",
+      "pass": true
+    },
+    {
+      "name": "Cancellation after yielding also discards the incomplete analysis",
+      "pass": true
+    },
+    {
+      "name": "Stale format or catalogue context rejects analysis and imported evidence",
+      "pass": true
+    },
+    {
+      "name": "A changed live deck cancels analysis even when the source itself was not changed",
+      "pass": true
+    },
+    {
+      "name": "An unrecorded current-state move is rejected rather than treated as an observed prefix",
+      "pass": true
+    },
+    {
+      "name": "Passcodes, owner, actor, goal and context changes cannot be smuggled through an imported source",
+      "pass": true
+    },
+    {
+      "name": "Invalid limits and unsupported goal fields fail closed",
+      "pass": true
+    },
+    {
+      "name": "Tampering with chance weight, remaining-copy count or physical identity is rejected by fresh replay",
+      "pass": true
+    },
+    {
+      "name": "A forged success leaf, score, interval, missing branch or requested checkpoint is rejected",
+      "pass": true
+    },
+    {
+      "name": "Tampering with real conditional action cost, actor or target is rejected",
+      "pass": true
+    },
+    {
+      "name": "Reducing exported search budgets cannot relabel a larger conditional proof as a one-node analysis",
+      "pass": true
+    },
+    {
+      "name": "A report is serializable, separately verified and never advertises ordinary causal replay",
+      "pass": true
+    },
+    {
+      "name": "Cooperative verification returns exactly the synchronous canonical result for a small accepted report",
+      "pass": true
+    },
+    {
+      "name": "Cooperative verification traverses a real priority tree in increasing eight-node chunks with the same result",
+      "pass": true
+    },
+    {
+      "name": "Synchronous and cooperative verification reject the same tampered physical mass and conditional action record",
+      "pass": true
+    },
+    {
+      "name": "An already aborted cooperative verification emits no accepted or partial report and does not change its source",
+      "pass": true
+    },
+    {
+      "name": "A timer can cancel cooperative verification between chunks while the laboratory stays unchanged",
+      "pass": true
+    },
+    {
+      "name": "A progress callback can cancel cooperative verification without mutating the imported evidence",
+      "pass": true
+    },
+    {
+      "name": "Changing the live build during a verification yield rejects stale evidence before returning a canonical report",
+      "pass": true
+    },
+    {
+      "name": "A changed explicit source snapshot is checked again after asynchronous replay",
+      "pass": true
+    },
+    {
+      "name": "QA enumeration diagnostic keeps uncertainty for legal manual actions omitted by the registered enumeration",
+      "pass": true
+    },
+    {
+      "name": "An incomplete handler outside the explicitly declared action-type policy does not corrupt the admitted-domain result",
+      "pass": true
+    },
+    {
+      "name": "QA controller diagnostic preserves unknown mass when an atomic action contains the other players replacement choice",
+      "pass": true
+    },
+    {
+      "name": "QA mixed-actor diagnostic does not assign two players free actions to one cooperative controller",
+      "pass": true
+    },
+    {
+      "name": "QA information-order diagnostic fixes the choice before future draws and computes max-of-expectations, not expectation-of-clairvoyant-max",
+      "pass": true
+    }
+  ],
+  "scope": "PHYSICAL_DECLARED_SCENARIOS_AND_EXPLICIT_INFORMATION_ORDER_DIAGNOSTIC",
+  "limitations": [
+    "The QA commit adapter tests information order and is not a shipped card rule.",
+    "All probabilities are conditional hypothetical goal probabilities under the report assumptions and registered action domain.",
+    "No full test runner or browser build is executed by this suite."
+  ]
+}

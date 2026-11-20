@@ -1,0 +1,105 @@
+{
+  "schema": "ygo-mobile-focal-ci-observation/v1",
+  "pass": true,
+  "runUrl": "https://github.com/socramgns/MODERN/actions/runs/44437979010",
+  "sourceCommit": "6237e2f4fcb8ca98fc1a9422ea460a1bd14d4436",
+  "cssFixCommit": "6adaea8aa17e66a085d700a13661ddb67e6a86b1",
+  "observedAt": "2026-11-19T01:40:43.082906+00:00",
+  "annotationSummaryObserved": true,
+  "individualRawChecksDownloaded": false,
+  "state": "success",
+  "jobReceipts": [
+    {
+      "path": "/workspace/r23-validation/mobile-ci/44437979010-job-135271519264.html",
+      "url": "https://github.com/socramgns/MODERN/actions/runs/44437979010/job/135271519264",
+      "httpStatus": 200,
+      "sha256": "c670eda327ce7e4e8da55038cc090c54db518b90a219bd7ea8ab0174c2977059",
+      "steps": [
+        {
+          "name": "Set up job",
+          "conclusion": "success"
+        },
+        {
+          "name": "Initialize containers",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/setup-python@v5",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/setup-node@v4",
+          "conclusion": "success"
+        },
+        {
+          "name": "Preparar las dependencias de prueba",
+          "conclusion": "success"
+        },
+        {
+          "name": "Comprobar los navegadores de la imagen oficial",
+          "conclusion": "success"
+        },
+        {
+          "name": "Compilar los bytes que se van a probar",
+          "conclusion": "success"
+        },
+        {
+          "name": "Ejecutar el flujo móvil y el aumento de texto",
+          "conclusion": "success"
+        },
+        {
+          "name": "Publicar el resultado vinculado al HTML",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/upload-artifact@v4",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/setup-node@v4",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/setup-python@v5",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "conclusion": "success"
+        },
+        {
+          "name": "Stop containers",
+          "conclusion": "success"
+        },
+        {
+          "name": "Complete job",
+          "conclusion": "success"
+        }
+      ],
+      "requiredStepsPassed": true
+    }
+  ],
+  "runReceipt": {
+    "path": "/workspace/r23-validation/mobile-ci/44437979010-run.html",
+    "url": "https://github.com/socramgns/MODERN/actions/runs/44437979010",
+    "httpStatus": 200,
+    "sha256": "1670b779f590a64fcb4af4571e5669b923829a8c3f6afac370a3c339ce6e59ae"
+  },
+  "commitFoundInRun": true,
+  "summaryPath": "/workspace/r23-validation/mobile-ci/44437979010-annotation-summary.json",
+  "summarySha256": "caab4dd4ec64e798abff0c60e38ec03a51be76459a6a0bb7080d14b04af6e4f4",
+  "summaryScope": "ANNOTATION_DERIVED_FROM_ORIGINAL_TEST_REPORT_NOT_INDIVIDUAL_RAW_CHECK_ROWS",
+  "buildId": "ad379fc6b8cddeaff64a1895a2eb97fed493b037a7e725a3bd9681a185d94a64",
+  "htmlSha256": "017f4cd81211d2be486c6634e876254fe6dc2225e6419c02e459d69ea7022c9e",
+  "checks": 35,
+  "executedEngines": [
+    "chromium",
+    "webkit"
+  ],
+  "failed": [],
+  "summaryPass": true
+}

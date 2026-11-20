@@ -1,0 +1,176 @@
+{
+  "runUrl": "https://github.com/socramgns/MODERN/actions/runs/44606249556",
+  "capturePath": "/workspace/r23-validation/offline-confirmed-probe-run.html",
+  "captureSha256": "6d595abf60fb30daaa13b0f4188a6488638da7cf540596e0ba490cadb2473d6b",
+  "rawFullReportDownloaded": false,
+  "results": [
+    {
+      "title": "R23_OFFLINE_NETWORK_CONTROL",
+      "payload": {
+        "variant": "real_unrouted_http_control",
+        "pass": true,
+        "checks": [
+          {
+            "name": "online_200_sentinel",
+            "pass": true
+          },
+          {
+            "name": "online_request_reached_server",
+            "pass": true
+          },
+          {
+            "name": "real_http_fails_with_internet_disconnected",
+            "pass": true
+          },
+          {
+            "name": "offline_request_never_reached_server",
+            "pass": true
+          },
+          {
+            "name": "restored_200_sentinel",
+            "pass": true
+          },
+          {
+            "name": "exactly_two_real_requests",
+            "pass": true
+          },
+          {
+            "name": "restored_navigator_online",
+            "pass": true
+          }
+        ],
+        "onlineNavigator": true,
+        "navigatorBeforeOfflineRequest": false,
+        "offlineNavigationError": "Page.goto: net::ERR_INTERNET_DISCONNECTED at http://127.0.0.1:35317/r23-control?phase=offline&nonce=1b79c658fd2f47009b3a00082fc7773d\nCall log:\n  - navigating to \"http://127.0.0.1:35317/r23-control?phase=offline&nonce=1b79c658fd2f47009b3a00082fc7773d\", waiting until \"domcontentloaded\"\n",
+        "restoredNavigator": true,
+        "serverRequests": [
+          "/r23-control?phase=online&nonce=1b79c658fd2f47009b3a00082fc7773d",
+          "/r23-control?phase=restored&nonce=1b79c658fd2f47009b3a00082fc7773d"
+        ],
+        "serverRequestCount": 2,
+        "errors": [],
+        "pageErrors": [],
+        "eventCalls": [],
+        "eventErrors": [],
+        "blockedRequests": 0
+      }
+    },
+    {
+      "title": "R23_OFFLINE_PROBE_domcontentloaded",
+      "payload": {
+        "variant": "domcontentloaded",
+        "target": "https://ygo-offline-probe.test/Analizador_YuGiOh.html",
+        "executed": true,
+        "engineVersion": "151.0.7922.34",
+        "buildId": "ad379fc6b8cddeaff64a1895a2eb97fed493b037a7e725a3bd9681a185d94a64",
+        "htmlSha256": "017f4cd81211d2be486c6634e876254fe6dc2225e6419c02e459d69ea7022c9e",
+        "navigatorBeforeInitialOverride": false,
+        "navigatorAfterInitialOverride": false,
+        "navigatorAfterGoto": false,
+        "navigatorAfterVariantOverride": false,
+        "responseStatus": 200,
+        "responseSha256": "017f4cd81211d2be486c6634e876254fe6dc2225e6419c02e459d69ea7022c9e",
+        "responseHashMatches": true,
+        "documentBuildId": "ad379fc6b8cddeaff64a1895a2eb97fed493b037a7e725a3bd9681a185d94a64",
+        "documentBuildMatches": true,
+        "advancedWorkbenchReady": true,
+        "navigatorOnline": false,
+        "offlineAssertionWouldPass": true,
+        "errors": [],
+        "pageErrors": [],
+        "eventCalls": [
+          {
+            "event": "before_goto",
+            "completed": true,
+            "result": {}
+          },
+          {
+            "event": "domcontentloaded",
+            "completed": true,
+            "result": {}
+          }
+        ],
+        "eventErrors": [],
+        "blockedRequests": 0
+      }
+    },
+    {
+      "title": "R23_OFFLINE_PROBE_framenavigated",
+      "payload": {
+        "variant": "framenavigated",
+        "target": "https://ygo-offline-probe.test/Analizador_YuGiOh.html",
+        "executed": true,
+        "engineVersion": "151.0.7922.34",
+        "buildId": "ad379fc6b8cddeaff64a1895a2eb97fed493b037a7e725a3bd9681a185d94a64",
+        "htmlSha256": "017f4cd81211d2be486c6634e876254fe6dc2225e6419c02e459d69ea7022c9e",
+        "navigatorBeforeInitialOverride": false,
+        "navigatorAfterInitialOverride": false,
+        "navigatorAfterGoto": false,
+        "navigatorAfterVariantOverride": false,
+        "responseStatus": 200,
+        "responseSha256": "017f4cd81211d2be486c6634e876254fe6dc2225e6419c02e459d69ea7022c9e",
+        "responseHashMatches": true,
+        "documentBuildId": "ad379fc6b8cddeaff64a1895a2eb97fed493b037a7e725a3bd9681a185d94a64",
+        "documentBuildMatches": true,
+        "advancedWorkbenchReady": true,
+        "navigatorOnline": false,
+        "offlineAssertionWouldPass": true,
+        "errors": [],
+        "pageErrors": [],
+        "eventCalls": [
+          {
+            "event": "before_goto",
+            "completed": true,
+            "result": {}
+          },
+          {
+            "event": "main_frame_commit",
+            "completed": true,
+            "result": {}
+          }
+        ],
+        "eventErrors": [],
+        "blockedRequests": 0
+      }
+    },
+    {
+      "title": "R23_OFFLINE_PROBE_after_goto",
+      "payload": {
+        "variant": "after_goto",
+        "target": "https://ygo-offline-probe.test/Analizador_YuGiOh.html",
+        "executed": true,
+        "engineVersion": "151.0.7922.34",
+        "buildId": "ad379fc6b8cddeaff64a1895a2eb97fed493b037a7e725a3bd9681a185d94a64",
+        "htmlSha256": "017f4cd81211d2be486c6634e876254fe6dc2225e6419c02e459d69ea7022c9e",
+        "navigatorBeforeInitialOverride": false,
+        "navigatorAfterInitialOverride": false,
+        "navigatorAfterGoto": true,
+        "navigatorAfterVariantOverride": false,
+        "responseStatus": 200,
+        "responseSha256": "017f4cd81211d2be486c6634e876254fe6dc2225e6419c02e459d69ea7022c9e",
+        "responseHashMatches": true,
+        "documentBuildId": "ad379fc6b8cddeaff64a1895a2eb97fed493b037a7e725a3bd9681a185d94a64",
+        "documentBuildMatches": true,
+        "advancedWorkbenchReady": true,
+        "navigatorOnline": false,
+        "offlineAssertionWouldPass": true,
+        "errors": [],
+        "pageErrors": [],
+        "eventCalls": [
+          {
+            "event": "before_goto",
+            "completed": true,
+            "result": {}
+          },
+          {
+            "event": "after_goto",
+            "completed": true,
+            "result": {}
+          }
+        ],
+        "eventErrors": [],
+        "blockedRequests": 0
+      }
+    }
+  ]
+}

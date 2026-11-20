@@ -1,0 +1,299 @@
+{
+  "schema": "ygo-r23-technical-reference-bundle/v1",
+  "createdAt": "2026-11-18T19:50:44.698122+00:00",
+  "pass": true,
+  "sourceRole": "SECONDARY_TECHNICAL_IMPLEMENTATION_REFERENCE",
+  "officialTcgRulingCertified": false,
+  "newNetworkRetrieval": false,
+  "scriptsExecuted": false,
+  "preservedOriginalFiles": 38,
+  "preservedOriginalBytes": 1373482,
+  "originalFiles": [
+    {
+      "path": "r23-priority-references/cardscript-count-limit-scan.json",
+      "sourcePath": "/workspace/r23-priority-references/cardscript-count-limit-scan.json",
+      "bytes": 1181,
+      "sha256": "b2c308508e09f0d8ca1fca674c3083584adaa603b043c91e10581bc498fe9b0d",
+      "byteIdenticalToOriginal": true
+    },
+    {
+      "path": "r23-priority-references/core/effect.cpp",
+      "sourcePath": "/workspace/r23-priority-references/core/effect.cpp",
+      "bytes": 31958,
+      "sha256": "5d76eeafd10260bc2d25a2297a635dd14d166ba418e22188806b33ceca82fe03",
+      "byteIdenticalToOriginal": true
+    },
+    {
+      "path": "r23-priority-references/core/effect.h",
+      "sourcePath": "/workspace/r23-priority-references/core/effect.h",
+      "bytes": 4121,
+      "sha256": "c4c8b674f1567c9643ca9e5efa50bb019811660bf7ed7c89fef69c446a98650a",
+      "byteIdenticalToOriginal": true
+    },
+    {
+      "path": "r23-priority-references/core/effect_constants.h",
+      "sourcePath": "/workspace/r23-priority-references/core/effect_constants.h",
+      "bytes": 19549,
+      "sha256": "5fcbba9eb4ad59fbac408f649d01d2dd68bb6df9d9b4b0fd6299852628a69d54",
+      "byteIdenticalToOriginal": true
+    },
+    {
+      "path": "r23-priority-references/core/libeffect.cpp",
+      "sourcePath": "/workspace/r23-priority-references/core/libeffect.cpp",
+      "bytes": 13274,
+      "sha256": "982dea45b688c4cba54caff08096d4dbb866cc449d2a81fffef37dc90ec3f504",
+      "byteIdenticalToOriginal": true
+    },
+    {
+      "path": "r23-priority-references/core/operations.cpp",
+      "sourcePath": "/workspace/r23-priority-references/core/operations.cpp",
+      "bytes": 228557,
+      "sha256": "2293f5693d3832561cc0395ab4ece8134b33560b522a38ab6d7133ea0bd31ad4",
+      "byteIdenticalToOriginal": true
+    },
+    {
+      "path": "r23-priority-references/core/processor.cpp",
+      "sourcePath": "/workspace/r23-priority-references/core/processor.cpp",
+      "bytes": 192222,
+      "sha256": "083b4da8e33f22890d186c7d19ebbcf0113aa4c89d59e30f73cef0d2dd8cda90",
+      "byteIdenticalToOriginal": true
+    },
+    {
+      "path": "r23-priority-references/core-receipt.json",
+      "sourcePath": "/workspace/r23-priority-references/core-receipt.json",
+      "bytes": 643,
+      "sha256": "a262f411b35a6aeb2e08177fa4a50d7a21b1b2c2138cc57802aeb76ab00c2b28",
+      "byteIdenticalToOriginal": true
+    },
+    {
+      "path": "r23-priority-references/reviewed-script/official/c14558127.lua",
+      "sourcePath": "/workspace/r23-priority-references/reviewed-script/official/c14558127.lua",
+      "bytes": 1758,
+      "sha256": "ef52822941d9e63d6b3ed0d7bea58dc8ab440be983a88aa353c36e3e294313ac",
+      "byteIdenticalToOriginal": true
+    },
+    {
+      "path": "r23-priority-references/reviewed-script/official/c40908371.lua",
+      "sourcePath": "/workspace/r23-priority-references/reviewed-script/official/c40908371.lua",
+      "bytes": 2676,
+      "sha256": "3d2ca2918a5c9d5e43ac14af931f4d52e7c7f81fc29bd95424aa1afbc9b84727",
+      "byteIdenticalToOriginal": true
+    },
+    {
+      "path": "r23-priority-references/reviewed-script/official/c44146295.lua",
+      "sourcePath": "/workspace/r23-priority-references/reviewed-script/official/c44146295.lua",
+      "bytes": 3291,
+      "sha256": "145576dad9dc6405d6eb67535b5f67b0dd0bf6cac50b80212abd1171f8a35875",
+      "byteIdenticalToOriginal": true
+    },
+    {
+      "path": "r23-priority-references/reviewed-script/official/c51735257.lua",
+      "sourcePath": "/workspace/r23-priority-references/reviewed-script/official/c51735257.lua",
+      "bytes": 2024,
+      "sha256": "f7b5ebdd528d2809fbe4fb28d8201a472caf531fd639a60ff311233469073074",
+      "byteIdenticalToOriginal": true
+    },
+    {
+      "path": "r23-priority-references/reviewed-script/official/c71039903.lua",
+      "sourcePath": "/workspace/r23-priority-references/reviewed-script/official/c71039903.lua",
+      "bytes": 2475,
+      "sha256": "89cd5c7c6d4a1838936fbe365bec7b6ec3436e93b7c5778f0dda007e6df7fe60",
+      "byteIdenticalToOriginal": true
+    },
+    {
+      "path": "r23-priority-references/reviewed-script/official/c75286621.lua",
+      "sourcePath": "/workspace/r23-priority-references/reviewed-script/official/c75286621.lua",
+      "bytes": 1910,
+      "sha256": "14ab80a51e638427b99d977c16584d454ac6825a78dd0491db08173353ceecd9",
+      "byteIdenticalToOriginal": true
+    },
+    {
+      "path": "r23-priority-references/reviewed-script/official/c83994433.lua",
+      "sourcePath": "/workspace/r23-priority-references/reviewed-script/official/c83994433.lua",
+      "bytes": 1352,
+      "sha256": "21bef8f13edda89986c1da005b3425a64c4027d56347384f375c618e455f182f",
+      "byteIdenticalToOriginal": true
+    },
+    {
+      "path": "r23-priority-references/reviewed-script/official/c94145021.lua",
+      "sourcePath": "/workspace/r23-priority-references/reviewed-script/official/c94145021.lua",
+      "bytes": 2234,
+      "sha256": "a27f1c2c552b4a8f1df756c06f35730ed85ed1ef5c91903276e296963a202b68",
+      "byteIdenticalToOriginal": true
+    },
+    {
+      "path": "r23-priority-references/reviewed-script/utility.lua",
+      "sourcePath": "/workspace/r23-priority-references/reviewed-script/utility.lua",
+      "bytes": 92849,
+      "sha256": "59ebe317dbec0ef5134f485f039bbe0cee031aa68e6d0ac028123a318ee2cd2a",
+      "byteIdenticalToOriginal": true
+    },
+    {
+      "path": "r23-priority-references/scripts-with-restore/proc_xyz.lua",
+      "sourcePath": "/workspace/r23-priority-references/scripts-with-restore/proc_xyz.lua",
+      "bytes": 17664,
+      "sha256": "8376068ba10a540c2be763e8631bcba3b2ef875e492f32d649b6940fafb0816e",
+      "byteIdenticalToOriginal": true
+    },
+    {
+      "path": "r23-priority-references/soft-opt-review.json",
+      "sourcePath": "/workspace/r23-priority-references/soft-opt-review.json",
+      "bytes": 3045,
+      "sha256": "be76ec9fd11dd98f19c275dfeda765f7a26679f974ea223d2b4ed0628769d42a",
+      "byteIdenticalToOriginal": true
+    },
+    {
+      "path": "r23-trigger-references/c70046172.lua",
+      "sourcePath": "/workspace/r23-trigger-references/c70046172.lua",
+      "bytes": 1143,
+      "sha256": "ce5c215d8ec38793fbf6c046f6b71704dfba788b70bfe35eb13d552abe5f675b",
+      "byteIdenticalToOriginal": true
+    },
+    {
+      "path": "r23-trigger-references/c70046172.lua.receipt.json",
+      "sourcePath": "/workspace/r23-trigger-references/c70046172.lua.receipt.json",
+      "bytes": 365,
+      "sha256": "df710ca8b48d7dd000c0cfce29e25572ccca45a9e127993f5ac8267ac6a190db",
+      "byteIdenticalToOriginal": true
+    },
+    {
+      "path": "r23-trigger-references/c90953320.lua",
+      "sourcePath": "/workspace/r23-trigger-references/c90953320.lua",
+      "bytes": 1143,
+      "sha256": "88f32e5fb125620cf30ab73758cdfb84b6ab75b028770c900b1a71ff8b50a266",
+      "byteIdenticalToOriginal": true
+    },
+    {
+      "path": "r23-trigger-references/c90953320.lua.receipt.json",
+      "sourcePath": "/workspace/r23-trigger-references/c90953320.lua.receipt.json",
+      "bytes": 365,
+      "sha256": "7806dfc362222e4fb6706f31203a6d672e172b7c0a485964f4b3ac9ba6998464",
+      "byteIdenticalToOriginal": true
+    },
+    {
+      "path": "r23-xyz-pendulum-references/c33256280.lua",
+      "sourcePath": "/workspace/r23-xyz-pendulum-references/c33256280.lua",
+      "bytes": 1807,
+      "sha256": "d132eb3e19bbf38689cdc1b83f7cdd17d653a0d742445ff6d026f2f07e12c2ac",
+      "byteIdenticalToOriginal": true
+    },
+    {
+      "path": "r23-xyz-pendulum-references/c33327029.lua",
+      "sourcePath": "/workspace/r23-xyz-pendulum-references/c33327029.lua",
+      "bytes": 2846,
+      "sha256": "4831ef01303e7ca8768893d5bbd96c6df0050d189fbfde891d4607953005d480",
+      "byteIdenticalToOriginal": true
+    },
+    {
+      "path": "r23-xyz-pendulum-references/c51735257.lua",
+      "sourcePath": "/workspace/r23-xyz-pendulum-references/c51735257.lua",
+      "bytes": 2024,
+      "sha256": "f7b5ebdd528d2809fbe4fb28d8201a472caf531fd639a60ff311233469073074",
+      "byteIdenticalToOriginal": true
+    },
+    {
+      "path": "r23-xyz-pendulum-references/c60473572.lua",
+      "sourcePath": "/workspace/r23-xyz-pendulum-references/c60473572.lua",
+      "bytes": 1802,
+      "sha256": "90c2711836090e93a3d63256ae7fd1ab3a628150347c6d8d96cfd4e3ec594209",
+      "byteIdenticalToOriginal": true
+    },
+    {
+      "path": "r23-xyz-pendulum-references/c69351984.lua",
+      "sourcePath": "/workspace/r23-xyz-pendulum-references/c69351984.lua",
+      "bytes": 1806,
+      "sha256": "8bd9ee7ad346d1b14b5771e8a5a0757e08089e5fd6d26eb9ed4639f2ae8ae867",
+      "byteIdenticalToOriginal": true
+    },
+    {
+      "path": "r23-xyz-pendulum-references/c69711728.lua",
+      "sourcePath": "/workspace/r23-xyz-pendulum-references/c69711728.lua",
+      "bytes": 2804,
+      "sha256": "a69ea0d2c0601c51601ec53cf4017386d3255e1398462b7c88d2c2b29ef31876",
+      "byteIdenticalToOriginal": true
+    },
+    {
+      "path": "r23-xyz-pendulum-references/c71594310.lua",
+      "sourcePath": "/workspace/r23-xyz-pendulum-references/c71594310.lua",
+      "bytes": 169,
+      "sha256": "ac34ec4a47f1569d9167aeb77e5b26058c1d21c43b0c707a0f349b39c4285811",
+      "byteIdenticalToOriginal": true
+    },
+    {
+      "path": "r23-xyz-pendulum-references/c73594093.lua",
+      "sourcePath": "/workspace/r23-xyz-pendulum-references/c73594093.lua",
+      "bytes": 1026,
+      "sha256": "0f675280c577d061252d631df4b5f54dd91f3359f281b8a4f2245c6362fd6ede",
+      "byteIdenticalToOriginal": true
+    },
+    {
+      "path": "r23-xyz-pendulum-references/c7868571.lua",
+      "sourcePath": "/workspace/r23-xyz-pendulum-references/c7868571.lua",
+      "bytes": 1767,
+      "sha256": "746a5f4b9cc689c6b222460fbcc2d798a07977a639bc86b679ae6c6b2f2b86f9",
+      "byteIdenticalToOriginal": true
+    },
+    {
+      "path": "r23-xyz-pendulum-references/effect.cpp",
+      "sourcePath": "/workspace/r23-xyz-pendulum-references/effect.cpp",
+      "bytes": 31958,
+      "sha256": "5d76eeafd10260bc2d25a2297a635dd14d166ba418e22188806b33ceca82fe03",
+      "byteIdenticalToOriginal": true
+    },
+    {
+      "path": "r23-xyz-pendulum-references/field.cpp",
+      "sourcePath": "/workspace/r23-xyz-pendulum-references/field.cpp",
+      "bytes": 122838,
+      "sha256": "7fd4ac591383fe690a956e69762b0d18e995a90ed75bf8bf0e4cbe2ee9a355c3",
+      "byteIdenticalToOriginal": true
+    },
+    {
+      "path": "r23-xyz-pendulum-references/libduel.cpp",
+      "sourcePath": "/workspace/r23-xyz-pendulum-references/libduel.cpp",
+      "bytes": 148393,
+      "sha256": "d4d8ddc1841f4a211ad7dee0ce3d0b4ab2bcdee2392445ef7b8804b8105f4bc1",
+      "byteIdenticalToOriginal": true
+    },
+    {
+      "path": "r23-xyz-pendulum-references/operations.cpp",
+      "sourcePath": "/workspace/r23-xyz-pendulum-references/operations.cpp",
+      "bytes": 228557,
+      "sha256": "2293f5693d3832561cc0395ab4ece8134b33560b522a38ab6d7133ea0bd31ad4",
+      "byteIdenticalToOriginal": true
+    },
+    {
+      "path": "r23-xyz-pendulum-references/processor.cpp",
+      "sourcePath": "/workspace/r23-xyz-pendulum-references/processor.cpp",
+      "bytes": 192222,
+      "sha256": "083b4da8e33f22890d186c7d19ebbcf0113aa4c89d59e30f73cef0d2dd8cda90",
+      "byteIdenticalToOriginal": true
+    },
+    {
+      "path": "r23-xyz-pendulum-references/references.json",
+      "sourcePath": "/workspace/r23-xyz-pendulum-references/references.json",
+      "bytes": 7664,
+      "sha256": "cab89a2fbfa98d83942e032e2443914b96bad88ab29e959c2bcf30c2fb9b4eba",
+      "byteIdenticalToOriginal": true
+    }
+  ],
+  "metadataFiles": [
+    {
+      "path": "verification.json",
+      "bytes": 23289,
+      "sha256": "db796fb6e73143a7461fc18f93076e04ec0bb77840e77629826c9df0260aa35b",
+      "role": "NEW_LOCAL_PACKAGING_METADATA_NOT_ORIGINAL_SOURCE"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1833,
+      "sha256": "75f263ceb0c737bc04bda213d145ebc10d5fe25f66ee4687ed0fba548044f6b7",
+      "role": "NEW_LOCAL_PACKAGING_METADATA_NOT_ORIGINAL_SOURCE"
+    }
+  ],
+  "excluded": [
+    "*.tar.gz",
+    "Full CardScripts collection of 22953 Lua files",
+    "Unreferenced core files"
+  ],
+  "manifestSelfIncluded": false
+}

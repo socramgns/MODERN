@@ -1,0 +1,149 @@
+{
+  "pass": true,
+  "originalSourceCandidateCommit": "7b34e2075579771064a18d06d188dc018ba4e0b3",
+  "currentSourceCandidateCommit": "c9537266d03535c305cb8e882c09be1a81376669",
+  "onlyHelperImportAndPageFactoryChanged": true,
+  "changedGuiFiles": 22,
+  "runnerCommandsUnchanged": true,
+  "runnerSha256": "3b2f438c50836531180b8cfba4aeb183dc6921d974912f45e5466757defefa04",
+  "helperPath": "tests/browser_offline.py",
+  "helperSha256": "d8505a6c1ddfb170acc7a6b7c4641723a6681e816d0ea0b283b2d166b59da2f3",
+  "helperSourcePinned": true,
+  "nativeMainFrameCommitHook": true,
+  "javascriptPropertyShadowing": false,
+  "comparisons": [
+    {
+      "path": "tests/accessibility_r23.py",
+      "originalSha256": "2d87762c9884f275f69cab9ea2060f44e9c1bea0d392665c15445fda6702acc8",
+      "currentSha256": "c2660050496cefabdc35e19f8c23d15a26c7ce65ebc4d796b5b1d4ec3921fbd9",
+      "reversedDeltaMatchesOriginalBytes": true
+    },
+    {
+      "path": "tests/accessibility_workflow.py",
+      "originalSha256": "bd22d24b6725b1894a2124d42957700ffa138a7717443d53ff425bf555def9b0",
+      "currentSha256": "682cb8c592b14875bb962d54ae2bf3a24fce321de0c55310edd2f38a24d4f732",
+      "reversedDeltaMatchesOriginalBytes": true
+    },
+    {
+      "path": "tests/expanded_examples_browser.py",
+      "originalSha256": "6f0cb14567cb997dc93d9c550eb2b854c3666e1c915fe6e84caa282e037705ff",
+      "currentSha256": "f51cddd01c7bdc82770ff89470992d6a5bded4432dbb9298132118cd3edb91d9",
+      "reversedDeltaMatchesOriginalBytes": true
+    },
+    {
+      "path": "tests/release10_browser.py",
+      "originalSha256": "ae4217f45f7acdd40a2f878ffa6bd7f5ac095175947303c2d9c9d40df13fc46c",
+      "currentSha256": "18ea6f438783959904a029593f5bdfa6611f0a37ac9a53b316642440f84ad111",
+      "reversedDeltaMatchesOriginalBytes": true
+    },
+    {
+      "path": "tests/release11_browser.py",
+      "originalSha256": "14539ad5725064c6af0925939dc2c35e12aea3888382e3515eff235322ad7523",
+      "currentSha256": "36e5318de80dcf3314e641eee1b015b897c19b1802e6dda8e1a36243988036b2",
+      "reversedDeltaMatchesOriginalBytes": true
+    },
+    {
+      "path": "tests/release12_browser.py",
+      "originalSha256": "4997724b8f7eac0ffadb792a4bfd96773a9cac216e8a7efd5d1d8e0737ecd05d",
+      "currentSha256": "571b2378618413701afdf0d2f9872e8ee90228b32992c1d2ddc5149bf4b95c6a",
+      "reversedDeltaMatchesOriginalBytes": true
+    },
+    {
+      "path": "tests/release13_browser.py",
+      "originalSha256": "cd21e321ebacaaa4b7c57a25be52e4c611faccb644613958598ac518557cec48",
+      "currentSha256": "32a2a4ea528f9289d2861057ed283e9c4aa4a811c169af3af25e9cf0e76ea10f",
+      "reversedDeltaMatchesOriginalBytes": true
+    },
+    {
+      "path": "tests/release14_browser.py",
+      "originalSha256": "dfec5b61bceed6f879252add1f9fa0382b527bb5644efb2cd54948257e7f9399",
+      "currentSha256": "1d9c1a1198ba3287d436afd0cc91a4ca08148b694fafe6aa475bf17938d0ae89",
+      "reversedDeltaMatchesOriginalBytes": true
+    },
+    {
+      "path": "tests/release15_browser.py",
+      "originalSha256": "93f5d58ce6d24f0a4e0ac0b7404facdeb7a7f51fff38365f8061ef90918b14ff",
+      "currentSha256": "6d4892cc3e3993a97e9c9570d6421eb5a71ac28b8d67ab52112fec7b2e30cdd4",
+      "reversedDeltaMatchesOriginalBytes": true
+    },
+    {
+      "path": "tests/release16_browser.py",
+      "originalSha256": "8def443d801c17bea1a697294b44534c5ca080147e011b9e6efa8dbd82660bd6",
+      "currentSha256": "8981df658acab53af868fabfd2796b3bc29027edc9695fdb1ad1401bf7ab53e6",
+      "reversedDeltaMatchesOriginalBytes": true
+    },
+    {
+      "path": "tests/release17_browser.py",
+      "originalSha256": "c50e12322d4ffe1b2d02dda22c13d111700b5b81d641858c66c9f446652c39cc",
+      "currentSha256": "955b690cb587fbd3c10927d7b9f5d78f5191060a46a8bbc9cf76235eb0d50898",
+      "reversedDeltaMatchesOriginalBytes": true
+    },
+    {
+      "path": "tests/release18_browser.py",
+      "originalSha256": "43784b55fb4302e4735b7a1293b60c0233e968d31827ddfa247e171ae808558f",
+      "currentSha256": "4a64998ee9540db85894de33153cc6c684402c30d1a518e7c10393693a493abe",
+      "reversedDeltaMatchesOriginalBytes": true
+    },
+    {
+      "path": "tests/release19_browser.py",
+      "originalSha256": "6cb1d061df57b8689cd34c69666716b28b7218c589fffba453a867016f5e9d4a",
+      "currentSha256": "47e89fccc18e3110f3115ba2a72ee4f09d04fa9c3e2eff50c13363ac453b8d67",
+      "reversedDeltaMatchesOriginalBytes": true
+    },
+    {
+      "path": "tests/release20_browser.py",
+      "originalSha256": "47823fae54886106b84d0d188d2f38b2c1f1a42aafefe21dc5269e7a798acca8",
+      "currentSha256": "1a3bf0365d1cd82036d8e64562dcd594a536ef01631dd63f186707e52e1191df",
+      "reversedDeltaMatchesOriginalBytes": true
+    },
+    {
+      "path": "tests/release21_browser.py",
+      "originalSha256": "39bbb647514987560ef22f6fa5ee6ecf2e8b93b0babeda816f0fd183c2992bfa",
+      "currentSha256": "2b68e876b5472ac627e1c9ec9a05d9443d870553f52f4ed35e4380c7393b5f9b",
+      "reversedDeltaMatchesOriginalBytes": true
+    },
+    {
+      "path": "tests/release22_browser.py",
+      "originalSha256": "31d8dd9d935b502a75f733a367e24c0b36834bbfa36c1a48755ed42e809b3438",
+      "currentSha256": "6ed6a83fbd717aaf727829058ddd80c57bc4a8de11839850706af6e777d9a2fe",
+      "reversedDeltaMatchesOriginalBytes": true
+    },
+    {
+      "path": "tests/release23_browser.py",
+      "originalSha256": "3f6816a8dd4fe0b14dde91aead5e677164c26c4c85c563b1d895089541639ea7",
+      "currentSha256": "0cbe58a6232c22a986f8f4e09dde909ecc8f6df5f433b0a048652e40bdd68d8a",
+      "reversedDeltaMatchesOriginalBytes": true
+    },
+    {
+      "path": "tests/release5_browser.py",
+      "originalSha256": "fb9add111dd6d799859b1ed05ca30ed451ef129cf1cbf10136196ad5b3676692",
+      "currentSha256": "87f5de399a507f547044472c6311f3bcb8b48a96749fee26cff8d12007c07606",
+      "reversedDeltaMatchesOriginalBytes": true
+    },
+    {
+      "path": "tests/release6_browser.py",
+      "originalSha256": "56cb39f63f22edf7324d48cf19ea4130f35833eaf0c6dde5fd36ef820becca10",
+      "currentSha256": "78b7587c10b113ebf63856fe74914ce3c4f5aca4d9194ddb010e9fd93e20a6cf",
+      "reversedDeltaMatchesOriginalBytes": true
+    },
+    {
+      "path": "tests/release8_browser.py",
+      "originalSha256": "904236a59938c940b279efb7cd6d0d9fb9260bc0c46e4b75287f4f619b629c21",
+      "currentSha256": "d2f47ed3773212c90ca5be6b65a04982f35368251fb38029bfc38058eba433fc",
+      "reversedDeltaMatchesOriginalBytes": true
+    },
+    {
+      "path": "tests/release9_browser.py",
+      "originalSha256": "850b97880475f0868fe79237e212c47b26f9e7bf2d391997f18ac416bb951542",
+      "currentSha256": "87782615b0b78847cdbb059fcd0774db911be6e17ee9262bd60a2cfd9e4c8b92",
+      "reversedDeltaMatchesOriginalBytes": true
+    },
+    {
+      "path": "tests/ux_revision6_browser.py",
+      "originalSha256": "a42bb56fb1afe1b5f470e29d77e96e313b99649db19fa331f9e4f0833aa5b493",
+      "currentSha256": "b3426f54d17b00477afe7ddac8c0a94fc8502810e6d14684af57f99248335161",
+      "reversedDeltaMatchesOriginalBytes": true
+    }
+  ],
+  "meaning": "Only the exact import and primary page-creation pair changed in 22 GUI scripts; reversing those bytes reproduces every original script, including all assertions and URLs."
+}

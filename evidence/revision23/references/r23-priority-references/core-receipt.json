@@ -1,0 +1,13 @@
+{
+  "schema": "ygo-technical-source-retrieval/v1",
+  "sourceCommit": "c2e0b697e031d3560c077c9cd2cc76474969dedf",
+  "url": "https://codeload.github.com/edo9300/ygopro-core/tar.gz/c2e0b697e031d3560c077c9cd2cc76474969dedf",
+  "resolvedUrl": "https://codeload.github.com/edo9300/ygopro-core/tar.gz/c2e0b697e031d3560c077c9cd2cc76474969dedf",
+  "httpStatus": 200,
+  "bytes": 2684406,
+  "sha256": "34850e7dbd9b6b17235465dc12a7aa3194d9b80f030dc4d2b75160ebbed3409f",
+  "retrievedAt": "2026-11-15T02:34:13.080363+00:00",
+  "tlsValidationDisabled": false,
+  "executableInAnalyzer": false,
+  "sourceRole": "SECONDARY_TECHNICAL_IMPLEMENTATION_REFERENCE"
+}

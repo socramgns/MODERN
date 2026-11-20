@@ -1,0 +1,600 @@
+--- /dev/null
++++ b/tests/browser_offline.py
+@@ -0,0 +1,157 @@
++#!/usr/bin/env python3
++"""Native browser offline setup and a real HTTP control for Chromium CI."""
++import argparse
++from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
++import json
++import os
++from pathlib import Path
++import threading
++import traceback
++import uuid
++
++from playwright.sync_api import Error as PlaywrightError, sync_playwright
++
++
++def _override_chromium_network_state(page, offline):
++    page._ygo_offline_requested_state = offline
++    session = getattr(page, '_ygo_offline_cdp_session', None)
++    if session is None:
++        session = page.context.new_cdp_session(page)
++        # Keep the native CDP session attached for the lifetime of this Page.
++        page._ygo_offline_cdp_session = session
++        session.send('Network.enable')
++    return session.send('Network.overrideNetworkState', {
++        'offline': offline, 'latency': 0,
++        'downloadThroughput': -1, 'uploadThroughput': -1,
++        'connectionType': 'none' if offline else 'ethernet',
++    })
++
++
++def new_offline_page(context):
++    """Block real requests and retain Chromium's native offline renderer state."""
++    context.set_offline(True)
++    page = context.new_page()
++    try:
++        browser = context.browser
++        if browser is not None and browser.browser_type.name == 'chromium':
++            # Chromium 151 resets navigator state when navigation commits.
++            # Keep native request blocking and apply the supported renderer
++            # state override initially and after each main-frame commit.
++            _override_chromium_network_state(page, True)
++
++            def update_main_frame(frame):
++                if frame == page.main_frame:
++                    _override_chromium_network_state(page, page._ygo_offline_requested_state)
++
++            page._ygo_offline_commit_handler = update_main_frame
++            page.on('framenavigated', update_main_frame)
++        assert page.evaluate('()=>navigator.onLine') is False, 'Browser did not enter native offline state'
++        return page
++    except Exception:
++        page.close()
++        raise
++
++
++def _probe_control():
++    """Require online -> real disconnected request -> restored online HTTP."""
++    sentinel = b'<!doctype html><link rel="icon" href="data:,"><title>R23 offline control</title><p>r23-offline-control-v1</p>'
++    requests = []
++    checks = []
++    report = {'schema': 'ygo-browser-offline-control/v1', 'pass': False, 'checks': checks}
++
++    class Handler(BaseHTTPRequestHandler):
++        def do_GET(self):
++            requests.append(self.path)
++            self.send_response(200)
++            self.send_header('Content-Type', 'text/html; charset=utf-8')
++            self.send_header('Content-Length', str(len(sentinel)))
++            self.send_header('Cache-Control', 'no-store')
++            self.end_headers()
++            self.wfile.write(sentinel)
++
++        def log_message(self, *args):
++            pass
++
++    def check(name, passed):
++        checks.append({'name': name, 'pass': bool(passed)})
++        assert passed, name
++
++    server = ThreadingHTTPServer(('127.0.0.1', 0), Handler)
++    thread = threading.Thread(target=server.serve_forever, daemon=True)
++    thread.start()
++    try:
++        with sync_playwright() as runtime:
++            executable = os.environ.get('YGO_CHROMIUM') or runtime.chromium.executable_path
++            report['executable'] = executable
++            browser = runtime.chromium.launch(executable_path=executable, headless=True, args=['--no-sandbox'])
++            try:
++                report['engineVersion'] = browser.version
++                context = browser.new_context()
++                try:
++                    base = f'http://127.0.0.1:{server.server_port}/r23-control'
++                    nonce = uuid.uuid4().hex
++                    online_path = f'/r23-control?phase=online&nonce={nonce}'
++                    blocked_path = f'/r23-control?phase=offline&nonce={nonce}'
++                    restored_path = f'/r23-control?phase=restored&nonce={nonce}'
++                    page = context.new_page()
++                    response = page.goto(base + online_path[len('/r23-control'):], wait_until='domcontentloaded', timeout=15000)
++                    check('online_control_returns_real_server_sentinel', response is not None and response.status == 200 and response.body() == sentinel)
++                    report['onlineNavigator'] = page.evaluate('()=>navigator.onLine')
++                    check('online_control_reached_server_once', requests == [online_path])
++                    offline_page = new_offline_page(context)
++                    report['navigatorBeforeOfflineRequest'] = offline_page.evaluate('()=>navigator.onLine')
++                    disconnected_error = None
++                    try:
++                        offline_page.goto(base + blocked_path[len('/r23-control'):], wait_until='domcontentloaded', timeout=15000)
++                    except PlaywrightError as error:
++                        disconnected_error = str(error)
++                    report['offlineNavigationError'] = disconnected_error
++                    check('unintercepted_http_request_fails_with_internet_disconnected', disconnected_error is not None and 'net::ERR_INTERNET_DISCONNECTED' in disconnected_error)
++                    check('blocked_request_never_reached_real_server', requests == [online_path])
++                    # A rejected navigation can still be replacing its error
++                    # document. Restore native state before evaluating again.
++                    context.set_offline(False)
++                    _override_chromium_network_state(offline_page, False)
++                    response = offline_page.goto(base + restored_path[len('/r23-control'):], wait_until='domcontentloaded', timeout=15000)
++                    check('restored_control_returns_real_server_sentinel', response is not None and response.status == 200 and response.body() == sentinel)
++                    report['restoredNavigator'] = offline_page.evaluate('()=>navigator.onLine')
++                    check('restored_document_reports_online', report['restoredNavigator'] is True)
++                    check('exactly_two_real_server_requests_received', requests == [online_path, restored_path])
++                    report['pass'] = all(row['pass'] for row in checks)
++                finally:
++                    context.close()
++            finally:
++                browser.close()
++    except Exception:
++        report['error'] = traceback.format_exc()
++        report['pass'] = False
++    finally:
++        server.shutdown()
++        server.server_close()
++        thread.join(timeout=5)
++        report['serverRequests'] = requests
++        report['serverRequestCount'] = len(requests)
++    return report
++
++
++def main():
++    parser = argparse.ArgumentParser(description=__doc__)
++    parser.add_argument('--probe', '--control', dest='probe', action='store_true')
++    parser.add_argument('--output', type=Path)
++    args = parser.parse_args()
++    if not args.probe:
++        parser.error('use --probe to execute the real HTTP offline control')
++    report = _probe_control()
++    if args.output:
++        args.output.write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n')
++    print('R23_OFFLINE_CONTROL ' + json.dumps(report, ensure_ascii=False, separators=(',', ':')), flush=True)
++    compact = dict(report)
++    if 'error' in compact:
++        compact['error'] = compact['error'][-1800:]
++    text = json.dumps(compact, ensure_ascii=False, separators=(',', ':'))
++    print('::warning title=R23_OFFLINE_CONTROL::' + text.replace('%', '%25').replace('\r', '%0D').replace('\n', '%0A'), flush=True)
++    return 0 if report['pass'] else 1
++
++
++if __name__ == '__main__':
++    raise SystemExit(main())
+--- a/tests/release23_browser.py
++++ b/tests/release23_browser.py
+@@ -15,6 +15,7 @@
+ import time
+ 
+ from playwright.sync_api import sync_playwright
++from browser_offline import new_offline_page
+ from blue_eyes_browser import import_scenario
+ from expanded_examples_browser import report
+ from release5_browser import load_example, ready
+@@ -214,8 +215,7 @@
+                 route.abort()
+ 
+         context.route('**/*', deliver)
+-        context.set_offline(True)
+-        page = context.new_page()
++        page = new_offline_page(context)
+         page.on('pageerror', lambda error: errors.append(str(error)))
+         response = page.goto(target, wait_until='domcontentloaded')
+         ready(page)
+--- a/tests/accessibility_r23.py
++++ b/tests/accessibility_r23.py
+@@ -15,6 +15,7 @@
+ import time
+ 
+ from playwright.sync_api import sync_playwright
++from browser_offline import new_offline_page
+ from release5_browser import load_example, ready
+ from expanded_examples_browser import execute_step, report
+ 
+@@ -51,8 +52,7 @@
+                 route.abort()
+ 
+         context.route('**/*', deliver)
+-        context.set_offline(True)
+-        page = context.new_page()
++        page = new_offline_page(context)
+         page.on('pageerror', lambda error: errors.append(str(error)))
+         response = page.goto(target, wait_until='domcontentloaded')
+         ready(page)
+--- a/tests/release6_browser.py
++++ b/tests/release6_browser.py
+@@ -11,6 +11,7 @@
+ import time
+ 
+ from playwright.sync_api import sync_playwright
++from browser_offline import new_offline_page
+ 
+ from advanced_browser import ready
+ 
+@@ -118,8 +119,7 @@
+         context = browser.new_context(viewport={'width': 1440, 'height': 1000})
+         context.route('**/*', lambda route: route.fulfill(status=200, content_type='text/html; charset=utf-8', body=html)
+                       if route.request.url == target else route.abort())
+-        context.set_offline(True)
+-        page = context.new_page()
++        page = new_offline_page(context)
+         page.on('pageerror', lambda error: errors.append(str(error)))
+         response = page.goto(target, wait_until='domcontentloaded')
+         ready(page)
+--- a/tests/ux_revision6_browser.py
++++ b/tests/ux_revision6_browser.py
+@@ -9,6 +9,7 @@
+ import time
+ 
+ from playwright.sync_api import sync_playwright
++from browser_offline import new_offline_page
+ 
+ from advanced_browser import fixtures, open_details, ready
+ 
+@@ -36,8 +37,7 @@
+         context = browser.new_context(accept_downloads=True, viewport={'width': 1440, 'height': 1000})
+         context.route('**/*', lambda route: route.fulfill(status=200, content_type='text/html; charset=utf-8', body=html)
+                       if route.request.url == target else route.abort())
+-        context.set_offline(True)
+-        page = context.new_page()
++        page = new_offline_page(context)
+         page.on('pageerror', lambda error: errors.append(str(error)))
+         response = page.goto(target, wait_until='domcontentloaded')
+         ready(page)
+--- a/tests/expanded_examples_browser.py
++++ b/tests/expanded_examples_browser.py
+@@ -10,6 +10,7 @@
+ import time
+ 
+ from playwright.sync_api import sync_playwright
++from browser_offline import new_offline_page
+ from release5_browser import load_example, ready
+ 
+ ROOT = Path(__file__).resolve().parents[1]
+@@ -198,8 +199,7 @@
+                 route.abort()
+ 
+         context.route('**/*', deliver)
+-        context.set_offline(True)
+-        page = context.new_page()
++        page = new_offline_page(context)
+         page.on('pageerror', lambda error: errors.append(str(error)))
+         response = page.goto(target, wait_until='domcontentloaded')
+         ready(page)
+--- a/tests/release8_browser.py
++++ b/tests/release8_browser.py
+@@ -9,6 +9,7 @@
+ import time
+ 
+ from playwright.sync_api import sync_playwright
++from browser_offline import new_offline_page
+ from expanded_examples_browser import execute_step, report
+ from release5_browser import load_example, ready
+ 
+@@ -53,8 +54,7 @@
+                 route.abort()
+ 
+         context.route('**/*', deliver)
+-        context.set_offline(True)
+-        page = context.new_page()
++        page = new_offline_page(context)
+         page.on('pageerror', lambda error: errors.append(str(error)))
+         response = page.goto(target, wait_until='domcontentloaded')
+         ready(page)
+--- a/tests/release9_browser.py
++++ b/tests/release9_browser.py
+@@ -9,6 +9,7 @@
+ import time
+ 
+ from playwright.sync_api import sync_playwright
++from browser_offline import new_offline_page
+ from expanded_examples_browser import execute_step, report
+ from release5_browser import load_example, ready
+ from release8_browser import cards, undo_to
+@@ -44,8 +45,7 @@
+                 route.abort()
+ 
+         context.route('**/*', deliver)
+-        context.set_offline(True)
+-        page = context.new_page()
++        page = new_offline_page(context)
+         page.on('pageerror', lambda error: errors.append(str(error)))
+         response = page.goto(target, wait_until='domcontentloaded')
+         ready(page)
+--- a/tests/release10_browser.py
++++ b/tests/release10_browser.py
+@@ -10,6 +10,7 @@
+ import time
+ 
+ from playwright.sync_api import sync_playwright
++from browser_offline import new_offline_page
+ from advanced_browser import open_details
+ from expanded_examples_browser import execute_step, report
+ from release5_browser import load_example, ready
+@@ -63,8 +64,7 @@
+                 route.abort()
+ 
+         context.route('**/*', deliver)
+-        context.set_offline(True)
+-        page = context.new_page()
++        page = new_offline_page(context)
+         page.on('pageerror', lambda error: errors.append(str(error)))
+         response = page.goto(target, wait_until='domcontentloaded')
+         ready(page)
+--- a/tests/release11_browser.py
++++ b/tests/release11_browser.py
+@@ -10,6 +10,7 @@
+ import time
+ 
+ from playwright.sync_api import sync_playwright
++from browser_offline import new_offline_page
+ from advanced_browser import open_details
+ from expanded_examples_browser import execute_step, report
+ from release5_browser import load_example, ready
+@@ -73,8 +74,7 @@
+                 route.abort()
+ 
+         context.route('**/*', deliver)
+-        context.set_offline(True)
+-        page = context.new_page()
++        page = new_offline_page(context)
+         page.on('pageerror', lambda error: errors.append(str(error)))
+         response = page.goto(target, wait_until='domcontentloaded')
+         ready(page)
+--- a/tests/release12_browser.py
++++ b/tests/release12_browser.py
+@@ -10,6 +10,7 @@
+ import time
+ 
+ from playwright.sync_api import sync_playwright
++from browser_offline import new_offline_page
+ from expanded_examples_browser import execute_step, report
+ from release5_browser import load_example, ready
+ from release8_browser import cards, undo_to
+@@ -72,8 +73,7 @@
+                 route.abort()
+ 
+         context.route('**/*', deliver)
+-        context.set_offline(True)
+-        page = context.new_page()
++        page = new_offline_page(context)
+         page.on('pageerror', lambda error: errors.append(str(error)))
+         response = page.goto(target, wait_until='domcontentloaded')
+         ready(page)
+--- a/tests/release13_browser.py
++++ b/tests/release13_browser.py
+@@ -10,6 +10,7 @@
+ import time
+ 
+ from playwright.sync_api import sync_playwright
++from browser_offline import new_offline_page
+ from expanded_examples_browser import execute_step, report
+ from release5_browser import load_example, ready
+ from release8_browser import cards, undo_to
+@@ -56,8 +57,7 @@
+                 route.abort()
+ 
+         context.route('**/*', deliver)
+-        context.set_offline(True)
+-        page = context.new_page()
++        page = new_offline_page(context)
+         page.on('pageerror', lambda error: errors.append(str(error)))
+         response = page.goto(target, wait_until='domcontentloaded')
+         ready(page)
+--- a/tests/release14_browser.py
++++ b/tests/release14_browser.py
+@@ -10,6 +10,7 @@
+ import time
+ 
+ from playwright.sync_api import sync_playwright
++from browser_offline import new_offline_page
+ from expanded_examples_browser import execute_step, report
+ from release5_browser import load_example, ready
+ 
+@@ -77,8 +78,7 @@
+                 route.abort()
+ 
+         context.route('**/*', deliver)
+-        context.set_offline(True)
+-        page = context.new_page()
++        page = new_offline_page(context)
+         page.on('pageerror', lambda error: errors.append(str(error)))
+         response = page.goto(target, wait_until='domcontentloaded')
+         ready(page)
+--- a/tests/release15_browser.py
++++ b/tests/release15_browser.py
+@@ -10,6 +10,7 @@
+ import time
+ 
+ from playwright.sync_api import sync_playwright
++from browser_offline import new_offline_page
+ from expanded_examples_browser import report
+ from release5_browser import load_example, ready
+ from release8_browser import cards, undo_to
+@@ -80,8 +81,7 @@
+                 route.abort()
+ 
+         context.route('**/*', deliver)
+-        context.set_offline(True)
+-        page = context.new_page()
++        page = new_offline_page(context)
+         page.on('pageerror', lambda error: errors.append(str(error)))
+         response = page.goto(target, wait_until='domcontentloaded')
+         ready(page)
+--- a/tests/release16_browser.py
++++ b/tests/release16_browser.py
+@@ -10,6 +10,7 @@
+ import time
+ 
+ from playwright.sync_api import sync_playwright
++from browser_offline import new_offline_page
+ from expanded_examples_browser import report
+ from release5_browser import load_example, ready
+ from release8_browser import cards, undo_to
+@@ -83,8 +84,7 @@
+                 route.abort()
+ 
+         context.route('**/*', deliver)
+-        context.set_offline(True)
+-        page = context.new_page()
++        page = new_offline_page(context)
+         page.on('pageerror', lambda error: errors.append(str(error)))
+         response = page.goto(target, wait_until='domcontentloaded')
+         ready(page)
+--- a/tests/release17_browser.py
++++ b/tests/release17_browser.py
+@@ -10,6 +10,7 @@
+ import time
+ 
+ from playwright.sync_api import sync_playwright
++from browser_offline import new_offline_page
+ from expanded_examples_browser import report
+ from release5_browser import load_example, ready
+ from release8_browser import cards, undo_to
+@@ -83,8 +84,7 @@
+                 route.abort()
+ 
+         context.route('**/*', deliver)
+-        context.set_offline(True)
+-        page = context.new_page()
++        page = new_offline_page(context)
+         page.on('pageerror', lambda error: errors.append(str(error)))
+         response = page.goto(target, wait_until='domcontentloaded')
+         ready(page)
+--- a/tests/release18_browser.py
++++ b/tests/release18_browser.py
+@@ -10,6 +10,7 @@
+ import time
+ 
+ from playwright.sync_api import sync_playwright
++from browser_offline import new_offline_page
+ from expanded_examples_browser import report
+ from release5_browser import load_example, ready
+ from release8_browser import cards, undo_to
+@@ -85,8 +86,7 @@
+                 route.abort()
+ 
+         context.route('**/*', deliver)
+-        context.set_offline(True)
+-        page = context.new_page()
++        page = new_offline_page(context)
+         page.on('pageerror', lambda error: errors.append(str(error)))
+         response = page.goto(target, wait_until='domcontentloaded')
+         ready(page)
+--- a/tests/release19_browser.py
++++ b/tests/release19_browser.py
+@@ -10,6 +10,7 @@
+ import time
+ 
+ from playwright.sync_api import sync_playwright
++from browser_offline import new_offline_page
+ from expanded_examples_browser import report
+ from release5_browser import load_example, ready
+ from release8_browser import cards, undo_to
+@@ -85,8 +86,7 @@
+                 route.abort()
+ 
+         context.route('**/*', deliver)
+-        context.set_offline(True)
+-        page = context.new_page()
++        page = new_offline_page(context)
+         page.on('pageerror', lambda error: errors.append(str(error)))
+         response = page.goto(target, wait_until='domcontentloaded')
+         ready(page)
+--- a/tests/release20_browser.py
++++ b/tests/release20_browser.py
+@@ -10,6 +10,7 @@
+ import time
+ 
+ from playwright.sync_api import sync_playwright
++from browser_offline import new_offline_page
+ from blue_eyes_browser import import_scenario
+ from expanded_examples_browser import report
+ from release5_browser import load_example, ready
+@@ -113,8 +114,7 @@
+                 route.abort()
+ 
+         context.route('**/*', deliver)
+-        context.set_offline(True)
+-        page = context.new_page()
++        page = new_offline_page(context)
+         page.on('pageerror', lambda error: errors.append(str(error)))
+         response = page.goto(target, wait_until='domcontentloaded')
+         ready(page)
+--- a/tests/release21_browser.py
++++ b/tests/release21_browser.py
+@@ -10,6 +10,7 @@
+ import time
+ 
+ from playwright.sync_api import sync_playwright
++from browser_offline import new_offline_page
+ from blue_eyes_browser import import_scenario
+ from expanded_examples_browser import report
+ from release5_browser import load_example, ready
+@@ -91,8 +92,7 @@
+                 route.abort()
+ 
+         context.route('**/*', deliver)
+-        context.set_offline(True)
+-        page = context.new_page()
++        page = new_offline_page(context)
+         page.on('pageerror', lambda error: errors.append(str(error)))
+         response = page.goto(target, wait_until='domcontentloaded')
+         ready(page)
+--- a/tests/release22_browser.py
++++ b/tests/release22_browser.py
+@@ -10,6 +10,7 @@
+ import time
+ 
+ from playwright.sync_api import sync_playwright
++from browser_offline import new_offline_page
+ from blue_eyes_browser import import_scenario
+ from expanded_examples_browser import report
+ from release5_browser import load_example, ready
+@@ -83,8 +84,7 @@
+                 route.abort()
+ 
+         context.route('**/*', deliver)
+-        context.set_offline(True)
+-        page = context.new_page()
++        page = new_offline_page(context)
+         page.on('pageerror', lambda error: errors.append(str(error)))
+         response = page.goto(target, wait_until='domcontentloaded')
+         ready(page)
+--- a/tests/accessibility_workflow.py
++++ b/tests/accessibility_workflow.py
+@@ -15,6 +15,7 @@
+ import time
+ 
+ from playwright.sync_api import sync_playwright
++from browser_offline import new_offline_page
+ from release5_browser import load_example, ready
+ 
+ ROOT = Path(__file__).resolve().parents[1]
+@@ -58,8 +59,7 @@
+                 route.abort()
+ 
+         context.route('**/*', deliver)
+-        context.set_offline(True)
+-        page = context.new_page()
++        page = new_offline_page(context)
+         page.on('pageerror', lambda error: errors.append(str(error)))
+         response = page.goto(target, wait_until='domcontentloaded')
+         ready(page)
+--- a/tests/release5_browser.py
++++ b/tests/release5_browser.py
+@@ -10,6 +10,7 @@
+ import time
+ 
+ from playwright.sync_api import sync_playwright
++from browser_offline import new_offline_page
+ 
+ from blue_eyes_browser import cards, click_action, fixture, import_scenario, report, with_opponent
+ 
+@@ -93,8 +94,7 @@
+                 route.abort()
+ 
+         context.route('**/*', deliver)
+-        context.set_offline(True)
+-        page = context.new_page()
++        page = new_offline_page(context)
+         page.on('pageerror', lambda error: errors.append(str(error)))
+         response = page.goto(target, wait_until='domcontentloaded')
+         ready(page)

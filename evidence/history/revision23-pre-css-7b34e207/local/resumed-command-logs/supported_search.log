@@ -1,0 +1,29 @@
+IMPORT {"cardCount": 14, "cards": [{"id": 23771716, "name": "7 Colored Fish", "level": 4}, {"id": 47372349, "name": "Acrobat Monkey", "level": 3}, {"id": 43096270, "name": "Alexandrite Dragon", "level": 4}, {"id": 97127906, "name": "Alien Shocktrooper", "level": 4}, {"id": 70924884, "name": "Alinsection", "level": 3}, {"id": 64428736, "name": "Alligator's Sword", "level": 4}, {"id": 99785935, "name": "Alpha The Magnet Warrior", "level": 4}, {"id": 17968114, "name": "Amazon of the Seas", "level": 4}, {"id": 42431843, "name": "Ancient Brain", "level": 3}, {"id": 93221206, "name": "Ancient Elf", "level": 4}, {"id": 43230671, "name": "Ancient Lizard Warrior", "level": 4}, {"id": 87979586, "name": "Angel Trumpeter", "level": 4}, {"id": 89904598, "name": "Anthrosaurus", "level": 3}, {"id": 85639257, "name": "Aqua Madoor", "level": 4}], "main": 40, "error": null, "physical": {"version": "Alpha 1263", "counts": {"main": 40, "extra": 0, "side": 0}, "errors": [], "zoneErrors": [], "badQuantities": [], "duplicates": [], "unknown": 0, "unknownCopies": 0, "physicalValid": true, "formatPolicy": {"version": "Alpha 1263", "key": "tcg", "kind": "ESTANDAR_O_NO_CERTIFICADO", "speedDuel": false, "duelLinksSpeed": false, "duelLinksRush": false, "mainMin": 40, "mainMax": 60, "extraMax": 15, "sideMax": 15, "allowSideSkills": false, "needsPrintVerification": false, "needsEventListVerification": false, "needsDigitalVerification": false, "needsCardPoolVerification": false, "needsSkillVerification": false, "source": "", "scope": "Referencia física estándar; otras restricciones específicas por formato aún necesitan pruebas.", "certified": false}, "needsPrintVerification": false, "needsEventListVerification": false, "officialBanlistVerified": false, "certifiedLegal": false, "policy": "Copias por identidad, alias y nombre normalizado. Speed Duel: verificar logo impreso y lista de evento por separado; ningún resultado físico es certificación oficial."}, "openingStable": true}
+SEARCH {"status": "SUPPORTED_SCOPE_CANDIDATES", "pass": true, "executionSucceeded": true, "runId": 1, "scope": "TCG_OPENING_NORMAL_MONSTER_AND_SET_WITH_PASSING_OPPONENT", "candidateCount": 5, "sample": 0, "expanded": 11, "distinctOutcomes": 10, "truncated": false, "enumerationComplete": true, "limits": {"maxDepth": 3, "maxStates": 250, "maxMs": 1800}, "elapsedMs": 38, "objective": "ATK de monstruos Normales boca arriba, después número de cartas colocadas; no es una evaluación competitiva.", "unsupported": ["Resolución de efectos", "Respuestas del rival", "Invocaciones Especiales", "Combate"], "certified": false, "globalOptimalityProven": false}
+{
+  "explicitAssumption": {
+    "status": "EXPLICIT_PASSING_OPPONENT_REQUIRED",
+    "pass": false,
+    "executionSucceeded": false,
+    "scope": "TCG_OPENING_NORMAL_MONSTER_AND_SET_WITH_PASSING_OPPONENT",
+    "certified": false,
+    "globalOptimalityProven": false,
+    "candidates": [],
+    "candidateCount": 0,
+    "issues": [
+      "Este modo supone que el rival pasa y no resuelve efectos; debe elegirse expresamente."
+    ]
+  },
+  "replayTamper": {
+    "pass": false,
+    "status": "TRANSITION_REPLAY_FAILED",
+    "step": 1
+  },
+  "originalDeckUnchanged": true,
+  "ui": {
+    "status": "5 preparación(es) distintas con replay válido; 11 estados examinados; dominio de acciones agotado hasta la profundidad elegida. No acredita el óptimo global ni la fuerza competitiva.",
+    "lines": 5
+  },
+  "invalidated": true
+}
+

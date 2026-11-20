@@ -1,0 +1,194 @@
+{
+  "schema": "ygo-trigger-order-tests/v1",
+  "pass": true,
+  "total": 10,
+  "tests": [
+    {
+      "name": "SEGOC exposes the four fixed groups with player ordering inside each group",
+      "pass": true
+    },
+    {
+      "name": "A real Flip creates one mandatory Faith activation without spending Normal Summon",
+      "pass": true
+    },
+    {
+      "name": "Mandatory Faith still activates with a real null target",
+      "pass": true
+    },
+    {
+      "name": "Optional search can be declined as a recorded choice without a hidden search",
+      "pass": true
+    },
+    {
+      "name": "A witnessed Chixiao summon leaves two separately ordered optional effects",
+      "pass": true
+    },
+    {
+      "name": "Opposing mandatory Librarian is placed before turn-player optional Mo Ye and Chixiao",
+      "pass": true
+    },
+    {
+      "name": "Both players mandatory groups precede the optional group in a witnessed summon",
+      "pass": true
+    },
+    {
+      "name": "Order leading to a post-search unknown draw remains unresolved rather than inventing a card",
+      "pass": true
+    },
+    {
+      "name": "Forged turn player, mandatory status, source and activation status cannot bypass order",
+      "pass": true
+    },
+    {
+      "name": "Replay rejects altered order choices, paid costs and chain link identity",
+      "pass": true
+    }
+  ],
+  "witnesses": [
+    {
+      "types": [
+        "DUEL_FLIP_SUMMON",
+        "TRIGGER_ORDER_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "types": [
+        "DUEL_FLIP_SUMMON",
+        "TRIGGER_ORDER_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "types": [
+        "NORMAL_SUMMON",
+        "TRIGGER_ORDER_DECLINE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "types": [
+        "NORMAL_SUMMON",
+        "TRIGGER_ORDER_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "SYNCHRO_CHIXIAO",
+        "TRIGGER_ORDER_ACTIVATE",
+        "TRIGGER_ORDER_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "types": [
+        "NORMAL_SUMMON",
+        "TRIGGER_ORDER_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "SYNCHRO_CHIXIAO",
+        "TRIGGER_ORDER_ACTIVATE",
+        "TRIGGER_ORDER_ACTIVATE",
+        "TRIGGER_ORDER_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "types": [
+        "NORMAL_SUMMON",
+        "TRIGGER_ORDER_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "SYNCHRO_CHIXIAO",
+        "TRIGGER_ORDER_ACTIVATE",
+        "TRIGGER_ORDER_ACTIVATE",
+        "TRIGGER_ORDER_DECLINE",
+        "TRIGGER_ORDER_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "types": [
+        "NORMAL_SUMMON",
+        "TRIGGER_ORDER_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "SYNCHRO_CHIXIAO",
+        "TRIGGER_ORDER_ACTIVATE",
+        "TRIGGER_ORDER_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE"
+      ],
+      "replayPass": true
+    },
+    {
+      "types": [
+        "NORMAL_SUMMON",
+        "TRIGGER_ORDER_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "SYNCHRO_CHIXIAO",
+        "TRIGGER_ORDER_ACTIVATE",
+        "TRIGGER_ORDER_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    }
+  ],
+  "limitations": [
+    "Only registered trigger profiles are collected; unknown effects stop the affected route.",
+    "Unknown draw order remains unresolved; it is not replaced with a fabricated observed card.",
+    "Declared starting fields are assumptions; executed transitions and fresh replay are witnessed."
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "status": "NOT_ACCEPTED",
+  "htmlBuildId": "bdaf08b1741d9615ab5c81ededfff5b9fd1eba110c0aa25db75fd4b11a44dabd",
+  "guiPass": false,
+  "guiChecks": 42,
+  "failure": "simultaneous_trigger_flow_completes",
+  "diagnosis": "Fixture requested only Mo Ye and Longyuan in its opening; filler selected its sole remaining Swordsoul search target into that opening. Chixiao correctly had no eligible search to decline. Correct fixture declares all five opening cards, leaving the search target in Deck. No production rule weakened."
+}

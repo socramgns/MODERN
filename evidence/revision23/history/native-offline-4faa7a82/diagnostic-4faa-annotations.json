@@ -1,0 +1,654 @@
+[
+  {
+    "title": "R23_RESULT_ux_revision6_browser_results",
+    "payload": {
+      "sourceRun": "44440213754",
+      "file": "tests/ux-revision6-browser-results.json",
+      "fileSha256": "ad10eab51222bfb50920dc34ce4171f4e74de0bf4a0b2eb4f5b28dd6f1a3c00f",
+      "failedCount": 1,
+      "failedChecks": [
+        "exact_delivered_bytes_boot_offline"
+      ],
+      "buildId": "ad379fc6b8cddeaff64a1895a2eb97fed493b037a7e725a3bd9681a185d94a64",
+      "htmlSha256": "017f4cd81211d2be486c6634e876254fe6dc2225e6419c02e459d69ea7022c9e",
+      "firstFailureExcerpt": "{\"name\":\"exact_delivered_bytes_boot_offline\",\"pass\":false}",
+      "detailExcerpt": "null"
+    }
+  },
+  {
+    "title": "R23_RESULT_release9_browser_results",
+    "payload": {
+      "sourceRun": "44440213754",
+      "file": "tests/release9-browser-results.json",
+      "fileSha256": "8e6bbf327dfbaa757fad9f2a05da380aacc6977811b6559cc3c3cfb4135825ae",
+      "failedCount": 1,
+      "failedChecks": [
+        "release9_boots_offline_from_the_manifest_bound_document"
+      ],
+      "buildId": "ad379fc6b8cddeaff64a1895a2eb97fed493b037a7e725a3bd9681a185d94a64",
+      "htmlSha256": "017f4cd81211d2be486c6634e876254fe6dc2225e6419c02e459d69ea7022c9e",
+      "firstFailureExcerpt": "{\"name\":\"release9_boots_offline_from_the_manifest_bound_document\",\"pass\":false}",
+      "detailExcerpt": "null"
+    }
+  },
+  {
+    "title": "R23_RESULT_release8_browser_results",
+    "payload": {
+      "sourceRun": "44440213754",
+      "file": "tests/release8-browser-results.json",
+      "fileSha256": "e55d37a421074989030764ecc77977a6882044da50c6ffa43f69456279c287f6",
+      "failedCount": 1,
+      "failedChecks": [
+        "release8_boots_offline_from_the_manifest_bound_document"
+      ],
+      "buildId": "ad379fc6b8cddeaff64a1895a2eb97fed493b037a7e725a3bd9681a185d94a64",
+      "htmlSha256": "017f4cd81211d2be486c6634e876254fe6dc2225e6419c02e459d69ea7022c9e",
+      "firstFailureExcerpt": "{\"name\":\"release8_boots_offline_from_the_manifest_bound_document\",\"pass\":false}",
+      "detailExcerpt": "null"
+    }
+  },
+  {
+    "title": "R23_RESULT_release6_browser_results",
+    "payload": {
+      "sourceRun": "44440213754",
+      "file": "tests/release6-browser-results.json",
+      "fileSha256": "abcc615a83cc975c45a48f611f876b2acfb55af23eb17308bffbaab06b68c055",
+      "failedCount": 1,
+      "failedChecks": [
+        "exact_delivered_bytes_boot_offline"
+      ],
+      "buildId": "ad379fc6b8cddeaff64a1895a2eb97fed493b037a7e725a3bd9681a185d94a64",
+      "htmlSha256": "017f4cd81211d2be486c6634e876254fe6dc2225e6419c02e459d69ea7022c9e",
+      "firstFailureExcerpt": "{\"name\":\"exact_delivered_bytes_boot_offline\",\"pass\":false}",
+      "detailExcerpt": "null"
+    }
+  },
+  {
+    "title": "R23_RESULT_release5_browser_results",
+    "payload": {
+      "sourceRun": "44440213754",
+      "file": "tests/release5-browser-results.json",
+      "fileSha256": "93d46a15453206b71e9c28ede99e8c0472ae84d8792d5ecb025c832d7a3bf349",
+      "failedCount": 1,
+      "failedChecks": [
+        "offline_browser_received_exact_delivered_html_bytes"
+      ],
+      "buildId": "ad379fc6b8cddeaff64a1895a2eb97fed493b037a7e725a3bd9681a185d94a64",
+      "htmlSha256": "017f4cd81211d2be486c6634e876254fe6dc2225e6419c02e459d69ea7022c9e",
+      "firstFailureExcerpt": "{\"name\":\"offline_browser_received_exact_delivered_html_bytes\",\"pass\":false}",
+      "detailExcerpt": "null"
+    }
+  },
+  {
+    "title": "R23_RESULT_release23_browser_results",
+    "payload": {
+      "sourceRun": "44440213754",
+      "file": "tests/release23-browser-results.json",
+      "fileSha256": "169f5072a3a2c4e71b490d59a714963d1c06b8e58f5708b641d43b2d9ebfd9fe",
+      "failedCount": 1,
+      "failedChecks": [
+        "release23_boots_the_exact_delivered_document_offline"
+      ],
+      "buildId": "ad379fc6b8cddeaff64a1895a2eb97fed493b037a7e725a3bd9681a185d94a64",
+      "htmlSha256": "017f4cd81211d2be486c6634e876254fe6dc2225e6419c02e459d69ea7022c9e",
+      "firstFailureExcerpt": "{\"name\":\"release23_boots_the_exact_delivered_document_offline\",\"pass\":false}",
+      "detailExcerpt": "null"
+    }
+  },
+  {
+    "title": "R23_RESULT_release22_browser_results",
+    "payload": {
+      "sourceRun": "44440213754",
+      "file": "tests/release22-browser-results.json",
+      "fileSha256": "c7c39e47a2d91dbe06dd18bc61210ce22f143d8656769e2ec0a4f1ffd8a81fb8",
+      "failedCount": 1,
+      "failedChecks": [
+        "release22_runs_manifest_bound_bytes_offline"
+      ],
+      "buildId": "ad379fc6b8cddeaff64a1895a2eb97fed493b037a7e725a3bd9681a185d94a64",
+      "htmlSha256": "017f4cd81211d2be486c6634e876254fe6dc2225e6419c02e459d69ea7022c9e",
+      "firstFailureExcerpt": "{\"name\":\"release22_runs_manifest_bound_bytes_offline\",\"pass\":false}",
+      "detailExcerpt": "null"
+    }
+  },
+  {
+    "title": "R23_RESULT_release21_browser_results",
+    "payload": {
+      "sourceRun": "44440213754",
+      "file": "tests/release21-browser-results.json",
+      "fileSha256": "83684faf08591acacae532c528a46f62aae5264bd75fc83eac45bf4dcdd049ac",
+      "failedCount": 1,
+      "failedChecks": [
+        "release21_runs_the_manifest_bound_document_without_network"
+      ],
+      "buildId": "ad379fc6b8cddeaff64a1895a2eb97fed493b037a7e725a3bd9681a185d94a64",
+      "htmlSha256": "017f4cd81211d2be486c6634e876254fe6dc2225e6419c02e459d69ea7022c9e",
+      "firstFailureExcerpt": "{\"name\":\"release21_runs_the_manifest_bound_document_without_network\",\"pass\":false}",
+      "detailExcerpt": "null"
+    }
+  },
+  {
+    "title": "R23_RESULT_release20_browser_results",
+    "payload": {
+      "sourceRun": "44440213754",
+      "file": "tests/release20-browser-results.json",
+      "fileSha256": "3b3c53792b10f065736f036f7ef4a4fb62fbc0a7492ca92ae75247d565d180b0",
+      "failedCount": 1,
+      "failedChecks": [
+        "release20_runs_the_manifest_bound_document_without_network"
+      ],
+      "buildId": "ad379fc6b8cddeaff64a1895a2eb97fed493b037a7e725a3bd9681a185d94a64",
+      "htmlSha256": "017f4cd81211d2be486c6634e876254fe6dc2225e6419c02e459d69ea7022c9e",
+      "firstFailureExcerpt": "{\"name\":\"release20_runs_the_manifest_bound_document_without_network\",\"pass\":false}",
+      "detailExcerpt": "null"
+    }
+  },
+  {
+    "title": "R23_RESULT_release19_browser_results",
+    "payload": {
+      "sourceRun": "44440213754",
+      "file": "tests/release19-browser-results.json",
+      "fileSha256": "224a9e77bd6f9f4e1eb4deef17953e8753cde70307f4e861f530839077875816",
+      "failedCount": 1,
+      "failedChecks": [
+        "release19_runs_the_manifest_bound_document_without_network"
+      ],
+      "buildId": "ad379fc6b8cddeaff64a1895a2eb97fed493b037a7e725a3bd9681a185d94a64",
+      "htmlSha256": "017f4cd81211d2be486c6634e876254fe6dc2225e6419c02e459d69ea7022c9e",
+      "firstFailureExcerpt": "{\"name\":\"release19_runs_the_manifest_bound_document_without_network\",\"pass\":false}",
+      "detailExcerpt": "null"
+    }
+  },
+  {
+    "title": "R23_RESULT_release18_browser_results",
+    "payload": {
+      "sourceRun": "44440213754",
+      "file": "tests/release18-browser-results.json",
+      "fileSha256": "3978e3470959f7eaba8e8b6ee9ffcecbd367f9b42fab78178778ea66e7a11660",
+      "failedCount": 1,
+      "failedChecks": [
+        "release18_runs_the_manifest_bound_document_without_network"
+      ],
+      "buildId": "ad379fc6b8cddeaff64a1895a2eb97fed493b037a7e725a3bd9681a185d94a64",
+      "htmlSha256": "017f4cd81211d2be486c6634e876254fe6dc2225e6419c02e459d69ea7022c9e",
+      "firstFailureExcerpt": "{\"name\":\"release18_runs_the_manifest_bound_document_without_network\",\"pass\":false}",
+      "detailExcerpt": "null"
+    }
+  },
+  {
+    "title": "R23_RESULT_release17_browser_results",
+    "payload": {
+      "sourceRun": "44440213754",
+      "file": "tests/release17-browser-results.json",
+      "fileSha256": "a7a0c8387c7c26de86d9bc6959a788a08a949053b847866f3b7254754caf8029",
+      "failedCount": 1,
+      "failedChecks": [
+        "release17_runs_the_manifest_bound_document_without_network"
+      ],
+      "buildId": "ad379fc6b8cddeaff64a1895a2eb97fed493b037a7e725a3bd9681a185d94a64",
+      "htmlSha256": "017f4cd81211d2be486c6634e876254fe6dc2225e6419c02e459d69ea7022c9e",
+      "firstFailureExcerpt": "{\"name\":\"release17_runs_the_manifest_bound_document_without_network\",\"pass\":false}",
+      "detailExcerpt": "null"
+    }
+  },
+  {
+    "title": "R23_RESULT_release16_browser_results",
+    "payload": {
+      "sourceRun": "44440213754",
+      "file": "tests/release16-browser-results.json",
+      "fileSha256": "e21a987ba70ee079f2b10a741dfaf82bf440ed4c6168a503ef24d722b39723a6",
+      "failedCount": 1,
+      "failedChecks": [
+        "release16_runs_the_manifest_bound_document_without_network"
+      ],
+      "buildId": "ad379fc6b8cddeaff64a1895a2eb97fed493b037a7e725a3bd9681a185d94a64",
+      "htmlSha256": "017f4cd81211d2be486c6634e876254fe6dc2225e6419c02e459d69ea7022c9e",
+      "firstFailureExcerpt": "{\"name\":\"release16_runs_the_manifest_bound_document_without_network\",\"pass\":false}",
+      "detailExcerpt": "null"
+    }
+  },
+  {
+    "title": "R23_RESULT_release15_browser_results",
+    "payload": {
+      "sourceRun": "44440213754",
+      "file": "tests/release15-browser-results.json",
+      "fileSha256": "c2b7d9aa94ae8e84d017cac9a2d2f0e8189c6e1df41c0257d95a29533be94fc0",
+      "failedCount": 1,
+      "failedChecks": [
+        "release15_uses_manifest_bound_bytes_offline"
+      ],
+      "buildId": "ad379fc6b8cddeaff64a1895a2eb97fed493b037a7e725a3bd9681a185d94a64",
+      "htmlSha256": "017f4cd81211d2be486c6634e876254fe6dc2225e6419c02e459d69ea7022c9e",
+      "firstFailureExcerpt": "{\"name\":\"release15_uses_manifest_bound_bytes_offline\",\"pass\":false}",
+      "detailExcerpt": "null"
+    }
+  },
+  {
+    "title": "R23_RESULT_release14_browser_results",
+    "payload": {
+      "sourceRun": "44440213754",
+      "file": "tests/release14-browser-results.json",
+      "fileSha256": "156736796ed8f6dc4d12d215f6bc29d4b1440f4b3b6bc17a2e04951a17b4a702",
+      "failedCount": 1,
+      "failedChecks": [
+        "release14_uses_the_same_manifest_bound_bytes_with_network_offline"
+      ],
+      "buildId": "ad379fc6b8cddeaff64a1895a2eb97fed493b037a7e725a3bd9681a185d94a64",
+      "htmlSha256": "017f4cd81211d2be486c6634e876254fe6dc2225e6419c02e459d69ea7022c9e",
+      "firstFailureExcerpt": "{\"name\":\"release14_uses_the_same_manifest_bound_bytes_with_network_offline\",\"pass\":false}",
+      "detailExcerpt": "null"
+    }
+  },
+  {
+    "title": "R23_RESULT_release13_browser_results",
+    "payload": {
+      "sourceRun": "44440213754",
+      "file": "tests/release13-browser-results.json",
+      "fileSha256": "1b38b9373ebadf7ee5946848f804551fc4b2917eb9fcfe3ead93c1e2352dc050",
+      "failedCount": 1,
+      "failedChecks": [
+        "release13_boots_offline_from_the_same_manifest_bound_html"
+      ],
+      "buildId": "ad379fc6b8cddeaff64a1895a2eb97fed493b037a7e725a3bd9681a185d94a64",
+      "htmlSha256": "017f4cd81211d2be486c6634e876254fe6dc2225e6419c02e459d69ea7022c9e",
+      "firstFailureExcerpt": "{\"name\":\"release13_boots_offline_from_the_same_manifest_bound_html\",\"pass\":false}",
+      "detailExcerpt": "null"
+    }
+  },
+  {
+    "title": "R23_RESULT_release12_browser_results",
+    "payload": {
+      "sourceRun": "44440213754",
+      "file": "tests/release12-browser-results.json",
+      "fileSha256": "fdd2f3dc67623f49259a75f2ad8afbb2b4def5698b2c8e0296d18c21e66bf34d",
+      "failedCount": 1,
+      "failedChecks": [
+        "release12_boots_offline_from_the_manifest_bound_document"
+      ],
+      "buildId": "ad379fc6b8cddeaff64a1895a2eb97fed493b037a7e725a3bd9681a185d94a64",
+      "htmlSha256": "017f4cd81211d2be486c6634e876254fe6dc2225e6419c02e459d69ea7022c9e",
+      "firstFailureExcerpt": "{\"name\":\"release12_boots_offline_from_the_manifest_bound_document\",\"pass\":false}",
+      "detailExcerpt": "null"
+    }
+  },
+  {
+    "title": "R23_RESULT_release11_browser_results",
+    "payload": {
+      "sourceRun": "44440213754",
+      "file": "tests/release11-browser-results.json",
+      "fileSha256": "ec1ce7e357505aa02952ba86e2efa8ab8001687fa51d0083951f2f91ec86050e",
+      "failedCount": 1,
+      "failedChecks": [
+        "release11_boots_offline_from_the_manifest_bound_document"
+      ],
+      "buildId": "ad379fc6b8cddeaff64a1895a2eb97fed493b037a7e725a3bd9681a185d94a64",
+      "htmlSha256": "017f4cd81211d2be486c6634e876254fe6dc2225e6419c02e459d69ea7022c9e",
+      "firstFailureExcerpt": "{\"name\":\"release11_boots_offline_from_the_manifest_bound_document\",\"pass\":false}",
+      "detailExcerpt": "null"
+    }
+  },
+  {
+    "title": "R23_RESULT_release10_browser_results",
+    "payload": {
+      "sourceRun": "44440213754",
+      "file": "tests/release10-browser-results.json",
+      "fileSha256": "53a248902bd49658618978c4d1838dd06f54585d08fff4dd5acbed3c939a4907",
+      "failedCount": 1,
+      "failedChecks": [
+        "release10_boots_offline_from_the_manifest_bound_document"
+      ],
+      "buildId": "ad379fc6b8cddeaff64a1895a2eb97fed493b037a7e725a3bd9681a185d94a64",
+      "htmlSha256": "017f4cd81211d2be486c6634e876254fe6dc2225e6419c02e459d69ea7022c9e",
+      "firstFailureExcerpt": "{\"name\":\"release10_boots_offline_from_the_manifest_bound_document\",\"pass\":false}",
+      "detailExcerpt": "null"
+    }
+  },
+  {
+    "title": "R23_RESULT_expanded_examples_browser_results",
+    "payload": {
+      "sourceRun": "44440213754",
+      "file": "tests/expanded-examples-browser-results.json",
+      "fileSha256": "96cee6cf7ac93804275b43ac2edf2ac79bc877a32fff2d3d735043afaba4834c",
+      "failedCount": 1,
+      "failedChecks": [
+        "embedded_tutorials_boot_offline_with_expected_document_bytes"
+      ],
+      "buildId": "ad379fc6b8cddeaff64a1895a2eb97fed493b037a7e725a3bd9681a185d94a64",
+      "htmlSha256": "017f4cd81211d2be486c6634e876254fe6dc2225e6419c02e459d69ea7022c9e",
+      "firstFailureExcerpt": "{\"name\":\"embedded_tutorials_boot_offline_with_expected_document_bytes\",\"pass\":false}",
+      "detailExcerpt": "null"
+    }
+  },
+  {
+    "title": "R23_RESULT_accessibility_workflow_results",
+    "payload": {
+      "sourceRun": "44440213754",
+      "file": "tests/accessibility-workflow-results.json",
+      "fileSha256": "4b91209103bdac83495d834e7d3af0cf3f9683ab51680871aebc3f9490078dc2",
+      "failedCount": 1,
+      "failedChecks": [
+        "keyboard_tasks_boot_exact_delivered_bytes_offline"
+      ],
+      "buildId": "ad379fc6b8cddeaff64a1895a2eb97fed493b037a7e725a3bd9681a185d94a64",
+      "htmlSha256": "017f4cd81211d2be486c6634e876254fe6dc2225e6419c02e459d69ea7022c9e",
+      "firstFailureExcerpt": "{\"name\":\"keyboard_tasks_boot_exact_delivered_bytes_offline\",\"pass\":false}",
+      "detailExcerpt": "null"
+    }
+  },
+  {
+    "title": "R23_RESULT_accessibility_r23_results",
+    "payload": {
+      "sourceRun": "44440213754",
+      "file": "tests/accessibility-r23-results.json",
+      "fileSha256": "76dd0833a736680f7e7f6d78fb5a3994bf6ea396120c1147b052ed90261c94b3",
+      "failedCount": 1,
+      "failedChecks": [
+        "r23_accessibility_uses_manifest_bound_document_offline"
+      ],
+      "buildId": "ad379fc6b8cddeaff64a1895a2eb97fed493b037a7e725a3bd9681a185d94a64",
+      "htmlSha256": "017f4cd81211d2be486c6634e876254fe6dc2225e6419c02e459d69ea7022c9e",
+      "firstFailureExcerpt": "{\"name\":\"r23_accessibility_uses_manifest_bound_document_offline\",\"pass\":false}",
+      "detailExcerpt": "null"
+    }
+  },
+  {
+    "title": "R23_LOG_release5_in_browser",
+    "payload": {
+      "sourceRun": "44440213754",
+      "group": "release5_in_browser",
+      "log": "tests/release5_in_browser.log",
+      "logAvailable": true,
+      "logSha256": "9e0e15a40b2a6a4fc139c0d8687246df06d9c5d9aaf9f4d63e8f3fa761a711be",
+      "logBytes": 1405,
+      "excerpt": "offline_browser_received_exact_delivered_html_bytes FAIL\ndelivered_build_identity_matches_manifest PASS\noriginal_embedded_examples_preserved_and_menu_matches_declared_inventory PASS\nspark_example_loads_offline_with_real_declared_board PASS\noffline_spark_example_executes_one_protection_two_damage_events_and_replay PASS\nspirit_example_loads_offline_and_replaces_previous_trace PASS\noffline_spirit_example_preserves_banish_cost_and_replays_negation PASS\ninvoked_example_loads_offline_with_clean_empty_field PASS\noffline_invoked_example_completes_real_fusion_recovery_and_replay PASS\ncoverage_tracks_current_deck_with_build_context_and_explicit_partial_scope PASS\ncoverage_text_filter_restricts_visible_rows_to_selected_identity PASS\ncoverage_zone_filter_matches_actual_extra_entries PASS\ncoverage_export_keeps_full_inventory_and_exact_build_despite_visual_filter PASS\ncoverage_does_not_present_tcg_action_registry_as_other_format_validation PASS\ngui_mechaba_spell_packet_pays_matching_physical_spell_cost PASS\ngui_mechaba_negates_normal_spell_banishes_same_source_and_preserves_materials PASS\ngui_mechaba_uses_real_spell_activation_zone_without_false_gy_visit_or_activation_limit PASS\ncoverage_refreshes_after_loading_another_deck PASS\nno_browser_page_errors PASS\nartifact_unchanged_during_browser_test PASS\n{\"pass\": false, \"checks\": 20, \"failed\": [\"offline_browser_received_exact_delivered_html_bytes\"]}\n\n"
+    }
+  },
+  {
+    "title": "R23_LOG_accessibility_workflow",
+    "payload": {
+      "sourceRun": "44440213754",
+      "group": "accessibility_workflow",
+      "log": "tests/accessibility_workflow.log",
+      "logAvailable": true,
+      "logSha256": "1413e9e8cffbd7fb635d0a707e18c6299d38ef2f63713a6449b251a689ac1820",
+      "logBytes": 1723,
+      "excerpt": "keyboard_tasks_boot_exact_delivered_bytes_offline FAIL\npresentation_module_keeps_uncertainty_explicit PASS\nlegacy_deck_catalog_and_restriction_controls_have_names PASS\nfirst_keyboard_stop_is_the_visible_skip_link PASS\nskip_link_moves_focus_to_deck_data PASS\nall_skip_link_destinations_are_focusable_existing_sections PASS\nlegacy_name_input_has_visible_keyboard_focus PASS\nname_input_text_and_focus_meet_sampled_contrast_thresholds PASS\nformat_selection_exposes_exactly_one_pressed_button PASS\nformat_selection_can_return_to_tcg_with_keyboard PASS\ndeck_zone_buttons_expose_selection_and_controlled_list PASS\ndeck_zone_can_return_to_main_with_keyboard PASS\nlaboratory_buttons_expose_selection_and_controlled_panel PASS\nlaboratory_can_return_to_catalog_with_keyboard PASS\nlegacy_catalog_search_has_global_visible_focus PASS\ntoast_exposes_a_polite_atomic_status PASS\nkeyboard_fixture_starts_from_a_physical_unplayed_example PASS\nretained_preview_shell_exposes_a_named_modal_dialog PASS\npreview_close_control_is_a_named_native_button PASS\npreview_opens_with_focus_inside_and_background_inert PASS\npreview_tab_wraps_inside_the_dialog PASS\npreview_shift_tab_wraps_inside_the_dialog PASS\ninert_background_cannot_steal_preview_focus PASS\npreview_escape_restores_original_focus_and_background PASS\npreview_native_close_button_works_with_enter PASS\npreview_backdrop_closes_and_restores_focus PASS\nlegacy_class_removal_also_restores_focus PASS\nkeyboard_and_modal_tasks_preserve_the_physical_scenario PASS\nkeyboard_tasks_raise_no_uncaught_page_errors PASS\nkeyboard_tasks_leave_the_delivered_artifact_unchanged PASS\n{\"pass\": false, \"checks\": 30, \"failed\": [\"keyboard_tasks_boot_exact_delivered_bytes_offline\"], \"elapsedSeconds\": 19.21}\n\n"
+    }
+  },
+  {
+    "title": "R23_LOG_release22_in_browser",
+    "payload": {
+      "sourceRun": "44440213754",
+      "group": "release22_in_browser",
+      "log": "tests/release22_in_browser.log",
+      "logAvailable": true,
+      "logSha256": "8c3833facaf36caf01b41ae1415f76da896acc6340e3c5b825a399db825c11c2",
+      "logBytes": 2066,
+      "excerpt": "release22_runs_manifest_bound_bytes_offline FAIL\ntwenty_two_visible_examples_preserve_all_previous_ids PASS\nfaith_example_starts_as_an_unplayed_declared_set_field PASS\nthe_visible_guide_explains_mandatory_target_recovery_and_partial_damage_step PASS\nvisible_flip_preserves_the_copy_and_normal_summon_budget PASS\nonly_the_mandatory_faith_resolution_can_continue_after_flip PASS\na_field_only_goal_remains_pending_until_the_flip_is_resolved PASS\nfaith_recovers_the_same_targeted_gy_copy_to_the_hand PASS\nrecovery_is_revealed_without_deck_search_or_shuffle PASS\nthe_two_action_goal_replays_with_provisional_competitive_scoring PASS\nimport_reexecutes_the_flip_and_restores_its_mandatory_pending_target PASS\ncompleted_export_reimports_with_identical_physical_state PASS\na_changed_target_is_rejected_without_replacing_the_accepted_state PASS\nundoing_the_recovery_restores_the_unresolved_flip PASS\nthe_search_contains_a_complete_two_action_flip_recovery_line PASS\ncontinuing_a_search_result_replays_both_mandatory_actions PASS\nwithout_a_legal_spell_the_obligatory_resolution_is_still_visible PASS\nthe_no_target_effect_resolves_without_a_decline_or_fabricated_recovery PASS\na_real_opponent_attack_reveals_faith_and_keeps_her_on_field_for_the_flip PASS\nthe_attack_budget_is_spent_before_the_defenders_mandatory_flip PASS\nbattle_faith_recovers_before_the_same_copy_is_sent_to_the_graveyard PASS\nthe_record_orders_recovery_before_one_final_battle_departure PASS\nimport_reconstructs_the_physical_attack_and_deferred_battle_packet PASS\na_resumed_battle_reaches_the_same_final_state_and_fresh_replay PASS\nthe_visible_damage_step_mechaba_response_pays_a_physical_monster PASS\nmechaba_negates_and_banishes_the_field_faith_before_battle_cleanup PASS\nbattle_cleanup_does_not_send_the_banished_faith_to_the_graveyard_again PASS\nthe_mechaba_battle_export_reexecutes_cost_banish_and_cleanup PASS\nrelease22_raises_no_javascript_page_errors PASS\nrelease22_leaves_the_compiled_artifact_unchanged PASS\n{\"pass\": false, \"checks\": 30, \"failed\": [\"release22_runs_manifest_bound_bytes_offline\"]}\n\n"
+    }
+  },
+  {
+    "title": "R23_LOG_release21_in_browser",
+    "payload": {
+      "sourceRun": "44440213754",
+      "group": "release21_in_browser",
+      "log": "tests/release21_in_browser.log",
+      "logAvailable": true,
+      "logSha256": "e00df5ae11778e53ca76ff07a4ee68e0c0560b7dd91dfeb1147d14277cdc0233",
+      "logBytes": 3092,
+      "excerpt": "preserve_all_twenty_previous_identifiers PASS\nhayabusa_starts_in_a_physical_five_card_hand_without_autoplay_or_prior_history PASS\nthe_visible_guide_explains_second_attack_negation_spent_declarations_and_scope PASS\na_real_normal_summon_consumes_the_summon_and_conserves_the_same_copy PASS\nhayabusa_action_inventory_preserves_summon_and_second_attack_and_adds_reviewed_flip PASS\nthe_board_shows_an_unspent_two_attack_budget PASS\nthe_second_turn_legally_enters_battle_with_a_fresh_budget PASS\nthe_first_direct_attack_pays_one_declaration_and_causes_printed_damage PASS\nthe_same_copy_offers_one_second_attack_and_the_board_labels_the_remaining_budget PASS\nthe_second_direct_attack_spends_the_second_declaration_without_creating_a_third PASS\nfour_visible_actions_achieve_the_goal_with_a_replayed_same_copy PASS\ndownload_binds_delivered_build_goal_attack_history_and_actual_lp PASS\nundo_restores_exactly_one_spent_attack_and_the_opponents_previous_lp PASS\nimport_reexecutes_all_actions_and_restores_the_exhausted_budget PASS\nimport_of_the_first_attack_preserves_the_one_remaining_legal_declaration PASS\nreport_import_rejects_a_third_attack_appended_to_an_exhausted_trace_without_replacing_the_lab PASS\nreport_import_rejects_a_nonexistent_attacker_copy_without_replacing_the_lab PASS\nreport_import_rejects_an_attack_by_the_inactive_player_without_replacing_the_lab PASS\nreport_import_rejects_an_invented_battle_target_without_replacing_the_lab PASS\nreport_import_rejects_damage_beyond_two_physical_attacks_without_replacing_the_lab PASS\nreport_import_rejects_negation_invented_without_a_registered_transition_without_replacing_the_lab PASS\nreport_import_rejects_a_refunded_attack_without_undoing_its_transition_without_replacing_the_lab PASS\na_monster_that_attacked_twice_cannot_change_position_manually PASS\nvisible_search_finds_and_replays_a_line_with_two_attacks_by_the_same_monster PASS\ncontinuing_a_verified_search_line_preserves_the_two_spent_attacks PASS\nthe_emulated_mobile_board_exposes_spent_attack_budget_and_goal PASS\ncyber_twin_import_uses_a_declared_field_without_certifying_prior_fusion PASS\ncyber_twin_action_inventory_declares_its_partial_attack_and_reviewed_flip_profiles PASS\ncyber_twin_first_attack_sends_the_first_physical_rival_to_its_owners_grave PASS\ncyber_twin_second_attack_targets_the_other_copy_and_exhausts_its_budget PASS\nboth_monster_attacks_replay_without_fabricating_fusion_history PASS\na_real_opposing_impermanence_negates_hayabusa_after_its_first_attack PASS\nnegation_reduces_the_limit_without_refunding_the_spent_declaration PASS\nnegation_and_battle_history_replay_from_the_real_hand_copy PASS\nresuming_before_negation_restores_the_opponents_hand_and_one_remaining_attack PASS\nnegation_after_two_attacks_keeps_both_declarations_spent_even_above_the_new_limit PASS\nrelease21_raises_no_javascript_page_errors PASS\nrelease21_leaves_the_compiled_artifact_unchanged PASS\n{\"pass\": false, \"checks\": 39, \"failed\": [\"release21_runs_the_manifest_bound_document_without_network\"]}\n\n"
+    }
+  },
+  {
+    "title": "R23_LOG_release20_in_browser",
+    "payload": {
+      "sourceRun": "44440213754",
+      "group": "release20_in_browser",
+      "log": "tests/release20_in_browser.log",
+      "logAvailable": true,
+      "logSha256": "0c5309f0b63c2b5d413e0197cfa561bcfd1e0bcbe772749a627772882e899380",
+      "logBytes": 3287,
+      "excerpt": "line_and_non_targeting PASS\ndeclared_setup_creates_neither_an_albaz_window_nor_fusion_qualification PASS\na_real_normal_summon_opens_exactly_one_optional_albaz_window PASS\nrendered_fusion_choices_use_only_source_albaz_plus_a_physical_rival_material PASS\nboth_reviewed_recipes_and_main_zone_positions_are_visible PASS\nthe_optional_albaz_window_offers_three_physical_response_families PASS\nthe_fusion_label_names_albaz_rival_mechaba_discard_recipe_zone_and_non_targeting PASS\na_true_fusion_certifies_the_same_extra_copy_without_declared_history PASS\neach_material_goes_to_its_owners_graveyard_and_the_real_discard_stays_paid PASS\nalbaz_records_field_origin_non_targeting_and_a_spent_hard_once_per_turn_use PASS\nreborn_revives_the_same_main_deck_albaz_into_the_chosen_main_zone_and_position PASS\nrevival_preserves_the_spent_albaz_use_and_opens_no_second_fusion_window PASS\nthree_ui_actions_achieve_the_advertised_goal_with_an_independent_replay PASS\nthe_download_binds_real_uids_owner_fusion_history_goal_and_delivered_build PASS\nundo_restores_the_optional_window_material_owners_hand_cost_and_unspent_use PASS\nimport_reconstructs_the_real_normal_summon_window_and_choices PASS\nimport_reexecutes_all_three_actions_and_restores_spent_use_and_goal PASS\nforged_discard_is_rejected_without_replacing_the_active_route PASS\nforged_rival_material_is_rejected_without_replacing_the_active_route PASS\nforged_owner_is_rejected_without_replacing_the_active_route PASS\nforged_fusion_history_is_rejected_without_replacing_the_active_route PASS\nforged_non_targeting_is_rejected_without_replacing_the_active_route PASS\nforged_activation_origin_is_rejected_without_replacing_the_active_route PASS\nthe_albaz_guide_board_and_controls_remain_readable_at_mobile_width PASS\nexplicit_optional_decline_names_albaz_and_spends_neither_discard_nor_use PASS\nmechaba_negation_preserves_albaz_discard_consumes_use_and_does_not_fuse PASS\nmechaba_uses_a_real_matching_monster_cost_and_banishes_the_field_source PASS\nveiler_negation_preserves_albaz_discard_consumes_use_and_does_not_fuse PASS\nveiler_pays_its_actual_hand_copy_and_negates_the_current_field_albaz PASS\nimperm_negation_preserves_albaz_discard_consumes_use_and_does_not_fuse PASS\nimperm_uses_the_prior_set_physical_trap_and_cleans_it_to_its_owners_graveyard PASS\na_physical_json_scenario_import_declares_albaz_in_grave_without_inventing_a_trigger PASS\nreborn_first_opens_the_optional_albaz_window_from_an_actual_main_deck_revival PASS\nreborn_albaz_fuses_with_the_rival_dark_material_and_opens_real_lubellion_continuation PASS\nlubellion_pays_a_second_physical_discard_and_shuffles_only_own_materials PASS\nthe_imported_reborn_first_lubellion_route_achieves_mirrorjade_in_three_replayed_actions PASS\nreport_import_reconstructs_the_reborn_generated_optional_window PASS\nrelease20_raises_no_javascript_page_errors PASS\nrelease20_leaves_the_compiled_artifact_unchanged PASS\n{\"pass\": false, \"checks\": 42, \"failed\": [\"release20_runs_the_manifest_bound_document_without_network\"]}\n\n"
+    }
+  },
+  {
+    "title": "R23_LOG_release19_in_browser",
+    "payload": {
+      "sourceRun": "44440213754",
+      "group": "release19_in_browser",
+      "log": "tests/release19_in_browser.log",
+      "logAvailable": true,
+      "logSha256": "9484d4e4b411bb8a34dc678f52734f7b6b12d16aa2ee20939a3c2556f9767377",
+      "logBytes": 2892,
+      "excerpt": "release19_runs_the_manifest_bound_document_without_network FAIL\ntwenty_one_visible_examples_preserve_all_twenty_previous_identifiers PASS\nwolf_revival_preserves_the_existing_registered_spell_and_trap_packets PASS\nthe_example_loads_declared_materials_and_graveyards_without_autoplay PASS\nthe_visible_guide_declares_setup_indices_fixed_geometry_and_non_targeting_selection PASS\nthe_initial_extra_copy_has_no_invented_link_qualification_or_reborn_target PASS\nthe_rendered_link_choice_names_both_physical_materials_and_the_extra_zone PASS\nthe_genuine_link_procedure_certifies_the_same_wolf_and_sends_both_materials PASS\nthe_extra_wolf_board_displays_both_real_pointed_zones PASS\nthe_actual_battle_destroys_wolf_and_charges_1200_lp_without_losing_link_history PASS\nthe_witnessed_wolf_is_revivable_only_in_attack_in_main_monster_zones PASS\nthe_intermediate_download_binds_real_materials_battle_history_and_build PASS\nthe_visible_revive_choice_names_own_graveyard_attack_and_main_zone_two PASS\nthe_revived_wolf_retains_identity_owner_and_proper_link_history_with_current_gy_origin PASS\nrevival_creates_no_reincarnation_spell_trap_recovery_or_fire_trigger PASS\nthe_main_zone_wolf_board_shows_its_extra_zone_arrow_and_reborn_cleanup PASS\na_real_normal_summon_outside_the_arrow_does_not_open_wolfs_fire_window PASS\ndeclining_aleisters_optional_search_does_not_invent_a_deck_card_or_wolf_trigger PASS\nthe_actual_artemis_link_into_the_pointed_extra_zone_opens_one_wolf_window PASS\nthe_non_targeting_resolution_choices_include_non_salamangreat_ash_and_exclude_roar PASS\nthe_visible_recovery_label_describes_a_choice_at_resolution_without_targeting PASS\nfire_recovery_moves_the_same_ash_to_hand_and_consumes_the_wolf_hard_once_per_turn PASS\nhand_recovery_records_the_same_name_summon_lock_for_the_rest_of_this_turn PASS\nthe_advertised_goal_is_achieved_only_after_nine_real_actions_with_a_fresh_replay PASS\nan_independent_read_only_replay_reexecutes_the_exportable_nine_action_line PASS\nthe_final_download_preserves_physical_identity_goal_lock_and_replay PASS\nundo_restores_the_real_arrival_window_ash_in_grave_and_unspent_recovery PASS\nimport_rebuilds_the_eight_action_summon_window_instead_of_trusting_a_saved_summary PASS\nimport_replays_nine_actions_and_restores_the_consumed_use_name_lock_and_goal PASS\nan_altered_material_is_rejected_without_replacing_the_active_route PASS\nan_altered_qualification_is_rejected_without_replacing_the_active_route PASS\nan_altered_revival_origin_is_rejected_without_replacing_the_active_route PASS\nan_altered_resolution_choice_is_rejected_without_replacing_the_active_route PASS\nthe_wolf_guide_and_board_remain_readable_at_mobile_width_without_mutating_state PASS\nrelease19_raises_no_javascript_page_errors PASS\nrelease19_leaves_the_compiled_artifact_unchanged PASS\n{\"pass\": false, \"checks\": 36, \"failed\": [\"release19_runs_the_manifest_bound_document_without_network\"]}\n\n"
+    }
+  },
+  {
+    "title": "R23_LOG_release18_in_browser",
+    "payload": {
+      "sourceRun": "44440213754",
+      "group": "release18_in_browser",
+      "log": "tests/release18_in_browser.log",
+      "logAvailable": true,
+      "logSha256": "160f56a45f69a9dc73482ff77b0b7f7f666f2c93865dac3e63c2b478eebd251d",
+      "logBytes": 2787,
+      "excerpt": "release18_runs_the_manifest_bound_document_without_network FAIL\ntwenty_one_visible_examples_preserve_all_twenty_previous_identifiers PASS\nspirit_revival_reuses_the_registered_spell_packet_and_preserves_other_registries PASS\nthe_example_starts_with_an_empty_field_five_physical_hand_cards_and_no_autoplay PASS\nthe_extra_copy_claims_no_initial_proper_link_history PASS\nthe_visible_longyuan_alternative_initially_has_a_real_wyrm_discard PASS\nmonster_reborn_does_not_offer_an_extra_copy_without_graveyard_history PASS\nnormal_summon_consumes_the_real_guard_and_normal_budget PASS\nthe_visible_link_choice_identifies_spirit_and_its_real_material PASS\nthe_link_procedure_creates_proper_history_for_the_same_physical_copy PASS\nthe_material_reaches_the_graveyard_with_a_link_material_proof PASS\nthe_real_link_summon_queues_its_own_mausoleum_opportunity PASS\nthe_link_only_search_adds_a_real_mausoleum_consumes_its_use_and_shuffles PASS\nthe_live_spirit_restriction_excludes_longyuan_without_spending_its_discard PASS\nthe_goal_remains_unachieved_before_tribute_and_revival PASS\nthe_tribute_is_a_real_paid_cost_and_preserves_spirits_link_qualification PASS\nblue_eyes_is_summoned_from_the_same_hand_and_the_tribute_use_is_spent PASS\ndeparture_removes_the_live_restriction_despite_retained_historical_locks PASS\nthe_revive_choices_offer_only_attack_in_free_main_monster_zones PASS\nthe_intermediate_download_binds_proper_history_cost_and_build PASS\nthe_visible_revive_choice_names_own_graveyard_attack_and_main_zone_three PASS\nthe_revived_copy_keeps_owner_and_proper_link_history_with_current_gy_origin PASS\nreborn_creates_no_second_link_only_search_or_pending_summon_trigger PASS\nrevival_does_not_reset_either_spirit_once_per_turn_use PASS\nrevival_reinstates_the_live_dragon_restriction_without_spending_longyuan PASS\nthe_normal_spell_finishes_in_the_graveyard_without_material_or_normal_summon_charges PASS\nthe_advertised_goal_and_five_real_actions_have_a_fresh_passing_replay PASS\nthe_final_download_preserves_the_same_physical_spirit_and_goal PASS\nundo_restores_the_graveyard_copy_reborn_in_hand_and_unrestricted_alternative PASS\nimport_reconstructs_five_actions_and_the_live_restriction_from_fresh_replay PASS\nan_altered_material_is_rejected_without_replacing_the_active_route PASS\nan_altered_qualification_is_rejected_without_replacing_the_active_route PASS\nan_altered_tribute_cost_is_rejected_without_replacing_the_active_route PASS\nan_altered_revival_origin_is_rejected_without_replacing_the_active_route PASS\nthe_spirit_guide_remains_readable_at_mobile_width_without_mutating_state PASS\nrelease18_raises_no_javascript_page_errors PASS\nrelease18_leaves_the_compiled_artifact_unchanged PASS\n{\"pass\": false, \"checks\": 37, \"failed\": [\"release18_runs_the_manifest_bound_document_without_network\"]}\n\n"
+    }
+  },
+  {
+    "title": "R23_LOG_release17_in_browser",
+    "payload": {
+      "sourceRun": "44440213754",
+      "group": "release17_in_browser",
+      "log": "tests/release17_in_browser.log",
+      "logAvailable": true,
+      "logSha256": "1e847e0988ee5b21a2176f9f97ac437599fd5c772b628b7e0f158fcdd3975357",
+      "logBytes": 3033,
+      "excerpt": "_document_without_network FAIL\ntwenty_one_visible_examples_preserve_all_twenty_previous_identifiers PASS\nazure_adds_a_summon_without_widening_spell_or_trap_activation_registries PASS\nthe_example_starts_with_declared_materials_and_no_autoplay PASS\nthe_extra_copy_and_starting_field_do_not_claim_witnessed_summon_history PASS\nmonster_reborn_does_not_offer_the_unwitnessed_extra_copy PASS\nthe_normal_tuner_uses_the_real_hand_copy_and_normal_summon PASS\nthe_visible_synchro_choice_names_materials_position_and_destination PASS\nthe_successful_synchro_creates_its_own_proper_history_and_extra_origin PASS\nboth_distinct_physical_materials_reach_their_owners_graveyard PASS\nthe_procedure_is_not_a_card_activation_or_response PASS\none_mandatory_protection_trigger_blocks_unrelated_steps PASS\nprotection_resolves_through_the_end_of_the_next_turn PASS\nprotection_is_a_snapshot_of_current_own_dragons PASS\nthe_first_download_binds_materials_mandatory_trigger_and_build PASS\nbattle_still_destroys_azure_and_deals_five_hundred_damage PASS\ndeparture_clears_field_protection_but_retains_proper_synchro_qualification PASS\nmonster_reborn_revives_the_same_qualified_copy_with_a_new_graveyard_origin PASS\nrevival_does_not_restore_a_field_shield_or_charge_materials_again PASS\nrevival_creates_one_new_mandatory_protection_trigger PASS\nthe_second_special_summon_resolves_its_own_protection_without_an_invented_limit PASS\nthe_second_protection_download_preserves_both_activations_and_spell_payment PASS\nprotection_is_still_active_during_the_next_turn PASS\nthe_rival_draw_uses_a_known_physical_card_without_inventing_order PASS\nown_azure_cannot_revive_a_normal_during_the_rival_standby PASS\nthe_next_turn_expires_the_old_protection_before_own_standby PASS\nthe_own_draw_moves_the_next_known_copy_and_preserves_life_points PASS\nthe_goal_remains_false_before_the_normal_copy_is_revived PASS\nstandby_revives_the_same_normal_material_under_its_owner PASS\nthe_new_normal_dragon_has_no_stale_previous_turn_protection PASS\nstandby_consumes_the_physical_azure_once_per_turn_budget PASS\nthe_visible_goal_requires_both_dragons_during_the_own_turn_four_standby PASS\nthe_entire_eighteen_action_route_replays_without_competitive_certification PASS\nthe_final_download_preserves_the_summon_origins_materials_and_standby_result PASS\nundo_restores_the_graveyard_target_and_unspent_standby_budget PASS\nimporting_the_intermediate_report_reconstructs_the_new_mandatory_protection PASS\nimporting_the_final_report_replays_all_eighteen_actions PASS\nan_altered_materials_is_rejected_without_replacing_the_active_route PASS\nan_altered_history_is_rejected_without_replacing_the_active_route PASS\nan_altered_payment_is_rejected_without_replacing_the_active_route PASS\nthe_azure_route_remains_readable_at_mobile_width_without_changing_state PASS\nrelease17_raises_no_javascript_page_errors PASS\nrelease17_leaves_the_compiled_artifact_unchanged PASS\n{\"pass\": false, \"checks\": 43, \"failed\": [\"release17_runs_the_manifest_bound_document_without_network\"]}\n\n"
+    }
+  },
+  {
+    "title": "R23_LOG_release16_in_browser",
+    "payload": {
+      "sourceRun": "44440213754",
+      "group": "release16_in_browser",
+      "log": "tests/release16_in_browser.log",
+      "logAvailable": true,
+      "logSha256": "1861a7e79477f187417ba98d7d0ef80a86e2bc75b04759dab6409b2e451c5807",
+      "logBytes": 2819,
+      "excerpt": "release16_runs_the_manifest_bound_document_without_network FAIL\ntwenty_one_visible_examples_preserve_all_twenty_previous_identifiers PASS\nspark_adds_a_summon_without_widening_spell_or_trap_activation_registries PASS\nthe_example_starts_with_declared_materials_and_no_autoplay PASS\nthe_extra_copy_has_no_claim_of_a_previous_proper_summon PASS\nmonster_reborn_does_not_offer_an_unwitnessed_extra_copy PASS\nthe_normal_tuner_is_summoned_from_the_hand_and_spends_the_normal_summon PASS\nthe_visible_synchro_choice_names_both_materials_position_and_destination PASS\na_successful_synchro_creates_the_actual_proper_history PASS\nthe_two_real_material_copies_are_sent_to_their_graveyard PASS\nthe_summon_records_no_card_activation_or_response_and_no_extra_normal_summon PASS\nthe_main_two_goal_does_not_claim_success_for_an_earlier_synchro PASS\nthe_first_real_battle_destroys_spark_and_pays_five_hundred_life_points PASS\nthe_physical_graveyard_copy_retains_its_witnessed_synchro_qualification PASS\nthe_goal_is_still_false_when_main_two_starts_without_spark PASS\nmonster_reborn_revives_the_same_copy_as_special_and_keeps_only_its_prior_qualification PASS\nthe_spell_goes_to_graveyard_without_repaying_materials_or_adding_an_extra_summon PASS\nthe_revived_spark_satisfies_the_visible_main_two_goal PASS\nthe_turn_boundary_creates_no_undeclared_protection_or_free_draw PASS\nthe_rival_draw_uses_the_next_known_physical_copy PASS\nthe_protection_is_activated_on_the_rival_turn_after_the_actual_draw PASS\nthe_once_per_turn_protection_budget_is_spent_without_preventing_battle_damage PASS\nthe_downloaded_protection_report_binds_build_materials_history_and_turn PASS\nthe_registered_phase_path_keeps_the_current_turn_protection_available PASS\nthe_first_rival_attack_spends_one_shield_but_still_deals_damage PASS\nthe_second_physical_attacker_destroys_spark_without_another_free_charge PASS\nthe_entire_fifteen_action_route_replays_without_global_or_competitive_certification PASS\nthe_final_download_preserves_the_two_distinct_attackers_and_qualified_graveyard_copy PASS\nundoing_the_second_attack_restores_the_spent_shield_and_correct_damage PASS\nundoing_the_first_attack_restores_the_one_available_charge PASS\nimporting_the_saved_protection_reconstructs_its_history_and_single_charge PASS\nimporting_the_final_route_replays_all_fifteen_actions PASS\nan_altered_materials_is_rejected_without_replacing_the_active_route PASS\nan_altered_history_is_rejected_without_replacing_the_active_route PASS\nan_altered_payment_is_rejected_without_replacing_the_active_route PASS\nthe_synchro_route_remains_readable_at_mobile_width_without_changing_state PASS\nrelease16_raises_no_javascript_page_errors PASS\nrelease16_leaves_the_compiled_artifact_unchanged PASS\n{\"pass\": false, \"checks\": 38, \"failed\": [\"release16_runs_the_manifest_bound_document_without_network\"]}\n\n"
+    }
+  },
+  {
+    "title": "R23_LOG_release15_in_browser",
+    "payload": {
+      "sourceRun": "44440213754",
+      "group": "release15_in_browser",
+      "log": "tests/release15_in_browser.log",
+      "logAvailable": true,
+      "logSha256": "6c0fcc061bc10cf94c25877f7cdf37778e87591b12da7445b6a7616e5fdd6b33",
+      "logBytes": 2037,
+      "excerpt": "release15_uses_manifest_bound_bytes_offline FAIL\ntwenty_one_examples_preserve_all_twenty_previous_identifiers PASS\nreborn_is_the_fourth_registered_normal_spell_with_its_real_identity PASS\nreborn_loads_a_physical_declared_field_without_autoplay_or_goal_success PASS\nthe_visible_choice_identifies_the_own_graveyard_position_and_destination PASS\nroar_allows_the_same_own_monster_to_revive_in_defense PASS\nthe_real_matching_spell_cost_and_both_own_spell_traps_stay_paid PASS\nnormal_spell_transport_records_its_source_before_responses PASS\nrevival_achieves_the_field_goal_without_spending_a_normal_summon PASS\nthe_saved_revival_report_is_bound_to_the_target_cost_and_build PASS\nundo_restores_the_original_graveyards_set_trap_and_unpaid_response PASS\nnegating_reborn_keeps_the_monster_in_its_graveyard_and_the_spell_cost_paid PASS\nreviving_the_rival_monster_changes_control_and_preserves_its_real_owner PASS\na_registered_revival_then_compulsory_returns_to_the_original_rival_owner PASS\na_saved_revival_reimports_with_fresh_replay_and_the_same_physical_target PASS\nan_altered_target_is_rejected_without_replacing_the_active_revival PASS\nan_altered_cost_is_rejected_without_replacing_the_active_revival PASS\nan_altered_history_is_rejected_without_replacing_the_active_revival PASS\nrevival_controls_remain_inside_a_mobile_width_without_changing_the_route PASS\nthe_review_tool_preserves_the_legacy_passcode_by_default PASS\nselecting_a_real_candidate_prepares_a_detached_copy_without_mutating_the_deck PASS\nthe_review_download_preserves_all_counts_format_and_context PASS\nan_unchanged_refresh_preserves_the_explicit_identity_choice PASS\nan_altered_copy_quantity_is_rejected_against_the_current_source PASS\nthe_existing_json_importer_accepts_the_reviewed_copy_in_a_separate_session PASS\na_changed_source_invalidates_the_old_proposal_and_selection PASS\nrelease15_tasks_raise_no_javascript_page_errors PASS\nrelease15_leaves_the_compiled_artifact_unchanged PASS\n{\"pass\": false, \"checks\": 28, \"failed\": [\"release15_uses_manifest_bound_bytes_offline\"]}\n\n"
+    }
+  },
+  {
+    "title": "R23_LOG_release14_in_browser",
+    "payload": {
+      "sourceRun": "44440213754",
+      "group": "release14_in_browser",
+      "log": "tests/release14_in_browser.log",
+      "logAvailable": true,
+      "logSha256": "a5e016a1893aa5bd8632539a83d4bd810cc386819c28652160d361184fcd54f7",
+      "logBytes": 1831,
+      "excerpt": "release14_uses_the_same_manifest_bound_bytes_with_network_offline FAIL\ntwenty_examples_preserve_all_previous_identifiers PASS\nshuffle_loads_without_autoplay_or_initial_goal_success PASS\nnine_real_steps_reach_the_unknown_own_draw_without_drawing_a_card PASS\nanalyzing_hypotheses_preserves_the_entire_real_laboratory_report PASS\nall_remaining_physical_copies_keep_their_exact_uniform_weight PASS\nthe_hand_goal_has_one_verified_draw_and_the_other_mass_stays_unknown PASS\nthe_blue_eyes_witness_is_hypothetical_and_needs_no_post_draw_action PASS\nthe_visible_result_explains_unknown_mass_and_does_not_claim_a_win_rate PASS\nfresh_verification_reconstructs_the_prefix_and_each_success_witness PASS\nsaving_a_hypothetical_report_downloads_the_exact_verified_result PASS\nsaved_hypotheses_reimport_without_replacing_the_real_partida PASS\naltered_weight_is_rejected_transactionally PASS\naltered_uid_is_rejected_transactionally PASS\naltered_context_is_rejected_transactionally PASS\naltered_total_is_rejected_transactionally PASS\nan_unchanged_ui_refresh_preserves_the_verified_report PASS\napplying_a_different_goal_invalidates_only_the_hypothetical_result PASS\nrestoring_the_original_goal_allows_the_saved_hypothesis_to_verify_again PASS\nthe_public_report_is_detached_from_internal_panel_state PASS\nthe_hypothetical_panel_remains_readable_at_mobile_width PASS\ndata_quality_counts_are_derived_from_the_incorporated_catalogue PASS\ndata_quality_download_is_bound_to_the_current_build PASS\ndata_review_and_export_do_not_migrate_or_change_the_active_deck PASS\nthe_incident_panel_limits_its_visible_page_to_fifty_rows PASS\nrelease14_tasks_raise_no_javascript_page_errors PASS\ncompiled_document_remains_unchanged_during_release14_tasks PASS\n{\"pass\": false, \"checks\": 27, \"failed\": [\"release14_uses_the_same_manifest_bound_bytes_with_network_offline\"]}\n\n"
+    }
+  },
+  {
+    "title": "R23_LOG_release13_in_browser",
+    "payload": {
+      "sourceRun": "44440213754",
+      "group": "release13_in_browser",
+      "log": "tests/release13_in_browser.log",
+      "logAvailable": true,
+      "logSha256": "8686b4ed2cb2d66f581ceefc65baab16487f81327fc5b5ac05720b97fc0d8882",
+      "logBytes": 1824,
+      "excerpt": "release13_boots_offline_from_the_same_manifest_bound_html FAIL\nthe_evacuation_guide_preserves_all_previous_example_identifiers PASS\nonly_impermanence_keeps_a_registered_hand_activation_exception PASS\nevacuation_loads_a_declared_physical_field_without_autoplay_or_goal_success PASS\nthe_card_coverage_panel_advertises_only_the_registered_compulsory_action PASS\nthe_first_manual_step_protects_the_same_blue_eyes_without_finishing_the_goal PASS\nthe_return_packet_preserves_the_own_target_set_turn_column_and_speed PASS\nmechaba_pays_the_rival_compulsory_as_a_distinct_physical_trap_cost PASS\nroar_negates_mechaba_first_and_preserves_all_paid_response_costs PASS\nreturning_the_protected_blue_eyes_is_not_prevented_or_reported_as_destruction PASS\nboth_actual_actions_finish_the_hand_goal_and_keep_a_fresh_replay PASS\nthe_export_binds_the_own_target_and_paid_response_to_the_delivered_build PASS\nundoing_only_compulsory_restores_the_same_shield_target_traps_and_unpaid_cost PASS\ndeclining_roar_banishes_compulsory_without_returning_or_consuming_the_target_shield PASS\nthe_opposing_fusion_returns_to_its_owners_hidden_extra_instead_of_either_hand PASS\npassing_the_response_leaves_roar_and_the_opponents_cost_available PASS\nreimport_replays_the_original_own_target_route_and_recomputes_goal_success PASS\nan_altered_target_player_is_rejected_without_replacing_the_active_session PASS\nthe_alternate_extra_destination_also_reimports_with_the_same_uid_and_replay PASS\na_forged_hand_destination_for_the_fusion_is_transactionally_rejected PASS\nundoing_both_steps_restores_the_initial_unprotected_field_and_pending_goal PASS\nrelease13_tasks_raise_no_javascript_page_errors PASS\ncompiled_document_is_unchanged_during_release13_tasks PASS\n{\"pass\": false, \"checks\": 23, \"failed\": [\"release13_boots_offline_from_the_same_manifest_bound_html\"]}\n\n"
+    }
+  },
+  {
+    "title": "R23_LOG_release12_in_browser",
+    "payload": {
+      "sourceRun": "44440213754",
+      "group": "release12_in_browser",
+      "log": "tests/release12_in_browser.log",
+      "logAvailable": true,
+      "logSha256": "f5ec9d429260cd27f9a28d19797b9967af75f955584a1842dc3bec7b8eb4a167",
+      "logBytes": 1940,
+      "excerpt": "release12_boots_offline_from_the_manifest_bound_document FAIL\ntwenty_one_visible_examples_preserve_the_previous_twenty_identifiers PASS\nnormal_trap_registry_explicitly_limits_the_new_card_activation PASS\nmechaba_models_a_physical_trap_cost_without_widening_monster_registry PASS\ntrap_guide_loads_previous_turn_set_copies_without_autoplay_or_initial_goal_success PASS\ncoverage_retains_imperm_response_and_adds_the_registered_card_activation PASS\nthe_normal_trap_packet_keeps_the_set_origin_physical_column_and_speed_two PASS\nmechaba_pays_a_different_physical_trap_even_when_roar_negates_its_response PASS\nthe_registered_counter_chain_resolves_roar_before_mechaba_without_refunding_payments PASS\nimperm_negates_the_surviving_spirit_instead_of_the_destroyed_mechaba PASS\nset_imperm_applies_its_source_column_only_after_successfully_negating_the_target PASS\nnormal_trap_resolution_cleanup_is_not_an_activation_cost_and_keeps_fresh_replay PASS\nthe_three_visible_actions_finish_the_guide_with_an_actual_invocation_in_hand PASS\nexport_binds_the_trap_origin_and_paid_response_to_the_same_delivered_build PASS\nundo_restores_the_same_set_trap_roar_mechaba_cost_and_unnegated_target PASS\ndeclining_roar_banishes_the_activated_trap_without_a_target_or_column_effect PASS\nforged_trap_packet_evidence_is_rejected_without_replacing_the_active_session PASS\nsaved_trap_route_reimports_its_proof_costs_and_recomputed_goal_progress PASS\na_trap_set_this_turn_does_not_gain_an_activation_option PASS\nimperm_in_hand_requires_control_of_no_cards_including_the_existing_wolf_and_roar PASS\nan_empty_own_field_offers_all_five_real_hand_activation_columns PASS\nhand_activation_preserves_its_different_origin_and_never_creates_the_set_column_bonus PASS\nrelease12_tasks_raise_no_javascript_page_errors PASS\ncompiled_document_is_unchanged_during_release12_tasks PASS\n{\"pass\": false, \"checks\": 24, \"failed\": [\"release12_boots_offline_from_the_manifest_bound_document\"]}\n\n"
+    }
+  },
+  {
+    "title": "R23_LOG_release11_in_browser",
+    "payload": {
+      "sourceRun": "44440213754",
+      "group": "release11_in_browser",
+      "log": "tests/release11_in_browser.log",
+      "logAvailable": true,
+      "logSha256": "752d908c96d6473e72cde71f9b803448f949cf18d63a5497ce0455131534447b",
+      "logBytes": 2099,
+      "excerpt": "release11_boots_offline_from_the_manifest_bound_document FAIL\nprogress_widget_is_accessible_and_does_not_claim_an_unstarted_scenario PASS\nincluded_field_goal_reports_the_actual_missing_hand_and_face_up_copies PASS\nboard_identifies_face_up_field_and_set_spell_trap_positions PASS\nan_initially_met_goal_is_visible_as_declared_without_autoplay_or_a_replay_claim PASS\na_visual_missing_quantity_requires_another_physical_copy PASS\napplying_a_new_goal_immediately_replaces_previous_success PASS\nresolved_field_progress_distinguishes_sanctuary_from_the_paid_roar PASS\nprogress_does_not_count_a_recovered_hand_copy_as_a_set_card PASS\nthe_registered_set_step_completes_the_goal_with_the_same_physical_roar PASS\ndownloaded_report_binds_derived_progress_to_goal_and_verified_state PASS\nstate_conditions_show_expected_and_actual_phase_without_a_percentage PASS\na_real_phase_transition_recomputes_scalar_progress_and_preserves_replay PASS\nundo_reverts_the_fulfilled_phase_condition PASS\nundo_reverts_set_progress_and_exposes_the_missing_copy_again PASS\na_negated_field_activation_remains_missing_in_progress PASS\nimport_recomputes_progress_from_validated_goal_and_replayed_state PASS\na_report_without_derived_progress_is_recomputed_compatibly PASS\nan_invalid_goal_cannot_replace_the_session_using_a_derived_success_summary PASS\napplying_another_goal_after_resume_clears_the_previous_success PASS\nreinitialization_recomputes_the_goal_from_declared_initial_copies PASS\nsame_deck_scenario_import_does_not_keep_old_laboratory_success PASS\nan_already_met_opening_goal_does_not_fabricate_an_empty_replay PASS\nzero_continuations_explain_the_initial_declared_success_and_search_limit PASS\nstarting_the_imported_opening_recomputes_its_own_initial_goal PASS\nchanging_the_causal_preset_refreshes_the_laboratory_goal_progress PASS\nchanged_format_context_removes_old_progress_until_a_fresh_initialization PASS\nrelease11_tasks_raise_no_javascript_page_errors PASS\ncompiled_document_is_unchanged_during_release11_tasks PASS\n{\"pass\": false, \"checks\": 29, \"failed\": [\"release11_boots_offline_from_the_manifest_bound_document\"]}\n\n"
+    }
+  },
+  {
+    "title": "R23_LOG_release10_in_browser",
+    "payload": {
+      "sourceRun": "44440213754",
+      "group": "release10_in_browser",
+      "log": "tests/release10_in_browser.log",
+      "logAvailable": true,
+      "logSha256": "0ba7fa65a1e7e91417c6af107a10643b991b78dfbb9bcda86a2463195c8fa9ec",
+      "logBytes": 1378,
+      "excerpt": "release10_boots_offline_from_the_manifest_bound_document FAIL\nvisual_goal_selector_exposes_four_explicit_own_zones PASS\nthe_included_field_goal_now_requires_the_resolved_sanctuary PASS\ntyped_goal_inventory_requiredFaceUpSpellTrapIds PASS\ntyped_goal_inventory_requiredSetSpellTrapIds PASS\nvisual_additions_are_a_quantity_preserving_draft_until_applied PASS\napplied_visual_goals_sync_json_and_count_each_requested_copy PASS\nremoving_and_readding_one_copy_keeps_the_other_zone_requirement PASS\nresolved_field_meets_face_up_goal_but_paid_roar_no_longer_meets_set_goal PASS\na_recovered_hand_copy_still_does_not_satisfy_a_set_goal PASS\na_real_set_transition_reaches_both_typed_goal_zones_with_fresh_replay PASS\nreport_download_preserves_goal_arrays_and_binds_the_verified_trace_to_this_build PASS\na_negated_field_activation_cannot_satisfy_the_face_up_goal PASS\nreport_import_reconstructs_the_four_steps_and_typed_goal PASS\ninvalid_typed_report_goal_rejects_atomically_without_replacing_the_session PASS\nscenario_import_preserves_both_arrays_and_recreates_the_declared_initial_field PASS\nlegacy_hand_goal_stays_visible_and_user_edits_preserve_both_requested_copies PASS\nrelease10_tasks_raise_no_javascript_page_errors PASS\ncompiled_document_is_unchanged_during_release10_tasks PASS\n{\"pass\": false, \"checks\": 19, \"failed\": [\"release10_boots_offline_from_the_manifest_bound_document\"]}\n\n"
+    }
+  },
+  {
+    "title": "R23_LOG_release9_in_browser",
+    "payload": {
+      "sourceRun": "44440213754",
+      "group": "release9_in_browser",
+      "log": "tests/release9_in_browser.log",
+      "logAvailable": true,
+      "logSha256": "11152ee31a6633762f86f64e32a1634405c66d10858cf805f1197f29b377efd7",
+      "logBytes": 1419,
+      "excerpt": "release9_boots_offline_from_the_manifest_bound_document FAIL\ntwenty_one_visible_examples_preserve_the_previous_twenty_identifiers PASS\nthe_delivered_mechaba_field_registry_is_explicit_and_limited_to_the_two_reviewed_cards PASS\nfield_guide_prepares_physical_cards_without_autoplay_or_an_already_reached_goal PASS\nthe_field_packet_captures_hand_origin_and_the_exact_prior_field PASS\nthe_prior_field_is_sent_by_rule_before_the_activation_and_responses_without_destruction PASS\nroar_negates_mechaba_after_its_spell_cost_and_all_physical_payments_remain_paid PASS\nthe_resolved_sanctuary_keeps_its_separate_field_slot_and_a_fresh_replay PASS\nsanctuary_enables_a_new_reincarnated_wolf_using_the_actual_starting_copy PASS\nthe_three_visible_steps_recover_the_same_roar_and_reach_the_advertised_goal PASS\nfield_report_export_binds_the_staging_proof_and_verified_trace_to_the_delivered_build PASS\nundo_restores_the_original_field_roar_mechaba_and_spell_cost PASS\ndeclining_the_roar_counter_banishes_sanctuary_without_restoring_mausoleum PASS\nthe_negated_branch_cannot_use_sanctuary_reincarnation_and_does_not_claim_the_goal PASS\nthe_saved_field_route_reimports_and_replays_its_original_staging_and_recovered_roar PASS\nrelease9_tasks_raise_no_javascript_page_errors PASS\ncompiled_document_is_unchanged_during_release9_tasks PASS\n{\"pass\": false, \"checks\": 17, \"failed\": [\"release9_boots_offline_from_the_manifest_bound_document\"]}\n\n"
+    }
+  },
+  {
+    "title": "R23_LOG_release8_in_browser",
+    "payload": {
+      "sourceRun": "44440213754",
+      "group": "release8_in_browser",
+      "log": "tests/release8_in_browser.log",
+      "logAvailable": true,
+      "logSha256": "ed0a421037997a525e9eacba6cdd069a1fdddc79161262b45d08efcb863d1946",
+      "logBytes": 1445,
+      "excerpt": "release8_boots_offline_from_the_manifest_bound_document FAIL\ntwenty_one_visible_examples_preserve_the_previous_twenty_identifiers PASS\ncrow_and_droll_are_explicit_hand_packets_without_an_invented_once_per_turn PASS\ncrow_guide_loads_without_autoplay_and_requires_a_second_mechaba PASS\ncrow_negation_preserves_the_opposing_discard_and_own_mechaba_cost PASS\ncrow_is_not_banished_again_from_its_new_gy_location PASS\nthe_preserved_aleister_enables_a_second_distinct_physical_mechaba PASS\ncrow_report_export_is_bound_to_the_current_build_and_verified_trace PASS\nundo_restores_both_costs_and_the_original_crow_target PASS\npassing_mechaba_banishes_aleister_and_removes_this_invocation_route PASS\ncrow_saved_report_reimports_and_replays_the_negated_branch PASS\ndroll_guide_respects_the_dated_one_copy_limit_without_autoplay PASS\nnormal_summoning_alone_does_not_create_a_droll_window PASS\naleisters_actual_search_opens_the_registered_opposing_hand_window PASS\ndroll_negation_keeps_both_send_costs_in_gy_without_a_deck_to_hand_lock PASS\nthe_resolved_chain_closes_the_old_droll_window_without_an_opt_flag PASS\nundo_restores_the_physical_droll_and_the_search_window PASS\npassing_mechaba_applies_droll_to_both_players_and_keeps_its_send_cost PASS\nrelease8_tasks_raise_no_javascript_page_errors PASS\ncompiled_document_is_unchanged_during_release8_tasks PASS\n{\"pass\": false, \"checks\": 20, \"failed\": [\"release8_boots_offline_from_the_manifest_bound_document\"]}\n\n"
+    }
+  },
+  {
+    "title": "R23_LOG_expanded_examples_in_browser",
+    "payload": {
+      "sourceRun": "44440213754",
+      "group": "expanded_examples_in_browser",
+      "log": "tests/expanded_examples_in_browser.log",
+      "logAvailable": true,
+      "logSha256": "6e2d61ab94a579fb1bbd4c6e718235fb4f3806e6b827365b3d29036a1f819274",
+      "logBytes": 2035,
+      "excerpt": "embedded_tutorials_boot_offline_with_expected_document_bytes FAIL\ndynamic_example_menu_preserves_originals_and_lists_every_registered_tutorial PASS\ndelivered_mechaba_references_show_three_official_faq_links_and_honest_ocg_scope PASS\ndelivered_mechaba_reference_evidence_is_bound_to_build_without_new_transport_claim PASS\ndelivered_mechaba_registry_contains_the_fifteen_reviewed_hand_and_gy_handlers PASS\ndelivered_mechaba_hand_packet_preserves_physical_cost_origin_and_fresh_replay PASS\ndelivered_mechaba_gy_packet_preserves_physical_cost_origin_and_fresh_replay PASS\nswordsoul_loads_physical_deck_and_guide_without_autoplay PASS\nswordsoul_known_physical_draw_precedes_search_shuffle PASS\nswordsoul_seven_visible_actions_reach_two_synchros_and_real_damage PASS\nswordsoul_final_report_has_fresh_replay_and_provisional_score PASS\nbranded_loads_physical_deck_and_guide_without_autoplay PASS\nbranded_two_visible_actions_keep_the_real_discard_and_fusion_lock PASS\nbranded_final_report_has_fresh_replay_and_provisional_score PASS\ntenyi_loads_physical_deck_and_guide_without_autoplay PASS\ntenyi_five_visible_actions_conserve_banish_discard_and_normal_summon PASS\ntenyi_final_report_has_fresh_replay_and_provisional_score PASS\nsalamangreat_loads_physical_deck_and_guide_without_autoplay PASS\nsalamangreat_eleven_visible_actions_recover_roar_and_preserve_spinny_banish PASS\nsalamangreat_final_report_has_fresh_replay_and_provisional_score PASS\nroar_loads_physical_deck_and_guide_without_autoplay PASS\nroar_tutorial_preserves_explicit_physical_counter_response_policy PASS\nroar_counter_chain_reaches_mechaba_and_moves_both_real_traps_to_gy PASS\nroar_alternative_after_undo_preserves_fusion_materials_when_activation_is_negated PASS\nroar_final_report_has_fresh_replay_and_provisional_score PASS\nexpanded_tutorials_raise_no_javascript_page_errors PASS\ncompiled_artifact_unchanged_during_browser_test PASS\n{\"pass\": false, \"checks\": 27, \"failed\": [\"embedded_tutorials_boot_offline_with_expected_document_bytes\"], \"artifactMode\": \"DELIVERED_BYTES\"}\n\n"
+    }
+  },
+  {
+    "title": "R23_LOG_laboratory_usability",
+    "payload": {
+      "sourceRun": "44440213754",
+      "group": "laboratory_usability",
+      "log": "tests/laboratory_usability.log",
+      "logAvailable": true,
+      "logSha256": "a7503087b1431cab8e4bc45dc695e4e0fd63dc03e6792cd66b11676fae37857c",
+      "logBytes": 1226,
+      "excerpt": "exact_delivered_bytes_boot_offline FAIL\nvisual_goal_keeps_repeated_physical_card_requirement PASS\nkeyboard_enter_applies_visual_goal_and_syncs_json PASS\ninvalid_goal_quantity_preserves_applied_goal_and_focuses_error PASS\nhand_only_json_goal_is_supported_and_visual_conditions_reset PASS\ngoal_validation_rejects_unknown_fields_types_cards_and_empty_goals_transactionally PASS\ngoal_alias_matching_preserves_family_identity_and_physical_quantity PASS\nlaboratory_inputs_have_programmatic_labels PASS\nkeyboard_tab_reaches_add_card_button PASS\nspell_setup_can_use_explicit_column_and_prior_set_turn PASS\noccupied_spell_column_rejects_without_adding_a_copy PASS\nsetup_resolves_distinct_real_uids_without_changing_inventory PASS\naction_filter_retains_real_indices_and_readable_labels PASS\nempty_action_filter_disables_execution PASS\nreinitializing_lab_invalidates_visible_draw_distribution PASS\nlarge_action_inventory_exposes_all_pages_and_count PASS\nthird_action_page_executes_original_choice_and_replays PASS\nno_uncaught_page_errors PASS\ntouch_task_applies_visual_goal_without_laboratory_overflow PASS\ntested_artifact_unchanged PASS\n{\"pass\": false, \"checks\": 20, \"failed\": [\"exact_delivered_bytes_boot_offline\"], \"seconds\": 33.41}\n\n"
+    }
+  },
+  {
+    "title": "R23_LOG_release6_in_browser",
+    "payload": {
+      "sourceRun": "44440213754",
+      "group": "release6_in_browser",
+      "log": "tests/release6_in_browser.log",
+      "logAvailable": true,
+      "logSha256": "f86dabfea0c639cb78c8bfda55739cdf917b116006dfee5cd5e62e2802b585c2",
+      "logBytes": 862,
+      "excerpt": "exact_delivered_bytes_boot_offline FAIL\nsingle_roar_import_preserves_registered_provider_and_choice_policy PASS\nlaboratory_exposes_physical_roar_variant_and_readable_label PASS\ngui_roar_negates_spark_destroys_actual_source_and_replays PASS\ncomparison_includes_roar_with_its_same_valid_physical_start PASS\ncomparison_excludes_unavailable_roar_set_this_turn PASS\ncomparison_excludes_unavailable_roar_without_salamangreat_link PASS\nmultiple_provider_import_keeps_order_and_context_in_custom_option PASS\nboth_imported_providers_reach_laboratory_action_variants PASS\nindividual_choice_and_return_to_imported_policy_are_lossless PASS\nunknown_or_missing_providers_are_rejected_before_replacing_scenario PASS\nno_uncaught_page_errors PASS\noriginal_artifact_unchanged PASS\n{\"pass\": false, \"checks\": 13, \"failed\": [\"exact_delivered_bytes_boot_offline\"], \"seconds\": 19.91}\n\n"
+    }
+  },
+  {
+    "title": "R23_LOG_accessibility_r23",
+    "payload": {
+      "sourceRun": "44440213754",
+      "group": "accessibility_r23",
+      "log": "tests/accessibility_r23.log",
+      "logAvailable": true,
+      "logSha256": "dd1ffbedbfdadf9fa8b3aaff1681b4e91eda05f2339f2b75e9637b11b36db605",
+      "logBytes": 1760,
+      "excerpt": "r23_accessibility_uses_manifest_bound_document_offline FAIL\nautomation_does_not_claim_screen_reader_physical_device_or_full_conformance PASS\ncontrast_preference_works_from_keyboard_and_exposes_checked_state PASS\npreference_change_has_a_concise_polite_atomic_announcement PASS\naccessibility_preferences_are_saved_separately_from_deck_state PASS\nvisible_registered_controls_have_names_and_valid_aria_references PASS\ndisabled_undo_has_a_visible_explanation PASS\ndisabled_reason_preserves_the_original_action_count_description PASS\nenabled_control_drops_only_its_owned_disabled_reason PASS\nhigh_contrast_opaque_control_text_meets_four_point_five_to_one PASS\ncontrast_mode_keeps_a_visible_keyboard_focus_indicator PASS\nreduced_motion_preference_is_keyboard_operable PASS\nmanual_template_is_build_bound_and_starts_without_executed_or_physical_claims PASS\nmanual_validator_distinguishes_reporter_claims_from_agent_verification PASS\nmanual_validator_rejects_wrong_binding_duplicate_flows_and_conflicting_claims PASS\nvalid_unrun_manual_flow_is_never_counted_as_passed PASS\nmalformed_or_oversized_manual_data_is_rejected_without_execution PASS\nmanual_file_review_renders_uncertainty_and_preserves_the_live_deck PASS\nmanual_file_with_another_build_is_rejected_without_replacing_the_lab PASS\nmanual_and_preference_controls_fit_390_and_320_pixel_emulation_with_44px_targets PASS\npresentation_preferences_leave_real_registered_gameplay_and_replay_intact PASS\nundo_explanation_is_removed_when_a_real_step_enables_undo PASS\naccessibility_tasks_raise_no_javascript_page_errors PASS\naccessibility_tasks_leave_the_compiled_html_unchanged PASS\n{\"pass\": false, \"checks\": 24, \"artifactMode\": \"DELIVERED_BYTES\", \"failed\": [\"r23_accessibility_uses_manifest_bound_document_offline\"]}\n\n"
+    }
+  },
+  {
+    "title": "R23_LOG_release23_in_browser",
+    "payload": {
+      "sourceRun": "44440213754",
+      "group": "release23_in_browser",
+      "log": "tests/release23_in_browser.log",
+      "logAvailable": true,
+      "logSha256": "00cfd5400a58c123c68dd83fe386a2c14d070d752ac22c1088fa6cf017719445",
+      "logBytes": 3342,
+      "excerpt": "ot_claim_a_replay PASS\ndamage_mode_selection_enables_required_priority_and_trigger_modes_without_playing PASS\napply_rules_restarts_the_declared_scenario_and_preserves_the_opening PASS\npriority_cost_is_paid_immediately_while_both_links_remain_unresolved PASS\npriority_board_names_the_next_player_and_unsettled_goal_is_false PASS\nundo_returns_the_same_paid_cost_only_by_reverting_its_activation PASS\npending_chain_import_reexecutes_the_actual_cost_and_restores_its_actor PASS\nforged_chain_cost_import_is_rejected_without_replacing_the_lab PASS\natomic_legacy_effect_cannot_bypass_an_open_priority_chain PASS\nthree_real_links_resolve_lifo_and_keep_the_negated_mechaba_cost_paid PASS\nreal_synchro_orders_turn_player_mandatory_effects_before_other_groups PASS\nopponent_mandatory_group_gets_its_own_real_activation_choice PASS\noptional_decline_is_explicit_and_the_two_players_draw_in_resolved_order PASS\nxyz_summon_attaches_two_distinct_real_materials_without_sending_them_to_gy PASS\ncorn_detaches_a_physical_cost_sends_the_target_and_inflicts_exactly_one_thousand PASS\nxyz_host_battle_departure_sends_remaining_material_to_its_physical_owner PASS\nxyz_history_import_reexecutes_attachment_detachment_and_host_cleanup PASS\na_real_scale_effect_moves_the_same_pendulum_copy_to_faceup_extra_and_sets_from_deck PASS\nmanual_pendulum_group_simultaneously_summons_hand_and_witnessed_faceup_extra_copies PASS\na_second_pendulum_summon_is_not_offered_in_the_same_turn PASS\npendulum_report_replays_the_real_extra_transition_and_single_group_budget PASS\npendulum_candidates_without_legal_destinations_do_not_gain_fallback_zones PASS\nexplicit_attack_consumes_its_budget_before_damage_and_blocks_atomic_attack_bypass PASS\nfaith_stays_on_field_after_calculation_until_its_mandatory_activation PASS\nsix_visible_damage_stages_finish_after_registered_negation_and_physical_cleanup PASS\nbusy_import_cannot_steal_analysis_ownership_or_enable_live_mutations PASS\ncancelled_draw_tree_keeps_the_live_scenario_and_releases_its_controls PASS\ntwo_chronological_hypothetical_draw_events_keep_exact_probability_and_unknown_mass PASS\nprobability_values_are_rendered_from_the_actual_summary_and_never_as_a_win_rate PASS\ndraw_analysis_does_not_change_the_live_scenario_or_reveal_real_future_order PASS\nhypothetical_export_is_freshly_verified_separately_from_observed_replay PASS\nforged_probability_mass_is_rejected_without_replacing_the_valid_hypothesis_or_lab PASS\nreview_ledger_records_a_note_without_resolving_identity_stats_or_migration PASS\nreview_ledger_import_preserves_catalogue_and_active_deck PASS\ndated_format_context_round_trip_keeps_deck_and_official_verification_pending PASS\nmanual_evidence_template_keeps_physical_and_assistive_claims_unexecuted PASS\nrelease23_tasks_raise_no_javascript_page_errors PASS\nrelease23_tasks_leave_the_compiled_artifact_unchanged PASS\n{\"pass\": false, \"checks\": 42, \"failed\": [\"release23_boots_the_exact_delivered_document_offline\"], \"artifactMode\": \"DELIVERED_BYTES\", \"elapsedSeconds\": 240.15}\n\n"
+    }
+  },
+  {
+    "title": "R23_FAILED_GROUPS",
+    "payload": {
+      "sourceRun": "44440213754",
+      "sourceCommit": "4faa7a82a7cafb6d0d3f4657ec06b2af74200273",
+      "buildId": "ad379fc6b8cddeaff64a1895a2eb97fed493b037a7e725a3bd9681a185d94a64",
+      "htmlSha256": "017f4cd81211d2be486c6634e876254fe6dc2225e6419c02e459d69ea7022c9e",
+      "groups": 88,
+      "failed": [
+        "release23_in_browser",
+        "accessibility_r23",
+        "release6_in_browser",
+        "laboratory_usability",
+        "expanded_examples_in_browser",
+        "release8_in_browser",
+        "release9_in_browser",
+        "release10_in_browser",
+        "release11_in_browser",
+        "release12_in_browser",
+        "release13_in_browser",
+        "release14_in_browser",
+        "release15_in_browser",
+        "release16_in_browser",
+        "release17_in_browser",
+        "release18_in_browser",
+        "release19_in_browser",
+        "release20_in_browser",
+        "release21_in_browser",
+        "release22_in_browser",
+        "accessibility_workflow",
+        "release5_in_browser"
+      ],
+      "rawReportSha256": "14a6dcdfb59c8c834caa5db2433d23f459d83ceee404d3f084d1548834fbfd39",
+      "diagnosticMessagesOmitted": 0
+    }
+  }
+]

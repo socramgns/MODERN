@@ -1,0 +1,504 @@
+{
+  "schema": "ygo-r23-retained-technical-reference-verification/v1",
+  "verifiedAt": "2026-11-18T19:50:44.697379+00:00",
+  "pass": true,
+  "newNetworkRetrieval": false,
+  "scriptsExecuted": false,
+  "sourceRole": "SECONDARY_TECHNICAL_IMPLEMENTATION_REFERENCE",
+  "officialTcgRulingCertified": false,
+  "originalJsonHashClaims": [
+    {
+      "claim": "soft-opt-review.sourceFileHashes",
+      "sourcePath": "/workspace/r23-priority-references/core/libeffect.cpp",
+      "expectedSha256": "982dea45b688c4cba54caff08096d4dbb866cc449d2a81fffef37dc90ec3f504",
+      "actualSha256": "982dea45b688c4cba54caff08096d4dbb866cc449d2a81fffef37dc90ec3f504",
+      "expectedBytes": null,
+      "actualBytes": 13274,
+      "pass": true
+    },
+    {
+      "claim": "soft-opt-review.sourceFileHashes",
+      "sourcePath": "/workspace/r23-priority-references/core/effect.cpp",
+      "expectedSha256": "5d76eeafd10260bc2d25a2297a635dd14d166ba418e22188806b33ceca82fe03",
+      "actualSha256": "5d76eeafd10260bc2d25a2297a635dd14d166ba418e22188806b33ceca82fe03",
+      "expectedBytes": null,
+      "actualBytes": 31958,
+      "pass": true
+    },
+    {
+      "claim": "soft-opt-review.sourceFileHashes",
+      "sourcePath": "/workspace/r23-priority-references/core/processor.cpp",
+      "expectedSha256": "083b4da8e33f22890d186c7d19ebbcf0113aa4c89d59e30f73cef0d2dd8cda90",
+      "actualSha256": "083b4da8e33f22890d186c7d19ebbcf0113aa4c89d59e30f73cef0d2dd8cda90",
+      "expectedBytes": null,
+      "actualBytes": 192222,
+      "pass": true
+    },
+    {
+      "claim": "soft-opt-review.sourceFileHashes",
+      "sourcePath": "/workspace/r23-priority-references/core/operations.cpp",
+      "expectedSha256": "2293f5693d3832561cc0395ab4ece8134b33560b522a38ab6d7133ea0bd31ad4",
+      "actualSha256": "2293f5693d3832561cc0395ab4ece8134b33560b522a38ab6d7133ea0bd31ad4",
+      "expectedBytes": null,
+      "actualBytes": 228557,
+      "pass": true
+    },
+    {
+      "claim": "soft-opt-review.sourceFileHashes",
+      "sourcePath": "/workspace/r23-priority-references/core/effect.h",
+      "expectedSha256": "c4c8b674f1567c9643ca9e5efa50bb019811660bf7ed7c89fef69c446a98650a",
+      "actualSha256": "c4c8b674f1567c9643ca9e5efa50bb019811660bf7ed7c89fef69c446a98650a",
+      "expectedBytes": null,
+      "actualBytes": 4121,
+      "pass": true
+    },
+    {
+      "claim": "soft-opt-review.sourceFileHashes",
+      "sourcePath": "/workspace/r23-priority-references/core/effect_constants.h",
+      "expectedSha256": "5fcbba9eb4ad59fbac408f649d01d2dd68bb6df9d9b4b0fd6299852628a69d54",
+      "actualSha256": "5fcbba9eb4ad59fbac408f649d01d2dd68bb6df9d9b4b0fd6299852628a69d54",
+      "expectedBytes": null,
+      "actualBytes": 19549,
+      "pass": true
+    },
+    {
+      "claim": "soft-opt-review.reviewedCardScriptHashes",
+      "sourcePath": "/workspace/r23-priority-references/reviewed-script/official/c83994433.lua",
+      "expectedSha256": "21bef8f13edda89986c1da005b3425a64c4027d56347384f375c618e455f182f",
+      "actualSha256": "21bef8f13edda89986c1da005b3425a64c4027d56347384f375c618e455f182f",
+      "expectedBytes": null,
+      "actualBytes": 1352,
+      "pass": true
+    },
+    {
+      "claim": "soft-opt-review.reviewedCardScriptHashes",
+      "sourcePath": "/workspace/r23-priority-references/reviewed-script/official/c44146295.lua",
+      "expectedSha256": "145576dad9dc6405d6eb67535b5f67b0dd0bf6cac50b80212abd1171f8a35875",
+      "actualSha256": "145576dad9dc6405d6eb67535b5f67b0dd0bf6cac50b80212abd1171f8a35875",
+      "expectedBytes": null,
+      "actualBytes": 3291,
+      "pass": true
+    },
+    {
+      "claim": "soft-opt-review.reviewedCardScriptHashes",
+      "sourcePath": "/workspace/r23-priority-references/reviewed-script/official/c51735257.lua",
+      "expectedSha256": "f7b5ebdd528d2809fbe4fb28d8201a472caf531fd639a60ff311233469073074",
+      "actualSha256": "f7b5ebdd528d2809fbe4fb28d8201a472caf531fd639a60ff311233469073074",
+      "expectedBytes": null,
+      "actualBytes": 2024,
+      "pass": true
+    },
+    {
+      "claim": "soft-opt-review.reviewedCardScriptHashes",
+      "sourcePath": "/workspace/r23-priority-references/reviewed-script/official/c75286621.lua",
+      "expectedSha256": "14ab80a51e638427b99d977c16584d454ac6825a78dd0491db08173353ceecd9",
+      "actualSha256": "14ab80a51e638427b99d977c16584d454ac6825a78dd0491db08173353ceecd9",
+      "expectedBytes": null,
+      "actualBytes": 1910,
+      "pass": true
+    },
+    {
+      "claim": "cardscript-count-limit-scan.restoreCountLimitOccurrences",
+      "sourcePath": "/workspace/r23-priority-references/scripts-with-restore/proc_xyz.lua",
+      "expectedSha256": "8376068ba10a540c2be763e8631bcba3b2ef875e492f32d649b6940fafb0816e",
+      "actualSha256": "8376068ba10a540c2be763e8631bcba3b2ef875e492f32d649b6940fafb0816e",
+      "expectedBytes": null,
+      "actualBytes": 17664,
+      "pass": true
+    },
+    {
+      "claim": "r23-trigger-references/c70046172.lua.receipt.json",
+      "sourcePath": "/workspace/r23-trigger-references/c70046172.lua",
+      "expectedSha256": "ce5c215d8ec38793fbf6c046f6b71704dfba788b70bfe35eb13d552abe5f675b",
+      "actualSha256": "ce5c215d8ec38793fbf6c046f6b71704dfba788b70bfe35eb13d552abe5f675b",
+      "expectedBytes": 1143,
+      "actualBytes": 1143,
+      "pass": true
+    },
+    {
+      "claim": "r23-trigger-references/c90953320.lua.receipt.json",
+      "sourcePath": "/workspace/r23-trigger-references/c90953320.lua",
+      "expectedSha256": "88f32e5fb125620cf30ab73758cdfb84b6ab75b028770c900b1a71ff8b50a266",
+      "actualSha256": "88f32e5fb125620cf30ab73758cdfb84b6ab75b028770c900b1a71ff8b50a266",
+      "expectedBytes": 1143,
+      "actualBytes": 1143,
+      "pass": true
+    },
+    {
+      "claim": "r23-xyz-pendulum-references/references.json.sources",
+      "sourcePath": "/workspace/r23-xyz-pendulum-references/c71594310.lua",
+      "expectedSha256": "ac34ec4a47f1569d9167aeb77e5b26058c1d21c43b0c707a0f349b39c4285811",
+      "actualSha256": "ac34ec4a47f1569d9167aeb77e5b26058c1d21c43b0c707a0f349b39c4285811",
+      "expectedBytes": 169,
+      "actualBytes": 169,
+      "pass": true
+    },
+    {
+      "claim": "r23-xyz-pendulum-references/references.json.sources",
+      "sourcePath": "/workspace/r23-xyz-pendulum-references/c51735257.lua",
+      "expectedSha256": "f7b5ebdd528d2809fbe4fb28d8201a472caf531fd639a60ff311233469073074",
+      "actualSha256": "f7b5ebdd528d2809fbe4fb28d8201a472caf531fd639a60ff311233469073074",
+      "expectedBytes": 2024,
+      "actualBytes": 2024,
+      "pass": true
+    },
+    {
+      "claim": "r23-xyz-pendulum-references/references.json.sources",
+      "sourcePath": "/workspace/r23-xyz-pendulum-references/c33256280.lua",
+      "expectedSha256": "d132eb3e19bbf38689cdc1b83f7cdd17d653a0d742445ff6d026f2f07e12c2ac",
+      "actualSha256": "d132eb3e19bbf38689cdc1b83f7cdd17d653a0d742445ff6d026f2f07e12c2ac",
+      "expectedBytes": 1807,
+      "actualBytes": 1807,
+      "pass": true
+    },
+    {
+      "claim": "r23-xyz-pendulum-references/references.json.sources",
+      "sourcePath": "/workspace/r23-xyz-pendulum-references/c7868571.lua",
+      "expectedSha256": "746a5f4b9cc689c6b222460fbcc2d798a07977a639bc86b679ae6c6b2f2b86f9",
+      "actualSha256": "746a5f4b9cc689c6b222460fbcc2d798a07977a639bc86b679ae6c6b2f2b86f9",
+      "expectedBytes": 1767,
+      "actualBytes": 1767,
+      "pass": true
+    },
+    {
+      "claim": "r23-xyz-pendulum-references/references.json.sources",
+      "sourcePath": "/workspace/r23-xyz-pendulum-references/c60473572.lua",
+      "expectedSha256": "90c2711836090e93a3d63256ae7fd1ab3a628150347c6d8d96cfd4e3ec594209",
+      "actualSha256": "90c2711836090e93a3d63256ae7fd1ab3a628150347c6d8d96cfd4e3ec594209",
+      "expectedBytes": 1802,
+      "actualBytes": 1802,
+      "pass": true
+    },
+    {
+      "claim": "r23-xyz-pendulum-references/references.json.sources",
+      "sourcePath": "/workspace/r23-xyz-pendulum-references/c69351984.lua",
+      "expectedSha256": "8bd9ee7ad346d1b14b5771e8a5a0757e08089e5fd6d26eb9ed4639f2ae8ae867",
+      "actualSha256": "8bd9ee7ad346d1b14b5771e8a5a0757e08089e5fd6d26eb9ed4639f2ae8ae867",
+      "expectedBytes": 1806,
+      "actualBytes": 1806,
+      "pass": true
+    },
+    {
+      "claim": "r23-xyz-pendulum-references/references.json.sources",
+      "sourcePath": "/workspace/r23-xyz-pendulum-references/operations.cpp",
+      "expectedSha256": "2293f5693d3832561cc0395ab4ece8134b33560b522a38ab6d7133ea0bd31ad4",
+      "actualSha256": "2293f5693d3832561cc0395ab4ece8134b33560b522a38ab6d7133ea0bd31ad4",
+      "expectedBytes": 228557,
+      "actualBytes": 228557,
+      "pass": true
+    },
+    {
+      "claim": "r23-xyz-pendulum-references/references.json.sources",
+      "sourcePath": "/workspace/r23-xyz-pendulum-references/processor.cpp",
+      "expectedSha256": "083b4da8e33f22890d186c7d19ebbcf0113aa4c89d59e30f73cef0d2dd8cda90",
+      "actualSha256": "083b4da8e33f22890d186c7d19ebbcf0113aa4c89d59e30f73cef0d2dd8cda90",
+      "expectedBytes": 192222,
+      "actualBytes": 192222,
+      "pass": true
+    },
+    {
+      "claim": "r23-xyz-pendulum-references/references.json.sources",
+      "sourcePath": "/workspace/r23-xyz-pendulum-references/effect.cpp",
+      "expectedSha256": "5d76eeafd10260bc2d25a2297a635dd14d166ba418e22188806b33ceca82fe03",
+      "actualSha256": "5d76eeafd10260bc2d25a2297a635dd14d166ba418e22188806b33ceca82fe03",
+      "expectedBytes": 31958,
+      "actualBytes": 31958,
+      "pass": true
+    },
+    {
+      "claim": "r23-xyz-pendulum-references/references.json.sources",
+      "sourcePath": "/workspace/r23-xyz-pendulum-references/field.cpp",
+      "expectedSha256": "7fd4ac591383fe690a956e69762b0d18e995a90ed75bf8bf0e4cbe2ee9a355c3",
+      "actualSha256": "7fd4ac591383fe690a956e69762b0d18e995a90ed75bf8bf0e4cbe2ee9a355c3",
+      "expectedBytes": 122838,
+      "actualBytes": 122838,
+      "pass": true
+    },
+    {
+      "claim": "r23-xyz-pendulum-references/references.json.sources",
+      "sourcePath": "/workspace/r23-xyz-pendulum-references/libduel.cpp",
+      "expectedSha256": "d4d8ddc1841f4a211ad7dee0ce3d0b4ab2bcdee2392445ef7b8804b8105f4bc1",
+      "actualSha256": "d4d8ddc1841f4a211ad7dee0ce3d0b4ab2bcdee2392445ef7b8804b8105f4bc1",
+      "expectedBytes": 148393,
+      "actualBytes": 148393,
+      "pass": true
+    },
+    {
+      "claim": "r23-xyz-pendulum-references/references.json.sources",
+      "sourcePath": "/workspace/r23-xyz-pendulum-references/c73594093.lua",
+      "expectedSha256": "0f675280c577d061252d631df4b5f54dd91f3359f281b8a4f2245c6362fd6ede",
+      "actualSha256": "0f675280c577d061252d631df4b5f54dd91f3359f281b8a4f2245c6362fd6ede",
+      "expectedBytes": 1026,
+      "actualBytes": 1026,
+      "pass": true
+    },
+    {
+      "claim": "r23-xyz-pendulum-references/references.json.sources",
+      "sourcePath": "/workspace/r23-xyz-pendulum-references/c33327029.lua",
+      "expectedSha256": "4831ef01303e7ca8768893d5bbd96c6df0050d189fbfde891d4607953005d480",
+      "actualSha256": "4831ef01303e7ca8768893d5bbd96c6df0050d189fbfde891d4607953005d480",
+      "expectedBytes": 2846,
+      "actualBytes": 2846,
+      "pass": true
+    },
+    {
+      "claim": "r23-xyz-pendulum-references/references.json.sources",
+      "sourcePath": "/workspace/r23-xyz-pendulum-references/c69711728.lua",
+      "expectedSha256": "a69ea0d2c0601c51601ec53cf4017386d3255e1398462b7c88d2c2b29ef31876",
+      "actualSha256": "a69ea0d2c0601c51601ec53cf4017386d3255e1398462b7c88d2c2b29ef31876",
+      "expectedBytes": 2804,
+      "actualBytes": 2804,
+      "pass": true
+    },
+    {
+      "claim": "Original retained archive receipt; archive intentionally excluded from bundle",
+      "sourcePath": "/workspace/r23-priority-references/ygopro-core.tar.gz",
+      "expectedSha256": "34850e7dbd9b6b17235465dc12a7aa3194d9b80f030dc4d2b75160ebbed3409f",
+      "actualSha256": "34850e7dbd9b6b17235465dc12a7aa3194d9b80f030dc4d2b75160ebbed3409f",
+      "expectedBytes": 2684406,
+      "actualBytes": 2684406,
+      "pass": true
+    },
+    {
+      "claim": "Original retained archive receipt; archive intentionally excluded from bundle",
+      "sourcePath": "/workspace/r23-priority-references/CardScripts.tar.gz",
+      "expectedSha256": "36398e6eb0dd4e84e07c89048fbe4d6775fcdfc107331380299326f864269d75",
+      "actualSha256": "36398e6eb0dd4e84e07c89048fbe4d6775fcdfc107331380299326f864269d75",
+      "expectedBytes": 8390258,
+      "actualBytes": 8390258,
+      "pass": true
+    }
+  ],
+  "selectedPinnedArchiveMemberChecks": [
+    {
+      "sourcePath": "/workspace/r23-priority-references/core/libeffect.cpp",
+      "storedArchiveMember": "ygopro-core-c2e0b697e031d3560c077c9cd2cc76474969dedf/libeffect.cpp",
+      "sha256": "982dea45b688c4cba54caff08096d4dbb866cc449d2a81fffef37dc90ec3f504",
+      "bytes": 13274,
+      "pass": true
+    },
+    {
+      "sourcePath": "/workspace/r23-priority-references/core/effect.cpp",
+      "storedArchiveMember": "ygopro-core-c2e0b697e031d3560c077c9cd2cc76474969dedf/effect.cpp",
+      "sha256": "5d76eeafd10260bc2d25a2297a635dd14d166ba418e22188806b33ceca82fe03",
+      "bytes": 31958,
+      "pass": true
+    },
+    {
+      "sourcePath": "/workspace/r23-priority-references/core/processor.cpp",
+      "storedArchiveMember": "ygopro-core-c2e0b697e031d3560c077c9cd2cc76474969dedf/processor.cpp",
+      "sha256": "083b4da8e33f22890d186c7d19ebbcf0113aa4c89d59e30f73cef0d2dd8cda90",
+      "bytes": 192222,
+      "pass": true
+    },
+    {
+      "sourcePath": "/workspace/r23-priority-references/core/operations.cpp",
+      "storedArchiveMember": "ygopro-core-c2e0b697e031d3560c077c9cd2cc76474969dedf/operations.cpp",
+      "sha256": "2293f5693d3832561cc0395ab4ece8134b33560b522a38ab6d7133ea0bd31ad4",
+      "bytes": 228557,
+      "pass": true
+    },
+    {
+      "sourcePath": "/workspace/r23-priority-references/core/effect.h",
+      "storedArchiveMember": "ygopro-core-c2e0b697e031d3560c077c9cd2cc76474969dedf/effect.h",
+      "sha256": "c4c8b674f1567c9643ca9e5efa50bb019811660bf7ed7c89fef69c446a98650a",
+      "bytes": 4121,
+      "pass": true
+    },
+    {
+      "sourcePath": "/workspace/r23-priority-references/core/effect_constants.h",
+      "storedArchiveMember": "ygopro-core-c2e0b697e031d3560c077c9cd2cc76474969dedf/effect_constants.h",
+      "sha256": "5fcbba9eb4ad59fbac408f649d01d2dd68bb6df9d9b4b0fd6299852628a69d54",
+      "bytes": 19549,
+      "pass": true
+    },
+    {
+      "sourcePath": "/workspace/r23-priority-references/reviewed-script/official/c14558127.lua",
+      "storedArchiveMember": "CardScripts-915c6ff63518a04e18d16ee45962d75a8c8be264/official/c14558127.lua",
+      "sha256": "ef52822941d9e63d6b3ed0d7bea58dc8ab440be983a88aa353c36e3e294313ac",
+      "bytes": 1758,
+      "pass": true
+    },
+    {
+      "sourcePath": "/workspace/r23-priority-references/reviewed-script/official/c40908371.lua",
+      "storedArchiveMember": "CardScripts-915c6ff63518a04e18d16ee45962d75a8c8be264/official/c40908371.lua",
+      "sha256": "3d2ca2918a5c9d5e43ac14af931f4d52e7c7f81fc29bd95424aa1afbc9b84727",
+      "bytes": 2676,
+      "pass": true
+    },
+    {
+      "sourcePath": "/workspace/r23-priority-references/reviewed-script/official/c44146295.lua",
+      "storedArchiveMember": "CardScripts-915c6ff63518a04e18d16ee45962d75a8c8be264/official/c44146295.lua",
+      "sha256": "145576dad9dc6405d6eb67535b5f67b0dd0bf6cac50b80212abd1171f8a35875",
+      "bytes": 3291,
+      "pass": true
+    },
+    {
+      "sourcePath": "/workspace/r23-priority-references/reviewed-script/official/c51735257.lua",
+      "storedArchiveMember": "CardScripts-915c6ff63518a04e18d16ee45962d75a8c8be264/official/c51735257.lua",
+      "sha256": "f7b5ebdd528d2809fbe4fb28d8201a472caf531fd639a60ff311233469073074",
+      "bytes": 2024,
+      "pass": true
+    },
+    {
+      "sourcePath": "/workspace/r23-priority-references/reviewed-script/official/c71039903.lua",
+      "storedArchiveMember": "CardScripts-915c6ff63518a04e18d16ee45962d75a8c8be264/official/c71039903.lua",
+      "sha256": "89cd5c7c6d4a1838936fbe365bec7b6ec3436e93b7c5778f0dda007e6df7fe60",
+      "bytes": 2475,
+      "pass": true
+    },
+    {
+      "sourcePath": "/workspace/r23-priority-references/reviewed-script/official/c75286621.lua",
+      "storedArchiveMember": "CardScripts-915c6ff63518a04e18d16ee45962d75a8c8be264/official/c75286621.lua",
+      "sha256": "14ab80a51e638427b99d977c16584d454ac6825a78dd0491db08173353ceecd9",
+      "bytes": 1910,
+      "pass": true
+    },
+    {
+      "sourcePath": "/workspace/r23-priority-references/reviewed-script/official/c83994433.lua",
+      "storedArchiveMember": "CardScripts-915c6ff63518a04e18d16ee45962d75a8c8be264/official/c83994433.lua",
+      "sha256": "21bef8f13edda89986c1da005b3425a64c4027d56347384f375c618e455f182f",
+      "bytes": 1352,
+      "pass": true
+    },
+    {
+      "sourcePath": "/workspace/r23-priority-references/reviewed-script/official/c94145021.lua",
+      "storedArchiveMember": "CardScripts-915c6ff63518a04e18d16ee45962d75a8c8be264/official/c94145021.lua",
+      "sha256": "a27f1c2c552b4a8f1df756c06f35730ed85ed1ef5c91903276e296963a202b68",
+      "bytes": 2234,
+      "pass": true
+    },
+    {
+      "sourcePath": "/workspace/r23-priority-references/reviewed-script/utility.lua",
+      "storedArchiveMember": "CardScripts-915c6ff63518a04e18d16ee45962d75a8c8be264/utility.lua",
+      "sha256": "59ebe317dbec0ef5134f485f039bbe0cee031aa68e6d0ac028123a318ee2cd2a",
+      "bytes": 92849,
+      "pass": true
+    },
+    {
+      "sourcePath": "/workspace/r23-priority-references/scripts-with-restore/proc_xyz.lua",
+      "storedArchiveMember": "CardScripts-915c6ff63518a04e18d16ee45962d75a8c8be264/proc_xyz.lua",
+      "sha256": "8376068ba10a540c2be763e8631bcba3b2ef875e492f32d649b6940fafb0816e",
+      "bytes": 17664,
+      "pass": true
+    },
+    {
+      "sourcePath": "/workspace/r23-trigger-references/c70046172.lua",
+      "storedArchiveMember": "CardScripts-915c6ff63518a04e18d16ee45962d75a8c8be264/official/c70046172.lua",
+      "sha256": "ce5c215d8ec38793fbf6c046f6b71704dfba788b70bfe35eb13d552abe5f675b",
+      "bytes": 1143,
+      "pass": true
+    },
+    {
+      "sourcePath": "/workspace/r23-trigger-references/c90953320.lua",
+      "storedArchiveMember": "CardScripts-915c6ff63518a04e18d16ee45962d75a8c8be264/official/c90953320.lua",
+      "sha256": "88f32e5fb125620cf30ab73758cdfb84b6ab75b028770c900b1a71ff8b50a266",
+      "bytes": 1143,
+      "pass": true
+    },
+    {
+      "sourcePath": "/workspace/r23-xyz-pendulum-references/c33256280.lua",
+      "storedArchiveMember": "CardScripts-915c6ff63518a04e18d16ee45962d75a8c8be264/official/c33256280.lua",
+      "sha256": "d132eb3e19bbf38689cdc1b83f7cdd17d653a0d742445ff6d026f2f07e12c2ac",
+      "bytes": 1807,
+      "pass": true
+    },
+    {
+      "sourcePath": "/workspace/r23-xyz-pendulum-references/c33327029.lua",
+      "storedArchiveMember": "CardScripts-915c6ff63518a04e18d16ee45962d75a8c8be264/official/c33327029.lua",
+      "sha256": "4831ef01303e7ca8768893d5bbd96c6df0050d189fbfde891d4607953005d480",
+      "bytes": 2846,
+      "pass": true
+    },
+    {
+      "sourcePath": "/workspace/r23-xyz-pendulum-references/c51735257.lua",
+      "storedArchiveMember": "CardScripts-915c6ff63518a04e18d16ee45962d75a8c8be264/official/c51735257.lua",
+      "sha256": "f7b5ebdd528d2809fbe4fb28d8201a472caf531fd639a60ff311233469073074",
+      "bytes": 2024,
+      "pass": true
+    },
+    {
+      "sourcePath": "/workspace/r23-xyz-pendulum-references/c60473572.lua",
+      "storedArchiveMember": "CardScripts-915c6ff63518a04e18d16ee45962d75a8c8be264/official/c60473572.lua",
+      "sha256": "90c2711836090e93a3d63256ae7fd1ab3a628150347c6d8d96cfd4e3ec594209",
+      "bytes": 1802,
+      "pass": true
+    },
+    {
+      "sourcePath": "/workspace/r23-xyz-pendulum-references/c69351984.lua",
+      "storedArchiveMember": "CardScripts-915c6ff63518a04e18d16ee45962d75a8c8be264/official/c69351984.lua",
+      "sha256": "8bd9ee7ad346d1b14b5771e8a5a0757e08089e5fd6d26eb9ed4639f2ae8ae867",
+      "bytes": 1806,
+      "pass": true
+    },
+    {
+      "sourcePath": "/workspace/r23-xyz-pendulum-references/c69711728.lua",
+      "storedArchiveMember": "CardScripts-915c6ff63518a04e18d16ee45962d75a8c8be264/official/c69711728.lua",
+      "sha256": "a69ea0d2c0601c51601ec53cf4017386d3255e1398462b7c88d2c2b29ef31876",
+      "bytes": 2804,
+      "pass": true
+    },
+    {
+      "sourcePath": "/workspace/r23-xyz-pendulum-references/c71594310.lua",
+      "storedArchiveMember": "CardScripts-915c6ff63518a04e18d16ee45962d75a8c8be264/official/c71594310.lua",
+      "sha256": "ac34ec4a47f1569d9167aeb77e5b26058c1d21c43b0c707a0f349b39c4285811",
+      "bytes": 169,
+      "pass": true
+    },
+    {
+      "sourcePath": "/workspace/r23-xyz-pendulum-references/c73594093.lua",
+      "storedArchiveMember": "CardScripts-915c6ff63518a04e18d16ee45962d75a8c8be264/official/c73594093.lua",
+      "sha256": "0f675280c577d061252d631df4b5f54dd91f3359f281b8a4f2245c6362fd6ede",
+      "bytes": 1026,
+      "pass": true
+    },
+    {
+      "sourcePath": "/workspace/r23-xyz-pendulum-references/c7868571.lua",
+      "storedArchiveMember": "CardScripts-915c6ff63518a04e18d16ee45962d75a8c8be264/official/c7868571.lua",
+      "sha256": "746a5f4b9cc689c6b222460fbcc2d798a07977a639bc86b679ae6c6b2f2b86f9",
+      "bytes": 1767,
+      "pass": true
+    },
+    {
+      "sourcePath": "/workspace/r23-xyz-pendulum-references/effect.cpp",
+      "storedArchiveMember": "ygopro-core-c2e0b697e031d3560c077c9cd2cc76474969dedf/effect.cpp",
+      "sha256": "5d76eeafd10260bc2d25a2297a635dd14d166ba418e22188806b33ceca82fe03",
+      "bytes": 31958,
+      "pass": true
+    },
+    {
+      "sourcePath": "/workspace/r23-xyz-pendulum-references/field.cpp",
+      "storedArchiveMember": "ygopro-core-c2e0b697e031d3560c077c9cd2cc76474969dedf/field.cpp",
+      "sha256": "7fd4ac591383fe690a956e69762b0d18e995a90ed75bf8bf0e4cbe2ee9a355c3",
+      "bytes": 122838,
+      "pass": true
+    },
+    {
+      "sourcePath": "/workspace/r23-xyz-pendulum-references/libduel.cpp",
+      "storedArchiveMember": "ygopro-core-c2e0b697e031d3560c077c9cd2cc76474969dedf/libduel.cpp",
+      "sha256": "d4d8ddc1841f4a211ad7dee0ce3d0b4ab2bcdee2392445ef7b8804b8105f4bc1",
+      "bytes": 148393,
+      "pass": true
+    },
+    {
+      "sourcePath": "/workspace/r23-xyz-pendulum-references/operations.cpp",
+      "storedArchiveMember": "ygopro-core-c2e0b697e031d3560c077c9cd2cc76474969dedf/operations.cpp",
+      "sha256": "2293f5693d3832561cc0395ab4ece8134b33560b522a38ab6d7133ea0bd31ad4",
+      "bytes": 228557,
+      "pass": true
+    },
+    {
+      "sourcePath": "/workspace/r23-xyz-pendulum-references/processor.cpp",
+      "storedArchiveMember": "ygopro-core-c2e0b697e031d3560c077c9cd2cc76474969dedf/processor.cpp",
+      "sha256": "083b4da8e33f22890d186c7d19ebbcf0113aa4c89d59e30f73cef0d2dd8cda90",
+      "bytes": 192222,
+      "pass": true
+    }
+  ],
+  "completeHistoricalCountLimitScanRerun": false,
+  "limitations": [
+    "This checks locally retained source bytes and original receipt claims; it does not authenticate a newly retrieved official Konami ruling.",
+    "The retained count-limit scan is a historical record. This packaging step does not rerun its full 22953-script textual scan.",
+    "The original source archives are intentionally omitted; their receipt hash checks and selected-file membership checks are recorded."
+  ]
+}

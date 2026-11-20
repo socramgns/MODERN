@@ -1,0 +1,14 @@
+
+test_aliases_come_from_cdb_data (__main__.CatalogueTests.test_aliases_come_from_cdb_data) ... ok
+test_compiler_updates_numeric_pins_only (__main__.CatalogueTests.test_compiler_updates_numeric_pins_only) ... ok
+test_missing_sources_remain_explicit (__main__.CatalogueTests.test_missing_sources_remain_explicit) ... ok
+test_real_metadata_and_zero_are_preserved (__main__.CatalogueTests.test_real_metadata_and_zero_are_preserved) ... ok
+test_restricted_names_resolved_from_real_source (__main__.CatalogueTests.test_restricted_names_resolved_from_real_source) ... ok
+test_runtime_alias_pool_and_unknown_handling (__main__.CatalogueTests.test_runtime_alias_pool_and_unknown_handling) ... ok
+test_schema_count_identity_and_hash (__main__.CatalogueTests.test_schema_count_identity_and_hash) ... ok
+test_sources_pinned_and_identified (__main__.CatalogueTests.test_sources_pinned_and_identified) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.519s
+
+OK

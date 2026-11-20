@@ -1,0 +1,15 @@
+{
+  "url": "https://github.com/socramgns/MODERN/actions/runs/44394147285/summary_partial",
+  "observedAt": "2026-11-18T20:51:25.493709+00:00",
+  "method": "GET",
+  "tlsValidationDisabled": false,
+  "explicitAuthorizationAdded": false,
+  "inheritedProxyPreserved": true,
+  "httpStatus": 200,
+  "contentType": "text/html; charset=utf-8",
+  "truncated": false,
+  "path": "/workspace/r23-validation/remote-ci/diagnostic-44394147285-summary-partial.html",
+  "sha256": "9ee5b1600c179d47fbad6c6b6700359463fa16cb98eba53422121a7d9972e40d",
+  "bytes": 3381,
+  "resolvedUrl": "https://github.com/socramgns/MODERN/actions/runs/44394147285/summary_partial"
+}

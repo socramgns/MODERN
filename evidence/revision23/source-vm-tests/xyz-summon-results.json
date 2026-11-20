@@ -1,0 +1,226 @@
+{
+  "schema": "ygo-xyz-summon-tests/v1",
+  "pass": true,
+  "total": 33,
+  "tests": [
+    {
+      "name": "The two reviewed identities match rank4, two-Level4 procedures and printed effects",
+      "pass": true
+    },
+    {
+      "name": "Physical Xyz summon preserves both materials, owner and qualification 0 71594310 ATTACK",
+      "pass": true
+    },
+    {
+      "name": "Physical Xyz summon preserves both materials, owner and qualification 0 71594310 DEFENSE",
+      "pass": true
+    },
+    {
+      "name": "Physical Xyz summon preserves both materials, owner and qualification 0 51735257 ATTACK",
+      "pass": true
+    },
+    {
+      "name": "Physical Xyz summon preserves both materials, owner and qualification 0 51735257 DEFENSE",
+      "pass": true
+    },
+    {
+      "name": "Physical Xyz summon preserves both materials, owner and qualification 1 71594310 ATTACK",
+      "pass": true
+    },
+    {
+      "name": "Physical Xyz summon preserves both materials, owner and qualification 1 71594310 DEFENSE",
+      "pass": true
+    },
+    {
+      "name": "Physical Xyz summon preserves both materials, owner and qualification 1 51735257 ATTACK",
+      "pass": true
+    },
+    {
+      "name": "Physical Xyz summon preserves both materials, owner and qualification 1 51735257 DEFENSE",
+      "pass": true
+    },
+    {
+      "name": "Invalid Xyz request is rejected atomically: same-material",
+      "pass": true
+    },
+    {
+      "name": "Invalid Xyz request is rejected atomically: wrong-level",
+      "pass": true
+    },
+    {
+      "name": "Invalid Xyz request is rejected atomically: face-down",
+      "pass": true
+    },
+    {
+      "name": "Invalid Xyz request is rejected atomically: inactive-player",
+      "pass": true
+    },
+    {
+      "name": "Invalid Xyz request is rejected atomically: foreign-material",
+      "pass": true
+    },
+    {
+      "name": "Invalid Xyz request is rejected atomically: fake-source",
+      "pass": true
+    },
+    {
+      "name": "Invalid Xyz request is rejected atomically: occupied-zone",
+      "pass": true
+    },
+    {
+      "name": "Invalid Xyz request is rejected atomically: wrong-position",
+      "pass": true
+    },
+    {
+      "name": "Invalid Xyz request is rejected atomically: fake-extra-key",
+      "pass": true
+    },
+    {
+      "name": "Spirit Link Dragon-only restriction rejects non-Dragon Xyz before moving materials",
+      "pass": true
+    },
+    {
+      "name": "Unregistered face-up continuous effects exclude the affected summon",
+      "pass": true
+    },
+    {
+      "name": "Actual battle departure sends all attached materials to their owners GYs, once",
+      "pass": true
+    },
+    {
+      "name": "Corn detaches one physical cost and sends rather than destroys its target",
+      "pass": true
+    },
+    {
+      "name": "Corn cannot activate after an actual attack announced this turn",
+      "pass": true
+    },
+    {
+      "name": "Spark destruction prevention does not stop Corn non-destruction send",
+      "pass": true
+    },
+    {
+      "name": "Corn target threshold is checked at activation and rejects a stronger monster",
+      "pass": true
+    },
+    {
+      "name": "Effect negation preserves the detached cost and oath attack restriction in explicit priority",
+      "pass": true
+    },
+    {
+      "name": "Mechaba negates Corn from the field, retaining detach and matching hand cost and releasing every attached material",
+      "pass": true
+    },
+    {
+      "name": "Activation-negated Corn surviving Spark loses its OATH attack prohibition but keeps its use and detached cost",
+      "pass": true
+    },
+    {
+      "name": "Borrowed material retains its owner while attached and returns to that owner on detach (QA microstate)",
+      "pass": true
+    },
+    {
+      "name": "Corn sending a Pendulum monster uses face-up Extra replacement and inflicts no false GY damage",
+      "pass": true
+    },
+    {
+      "name": "Compulsory returns an actually Xyz Summoned host to hidden Extra and sends its materials to GY",
+      "pass": true
+    },
+    {
+      "name": "Forged overlay ownership, attachment and proper history are rejected (QA diagnostics)",
+      "pass": true
+    },
+    {
+      "name": "Fresh replay rejects altered materials, cost identity and material host evidence",
+      "pass": true
+    }
+  ],
+  "witnesses": [
+    {
+      "player": 0,
+      "cardId": 71594310,
+      "position": "ATTACK",
+      "steps": 1,
+      "replayPass": true
+    },
+    {
+      "player": 0,
+      "cardId": 71594310,
+      "position": "DEFENSE",
+      "steps": 1,
+      "replayPass": true
+    },
+    {
+      "player": 0,
+      "cardId": 51735257,
+      "position": "ATTACK",
+      "steps": 1,
+      "replayPass": true
+    },
+    {
+      "player": 0,
+      "cardId": 51735257,
+      "position": "DEFENSE",
+      "steps": 1,
+      "replayPass": true
+    },
+    {
+      "player": 1,
+      "cardId": 71594310,
+      "position": "ATTACK",
+      "steps": 1,
+      "replayPass": true
+    },
+    {
+      "player": 1,
+      "cardId": 71594310,
+      "position": "DEFENSE",
+      "steps": 1,
+      "replayPass": true
+    },
+    {
+      "player": 1,
+      "cardId": 51735257,
+      "position": "ATTACK",
+      "steps": 1,
+      "replayPass": true
+    },
+    {
+      "player": 1,
+      "cardId": 51735257,
+      "position": "DEFENSE",
+      "steps": 1,
+      "replayPass": true
+    },
+    {
+      "kind": "corn-detach-send-burn",
+      "replayPass": true
+    },
+    {
+      "kind": "corn-priority-veiler",
+      "replayPass": true
+    },
+    {
+      "kind": "corn-priority-mechaba",
+      "replayPass": true
+    },
+    {
+      "kind": "corn-priority-roar-spark-oath",
+      "replayPass": true
+    },
+    {
+      "kind": "corn-pendulum-no-false-burn",
+      "replayPass": true
+    },
+    {
+      "kind": "compulsory-hidden-extra-and-overlay-cleanup",
+      "replayPass": true
+    }
+  ],
+  "limitations": [
+    "Only the two named rank4 procedures and reviewed Normal materials are admitted.",
+    "Declared starting fields are assumptions, not histories of earlier Normal Summons.",
+    "QA mutations are not witnessed game histories; no reference Lua is executed."
+  ]
+}

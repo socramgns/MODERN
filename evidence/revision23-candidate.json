@@ -1,24 +1,15 @@
 {
   "schema": "ygo-release-candidate/v1",
   "revision": "2026.11-stable.23",
-  "buildId": "bdaf08b1741d9615ab5c81ededfff5b9fd1eba110c0aa25db75fd4b11a44dabd",
-  "htmlSha256": "92cbd3384c3a1807fac9e52fc9abfcc4ecb3cbc21413678e57b2d713ba54cd1b",
-  "bytes": 7434527,
-  "status": "VALIDATION_IN_PROGRESS_NOT_ACCEPTED",
+  "buildId": "ad379fc6b8cddeaff64a1895a2eb97fed493b037a7e725a3bd9681a185d94a64",
+  "htmlSha256": "017f4cd81211d2be486c6634e876254fe6dc2225e6419c02e459d69ea7022c9e",
+  "bytes": 7435430,
+  "status": "ACCEPTED_FOR_DECLARED_REGISTERED_PROFILES",
   "sourceJavaScriptFiles": 131,
   "examples": 28,
   "mandatoryValidationGroups": 88,
   "acceptedBaselineCommit": "35ad8188207f6a47be47b6bc361a011cf01c948b",
   "score": "STRUCTURAL_PROVISIONAL",
-  "newCriteriaPendingVerification": [
-    "C18",
-    "C19",
-    "C20",
-    "C23",
-    "C24",
-    "C25",
-    "C26"
-  ],
   "externalEvidenceStillPending": [
     "C27",
     "C28",
@@ -27,5 +18,19 @@
     "C31"
   ],
   "historyPreserved": "evidence/history/revision22-accepted/",
-  "generatedAt": "2026-11-18T19:43:06.720876+00:00"
+  "generatedAt": "2026-11-18T19:43:06.720876+00:00",
+  "candidateCommit": "c9537266d03535c305cb8e882c09be1a81376669",
+  "remoteRunUrl": "https://github.com/socramgns/MODERN/actions/runs/44686493687",
+  "verifiedCriteria": 27,
+  "pendingCriteria": 5,
+  "newlyVerifiedCriteria": [
+    "C18",
+    "C19",
+    "C20",
+    "C23",
+    "C24",
+    "C25",
+    "C26"
+  ],
+  "acceptedAt": "2026-11-20T07:00:16.974905+00:00"
 }

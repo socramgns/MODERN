@@ -1,0 +1,209 @@
+{
+  "schema": "ygo-resumed-validation-summary/v1",
+  "buildId": "bdaf08b1741d9615ab5c81ededfff5b9fd1eba110c0aa25db75fd4b11a44dabd",
+  "htmlSha256": "92cbd3384c3a1807fac9e52fc9abfcc4ecb3cbc21413678e57b2d713ba54cd1b",
+  "sourceCandidateCommit": "7b34e2075579771064a18d06d188dc018ba4e0b3",
+  "scope": "ONLY_UNCOMPLETED_COMMANDS_AFTER_INTERRUPTION_NOT_A_REPLACEMENT_FULL_RUN",
+  "expectedCommands": 28,
+  "complete": true,
+  "pass": false,
+  "suites": [
+    {
+      "name": "release17_in_browser",
+      "pass": true,
+      "exitCode": 0,
+      "elapsedMs": 102729,
+      "log": "/workspace/r23-validation/resume/release17_in_browser.log"
+    },
+    {
+      "name": "release18_in_browser",
+      "pass": true,
+      "exitCode": 0,
+      "elapsedMs": 30095,
+      "log": "/workspace/r23-validation/resume/release18_in_browser.log"
+    },
+    {
+      "name": "release19_in_browser",
+      "pass": true,
+      "exitCode": 0,
+      "elapsedMs": 52513,
+      "log": "/workspace/r23-validation/resume/release19_in_browser.log"
+    },
+    {
+      "name": "release20_in_browser",
+      "pass": true,
+      "exitCode": 0,
+      "elapsedMs": 78388,
+      "log": "/workspace/r23-validation/resume/release20_in_browser.log"
+    },
+    {
+      "name": "release21_in_browser",
+      "pass": true,
+      "exitCode": 0,
+      "elapsedMs": 46275,
+      "log": "/workspace/r23-validation/resume/release21_in_browser.log"
+    },
+    {
+      "name": "release22_in_browser",
+      "pass": true,
+      "exitCode": 0,
+      "elapsedMs": 42370,
+      "log": "/workspace/r23-validation/resume/release22_in_browser.log"
+    },
+    {
+      "name": "accessibility_workflow",
+      "pass": true,
+      "exitCode": 0,
+      "elapsedMs": 23003,
+      "log": "/workspace/r23-validation/resume/accessibility_workflow.log"
+    },
+    {
+      "name": "mobile_accessibility",
+      "pass": false,
+      "exitCode": 1,
+      "elapsedMs": 24815,
+      "log": "/workspace/r23-validation/resume/mobile_accessibility.log"
+    },
+    {
+      "name": "release5_in_browser",
+      "pass": true,
+      "exitCode": 0,
+      "elapsedMs": 28629,
+      "log": "/workspace/r23-validation/resume/release5_in_browser.log"
+    },
+    {
+      "name": "blue_eyes_in_browser",
+      "pass": true,
+      "exitCode": 0,
+      "elapsedMs": 22909,
+      "log": "/workspace/r23-validation/resume/blue_eyes_in_browser.log"
+    },
+    {
+      "name": "recommendations",
+      "pass": true,
+      "exitCode": 0,
+      "elapsedMs": 3631,
+      "log": "/workspace/r23-validation/resume/recommendations.log"
+    },
+    {
+      "name": "format_interface",
+      "pass": true,
+      "exitCode": 0,
+      "elapsedMs": 31454,
+      "log": "/workspace/r23-validation/resume/format_interface.log"
+    },
+    {
+      "name": "advanced_interface",
+      "pass": true,
+      "exitCode": 0,
+      "elapsedMs": 45641,
+      "log": "/workspace/r23-validation/resume/advanced_interface.log"
+    },
+    {
+      "name": "browser_compatibility",
+      "pass": true,
+      "exitCode": 0,
+      "elapsedMs": 19290,
+      "log": "/workspace/r23-validation/resume/browser_compatibility.log"
+    },
+    {
+      "name": "formats",
+      "pass": true,
+      "exitCode": 0,
+      "elapsedMs": 66,
+      "log": "/workspace/r23-validation/resume/formats.log"
+    },
+    {
+      "name": "provenance",
+      "pass": true,
+      "exitCode": 0,
+      "elapsedMs": 131,
+      "log": "/workspace/r23-validation/resume/provenance.log"
+    },
+    {
+      "name": "strategy",
+      "pass": true,
+      "exitCode": 0,
+      "elapsedMs": 269,
+      "log": "/workspace/r23-validation/resume/strategy.log"
+    },
+    {
+      "name": "causal_core",
+      "pass": true,
+      "exitCode": 0,
+      "elapsedMs": 749,
+      "log": "/workspace/r23-validation/resume/causal_core.log"
+    },
+    {
+      "name": "archetype_rules",
+      "pass": true,
+      "exitCode": 0,
+      "elapsedMs": 7089,
+      "log": "/workspace/r23-validation/resume/archetype_rules.log"
+    },
+    {
+      "name": "causal_browser",
+      "pass": true,
+      "exitCode": 0,
+      "elapsedMs": 50307,
+      "log": "/workspace/r23-validation/resume/causal_browser.log"
+    },
+    {
+      "name": "catalogue",
+      "pass": true,
+      "exitCode": 0,
+      "elapsedMs": 669,
+      "log": "/workspace/r23-validation/resume/catalogue.log"
+    },
+    {
+      "name": "probability_and_calibration",
+      "pass": true,
+      "exitCode": 0,
+      "elapsedMs": 65,
+      "log": "/workspace/r23-validation/resume/probability_and_calibration.log"
+    },
+    {
+      "name": "probability_in_browser",
+      "pass": true,
+      "exitCode": 0,
+      "elapsedMs": 4447,
+      "log": "/workspace/r23-validation/resume/probability_in_browser.log"
+    },
+    {
+      "name": "ui_and_persistence",
+      "pass": true,
+      "exitCode": 0,
+      "elapsedMs": 27925,
+      "log": "/workspace/r23-validation/resume/ui_and_persistence.log"
+    },
+    {
+      "name": "worker",
+      "pass": true,
+      "exitCode": 0,
+      "elapsedMs": 14378,
+      "log": "/workspace/r23-validation/resume/worker.log"
+    },
+    {
+      "name": "supported_search",
+      "pass": true,
+      "exitCode": 0,
+      "elapsedMs": 11620,
+      "log": "/workspace/r23-validation/resume/supported_search.log"
+    },
+    {
+      "name": "delivered_bytes_e2e",
+      "pass": true,
+      "exitCode": 0,
+      "elapsedMs": 74503,
+      "log": "/workspace/r23-validation/resume/delivered_bytes_e2e.log"
+    },
+    {
+      "name": "context_in_browser",
+      "pass": true,
+      "exitCode": 0,
+      "elapsedMs": 35992,
+      "log": "/workspace/r23-validation/resume/context_in_browser.log"
+    }
+  ],
+  "artifactUnchanged": true
+}

@@ -1,0 +1,59 @@
+{
+  "pass": true,
+  "total": 13,
+  "tests": [
+    {
+      "name": "Ash is interaction, not summon/search/starter/extender",
+      "pass": true
+    },
+    {
+      "name": "Ash conditional bullet effects are excluded from PSCT actions",
+      "pass": true
+    },
+    {
+      "name": "Normal Monster flavor is not a card effect",
+      "pass": true
+    },
+    {
+      "name": "Opponent draw does not become own draw or starter",
+      "pass": true
+    },
+    {
+      "name": "Normal-Summon access is provisional and grave-only access is not an opening starter",
+      "pass": true
+    },
+    {
+      "name": "3 Ash do not create starter access in a 40-card diagnostic input",
+      "pass": true
+    },
+    {
+      "name": "Hypergeometric boundaries and known 3-in-40 probability",
+      "pass": true
+    },
+    {
+      "name": "Wilson intervals retain uncertainty for zero successes",
+      "pass": true
+    },
+    {
+      "name": "Monte Carlo is reproducible and explicitly a role-access proxy",
+      "pass": true
+    },
+    {
+      "name": "50 copies of the same id cannot pass calibration",
+      "pass": true
+    },
+    {
+      "name": "Submitted score is ignored; current scorer evaluates canonical decks",
+      "pass": true
+    },
+    {
+      "name": "Identical deck with different ids cannot cross tuning/validation",
+      "pass": true
+    },
+    {
+      "name": "Dataset becomes stale after the active banlist changes",
+      "pass": true
+    }
+  ]
+}
+

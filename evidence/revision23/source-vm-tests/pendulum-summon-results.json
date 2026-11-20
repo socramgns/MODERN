@@ -1,0 +1,199 @@
+{
+  "schema": "ygo-pendulum-summon-tests/v1",
+  "pass": true,
+  "total": 34,
+  "tests": [
+    {
+      "name": "Reviewed scale values and normal-monster identity match immutable catalogue data",
+      "pass": true
+    },
+    {
+      "name": "Actual scales and hand Pendulum Summon conserve UID and normal budget 0 ATTACK",
+      "pass": true
+    },
+    {
+      "name": "Actual scales and hand Pendulum Summon conserve UID and normal budget 0 DEFENSE",
+      "pass": true
+    },
+    {
+      "name": "Actual scales and hand Pendulum Summon conserve UID and normal budget 1 ATTACK",
+      "pass": true
+    },
+    {
+      "name": "Actual scales and hand Pendulum Summon conserve UID and normal budget 1 DEFENSE",
+      "pass": true
+    },
+    {
+      "name": "Multiple physical hand cards arrive as one simultaneous Pendulum group",
+      "pass": true
+    },
+    {
+      "name": "Invalid scale activation is rejected: wrong-column",
+      "pass": true
+    },
+    {
+      "name": "Invalid scale activation is rejected: occupied-column",
+      "pass": true
+    },
+    {
+      "name": "Invalid scale activation is rejected: foreign-source",
+      "pass": true
+    },
+    {
+      "name": "Invalid scale activation is rejected: not-hand",
+      "pass": true
+    },
+    {
+      "name": "Invalid scale activation is rejected: fake-card",
+      "pass": true
+    },
+    {
+      "name": "Invalid scale activation is rejected: extra-key",
+      "pass": true
+    },
+    {
+      "name": "Invalid Pendulum group is rejected atomically: duplicate-card",
+      "pass": true
+    },
+    {
+      "name": "Invalid Pendulum group is rejected atomically: duplicate-space",
+      "pass": true
+    },
+    {
+      "name": "Invalid Pendulum group is rejected atomically: hand-to-emz",
+      "pass": true
+    },
+    {
+      "name": "Invalid Pendulum group is rejected atomically: level-boundary",
+      "pass": true
+    },
+    {
+      "name": "Invalid Pendulum group is rejected atomically: foreign-card",
+      "pass": true
+    },
+    {
+      "name": "Invalid Pendulum group is rejected atomically: inactive",
+      "pass": true
+    },
+    {
+      "name": "Invalid Pendulum group is rejected atomically: wrong-position",
+      "pass": true
+    },
+    {
+      "name": "Invalid Pendulum group is rejected atomically: fake-source",
+      "pass": true
+    },
+    {
+      "name": "Invalid Pendulum group is rejected atomically: extra-control",
+      "pass": true
+    },
+    {
+      "name": "Invalid Pendulum group is rejected atomically: empty",
+      "pass": true
+    },
+    {
+      "name": "Equal scales activate legally but offer no level in their empty interval",
+      "pass": true
+    },
+    {
+      "name": "Either controller active Blue-Eyes Spirit forbids a group of two while allowing one 0",
+      "pass": true
+    },
+    {
+      "name": "Either controller active Blue-Eyes Spirit forbids a group of two while allowing one 1",
+      "pass": true
+    },
+    {
+      "name": "Spirit Link Dragon-only constraint admits a Dragon hand card and excludes Psychic Metalfoes",
+      "pass": true
+    },
+    {
+      "name": "Destroying another physical scale Sets a hidden Deck card and moves the Pendulum to face-up Extra",
+      "pass": true
+    },
+    {
+      "name": "A witnessed face-up Extra card and two hand cards Pendulum Summon together with owner and origins retained",
+      "pass": true
+    },
+    {
+      "name": "Extra Pendulum destination permits a real Wolf pointed Main zone and excludes unpointed spaces",
+      "pass": true
+    },
+    {
+      "name": "Mechaba negates and banishes a Pendulum Spell activation while preserving the physical Spell hand cost",
+      "pass": true
+    },
+    {
+      "name": "Roar activation-negated scale goes to GY rather than face-up Extra",
+      "pass": true
+    },
+    {
+      "name": "The bounded action prefix reports incomplete while a structurally valid manual group outside it still replays",
+      "pass": true
+    },
+    {
+      "name": "Forged face-up Extra, scale values and refunded summon budget reject execution (QA diagnostics)",
+      "pass": true
+    },
+    {
+      "name": "Fresh replay rejects altered group UID, origin, scale, hidden Set choice and costs",
+      "pass": true
+    }
+  ],
+  "witnesses": [
+    {
+      "kind": "scales-and-hand-summon",
+      "player": 0,
+      "position": "ATTACK",
+      "replayPass": true
+    },
+    {
+      "kind": "scales-and-hand-summon",
+      "player": 0,
+      "position": "DEFENSE",
+      "replayPass": true
+    },
+    {
+      "kind": "scales-and-hand-summon",
+      "player": 1,
+      "position": "ATTACK",
+      "replayPass": true
+    },
+    {
+      "kind": "scales-and-hand-summon",
+      "player": 1,
+      "position": "DEFENSE",
+      "replayPass": true
+    },
+    {
+      "kind": "three-card-simultaneous-group",
+      "replayPass": true
+    },
+    {
+      "kind": "scale-destruction-faceup-extra-and-hidden-set",
+      "replayPass": true
+    },
+    {
+      "kind": "extra-and-two-hand-simultaneous-group",
+      "replayPass": true
+    },
+    {
+      "kind": "pendulum-card-activation-mechaba-negated",
+      "replayPass": true
+    },
+    {
+      "kind": "pendulum-card-activation-roar-gy",
+      "replayPass": true
+    },
+    {
+      "kind": "bounded-prefix-manual-five-card-group",
+      "replayPass": true
+    }
+  ],
+  "limitations": [
+    "Four technically reviewed Normal Metalfoes Pendulum profiles; other Pendulum cards remain outside the registered subset.",
+    "The action prefix is bounded; a complete manual group is validated separately, and partial action enumeration is reported explicitly.",
+    "Fixed left-Extra-Monster-Zone geometry is retained; native device and complete-rule certification are not asserted.",
+    "QA mutations are diagnostic, not witnessed legal histories."
+  ]
+}

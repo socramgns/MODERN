@@ -1,0 +1,175 @@
+{
+  "schema": "ygo-native-offline-diagnostic-history/v1",
+  "candidateCommit": "4faa7a82a7cafb6d0d3f4657ec06b2af74200273",
+  "sourceRunUrl": "https://github.com/socramgns/MODERN/actions/runs/44440213754",
+  "buildId": "ad379fc6b8cddeaff64a1895a2eb97fed493b037a7e725a3bd9681a185d94a64",
+  "htmlSha256": "017f4cd81211d2be486c6634e876254fe6dc2225e6419c02e459d69ea7022c9e",
+  "pass": false,
+  "groupsObservedInCompactSummary": 88,
+  "failedGroupsObserved": [
+    "release23_in_browser",
+    "accessibility_r23",
+    "release6_in_browser",
+    "laboratory_usability",
+    "expanded_examples_in_browser",
+    "release8_in_browser",
+    "release9_in_browser",
+    "release10_in_browser",
+    "release11_in_browser",
+    "release12_in_browser",
+    "release13_in_browser",
+    "release14_in_browser",
+    "release15_in_browser",
+    "release16_in_browser",
+    "release17_in_browser",
+    "release18_in_browser",
+    "release19_in_browser",
+    "release20_in_browser",
+    "release21_in_browser",
+    "release22_in_browser",
+    "accessibility_workflow",
+    "release5_in_browser"
+  ],
+  "passedGroupCountFromCompactSummary": 66,
+  "rawFullRemoteReportRecovered": false,
+  "rawFullRemoteReportHashRecomputed": false,
+  "rawFullRemoteReportSha256Announced": "14a6dcdfb59c8c834caa5db2433d23f459d83ceee404d3f084d1548834fbfd39",
+  "diagnosticAnnotationsObserved": 45,
+  "failedSuiteMetadataObserved": 22,
+  "negativeProbeVariants": 8,
+  "beforeNavigationOnlyNativeOverrideInsufficient": true,
+  "urlChangeHypothesisDisproved": true,
+  "runnerUrlsChanged": false,
+  "confirmedProbeRunUrl": "https://github.com/socramgns/MODERN/actions/runs/44606249556",
+  "confirmedRealHttpControlChecks": 7,
+  "confirmedNativeHookModes": 3,
+  "meaning": "Original compact summary, diagnostic annotations and probe captures are preserved. The complete raw validation JSON for this failed CI run was not recovered. The old CSS followups used the previous harness and were not relabeled as fresh executions.",
+  "files": [
+    {
+      "path": "evidence/revision23/history/native-offline-4faa7a82/4faa7a82a7cafb6d0d3f4657ec06b2af74200273-job-135278886979.html",
+      "bytes": 177923,
+      "sha256": "2bef38bc6ee5a15031859f60fe0c734f3b3e3a9a67285053674dc0a38c977b6f",
+      "rawBytesPreserved": true
+    },
+    {
+      "path": "evidence/revision23/history/native-offline-4faa7a82/4faa7a82a7cafb6d0d3f4657ec06b2af74200273-run-44440213754-ci-result-summary.json",
+      "bytes": 935,
+      "sha256": "f1ff6a5b25e00961fc93369669bac28ab32fd908e681296a95e5dac1b249c855",
+      "rawBytesPreserved": true
+    },
+    {
+      "path": "evidence/revision23/history/native-offline-4faa7a82/4faa7a82a7cafb6d0d3f4657ec06b2af74200273-run-44440213754-observation.json",
+      "bytes": 28079,
+      "sha256": "0cc0ecf7ff1c04efba4cd999a0cae9755f46f0fb91be071986c5207c936f84c4",
+      "rawBytesPreserved": true
+    },
+    {
+      "path": "evidence/revision23/history/native-offline-4faa7a82/4faa7a82a7cafb6d0d3f4657ec06b2af74200273-run-44440213754.html",
+      "bytes": 169700,
+      "sha256": "7b38d8987cf9e6c0834f71b8f7706f817cae5e1f52fffe29773f8418f25aa86d",
+      "rawBytesPreserved": true
+    },
+    {
+      "path": "evidence/revision23/history/native-offline-4faa7a82/css-fix-accessibility.json",
+      "bytes": 32979,
+      "sha256": "b4a043334522066dd3f05ffb20ec681540d05da2552155194ffc5d9c4c3b59b9",
+      "rawBytesPreserved": true
+    },
+    {
+      "path": "evidence/revision23/history/native-offline-4faa7a82/css-fix-accessibility.log",
+      "bytes": 1702,
+      "sha256": "a7f2202eb1678b84184e2276064284cbc32631818560f0591592500e267f44c2",
+      "rawBytesPreserved": true
+    },
+    {
+      "path": "evidence/revision23/history/native-offline-4faa7a82/css-fix-browser.json",
+      "bytes": 7886,
+      "sha256": "9117d73391f6fc614bfa7ed9fb8452d69b6db4b8e6ec416df62c5d3c49904cfc",
+      "rawBytesPreserved": true
+    },
+    {
+      "path": "evidence/revision23/history/native-offline-4faa7a82/css-fix-browser.log",
+      "bytes": 3286,
+      "sha256": "bdfc4152f010b9c0e09feff7ebb7d26141bb802c6eefb099e29f57f0cfc0cf1b",
+      "rawBytesPreserved": true
+    },
+    {
+      "path": "evidence/revision23/history/native-offline-4faa7a82/diagnostic-4faa-annotations.json",
+      "bytes": 70923,
+      "sha256": "b3de20f316ee96a1f78328b60d78870faef753767cc169a9804ab1b21a39eb53",
+      "rawBytesPreserved": true
+    },
+    {
+      "path": "evidence/revision23/history/native-offline-4faa7a82/diagnostic-4faa-run.html",
+      "bytes": 297030,
+      "sha256": "e54dca0d0f89a113a438ee7ab7e4e9ded294095592f7b714b035cf7079b82126",
+      "rawBytesPreserved": true
+    },
+    {
+      "path": "evidence/revision23/history/native-offline-4faa7a82/native-offline-control-local.json",
+      "bytes": 1422,
+      "sha256": "31a836d86909ef03059e86a2a9572cc96821d3916a8a77efa276c9ebe8fa43d6",
+      "rawBytesPreserved": true
+    },
+    {
+      "path": "evidence/revision23/history/native-offline-4faa7a82/offline-cdp-probe-annotations.json",
+      "bytes": 3380,
+      "sha256": "a7634f789d1d60d6d3c6985e3a786ef7e26a1dcb48319442e4adda14b11afaa4",
+      "rawBytesPreserved": true
+    },
+    {
+      "path": "evidence/revision23/history/native-offline-4faa7a82/offline-cdp-probe-run.html",
+      "bytes": 313326,
+      "sha256": "c7eb4314e352f054fe4594e9e332e1640c3ac21257ade19ff9ed9e501bbe7d88",
+      "rawBytesPreserved": true
+    },
+    {
+      "path": "evidence/revision23/history/native-offline-4faa7a82/offline-confirmed-probe-annotations.json",
+      "bytes": 6254,
+      "sha256": "d25b1e7e3edad723f9079e7c1368b9857473456e389fe860ccfbbd3abd2a9baf",
+      "rawBytesPreserved": true
+    },
+    {
+      "path": "evidence/revision23/history/native-offline-4faa7a82/offline-confirmed-probe-run.html",
+      "bytes": 318498,
+      "sha256": "6d595abf60fb30daaa13b0f4188a6488638da7cf540596e0ba490cadb2473d6b",
+      "rawBytesPreserved": true
+    },
+    {
+      "path": "evidence/revision23/history/native-offline-4faa7a82/offline-events-probe-annotations.json",
+      "bytes": 6685,
+      "sha256": "ff1d0b9a8a4d09d46fc01e1d88a437258f9a026b9614a9968786746022417fd1",
+      "rawBytesPreserved": true
+    },
+    {
+      "path": "evidence/revision23/history/native-offline-4faa7a82/offline-events-probe-run.html",
+      "bytes": 321450,
+      "sha256": "86036b77b4bb9664cd09532315335cef8fc45cb2aee669e412781f860f9681dc",
+      "rawBytesPreserved": true
+    },
+    {
+      "path": "evidence/revision23/history/native-offline-4faa7a82/offline-helper-proposal-proof.json",
+      "bytes": 13521,
+      "sha256": "d15622eb484f7016ee0d4276d6e5daeeac6727807f4884360b50529157b00ad4",
+      "rawBytesPreserved": true
+    },
+    {
+      "path": "evidence/revision23/history/native-offline-4faa7a82/offline-helper-proposal.patch",
+      "bytes": 23401,
+      "sha256": "d5584020a1991340a36f78a068e39dce6f1fc02c1cdaa58f28eaebeda486f94b",
+      "rawBytesPreserved": true
+    },
+    {
+      "path": "evidence/revision23/history/native-offline-4faa7a82/offline-probe-annotations.json",
+      "bytes": 9167,
+      "sha256": "11dd17040cc7b34d20a1df141e1b732eeef9c62a18f8cfd3cbb1d7e558d405e2",
+      "rawBytesPreserved": true
+    },
+    {
+      "path": "evidence/revision23/history/native-offline-4faa7a82/offline-probe-run.html",
+      "bytes": 329460,
+      "sha256": "9c243012d5203e31808668229e6d827e0853815e7b7024c2c75b16e974ee0f1b",
+      "rawBytesPreserved": true
+    }
+  ]
+}

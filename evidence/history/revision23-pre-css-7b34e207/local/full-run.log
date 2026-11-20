@@ -1,0 +1,274 @@
+RUN priority_chain
+priority_chain PASS 
+RUN trigger_order
+trigger_order PASS 
+RUN damage_step
+damage_step PASS 
+RUN xyz_summon
+xyz_summon PASS 
+RUN pendulum_summon
+pendulum_summon PASS 
+RUN draw_sequences
+draw_sequences PASS 
+RUN data_review_r23
+data_review_r23 PASS 
+RUN release23_in_browser
+release23_in_browser FAIL ss_an_open_priority_chain PASS
+three_real_links_resolve_lifo_and_keep_the_negated_mechaba_cost_paid PASS
+real_synchro_orders_turn_player_mandatory_effects_before_other_groups PASS
+opponent_mandatory_group_gets_its_own_real_activation_choice PASS
+simultaneous_trigger_flow AssertionError: Missing rendered action TRIGGER_ORDER_DECLINE: {"effectId": "TRIGGER_CHIXIAO_SEARCH"}
+simultaneous_trigger_flow_completes FAIL
+xyz_summon_attaches_two_distinct_real_materials_without_sending_them_to_gy PASS
+corn_detaches_a_physical_cost_sends_the_target_and_inflicts_exactly_one_thousand PASS
+xyz_host_battle_departure_sends_remaining_material_to_its_physical_owner PASS
+xyz_history_import_reexecutes_attachment_detachment_and_host_cleanup PASS
+a_real_scale_effect_moves_the_same_pendulum_copy_to_faceup_extra_and_sets_from_deck PASS
+manual_pendulum_group_simultaneously_summons_hand_and_witnessed_faceup_extra_copies PASS
+a_second_pendulum_summon_is_not_offered_in_the_same_turn PASS
+pendulum_report_replays_the_real_extra_transition_and_single_group_budget PASS
+pendulum_candidates_without_legal_destinations_do_not_gain_fallback_zones PASS
+explicit_attack_consumes_its_budget_before_damage_and_blocks_atomic_attack_bypass PASS
+faith_stays_on_field_after_calculation_until_its_mandatory_activation PASS
+six_visible_damage_stages_finish_after_registered_negation_and_physical_cleanup PASS
+busy_import_cannot_steal_analysis_ownership_or_enable_live_mutations PASS
+cancelled_draw_tree_keeps_the_live_scenario_and_releases_its_controls PASS
+two_chronological_hypothetical_draw_events_keep_exact_probability_and_unknown_mass PASS
+probability_values_are_rendered_from_the_actual_summary_and_never_as_a_win_rate PASS
+draw_analysis_does_not_change_the_live_scenario_or_reveal_real_future_order PASS
+hypothetical_export_is_freshly_verified_separately_from_observed_replay PASS
+forged_probability_mass_is_rejected_without_replacing_the_valid_hypothesis_or_lab PASS
+review_ledger_records_a_note_without_resolving_identity_stats_or_migration PASS
+review_ledger_import_preserves_catalogue_and_active_deck PASS
+dated_format_context_round_trip_keeps_deck_and_official_verification_pending PASS
+manual_evidence_template_keeps_physical_and_assistive_claims_unexecuted PASS
+release23_tasks_raise_no_javascript_page_errors PASS
+release23_tasks_leave_the_compiled_artifact_unchanged PASS
+{"pass": false, "checks": 42, "failed": ["simultaneous_trigger_flow_completes"], "artifactMode": "DELIVERED_BYTES", "elapsedSeconds": 341.21}
+
+
+RUN accessibility_r23
+accessibility_r23 PASS 
+RUN release6_in_browser
+release6_in_browser PASS 
+RUN laboratory_usability
+laboratory_usability PASS 
+RUN local_file_delivery
+local_file_delivery FAIL {"pass": false, "complete": false, "browsers": [{"engine": "firefox", "status": "UNAVAILABLE"}]}
+
+Task was destroyed but it is pending!
+task: <Task cancelling name='Task-3' coro=<Connection.run.<locals>.init() running at /opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/playwright/_impl/_connection.py:344> wait_for=<Future finished result=None>>
+Future exception was never retrieved
+future: <Future finished exception=TargetClosedError('Target page, context or browser has been closed')>
+playwright._impl._errors.TargetClosedError: Target page, context or browser has been closed
+
+RUN registered_response_chains
+registered_response_chains PASS 
+RUN response_windows
+response_windows PASS 
+RUN new_card_effects
+new_card_effects PASS 
+RUN official_context_at_build
+official_context_at_build PASS 
+RUN search_horizons
+search_horizons PASS 
+RUN catalogue_expansion
+catalogue_expansion PASS 
+RUN draw_uncertainty
+draw_uncertainty PASS 
+RUN draw_continuation
+draw_continuation PASS 
+RUN data_quality
+data_quality PASS 
+RUN deck_identity_review
+deck_identity_review PASS 
+RUN monster_reborn
+monster_reborn PASS 
+RUN stardust_synchro
+stardust_synchro PASS 
+RUN azure_eyes
+azure_eyes FAIL den Extra return clears qualification and the same physical Azure can gain it through a new procedure",
+      "pass": true
+    },
+    {
+      "name": "Live unused Wolf excludes the unmodeled simultaneous mandatory/optional destination only",
+      "pass": true
+    },
+    {
+      "name": "QA-only spent Wolf state does not create an extra trigger and allows the linked destination",
+      "pass": true
+    },
+    {
+      "name": "Replay rejects forged qualification, protection duration, owner, origin and material costs",
+      "pass": true
+    },
+    {
+      "name": "Bounded search reaches a protected Azure only through an executed procedure and mandatory resolution",
+      "pass": true
+    },
+    {
+      "name": "Paid Shaman forbids the mandatory Extra-origin activation without preventing the genuine Azure Synchro",
+      "pass": true
+    },
+    {
+      "name": "The same paid Shaman lock permits mandatory Azure protection on an actual GY revival",
+      "pass": true
+    },
+    {
+      "name": "Effect negation answers mandatory Azure protection without treating it as a prohibited activation",
+      "pass": true
+    },
+    {
+      "name": "A Normal Dragon revived by Reborn in the same protection turn does not inherit the earlier snapshot",
+      "pass": true
+    },
+    {
+      "name": "A registered Standby revival observes one optional Wolf opportunity and preserves both usage budgets",
+      "pass": true
+    },
+    {
+      "name": "Standby revival excludes a rival Vanitys Fiend without spending its source, target or budget",
+      "pass": true
+    },
+    {
+      "name": "Standby revival excludes an unreviewed Black Garden Special Summon consequence without spending its source, target or budget",
+      "pass": true
+    },
+    {
+      "name": "Spirit cannot borrow either Azure or Spark through a rival Vanitys Fiend and never pays a fictitious tribute",
+      "pass": true
+    }
+  ],
+  "limitations": [
+    "Pinned catalogue and dated TCG snapshot are technical test inputs, not new official rulings.",
+    "Initial Main Deck fields and borrowed Spirit history are declared when explicitly noted; witnessed Azure qualification is created only by executed Synchro procedures.",
+    "Unknown material effects, level modifications, simultaneous trigger arrangements and general priority remain outside this registered subset.",
+    "Protection does not prevent battle damage, non-destruction removal or unknown rule interactions; competitive scoring remains provisional."
+  ]
+}
+
+
+RUN spirit_revival
+spirit_revival PASS 
+RUN wolf_revival
+wolf_revival PASS 
+RUN albaz_fusion
+albaz_fusion PASS 
+RUN multiple_attacks
+multiple_attacks PASS 
+RUN flip_effects
+flip_effects PASS 
+RUN unresolved_source_audit
+unresolved_source_audit PASS 
+RUN official_documents
+official_documents PASS 
+RUN duel_phases
+duel_phases PASS 
+RUN physical_responses
+physical_responses PASS 
+RUN expanded_archetypes
+expanded_archetypes PASS 
+RUN blue_eyes_duel
+blue_eyes_duel PASS 
+RUN blue_eyes_protection_and_gy
+blue_eyes_protection_and_gy PASS 
+RUN mechaba_spell_activations
+mechaba_spell_activations PASS 
+RUN mechaba_monster_zones
+mechaba_monster_zones PASS 
+RUN mechaba_quick_hand
+mechaba_quick_hand PASS 
+RUN field_spell_activations
+field_spell_activations FAIL      "name": "Replacing Sanctuary does not reset its globally shared reincarnation allowance",
+      "pass": true
+    },
+    {
+      "name": "Roar countering Mechaba restores the new Field Spell without restoring the old one",
+      "pass": true
+    },
+    {
+      "name": "Two opposing Roar counters restore Mechaba resolution in LIFO order while replacement remains paid by rule",
+      "pass": true
+    },
+    {
+      "name": "A Counter Trap countering the opposing root Roar restores Field Spell resolution",
+      "pass": true
+    },
+    {
+      "name": "An activation-negated Mechaba kept by Spark can activate again after the Field Spell packet",
+      "pass": false,
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ true\n- undefined\n\n    at /workspace/MODERN/tests/field_spell_activations.cjs:311:12\n    at test (/workspace/MODERN/tests/field_spell_activations.cjs:132:17)\n    at /workspace/MODERN/tests/field_spell_activations.cjs:305:9"
+    },
+    {
+      "name": "Field Spell effects already on the field are not mistaken for card activations",
+      "pass": true
+    },
+    {
+      "name": "Sanctuary is an admitted physical Spell hand cost for the registered Mechaba packet",
+      "pass": true
+    },
+    {
+      "name": "An unreviewed previous Field Spell blocks this registered replacement before mutation",
+      "pass": true
+    },
+    {
+      "name": "An unreviewed departure redirect is not silently applied to Field Zone replacement",
+      "pass": true
+    },
+    {
+      "name": "Forged actors, cost identity and Field Spell packet claims are rejected atomically",
+      "pass": true
+    },
+    {
+      "name": "Fresh replay rejects altered pre-cost origins, replacement descriptors, staging and response payments",
+      "pass": true
+    },
+    {
+      "name": "Bounded search discovers a physical Field Spell negation and verifies its replay",
+      "pass": true
+    }
+  ],
+  "limitations": [
+    "Only Mausoleum of White and Salamangreat Sanctuary card activations and reviewed previous Field Spells are registered.",
+    "Declared initial fields are physical assumptions, not certified preceding summon histories.",
+    "The QA_FIELD_EFFECT_ONLY provider is a marked test fixture for effect-versus-activation cleanup, not an implemented TCG card or product response.",
+    "Field Spell effect activations, arbitrary priority, Trap Card coverage and universal rulings remain outside this extension."
+  ]
+}
+
+
+RUN normal_trap_activations
+normal_trap_activations PASS 
+RUN compulsory_evacuation
+compulsory_evacuation PASS 
+RUN typed_field_goals
+typed_field_goals PASS 
+RUN goal_progress
+goal_progress PASS 
+RUN mechaba_official_references
+mechaba_official_references PASS 
+RUN card_action_coverage
+card_action_coverage PASS 
+RUN builtin_scenarios
+builtin_scenarios PASS 
+RUN expanded_examples_in_browser
+expanded_examples_in_browser PASS 
+RUN release8_in_browser
+release8_in_browser PASS 
+RUN release9_in_browser
+release9_in_browser PASS 
+RUN release10_in_browser
+release10_in_browser PASS 
+RUN release11_in_browser
+release11_in_browser PASS 
+RUN release12_in_browser
+release12_in_browser PASS 
+RUN release13_in_browser
+release13_in_browser PASS 
+RUN release14_in_browser
+release14_in_browser PASS 
+RUN release15_in_browser
+release15_in_browser PASS 
+RUN release16_in_browser
+release16_in_browser PASS 
+RUN release17_in_browser

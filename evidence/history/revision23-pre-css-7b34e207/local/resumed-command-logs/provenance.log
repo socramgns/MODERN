@@ -1,0 +1,75 @@
+{
+  "pass": true,
+  "total": 17,
+  "tests": [
+    {
+      "name": "All preserved unknown IDs are classified without inventing TCG identities",
+      "pass": true
+    },
+    {
+      "name": "Official-looking URLs alone never verify a card",
+      "pass": true
+    },
+    {
+      "name": "HTTPS authority checks reject lookalike hosts, credentials and unrelated Konami pages",
+      "pass": true
+    },
+    {
+      "name": "Document hash, current fields and exact witnesses bind a limited review",
+      "pass": true
+    },
+    {
+      "name": "Changed document bytes are rejected",
+      "pass": true
+    },
+    {
+      "name": "Printed field disagreements cannot modify catalogue data",
+      "pass": true
+    },
+    {
+      "name": "Witnesses must exist in document and identify the right field",
+      "pass": true
+    },
+    {
+      "name": "Real zero ATK is not accepted from a number merely containing zero",
+      "pass": true
+    },
+    {
+      "name": "A matching external transport receipt is still unauthenticated",
+      "pass": true
+    },
+    {
+      "name": "Secondary technical document review is not promoted to official",
+      "pass": true
+    },
+    {
+      "name": "Self-provided certification flags and future review dates are rejected",
+      "pass": true
+    },
+    {
+      "name": "Review/import/export preserves document evidence and explicitly provisional status",
+      "pass": true
+    },
+    {
+      "name": "Duplicate batches and invalid later rows do not change saved evidence",
+      "pass": true
+    },
+    {
+      "name": "Quota failures preserve the previous saved dataset",
+      "pass": true
+    },
+    {
+      "name": "Damaged stored documents fail re-audit and are preserved",
+      "pass": true
+    },
+    {
+      "name": "Catalogue hash changes invalidate review context without overwriting it",
+      "pass": true
+    },
+    {
+      "name": "Clearing stored evidence requires the explicit saved catalogue hash",
+      "pass": true
+    }
+  ]
+}
+

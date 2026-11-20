@@ -1,15 +1,15 @@
 {
-  "schema": "ygo-r22-public-ci-observation/v1",
-  "observedAt": "2026-11-14T05:13:25.652144+00:00",
-  "candidateCommit": "86b8f848635d1ac392625b6d9c1a6bb5674e5b04",
-  "runUrl": "https://github.com/socramgns/MODERN/actions/runs/43558962065",
+  "schema": "ygo-r23-public-ci-observation/v1",
+  "observedAt": "2026-11-20T07:00:02.302140+00:00",
+  "candidateCommit": "c9537266d03535c305cb8e882c09be1a81376669",
+  "runUrl": "https://github.com/socramgns/MODERN/actions/runs/44686493687",
   "transport": "PUBLIC_GITHUB_HTML",
   "apiUsed": false,
   "individualRemoteReportsDownloaded": false,
   "sourceRunnerGroupCountVerified": true,
   "requiredStepNames": [
     "Instalar dependencias Python de comprobación",
-    "Instalar dependencias del sistema para los tres motores",
+    "Verificar dependencias del sistema para los tres motores",
     "Preparar Chromium",
     "Preparar Firefox",
     "Preparar WebKit",
@@ -22,16 +22,19 @@
   "pass": true,
   "conclusion": "success",
   "sourceProof": {
-    "candidateCommit": "86b8f848635d1ac392625b6d9c1a6bb5674e5b04",
-    "runnerSha256": "2f863d29277ba6bee12384503433655c2cb76726f66d4e45257389fc759cad75",
-    "commandGroups": 77,
-    "additionalMandatoryGroups": [
-      "source_syntax",
-      "artifact_unchanged_during_tests"
-    ],
-    "totalGroups": 79,
-    "allGroupsMustPassForRunnerExitZero": true,
+    "candidateCommit": "c9537266d03535c305cb8e882c09be1a81376669",
+    "runnerSha256": "3b2f438c50836531180b8cfba4aeb183dc6921d974912f45e5466757defefa04",
+    "commandGroups": 86,
     "commandNames": [
+      "priority_chain",
+      "trigger_order",
+      "damage_step",
+      "xyz_summon",
+      "pendulum_summon",
+      "draw_sequences",
+      "data_review_r23",
+      "release23_in_browser",
+      "accessibility_r23",
       "release6_in_browser",
       "laboratory_usability",
       "local_file_delivery",
@@ -110,23 +113,292 @@
       "delivered_bytes_e2e",
       "context_in_browser"
     ],
-    "workflowSha256": "bae765f94710d8aad47e317f00c39eec9620cca2d985d4f4ff6f9ef67b1c46e6",
-    "workflowUnchangedFromPredecessor": true,
-    "sourceJavaScriptFiles": 124,
-    "revision": "2026.11-stable.22",
+    "additionalMandatoryGroups": [
+      "source_syntax",
+      "artifact_unchanged_during_tests"
+    ],
+    "totalGroups": 88,
+    "allGroupsMustPassForRunnerExitZero": true,
+    "previousCommandsPreserved": true,
+    "workflowSha256": "3a899c08477412da21b55e95bc0320245337544c673ad69010dfe9c7b3324270",
+    "workflowUnchangedFromBaseline": false,
+    "workflowOnlyTimeoutBudgetsExtended": false,
+    "workflowCommandsUnchanged": false,
+    "mandatoryGateCommandsUnchanged": true,
+    "setupStrategy": "PINNED_OFFICIAL_PLAYWRIGHT_IMAGE",
+    "runtimeDeclaredPinnedImage": "mcr.microsoft.com/playwright/python@sha256:aa81288e738725378becba5b3e06cb0f3a7f012a610e87e8d767a090ea3f740d",
+    "officialImageVerified": true,
+    "officialImageSmokeRequiredInCi": true,
+    "nativeOfflinePreflightRequiredInCi": true,
+    "nativeOfflinePreflightCommand": "python tests/browser_offline.py --probe --output tests/native-offline-preflight-results.json",
+    "nativeOfflinePreflightOutputArtifact": "tests/native-offline-preflight-results.json",
+    "workspaceGitOwnershipCheck": {
+      "workspaceSource": "GITHUB_WORKSPACE",
+      "mustEqualCurrentWorkingDirectory": true,
+      "gitMetadataRequired": true,
+      "safeDirectoryScope": "ONLY_THE_EXACT_WORKSPACE_PATH",
+      "globalWildcardTrustAllowed": false,
+      "gitTopLevelMustEqualWorkspace": true
+    },
+    "runtimeDirectoryOwnershipCheck": {
+      "path": "/github/home",
+      "nonSymlinkDirectoryRequired": true,
+      "targetOwner": "CURRENT_CONTAINER_UID_AND_GID",
+      "recursive": false,
+      "scope": "EPHEMERAL_GITHUB_RUNNER_MOUNT_ONLY",
+      "homeEnvironmentVariableChanged": false
+    },
+    "officialImageVerification": {
+      "scope": "STORED_OFFICIAL_REGISTRY_MANIFEST_AND_PINNED_WORKFLOW_DECLARATION",
+      "sourceUrl": "https://mcr.microsoft.com/v2/playwright/python/manifests/v1.62.0-noble",
+      "httpStatusAtCapture": 200,
+      "manifestSha256": "aa81288e738725378becba5b3e06cb0f3a7f012a610e87e8d767a090ea3f740d",
+      "manifestBytesRechecked": true,
+      "receiptPath": "/workspace/r23-validation/playwright-image-receipt.json",
+      "receiptSha256": "2236600f6ead8de462901d49d02ec064da2708095911c3574f99b4abdf56dcc7",
+      "manifestPath": "/workspace/r23-validation/playwright-image-manifest.json",
+      "registryRetrievalInThisObserver": false
+    },
+    "expectedWorkflowPath": "/workspace/r23-validation/verify-html-prebuilt.yml",
+    "expectedWorkflowSha256": "3a899c08477412da21b55e95bc0320245337544c673ad69010dfe9c7b3324270",
+    "workflowByteExactExpectedTemplate": true,
+    "requiredStepNames": [
+      "Instalar dependencias Python de comprobación",
+      "Verificar dependencias del sistema para los tres motores",
+      "Preparar Chromium",
+      "Preparar Firefox",
+      "Preparar WebKit",
+      "Registrar la ruta de Chromium para las pruebas existentes",
+      "Recuperar la fuente técnica fijada y comprobar idempotencia",
+      "Compilar y comparar el HTML publicado",
+      "Ejecutar pruebas del entregable",
+      "Exigir comprobación entre motores"
+    ],
+    "baselineCommit": "35ad8188207f6a47be47b6bc361a011cf01c948b",
+    "nativeOfflineHelperSha256": "d8505a6c1ddfb170acc7a6b7c4641723a6681e816d0ea0b283b2d166b59da2f3",
+    "nativeOfflineHelperExactSourceVerified": true,
+    "sourceJavaScriptFiles": 131,
+    "revision": "2026.11-stable.23",
     "currentCodeTestsWorkflowUnchanged": true,
-    "htmlSha256": "7ec0ed4d6bee8ef655445bc7831aa6f5ad9fd6db332722212abbc43d316c1b04",
-    "bytes": 7192465,
-    "buildId": "afe53b8932901869aae05b80e3605ca6cb18625ec7984e41484ce71bf212fa94"
+    "currentCriticalDifferences": [],
+    "currentUntrackedCriticalFiles": [],
+    "committedBuildInputsFingerprintVerified": true,
+    "htmlSha256": "017f4cd81211d2be486c6634e876254fe6dc2225e6419c02e459d69ea7022c9e",
+    "bytes": 7435430,
+    "buildId": "ad379fc6b8cddeaff64a1895a2eb97fed493b037a7e725a3bd9681a185d94a64",
+    "embeddedBuildManifest": {
+      "version": "Alpha 1263",
+      "revision": "2026.11-stable.23",
+      "canonicalId": "ygo-alpha-1263-canonical-release",
+      "moduleCount": 88,
+      "catalogCardCount": 21986,
+      "buildId": "ad379fc6b8cddeaff64a1895a2eb97fed493b037a7e725a3bd9681a185d94a64",
+      "catalogueSizePinsCompiled": 164,
+      "dataHashes": {
+        "cards": "cc265022039bba09fc31e8e3a48afb0030e5a81cab0c30c386843fcd75e1cba6"
+      },
+      "catalogSha256": "cc265022039bba09fc31e8e3a48afb0030e5a81cab0c30c386843fcd75e1cba6",
+      "dataVersion": "cc265022039bba09fc31e8e3a48afb0030e5a81cab0c30c386843fcd75e1cba6",
+      "scope": {
+        "primaryFormat": "TCG",
+        "ranking": "STRUCTURAL_PROVISIONAL",
+        "search": "DECLARED_BOUNDED_SCOPE",
+        "universalCertified": false
+      },
+      "officialContextVerification": {
+        "schema": "ygo-official-context-verification/v1",
+        "status": "DATED_TCG_RESTRICTION_TABLE_MATCH",
+        "pass": true,
+        "format": "tcg",
+        "effectiveDate": "2026-10-19",
+        "reviewedAt": "2026-10-26T23:35:20.067328+00:00",
+        "asOfDate": "2026-10-26",
+        "sourceUrl": "https://www.db.yugioh-card.com/yugiohdb/forbidden_limited.action?request_locale=en",
+        "documentPath": "src/data/official/tcg-2026-10-19.html",
+        "receiptPath": "src/data/official/tcg-2026-10-19-receipt.json",
+        "documentSha256": "3f6a5c8dbeca3007e98eb29dacbce8c66e4a11d1542a387fa3c573666e53ec9d",
+        "snapshotSha256": "930199011717285782cadb8b232341bb6446bac3f9afc21a3813a45fafff4f3c",
+        "embeddedTableSha256": "359e33e72b769b89049a8872352753885c1658a5599dd3d8313d6cd2b9a4d82e",
+        "normalizedRestrictionsSha256": "8e48282787baba3fba98638cb3006bd3bd4c4ac4616353b7f4dda3c1ebdab72b",
+        "tableEquivalent": true,
+        "restrictionCounts": {
+          "0": 156,
+          "1": 92,
+          "2": 7,
+          "3": 0
+        },
+        "restrictedNamesCompared": 255,
+        "extraction": "RECOGNIZED_NEURON_SECTIONS",
+        "transportAuthenticatedAtReview": true,
+        "scope": "DATED_TCG_RESTRICTION_NAMES_LIMITS_AND_DATE_ONLY",
+        "currentListProven": false,
+        "officialPoolVerified": false,
+        "officialRulingsVerified": false,
+        "officialPasscodesVerified": false,
+        "competitiveCertified": false,
+        "limitations": [
+          "A local source URL or external receipt does not authenticate document origin.",
+          "A complete-table assertion is supplied by the reviewer; PDF/text rows require exact witnesses.",
+          "Matching table names and limits do not authenticate passcodes, card availability, rulings or all formats.",
+          "A dated matching publication does not prove it is the latest effective list."
+        ],
+        "storedBytesRecheckedAtBuild": true,
+        "retrievalAuthenticatedInThisBuild": false
+      },
+      "ruleReferences": {
+        "schema": "ygo-mechaba-ruling-references/v1",
+        "reviewedAt": "2026-10-27T06:33:19.827134+00:00",
+        "technicalCardId": 75286621,
+        "officialCardCid": 12849,
+        "scope": "TCG_REFERENCE_NOT_TCG_RULING_CERTIFICATION",
+        "principle": "SAME_ACTIVATION_LOCATION_FOR_ASSOCIATED_BANISH",
+        "captureActivationLocationBeforeCosts": true,
+        "negationCanApplyAfterSourceChangesLocation": true,
+        "associatedBanishRequiresSourceAtItsActivationLocation": true,
+        "sourceLocationChangeIsNotUndone": true,
+        "references": [
+          {
+            "id": "mechaba-field-source-tributed-as-cost",
+            "faqId": 16041,
+            "officialCardCid": 12849,
+            "sourceUrl": "https://www.db.yugioh-card.com/yugiohdb/faq_search.action?ope=5&fid=16041&request_locale=ja",
+            "documentPath": "src/data/official/mechaba-faq-16041.html",
+            "metadataPath": "src/data/official/mechaba-faq-16041.metadata.json",
+            "rawSha256": "73787504a798bfef58bf8e821328809763f3b42b753ce40932063662d517a0a0",
+            "fieldSha256": {
+              "question_text": "59ce73e02a8fdf4b9481aa75b6e6b7a81417384f913a6d498f39ce22f09d7474",
+              "answer_text": "fab29216d235de9d61328da4e528da6029621ba1a47b748c052bc43f0e5e6aaa"
+            },
+            "formatAuthority": "OCG",
+            "language": "ja",
+            "scope": "TCG_REFERENCE_NOT_TCG_RULING_CERTIFICATION",
+            "quotes": [
+              {
+                "field": "answer_text",
+                "originalJapanese": "「ダイナレスラー・パンクラトプス」が自身をリリースして『②』の効果を発動し、これに対して「召喚獣メルカバー」の効果が発動した場合、「ダイナレスラー・パンクラトプス」の『②』の効果の発動は無効になりますが、フィールドで効果を発動し、フィールドに存在しなくなった「ダイナレスラー・パンクラトプス」が除外されることはありません。",
+                "originalTextSha256": "c5d5c6ac498bf52196cc9ba8a29b03dd873ab2228ff100c3ef674d1d502a3eff",
+                "explanatorySpanish": "Si Pankratops se tributa para activar su efecto, Mechaba niega esa activación, pero no destierra al monstruo que ya dejó el campo. Si Pankratops permanece en el campo, sí se aplica el destierro al resolver.",
+                "translationIsPrimaryEvidence": false
+              }
+            ],
+            "mechabaNamedInOriginalAnswer": true
+          },
+          {
+            "id": "mechaba-hand-source-sent-as-cost",
+            "faqId": 22388,
+            "officialCardCid": 12849,
+            "sourceUrl": "https://www.db.yugioh-card.com/yugiohdb/faq_search.action?ope=5&fid=22388&request_locale=ja",
+            "documentPath": "src/data/official/mechaba-faq-22388.html",
+            "metadataPath": "src/data/official/mechaba-faq-22388.metadata.json",
+            "rawSha256": "2d3144d9f406f49d62f72a121a0dc9d6fa72c4348340a22069a0ed4fb0ff3394",
+            "fieldSha256": {
+              "question_text": "ace89570b9d93c21c3d2a9a4a9cbb7d2d5734e9e3c67793807d69a17f66618b9",
+              "answer_text": "d0de06cd4df65f4ea575141a505e62433ddf330e9b82e856790945f7ac3e3ae9"
+            },
+            "formatAuthority": "OCG",
+            "language": "ja",
+            "scope": "TCG_REFERENCE_NOT_TCG_RULING_CERTIFICATION",
+            "quotes": [
+              {
+                "field": "answer_text",
+                "originalJapanese": "「増殖するG」の効果の発動は無効になりますが、効果を発動したところに存在しなくなった（手札で効果を発動しコストとして墓地に送られた）「増殖するG」は除外されずに墓地に残ります。",
+                "originalTextSha256": "ae3b4fffdd7edcc550e4daa52a440fd70caef2087a0c7f2197b8b89b3df128af",
+                "explanatorySpanish": "La activación de Maxx \"C\" se niega, pero la copia enviada de la mano al Cementerio como coste permanece en el Cementerio. La respuesta enumera expresamente a Mechaba entre las cartas con el mismo tratamiento.",
+                "translationIsPrimaryEvidence": false
+              }
+            ],
+            "mechabaNamedInOriginalAnswer": true
+          },
+          {
+            "id": "mechaba-activation-location-general-principle",
+            "faqId": 23949,
+            "officialCardCid": 12849,
+            "sourceUrl": "https://www.db.yugioh-card.com/yugiohdb/faq_search.action?ope=5&fid=23949&request_locale=ja",
+            "documentPath": "src/data/official/mechaba-faq-23949.html",
+            "metadataPath": "src/data/official/mechaba-faq-23949.metadata.json",
+            "rawSha256": "2dade63f26e749b48b573112cca9b887cb71f6a6c9bb60e3a0f3e00dfcd09096",
+            "fieldSha256": {
+              "question_text": "c3cd5e5c30f2b32dccbf0241ce63789c7b3e8cc0a30ca9d5c1fb3b5c675a09f6",
+              "answer_text": "50c3f20ad19c67526802d7ebdecda057cffeb361df70174db5aa6d063bb776c1"
+            },
+            "formatAuthority": "OCG",
+            "language": "ja",
+            "scope": "TCG_REFERENCE_NOT_TCG_RULING_CERTIFICATION",
+            "quotes": [
+              {
+                "field": "answer_text",
+                "originalJapanese": "以下の効果についても同様に、直前のチェーンブロックで効果を発動したモンスターが効果を発動した場所に存在しない場合、破壊する処理や除外する処理は行いません。",
+                "originalTextSha256": "522f10911dfd4c2640cb7a3e81d5678296aabf0ecef1a6b8c06bbf0816a141c3",
+                "explanatorySpanish": "La respuesta general incluye a Mechaba: cuando el monstruo ya no está en el lugar donde activó su efecto, no se aplica la destrucción o el destierro asociado. La negación de la activación o del efecto sigue aplicándose según la carta.",
+                "translationIsPrimaryEvidence": false
+              }
+            ],
+            "mechabaNamedInOriginalAnswer": true
+          }
+        ],
+        "extraction": "HTMLParser entity decoding; BR to LF; surrounding indentation stripped per line; no lexical substitution.",
+        "officialTcgRulingCertified": false,
+        "officialPoolVerified": false,
+        "competitiveCertified": false,
+        "universalCertified": false,
+        "savedReceiptAuthenticatesOriginInLaterRuns": false,
+        "limitations": [
+          "The primary evidence is Japanese official OCG FAQ text; explanatory Spanish translations are separate review notes.",
+          "This is a scoped reference for registered TCG transitions, not a claim that every OCG ruling or card implementation is TCG-certified.",
+          "Identity changes, leaving and returning, replacement copies, arbitrary chains and global banish-prevention effects need their own modeled rules.",
+          "A stored HTTPS URL and receipt do not authenticate the origin of a newly supplied local document.",
+          "Mechaba cannot use this reference to negate Spell/Trap effects that are not Spell/Trap Card activations."
+        ],
+        "storedBytesRechecked": true,
+        "verifiedReferenceCount": 3,
+        "sourceAuthenticatedInThisRun": false,
+        "storedBytesRecheckedAtBuild": true,
+        "retrievalAuthenticatedInThisBuild": false
+      }
+    }
   },
+  "officialImageVerified": true,
+  "runtimeDeclaredPinnedImage": "mcr.microsoft.com/playwright/python@sha256:aa81288e738725378becba5b3e06cb0f3a7f012a610e87e8d767a090ea3f740d",
   "run": {
-    "url": "https://github.com/socramgns/MODERN/actions/runs/43558962065",
+    "url": "https://github.com/socramgns/MODERN/actions/runs/44686493687",
     "httpStatus": 200,
-    "resolvedUrl": "https://github.com/socramgns/MODERN/actions/runs/43558962065",
-    "path": "/workspace/r22-validation/remote-ci/86b8f848635d1ac392625b6d9c1a6bb5674e5b04-run-43558962065.html",
-    "sha256": "e5cac09370967ef2e528e6d5b10b36595395a007f03367f474bd1439743984d9",
-    "bytes": 157901
+    "resolvedUrl": "https://github.com/socramgns/MODERN/actions/runs/44686493687",
+    "path": "/workspace/r23-validation/remote-ci/c9537266d03535c305cb8e882c09be1a81376669-run-44686493687.html",
+    "sha256": "67212fd62a995e1912db4ed0401d4e7113cacde80f4999aa68726367eacd9ae4",
+    "bytes": 169916
   },
+  "compactCiResult": {
+    "requiredForAcceptance": true,
+    "observed": true,
+    "pass": true,
+    "bindingVerified": true,
+    "scope": "COMPACT_ANNOTATION_DERIVED_FROM_VALIDATION_REPORT_NOT_INDIVIDUAL_RAW_TEST_ROWS",
+    "fullRawReportDownloaded": false,
+    "upstreamRawReportHashRecomputed": false,
+    "issues": [],
+    "annotationHref": "/socramgns/MODERN/actions/runs/44686493687/job/136121951026#step:16:39",
+    "bodyCharacters": 426,
+    "compactPayloadText": "{\"schema\":\"ygo-ci-result-summary/v1\",\"pass\":true,\"buildId\":\"ad379fc6b8cddeaff64a1895a2eb97fed493b037a7e725a3bd9681a185d94a64\",\"htmlSha256\":\"017f4cd81211d2be486c6634e876254fe6dc2225e6419c02e459d69ea7022c9e\",\"groups\":88,\"failed\":[],\"buildBindingMatches\":true,\"rawReportSha256\":\"328a88a4a9f3b4787da990c5c18c4a2860f5c91e61358e85e578b1d6cdec521f\",\"sourceCommit\":\"c9537266d03535c305cb8e882c09be1a81376669\",\"sourceRun\":\"44686493687\"}",
+    "compactPayloadSha256": "b7ac39849db23d9b18f5b1c2aa37a4fc24f2b18632af3956b6bc523c36558ee7",
+    "payload": {
+      "schema": "ygo-ci-result-summary/v1",
+      "pass": true,
+      "buildId": "ad379fc6b8cddeaff64a1895a2eb97fed493b037a7e725a3bd9681a185d94a64",
+      "htmlSha256": "017f4cd81211d2be486c6634e876254fe6dc2225e6419c02e459d69ea7022c9e",
+      "groups": 88,
+      "failed": [],
+      "buildBindingMatches": true,
+      "rawReportSha256": "328a88a4a9f3b4787da990c5c18c4a2860f5c91e61358e85e578b1d6cdec521f",
+      "sourceCommit": "c9537266d03535c305cb8e882c09be1a81376669",
+      "sourceRun": "44686493687"
+    },
+    "reportedPass": true,
+    "upstreamRawReportSha256": "328a88a4a9f3b4787da990c5c18c4a2860f5c91e61358e85e578b1d6cdec521f",
+    "compactSummaryPath": "/workspace/r23-validation/remote-ci/c9537266d03535c305cb8e882c09be1a81376669-run-44686493687-ci-result-summary.json",
+    "compactSummaryFileSha256": "b7ac39849db23d9b18f5b1c2aa37a4fc24f2b18632af3956b6bc523c36558ee7"
+  },
+  "compactCiResultObserved": true,
+  "compactCiResultVerified": true,
   "commitFoundInRun": true,
   "visibleStatus": [
     "Success"
@@ -134,98 +406,104 @@
   "runSuccess": true,
   "jobs": [
     {
-      "url": "https://github.com/socramgns/MODERN/actions/runs/43558962065/job/132338118949",
+      "url": "https://github.com/socramgns/MODERN/actions/runs/44686493687/job/136121951026",
       "httpStatus": 200,
-      "resolvedUrl": "https://github.com/socramgns/MODERN/actions/runs/43558962065/job/132338118949",
-      "path": "/workspace/r22-validation/remote-ci/86b8f848635d1ac392625b6d9c1a6bb5674e5b04-job-132338118949.html",
-      "sha256": "6ae0cdaa962c007da0c99a9e5f9ebd2a7ab338ca1a8efd1c50ba0628e43e0d26",
-      "bytes": 165967,
+      "resolvedUrl": "https://github.com/socramgns/MODERN/actions/runs/44686493687/job/136121951026",
+      "path": "/workspace/r23-validation/remote-ci/c9537266d03535c305cb8e882c09be1a81376669-job-136121951026.html",
+      "sha256": "0809c8af3177f6d79412078d68fc5a44b31059b2b3434375dcb11d70e7532557",
+      "bytes": 178435,
       "requiredStepsVerified": true,
+      "officialImageSmokeVerifiedInCi": true,
+      "workspaceGitRuntimeVerifiedInCi": true,
       "requiredSteps": [
         {
           "data-name": "Instalar dependencias Python de comprobación",
           "data-conclusion": "success",
-          "data-log-url": "/socramgns/MODERN/commit/86b8f848635d1ac392625b6d9c1a6bb5674e5b04/checks/132338118949/logs/5",
-          "data-started-at": "2026-11-14T04:55:01Z",
-          "data-completed-at": "2026-11-14T04:55:04Z",
+          "data-log-url": "/socramgns/MODERN/commit/c9537266d03535c305cb8e882c09be1a81376669/checks/136121951026/logs/6",
+          "data-started-at": "2026-11-20T06:15:51Z",
+          "data-completed-at": "2026-11-20T06:15:55Z",
           "data-job-completed": null
         },
         {
-          "data-name": "Instalar dependencias del sistema para los tres motores",
+          "data-name": "Verificar dependencias del sistema para los tres motores",
           "data-conclusion": "success",
-          "data-log-url": "/socramgns/MODERN/commit/86b8f848635d1ac392625b6d9c1a6bb5674e5b04/checks/132338118949/logs/7",
-          "data-started-at": "2026-11-14T04:55:04Z",
-          "data-completed-at": "2026-11-14T04:55:39Z",
+          "data-log-url": "/socramgns/MODERN/commit/c9537266d03535c305cb8e882c09be1a81376669/checks/136121951026/logs/7",
+          "data-started-at": "2026-11-20T06:15:55Z",
+          "data-completed-at": "2026-11-20T06:15:59Z",
           "data-job-completed": null
         },
         {
           "data-name": "Preparar Chromium",
           "data-conclusion": "success",
-          "data-log-url": "/socramgns/MODERN/commit/86b8f848635d1ac392625b6d9c1a6bb5674e5b04/checks/132338118949/logs/8",
-          "data-started-at": "2026-11-14T04:55:39Z",
-          "data-completed-at": "2026-11-14T04:55:47Z",
+          "data-log-url": "/socramgns/MODERN/commit/c9537266d03535c305cb8e882c09be1a81376669/checks/136121951026/logs/8",
+          "data-started-at": "2026-11-20T06:15:59Z",
+          "data-completed-at": "2026-11-20T06:15:59Z",
           "data-job-completed": null
         },
         {
           "data-name": "Preparar Firefox",
           "data-conclusion": "success",
-          "data-log-url": "/socramgns/MODERN/commit/86b8f848635d1ac392625b6d9c1a6bb5674e5b04/checks/132338118949/logs/9",
-          "data-started-at": "2026-11-14T04:55:47Z",
-          "data-completed-at": "2026-11-14T04:55:50Z",
+          "data-log-url": "/socramgns/MODERN/commit/c9537266d03535c305cb8e882c09be1a81376669/checks/136121951026/logs/9",
+          "data-started-at": "2026-11-20T06:15:59Z",
+          "data-completed-at": "2026-11-20T06:16:00Z",
           "data-job-completed": null
         },
         {
           "data-name": "Preparar WebKit",
           "data-conclusion": "success",
-          "data-log-url": "/socramgns/MODERN/commit/86b8f848635d1ac392625b6d9c1a6bb5674e5b04/checks/132338118949/logs/10",
-          "data-started-at": "2026-11-14T04:55:50Z",
-          "data-completed-at": "2026-11-14T04:55:54Z",
+          "data-log-url": "/socramgns/MODERN/commit/c9537266d03535c305cb8e882c09be1a81376669/checks/136121951026/logs/10",
+          "data-started-at": "2026-11-20T06:16:00Z",
+          "data-completed-at": "2026-11-20T06:16:00Z",
           "data-job-completed": null
         },
         {
           "data-name": "Registrar la ruta de Chromium para las pruebas existentes",
           "data-conclusion": "success",
-          "data-log-url": "/socramgns/MODERN/commit/86b8f848635d1ac392625b6d9c1a6bb5674e5b04/checks/132338118949/logs/11",
-          "data-started-at": "2026-11-14T04:55:54Z",
-          "data-completed-at": "2026-11-14T04:55:55Z",
+          "data-log-url": "/socramgns/MODERN/commit/c9537266d03535c305cb8e882c09be1a81376669/checks/136121951026/logs/11",
+          "data-started-at": "2026-11-20T06:16:00Z",
+          "data-completed-at": "2026-11-20T06:16:02Z",
           "data-job-completed": null
         },
         {
           "data-name": "Recuperar la fuente técnica fijada y comprobar idempotencia",
           "data-conclusion": "success",
-          "data-log-url": "/socramgns/MODERN/commit/86b8f848635d1ac392625b6d9c1a6bb5674e5b04/checks/132338118949/logs/12",
-          "data-started-at": "2026-11-14T04:55:55Z",
-          "data-completed-at": "2026-11-14T04:55:57Z",
+          "data-log-url": "/socramgns/MODERN/commit/c9537266d03535c305cb8e882c09be1a81376669/checks/136121951026/logs/12",
+          "data-started-at": "2026-11-20T06:16:02Z",
+          "data-completed-at": "2026-11-20T06:16:05Z",
           "data-job-completed": null
         },
         {
           "data-name": "Compilar y comparar el HTML publicado",
           "data-conclusion": "success",
-          "data-log-url": "/socramgns/MODERN/commit/86b8f848635d1ac392625b6d9c1a6bb5674e5b04/checks/132338118949/logs/13",
-          "data-started-at": "2026-11-14T04:55:57Z",
-          "data-completed-at": "2026-11-14T04:55:58Z",
+          "data-log-url": "/socramgns/MODERN/commit/c9537266d03535c305cb8e882c09be1a81376669/checks/136121951026/logs/13",
+          "data-started-at": "2026-11-20T06:16:05Z",
+          "data-completed-at": "2026-11-20T06:16:07Z",
           "data-job-completed": null
         },
         {
           "data-name": "Ejecutar pruebas del entregable",
           "data-conclusion": "success",
-          "data-log-url": "/socramgns/MODERN/commit/86b8f848635d1ac392625b6d9c1a6bb5674e5b04/checks/132338118949/logs/14",
-          "data-started-at": "2026-11-14T04:55:58Z",
-          "data-completed-at": "2026-11-14T05:11:30Z",
+          "data-log-url": "/socramgns/MODERN/commit/c9537266d03535c305cb8e882c09be1a81376669/checks/136121951026/logs/14",
+          "data-started-at": "2026-11-20T06:16:07Z",
+          "data-completed-at": "2026-11-20T06:58:00Z",
           "data-job-completed": null
         },
         {
           "data-name": "Exigir comprobación entre motores",
           "data-conclusion": "success",
-          "data-log-url": "/socramgns/MODERN/commit/86b8f848635d1ac392625b6d9c1a6bb5674e5b04/checks/132338118949/logs/15",
-          "data-started-at": "2026-11-14T05:11:30Z",
-          "data-completed-at": "2026-11-14T05:12:35Z",
+          "data-log-url": "/socramgns/MODERN/commit/c9537266d03535c305cb8e882c09be1a81376669/checks/136121951026/logs/15",
+          "data-started-at": "2026-11-20T06:58:00Z",
+          "data-completed-at": "2026-11-20T06:59:54Z",
           "data-job-completed": null
         }
       ],
       "allStepStates": [
         {
           "name": "Set up job",
+          "conclusion": "success"
+        },
+        {
+          "name": "Initialize containers",
           "conclusion": "success"
         },
         {
@@ -245,11 +523,7 @@
           "conclusion": "success"
         },
         {
-          "name": "Recuperar la caché de navegadores Playwright",
-          "conclusion": "success"
-        },
-        {
-          "name": "Instalar dependencias del sistema para los tres motores",
+          "name": "Verificar dependencias del sistema para los tres motores",
           "conclusion": "success"
         },
         {
@@ -285,11 +559,11 @@
           "conclusion": "success"
         },
         {
-          "name": "Guardar los informes",
+          "name": "Publicar el resultado vinculado de CI",
           "conclusion": "success"
         },
         {
-          "name": "Post Recuperar la caché de navegadores Playwright",
+          "name": "Guardar los informes",
           "conclusion": "success"
         },
         {
@@ -305,10 +579,17 @@
           "conclusion": "success"
         },
         {
+          "name": "Stop containers",
+          "conclusion": "success"
+        },
+        {
           "name": "Complete job",
           "conclusion": "success"
         }
       ]
     }
-  ]
+  ],
+  "officialImageSmokeVerifiedInCi": true,
+  "workspaceGitRuntimeVerifiedInCi": true,
+  "nativeOfflinePreflightVerifiedInCi": true
 }

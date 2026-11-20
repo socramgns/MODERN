@@ -1,0 +1,71 @@
+{
+  "schema": "ygo-runtime-preparation-history-index/v1",
+  "sourceRecord": "evidence/revision23/history/setup-attempts/runtime-preparation-history.json",
+  "sourceRecordSha256": "c519462a260d72be872dc0586aa0adcae675abe35f3ea20318487a3d20f2560a",
+  "sourceRecordBytePreserved": true,
+  "scope": "FAILED_SETUP_ATTEMPTS_ARE_NOT_APPLICATION_TEST_FAILURES_OR_SUCCESSES",
+  "acceptedCandidateCommit": "c9537266d03535c305cb8e882c09be1a81376669",
+  "captures": [
+    {
+      "candidateCommit": "b66d46774e4c611b6eeed6563cb602af33234635",
+      "runUrl": "https://github.com/socramgns/MODERN/actions/runs/44439164931",
+      "observedPath": "/workspace/r23-validation/remote-ci/b66d46774e4c611b6eeed6563cb602af33234635-run-44439164931.html",
+      "expectedSha256": "94ecb02ac44f6f68ab12a00d22726c15199ee7899409e2b5cb49e8a06ae76d8f",
+      "availableAndHashMatched": true,
+      "applicationTestsExecuted": false,
+      "storedPath": "evidence/revision23/history/setup-attempts/b66d4677/b66d46774e4c611b6eeed6563cb602af33234635-run-44439164931.html",
+      "bytes": 159388,
+      "sha256": "94ecb02ac44f6f68ab12a00d22726c15199ee7899409e2b5cb49e8a06ae76d8f",
+      "rawBytesPreserved": true
+    },
+    {
+      "candidateCommit": "074cb9b4c8c34ab4dd06afa971db7ab4159a3508",
+      "runUrl": "https://github.com/socramgns/MODERN/actions/runs/44439454848",
+      "observedPath": "/workspace/r23-validation/current-ci-run.html",
+      "expectedSha256": "e67f14b47ddd5a429af3cec6cd009d9fabc4bef30fe6145a8718c4f3d9a1122d",
+      "availableAndHashMatched": true,
+      "applicationTestsExecuted": false,
+      "storedPath": "evidence/revision23/history/setup-attempts/074cb9b4/current-ci-run.html",
+      "bytes": 159216,
+      "sha256": "e67f14b47ddd5a429af3cec6cd009d9fabc4bef30fe6145a8718c4f3d9a1122d",
+      "rawBytesPreserved": true
+    },
+    {
+      "candidateCommit": "e2160a5bf0c259d425f756647a2a55c93c968e59",
+      "runUrl": "https://github.com/socramgns/MODERN/actions/runs/44439668757",
+      "observedPath": "/workspace/r23-validation/smoke-diagnostic-run.html",
+      "expectedSha256": "0ac682c3985792a4de8ef45f1b487b25e553a8332ea1603391482827feaac3ff",
+      "availableAndHashMatched": true,
+      "applicationTestsExecuted": false,
+      "storedPath": "evidence/revision23/history/setup-attempts/e2160a5b/smoke-diagnostic-run.html",
+      "bytes": 166764,
+      "sha256": "0ac682c3985792a4de8ef45f1b487b25e553a8332ea1603391482827feaac3ff",
+      "rawBytesPreserved": true
+    },
+    {
+      "candidateCommit": "54a3edf8213554da21b11c9148fb12c45782b1b6",
+      "runUrl": "https://github.com/socramgns/MODERN/actions/runs/44439919797",
+      "observedPath": "/workspace/r23-validation/current-runtime-run.html",
+      "expectedSha256": "71cab9258ceb7c56ce3df718c4553f26464b33b62b9b1754b8fd430d6b4d9c76",
+      "availableAndHashMatched": true,
+      "applicationTestsExecuted": false,
+      "storedPath": "evidence/revision23/history/setup-attempts/54a3edf8/current-runtime-run.html",
+      "bytes": 165026,
+      "sha256": "71cab9258ceb7c56ce3df718c4553f26464b33b62b9b1754b8fd430d6b4d9c76",
+      "rawBytesPreserved": true
+    },
+    {
+      "candidateCommit": "54a3edf8213554da21b11c9148fb12c45782b1b6",
+      "runUrl": "https://github.com/socramgns/MODERN/actions/runs/44439919797",
+      "observedPath": "/workspace/r23-validation/current-runtime-job.html",
+      "expectedSha256": "0322e66453c4793fcbe36b7bbd84f5db77d0aaef094dc4b0ddc41872cfcdf7b3",
+      "availableAndHashMatched": true,
+      "applicationTestsExecuted": false,
+      "storedPath": "evidence/revision23/history/setup-attempts/54a3edf8/current-runtime-job.html",
+      "bytes": 178001,
+      "sha256": "0322e66453c4793fcbe36b7bbd84f5db77d0aaef094dc4b0ddc41872cfcdf7b3",
+      "rawBytesPreserved": true
+    }
+  ],
+  "meaning": "These original setup-attempt records are historical; application tests were not executed in those attempts."
+}

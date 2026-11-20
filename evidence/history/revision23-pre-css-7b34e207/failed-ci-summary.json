@@ -1,0 +1,22 @@
+{
+  "schema": "ygo-r23-pre-css-failed-ci-summary/v1",
+  "candidateCommit": "7b34e2075579771064a18d06d188dc018ba4e0b3",
+  "buildId": "bdaf08b1741d9615ab5c81ededfff5b9fd1eba110c0aa25db75fd4b11a44dabd",
+  "htmlSha256": "92cbd3384c3a1807fac9e52fc9abfcc4ecb3cbc21413678e57b2d713ba54cd1b",
+  "pass": false,
+  "configuredGroups": 88,
+  "passedGroupsInferred": 87,
+  "failedGroupsObserved": [
+    {
+      "name": "mobile_accessibility",
+      "pass": false,
+      "elapsedMs": 60146,
+      "log": "tests/mobile_accessibility.log"
+    }
+  ],
+  "sourceRunUrl": "https://github.com/socramgns/MODERN/actions/runs/44385656176",
+  "rawFullSummaryRecovered": false,
+  "diagnosticPage": "evidence/history/revision23-pre-css-7b34e207/diagnostic-corrected-run.html",
+  "diagnosticPageSha256": "023611a9cb72fe44f8962bab463e0290e102e4408c0f6baed646944f4b453bba",
+  "meaning": "Actual diagnostic failed-array plus versioned 88-group runner; not a reconstructed complete raw JSON."
+}

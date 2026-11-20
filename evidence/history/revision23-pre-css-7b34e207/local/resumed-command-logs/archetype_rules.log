@@ -1,0 +1,113 @@
+{
+  "schema": "ygo-archetype-addon-regression/v1",
+  "pass": true,
+  "total": 22,
+  "tests": [
+    {
+      "name": "Real Branded and Blue-Eyes diagnostic decks satisfy pinned construction snapshot",
+      "pass": true
+    },
+    {
+      "name": "Branded Fusion uses two distinct physical materials and creates Lubellion trigger",
+      "pass": true
+    },
+    {
+      "name": "Lubellion discard is a real consumed card and materials return to correct decks",
+      "pass": true
+    },
+    {
+      "name": "Fusion whole-turn lock and activation use remain after Branded Fusion leaves hand",
+      "pass": true
+    },
+    {
+      "name": "Ash negates Branded Fusion resolution without moving materials or refunding activation",
+      "pass": true
+    },
+    {
+      "name": "Ash has no window on Lubellion Fusion using field/GY/banished materials",
+      "pass": true
+    },
+    {
+      "name": "Branded Fusion refuses prior non-Fusion Extra summons in the same turn",
+      "pass": true
+    },
+    {
+      "name": "Branded goal-filtered search reaches Mirrorjade with fresh independent replay",
+      "pass": true
+    },
+    {
+      "name": "Sage Normal Summon searches an actual level-1 LIGHT Tuner except itself",
+      "pass": true
+    },
+    {
+      "name": "Sage becomes physical Link material and Spirit installs a live Dragon Special lock",
+      "pass": true
+    },
+    {
+      "name": "Spirit search consumes its HOPT and Mausoleum occupies the Field Zone",
+      "pass": true
+    },
+    {
+      "name": "Mausoleum provides one additional Normal Summon without a second original summon",
+      "pass": true
+    },
+    {
+      "name": "Mausoleum sends BEWD by effect and grants actual level-times-100 stats",
+      "pass": true
+    },
+    {
+      "name": "Spirit tributes its own physical copy as cost and then revives BEWD",
+      "pass": true
+    },
+    {
+      "name": "Blue-Eyes Spirit Dragon Synchro uses lv1 Tuner plus lv8 BEWD and stops in Main1",
+      "pass": true
+    },
+    {
+      "name": "The full Blue-Eyes transition log freshly replays from imported physical deck",
+      "pass": true
+    },
+    {
+      "name": "Search retains distinct Mausoleum stat modifications on different monsters",
+      "pass": true
+    },
+    {
+      "name": "Outcome identity retains real Fusion-only lock after its spell is in GY",
+      "pass": true
+    },
+    {
+      "name": "Ash negates Sage search and discards the actual opponent card",
+      "pass": true
+    },
+    {
+      "name": "Ash cannot answer Spirit tribute summon from hand/GY",
+      "pass": true
+    },
+    {
+      "name": "Ash on Mausoleum does not send the Normal Monster or grant its stats",
+      "pass": true
+    },
+    {
+      "name": "Blue-Eyes goal-filtered search returns a physical witnessed line",
+      "pass": true
+    }
+  ],
+  "searches": {
+    "branded": {
+      "expanded": 887,
+      "truncated": false,
+      "candidates": 5
+    },
+    "blueEyes": {
+      "expanded": 294,
+      "truncated": false,
+      "candidates": 1
+    }
+  },
+  "limitations": [
+    "Source-model tests with real identities and pinned application snapshot, not independent official certification.",
+    "Blue-Eyes stops in Main1; no automatic Ancients End Phase summon.",
+    "A bounded search does not establish optimality or competitive strength."
+  ]
+}
+

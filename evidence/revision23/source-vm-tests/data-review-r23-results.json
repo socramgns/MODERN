@@ -1,0 +1,127 @@
+{
+  "schema": "ygo-r23-data-review-tests/v1",
+  "pass": true,
+  "total": 30,
+  "tests": [
+    {
+      "name": "The ledger contains every distinct incident with original identities and zero resolved claims",
+      "pass": true
+    },
+    {
+      "name": "A complete untouched ledger verifies against the current catalogue and source hashes",
+      "pass": true
+    },
+    {
+      "name": "Recording a review note preserves every card, stat, deck quantity and classification",
+      "pass": true
+    },
+    {
+      "name": "A proposed candidate can be noted without applying its identity or statistics",
+      "pass": true
+    },
+    {
+      "name": "References remain unverified declarations and survive export and reimport",
+      "pass": true
+    },
+    {
+      "name": "Deleting and restoring notes is explicit and never changes the active deck",
+      "pass": true
+    },
+    {
+      "name": "Forged binding, source, count, name, statistics and official flags are rejected transactionally",
+      "pass": true
+    },
+    {
+      "name": "Missing, duplicated, invented, reordered and candidate-altered incident rows are rejected",
+      "pass": true
+    },
+    {
+      "name": "Invalid candidates, status/kind mismatches, short notes and invalid calendar dates do not alter decisions",
+      "pass": true
+    },
+    {
+      "name": "Imported reference URLs and authority claims cannot be promoted to verified sources",
+      "pass": true
+    },
+    {
+      "name": "Executable properties, reserved keys and excessive UTF-8 transport are rejected",
+      "pass": true
+    },
+    {
+      "name": "Exported ledger objects are detached snapshots",
+      "pass": true
+    },
+    {
+      "name": "Changing build metadata marks an old ledger stale rather than rebinding it",
+      "pass": true
+    },
+    {
+      "name": "Deck review coverage reports only incidents present and does not select candidates",
+      "pass": true
+    },
+    {
+      "name": "A versioned complete declared pool separates inclusion from absence",
+      "pass": true
+    },
+    {
+      "name": "Future pools stay unknown before their effective date, not eligible or forbidden",
+      "pass": true
+    },
+    {
+      "name": "A historical pool later than the selected date is rejected explicitly",
+      "pass": true
+    },
+    {
+      "name": "Wrong-format, duplicate, fractional and string passcodes invalidate a declared complete pool",
+      "pass": true
+    },
+    {
+      "name": "Pool uncertainty and a forbidden restriction row are reported independently",
+      "pass": true
+    },
+    {
+      "name": "Exclusion from a pool does not manufacture a banlist prohibition",
+      "pass": true
+    },
+    {
+      "name": "A future list and invalid as-of date keep restriction evidence undetermined",
+      "pass": true
+    },
+    {
+      "name": "Declaring no general list does not fabricate unlimited event restrictions",
+      "pass": true
+    },
+    {
+      "name": "A valid supplied context imports without changing cards and exports all source dates",
+      "pass": true
+    },
+    {
+      "name": "Context imports reject cross-format data, malformed snapshots and imported certifications atomically",
+      "pass": true
+    },
+    {
+      "name": "The review and provenance APIs never close external-evidence criteria or competitive calibration",
+      "pass": true
+    },
+    {
+      "name": "The saved 181-incident review baseline agrees with the live ledger and preserves every pending identity",
+      "pass": true
+    },
+    {
+      "name": "Blocked official transport is recorded as missing evidence rather than authenticated content",
+      "pass": true
+    },
+    {
+      "name": "Every advertised construction format retains explicit external-source requirements",
+      "pass": true
+    },
+    {
+      "name": "Invalid pool date context remains unknown rather than falling back silently to today",
+      "pass": true
+    },
+    {
+      "name": "Context import rejects malformed Extra and Skill declarations before replacing the context",
+      "pass": true
+    }
+  ]
+}

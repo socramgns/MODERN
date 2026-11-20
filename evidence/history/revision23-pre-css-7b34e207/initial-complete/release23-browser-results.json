@@ -1,0 +1,242 @@
+{
+  "schema": "ygo-release23-browser/v1",
+  "pass": false,
+  "buildId": "bdaf08b1741d9615ab5c81ededfff5b9fd1eba110c0aa25db75fd4b11a44dabd",
+  "htmlSha256": "92cbd3384c3a1807fac9e52fc9abfcc4ecb3cbc21413678e57b2d713ba54cd1b",
+  "artifactMode": "DELIVERED_BYTES",
+  "sourceInjection": false,
+  "checks": [
+    {
+      "name": "release23_boots_the_exact_delivered_document_offline",
+      "pass": true
+    },
+    {
+      "name": "twenty_eight_visible_examples_preserve_all_twenty_two_previous_identifiers",
+      "pass": true
+    },
+    {
+      "name": "registered_extended_rule_modules_and_manual_review_api_are_present",
+      "pass": true
+    },
+    {
+      "name": "new_examples_load_physical_unplayed_states_with_explicit_initial_assumptions",
+      "pass": true
+    },
+    {
+      "name": "lightweight_lab_snapshot_is_independent_and_does_not_claim_a_replay",
+      "pass": true
+    },
+    {
+      "name": "damage_mode_selection_enables_required_priority_and_trigger_modes_without_playing",
+      "pass": true
+    },
+    {
+      "name": "apply_rules_restarts_the_declared_scenario_and_preserves_the_opening",
+      "pass": true
+    },
+    {
+      "name": "priority_cost_is_paid_immediately_while_both_links_remain_unresolved",
+      "pass": true
+    },
+    {
+      "name": "priority_board_names_the_next_player_and_unsettled_goal_is_false",
+      "pass": true
+    },
+    {
+      "name": "undo_returns_the_same_paid_cost_only_by_reverting_its_activation",
+      "pass": true
+    },
+    {
+      "name": "pending_chain_import_reexecutes_the_actual_cost_and_restores_its_actor",
+      "pass": true
+    },
+    {
+      "name": "forged_chain_cost_import_is_rejected_without_replacing_the_lab",
+      "pass": true
+    },
+    {
+      "name": "atomic_legacy_effect_cannot_bypass_an_open_priority_chain",
+      "pass": true
+    },
+    {
+      "name": "three_real_links_resolve_lifo_and_keep_the_negated_mechaba_cost_paid",
+      "pass": true
+    },
+    {
+      "name": "real_synchro_orders_turn_player_mandatory_effects_before_other_groups",
+      "pass": true
+    },
+    {
+      "name": "opponent_mandatory_group_gets_its_own_real_activation_choice",
+      "pass": true
+    },
+    {
+      "name": "simultaneous_trigger_flow_completes",
+      "pass": false
+    },
+    {
+      "name": "xyz_summon_attaches_two_distinct_real_materials_without_sending_them_to_gy",
+      "pass": true
+    },
+    {
+      "name": "corn_detaches_a_physical_cost_sends_the_target_and_inflicts_exactly_one_thousand",
+      "pass": true
+    },
+    {
+      "name": "xyz_host_battle_departure_sends_remaining_material_to_its_physical_owner",
+      "pass": true
+    },
+    {
+      "name": "xyz_history_import_reexecutes_attachment_detachment_and_host_cleanup",
+      "pass": true
+    },
+    {
+      "name": "a_real_scale_effect_moves_the_same_pendulum_copy_to_faceup_extra_and_sets_from_deck",
+      "pass": true
+    },
+    {
+      "name": "manual_pendulum_group_simultaneously_summons_hand_and_witnessed_faceup_extra_copies",
+      "pass": true
+    },
+    {
+      "name": "a_second_pendulum_summon_is_not_offered_in_the_same_turn",
+      "pass": true
+    },
+    {
+      "name": "pendulum_report_replays_the_real_extra_transition_and_single_group_budget",
+      "pass": true
+    },
+    {
+      "name": "pendulum_candidates_without_legal_destinations_do_not_gain_fallback_zones",
+      "pass": true
+    },
+    {
+      "name": "explicit_attack_consumes_its_budget_before_damage_and_blocks_atomic_attack_bypass",
+      "pass": true
+    },
+    {
+      "name": "faith_stays_on_field_after_calculation_until_its_mandatory_activation",
+      "pass": true
+    },
+    {
+      "name": "six_visible_damage_stages_finish_after_registered_negation_and_physical_cleanup",
+      "pass": true
+    },
+    {
+      "name": "busy_import_cannot_steal_analysis_ownership_or_enable_live_mutations",
+      "pass": true
+    },
+    {
+      "name": "cancelled_draw_tree_keeps_the_live_scenario_and_releases_its_controls",
+      "pass": true
+    },
+    {
+      "name": "two_chronological_hypothetical_draw_events_keep_exact_probability_and_unknown_mass",
+      "pass": true
+    },
+    {
+      "name": "probability_values_are_rendered_from_the_actual_summary_and_never_as_a_win_rate",
+      "pass": true
+    },
+    {
+      "name": "draw_analysis_does_not_change_the_live_scenario_or_reveal_real_future_order",
+      "pass": true
+    },
+    {
+      "name": "hypothetical_export_is_freshly_verified_separately_from_observed_replay",
+      "pass": true
+    },
+    {
+      "name": "forged_probability_mass_is_rejected_without_replacing_the_valid_hypothesis_or_lab",
+      "pass": true
+    },
+    {
+      "name": "review_ledger_records_a_note_without_resolving_identity_stats_or_migration",
+      "pass": true
+    },
+    {
+      "name": "review_ledger_import_preserves_catalogue_and_active_deck",
+      "pass": true
+    },
+    {
+      "name": "dated_format_context_round_trip_keeps_deck_and_official_verification_pending",
+      "pass": true
+    },
+    {
+      "name": "manual_evidence_template_keeps_physical_and_assistive_claims_unexecuted",
+      "pass": true
+    },
+    {
+      "name": "release23_tasks_raise_no_javascript_page_errors",
+      "pass": true
+    },
+    {
+      "name": "release23_tasks_leave_the_compiled_artifact_unchanged",
+      "pass": true
+    }
+  ],
+  "details": {
+    "twenty_eight_visible_examples_preserve_all_twenty_two_previous_identifiers": [
+      "spark",
+      "spirit",
+      "invoked",
+      "swordsoul",
+      "branded",
+      "tenyi",
+      "salamangreat",
+      "roar",
+      "crow",
+      "droll",
+      "field",
+      "trap",
+      "evacuation",
+      "shuffle",
+      "reborn",
+      "synchro",
+      "azure",
+      "spirit-reborn",
+      "wolf-reborn",
+      "albaz",
+      "hayabusa",
+      "faith-flip",
+      "priority-chain",
+      "simultaneous-triggers",
+      "xyz-corn",
+      "pendulum-metalfoes",
+      "damage-step",
+      "draw-sequences"
+    ],
+    "simultaneous_trigger_flow_completes": "Missing rendered action TRIGGER_ORDER_DECLINE: {\"effectId\": \"TRIGGER_CHIXIAO_SEARCH\"}",
+    "busy_import_cannot_steal_analysis_ownership_or_enable_live_mutations": {
+      "fileDisabled": true,
+      "mutationsDisabled": true,
+      "importRejected": true,
+      "ownershipPreserved": true,
+      "stepRejected": true
+    },
+    "release23_tasks_raise_no_javascript_page_errors": []
+  },
+  "exports": [
+    "/workspace/MODERN/tests/release23-priority-paid-pending-export.json",
+    "/workspace/MODERN/tests/release23-priority-resolved-export.json",
+    "/workspace/MODERN/tests/release23-xyz-detached-cost-export.json",
+    "/workspace/MODERN/tests/release23-xyz-host-departure-export.json",
+    "/workspace/MODERN/tests/release23-pendulum-physical-group-export.json",
+    "/workspace/MODERN/tests/release23-damage-faith-pending-export.json",
+    "/workspace/MODERN/tests/release23-damage-mechaba-resolved-export.json",
+    "/workspace/MODERN/tests/release23-draw-sequences-export.json"
+  ],
+  "engine": "chromium",
+  "engineVersion": "154.0.8037.57",
+  "externalRequestsBlocked": 223,
+  "physicalDevicesTested": false,
+  "assistiveTechnologyTested": false,
+  "competitiveCertified": false,
+  "limitations": [
+    "Declared initial fields are assumptions; only subsequent rendered-control transitions are replay witnesses.",
+    "Probabilities are conditional hypothetical goal bounds under the declared action domain and information assumptions.",
+    "Viewport, browser automation and manual-report schema checks do not certify physical devices or real assistive technology.",
+    "Review notes and dated format contexts do not authenticate official identity, current availability or restrictions."
+  ],
+  "elapsedSeconds": 341.21
+}

@@ -1,0 +1,111 @@
+RUN priority_chain
+priority_chain PASS 
+RUN trigger_order
+trigger_order PASS 
+RUN damage_step
+damage_step PASS 
+RUN xyz_summon
+xyz_summon PASS 
+RUN pendulum_summon
+pendulum_summon PASS 
+RUN draw_sequences
+draw_sequences PASS 
+RUN data_review_r23
+data_review_r23 PASS 
+RUN release23_in_browser
+release23_in_browser FAIL release23_boots_the_exact_delivered_document_offline PASS
+twenty_eight_visible_examples_preserve_all_twenty_two_previous_identifiers PASS
+
+Traceback (most recent call last):
+  File "/workspace/MODERN/tests/release23_browser.py", line 604, in <module>
+    result = run(args.url, args.evidence_dir)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/MODERN/tests/release23_browser.py", line 228, in run
+    check('registered_extended_rule_modules_and_manual_review_api_are_present', page.evaluate('''()=>
+                                                                                ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/playwright/sync_api/_generated.py", line 9385, in evaluate
+    self._sync(
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/playwright/_impl/_sync_base.py", line 115, in _sync
+    return task.result()
+           ^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/playwright/_impl/_page.py", line 472, in evaluate
+    return await self._main_frame.evaluate(expression, arg)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/playwright/_impl/_frame.py", line 345, in evaluate
+    await self._channel.send(
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/playwright/_impl/_connection.py", line 76, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/playwright/_impl/_connection.py", line 632, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.Error: Page.evaluate: ReferenceError: YGOTriggerOrder is not defined
+    at eval (eval at evaluate (:311:30), <anonymous>:2:32)
+    at UtilityScript.evaluate (<anonymous>:318:18)
+    at UtilityScript.<anonymous> (<anonymous>:1:44)
+
+RUN accessibility_r23
+accessibility_r23 FAIL r23_accessibility_uses_manifest_bound_document_offline PASS
+automation_does_not_claim_screen_reader_physical_device_or_full_conformance PASS
+contrast_preference_works_from_keyboard_and_exposes_checked_state PASS
+preference_change_has_a_concise_polite_atomic_announcement PASS
+accessibility_preferences_are_saved_separately_from_deck_state PASS
+visible_registered_controls_have_names_and_valid_aria_references PASS
+disabled_undo_has_a_visible_explanation PASS
+disabled_reason_preserves_the_original_action_count_description PASS
+enabled_control_drops_only_its_owned_disabled_reason PASS
+high_contrast_opaque_control_text_meets_four_point_five_to_one PASS
+contrast_mode_keeps_a_visible_keyboard_focus_indicator PASS
+reduced_motion_preference_is_keyboard_operable PASS
+manual_template_is_build_bound_and_starts_without_executed_or_physical_claims PASS
+manual_validator_distinguishes_reporter_claims_from_agent_verification PASS
+manual_validator_rejects_wrong_binding_duplicate_flows_and_conflicting_claims PASS
+valid_unrun_manual_flow_is_never_counted_as_passed PASS
+malformed_or_oversized_manual_data_is_rejected_without_execution PASS
+manual_file_review_renders_uncertainty_and_preserves_the_live_deck PASS
+manual_file_with_another_build_is_rejected_without_replacing_the_lab PASS
+manual_and_preference_controls_fit_390_and_320_pixel_emulation_with_44px_targets PASS
+presentation_preferences_leave_real_registered_gameplay_and_replay_intact PASS
+undo_explanation_is_removed_when_a_real_step_enables_undo PASS
+accessibility_tasks_raise_no_javascript_page_errors FAIL
+accessibility_tasks_leave_the_compiled_html_unchanged PASS
+{"pass": false, "checks": 24, "artifactMode": "DELIVERED_BYTES", "failed": ["accessibility_tasks_raise_no_javascript_page_errors"]}
+
+
+RUN release6_in_browser
+release6_in_browser FAIL exact_delivered_bytes_boot_offline PASS
+single_roar_import_preserves_registered_provider_and_choice_policy PASS
+laboratory_exposes_physical_roar_variant_and_readable_label PASS
+gui_roar_negates_spark_destroys_actual_source_and_replays PASS
+comparison_includes_roar_with_its_same_valid_physical_start PASS
+comparison_excludes_unavailable_roar_set_this_turn PASS
+comparison_excludes_unavailable_roar_without_salamangreat_link PASS
+multiple_provider_import_keeps_order_and_context_in_custom_option PASS
+both_imported_providers_reach_laboratory_action_variants PASS
+individual_choice_and_return_to_imported_policy_are_lossless PASS
+unknown_or_missing_providers_are_rejected_before_replacing_scenario PASS
+no_uncaught_page_errors FAIL
+original_artifact_unchanged PASS
+{"pass": false, "checks": 13, "failed": ["no_uncaught_page_errors"], "seconds": 20.39}
+
+
+RUN laboratory_usability
+Traceback (most recent call last):
+  File "/workspace/MODERN/tests/run_all.py", line 42, in <module>
+    if __name__=='__main__':raise SystemExit(main())
+                                             ^^^^^^
+  File "/workspace/MODERN/tests/run_all.py", line 28, in main
+    try:result=subprocess.run(command,cwd=ROOT,capture_output=True,text=True,timeout=300)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/subprocess.py", line 550, in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/subprocess.py", line 1209, in communicate
+    stdout, stderr = self._communicate(input, endtime, timeout)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/subprocess.py", line 2115, in _communicate
+    ready = selector.select(timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/selectors.py", line 415, in select
+    fd_event_list = self._selector.poll(timeout)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

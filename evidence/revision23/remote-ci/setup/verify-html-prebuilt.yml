@@ -1,0 +1,174 @@
+name: Verificar HTML del analizador
+
+on:
+  workflow_dispatch:
+  push:
+    branches: ['entrega/analizador-yugioh-estable*']
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 75
+    container:
+      image: mcr.microsoft.com/playwright/python@sha256:aa81288e738725378becba5b3e06cb0f3a7f012a610e87e8d767a090ea3f740d
+      options: --shm-size=1g
+    defaults:
+      run:
+        shell: bash
+    env:
+      PIP_DISABLE_PIP_VERSION_CHECK: '1'
+      PLAYWRIGHT_BROWSERS_PATH: /ms-playwright
+      PLAYWRIGHT_DOWNLOAD_CONNECTION_TIMEOUT: '90000'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Instalar dependencias Python de comprobación
+        timeout-minutes: 4
+        run: |
+          python --version
+          python -m pip --version
+          python -m pip install --timeout 45 --retries 2 -r requirements-dev.txt
+          python -m playwright --version
+      # La imagen oficial fijada incorpora los tres navegadores y sus bibliotecas.
+      # El arranque real de cada motor es obligatorio antes de probar el HTML.
+      - name: Verificar dependencias del sistema para los tres motores
+        timeout-minutes: 3
+        run: |
+          python - <<'PY'
+          import importlib.metadata, json, os
+          from pathlib import Path
+          from playwright.sync_api import sync_playwright
+          assert importlib.metadata.version('playwright') == '1.62.0'
+          # GitHub monta este directorio efímero con el UID del runner anfitrión.
+          # Firefox exige que pertenezca al usuario real del contenedor.
+          runtime_directory = Path('/github/home')
+          assert runtime_directory.is_dir() and not runtime_directory.is_symlink()
+          if runtime_directory.stat().st_uid != os.getuid():
+              os.chown(runtime_directory, os.getuid(), os.getgid())
+          checks = []
+          with sync_playwright() as runtime:
+              for name in ['chromium', 'firefox', 'webkit']:
+                  try:
+                      engine = getattr(runtime, name)
+                      assert Path(engine.executable_path).is_file(), engine.executable_path
+                      browser = engine.launch(headless=True, args=['--no-sandbox'] if name == 'chromium' else [])
+                      try:
+                          page = browser.new_page()
+                          page.set_content('<!doctype html><title>R23 runtime check</title><p>Ready</p>')
+                          assert page.title() == 'R23 runtime check'
+                          checks.append({'engine': name, 'version': browser.version, 'title': page.title(), 'pass': True})
+                      finally:
+                          browser.close()
+                  except Exception as error:
+                      checks.append({'engine': name, 'pass': False, 'error': str(error)[-2400:]})
+          for check in checks:
+              text = json.dumps(check, ensure_ascii=False, separators=(',', ':'))
+              print('::warning title=R23_RUNTIME_CHECK::' + text.replace('%', '%25').replace('\r', '%0D').replace('\n', '%0A'))
+          assert len(checks) == 3 and all(check['pass'] for check in checks), 'One or more browser runtime checks failed'
+          PY
+      # Estas comprobaciones son idempotentes sobre los binarios de la imagen.
+      - name: Preparar Chromium
+        timeout-minutes: 5
+        run: python -m playwright install chromium
+      - name: Preparar Firefox
+        timeout-minutes: 5
+        run: python -m playwright install firefox
+      - name: Preparar WebKit
+        timeout-minutes: 5
+        run: python -m playwright install webkit
+      - name: Registrar la ruta de Chromium para las pruebas existentes
+        timeout-minutes: 1
+        run: |
+          python - <<'PY'
+          from playwright.sync_api import sync_playwright
+          from pathlib import Path
+          import json, os, subprocess
+          workspace_directory = Path(os.environ['GITHUB_WORKSPACE']).resolve()
+          assert workspace_directory == Path.cwd().resolve()
+          checks = {'gitMetadataPresent': (workspace_directory / '.git').exists()}
+          for name, command in [('version', ['git', '--version']), ('rootBefore', ['git', 'rev-parse', '--show-toplevel'])]:
+              result = subprocess.run(command, capture_output=True, text=True)
+              checks[name] = {'returncode': result.returncode, 'output': (result.stdout + result.stderr)[-1800:]}
+          if checks['gitMetadataPresent']:
+              # Solo se declara confiable el checkout solicitado de este trabajo.
+              subprocess.run(['git', 'config', '--global', '--add', 'safe.directory', str(workspace_directory)], check=True)
+          result = subprocess.run(['git', 'rev-parse', '--show-toplevel'], capture_output=True, text=True)
+          checks['rootAfter'] = {'returncode': result.returncode, 'output': (result.stdout + result.stderr)[-1800:]}
+          text = json.dumps(checks, ensure_ascii=False, separators=(',', ':'))
+          print('::warning title=R23_GIT_RUNTIME::' + text.replace('%', '%25').replace('\r', '%0D').replace('\n', '%0A'))
+          assert checks['gitMetadataPresent'] and result.returncode == 0
+          assert Path(result.stdout.strip()).resolve() == workspace_directory
+          with sync_playwright() as runtime:
+              Path('/tmp/ygo-chromium-path').write_text(runtime.chromium.executable_path)
+          PY
+          if [ ! -x /usr/bin/chromium ]; then
+            ln -s "$(cat /tmp/ygo-chromium-path)" /usr/bin/chromium
+          fi
+          python tests/browser_offline.py --probe --output tests/native-offline-preflight-results.json
+      - name: Recuperar la fuente técnica fijada y comprobar idempotencia
+        timeout-minutes: 4
+        run: |
+          python tools/update_catalog.py --commit ae5dedb957c2c48ab86554fee08a0fca73d8b1cf
+          git diff --exit-code -- src/data
+      - name: Compilar y comparar el HTML publicado
+        timeout-minutes: 3
+        run: |
+          python tools/build.py
+          cmp Analizador_YuGiOh.html dist/Calculadora_de_Barajas_YuGiOh_Alpha_1263_Corregida.html
+      - name: Ejecutar pruebas del entregable
+        timeout-minutes: 45
+        run: python tests/run_all.py --no-build
+      - name: Exigir comprobación entre motores
+        timeout-minutes: 5
+        run: python tests/compatibility_browser.py --require-cross-browser
+      - name: Publicar el resultado vinculado de CI
+        if: always()
+        timeout-minutes: 1
+        run: |
+          python - <<'PY'
+          import hashlib, html, json, os
+          from pathlib import Path
+          path = Path('dist/validation-summary.json')
+          build_path = Path('dist/build-manifest.json')
+          build = json.loads(build_path.read_text()) if build_path.is_file() else {}
+          if path.is_file():
+              raw = path.read_bytes()
+              report = json.loads(raw)
+              rows = report.get('suites', [])
+              failed = [row.get('name', 'UNNAMED_GROUP') for row in rows if row.get('pass') is not True]
+              binding_matches = (report.get('buildId') == build.get('buildId') and report.get('htmlSha256') == build.get('htmlSha256'))
+              result = {'schema': 'ygo-ci-result-summary/v1', 'pass': report.get('pass') is True and len(rows) == 88 and not failed and binding_matches,
+                        'buildId': report.get('buildId'), 'htmlSha256': report.get('htmlSha256'), 'groups': len(rows),
+                        'failed': failed, 'buildBindingMatches': binding_matches, 'rawReportSha256': hashlib.sha256(raw).hexdigest(),
+                        'sourceCommit': os.environ.get('GITHUB_SHA'), 'sourceRun': os.environ.get('GITHUB_RUN_ID')}
+          else:
+              result = {'schema': 'ygo-ci-result-summary/v1', 'pass': False, 'buildId': build.get('buildId'),
+                        'htmlSha256': build.get('htmlSha256'), 'groups': None, 'failed': [],
+                        'error': 'No se generó dist/validation-summary.json.', 'sourceCommit': os.environ.get('GITHUB_SHA'),
+                        'sourceRun': os.environ.get('GITHUB_RUN_ID')}
+          text = json.dumps(result, ensure_ascii=False, separators=(',', ':'))
+          print('::warning title=R23_CI_RESULT::' + text.replace('%', '%25').replace('\r', '%0D').replace('\n', '%0A'))
+          Path(os.environ['GITHUB_STEP_SUMMARY']).write_text('<h1>Resultado R23</h1><pre>' + html.escape(text) + '</pre>')
+          PY
+      - name: Guardar los informes
+        if: always()
+        timeout-minutes: 3
+        uses: actions/upload-artifact@v4
+        with:
+          name: pruebas-analizador-yugioh
+          path: |
+            dist/build-manifest.json
+            dist/validation-summary.json
+            dist/test-evidence.json
+            tests/*-results.json
+            tests/*.log
+          retention-days: 14

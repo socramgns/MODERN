@@ -1,0 +1,109 @@
+{
+  "schema": "ygo-recommendations-regression/v1",
+  "pass": true,
+  "total": 24,
+  "tests": [
+    {
+      "name": "PASS and forced Ash use the same full physical opening and fresh replay",
+      "pass": true
+    },
+    {
+      "name": "A real Ash discard is opponent cost, not an invented own discard",
+      "pass": true
+    },
+    {
+      "name": "A declared scenario policy must match its initial state",
+      "pass": true
+    },
+    {
+      "name": "A line policy cannot be relabeled when no initial state was supplied",
+      "pass": true
+    },
+    {
+      "name": "A changed physical opening is excluded from controlled comparison",
+      "pass": true
+    },
+    {
+      "name": "Known remaining deck order is part of the controlled physical baseline",
+      "pass": true
+    },
+    {
+      "name": "PASS with no opponent inventory cannot be compared with an Ash deck",
+      "pass": true
+    },
+    {
+      "name": "Changing the final state defeats a prior replay.pass flag",
+      "pass": true
+    },
+    {
+      "name": "A forged material payment cannot be promoted to recommendation evidence",
+      "pass": true
+    },
+    {
+      "name": "An unverified line cannot become evidence merely through a matching deck fingerprint",
+      "pass": true
+    },
+    {
+      "name": "Changed model build invalidates initial reconstruction and all stored lines",
+      "pass": true
+    },
+    {
+      "name": "Changing the restriction contents without changing its date invalidates evidence",
+      "pass": true
+    },
+    {
+      "name": "A complete bounded search with no goal line remains unknown, not a proven failure",
+      "pass": true
+    },
+    {
+      "name": "Truncated unknown scenarios retain their uncertainty and missing-evidence reason",
+      "pass": true
+    },
+    {
+      "name": "Choice branches cannot masquerade as constrained opponent resilience",
+      "pass": true
+    },
+    {
+      "name": "Two actual opening actions expose a hand-versus-ATK tradeoff on the partial Pareto front",
+      "pass": true
+    },
+    {
+      "name": "The same first action ending in different phases is not ranked as an equivalent domain",
+      "pass": true
+    },
+    {
+      "name": "An absent goal card is documented as a missing resource, not a fabricated deck recommendation",
+      "pass": true
+    },
+    {
+      "name": "Invalid scenario IDs, malformed policies and unsupported goal claims are rejected",
+      "pass": true
+    },
+    {
+      "name": "A mismatching declared fingerprint is rejected before recommending a move",
+      "pass": true
+    },
+    {
+      "name": "The same real five-card hand reaches its objective across PASS, Ash, Veiler and Impermanence",
+      "pass": true
+    },
+    {
+      "name": "Repeated identical traces do not manufacture independent observed outcomes",
+      "pass": true
+    },
+    {
+      "name": "Different openings mixed inside one scenario are excluded while valid evidence survives",
+      "pass": true
+    },
+    {
+      "name": "A forged declared initial state cannot be paired with an otherwise valid trace",
+      "pass": true
+    }
+  ],
+  "limitations": [
+    "Diagnostic physical fixtures are not competitive observations.",
+    "The supplied response policies and registered actions are not an adversarial optimum.",
+    "Search failure remains unknown outside a proven domain."
+  ]
+}
+

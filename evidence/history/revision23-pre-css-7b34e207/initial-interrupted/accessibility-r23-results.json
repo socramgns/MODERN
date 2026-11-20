@@ -1,0 +1,1067 @@
+{
+  "schema": "ygo-accessibility-r23/v1",
+  "pass": false,
+  "buildId": "b13061ca7ef684f805d4447ec8c7fa63d474b39dfcb110f7ce4d883d754d3733",
+  "htmlSha256": "0d3027512c1d7885bccd0591cc23d44722023436c8bd3555f2934b6f5c5bbcf3",
+  "artifactMode": "DELIVERED_BYTES",
+  "sourceInjection": false,
+  "checks": [
+    {
+      "name": "r23_accessibility_uses_manifest_bound_document_offline",
+      "pass": true
+    },
+    {
+      "name": "automation_does_not_claim_screen_reader_physical_device_or_full_conformance",
+      "pass": true
+    },
+    {
+      "name": "contrast_preference_works_from_keyboard_and_exposes_checked_state",
+      "pass": true
+    },
+    {
+      "name": "preference_change_has_a_concise_polite_atomic_announcement",
+      "pass": true
+    },
+    {
+      "name": "accessibility_preferences_are_saved_separately_from_deck_state",
+      "pass": true
+    },
+    {
+      "name": "visible_registered_controls_have_names_and_valid_aria_references",
+      "pass": true
+    },
+    {
+      "name": "disabled_undo_has_a_visible_explanation",
+      "pass": true
+    },
+    {
+      "name": "disabled_reason_preserves_the_original_action_count_description",
+      "pass": true
+    },
+    {
+      "name": "enabled_control_drops_only_its_owned_disabled_reason",
+      "pass": true
+    },
+    {
+      "name": "high_contrast_opaque_control_text_meets_four_point_five_to_one",
+      "pass": true
+    },
+    {
+      "name": "contrast_mode_keeps_a_visible_keyboard_focus_indicator",
+      "pass": true
+    },
+    {
+      "name": "reduced_motion_preference_is_keyboard_operable",
+      "pass": true
+    },
+    {
+      "name": "manual_template_is_build_bound_and_starts_without_executed_or_physical_claims",
+      "pass": true
+    },
+    {
+      "name": "manual_validator_distinguishes_reporter_claims_from_agent_verification",
+      "pass": true
+    },
+    {
+      "name": "manual_validator_rejects_wrong_binding_duplicate_flows_and_conflicting_claims",
+      "pass": true
+    },
+    {
+      "name": "valid_unrun_manual_flow_is_never_counted_as_passed",
+      "pass": true
+    },
+    {
+      "name": "malformed_or_oversized_manual_data_is_rejected_without_execution",
+      "pass": true
+    },
+    {
+      "name": "manual_file_review_renders_uncertainty_and_preserves_the_live_deck",
+      "pass": true
+    },
+    {
+      "name": "manual_file_with_another_build_is_rejected_without_replacing_the_lab",
+      "pass": true
+    },
+    {
+      "name": "manual_and_preference_controls_fit_390_and_320_pixel_emulation_with_44px_targets",
+      "pass": true
+    },
+    {
+      "name": "presentation_preferences_leave_real_registered_gameplay_and_replay_intact",
+      "pass": true
+    },
+    {
+      "name": "undo_explanation_is_removed_when_a_real_step_enables_undo",
+      "pass": true
+    },
+    {
+      "name": "accessibility_tasks_raise_no_javascript_page_errors",
+      "pass": false
+    },
+    {
+      "name": "accessibility_tasks_leave_the_compiled_html_unchanged",
+      "pass": true
+    }
+  ],
+  "details": {
+    "visible_registered_controls_have_names_and_valid_aria_references": {
+      "schema": "ygo-accessibility-structure-audit/v1",
+      "pass": true,
+      "controlsChecked": 149,
+      "issues": [],
+      "scope": "VISIBLE_REGISTERED_CONTROLS_NAMES_AND_REFERENCES",
+      "contrastAudited": false,
+      "assistiveTechnologyTested": false,
+      "physicalDevicesTested": false,
+      "completeAccessibilityCertified": false
+    },
+    "high_contrast_opaque_control_text_meets_four_point_five_to_one": {
+      "measured": [
+        {
+          "id": "ygoFormatFile",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "ygoFormatExportJson",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "ygoFormatExportYdk",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "ygoFormatZone",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "ygoFormatPasscode",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "ygoFormatQty",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "ygoFormatSetEntry",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "ygoFormatSave",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "ygoFormatLibrary",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "ygoFormatLoad",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "ygoFormatEvidenceFile",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "ygoFormatEvidenceExport",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "ygoFormatEvidenceReport",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "ygoCardCoverageFilter",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "ygoCardCoverageZone",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "ygoCardCoverageExport",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "ygoDataQualityFilter",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "ygoDataQualityKind",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "ygoDataQualityExport",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "ygoDataQualityRefresh",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "ygoDataQualityNext",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "ygoDataReviewIncident",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "ygoDataReviewStatus",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "ygoDataReviewCandidate",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "ygoDataReviewReviewer",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "ygoDataReviewNote",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "ygoDataReviewFile",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "ygoDataReviewSave",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "ygoDataReviewClear",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "ygoDataReviewExport",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "ygoDeckIdentityRefresh",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "ygoManualEvidenceTemplate",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "ygoManualEvidenceFile",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "ygoCausalGoal",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "ygoCausalPolicy",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "ygoCausalSeed",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "ygoCausalSample",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "ygoExampleSelect",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "ygoExampleLoad",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "ygoCausalFile",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "ygoCausalOpponentFile",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "ygoCausalStart",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "ygoCausalExport",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "ygoCausalTrials",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "ygoCausalSimulate",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "ygoDuelInitialize",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "ygoDuelFromLine",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "ygoAdvancedExport",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "ygoAdvancedImport",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "ygoDuelTurn",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "ygoDuelPlayer",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "ygoDuelPhase",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "ygoDuelSetupOwner",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "ygoDuelSetupCard",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "ygoDuelSetupZone",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "ygoDuelSetupPosition",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "ygoDuelSetupColumn",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "ygoDuelAddPlacement",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "ygoDuelClearPlacements",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "ygoDuelApplySetup",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "ygoDuelActionFilter",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "ygoDuelActions",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "ygoDuelStep",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "ygoGoalCard",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "ygoGoalZone",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "ygoGoalQuantity",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "ygoGoalAddCard",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "ygoGoalOwnLp",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "ygoGoalOpponentLp",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "ygoGoalTurn",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "ygoGoalPhase",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "ygoGoalPlayer",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "ygoGoalApplyForm",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "ygoAdvancedGoal",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "ygoAdvancedApplyGoal",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "ygoCompareStart",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "ygoDrawPlayer",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "ygoDrawCount",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "ygoDrawReport",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "ygoDrawContinuationDepth",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "ygoDrawContinuationStates",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "ygoDrawContinuationSeconds",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "ygoDrawContinuationAnalyze",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "ygoDrawContinuationImport",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "ygoRulesApply",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "ygoPendulumSummonGroup",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "ygoSequenceDomain",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "ygoSequenceDraws",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "ygoSequenceNodes",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "ygoSequenceDepth",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "ygoSequenceStart",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        },
+        {
+          "id": "ygoSequenceFile",
+          "scope": "OPAQUE_COMPUTED_TEXT",
+          "ratio": 13.610437499100314,
+          "foreground": "rgb(248, 251, 255)",
+          "background": "rgb(16, 44, 76)"
+        }
+      ],
+      "unmeasured": [
+        {
+          "id": "ygoA11yHighContrast",
+          "scope": "NATIVE_WIDGET_PAINT_UNMEASURED"
+        },
+        {
+          "id": "ygoA11yReduceMotion",
+          "scope": "NATIVE_WIDGET_PAINT_UNMEASURED"
+        },
+        {
+          "id": "ygoDuelSetupProperSummon",
+          "scope": "NATIVE_WIDGET_PAINT_UNMEASURED"
+        },
+        {
+          "id": "ygoRulesPriority",
+          "scope": "NATIVE_WIDGET_PAINT_UNMEASURED"
+        },
+        {
+          "id": "ygoRulesTriggers",
+          "scope": "NATIVE_WIDGET_PAINT_UNMEASURED"
+        },
+        {
+          "id": "ygoRulesDamage",
+          "scope": "NATIVE_WIDGET_PAINT_UNMEASURED"
+        }
+      ]
+    },
+    "contrast_mode_keeps_a_visible_keyboard_focus_indicator": {
+      "style": "solid",
+      "width": 3,
+      "color": "rgb(255, 221, 112)",
+      "background": "rgb(16, 44, 76)"
+    },
+    "manual_validator_rejects_wrong_binding_duplicate_flows_and_conflicting_claims": [
+      {
+        "kind": "build",
+        "rejected": true
+      },
+      {
+        "kind": "hash",
+        "rejected": true
+      },
+      {
+        "kind": "duplicate",
+        "rejected": true
+      },
+      {
+        "kind": "physical-conflict",
+        "rejected": true
+      },
+      {
+        "kind": "unconfirmed",
+        "rejected": true
+      },
+      {
+        "kind": "technology",
+        "rejected": true
+      }
+    ],
+    "manual_and_preference_controls_fit_390_and_320_pixel_emulation_with_44px_targets": [
+      {
+        "width": 390,
+        "overflow": false,
+        "controls": [
+          {
+            "id": "ygoA11yHighContrast",
+            "height": 44,
+            "left": 19,
+            "right": 320.34375
+          },
+          {
+            "id": "ygoA11yReduceMotion",
+            "height": 44,
+            "left": 19,
+            "right": 255.96875
+          },
+          {
+            "id": "SUMMARY",
+            "height": 44,
+            "left": 19,
+            "right": 371
+          },
+          {
+            "id": "ygoManualEvidenceTemplate",
+            "height": 44,
+            "left": 19,
+            "right": 226.890625
+          },
+          {
+            "id": "ygoManualEvidenceFile",
+            "height": 44,
+            "left": 19,
+            "right": 371
+          }
+        ],
+        "invalid": []
+      },
+      {
+        "width": 320,
+        "overflow": false,
+        "controls": [
+          {
+            "id": "ygoA11yHighContrast",
+            "height": 44,
+            "left": 19,
+            "right": 301
+          },
+          {
+            "id": "ygoA11yReduceMotion",
+            "height": 44,
+            "left": 19,
+            "right": 255.96875
+          },
+          {
+            "id": "SUMMARY",
+            "height": 44,
+            "left": 19,
+            "right": 301
+          },
+          {
+            "id": "ygoManualEvidenceTemplate",
+            "height": 44,
+            "left": 19,
+            "right": 226.890625
+          },
+          {
+            "id": "ygoManualEvidenceFile",
+            "height": 44,
+            "left": 19,
+            "right": 301
+          }
+        ],
+        "invalid": []
+      }
+    ],
+    "accessibility_tasks_raise_no_javascript_page_errors": [
+      "REGISTERED_TRIGGER_PROFILE_REQUIRED",
+      "PRIORITY_DEPARTURE_PROFILE_INVALID"
+    ]
+  },
+  "engine": "chromium",
+  "engineVersion": "154.0.8037.57",
+  "externalRequestsBlocked": 14,
+  "manualFixtureScope": "SYNTHETIC_SCHEMA_DIAGNOSTICS_NOT_DEVICE_RESULTS",
+  "physicalDevicesTested": false,
+  "assistiveTechnologyTested": false,
+  "completeAccessibilityCertified": false,
+  "limitations": [
+    "Computed opaque control text contrast does not establish every graphic, image or composite contrast.",
+    "Accessibility-tree names and roles are not an actual screen-reader evaluation.",
+    "Viewport and target-size checks are emulated and do not close physical-device criterion C31.",
+    "Manual file selection is automated; the native OS file-picker interface is not tested.",
+    "Source diagnostic mode cannot accept a delivered R23 release."
+  ],
+  "elapsedSeconds": 19.49
+}

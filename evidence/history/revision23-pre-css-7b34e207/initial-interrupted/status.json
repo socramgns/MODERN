@@ -1,0 +1,6 @@
+{
+  "status": "INTERRUPTED_NOT_ACCEPTED",
+  "reason": "Browser boot found premature catalog lookup registrations; independent audit found UI file-import busy race and illegal empty destination fallback. Stopped our full test run before source correction.",
+  "buildId": "b13061ca7ef684f805d4447ec8c7fa63d474b39dfcb110f7ce4d883d754d3733",
+  "completeValidation": false
+}
