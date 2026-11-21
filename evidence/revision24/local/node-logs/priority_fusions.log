@@ -1,0 +1,804 @@
+{
+  "schema": "ygo-priority-fusions-tests/v1",
+  "pass": true,
+  "total": 41,
+  "tests": [
+    {
+      "name": "Invocation separates zero-cost non-targeting activation from physical material choice and Fusion resolution for player 0",
+      "pass": true
+    },
+    {
+      "name": "Invocation separates zero-cost non-targeting activation from physical material choice and Fusion resolution for player 1",
+      "pass": true
+    },
+    {
+      "name": "Invocation banishes an actual opposing GY LIGHT and preserves its owner for player 0",
+      "pass": true
+    },
+    {
+      "name": "Invocation banishes an actual opposing GY LIGHT and preserves its owner for player 1",
+      "pass": true
+    },
+    {
+      "name": "Crow removes the available GY LIGHT before Invocation chooses materials; a different current physical LIGHT may be chosen",
+      "pass": true
+    },
+    {
+      "name": "Invocation resolves without moving a material if Crow removes its only legal LIGHT",
+      "pass": true
+    },
+    {
+      "name": "Mechaba negates Invocation activation, preserves its real Spell discard, and never pays Fusion materials for player 0",
+      "pass": true
+    },
+    {
+      "name": "Mechaba negates Invocation activation, preserves its real Spell discard, and never pays Fusion materials for player 1",
+      "pass": true
+    },
+    {
+      "name": "Branded Fusion selects own physical Deck materials at resolution, then offers separate Lubellion trigger for player 0",
+      "pass": true
+    },
+    {
+      "name": "Branded Fusion selects own physical Deck materials at resolution, then offers separate Lubellion trigger for player 1",
+      "pass": true
+    },
+    {
+      "name": "Ash negates Branded effect while ACTIVATE budget and whole-turn Fusion restriction survive for player 0",
+      "pass": true
+    },
+    {
+      "name": "Ash negates Branded effect while ACTIVATE budget and whole-turn Fusion restriction survive for player 1",
+      "pass": true
+    },
+    {
+      "name": "Branded activation negation releases its ACTIVATE budget and lock, permitting the same legal one-copy Spell after real Faith recovery for player 0",
+      "pass": true
+    },
+    {
+      "name": "Branded activation negation releases its ACTIVATE budget and lock, permitting the same legal one-copy Spell after real Faith recovery for player 1",
+      "pass": true
+    },
+    {
+      "name": "Lubellion discards at separate trigger activation and chooses physical shuffle materials at resolution for player 0",
+      "pass": true
+    },
+    {
+      "name": "Lubellion discards at separate trigger activation and chooses physical shuffle materials at resolution for player 1",
+      "pass": true
+    },
+    {
+      "name": "Lubellion activation negation retains real discard and named USE while preserving the older Branded lock for player 0",
+      "pass": true
+    },
+    {
+      "name": "Lubellion activation negation retains real discard and named USE while preserving the older Branded lock for player 1",
+      "pass": true
+    },
+    {
+      "name": "Negating Lubellion effect creates no rest-of-turn restrictions, while discard and named USE remain for player 0",
+      "pass": true
+    },
+    {
+      "name": "Negating Lubellion effect creates no rest-of-turn restrictions, while discard and named USE remain for player 1",
+      "pass": true
+    },
+    {
+      "name": "Unnegated Lubellion resolution applies rest-of-turn restrictions even when Compulsory removes its only Extra material for player 0",
+      "pass": true
+    },
+    {
+      "name": "Unnegated Lubellion resolution applies rest-of-turn restrictions even when Compulsory removes its only Extra material for player 1",
+      "pass": true
+    },
+    {
+      "name": "An actual prior Link Summon does not prohibit Lubellion trigger activation after Invocation Fusion Summons it",
+      "pass": true
+    },
+    {
+      "name": "A prior attack by the same physical Lubellion does not prohibit its fresh Fusion Summon trigger in Main Phase 2",
+      "pass": true
+    },
+    {
+      "name": "Invocation recycle fixes banished Aleister target, has no shuffle cost, and performs the shuffle before adding for player 0",
+      "pass": true
+    },
+    {
+      "name": "Invocation recycle fixes banished Aleister target, has no shuffle cost, and performs the shuffle before adding for player 1",
+      "pass": true
+    },
+    {
+      "name": "Real Crow removes the recycle source and its discarded copy remains spent; Aleister stays banished",
+      "pass": true
+    },
+    {
+      "name": "Spirit negates recycle GY activation without refunding named USE or moving Aleister",
+      "pass": true
+    },
+    {
+      "name": "Mechaba cannot respond to the activated GY Spell effect of Invocation recycle for player 0",
+      "pass": true
+    },
+    {
+      "name": "Mechaba cannot respond to the activated GY Spell effect of Invocation recycle for player 1",
+      "pass": true
+    },
+    {
+      "name": "QA: a target leaving and returning is a different physical relation; Invocation still shuffles itself",
+      "pass": true
+    },
+    {
+      "name": "QA: source Spell leaving before an unnegated Fusion link resolves does not prevent Fusion",
+      "pass": true
+    },
+    {
+      "name": "Only reviewed material profiles are offered; attachments and redirects exclude a physical candidate (QA fields)",
+      "pass": true
+    },
+    {
+      "name": "Fusion resolution controls and physical evidence are freshly replayed and forged material payment is rejected",
+      "pass": true
+    },
+    {
+      "name": "Fusion adapters leave legacy atomic Invocation and Branded handlers available outside priority mode",
+      "pass": true
+    },
+    {
+      "name": "Branded effect-negation restriction lasts through End Phase and expires with the actual turn for player 0",
+      "pass": true
+    },
+    {
+      "name": "Branded effect-negation restriction lasts through End Phase and expires with the actual turn for player 1",
+      "pass": true
+    },
+    {
+      "name": "An actual prior Link Summon prevents Branded activation for the rest of that turn",
+      "pass": true
+    },
+    {
+      "name": "QA: Branded activation negation cannot remove an older lock from another link",
+      "pass": true
+    },
+    {
+      "name": "QA: Fusion cannot invent a replacement Extra copy if the physical Extra target leaves before resolution",
+      "pass": true
+    },
+    {
+      "name": "QA: unnegated Lubellion still restricts its remaining field source and future Extra summons if Albaz becomes unavailable",
+      "pass": true
+    }
+  ],
+  "witnesses": [
+    {
+      "steps": 6,
+      "types": [
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "steps": 6,
+      "types": [
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "steps": 6,
+      "types": [
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "steps": 6,
+      "types": [
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "steps": 8,
+      "types": [
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "steps": 8,
+      "types": [
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "steps": 8,
+      "types": [
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "steps": 8,
+      "types": [
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "steps": 7,
+      "types": [
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "TRIGGER_ORDER_DECLINE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "steps": 7,
+      "types": [
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "TRIGGER_ORDER_DECLINE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "steps": 8,
+      "types": [
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "steps": 8,
+      "types": [
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "steps": 22,
+      "types": [
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_FLIP_SUMMON",
+        "TRIGGER_ORDER_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "TRIGGER_ORDER_DECLINE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "steps": 22,
+      "types": [
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_FLIP_SUMMON",
+        "TRIGGER_ORDER_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "TRIGGER_ORDER_DECLINE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "steps": 10,
+      "types": [
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "TRIGGER_ORDER_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "steps": 10,
+      "types": [
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "TRIGGER_ORDER_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "steps": 12,
+      "types": [
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "TRIGGER_ORDER_ACTIVATE",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "steps": 12,
+      "types": [
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "TRIGGER_ORDER_ACTIVATE",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "steps": 12,
+      "types": [
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "TRIGGER_ORDER_ACTIVATE",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "steps": 12,
+      "types": [
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "TRIGGER_ORDER_ACTIVATE",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "steps": 12,
+      "types": [
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "TRIGGER_ORDER_ACTIVATE",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "steps": 12,
+      "types": [
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "TRIGGER_ORDER_ACTIVATE",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "steps": 13,
+      "types": [
+        "LINK_ARTEMIS",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "TRIGGER_ORDER_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "steps": 29,
+      "types": [
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_PHASE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ATTACK",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_PHASE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "TRIGGER_ORDER_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "steps": 6,
+      "types": [
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "steps": 6,
+      "types": [
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "steps": 8,
+      "types": [
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "steps": 8,
+      "types": [
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "steps": 6,
+      "types": [
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "steps": 6,
+      "types": [
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "steps": 6,
+      "types": [
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "steps": 16,
+      "types": [
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_PHASE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_NEXT_TURN"
+      ],
+      "replayPass": true
+    },
+    {
+      "steps": 16,
+      "types": [
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_PHASE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_NEXT_TURN"
+      ],
+      "replayPass": true
+    },
+    {
+      "steps": 3,
+      "types": [
+        "LINK_ARTEMIS",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    }
+  ],
+  "capabilities": {
+    "version": "priority-fusions-v1",
+    "optIn": "context.duelMode && context.priorityMode",
+    "players": [
+      0,
+      1
+    ],
+    "effects": [
+      "INVOCATION_MECHABA",
+      "BRANDED_FUSION_LUBELLION",
+      "INVOCATION_RECYCLE",
+      "PRIORITY_LUBELLION_FUSION_MIRRORJADE"
+    ],
+    "fusionChoicesAt": "RESOLUTION",
+    "fusionMaterialsAreCosts": false,
+    "fusionDestinations": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "fusionPositions": [
+      "ATTACK",
+      "DEFENSE"
+    ],
+    "invocation": {
+      "fusion": 75286621,
+      "recipes": [
+        {
+          "cardId": 75286621,
+          "invoked": true,
+          "note": "Exact Aleister and LIGHT with the printed Invoked material expansion."
+        },
+        {
+          "cardId": 70534340,
+          "materialCardIds": [
+            68468459,
+            46986414
+          ],
+          "invoked": false,
+          "note": "Bounded exact own-hand Albaz plus DARK Normal recipe used to witness Lubellion without a Branded whole-turn lock."
+        }
+      ],
+      "materials": "Exact Aleister plus reviewed LIGHT; own hand/face-up field or either GY",
+      "handTo": "gy",
+      "fieldAndGyTo": "banished",
+      "recycleTargetAt": "ACTIVATION",
+      "recycleUse": "NAME_PER_PLAYER_PER_TURN"
+    },
+    "branded": {
+      "fusion": 70534340,
+      "materials": "Exact Albaz plus DARK Main Normal or another Albaz; own hand/deck/face-up field",
+      "limit": "ACTIVATE_NAME_PER_PLAYER_PER_TURN",
+      "activationNegationReleasesLimit": true,
+      "extraRestriction": "ENTIRE_TURN_FUSION_ONLY_PER_ACTOR"
+    },
+    "lubellion": {
+      "installed": true,
+      "fusion": 44146295,
+      "costAt": "ACTIVATION",
+      "materialsAt": "RESOLUTION",
+      "use": "NAME_PER_PLAYER_PER_TURN_RETAINED_ON_ACTIVATION_NEGATION",
+      "restrictionAt": "UNNEGATED_RESOLUTION_EVEN_WITHOUT_FUSION",
+      "restrictionPeriod": "REST_OF_THIS_TURN",
+      "priorNonFusionOrAttackDoesNotPreventActivation": true
+    },
+    "generalCardRulesComplete": false,
+    "certified": false,
+    "limitations": [
+      "Default routes are Invocation to Mechaba, Branded to Lubellion, and Lubellion to Mirrorjade. Additional explicitly registered exact two-card Invocation recipes use own hand only. Substitutes, tokens, facedown field materials, Xyz/Pendulum materials, attachments, redirects and unreviewed departure triggers are excluded.",
+      "Fusion destinations are free Main Monster Zones after the selected materials depart; Extra Monster Zone destinations are not offered by this bounded profile.",
+      "Lubellion requires triggerOrderMode and the registered trigger-order module. The separate Albaz on-summon Fusion effect is not installed by this module.",
+      "The per-player Extra ledger observes actual transitions after this module is loaded; declared starting fields are not prior summon histories.",
+      "Only registered effects/procedures run. No card text or external card script is evaluated."
+    ]
+  },
+  "limitations": [
+    "Declared starting fields are assumptions; QA-labelled helper moves are diagnostics.",
+    "Exact existing Mechaba, Lubellion and Mirrorjade routes; no arbitrary Fusion recipe, substitute, unknown material trigger or card-text evaluation."
+  ]
+}
+

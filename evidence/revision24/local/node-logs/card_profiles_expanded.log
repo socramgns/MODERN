@@ -1,0 +1,459 @@
+{
+  "schema": "ygo-card-profiles-expanded-tests/v1",
+  "pass": true,
+  "total": 26,
+  "tests": [
+    {
+      "name": "Source profiles use the actual catalog passcodes and printed recipe",
+      "pass": true
+    },
+    {
+      "name": "Level five Synchro uses actual materials, vacated zones, proper history and no self draw",
+      "pass": true
+    },
+    {
+      "name": "One Tuner and three physical non-Tuners can meet level five",
+      "pass": true
+    },
+    {
+      "name": "Opponent can perform reviewed Librarian Synchro and existing opposing Librarian draws only a known physical top card",
+      "pass": true
+    },
+    {
+      "name": "Librarian draw with unknown order remains pending without a fabricated card",
+      "pass": true
+    },
+    {
+      "name": "Invalid level, second Tuner, facedown, attachments and restrictions never become Synchro materials",
+      "pass": true
+    },
+    {
+      "name": "Duplicate, foreign and wrong-sum requested material UIDs cannot execute",
+      "pass": true
+    },
+    {
+      "name": "Player scoped Fusion and Wyrm locks are checked before material payment",
+      "pass": true
+    },
+    {
+      "name": "A controlled material returns to its physical owner without changing inventory",
+      "pass": true
+    },
+    {
+      "name": "Declared banishment creates no Chengying trigger and no summon history",
+      "pass": true
+    },
+    {
+      "name": "Both players optional Chengying effects use SEGOC, choose no target at activation and resolve after source departure",
+      "pass": true
+    },
+    {
+      "name": "Declining the optional trigger preserves use and moves no new card",
+      "pass": true
+    },
+    {
+      "name": "If the opponent GY empties before resolution, Chengying banishes neither zone and keeps its named use",
+      "pass": true
+    },
+    {
+      "name": "Banishment as an activation cost waits until the existing chain ends",
+      "pass": true
+    },
+    {
+      "name": "Replacement uses one actual own GY card, starts no chain, has no once-per-turn budget and never protects battle destruction",
+      "pass": true
+    },
+    {
+      "name": "Negated or facedown Chengying has no replacement; a physical opponent GY cost cannot be substituted",
+      "pass": true
+    },
+    {
+      "name": "Replacement preserves the source and pays even when Roar negates its activation; replay verifies the cost",
+      "pass": true
+    },
+    {
+      "name": "Chengying continuous ATK/DEF remains counted once by the existing core",
+      "pass": true
+    },
+    {
+      "name": "Two materials banished during one Fusion resolution create only one optional Chengying opportunity",
+      "pass": true
+    },
+    {
+      "name": "Attack declaration remains a legal Chengying banishment trigger window before the Damage Step starts",
+      "pass": true
+    },
+    {
+      "name": "Actual banishment after damage calculation does not create Chengying optional triggers",
+      "pass": true
+    },
+    {
+      "name": "Cyber Twin Invocation pays no materials at activation and resolves with two distinct hand Cyber Dragons",
+      "pass": true
+    },
+    {
+      "name": "Cyber Twin Invocation cannot substitute a same-level monster or use a field or GY Cyber Dragon",
+      "pass": true
+    },
+    {
+      "name": "A negated Cyber Twin Fusion leaves both physical materials in hand and establishes no proper history",
+      "pass": true
+    },
+    {
+      "name": "A genuinely Synchro Summoned Librarian can be revived after witnessed battle departure; a declared GY copy cannot",
+      "pass": true
+    },
+    {
+      "name": "Genuine Cyber Twin Fusion history survives battle departure and enables physical Monster Reborn",
+      "pass": true
+    }
+  ],
+  "witnesses": [
+    {
+      "actions": [
+        "SYNCHRO_TG_HYPER_LIBRARIAN",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "actions": [
+        "SYNCHRO_TG_HYPER_LIBRARIAN",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "actions": [
+        "SYNCHRO_TG_HYPER_LIBRARIAN",
+        "TRIGGER_ORDER_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "actions": [
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "TRIGGER_ORDER_ACTIVATE",
+        "TRIGGER_ORDER_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "actions": [
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "TRIGGER_ORDER_DECLINE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "actions": [
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "TRIGGER_ORDER_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "actions": [
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "TRIGGER_ORDER_DECLINE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "actions": [
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "TRIGGER_ORDER_ACTIVATE",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "actions": [
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "TRIGGER_ORDER_DECLINE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "actions": [
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "TRIGGER_ORDER_DECLINE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "actions": [
+        "DUEL_DECLARE_ATTACK",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE"
+      ],
+      "replayPass": true
+    },
+    {
+      "actions": [
+        "DUEL_DECLARE_ATTACK",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP",
+        "TRIGGER_ORDER_ACTIVATE",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "actions": [
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "actions": [
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "actions": [
+        "SYNCHRO_TG_HYPER_LIBRARIAN",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_PHASE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_DECLARE_ATTACK",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_PHASE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "actions": [
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_PHASE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_DECLARE_ATTACK",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_PHASE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    }
+  ],
+  "capabilities": {
+    "version": "reviewed-card-profiles-expanded-v1",
+    "cardIds": [
+      96633955,
+      90953320,
+      74157028,
+      70095154
+    ],
+    "documentarySourceCommit": "915c6ff63518a04e18d16ee45962d75a8c8be264",
+    "invocationRecipeRegistered": true,
+    "rebornProfilesRegistered": true,
+    "cyberTwin": {
+      "cardId": 74157028,
+      "materialCardIds": [
+        70095154,
+        70095154
+      ],
+      "fusionMethod": "REGISTERED_INVOCATION",
+      "materialZones": [
+        "OWN_HAND"
+      ],
+      "materialsAt": "RESOLUTION",
+      "substitutes": false,
+      "properSummonType": "FUSION",
+      "battle": "EXISTING_CONTINUOUS_SECOND_ATTACK_PROFILE"
+    },
+    "chengying": {
+      "requiresPriorityAndTriggerOrder": true,
+      "replacement": "OPTIONAL_NON_ACTIVATING_EFFECT_DESTRUCTION_ONLY_BANISH_ONE_PHYSICAL_OWN_GY_CARD",
+      "replacementOncePerTurn": false,
+      "replacementProtectsOneCopyPerDestructionChoice": true,
+      "trigger": "OPTIONAL_IF_CARD_BANISHED_EXCEPT_DAMAGE_STEP",
+      "triggerTargets": false,
+      "banishChoicesAt": "RESOLUTION",
+      "triggerUseLimit": "ONE_PER_CARD_NAME_PER_PLAYER_PER_TURN",
+      "bothPlayers": true,
+      "simultaneousTriggers": "REGISTERED_SEGOC",
+      "continuousStats": "EXISTING_CORE_ONLY"
+    },
+    "librarian": {
+      "action": "SYNCHRO_TG_HYPER_LIBRARIAN",
+      "players": [
+        0,
+        1
+      ],
+      "level": 5,
+      "tuners": 1,
+      "minimumNonTuners": 1,
+      "materials": "TECHNICALLY_MATCHED_PRINTED_MAIN_DECK_NORMAL_MONSTERS_ONLY",
+      "destinations": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "startsChain": false,
+      "draw": "EXISTING_MANDATORY_TRIGGER_ORDER_PROFILE_WITH_PHYSICAL_KNOWN_DECK_ORDER"
+    },
+    "certified": false,
+    "limitations": [
+      "Legacy atomic mode retains its previous partial Chengying coverage; the newly registered replacement and trigger require explicit priority and trigger ordering.",
+      "One Chengying can be protected per destruction replacement choice; compound protection of several copies is outside this bounded provider.",
+      "Banish selections admit only reviewed physical identities without attachments, redirects or unreviewed banishment restrictions; unknown departure effects are excluded.",
+      "Librarian materials exclude Effect Monsters, Tokens, Pendulum monsters, Extra Deck monsters, modified levels, material restrictions and attachments.",
+      "Procedures create genuine proper summon history; declared setup does not. Existing mandatory draw resolution never invents an unknown Deck order."
+    ]
+  }
+}
+

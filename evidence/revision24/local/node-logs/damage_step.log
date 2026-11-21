@@ -1,0 +1,632 @@
+{
+  "schema": "ygo-explicit-damage-step-tests/v1",
+  "pass": true,
+  "total": 26,
+  "tests": [
+    {
+      "name": "The explicit profile exposes all declared battle windows and two-pass handoffs",
+      "pass": true
+    },
+    {
+      "name": "A declaration consumes one real attack before revealing the target or calculating damage",
+      "pass": true
+    },
+    {
+      "name": "Every window requires both real players to pass before advancing",
+      "pass": true
+    },
+    {
+      "name": "Manual position changes, another attack, and phase changes cannot interrupt a Damage Step",
+      "pass": true
+    },
+    {
+      "name": "The target is revealed before damage calculation while its FLIP activation waits until afterward",
+      "pass": true
+    },
+    {
+      "name": "Faith recovers from its own GY before its one final battle departure",
+      "pass": true
+    },
+    {
+      "name": "Mechaba pays a physical hand cost, banishes field Faith and avoids a second GY departure",
+      "pass": true
+    },
+    {
+      "name": "Roar can negate mandatory Faith after damage calculation and destroy it before battle cleanup",
+      "pass": true
+    },
+    {
+      "name": "Spark and Crow are ordinary battle choices but do not gain permission inside the Damage Step",
+      "pass": true
+    },
+    {
+      "name": "A real Rush Recklessly activation before calculation changes the later damage and pays normal cleanup",
+      "pass": true
+    },
+    {
+      "name": "Rush Recklessly is excluded during damage calculation and afterward",
+      "pass": true
+    },
+    {
+      "name": "Lethal battle damage ends the duel without inventing a later mandatory activation",
+      "pass": true
+    },
+    {
+      "name": "An ATK zero tie destroys neither monster",
+      "pass": true
+    },
+    {
+      "name": "Hayabusa retains exactly one second declaration after a completed explicit battle",
+      "pass": true
+    },
+    {
+      "name": "Forged stage, victim and actor metadata do not produce a verified transition",
+      "pass": true
+    },
+    {
+      "name": "Fresh replay rejects refunded declarations, reordered stages and forged response costs",
+      "pass": true
+    },
+    {
+      "name": "Compulsory removes the declared target and creates a physical attack replay without another declaration",
+      "pass": true
+    },
+    {
+      "name": "Declining an attack replay preserves the spent declaration and causes no damage",
+      "pass": true
+    },
+    {
+      "name": "Returning the attacker during declaration cancels its attack before damage",
+      "pass": true
+    },
+    {
+      "name": "A genuinely resolved Spark shield is consumed at calculation and prevents later battle departure",
+      "pass": true
+    },
+    {
+      "name": "Lethal reflected damage stops before the genuinely revealed Faith can activate",
+      "pass": true
+    },
+    {
+      "name": "Battle destruction creates a real Shthana trigger at end damage and its cost is paid before revival",
+      "pass": true
+    },
+    {
+      "name": "Spirit negates the real GY activation of Shthana in the end-damage window without refunding its banish",
+      "pass": true
+    },
+    {
+      "name": "Known Chengying reductions clamp printed-known low stats to zero instead of treating them as unknown",
+      "pass": true
+    },
+    {
+      "name": "QA getter diagnostics keep negative printed sentinels and unknown-stat flags outside combat",
+      "pass": true
+    },
+    {
+      "name": "Removing the target inside Damage Step ends this attack without damage, replay or a refunded declaration",
+      "pass": true
+    }
+  ],
+  "witnesses": [
+    {
+      "types": [
+        "DUEL_DECLARE_ATTACK"
+      ],
+      "replayPass": true,
+      "attackDeclarations": 1
+    },
+    {
+      "types": [
+        "DUEL_DECLARE_ATTACK",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP"
+      ],
+      "replayPass": true,
+      "attackDeclarations": 1
+    },
+    {
+      "types": [
+        "DUEL_DECLARE_ATTACK",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP"
+      ],
+      "replayPass": true,
+      "attackDeclarations": 1
+    },
+    {
+      "types": [
+        "DUEL_DECLARE_ATTACK",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP",
+        "TRIGGER_ORDER_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP"
+      ],
+      "replayPass": true,
+      "attackDeclarations": 1
+    },
+    {
+      "types": [
+        "DUEL_DECLARE_ATTACK",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP",
+        "TRIGGER_ORDER_ACTIVATE",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP"
+      ],
+      "replayPass": true,
+      "attackDeclarations": 1
+    },
+    {
+      "types": [
+        "DUEL_DECLARE_ATTACK",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP",
+        "TRIGGER_ORDER_ACTIVATE",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP"
+      ],
+      "replayPass": true,
+      "attackDeclarations": 1
+    },
+    {
+      "types": [
+        "DUEL_DECLARE_ATTACK",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP"
+      ],
+      "replayPass": true,
+      "attackDeclarations": 1
+    },
+    {
+      "types": [
+        "DUEL_DECLARE_ATTACK",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP"
+      ],
+      "replayPass": true,
+      "attackDeclarations": 1
+    },
+    {
+      "types": [
+        "DUEL_DECLARE_ATTACK",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP"
+      ],
+      "replayPass": true,
+      "attackDeclarations": 1
+    },
+    {
+      "types": [
+        "DUEL_DECLARE_ATTACK",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP",
+        "DUEL_DECLARE_ATTACK",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP"
+      ],
+      "replayPass": true,
+      "attackDeclarations": 2
+    },
+    {
+      "types": [
+        "DUEL_DECLARE_ATTACK",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP",
+        "TRIGGER_ORDER_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP"
+      ],
+      "replayPass": true,
+      "attackDeclarations": 1
+    },
+    {
+      "types": [
+        "DUEL_DECLARE_ATTACK",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ATTACK_REPLAY",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP"
+      ],
+      "replayPass": true,
+      "attackDeclarations": 1
+    },
+    {
+      "types": [
+        "DUEL_DECLARE_ATTACK",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ATTACK_REPLAY"
+      ],
+      "replayPass": true,
+      "attackDeclarations": 1
+    },
+    {
+      "types": [
+        "DUEL_DECLARE_ATTACK",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP"
+      ],
+      "replayPass": true,
+      "attackDeclarations": 1
+    },
+    {
+      "types": [
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_DECLARE_ATTACK",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP"
+      ],
+      "replayPass": true,
+      "attackDeclarations": 1
+    },
+    {
+      "types": [
+        "DUEL_DECLARE_ATTACK",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP"
+      ],
+      "replayPass": true,
+      "attackDeclarations": 1
+    },
+    {
+      "types": [
+        "DUEL_DECLARE_ATTACK",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP",
+        "TRIGGER_ORDER_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP"
+      ],
+      "replayPass": true,
+      "attackDeclarations": 1
+    },
+    {
+      "types": [
+        "DUEL_DECLARE_ATTACK",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP",
+        "TRIGGER_ORDER_ACTIVATE",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP"
+      ],
+      "replayPass": true,
+      "attackDeclarations": 1
+    },
+    {
+      "types": [
+        "DUEL_DECLARE_ATTACK",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP"
+      ],
+      "replayPass": true,
+      "attackDeclarations": 1
+    },
+    {
+      "types": [
+        "DUEL_DECLARE_ATTACK",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP"
+      ],
+      "replayPass": true,
+      "attackDeclarations": 1
+    },
+    {
+      "types": [
+        "DUEL_DECLARE_ATTACK",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_DAMAGE_STEP"
+      ],
+      "replayPass": true,
+      "attackDeclarations": 1
+    }
+  ],
+  "limitations": [
+    "Only registered monster, response and timing profiles are admitted.",
+    "Declared initial fields are assumptions; battle transitions and fresh replay are witnessed.",
+    "No physical-device, universal-card or authenticated official ruling claim is made."
+  ]
+}
+

@@ -1,0 +1,12 @@
+{
+  "schema": "ygo-ci-result-summary/v1",
+  "pass": true,
+  "buildId": "2d7de2e019f18f6524de0f72d8575ec12a981d145e360cd897397b2680a8c0c7",
+  "htmlSha256": "0d955d44e782d57db880a68b2dac80ad288172e570da647e6753cc8d1f6eb63c",
+  "groups": 95,
+  "failed": [],
+  "buildBindingMatches": true,
+  "rawReportSha256": "d550b80cde1bf68025735127d4c9f3e5470d1ec78a2750533abdb62632d6787a",
+  "sourceCommit": "9977424e6bacee97dc607fa94cd894c46d3db557",
+  "sourceRun": "44848581354"
+}

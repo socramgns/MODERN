@@ -1,6 +1,6 @@
 # Pendientes y alcance de R24
 
-R24 amplía los perfiles de prioridad de las familias registradas y corrige construcción por formato. La aceptación de esta revisión requiere la batería completa sobre los bytes finales, compatibilidad y descarga vinculada al commit; los resultados se registran en el índice de evidencia cuando terminen. Los resultados de R23 permanecen históricos y no se atribuyen a este HTML modificado.
+R24 amplía los perfiles de prioridad de las familias registradas y corrige construcción por formato. La revisión quedó aceptada por 95/95 grupos remotos y la comprobación estricta entre motores, con 28/28 controles GUI y 51/51 suites locales de código independientes. La descarga del candidato dio HTTP 200 y coincidió con los bytes del HTML final. Los vínculos y ámbitos están en el índice de evidencia. Los resultados de R23 permanecen históricos y no se atribuyen a este HTML modificado.
 
 Se mantienen los 32 criterios originales, sin cambiar sus definiciones ni sus pesos. El último listado aceptado tiene **27 de 32 criterios operativos verificados, 84,375 % sin ponderar**. Ampliar los perfiles no convierte ese cociente en un porcentaje de todas las cartas, reglas, esfuerzo o tiempo restante del juego.
 

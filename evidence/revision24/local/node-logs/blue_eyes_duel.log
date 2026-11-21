@@ -1,0 +1,60 @@
+{
+  "schema": "ygo-blue-eyes-duel-regression/v1",
+  "pass": true,
+  "total": 13,
+  "tests": [
+    {
+      "name": "A real Blue-Eyes line produces a Synchro-summoned Spirit before the tribute",
+      "pass": true
+    },
+    {
+      "name": "Spirit tributes a physical Synchro and borrows Azure in Defense without a false proper Synchro history",
+      "pass": true
+    },
+    {
+      "name": "Mandatory Azure protection lasts through the next turn and prevents the delayed self-destruction",
+      "pass": true
+    },
+    {
+      "name": "A borrowed Stardust Spark is destroyed in End Phase when its optional protection is not activated",
+      "pass": true
+    },
+    {
+      "name": "Veiler can negate Azure protection after the unopposed opening, so borrowed Azure is destroyed",
+      "pass": true
+    },
+    {
+      "name": "Standby revival moves a real Normal Monster, consumes its use and replays from the declared physical scenario",
+      "pass": true
+    },
+    {
+      "name": "VEILER cannot target Spirit after its physical tribute cost; the new Azure activation remains a distinct window",
+      "pass": true
+    },
+    {
+      "name": "IMPERM cannot target Spirit after its physical tribute cost; the new Azure activation remains a distinct window",
+      "pass": true
+    },
+    {
+      "name": "CHIXIAO cannot target Spirit after its physical tribute cost; the new Azure activation remains a distinct window",
+      "pass": true
+    },
+    {
+      "name": "Borrowed Spark can protect itself once against its delayed End Phase destruction",
+      "pass": true
+    },
+    {
+      "name": "Spark prevents only the first battle destruction and never cancels the battle damage",
+      "pass": true
+    },
+    {
+      "name": "Spark effect negation consumes the activation without applying a shield",
+      "pass": true
+    },
+    {
+      "name": "Spark can protect an own face-up Spell and its unspent effect expires when the turn ends",
+      "pass": true
+    }
+  ]
+}
+

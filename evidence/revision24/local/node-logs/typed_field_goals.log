@@ -1,0 +1,116 @@
+{
+  "schema": "ygo-physical-field-goals-tests/v1",
+  "pass": true,
+  "total": 27,
+  "tests": [
+    {
+      "name": "The goal contract exists before either workbench mounts",
+      "pass": true
+    },
+    {
+      "name": "Both public validators accept the same typed multizone goal and clone it",
+      "pass": true
+    },
+    {
+      "name": "Unknown fields and executable or malformed goals are rejected",
+      "pass": true
+    },
+    {
+      "name": "Empty predicates cannot silently claim a successful objective",
+      "pass": true
+    },
+    {
+      "name": "All card arrays reject invalid IDs, coerced strings and excessive quantities",
+      "pass": true
+    },
+    {
+      "name": "Spell/Trap goals reject monsters, Skills and Tokens",
+      "pass": true
+    },
+    {
+      "name": "State constraints reject invalid LP, turn, phase and player values",
+      "pass": true
+    },
+    {
+      "name": "Face-up and Set Spell/Trap goals inspect only the declared own zone",
+      "pass": true
+    },
+    {
+      "name": "Exact visibility distinguishes face-up, Set and undeclared states",
+      "pass": true
+    },
+    {
+      "name": "A Field Spell in its separate slot can satisfy a face-up Spell/Trap goal",
+      "pass": true
+    },
+    {
+      "name": "Legacy field goals still count face-up monsters only",
+      "pass": true
+    },
+    {
+      "name": "Requested copies consume distinct physical Spell/Trap UIDs",
+      "pass": true
+    },
+    {
+      "name": "A repeated UID cannot masquerade as another physical copy",
+      "pass": true
+    },
+    {
+      "name": "The same physical card cannot meet both face-up and Set conditions",
+      "pass": true
+    },
+    {
+      "name": "Canonical alias families share identities but still require separate copies",
+      "pass": true
+    },
+    {
+      "name": "Legacy recoveredHandIds remains serialized and equivalent to the hand condition",
+      "pass": true
+    },
+    {
+      "name": "Conflicting modern and legacy hand goals are rejected rather than silently ignored",
+      "pass": true
+    },
+    {
+      "name": "Card and state requirements are conjunctive without modifying the input state",
+      "pass": true
+    },
+    {
+      "name": "Physical teaching setup meets the Set Roar condition but not the Sanctuary condition",
+      "pass": true
+    },
+    {
+      "name": "A registered Field activation satisfies its goal only after resolving and replaying",
+      "pass": true
+    },
+    {
+      "name": "Mechaba negation removes Sanctuary from the goal without restoring the replaced Field",
+      "pass": true
+    },
+    {
+      "name": "Bounded engine search uses the same Field goal and returns freshly replayable transitions",
+      "pass": true
+    },
+    {
+      "name": "A recovered Roar must actually be Set again to meet a Set goal",
+      "pass": true
+    },
+    {
+      "name": "Recommendations count the resolved Field goal and retain provisional claims",
+      "pass": true
+    },
+    {
+      "name": "Recommendations keep a replayed negated Field branch as an unachieved objective",
+      "pass": true
+    },
+    {
+      "name": "Recommendation goal evaluation remains identical before the workbench is available",
+      "pass": true
+    },
+    {
+      "name": "JSON round-trip preserves typed goals and legacy recovery without widening zones",
+      "pass": true
+    }
+  ]
+}
+

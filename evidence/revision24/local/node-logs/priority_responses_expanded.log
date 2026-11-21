@@ -1,0 +1,811 @@
+{
+  "schema": "ygo-expanded-priority-response-tests/v1",
+  "pass": true,
+  "total": 43,
+  "tests": [
+    {
+      "name": "Only explicit typed categories admit Ash and metadata is immutable",
+      "pass": true
+    },
+    {
+      "name": "Ash responds to a real Ashuna link and preserves banish/discard/name limits for controller 0",
+      "pass": true
+    },
+    {
+      "name": "Ash responds to a real Ashuna link and preserves banish/discard/name limits for controller 1",
+      "pass": true
+    },
+    {
+      "name": "Hand special summon is a separate paid-on-use activation and resolves later for controller 0",
+      "pass": true
+    },
+    {
+      "name": "Hand special summon is a separate paid-on-use activation and resolves later for controller 1",
+      "pass": true
+    },
+    {
+      "name": "Ash can answer the GY Ashuna source even though its banish cost already moved it",
+      "pass": true
+    },
+    {
+      "name": "Spirit sees an actual GY activation and cannot reinterpret a discarded hand Ash as a GY effect",
+      "pass": true
+    },
+    {
+      "name": "Ash cannot skip the immediately preceding Veiler link to negate a lower Ashuna link",
+      "pass": true
+    },
+    {
+      "name": "Mechaba may negate Ash activation without refunding its discard or name use",
+      "pass": true
+    },
+    {
+      "name": "Forged costs, link targets, effect IDs and atomic legacy bypasses fail without mutations",
+      "pass": true
+    },
+    {
+      "name": "A negated field Deck effect is not offered as a new Ash response window",
+      "pass": true
+    },
+    {
+      "name": "Vessel stages a physical Spell and chooses real Deck send/search at resolution for controller 0",
+      "pass": true
+    },
+    {
+      "name": "Vessel stages a physical Spell and chooses real Deck send/search at resolution for controller 1",
+      "pass": true
+    },
+    {
+      "name": "Vessel survives effect negation as a consumed activation and sends no Deck card",
+      "pass": true
+    },
+    {
+      "name": "Vessel activation negation restores only its activation limit after the chain finishes",
+      "pass": true
+    },
+    {
+      "name": "Vessel cannot search under Droll and never adds the same name it sends",
+      "pass": true
+    },
+    {
+      "name": "Adhara costs and its banished physical target remain distinct for controller 0",
+      "pass": true
+    },
+    {
+      "name": "Adhara costs and its banished physical target remain distinct for controller 1",
+      "pass": true
+    },
+    {
+      "name": "Adhara target leaving and returning does not restore its activation relation (QA movement)",
+      "pass": true
+    },
+    {
+      "name": "Vishuda pays before a Compulsory removes its fixed target and does not retarget",
+      "pass": true
+    },
+    {
+      "name": "Shaman targets before a real separate hand discard and Crow removes that exact GY target",
+      "pass": true
+    },
+    {
+      "name": "Normal Gazelle opens its optional field trigger once, then Ash negates only that link for controller 0",
+      "pass": true
+    },
+    {
+      "name": "Normal Gazelle opens its optional field trigger once, then Ash negates only that link for controller 1",
+      "pass": true
+    },
+    {
+      "name": "Balelynx search is a proper optional on-Link trigger with resolution Deck selection",
+      "pass": true
+    },
+    {
+      "name": "Spinny discard fixes its target at activation, boosts only at resolution and can revive in a separate effect for controller 0",
+      "pass": true
+    },
+    {
+      "name": "Spinny discard fixes its target at activation, boosts only at resolution and can revive in a separate effect for controller 1",
+      "pass": true
+    },
+    {
+      "name": "Ash cannot negate Spinny GY revival and Crow removes the exact source before resolution",
+      "pass": true
+    },
+    {
+      "name": "Spinny discard creates a real Gazelle hand trigger after the chain, then its summon opens the distinct Deck-send batch",
+      "pass": true
+    },
+    {
+      "name": "Sanctuary activation replaces an admitted Field Spell before responses for controller 0",
+      "pass": true
+    },
+    {
+      "name": "Sanctuary activation replaces an admitted Field Spell before responses for controller 1",
+      "pass": true
+    },
+    {
+      "name": "Aleister normal summon uses the existing search trigger without a duplicate priority adapter for controller 0",
+      "pass": true
+    },
+    {
+      "name": "Aleister normal summon uses the existing search trigger without a duplicate priority adapter for controller 1",
+      "pass": true
+    },
+    {
+      "name": "Ignition routes stay inside the acting player Main Phase",
+      "pass": true
+    },
+    {
+      "name": "Fresh replay detects refunded Ash costs, changed physical UIDs and illegal negation target links",
+      "pass": true
+    },
+    {
+      "name": "Legacy family actions remain available with priority mode disabled",
+      "pass": true
+    },
+    {
+      "name": "The full Tenyi route composes separate activations, real Link materials, banish/discard and Adhara recovery",
+      "pass": true
+    },
+    {
+      "name": "The full Salamangreat route reincarnates a genuine Wolf, declines Roar Set and recovers a Spell/Trap at resolution",
+      "pass": true
+    },
+    {
+      "name": "Roar GY Set is a distinct Trap effect, shares its name budget and keeps delayed banish replacement",
+      "pass": true
+    },
+    {
+      "name": "Spirit can negate Roar GY effect activation while Mechaba and Roar cannot treat it as a Trap Card activation",
+      "pass": true
+    },
+    {
+      "name": "Expanded source flags preserve technical matching without official certification claims",
+      "pass": true
+    },
+    {
+      "name": "Wolf observes a real normal arrival, recovers FIRE without targeting and applies the named summon lock for controller 0",
+      "pass": true
+    },
+    {
+      "name": "Wolf observes a real normal arrival, recovers FIRE without targeting and applies the named summon lock for controller 1",
+      "pass": true
+    },
+    {
+      "name": "Wolf FIRE recovery selects among the current GY after Crow removes an earlier candidate",
+      "pass": true
+    }
+  ],
+  "witnesses": [
+    {
+      "steps": 8,
+      "types": [
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "steps": 8,
+      "types": [
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "steps": 6,
+      "types": [
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "steps": 6,
+      "types": [
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "steps": 8,
+      "types": [
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "steps": 8,
+      "types": [
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "steps": 10,
+      "types": [
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "steps": 9,
+      "types": [
+        "DUEL_EXPANDED_NORMAL_SUMMON",
+        "TRIGGER_ORDER_ACTIVATE",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "steps": 6,
+      "types": [
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "steps": 6,
+      "types": [
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "steps": 8,
+      "types": [
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "steps": 8,
+      "types": [
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "steps": 6,
+      "types": [
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "steps": 6,
+      "types": [
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "steps": 8,
+      "types": [
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "steps": 8,
+      "types": [
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "steps": 9,
+      "types": [
+        "DUEL_EXPANDED_NORMAL_SUMMON",
+        "TRIGGER_ORDER_ACTIVATE",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "steps": 9,
+      "types": [
+        "DUEL_EXPANDED_NORMAL_SUMMON",
+        "TRIGGER_ORDER_ACTIVATE",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "steps": 10,
+      "types": [
+        "DUEL_EXPANDED_NORMAL_SUMMON",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "SALAMANGREAT_LINK_BALELYNX",
+        "TRIGGER_ORDER_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "steps": 12,
+      "types": [
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "steps": 12,
+      "types": [
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "steps": 8,
+      "types": [
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "steps": 14,
+      "types": [
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "TRIGGER_ORDER_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "TRIGGER_ORDER_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "steps": 6,
+      "types": [
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "steps": 6,
+      "types": [
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "steps": 7,
+      "types": [
+        "DUEL_EXPANDED_NORMAL_SUMMON",
+        "TRIGGER_ORDER_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "steps": 7,
+      "types": [
+        "DUEL_EXPANDED_NORMAL_SUMMON",
+        "TRIGGER_ORDER_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "steps": 8,
+      "types": [
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "steps": 33,
+      "types": [
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "TENYI_LINK_MONK",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "TENYI_LINK_SHAMAN",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "TENYI_LINK_BERSERKER",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "steps": 45,
+      "types": [
+        "DUEL_EXPANDED_NORMAL_SUMMON",
+        "TRIGGER_ORDER_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "SALAMANGREAT_LINK_BALELYNX",
+        "TRIGGER_ORDER_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "SALAMANGREAT_LINK_WOLF",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "SALAMANGREAT_REINCARNATE_WOLF",
+        "TRIGGER_ORDER_DECLINE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "steps": 42,
+      "types": [
+        "DUEL_EXPANDED_NORMAL_SUMMON",
+        "TRIGGER_ORDER_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "SALAMANGREAT_LINK_BALELYNX",
+        "TRIGGER_ORDER_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "SALAMANGREAT_LINK_WOLF",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "SALAMANGREAT_REINCARNATE_WOLF",
+        "TRIGGER_ORDER_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "steps": 44,
+      "types": [
+        "DUEL_EXPANDED_NORMAL_SUMMON",
+        "TRIGGER_ORDER_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "SALAMANGREAT_LINK_BALELYNX",
+        "TRIGGER_ORDER_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "SALAMANGREAT_LINK_WOLF",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "SALAMANGREAT_REINCARNATE_WOLF",
+        "TRIGGER_ORDER_ACTIVATE",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "steps": 7,
+      "types": [
+        "DUEL_EXPANDED_NORMAL_SUMMON",
+        "TRIGGER_ORDER_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "steps": 7,
+      "types": [
+        "DUEL_EXPANDED_NORMAL_SUMMON",
+        "TRIGGER_ORDER_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "steps": 9,
+      "types": [
+        "DUEL_EXPANDED_NORMAL_SUMMON",
+        "TRIGGER_ORDER_ACTIVATE",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    }
+  ],
+  "limitations": [
+    "Technical card/source snapshots do not authenticate official TCG rules.",
+    "QA movements are mutation probes, not legal-history witnesses.",
+    "Bounded registered adapters only; no arbitrary card-text execution or generic unknown-handler support."
+  ]
+}
+

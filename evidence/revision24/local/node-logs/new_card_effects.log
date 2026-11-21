@@ -1,0 +1,93 @@
+{
+  "schema": "ygo-new-registered-card-effects/v1",
+  "pass": true,
+  "total": 21,
+  "tests": [
+    {
+      "name": "Gazelle hand opportunity is created by a real Salamangreat send and uses separate hard limits",
+      "pass": true
+    },
+    {
+      "name": "A declared old Salamangreat GY card does not manufacture a Gazelle trigger",
+      "pass": true
+    },
+    {
+      "name": "Gazelle does not trigger from its own name being sent to GY",
+      "pass": true
+    },
+    {
+      "name": "Gazelle hand trigger is excluded from a destruction during the Damage Step",
+      "pass": true
+    },
+    {
+      "name": "Balelynx replacement is optional and protects without preventing battle damage",
+      "pass": true
+    },
+    {
+      "name": "Declining Balelynx keeps it in GY and destroys the physical target",
+      "pass": true
+    },
+    {
+      "name": "Balelynx cannot protect an unrelated Normal monster or use an invented GY source",
+      "pass": true
+    },
+    {
+      "name": "Shthana banishes a real hand cost, revives the destroyed non-Effect and may destroy an enemy",
+      "pass": true
+    },
+    {
+      "name": "Shthana may revive without destroying and cannot reuse the effect",
+      "pass": true
+    },
+    {
+      "name": "Spirit negates Shthana activated in GY after its real banish cost",
+      "pass": true
+    },
+    {
+      "name": "Spirit cannot negate Shthana activated in hand merely because its cost leaves that hand",
+      "pass": true
+    },
+    {
+      "name": "Improperly summoned Extra Deck monsters are not manufactured as legal Shthana targets",
+      "pass": true
+    },
+    {
+      "name": "Roar negates a registered monster activation, destroys its source and consumes its shared use",
+      "pass": true
+    },
+    {
+      "name": "Roar requires a previous-turn Set and a controlled Salamangreat Link",
+      "pass": true
+    },
+    {
+      "name": "Roar cannot spend a second effect after its GY Set shared use",
+      "pass": true
+    },
+    {
+      "name": "Roar negates all three admitted Normal Spell cards without moving their effect materials",
+      "pass": true
+    },
+    {
+      "name": "Roar cannot respond to Invocation Spell effect activated in GY",
+      "pass": true
+    },
+    {
+      "name": "Roar negates and destroys a Gazelle still in hand without consuming a Normal Summon",
+      "pass": true
+    },
+    {
+      "name": "Gazelle hand and on-summon triggers preserve the opponent actor outside their turn",
+      "pass": true
+    },
+    {
+      "name": "A real Shaman restriction removes an otherwise physical Mechaba response and rejects a forged option",
+      "pass": true
+    },
+    {
+      "name": "Fresh replay rejects tampered Shthana costs and replacement sources",
+      "pass": true
+    }
+  ],
+  "scope": "Actual Gazelle send triggers, Shthana destruction triggers, Balelynx replacement, registered Roar activation packets; not all card effects."
+}
+

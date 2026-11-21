@@ -1,0 +1,134 @@
+{
+  "schema": "ygo-metalfoes-effects-tests/v1",
+  "pass": true,
+  "total": 30,
+  "tests": [
+    {
+      "name": "Immutable catalogue supplies real vanilla recipes and explicit coverage bounds",
+      "pass": true
+    },
+    {
+      "name": "Hand Fusion and physical materials resolve for either player 0",
+      "pass": true
+    },
+    {
+      "name": "Hand Fusion and physical materials resolve for either player 1",
+      "pass": true
+    },
+    {
+      "name": "Field Pendulum Fusion material reaches witnessed face-up Extra while hand material reaches GY",
+      "pass": true
+    },
+    {
+      "name": "A Normal Fusion Set this turn activates and Crimsonite uses three distinct real materials",
+      "pass": true
+    },
+    {
+      "name": "Recipe thresholds, material multiplicity and unfamiliar effect monsters cannot be bypassed",
+      "pass": true
+    },
+    {
+      "name": "Activation-negated Fusion preserves every material and pays the real Mechaba Spell cost",
+      "pass": true
+    },
+    {
+      "name": "Fusion GY shuffle remains a resolution effect and unknown draw stays explicitly pending",
+      "pass": true
+    },
+    {
+      "name": "Crow moving the GY Fusion before resolution prevents shuffle and draw",
+      "pass": true
+    },
+    {
+      "name": "Activation-negated GY Fusion consumes shared use across two copies and never shuffles as cost",
+      "pass": true
+    },
+    {
+      "name": "Counter responds to own destruction and selects a Deck monster at resolution 0",
+      "pass": true
+    },
+    {
+      "name": "Counter responds to own destruction and selects a Deck monster at resolution 1",
+      "pass": true
+    },
+    {
+      "name": "Counter cannot activate for opponent-only destruction or a Trap Set this turn",
+      "pass": true
+    },
+    {
+      "name": "Counter opportunity expires after its destruction response window is passed",
+      "pass": true
+    },
+    {
+      "name": "Counter GY recovery bans itself as cost, chooses at resolution and has no once-per-turn",
+      "pass": true
+    },
+    {
+      "name": "Counter recovery activation-negation retains its physical banish cost",
+      "pass": true
+    },
+    {
+      "name": "Established Combination targets a lower-Level GY monster after actual Fusion and revives it",
+      "pass": true
+    },
+    {
+      "name": "Combination CL2 establishes before Fusion CL1 and its later trigger remains delayed",
+      "pass": true
+    },
+    {
+      "name": "Combination activated after Fusion cannot reuse the passed Fusion event",
+      "pass": true
+    },
+    {
+      "name": "Combination offers no revival when its only GY Metalfoes exceeds the Fusion Level",
+      "pass": true
+    },
+    {
+      "name": "Crow removing Combination fixed GY target prevents revival without retargeting",
+      "pass": true
+    },
+    {
+      "name": "Ash can negate the GY draw effect while preserving shared use and leaving shuffle unpaid",
+      "pass": true
+    },
+    {
+      "name": "Simultaneous battle destruction enables each previous controller Counter in one response chain",
+      "pass": true
+    },
+    {
+      "name": "Ash negates Counter Deck summon while its physical Normal Trap still cleans up",
+      "pass": true
+    },
+    {
+      "name": "Scale destroying established Combination queues its genuine GY search after the chain",
+      "pass": true
+    },
+    {
+      "name": "Scale destruction lets Counter respond after Combination delayed search is ordered",
+      "pass": true
+    },
+    {
+      "name": "Combination revival consumes its field-stay use and a second Fusion cannot revive again",
+      "pass": true
+    },
+    {
+      "name": "Negating the Combination card activation creates neither false GY search nor Counter destruction",
+      "pass": true
+    },
+    {
+      "name": "A Trap Set this turn cannot establish Combination",
+      "pass": true
+    },
+    {
+      "name": "Replay rejects changed material identity, summon recipe, paid cost and event provenance",
+      "pass": true
+    }
+  ],
+  "limitations": [
+    "Four reviewed Normal Metalfoes selections and two genuine effectless Fusion recipes; other Metalfoes monsters/effects remain outside scope.",
+    "Fusion GY shuffle-then-unknown-draw remains a pending ordinary resolution and never chooses an invented observed top card.",
+    "Counter battle destruction uses the existing atomic reviewed battle path; explicit Damage Step Counter activation is not claimed.",
+    "Declared initial placements are assumptions; only executed transitions and fresh replay are witnessed."
+  ]
+}
+

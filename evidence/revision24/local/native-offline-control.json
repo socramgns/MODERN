@@ -1,0 +1,45 @@
+{
+  "schema": "ygo-browser-offline-control/v1",
+  "pass": true,
+  "checks": [
+    {
+      "name": "online_control_returns_real_server_sentinel",
+      "pass": true
+    },
+    {
+      "name": "online_control_reached_server_once",
+      "pass": true
+    },
+    {
+      "name": "unintercepted_http_request_fails_with_internet_disconnected",
+      "pass": true
+    },
+    {
+      "name": "blocked_request_never_reached_real_server",
+      "pass": true
+    },
+    {
+      "name": "restored_control_returns_real_server_sentinel",
+      "pass": true
+    },
+    {
+      "name": "restored_document_reports_online",
+      "pass": true
+    },
+    {
+      "name": "exactly_two_real_server_requests_received",
+      "pass": true
+    }
+  ],
+  "executable": "/usr/bin/chromium",
+  "engineVersion": "154.0.8037.57",
+  "onlineNavigator": true,
+  "navigatorBeforeOfflineRequest": false,
+  "offlineNavigationError": "Page.goto: net::ERR_INTERNET_DISCONNECTED at http://127.0.0.1:35141/r23-control?phase=offline&nonce=ddd0137d8299460aadf19c0dc4125bca\nCall log:\n  - navigating to \"http://127.0.0.1:35141/r23-control?phase=offline&nonce=ddd0137d8299460aadf19c0dc4125bca\", waiting until \"domcontentloaded\"\n",
+  "restoredNavigator": true,
+  "serverRequests": [
+    "/r23-control?phase=online&nonce=ddd0137d8299460aadf19c0dc4125bca",
+    "/r23-control?phase=restored&nonce=ddd0137d8299460aadf19c0dc4125bca"
+  ],
+  "serverRequestCount": 2
+}

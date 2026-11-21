@@ -1,0 +1,85 @@
+{
+  "schema": "ygo-registered-response-chain-regression/v1",
+  "pass": true,
+  "total": 18,
+  "tests": [
+    {
+      "name": "Capabilities expose registered chain providers and bounded scope",
+      "pass": true
+    },
+    {
+      "name": "Roar can counter Mechaba, preserving its physical cost and resolving the original Spark effect",
+      "pass": true
+    },
+    {
+      "name": "Registered chain resolution is LIFO and precedes original effect resolution",
+      "pass": true
+    },
+    {
+      "name": "Declining the optional counter keeps the previous Mechaba transition unchanged",
+      "pass": true
+    },
+    {
+      "name": "FIRST_ELIGIBLE can force the first opposing response while retaining explicit own counter choices",
+      "pass": true
+    },
+    {
+      "name": "Roar set this turn cannot join a response chain",
+      "pass": true
+    },
+    {
+      "name": "Roar needs a real Salamangreat Link controlled by its player",
+      "pass": true
+    },
+    {
+      "name": "The same physical chain works in Battle Phase without inferring Damage Step",
+      "pass": true
+    },
+    {
+      "name": "A second Roar can counter the first Roar, restoring Mechaba resolution in reverse order",
+      "pass": true
+    },
+    {
+      "name": "Forged counter source, target, actor and spell-speed claims are rejected atomically",
+      "pass": true
+    },
+    {
+      "name": "Fresh replay rejects altered nested controls, paid cost, resolution order and packet identity",
+      "pass": true
+    },
+    {
+      "name": "Balelynx does not protect a Trap Card whose activation has been negated",
+      "pass": true
+    },
+    {
+      "name": "Negating Mechaba restores a Normal Spell card activation, its real Fusion and normal cleanup",
+      "pass": true
+    },
+    {
+      "name": "Counter Trap Roar can itself be countered by another physical Roar",
+      "pass": true
+    },
+    {
+      "name": "Activation-negated Mechaba surviving Spark retains its used effect and paid cost",
+      "pass": true
+    },
+    {
+      "name": "Activation-negated Spark surviving Azure protection retains its used effect",
+      "pass": true
+    },
+    {
+      "name": "Negated Roar still consumes its explicitly shared use limit",
+      "pass": true
+    },
+    {
+      "name": "Activation-negated Mirrorjade surviving Spark retains its use and only the actually paid Fusion cost",
+      "pass": true
+    }
+  ],
+  "limitations": [
+    "Only providers explicitly registered for immediate alternating response packets can extend a chain.",
+    "This is not arbitrary priority, SEGOC or Damage Step certification.",
+    "Maximum three counter-responses; unsupported responses are not inferred."
+  ]
+}
+

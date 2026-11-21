@@ -1,84 +1,81 @@
-# Estado del proyecto · revisión 23
+# Estado del proyecto · revisión 24
 
-La entrega continúa en un único HTML sin comprimir. [Descargar el candidato aceptado R23](https://github.com/socramgns/MODERN/raw/c9537266d03535c305cb8e882c09be1a81376669/Analizador_YuGiOh.html?download=1).
+[Descargar el candidato aceptado R24](https://github.com/socramgns/MODERN/raw/9977424e6bacee97dc607fa94cd894c46d3db557/Analizador_YuGiOh.html?download=1). La entrega sigue siendo un HTML único con sus datos y motor incorporados.
 
-La aceptación de R23 corresponde al candidato `c9537266d03535c305cb8e882c09be1a81376669` y al [workflow remoto](https://github.com/socramgns/MODERN/actions/runs/44686493687). Pasaron los diez pasos obligatorios, incluida la batería de **88 grupos** y la puerta adicional entre motores. El runner versionado contiene 86 comandos más sintaxis y conservación del artefacto. La anotación pública compacta `R23_CI_RESULT` declara 88 grupos sin fallos y vincula build, SHA-256 del HTML, commit y ejecución; se contrasta con ese contrato y los estados remotos. CI utiliza la imagen oficial de Playwright 1.62.0 fijada por digest y verifica el arranque real, título y versión de Chromium, Firefox y WebKit, además de sus preparaciones idempotentes. La puerta estricta exige al menos dos motores ejecutados y éxito en todos los ejecutados; la cobertura se interpreta junto a esos tres arranques y el bucle de motores del runner. No se descargaron el informe completo remoto ni los JSON de sus filas individuales: se conserva el resumen compacto y el SHA-256 anunciado del informe completo, sin afirmar que ese hash se recomputó sobre bytes descargados. El resumen móvil focal se registra por separado.
+La aceptación corresponde al commit `9977424e6bacee97dc607fa94cd894c46d3db557` y al [workflow remoto](https://github.com/socramgns/MODERN/actions/runs/44848581354). Build `2d7de2e019f18f6524de0f72d8575ec12a981d145e360cd897397b2680a8c0c7`; SHA-256 del HTML `0d955d44e782d57db880a68b2dac80ad288172e570da647e6753cc8d1f6eb63c`; **7.546.537 bytes**, **135 archivos JavaScript** y **32 ejemplos**.
 
-Build `ad379fc6b8cddeaff64a1895a2eb97fed493b037a7e725a3bd9681a185d94a64`; SHA-256 del HTML `017f4cd81211d2be486c6634e876254fe6dc2225e6419c02e459d69ea7022c9e`; **7.435.430 bytes**, **131 archivos JavaScript** y **28 ejemplos**. La descarga inmutable del candidato dio HTTP 200 y coincidió exactamente con el HTML de Git, raíz y `dist`.
+La aceptación completa procede del CI remoto: **95/95 grupos**, con 93 comandos más sintaxis y conservación del artefacto. Se observaron el resumen público compacto `R24_CI_RESULT`, vinculado al commit, ejecución, build y SHA-256, y los estados satisfactorios de los diez pasos obligatorios. No se descargaron el informe remoto completo ni los JSON de sus filas individuales; el hash anunciado del informe completo no se presenta como recomputado sobre bytes descargados.
 
-El candidato anterior `7b34e2075579771064a18d06d188dc018ba4e0b3` falló 87/88 grupos remotos; la cifra se infiere de la anotación pública de grupos fallidos y el runner de 88 grupos, sin reconstruir un JSON completo. Ese artefacto y su evidencia son históricos. Su ejecución local completa se interrumpió por la reconexión del entorno al llegar a `release17_in_browser`; no se recuperó un informe final único. Se conservan por separado el registro original de un prefijo de **58 comandos** y una reanudación de **28 comandos**. La reanudación terminó con `pass:false` por `mobile_accessibility`, al faltar WebKit local. No se combinan ambos registros para atribuir un resultado global a una batería local completa. Los fallos originales y sus seguimientos permanecen identificados. No se ejecutó ni se atribuye una batería local completa nueva al HTML con el CSS corregido.
+La puerta estricta exige al menos dos motores ejecutados y éxito en todos los ejecutados. Además, un paso distinto del workflow exige tres arranques reales —Chromium, Firefox y WebKit— y comprueba título y versión de cada navegador; pasaron ese paso y las tres preparaciones. Estas afirmaciones combinan el código versionado con los estados remotos observados; no implican haber recuperado cada informe individual de motor.
 
-El HTML aprobó **42/42 comprobaciones GUI** y **24/24 comprobaciones nuevas de accesibilidad automatizada** en ejecuciones nuevas con el helper de conexión nativa revisado, sobre el mismo build y SHA-256 que el candidato aceptado. Los informes GUI/accesibilidad anteriores permanecen archivados y no se presentan como ejecuciones de ese helper. Una ejecución móvil focal anterior de Chromium y WebKit informó **35/35** sobre los mismos bytes: se observaron su resumen de anotación y las etapas del trabajo; el HTML y su propio archivo de pruebas móvil permanecen idénticos. La comparación de los scripts GUI importados delimita sus cambios al import y a la fábrica de página del helper; no se descargó el JSON de las 35 filas móviles individuales. Los **206 casos de las siete suites Node** y los seguimientos de Azure (**74 casos**) y Campo (**39 casos**) conservan sus informes originales de máquina virtual de fuente. La aplicación sólo difiere en CSS de presentación y sus archivos Node de prueba siguen idénticos; los 22 scripts GUI tienen el cambio de preparación de página verificado por separado. El runner, sus argumentos URL, presupuestos y aserciones permanecen intactos. Los registros originales no se relabelan ni se atribuyen a una ejecución con el helper nuevo, y no se suman como una batería local completa.
+La comprobación focal GUI pasó **28/28**, sobre los bytes entregados exactos, sin inyectar módulos de fuente. Sus páginas usan interceptación de rutas y el helper nativo sin conexión; no acredita por sí sola navegación `file://`, tecnologías de asistencia ni equipos físicos. La batería Node de fuente pasó **51/51 grupos**, ligada al candidato y con igualdad de fuentes/pruebas comprobada antes y después. Ambos registros son independientes: no se suman como una ejecución local completa de los 95 grupos.
 
-Las comprobaciones GUI actuales entregan los bytes exactos por interceptación de rutas y mantienen el contexto nativo sin conexión. El helper aplica además el comando oficial CDP al crear la página y al confirmar el marco principal para conservar el estado que comunica el motor; no sustituye propiedades JavaScript. Una comprobación previa obligatoria verifica una petición HTTP real, su fallo sin conexión y su restauración, sin interceptar esa petición de control. El fallo histórico de navegación `file://` en Chromium, atribuido a la política de aquel entorno, se conserva por separado; estas GUI no acreditan una prueba nueva de archivo local en Chromium. La entrega directa mediante Firefox pertenece al comando obligatorio del runner remoto aceptado; no se presenta como inspección de su JSON individual. No se eludieron políticas del navegador.
+La descarga inmutable dio HTTP 200 y coincidió con los bytes comprometidos, el HTML de la raíz y el de `dist`. La evidencia y sus ámbitos se consultan en [el índice actual](../evidence/README.md).
 
 ## Lista de aceptación del alcance operativo
 
-Se mantienen las definiciones y el peso de los 32 criterios originales. **27/32 están verificados y cinco pendientes: 84,375 % del listado operativo sin ponderar.** R23 cierra C18, C19, C20, C23, C24, C25 y C26 para los perfiles y dominios declarados. Este cociente no mide esfuerzo, tiempo pendiente, todas las cartas ni todas las reglas de Yu-Gi-Oh.
+Se conservan las 32 definiciones originales: **27/32 verificadas y cinco pendientes (84,375 % del listado operativo sin ponderar)**. C27–C31 permanecen abiertos. Este cociente no mide todas las cartas o reglas del juego, esfuerzo, tiempo restante ni una tasa de victoria.
 
-RESUMEN_CRITERIOS_R23: 27 de 32 criterios verificados (84,375 % del listado), cinco pendientes. Se incorporan C18, C19, C20, C23, C24, C25 y C26 para perfiles registrados.
+RESUMEN_CRITERIOS_R24: 27 de 32 criterios verificados (84,375 % del listado), cinco pendientes. Las definiciones y el peso no cambian; R24 amplía perfiles dentro del dominio declarado.
 
 | ID | Entregable | Criterio de aceptación | Estado |
 | --- | --- | --- | --- |
-| C01 | Entrega HTML única | Abrir el archivo sin instalación; catálogo y cálculo incorporados. | VERIFICADO_R23 |
-| C02 | Compilación y descarga | Build reproducible, hash del HTML y bytes publicados/descargados iguales. | VERIFICADO_R23 |
-| C03 | Catálogo técnico | Fuente CDB fijada, integridad y procedencia contrastadas; incertidumbre explícita. | VERIFICADO_R23 |
-| C04 | Editor y construcción | Main, Extra, Side y Skills conservan cantidades y validación de construcción por formato. | VERIFICADO_R23 |
-| C05 | Importación | JSON/YDK y escenarios físicos se importan con validación y rechazo de entradas inválidas. | VERIFICADO_R23 |
-| C06 | Exportación | JSON/YDK e informes conservan lo que admite cada formato; las limitaciones de YDK se indican. | VERIFICADO_R23 |
-| C07 | Estadísticas | Cálculos base verificados y estadísticas desconocidas diferenciadas de cero y variable. | VERIFICADO_R23 |
-| C08 | Probabilidad inicial | Probabilidades y muestreo de mano inicial con supuestos, semilla y límites explícitos. | VERIFICADO_R23 |
-| C09 | Estado físico y costes | UID, propietario/controlador, inventario, costes y presupuestos se conservan en paquetes registrados. | VERIFICADO_R23 |
-| C10 | Búsqueda y replay | Búsqueda acotada y reproducción desde el origen rechazan costes/estados/historias falsificados. | VERIFICADO_R23 |
-| C11 | Seis rutas de familias | Los seis ejemplos de familias registradas alcanzan sus objetivos y se reproducen; no todas sus cartas. | VERIFICADO_R23 |
-| C12 | Spark y Azure | Synchro real, protección, historial, Reborn y ventanas registradas con sus restricciones. | VERIFICADO_R23 |
-| C13 | Spirit | Negación GY y resurrección de Spirit Link conservan costes, origen, uso y restricción continua. | VERIFICADO_R23 |
-| C14 | Sunlight Wolf | Geometría declarada, recuperación no dirigida, historial, usos por jugador y bloqueos de nombre. | VERIFICADO_R23 |
-| C15 | Tres motores y archivo local | CI completo y comprobación entre Chromium/Firefox/WebKit; entrega por archivo local verificada. | VERIFICADO_R23 |
-| C16 | Albaz al invocarse Normal | Descarte real y Fusión a perfiles Lubellion/Mirrorjade usando el propio Albaz y un material rival admitido. | VERIFICADO_R23 |
-| C17 | Albaz tras Reborn | Llegada real desde GY, propietario conservado, disparo pertinente, coste/negación/HOPT y replay. | VERIFICADO_R23 |
-| C18 | Prioridad y cadenas generales | Componer activaciones y respuestas generales de los perfiles revisados con controles de prioridad. | VERIFICADO_R23 |
-| C19 | Efectos simultáneos generales | Registrar SEGOC y cadenas conjuntas de ambos jugadores, además de declinaciones explícitas. | VERIFICADO_R23 |
-| C20 | Damage Step completo | Ventanas, respuestas y efectos pertinentes de los perfiles revisados se modelan explícitamente. | VERIFICADO_R23 |
-| C21 | Flip | Invocación por Volteo y efectos Flip con sus oportunidades, costes y respuestas. | VERIFICADO_R23 |
-| C22 | Ataques múltiples | Presupuestos de ataques adicionales, objetivos y cambios de estado para perfiles registrados. | VERIFICADO_R23 |
-| C23 | Xyz | Procedimiento, rangos, materiales superpuestos, costes y consecuencias de perfiles revisados. | VERIFICADO_R23 |
-| C24 | Péndulo | Escalas, espacios y llegadas simultáneas desde mano/Extra para perfiles revisados. | VERIFICADO_R23 |
-| C25 | Varios robos inciertos | Probabilidades conjuntas con varios eventos de azar, testigos, pesos y masa desconocida. | VERIFICADO_R23 |
-| C26 | Decisiones rivales | Ampliar decisiones dentro de rutas probabilísticas, más allá de los paquetes y políticas actuales. | VERIFICADO_R23 |
+| C01 | Entrega HTML única | Abrir el archivo sin instalación; catálogo y cálculo incorporados. | VERIFICADO_R24 |
+| C02 | Compilación y descarga | Build reproducible, hash del HTML y bytes publicados/descargados iguales. | VERIFICADO_R24 |
+| C03 | Catálogo técnico | Fuente CDB fijada, integridad y procedencia contrastadas; incertidumbre explícita. | VERIFICADO_R24 |
+| C04 | Editor y construcción | Main, Extra, Side y Skills conservan cantidades y validación de construcción por formato. | VERIFICADO_R24 |
+| C05 | Importación | JSON/YDK y escenarios físicos se importan con validación y rechazo de entradas inválidas. | VERIFICADO_R24 |
+| C06 | Exportación | JSON/YDK e informes conservan lo que admite cada formato; las limitaciones de YDK se indican. | VERIFICADO_R24 |
+| C07 | Estadísticas | Cálculos base verificados y estadísticas desconocidas diferenciadas de cero y variable. | VERIFICADO_R24 |
+| C08 | Probabilidad inicial | Probabilidades y muestreo de mano inicial con supuestos, semilla y límites explícitos. | VERIFICADO_R24 |
+| C09 | Estado físico y costes | UID, propietario/controlador, inventario, costes y presupuestos se conservan en paquetes registrados. | VERIFICADO_R24 |
+| C10 | Búsqueda y replay | Búsqueda acotada y reproducción desde el origen rechazan costes/estados/historias falsificados. | VERIFICADO_R24 |
+| C11 | Seis rutas de familias | Los seis ejemplos de familias registradas alcanzan sus objetivos y se reproducen; no todas sus cartas. | VERIFICADO_R24 |
+| C12 | Spark y Azure | Synchro real, protección, historial, Reborn y ventanas registradas con sus restricciones. | VERIFICADO_R24 |
+| C13 | Spirit | Negación GY y resurrección de Spirit Link conservan costes, origen, uso y restricción continua. | VERIFICADO_R24 |
+| C14 | Sunlight Wolf | Geometría declarada, recuperación no dirigida, historial, usos por jugador y bloqueos de nombre. | VERIFICADO_R24 |
+| C15 | Tres motores y archivo local | CI completo y comprobación entre Chromium/Firefox/WebKit; entrega por archivo local verificada. | VERIFICADO_R24 |
+| C16 | Albaz al invocarse Normal | Descarte real y Fusión a perfiles Lubellion/Mirrorjade usando el propio Albaz y un material rival admitido. | VERIFICADO_R24 |
+| C17 | Albaz tras Reborn | Llegada real desde GY, propietario conservado, disparo pertinente, coste/negación/HOPT y replay. | VERIFICADO_R24 |
+| C18 | Prioridad y cadenas generales | Componer activaciones y respuestas generales de los perfiles revisados con controles de prioridad. | VERIFICADO_R24 |
+| C19 | Efectos simultáneos generales | Registrar SEGOC y cadenas conjuntas de ambos jugadores, además de declinaciones explícitas. | VERIFICADO_R24 |
+| C20 | Damage Step completo | Ventanas, respuestas y efectos pertinentes de los perfiles revisados se modelan explícitamente. | VERIFICADO_R24 |
+| C21 | Flip | Invocación por Volteo y efectos Flip con sus oportunidades, costes y respuestas. | VERIFICADO_R24 |
+| C22 | Ataques múltiples | Presupuestos de ataques adicionales, objetivos y cambios de estado para perfiles registrados. | VERIFICADO_R24 |
+| C23 | Xyz | Procedimiento, rangos, materiales superpuestos, costes y consecuencias de perfiles revisados. | VERIFICADO_R24 |
+| C24 | Péndulo | Escalas, espacios y llegadas simultáneas desde mano/Extra para perfiles revisados. | VERIFICADO_R24 |
+| C25 | Varios robos inciertos | Probabilidades conjuntas con varios eventos de azar, testigos, pesos y masa desconocida. | VERIFICADO_R24 |
+| C26 | Decisiones rivales | Ampliar decisiones dentro de rutas probabilísticas, más allá de los paquetes y políticas actuales. | VERIFICADO_R24 |
 | C27 | Identidades y propuestas | Revisión documentada de las 98 identidades heredadas y 32 propuestas sin sustituciones silenciosas. | PENDIENTE |
 | C28 | Estadísticas por revisar | Contrastar los 51 monstruos con estadísticas desconocidas mediante fuentes y decisiones documentadas. | PENDIENTE |
 | C29 | Disponibilidad y reglas por formato | Completar pools, fuentes fechadas, Skills/desbloqueos/Legend y reglas particulares anunciadas. | PENDIENTE |
 | C30 | Accesibilidad completa del flujo | Cerrar evaluación de teclado, foco, contraste y tecnologías de asistencia del flujo admitido. | PENDIENTE |
 | C31 | Dispositivos físicos | Registrar pruebas en equipos reales; la emulación y los tres motores no sustituyen esa evidencia. | PENDIENTE |
-| C32 | Puntuación provisional e importador | Mantener puntuación estructural claramente provisional e importador de resultados reales; no exigir calibración que el usuario dejó provisional. | VERIFICADO_R23 |
+| C32 | Puntuación provisional e importador | Mantener puntuación estructural claramente provisional e importador de resultados reales; no exigir calibración que el usuario dejó provisional. | VERIFICADO_R24 |
 
-## Alcance añadido
+## Alcance revisado de R24
 
-| Criterio | Alcance incorporado y sus límites |
+| Perfil añadido en R24 | Comportamiento y límite |
 | --- | --- |
-| C18 · Prioridad | Activaciones y respuestas de adaptadores revisados, elección real de ambos jugadores, costes al activar, dos cesiones y resolución LIFO de un eslabón por paso. No hay activaciones entre eslabones. |
-| C19 · Efectos simultáneos | Cuatro grupos SEGOC, orden dentro del grupo y declinación explícita de opcionales. Los obligatorios de ambos jugadores se conservan; los efectos sin perfil no se inventan. |
-| C20 · Damage Step | Declaración y seis oportunidades explícitas, momentos de respuesta registrados, daño, prevención, FLIP de Faith y salidas al final. Un blanco que sale antes del cálculo no deja el combate bloqueado ni devuelve el ataque gastado. |
-| C23 · Xyz | Gem-Knight Pearl y Number 50: Blackship of Corn con dos Normales de Nivel 4 admitidos, materiales físicos superpuestos, desacople y salida de los materiales cuando deja el campo su anfitrión. |
-| C24 · Péndulo | Goldriver, Silverd, Steelen y Volflame: escalas y efecto revisado para destruir otra carta propia y colocar una carta Metalfoes admitida. Grupos desde mano y Extra boca arriba respetan espacios y flechas revisadas; no se incorporan todos los efectos Péndulo. |
-| C25 · Robos inciertos | De uno a tres eventos cronológicos de robo de turno desconocido, copias sin reemplazo, pesos racionales, testigos y masa desconocida conservada ante límites. |
-| C26 · Decisiones rivales | MAX propio y MIN rival en el dominio de acciones declarado. Usa manos y campos declarados completos después de cada evento; no demuestra una estrategia óptima con información oculta ni una tasa de victoria. |
+| Invocation / Branded / Lubellion | Activación y resolución separadas; materiales elegidos al resolver. Lubellion descarta al activar y aplica las restricciones restantes al resolver sin negación. Branded conserva su restricción distinta de todo el turno. |
+| Tenyi / Salamangreat / Ash | Costes físicos, respuestas por categorías de acceso al Deck expresamente registradas, límites por jugador y disparos SEGOC. No se asigna una respuesta por el nombre de una carta. |
+| Chengying | Reemplazo de destrucción por efecto sin cadena ni límite por turno, con una carta propia GY admitida; protege una copia por elección. Disparo opcional de destierro sin objetivo, una vez por nombre/jugador; elige al resolver y exige ambas zonas rivales disponibles. Excluye Damage Step. |
+| Librarian / Cyber Twin | Synchro de Nivel 5 con exactamente un Cantante Normal y uno o más no Cantantes Normales revisados. Cyber Twin usa exactamente dos Cyber Dragon de la mano mediante Invocation, sin sustitutos. Reborn exige historial apropiado realmente ejecutado. |
+| Metalfoes | Fusion con materiales físicos admitidos para Adamante; Counter y Combination distinguen activación y disparos. Barajar antes de robar mantiene la resolución pendiente si el orden se desconoce; Counter en Damage Step sigue fuera del perfil. |
+| Datos y formatos | Solicitud exacta vinculada a passcodes y copia revisable de datos; correcciones de construcción de los diez formatos. No autentica pools, disponibilidad ni nuevas estadísticas oficiales. |
 
-El catálogo contiene 21.986 registros técnicos; eso no representa 21.986 efectos implementados. Las transiciones fuera de los perfiles revisados se excluyen o conservan como desconocidas. Las búsquedas están acotadas y no prueban optimalidad global. Una colocación inicial es un supuesto explícito y no acredita las invocaciones de turnos anteriores.
+Los costes se pagan una sola vez al activar cuando corresponde; los materiales de Fusión no se confunden con costes. Las cesiones, orden de disparos, elecciones al resolver y negaciones se reproducen desde el origen. Los efectos Mágica/Trampa conservan su tipo: Mechaba y Roar no reciben permiso general para responder a un efecto de una carta ya activa.
 
-Los seis ejemplos nuevos y los modos opcionales se explican en [Uso de reglas R23](USO_REGLAS_REVISION23.md). El modo anterior conserva sus paquetes atómicos registrados; sus descriptores de orden fijo y robo observado no limitan por sí solos las APIs explícitas e hipotéticas añadidas en R23.
+El catálogo conserva 21.986 registros técnicos; ese número no cuenta efectos implementados. Los materiales, restricciones y consecuencias de salida no revisados se excluyen o permanecen desconocidos. Las hipótesis de robo no se convierten en observaciones y un robo tras barajar no inventa una carta. Las búsquedas son acotadas y no prueban optimalidad universal.
 
-## Trabajo pendiente y decisiones conservadas
+## Pendientes y puntuación
 
-Permanecen abiertos C27–C31. Se conservan **98 identidades heredadas**, **51 monstruos con estadísticas desconocidas** y **32 propuestas**, sin sustituciones de identidad o estadísticas por coincidencia de nombre. El expediente de revisión permite aportar y cotejar decisiones, pero no autentica por sí solo documentos oficiales ni modifica silenciosamente el catálogo. Faltan fuentes fechadas y verificadas para disponibilidad, pools y reglas particulares de formato, además de la evaluación completa con tecnologías de asistencia y pruebas en equipos físicos. Las comprobaciones automáticas, emuladas o entre motores no sustituyen esos datos ni esas experiencias.
+Siguen pendientes las **98 identidades heredadas**, las estadísticas de **51 monstruos** y **32 propuestas**, además de fuentes fechadas para disponibilidad, pools, Skills, Legend y reglas particulares de formato. El cotejo técnico nuevo sustentó cero cambios reales de identidad o estadísticas; no se transfieren cifras por nombre. C30 y C31 requieren evaluación real con tecnologías de asistencia y pruebas en dispositivos físicos. La puntuación principal sigue siendo estructural y **provisional por decisión del usuario**; el importador de resultados reales no equivale a calibración competitiva.
 
-La [revisión de datos y formatos](REVISION_DATOS_FORMATOS_R23.md) mantiene la procedencia y los expedientes. El [protocolo de accesibilidad y equipos](PRUEBAS_MANUALES_ACCESIBILIDAD_DISPOSITIVOS_R23.md) está preparado para registrar experiencias reales; una plantilla o un registro NOT_RUN no es una prueba aprobada.
+La [revisión de datos y formatos R24](REVISION_DATOS_FORMATOS_R24.md) conserva consultas fallidas y recibos técnicos; un CONNECT 403 no demuestra contenidos oficiales. [Pendientes R24](ANALISIS_PENDIENTES_REVISION24.md) y el protocolo manual previo delimitan la evidencia externa que falta. Las plantillas y los estados NOT_RUN no son pruebas realizadas.
 
-La puntuación competitiva permanece estructural y **provisional por decisión del usuario**. El importador de resultados reales está preparado. Los ejemplos y diagnósticos no son resultados de torneos ni una calibración competitiva independiente.
+## Evidencia e historia
 
-## Evidencia e historial
+`evidence/release-acceptance.json` vincula la aceptación, `evidence/project-criteria.json` conserva las 32 definiciones y `evidence/revision24/` contiene los documentos de esta revisión. Las referencias fijadas de CardScripts son evidencia técnica secundaria y no se ejecutan en el analizador; no certifican rulings oficiales TCG.
 
-La aceptación está en `evidence/release-acceptance.json`; el listado está en `evidence/project-criteria.json`. El [índice de evidencia](../evidence/README.md) separa el CI completo actual, sus pruebas focales y la evidencia histórica del artefacto anterior fallido. Las [referencias](REFERENCIAS_REGLAS_REVISION23.md) y su [manifiesto](../evidence/revision23/references/manifest.json) son evidencia técnica secundaria.
-
-R22 conserva su [HTML aceptado](https://github.com/socramgns/MODERN/raw/35ad8188207f6a47be47b6bc361a011cf01c948b/Analizador_YuGiOh.html?download=1), su [CI de 79 grupos](https://github.com/socramgns/MODERN/actions/runs/43558962065) y su evidencia original en `evidence/history/revision22-accepted/`. Su informe local histórico permanece `pass:false`, 76/79; no se reescribe como un resultado de R23. También se preservan R20, R21 y los intentos previos de R22 con sus propios vínculos y limitaciones.
+La [documentación R23 aceptada](../evidence/history/revision23-accepted/docs/ESTADO_PROYECTO.md) se archiva sin reescribir sus cifras, resultados o limitaciones. Los intentos históricos fallidos o incompletos mantienen su propia identidad y no se agregan a las pruebas actuales.

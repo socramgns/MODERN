@@ -1,0 +1,83 @@
+{
+  "pass": true,
+  "total": 19,
+  "tests": [
+    {
+      "name": "A declared replay flag cannot replace a fresh verifier",
+      "pass": true
+    },
+    {
+      "name": "Fresh replay, copy conservation and explained resources are required",
+      "pass": true
+    },
+    {
+      "name": "Stronger observed ATK dominates only on the documented comparison vector",
+      "pass": true
+    },
+    {
+      "name": "Identical final states are not manufactured into five distinct lines",
+      "pass": true
+    },
+    {
+      "name": "Stale deck fingerprints and invented physical copies are rejected",
+      "pass": true
+    },
+    {
+      "name": "Matching fingerprint alone cannot hide a forged starting inventory",
+      "pass": true
+    },
+    {
+      "name": "Changing a final state after the prior replay is rejected",
+      "pass": true
+    },
+    {
+      "name": "Response options require current physical source and recomputed eligibility",
+      "pass": true
+    },
+    {
+      "name": "Missing cost/recovery/response evidence prevents an unsupported Pareto verdict",
+      "pass": true
+    },
+    {
+      "name": "Opponent discard costs do not become own player costs",
+      "pass": true
+    },
+    {
+      "name": "Exact multi-card access for disjoint groups matches inclusion-exclusion",
+      "pass": true
+    },
+    {
+      "name": "Overlapping access counts one card in both groups explicitly",
+      "pass": true
+    },
+    {
+      "name": "Distinct physical requirements do not spend one overlap twice",
+      "pass": true
+    },
+    {
+      "name": "Exact event respects upper bounds, missing groups and invalid requests",
+      "pass": true
+    },
+    {
+      "name": "Exact-event complexity limits never return a partial probability",
+      "pass": true
+    },
+    {
+      "name": "Sampled success requires replay, sampled-hand provenance and a named event",
+      "pass": true
+    },
+    {
+      "name": "Unsupported/truncated samples remain unknown in the denominator",
+      "pass": true
+    },
+    {
+      "name": "A line from a different sampled hand cannot count as a positive result",
+      "pass": true
+    },
+    {
+      "name": "Sampling cancellation preserves completed evidence without fabricating trials",
+      "pass": true
+    }
+  ]
+}
+

@@ -1,0 +1,549 @@
+{
+  "schema": "ygo-local-validation-evidence/v1",
+  "pass": false,
+  "completeFullRunnerResult": false,
+  "buildId": "ad379fc6b8cddeaff64a1895a2eb97fed493b037a7e725a3bd9681a185d94a64",
+  "htmlSha256": "017f4cd81211d2be486c6634e876254fe6dc2225e6419c02e459d69ea7022c9e",
+  "scope": "CURRENT_FOCUSED_BYTES_AND_SEPARATE_SOURCE_VM_COMPARISON",
+  "currentFullLocalRun": {
+    "complete": false,
+    "fullRunnerResultAvailable": false,
+    "configuredGroups": 88,
+    "executedForAcceptedArtifact": false,
+    "meaning": "No new complete local runner result is claimed for this accepted CSS artifact."
+  },
+  "historicalPreCssCandidate": {
+    "candidateCommit": "7b34e2075579771064a18d06d188dc018ba4e0b3",
+    "buildId": "bdaf08b1741d9615ab5c81ededfff5b9fd1eba110c0aa25db75fd4b11a44dabd",
+    "htmlSha256": "92cbd3384c3a1807fac9e52fc9abfcc4ecb3cbc21413678e57b2d713ba54cd1b",
+    "accepted": false,
+    "archive": "evidence/history/revision23-pre-css-7b34e207",
+    "failedRemoteCiSummary": "evidence/history/revision23-pre-css-7b34e207/failed-ci-summary.json",
+    "localFullRun": {
+      "complete": false,
+      "fullRunnerResultAvailable": false,
+      "configuredGroups": 88,
+      "completedCommandGroupsBeforeInterruption": 58,
+      "rawLog": "evidence/history/revision23-pre-css-7b34e207/local/full-run.log",
+      "rawLogSha256": "dfa3f74f4985e4bced896e627f6e4d9a57598d89f4f05dc1453e333b23b375a8",
+      "interruptionReceipt": "evidence/history/revision23-pre-css-7b34e207/local/interruption.json"
+    },
+    "resumedLocalCommands": {
+      "complete": true,
+      "pass": false,
+      "commands": 28,
+      "failedCommands": [
+        "mobile_accessibility"
+      ],
+      "report": "evidence/history/revision23-pre-css-7b34e207/local/resumed-validation-summary.json"
+    },
+    "focusedReports": {
+      "gui": {
+        "checks": 42,
+        "path": "evidence/history/revision23-pre-css-7b34e207/gui-followup.json"
+      },
+      "accessibility": {
+        "checks": 24,
+        "path": "evidence/history/revision23-pre-css-7b34e207/accessibility.json"
+      }
+    },
+    "meaning": "These reports validate only the failed pre-CSS artifact; not the accepted CSS bundle."
+  },
+  "sourceVmValidation": {
+    "pass": true,
+    "originalSourceCandidateCommit": "7b34e2075579771064a18d06d188dc018ba4e0b3",
+    "currentSourceCandidateCommit": "c9537266d03535c305cb8e882c09be1a81376669",
+    "bundleFingerprintBound": false,
+    "sourceFilesUnchangedExceptPresentationCss": false,
+    "applicationSourceUnchangedExceptPresentationCss": true,
+    "testCaseAssertionsUnchanged": true,
+    "nodeVmTestFilesUnchanged": true,
+    "testRunnerUnchanged": true,
+    "offlineHarnessOnlyChangeVerified": true,
+    "offlineHarnessComparison": {
+      "pass": true,
+      "originalSourceCandidateCommit": "7b34e2075579771064a18d06d188dc018ba4e0b3",
+      "currentSourceCandidateCommit": "c9537266d03535c305cb8e882c09be1a81376669",
+      "onlyHelperImportAndPageFactoryChanged": true,
+      "changedGuiFiles": 22,
+      "runnerCommandsUnchanged": true,
+      "runnerSha256": "3b2f438c50836531180b8cfba4aeb183dc6921d974912f45e5466757defefa04",
+      "helperPath": "tests/browser_offline.py",
+      "helperSha256": "d8505a6c1ddfb170acc7a6b7c4641723a6681e816d0ea0b283b2d166b59da2f3",
+      "helperSourcePinned": true,
+      "nativeMainFrameCommitHook": true,
+      "javascriptPropertyShadowing": false,
+      "comparisons": [
+        {
+          "path": "tests/accessibility_r23.py",
+          "originalSha256": "2d87762c9884f275f69cab9ea2060f44e9c1bea0d392665c15445fda6702acc8",
+          "currentSha256": "c2660050496cefabdc35e19f8c23d15a26c7ce65ebc4d796b5b1d4ec3921fbd9",
+          "reversedDeltaMatchesOriginalBytes": true
+        },
+        {
+          "path": "tests/accessibility_workflow.py",
+          "originalSha256": "bd22d24b6725b1894a2124d42957700ffa138a7717443d53ff425bf555def9b0",
+          "currentSha256": "682cb8c592b14875bb962d54ae2bf3a24fce321de0c55310edd2f38a24d4f732",
+          "reversedDeltaMatchesOriginalBytes": true
+        },
+        {
+          "path": "tests/expanded_examples_browser.py",
+          "originalSha256": "6f0cb14567cb997dc93d9c550eb2b854c3666e1c915fe6e84caa282e037705ff",
+          "currentSha256": "f51cddd01c7bdc82770ff89470992d6a5bded4432dbb9298132118cd3edb91d9",
+          "reversedDeltaMatchesOriginalBytes": true
+        },
+        {
+          "path": "tests/release10_browser.py",
+          "originalSha256": "ae4217f45f7acdd40a2f878ffa6bd7f5ac095175947303c2d9c9d40df13fc46c",
+          "currentSha256": "18ea6f438783959904a029593f5bdfa6611f0a37ac9a53b316642440f84ad111",
+          "reversedDeltaMatchesOriginalBytes": true
+        },
+        {
+          "path": "tests/release11_browser.py",
+          "originalSha256": "14539ad5725064c6af0925939dc2c35e12aea3888382e3515eff235322ad7523",
+          "currentSha256": "36e5318de80dcf3314e641eee1b015b897c19b1802e6dda8e1a36243988036b2",
+          "reversedDeltaMatchesOriginalBytes": true
+        },
+        {
+          "path": "tests/release12_browser.py",
+          "originalSha256": "4997724b8f7eac0ffadb792a4bfd96773a9cac216e8a7efd5d1d8e0737ecd05d",
+          "currentSha256": "571b2378618413701afdf0d2f9872e8ee90228b32992c1d2ddc5149bf4b95c6a",
+          "reversedDeltaMatchesOriginalBytes": true
+        },
+        {
+          "path": "tests/release13_browser.py",
+          "originalSha256": "cd21e321ebacaaa4b7c57a25be52e4c611faccb644613958598ac518557cec48",
+          "currentSha256": "32a2a4ea528f9289d2861057ed283e9c4aa4a811c169af3af25e9cf0e76ea10f",
+          "reversedDeltaMatchesOriginalBytes": true
+        },
+        {
+          "path": "tests/release14_browser.py",
+          "originalSha256": "dfec5b61bceed6f879252add1f9fa0382b527bb5644efb2cd54948257e7f9399",
+          "currentSha256": "1d9c1a1198ba3287d436afd0cc91a4ca08148b694fafe6aa475bf17938d0ae89",
+          "reversedDeltaMatchesOriginalBytes": true
+        },
+        {
+          "path": "tests/release15_browser.py",
+          "originalSha256": "93f5d58ce6d24f0a4e0ac0b7404facdeb7a7f51fff38365f8061ef90918b14ff",
+          "currentSha256": "6d4892cc3e3993a97e9c9570d6421eb5a71ac28b8d67ab52112fec7b2e30cdd4",
+          "reversedDeltaMatchesOriginalBytes": true
+        },
+        {
+          "path": "tests/release16_browser.py",
+          "originalSha256": "8def443d801c17bea1a697294b44534c5ca080147e011b9e6efa8dbd82660bd6",
+          "currentSha256": "8981df658acab53af868fabfd2796b3bc29027edc9695fdb1ad1401bf7ab53e6",
+          "reversedDeltaMatchesOriginalBytes": true
+        },
+        {
+          "path": "tests/release17_browser.py",
+          "originalSha256": "c50e12322d4ffe1b2d02dda22c13d111700b5b81d641858c66c9f446652c39cc",
+          "currentSha256": "955b690cb587fbd3c10927d7b9f5d78f5191060a46a8bbc9cf76235eb0d50898",
+          "reversedDeltaMatchesOriginalBytes": true
+        },
+        {
+          "path": "tests/release18_browser.py",
+          "originalSha256": "43784b55fb4302e4735b7a1293b60c0233e968d31827ddfa247e171ae808558f",
+          "currentSha256": "4a64998ee9540db85894de33153cc6c684402c30d1a518e7c10393693a493abe",
+          "reversedDeltaMatchesOriginalBytes": true
+        },
+        {
+          "path": "tests/release19_browser.py",
+          "originalSha256": "6cb1d061df57b8689cd34c69666716b28b7218c589fffba453a867016f5e9d4a",
+          "currentSha256": "47e89fccc18e3110f3115ba2a72ee4f09d04fa9c3e2eff50c13363ac453b8d67",
+          "reversedDeltaMatchesOriginalBytes": true
+        },
+        {
+          "path": "tests/release20_browser.py",
+          "originalSha256": "47823fae54886106b84d0d188d2f38b2c1f1a42aafefe21dc5269e7a798acca8",
+          "currentSha256": "1a3bf0365d1cd82036d8e64562dcd594a536ef01631dd63f186707e52e1191df",
+          "reversedDeltaMatchesOriginalBytes": true
+        },
+        {
+          "path": "tests/release21_browser.py",
+          "originalSha256": "39bbb647514987560ef22f6fa5ee6ecf2e8b93b0babeda816f0fd183c2992bfa",
+          "currentSha256": "2b68e876b5472ac627e1c9ec9a05d9443d870553f52f4ed35e4380c7393b5f9b",
+          "reversedDeltaMatchesOriginalBytes": true
+        },
+        {
+          "path": "tests/release22_browser.py",
+          "originalSha256": "31d8dd9d935b502a75f733a367e24c0b36834bbfa36c1a48755ed42e809b3438",
+          "currentSha256": "6ed6a83fbd717aaf727829058ddd80c57bc4a8de11839850706af6e777d9a2fe",
+          "reversedDeltaMatchesOriginalBytes": true
+        },
+        {
+          "path": "tests/release23_browser.py",
+          "originalSha256": "3f6816a8dd4fe0b14dde91aead5e677164c26c4c85c563b1d895089541639ea7",
+          "currentSha256": "0cbe58a6232c22a986f8f4e09dde909ecc8f6df5f433b0a048652e40bdd68d8a",
+          "reversedDeltaMatchesOriginalBytes": true
+        },
+        {
+          "path": "tests/release5_browser.py",
+          "originalSha256": "fb9add111dd6d799859b1ed05ca30ed451ef129cf1cbf10136196ad5b3676692",
+          "currentSha256": "87f5de399a507f547044472c6311f3bcb8b48a96749fee26cff8d12007c07606",
+          "reversedDeltaMatchesOriginalBytes": true
+        },
+        {
+          "path": "tests/release6_browser.py",
+          "originalSha256": "56cb39f63f22edf7324d48cf19ea4130f35833eaf0c6dde5fd36ef820becca10",
+          "currentSha256": "78b7587c10b113ebf63856fe74914ce3c4f5aca4d9194ddb010e9fd93e20a6cf",
+          "reversedDeltaMatchesOriginalBytes": true
+        },
+        {
+          "path": "tests/release8_browser.py",
+          "originalSha256": "904236a59938c940b279efb7cd6d0d9fb9260bc0c46e4b75287f4f619b629c21",
+          "currentSha256": "d2f47ed3773212c90ca5be6b65a04982f35368251fb38029bfc38058eba433fc",
+          "reversedDeltaMatchesOriginalBytes": true
+        },
+        {
+          "path": "tests/release9_browser.py",
+          "originalSha256": "850b97880475f0868fe79237e212c47b26f9e7bf2d391997f18ac416bb951542",
+          "currentSha256": "87782615b0b78847cdbb059fcd0774db911be6e17ee9262bd60a2cfd9e4c8b92",
+          "reversedDeltaMatchesOriginalBytes": true
+        },
+        {
+          "path": "tests/ux_revision6_browser.py",
+          "originalSha256": "a42bb56fb1afe1b5f470e29d77e96e313b99649db19fa331f9e4f0833aa5b493",
+          "currentSha256": "b3426f54d17b00477afe7ddac8c0a94fc8502810e6d14684af57f99248335161",
+          "reversedDeltaMatchesOriginalBytes": true
+        }
+      ],
+      "meaning": "Only the exact import and primary page-creation pair changed in 22 GUI scripts; reversing those bytes reproduces every original script, including all assertions and URLs."
+    },
+    "presentationCssOnlyChangeVerified": true,
+    "comparedRoots": [
+      "src",
+      "tools",
+      "tests",
+      "manifest.json",
+      "requirements-dev.txt"
+    ],
+    "changedPaths": [
+      "src/app/accessibility.js",
+      "tests/accessibility_r23.py",
+      "tests/accessibility_workflow.py",
+      "tests/browser_offline.py",
+      "tests/expanded_examples_browser.py",
+      "tests/release10_browser.py",
+      "tests/release11_browser.py",
+      "tests/release12_browser.py",
+      "tests/release13_browser.py",
+      "tests/release14_browser.py",
+      "tests/release15_browser.py",
+      "tests/release16_browser.py",
+      "tests/release17_browser.py",
+      "tests/release18_browser.py",
+      "tests/release19_browser.py",
+      "tests/release20_browser.py",
+      "tests/release21_browser.py",
+      "tests/release22_browser.py",
+      "tests/release23_browser.py",
+      "tests/release5_browser.py",
+      "tests/release6_browser.py",
+      "tests/release8_browser.py",
+      "tests/release9_browser.py",
+      "tests/ux_revision6_browser.py"
+    ],
+    "originalPresentationCssSha256": "0c265208c1be56ab771b0cb3f67b3e7c54110a444c633c5e9b275ac29233dea8",
+    "currentPresentationCssSha256": "03da5ac7860a2ae0166860b1c09357ae780f6a44af2c121e62aaacbbe09610b0",
+    "reportsRewrittenOrRelabeled": false,
+    "newNodeCases": {
+      "priority-chain": 34,
+      "trigger-order": 10,
+      "damage-step": 26,
+      "xyz-summon": 33,
+      "pendulum-summon": 34,
+      "draw-sequences": 39,
+      "data-review-r23": 30
+    },
+    "correctedLegacyExpectations": {
+      "azure-eyes": {
+        "pass": true,
+        "cases": 74
+      },
+      "field-spell-activations": {
+        "pass": true,
+        "cases": 39
+      }
+    },
+    "reportsDirectory": "evidence/revision23/source-vm-tests",
+    "meaning": "Original source-VM reports preserved byte-identically; application changes are limited to presentation CSS, every Node/VM test file and the runner are unchanged, and the approved 22 GUI script changes are independently reversed byte-for-byte. No new bundle fingerprint or fresh Node execution is assigned."
+  },
+  "followups": {
+    "gui": {
+      "pass": true,
+      "checks": 42,
+      "buildId": "ad379fc6b8cddeaff64a1895a2eb97fed493b037a7e725a3bd9681a185d94a64",
+      "htmlSha256": "017f4cd81211d2be486c6634e876254fe6dc2225e6419c02e459d69ea7022c9e",
+      "path": "evidence/revision23/native-offline-browser.json"
+    },
+    "accessibility": {
+      "pass": true,
+      "checks": 24,
+      "buildId": "ad379fc6b8cddeaff64a1895a2eb97fed493b037a7e725a3bd9681a185d94a64",
+      "htmlSha256": "017f4cd81211d2be486c6634e876254fe6dc2225e6419c02e459d69ea7022c9e",
+      "path": "evidence/revision23/native-offline-accessibility.json"
+    },
+    "mobileCi": {
+      "schema": "ygo-mobile-focal-ci-observation/v1",
+      "pass": true,
+      "runUrl": "https://github.com/socramgns/MODERN/actions/runs/44437979010",
+      "sourceCommit": "6237e2f4fcb8ca98fc1a9422ea460a1bd14d4436",
+      "cssFixCommit": "6adaea8aa17e66a085d700a13661ddb67e6a86b1",
+      "observedAt": "2026-11-19T01:40:43.082906+00:00",
+      "annotationSummaryObserved": true,
+      "individualRawChecksDownloaded": false,
+      "state": "success",
+      "jobReceipts": [
+        {
+          "path": "evidence/revision23/mobile-ci/44437979010-job-135271519264.html",
+          "url": "https://github.com/socramgns/MODERN/actions/runs/44437979010/job/135271519264",
+          "httpStatus": 200,
+          "sha256": "c670eda327ce7e4e8da55038cc090c54db518b90a219bd7ea8ab0174c2977059",
+          "steps": [
+            {
+              "name": "Set up job",
+              "conclusion": "success"
+            },
+            {
+              "name": "Initialize containers",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-python@v5",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "conclusion": "success"
+            },
+            {
+              "name": "Preparar las dependencias de prueba",
+              "conclusion": "success"
+            },
+            {
+              "name": "Comprobar los navegadores de la imagen oficial",
+              "conclusion": "success"
+            },
+            {
+              "name": "Compilar los bytes que se van a probar",
+              "conclusion": "success"
+            },
+            {
+              "name": "Ejecutar el flujo móvil y el aumento de texto",
+              "conclusion": "success"
+            },
+            {
+              "name": "Publicar el resultado vinculado al HTML",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/setup-python@v5",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "conclusion": "success"
+            },
+            {
+              "name": "Stop containers",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "conclusion": "success"
+            }
+          ],
+          "requiredStepsPassed": true
+        }
+      ],
+      "runReceipt": {
+        "path": "evidence/revision23/mobile-ci/44437979010-run.html",
+        "url": "https://github.com/socramgns/MODERN/actions/runs/44437979010",
+        "httpStatus": 200,
+        "sha256": "1670b779f590a64fcb4af4571e5669b923829a8c3f6afac370a3c339ce6e59ae"
+      },
+      "commitFoundInRun": true,
+      "summaryPath": "evidence/revision23/mobile-ci/annotation-summary.json",
+      "summarySha256": "caab4dd4ec64e798abff0c60e38ec03a51be76459a6a0bb7080d14b04af6e4f4",
+      "summaryScope": "ANNOTATION_DERIVED_FROM_ORIGINAL_TEST_REPORT_NOT_INDIVIDUAL_RAW_CHECK_ROWS",
+      "buildId": "ad379fc6b8cddeaff64a1895a2eb97fed493b037a7e725a3bd9681a185d94a64",
+      "htmlSha256": "017f4cd81211d2be486c6634e876254fe6dc2225e6419c02e459d69ea7022c9e",
+      "checks": 35,
+      "executedEngines": [
+        "chromium",
+        "webkit"
+      ],
+      "failed": [],
+      "summaryPass": true,
+      "candidateHarnessCompatibilityComparison": {
+        "pass": true,
+        "originalSourceCandidateCommit": "6237e2f4fcb8ca98fc1a9422ea460a1bd14d4436",
+        "currentSourceCandidateCommit": "c9537266d03535c305cb8e882c09be1a81376669",
+        "onlyHelperImportAndPageFactoryChanged": true,
+        "changedGuiFiles": 22,
+        "runnerCommandsUnchanged": true,
+        "runnerSha256": "3b2f438c50836531180b8cfba4aeb183dc6921d974912f45e5466757defefa04",
+        "helperPath": "tests/browser_offline.py",
+        "helperSha256": "d8505a6c1ddfb170acc7a6b7c4641723a6681e816d0ea0b283b2d166b59da2f3",
+        "helperSourcePinned": true,
+        "nativeMainFrameCommitHook": true,
+        "javascriptPropertyShadowing": false,
+        "comparisons": [
+          {
+            "path": "tests/accessibility_r23.py",
+            "originalSha256": "2d87762c9884f275f69cab9ea2060f44e9c1bea0d392665c15445fda6702acc8",
+            "currentSha256": "c2660050496cefabdc35e19f8c23d15a26c7ce65ebc4d796b5b1d4ec3921fbd9",
+            "reversedDeltaMatchesOriginalBytes": true
+          },
+          {
+            "path": "tests/accessibility_workflow.py",
+            "originalSha256": "bd22d24b6725b1894a2124d42957700ffa138a7717443d53ff425bf555def9b0",
+            "currentSha256": "682cb8c592b14875bb962d54ae2bf3a24fce321de0c55310edd2f38a24d4f732",
+            "reversedDeltaMatchesOriginalBytes": true
+          },
+          {
+            "path": "tests/expanded_examples_browser.py",
+            "originalSha256": "6f0cb14567cb997dc93d9c550eb2b854c3666e1c915fe6e84caa282e037705ff",
+            "currentSha256": "f51cddd01c7bdc82770ff89470992d6a5bded4432dbb9298132118cd3edb91d9",
+            "reversedDeltaMatchesOriginalBytes": true
+          },
+          {
+            "path": "tests/release10_browser.py",
+            "originalSha256": "ae4217f45f7acdd40a2f878ffa6bd7f5ac095175947303c2d9c9d40df13fc46c",
+            "currentSha256": "18ea6f438783959904a029593f5bdfa6611f0a37ac9a53b316642440f84ad111",
+            "reversedDeltaMatchesOriginalBytes": true
+          },
+          {
+            "path": "tests/release11_browser.py",
+            "originalSha256": "14539ad5725064c6af0925939dc2c35e12aea3888382e3515eff235322ad7523",
+            "currentSha256": "36e5318de80dcf3314e641eee1b015b897c19b1802e6dda8e1a36243988036b2",
+            "reversedDeltaMatchesOriginalBytes": true
+          },
+          {
+            "path": "tests/release12_browser.py",
+            "originalSha256": "4997724b8f7eac0ffadb792a4bfd96773a9cac216e8a7efd5d1d8e0737ecd05d",
+            "currentSha256": "571b2378618413701afdf0d2f9872e8ee90228b32992c1d2ddc5149bf4b95c6a",
+            "reversedDeltaMatchesOriginalBytes": true
+          },
+          {
+            "path": "tests/release13_browser.py",
+            "originalSha256": "cd21e321ebacaaa4b7c57a25be52e4c611faccb644613958598ac518557cec48",
+            "currentSha256": "32a2a4ea528f9289d2861057ed283e9c4aa4a811c169af3af25e9cf0e76ea10f",
+            "reversedDeltaMatchesOriginalBytes": true
+          },
+          {
+            "path": "tests/release14_browser.py",
+            "originalSha256": "dfec5b61bceed6f879252add1f9fa0382b527bb5644efb2cd54948257e7f9399",
+            "currentSha256": "1d9c1a1198ba3287d436afd0cc91a4ca08148b694fafe6aa475bf17938d0ae89",
+            "reversedDeltaMatchesOriginalBytes": true
+          },
+          {
+            "path": "tests/release15_browser.py",
+            "originalSha256": "93f5d58ce6d24f0a4e0ac0b7404facdeb7a7f51fff38365f8061ef90918b14ff",
+            "currentSha256": "6d4892cc3e3993a97e9c9570d6421eb5a71ac28b8d67ab52112fec7b2e30cdd4",
+            "reversedDeltaMatchesOriginalBytes": true
+          },
+          {
+            "path": "tests/release16_browser.py",
+            "originalSha256": "8def443d801c17bea1a697294b44534c5ca080147e011b9e6efa8dbd82660bd6",
+            "currentSha256": "8981df658acab53af868fabfd2796b3bc29027edc9695fdb1ad1401bf7ab53e6",
+            "reversedDeltaMatchesOriginalBytes": true
+          },
+          {
+            "path": "tests/release17_browser.py",
+            "originalSha256": "c50e12322d4ffe1b2d02dda22c13d111700b5b81d641858c66c9f446652c39cc",
+            "currentSha256": "955b690cb587fbd3c10927d7b9f5d78f5191060a46a8bbc9cf76235eb0d50898",
+            "reversedDeltaMatchesOriginalBytes": true
+          },
+          {
+            "path": "tests/release18_browser.py",
+            "originalSha256": "43784b55fb4302e4735b7a1293b60c0233e968d31827ddfa247e171ae808558f",
+            "currentSha256": "4a64998ee9540db85894de33153cc6c684402c30d1a518e7c10393693a493abe",
+            "reversedDeltaMatchesOriginalBytes": true
+          },
+          {
+            "path": "tests/release19_browser.py",
+            "originalSha256": "6cb1d061df57b8689cd34c69666716b28b7218c589fffba453a867016f5e9d4a",
+            "currentSha256": "47e89fccc18e3110f3115ba2a72ee4f09d04fa9c3e2eff50c13363ac453b8d67",
+            "reversedDeltaMatchesOriginalBytes": true
+          },
+          {
+            "path": "tests/release20_browser.py",
+            "originalSha256": "47823fae54886106b84d0d188d2f38b2c1f1a42aafefe21dc5269e7a798acca8",
+            "currentSha256": "1a3bf0365d1cd82036d8e64562dcd594a536ef01631dd63f186707e52e1191df",
+            "reversedDeltaMatchesOriginalBytes": true
+          },
+          {
+            "path": "tests/release21_browser.py",
+            "originalSha256": "39bbb647514987560ef22f6fa5ee6ecf2e8b93b0babeda816f0fd183c2992bfa",
+            "currentSha256": "2b68e876b5472ac627e1c9ec9a05d9443d870553f52f4ed35e4380c7393b5f9b",
+            "reversedDeltaMatchesOriginalBytes": true
+          },
+          {
+            "path": "tests/release22_browser.py",
+            "originalSha256": "31d8dd9d935b502a75f733a367e24c0b36834bbfa36c1a48755ed42e809b3438",
+            "currentSha256": "6ed6a83fbd717aaf727829058ddd80c57bc4a8de11839850706af6e777d9a2fe",
+            "reversedDeltaMatchesOriginalBytes": true
+          },
+          {
+            "path": "tests/release23_browser.py",
+            "originalSha256": "3f6816a8dd4fe0b14dde91aead5e677164c26c4c85c563b1d895089541639ea7",
+            "currentSha256": "0cbe58a6232c22a986f8f4e09dde909ecc8f6df5f433b0a048652e40bdd68d8a",
+            "reversedDeltaMatchesOriginalBytes": true
+          },
+          {
+            "path": "tests/release5_browser.py",
+            "originalSha256": "fb9add111dd6d799859b1ed05ca30ed451ef129cf1cbf10136196ad5b3676692",
+            "currentSha256": "87f5de399a507f547044472c6311f3bcb8b48a96749fee26cff8d12007c07606",
+            "reversedDeltaMatchesOriginalBytes": true
+          },
+          {
+            "path": "tests/release6_browser.py",
+            "originalSha256": "56cb39f63f22edf7324d48cf19ea4130f35833eaf0c6dde5fd36ef820becca10",
+            "currentSha256": "78b7587c10b113ebf63856fe74914ce3c4f5aca4d9194ddb010e9fd93e20a6cf",
+            "reversedDeltaMatchesOriginalBytes": true
+          },
+          {
+            "path": "tests/release8_browser.py",
+            "originalSha256": "904236a59938c940b279efb7cd6d0d9fb9260bc0c46e4b75287f4f619b629c21",
+            "currentSha256": "d2f47ed3773212c90ca5be6b65a04982f35368251fb38029bfc38058eba433fc",
+            "reversedDeltaMatchesOriginalBytes": true
+          },
+          {
+            "path": "tests/release9_browser.py",
+            "originalSha256": "850b97880475f0868fe79237e212c47b26f9e7bf2d391997f18ac416bb951542",
+            "currentSha256": "87782615b0b78847cdbb059fcd0774db911be6e17ee9262bd60a2cfd9e4c8b92",
+            "reversedDeltaMatchesOriginalBytes": true
+          },
+          {
+            "path": "tests/ux_revision6_browser.py",
+            "originalSha256": "a42bb56fb1afe1b5f470e29d77e96e313b99649db19fa331f9e4f0833aa5b493",
+            "currentSha256": "b3426f54d17b00477afe7ddac8c0a94fc8502810e6d14684af57f99248335161",
+            "reversedDeltaMatchesOriginalBytes": true
+          }
+        ],
+        "meaning": "Only the exact import and primary page-creation pair changed in 22 GUI scripts; reversing those bytes reproduces every original script, including all assertions and URLs."
+      },
+      "mobileTestSourceUnchanged": true,
+      "applicationAndHtmlBytesUnchanged": true,
+      "historicalExecutionRelabeled": false,
+      "receipt": "evidence/revision23/mobile-ci/receipt.json",
+      "summary": "evidence/revision23/mobile-ci/annotation-summary.json",
+      "sameArtifactAsAcceptedCandidate": true,
+      "portableProjectionOfPreservedReceipt": true
+    }
+  },
+  "completeAcceptanceAuthority": "evidence/release-acceptance.json"
+}

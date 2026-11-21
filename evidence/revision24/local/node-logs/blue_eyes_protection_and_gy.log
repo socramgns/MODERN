@@ -1,0 +1,166 @@
+{
+  "schema": "ygo-blue-eyes-integration/v1",
+  "pass": true,
+  "total": 38,
+  "tests": [
+    {
+      "name": "Spark protection is a physical executed activation with target, use budget and fresh replay",
+      "pass": true
+    },
+    {
+      "name": "One Spark charge prevents one battle destruction, preserves damage, and cannot prevent a second attack",
+      "pass": true
+    },
+    {
+      "name": "Resolved Spark protection survives its source destruction by an earlier real battle",
+      "pass": true
+    },
+    {
+      "name": "Tributing and reviving the same protected physical target clears its prior field-instance shield",
+      "pass": true
+    },
+    {
+      "name": "Spark protection expires at the actual turn boundary and its activation budget resets",
+      "pass": true
+    },
+    {
+      "name": "A physically borrowed Spark can protect itself from its delayed End Phase destruction",
+      "pass": true
+    },
+    {
+      "name": "Azure immunity prevents borrowed Spark destruction without spending its independent Spark charge",
+      "pass": true
+    },
+    {
+      "name": "Real Mirrorjade departure schedules effect destruction and Spark prevents its own one destruction",
+      "pass": true
+    },
+    {
+      "name": "Veiler effect negation pays its actual cost and consumes Spark use without granting protection",
+      "pass": true
+    },
+    {
+      "name": "Mechaba activation negation pays a real hand card, banishes Spark and leaves its selected target unprotected",
+      "pass": true
+    },
+    {
+      "name": "Spark rejects forged opponent and face-down targets atomically",
+      "pass": true
+    },
+    {
+      "name": "Two legitimate protection targets remain distinct after fresh strategy replay despite identical physical card zones",
+      "pass": true
+    },
+    {
+      "name": "Spark charge state and response soft budgets participate in outcome identity",
+      "pass": true
+    },
+    {
+      "name": "Bounded search discovers a real Spark activation and its returned line replays",
+      "pass": true
+    },
+    {
+      "name": "Spirit negates Invocation in its Graveyard without moving it or recovering Aleister as a fictitious cost",
+      "pass": true
+    },
+    {
+      "name": "Spirit negates GY Ashuna after its real banish cost; no summon, shuffle or Wyrm restriction is fabricated",
+      "pass": true
+    },
+    {
+      "name": "Hand Ashuna is not a GY activation despite moving to banishment when its cost is paid",
+      "pass": true
+    },
+    {
+      "name": "Spirit negates GY Adhara while preserving both its banish cost and its still-banished target",
+      "pass": true
+    },
+    {
+      "name": "Spirit negates GY Vishuda without returning its physical opponent target",
+      "pass": true
+    },
+    {
+      "name": "Spirit negates Ancients recovery after its real banish cost and consumes its hard use restriction",
+      "pass": true
+    },
+    {
+      "name": "Spirit negates Spinny revival without a summon, source movement or leave-field redirect",
+      "pass": true
+    },
+    {
+      "name": "Spirit negates the GY Roar trigger created by a real reincarnation summon without setting or redirecting it",
+      "pass": true
+    },
+    {
+      "name": "Negated Ancients keeps its spent use while two real Spirits retain separate physical budgets",
+      "pass": true
+    },
+    {
+      "name": "Spirit may negate its own registered GY activation without a false Synchro-history requirement",
+      "pass": true
+    },
+    {
+      "name": "Spirit negation is non-targeting and remains available on a Spirit protected by Azure",
+      "pass": true
+    },
+    {
+      "name": "Face-down and effect-negated Spirit cannot claim an effective response in this registered subset",
+      "pass": true
+    },
+    {
+      "name": "Crow hand activation cannot acquire a Spirit response merely because its actual discard ends in the GY",
+      "pass": true
+    },
+    {
+      "name": "The compound Chixiao and Mo Ye packet is not silently represented as a single GY activation",
+      "pass": true
+    },
+    {
+      "name": "Forged Spirit response source, owner and activation origin are rejected atomically",
+      "pass": true
+    },
+    {
+      "name": "Fresh replay rejects forged Spirit cost, origin evidence and final protection state",
+      "pass": true
+    },
+    {
+      "name": "Bounded search includes the executed GY activation negation and freshly replays every reported line",
+      "pass": true
+    },
+    {
+      "name": "The same Spark charge cannot prevent both a battle and the subsequent delayed effect destruction",
+      "pass": true
+    },
+    {
+      "name": "The movement helper clears protection and soft uses when a face-up field instance is set face-down",
+      "pass": true
+    },
+    {
+      "name": "FIRST_ELIGIBLE does not automatically force a player to negate its own GY activation",
+      "pass": true
+    },
+    {
+      "name": "A real Droll activation remains a hand effect after its cost is sent to the GY",
+      "pass": true
+    },
+    {
+      "name": "An Ash hand-response packet does not become a GY activation or an invented Spirit counter-chain",
+      "pass": true
+    },
+    {
+      "name": "Fresh strategy comparison preserves which physical Spirit copy spent its soft negation budget",
+      "pass": true
+    },
+    {
+      "name": "The own search objective does not count an opposing Spirit interruption as an own available response",
+      "pass": true
+    }
+  ],
+  "limitations": [
+    "Initial diagnostic fields declare prior history; the subsequent transitions are physically executed and freshly replayed.",
+    "The movement-helper face-down test checks the lifecycle boundary; no unregistered face-down card effect is claimed as an executed duel action.",
+    "The application restriction snapshot is not independently authenticated official evidence.",
+    "Registered response packets and phase windows are tested; arbitrary chain priority and overlapping Spark effects are not certified."
+  ]
+}
+

@@ -1,0 +1,52 @@
+{
+  "schema": "ygo-search-horizon-regression/v1",
+  "pass": true,
+  "total": 10,
+  "tests": [
+    {
+      "name": "Depth-cut search discloses its horizon and never declares complete enumeration",
+      "pass": true
+    },
+    {
+      "name": "A deeper Invoked horizon finds physical replayable lines without rewriting the initial state",
+      "pass": true
+    },
+    {
+      "name": "An actual terminal state can exhaust registered actions without claiming universal rules coverage",
+      "pass": true
+    },
+    {
+      "name": "Turn-cut search reports the omitted next-turn transition separately from depth and budget",
+      "pass": true
+    },
+    {
+      "name": "State budget has an explicit reason and does not report horizon completion",
+      "pass": true
+    },
+    {
+      "name": "Cancellation retains explicit non-completion metadata",
+      "pass": true
+    },
+    {
+      "name": "Declared Spell/Trap column 5 is rejected before producing a state",
+      "pass": true
+    },
+    {
+      "name": "Two physical Spell/Trap cards cannot occupy the same declared column",
+      "pass": true
+    },
+    {
+      "name": "Distinct physical Spell/Trap columns remain legal and are preserved",
+      "pass": true
+    },
+    {
+      "name": "A forged mid-duel duplicate Spell/Trap column is rejected atomically",
+      "pass": true
+    }
+  ],
+  "limitations": [
+    "Completion applies to registered transitions; no global rules or competitive optimality is certified.",
+    "No-lines within a bounded horizon is not evidence of a universal failed hand."
+  ]
+}
+

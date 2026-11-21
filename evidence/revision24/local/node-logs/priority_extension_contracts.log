@@ -1,0 +1,439 @@
+{
+  "schema": "ygo-priority-extension-contracts-tests/v1",
+  "pass": true,
+  "total": 23,
+  "tests": [
+    {
+      "name": "Frozen metadata cannot remove real Branded Ash eligibility or grant it to Invocation",
+      "pass": true
+    },
+    {
+      "name": "QA: invalid Ash declarations cannot partly register an adapter; caller arrays cannot alter the admitted metadata",
+      "pass": true
+    },
+    {
+      "name": "Mechaba and Roar admit a real monster activation for controller 0",
+      "pass": true
+    },
+    {
+      "name": "Mechaba and Roar admit a real monster activation for controller 1",
+      "pass": true
+    },
+    {
+      "name": "Mechaba and Roar admit real Spell Card activation for controller 0",
+      "pass": true
+    },
+    {
+      "name": "Mechaba and Roar admit real Spell Card activation for controller 1",
+      "pass": true
+    },
+    {
+      "name": "Mechaba and Roar admit real Trap Card activation for controller 0",
+      "pass": true
+    },
+    {
+      "name": "Mechaba and Roar admit real Trap Card activation for controller 1",
+      "pass": true
+    },
+    {
+      "name": "A real Invocation GY Spell effect excludes Mechaba/Roar while Spirit can negate its activation for controller 0",
+      "pass": true
+    },
+    {
+      "name": "A real Invocation GY Spell effect excludes Mechaba/Roar while Spirit can negate its activation for controller 1",
+      "pass": true
+    },
+    {
+      "name": "A scale Spell effect can destroy established Combination; its GY Trap effect excludes Mechaba/Roar for controller 0",
+      "pass": true
+    },
+    {
+      "name": "A scale Spell effect can destroy established Combination; its GY Trap effect excludes Mechaba/Roar for controller 1",
+      "pass": true
+    },
+    {
+      "name": "Event collectors join a real Fusion trigger batch before it opens, and run while that batch is being ordered",
+      "pass": true
+    },
+    {
+      "name": "QA: invalid collector registration and malformed results reject transitions atomically",
+      "pass": true
+    },
+    {
+      "name": "A reviewed Extra profile is type checked, duplicate safe, and does not grant declared GY summon qualification",
+      "pass": true
+    },
+    {
+      "name": "Registered Adamante revives only after an actual physical Fusion and battle departure for controller 0",
+      "pass": true
+    },
+    {
+      "name": "Registered Adamante revives only after an actual physical Fusion and battle departure for controller 1",
+      "pass": true
+    },
+    {
+      "name": "An actual Shaman activation lock suppresses a freshly summoned Librarian mandatory trigger without freezing a later real Spirit Synchro",
+      "pass": true
+    },
+    {
+      "name": "A Shaman lock cannot turn a real Lubellion optional Fusion trigger into a batch with neither activation nor decline",
+      "pass": true
+    },
+    {
+      "name": "A genuinely GY-revived Librarian may activate its mandatory draw under the same actual Shaman lock",
+      "pass": true
+    },
+    {
+      "name": "Integrated coverage reports real Fusion recipes as summons and actual Librarian, Chengying and Metalfoes registrations",
+      "pass": true
+    },
+    {
+      "name": "Coverage requires the actual recipe cardId and actual procedure handler, even if companion labels remain available",
+      "pass": true
+    },
+    {
+      "name": "A legacy harness with extension modules absent never manufactures the new coverage actions",
+      "pass": true
+    }
+  ],
+  "witnesses": [
+    {
+      "actions": [
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "actions": [
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "actions": [
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "actions": [
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "actions": [
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "actions": [
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "actions": [
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "actions": [
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "actions": [
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "actions": [
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "actions": [
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "TRIGGER_ORDER_ACTIVATE",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "actions": [
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "TRIGGER_ORDER_ACTIVATE",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "actions": [
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "TRIGGER_ORDER_ACTIVATE",
+        "TRIGGER_ORDER_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "actions": [
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "actions": [
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_PHASE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ATTACK",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_PHASE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "actions": [
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_PHASE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ATTACK",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_PHASE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "actions": [
+        "SYNCHRO_TG_HYPER_LIBRARIAN",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "SYNCHRO_BLUE_EYES_SPIRIT_DRAGON",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "actions": [
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    },
+    {
+      "actions": [
+        "SYNCHRO_TG_HYPER_LIBRARIAN",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_PHASE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ATTACK",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "DUEL_ADVANCE_PHASE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "SYNCHRO_BLUE_EYES_SPIRIT_DRAGON",
+        "TRIGGER_ORDER_ACTIVATE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS",
+        "PRIORITY_RESOLVE",
+        "PRIORITY_PASS",
+        "PRIORITY_PASS"
+      ],
+      "replayPass": true
+    }
+  ],
+  "limitations": [
+    "Declared starting fields are assumptions; only registered executed transitions and fresh replay are histories.",
+    "QA adapter/category/collector probes exercise plugin validation and are not additional card implementations.",
+    "The registered Adamante test profile grants no proper summon history; the tests establish that separately by Fusion and battle."
+  ]
+}
+

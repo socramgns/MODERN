@@ -1,0 +1,137 @@
+{
+  "schema": "ygo-duel-phases-regression/v1",
+  "pass": true,
+  "total": 31,
+  "tests": [
+    {
+      "name": "Direct attack deals printed damage once and preserves every physical copy",
+      "pass": true
+    },
+    {
+      "name": "First turn cannot enter Battle Phase or execute a forged first-turn attack",
+      "pass": true
+    },
+    {
+      "name": "Player one can deal a direct attack to player zero with its own physical monster",
+      "pass": true
+    },
+    {
+      "name": "Stronger attack destroys the opposing Attack monster and deals only the ATK difference",
+      "pass": true
+    },
+    {
+      "name": "Weaker attack destroys the attacking Attack monster and damages its controller",
+      "pass": true
+    },
+    {
+      "name": "Equal positive Attack destroys both monsters with no battle damage",
+      "pass": true
+    },
+    {
+      "name": "Zero versus zero Attack does not destroy either monster",
+      "pass": true
+    },
+    {
+      "name": "Attack above Defense destroys the defender without inventing piercing damage",
+      "pass": true
+    },
+    {
+      "name": "Attack below Defense damages the attacker controller and destroys neither monster",
+      "pass": true
+    },
+    {
+      "name": "Attack equal to Defense causes no damage and destroys neither card",
+      "pass": true
+    },
+    {
+      "name": "Attacking a declared face-down Normal reveals it and uses its Defense with no invented flip trigger",
+      "pass": true
+    },
+    {
+      "name": "An unmodeled face-down Effect Monster is not treated as an inert Normal defender",
+      "pass": true
+    },
+    {
+      "name": "Unknown face-up continuous or battle effects block battle rather than inventing an outcome",
+      "pass": true
+    },
+    {
+      "name": "Unknown face-up Spell or Trap continuous effects block battle",
+      "pass": true
+    },
+    {
+      "name": "A lethal direct attack records the winner and prevents later actions",
+      "pass": true
+    },
+    {
+      "name": "Manual position change is allowed once for an older monster and forbidden on its summon turn",
+      "pass": true
+    },
+    {
+      "name": "A monster that attacked cannot manually change position in Main Phase 2",
+      "pass": true
+    },
+    {
+      "name": "Level eight Tribute Summon pays two distinct physical monsters and consumes its Normal Summon",
+      "pass": true
+    },
+    {
+      "name": "Level six requires one Tribute and Level eight cannot be Normal Summoned without two",
+      "pass": true
+    },
+    {
+      "name": "Normal Pendulum summons are explicitly outside this fixed Normal-Monster subset",
+      "pass": true
+    },
+    {
+      "name": "Both owners can resolve Ancients in an End Phase using cards actually in their Decks",
+      "pass": true
+    },
+    {
+      "name": "Ancients sent in an earlier turn cannot produce a new End Phase summon",
+      "pass": true
+    },
+    {
+      "name": "Ash negates Ancients for either actor and pays only the opposite owner real hand cost",
+      "pass": true
+    },
+    {
+      "name": "Pending End Phase optional effects must be resolved or explicitly declined before the next turn",
+      "pass": true
+    },
+    {
+      "name": "Turn draw consumes the actual known top copy exactly once and gates phase progression",
+      "pass": true
+    },
+    {
+      "name": "An unknown post-shuffle draw order stops the draw rather than inventing a card",
+      "pass": true
+    },
+    {
+      "name": "The first-turn Draw Phase is skipped without creating a sixth opening card",
+      "pass": true
+    },
+    {
+      "name": "A new turn resets used effects and Normal Summons, expires Veiler, and draws for the other physical player",
+      "pass": true
+    },
+    {
+      "name": "A seven-card hand after real Swordsoul draw/search must discard to six before ending the turn",
+      "pass": true
+    },
+    {
+      "name": "Unregistered End Phase effects keep the turn unresolved instead of silently skipping them",
+      "pass": true
+    },
+    {
+      "name": "Forged phase jumps, attack targets and altered final LP fail execution or fresh replay",
+      "pass": true
+    }
+  ],
+  "limitations": [
+    "Physical starting fields are declared assumptions, not certified prior summon histories.",
+    "Only registered battle and End Phase behavior is simulated; unknown effects block transitions.",
+    "These fixtures are diagnostic lists and not competitive recommendations."
+  ]
+}
+

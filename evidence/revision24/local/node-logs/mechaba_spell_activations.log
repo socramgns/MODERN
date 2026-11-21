@@ -1,0 +1,93 @@
+{
+  "schema": "ygo-mechaba-normal-spell-regression/v1",
+  "pass": true,
+  "total": 20,
+  "tests": [
+    {
+      "name": "Capabilities enumerate exactly four explicitly registered Normal Spell card activations",
+      "pass": true
+    },
+    {
+      "name": "Mechaba sends matching Spell cost and banishes activated Branded Fusion from S/T without fictitious GY history",
+      "pass": true
+    },
+    {
+      "name": "Activation-negated Branded Fusion does not consume its activation count or Fusion-only lock",
+      "pass": true
+    },
+    {
+      "name": "After negated Branded Fusion a later real Link Summon is allowed",
+      "pass": true
+    },
+    {
+      "name": "Ash effect negation preserves Branded Fusion activation count and whole-turn Fusion restriction",
+      "pass": true
+    },
+    {
+      "name": "Normal Spell success cleans up only after its registered effect resolves",
+      "pass": true
+    },
+    {
+      "name": "Earlier non-Fusion Extra summon still makes Branded Fusion illegal even with available Mechaba",
+      "pass": true
+    },
+    {
+      "name": "Invocation card activation is negated without consuming Fusion materials or summoning",
+      "pass": true
+    },
+    {
+      "name": "A negated Vessel preserves the second physical copy and that copy can resolve after Mechaba is spent",
+      "pass": true
+    },
+    {
+      "name": "Ash effect-negated Vessel still consumes its one activation and cannot use the second copy",
+      "pass": true
+    },
+    {
+      "name": "A Monster cost does not authorize Mechaba to answer a Spell card activation",
+      "pass": true
+    },
+    {
+      "name": "A Trap cost does not substitute for the Spell required by Branded Fusion activation",
+      "pass": true
+    },
+    {
+      "name": "Vessel is a reviewed physical Spell cost, and the response sends rather than discards it",
+      "pass": true
+    },
+    {
+      "name": "Invocation GY effect is not a Spell card activation and cannot be answered by Mechaba",
+      "pass": true
+    },
+    {
+      "name": "Roar GY Set effect is not a Trap card activation and cannot be answered by Mechaba",
+      "pass": true
+    },
+    {
+      "name": "The two registered Field Spell card activations use their distinct Spell-cost response packets",
+      "pass": true
+    },
+    {
+      "name": "Choice branches preserve both pass and matching Mechaba response, while first-eligible forces it",
+      "pass": true
+    },
+    {
+      "name": "Forged cost, activation kind, target and column are rejected without changing the supplied state",
+      "pass": true
+    },
+    {
+      "name": "Fresh replay rejects forged Spell activation stage proof, costs or final placement",
+      "pass": true
+    },
+    {
+      "name": "A Trap-only hand supplies conditional capacity for the registered Normal Trap packet, not an executed interruption",
+      "pass": true
+    }
+  ],
+  "limitations": [
+    "The three registered Normal Spell CARD activations remain covered; two registered Field Spell packets have their own focused suite. Only the registered Infinite Impermanence Normal Trap activation is added in revision12; unregistered Trap activations and arbitrary chains remain outside scope.",
+    "Invocation and Roar GY effects are excluded because they activate effects, not Spell/Trap Cards.",
+    "Diagnostic physical fields declare prior history and do not certify tournament performance or official rulings."
+  ]
+}
+

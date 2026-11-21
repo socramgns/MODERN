@@ -1,0 +1,182 @@
+{
+  "schema": "ygo-release24-browser/v1",
+  "pass": true,
+  "buildId": "2d7de2e019f18f6524de0f72d8575ec12a981d145e360cd897397b2680a8c0c7",
+  "htmlSha256": "0d955d44e782d57db880a68b2dac80ad288172e570da647e6753cc8d1f6eb63c",
+  "artifactMode": "DELIVERED_BYTES",
+  "sourceInjection": false,
+  "servedBytesSha256": "0d955d44e782d57db880a68b2dac80ad288172e570da647e6753cc8d1f6eb63c",
+  "browser": {
+    "engine": "chromium",
+    "engineVersion": "154.0.8037.57"
+  },
+  "checks": [
+    {
+      "name": "release24_boots_exact_delivered_bytes_offline_without_source_injection",
+      "pass": true
+    },
+    {
+      "name": "thirty_two_visible_examples_preserve_the_existing_twenty_eight_in_order",
+      "pass": true
+    },
+    {
+      "name": "reviewed_r24_modules_are_delivered",
+      "pass": true
+    },
+    {
+      "name": "four_new_examples_load_declared_physical_states_and_guides_without_autoplay",
+      "pass": true
+    },
+    {
+      "name": "rendered_evidence_export_preserves_98_exact_ids_and_51_32_review_counts_with_build_binding",
+      "pass": true
+    },
+    {
+      "name": "evidence_export_and_forged_binding_validation_preserve_the_deck_catalogue_and_lab",
+      "pass": true
+    },
+    {
+      "name": "native_branded_activation_leaves_both_materials_in_deck_until_resolution",
+      "pass": true
+    },
+    {
+      "name": "native_branded_resolution_physically_sends_deck_materials_and_opens_lubellion_trigger",
+      "pass": true
+    },
+    {
+      "name": "lubellion_discards_a_real_copy_before_its_pending_fusion_resolves",
+      "pass": true
+    },
+    {
+      "name": "undo_reverts_lubellion_cost_and_restores_its_optional_trigger",
+      "pass": true
+    },
+    {
+      "name": "pending_report_reexecutes_the_paid_discard_and_restores_priority",
+      "pass": true
+    },
+    {
+      "name": "forged_lubellion_cost_report_is_rejected_without_replacing_the_lab",
+      "pass": true
+    },
+    {
+      "name": "two_native_fusions_reach_mirrorjade_with_recycled_materials_and_provisional_score",
+      "pass": true
+    },
+    {
+      "name": "native_gy_ashuna_banish_cost_is_paid_before_any_deck_selection",
+      "pass": true
+    },
+    {
+      "name": "native_ash_response_pays_its_own_discard_while_the_chain_is_pending",
+      "pass": true
+    },
+    {
+      "name": "ash_negates_ashuna_effect_lifo_without_refunding_costs_or_applying_wyrm_lock",
+      "pass": true
+    },
+    {
+      "name": "ashuna_without_response_selects_adhara_only_at_resolution_and_applies_wyrm_lock",
+      "pass": true
+    },
+    {
+      "name": "normal_gazelle_uses_a_real_optional_trigger_and_keeps_roar_in_deck_until_resolved",
+      "pass": true
+    },
+    {
+      "name": "spinny_discard_is_paid_before_its_atk_gain_resolves",
+      "pass": true
+    },
+    {
+      "name": "spinny_grants_exactly_five_hundred_atk_after_explicit_passes_and_resolution",
+      "pass": true
+    },
+    {
+      "name": "spinny_gy_revival_does_not_admit_ash_as_a_deck_summon_response",
+      "pass": true
+    },
+    {
+      "name": "spinny_revives_the_same_copy_and_retains_its_leave_field_banish_rule",
+      "pass": true
+    },
+    {
+      "name": "metalfoes_fusion_keeps_both_materials_in_hand_during_response_window",
+      "pass": true
+    },
+    {
+      "name": "metalfoes_resolution_uses_two_real_hand_materials_and_properly_fusion_summons_adamante",
+      "pass": true
+    },
+    {
+      "name": "metalfoes_export_replays_exact_physical_material_destinations",
+      "pass": true
+    },
+    {
+      "name": "shuffled_unknown_draw_stays_pending_without_inventing_an_observed_card",
+      "pass": true
+    },
+    {
+      "name": "release24_ui_flows_have_no_javascript_page_errors",
+      "pass": true
+    },
+    {
+      "name": "delivered_html_is_unchanged_during_release24_browser_test",
+      "pass": true
+    }
+  ],
+  "details": {
+    "thirty_two_visible_examples_preserve_the_existing_twenty_eight_in_order": [
+      "spark",
+      "spirit",
+      "invoked",
+      "swordsoul",
+      "branded",
+      "tenyi",
+      "salamangreat",
+      "roar",
+      "crow",
+      "droll",
+      "field",
+      "trap",
+      "evacuation",
+      "shuffle",
+      "reborn",
+      "synchro",
+      "azure",
+      "spirit-reborn",
+      "wolf-reborn",
+      "albaz",
+      "hayabusa",
+      "faith-flip",
+      "priority-chain",
+      "simultaneous-triggers",
+      "xyz-corn",
+      "pendulum-metalfoes",
+      "damage-step",
+      "draw-sequences",
+      "branded-priority",
+      "tenyi-priority",
+      "salamangreat-priority",
+      "metalfoes-priority"
+    ],
+    "release24_ui_flows_have_no_javascript_page_errors": []
+  },
+  "externalRequestsBlocked": 145,
+  "exports": [
+    "/workspace/r24-validation/gui-final-exports/release24-exact-passcode-evidence-request.json",
+    "/workspace/r24-validation/gui-final-exports/release24-lubellion-paid-pending-export.json",
+    "/workspace/r24-validation/gui-final-exports/release24-native-branded-resolved-export.json",
+    "/workspace/r24-validation/gui-final-exports/release24-native-ashuna-negated-export.json",
+    "/workspace/r24-validation/gui-final-exports/release24-native-ashuna-resolved-export.json",
+    "/workspace/r24-validation/gui-final-exports/release24-native-salamangreat-resolved-export.json",
+    "/workspace/r24-validation/gui-final-exports/release24-metalfoes-fusion-resolved-export.json",
+    "/workspace/r24-validation/gui-final-exports/release24-metalfoes-unknown-draw-pending-export.json"
+  ],
+  "limitations": [
+    "Declared initial fields are assumptions; only subsequent rendered-control actions are replay witnesses.",
+    "Exact offline delivered bytes do not establish file navigation, physical device use or real assistive technology.",
+    "Finite registered recipes and reviewed profiles do not certify all card effects or official TCG rulings.",
+    "Unknown shuffled draws remain pending; no competitive score or win rate is certified."
+  ],
+  "elapsedSeconds": 176.11
+}

@@ -1,0 +1,472 @@
+{
+  "schema": "ygo-final-source-node-regressions/v1",
+  "pass": true,
+  "sourceCommit": "9977424e6bacee97dc607fa94cd894c46d3db557",
+  "buildId": "2d7de2e019f18f6524de0f72d8575ec12a981d145e360cd897397b2680a8c0c7",
+  "htmlSha256": "0d955d44e782d57db880a68b2dac80ad288172e570da647e6753cc8d1f6eb63c",
+  "sourceAndTestFilesEqualCommittedCandidateBeforeAndAfter": true,
+  "groupCount": 51,
+  "groups": [
+    {
+      "name": "priority_fusions",
+      "pass": true,
+      "returnCode": 0,
+      "elapsedSeconds": 7.09,
+      "log": "/workspace/r24-validation/final-node-regressions/priority_fusions.log",
+      "logSha256": "e3187270e0280aab3052faf77014d0c3dac38acdd42281cf4c63b3b491b3f1b7",
+      "reportedCases": 41
+    },
+    {
+      "name": "priority_responses_expanded",
+      "pass": true,
+      "returnCode": 0,
+      "elapsedSeconds": 7.27,
+      "log": "/workspace/r24-validation/final-node-regressions/priority_responses_expanded.log",
+      "logSha256": "9cedbb600b638a5429321eeebf41f74545fe0a592c8873f2ed1f9a10e1f20c21",
+      "reportedCases": 43
+    },
+    {
+      "name": "card_profiles_expanded",
+      "pass": true,
+      "returnCode": 0,
+      "elapsedSeconds": 3.39,
+      "log": "/workspace/r24-validation/final-node-regressions/card_profiles_expanded.log",
+      "logSha256": "3e8fc15a3230c6dacfffeaaab29e18cbd00fbe2e1c0e61a18c6f23dcc8f50900",
+      "reportedCases": 26
+    },
+    {
+      "name": "metalfoes_effects",
+      "pass": true,
+      "returnCode": 0,
+      "elapsedSeconds": 5.36,
+      "log": "/workspace/r24-validation/final-node-regressions/metalfoes_effects.log",
+      "logSha256": "67933e5a3c74782b39d1e088eb4225b5a4248bbbe56800dde08eac1921778cb4",
+      "reportedCases": 30
+    },
+    {
+      "name": "data_formats_r24",
+      "pass": true,
+      "returnCode": 0,
+      "elapsedSeconds": 4.53,
+      "log": "/workspace/r24-validation/final-node-regressions/data_formats_r24.log",
+      "logSha256": "38ce1943aad706f1049363470beba4ed47e07653842ab5d97accce776a5f43c3",
+      "reportedCases": 28
+    },
+    {
+      "name": "priority_extension_contracts",
+      "pass": true,
+      "returnCode": 0,
+      "elapsedSeconds": 4.77,
+      "log": "/workspace/r24-validation/final-node-regressions/priority_extension_contracts.log",
+      "logSha256": "b125843cee6adcab2ce2cb20b8245eb90042714e94a984430973310926ef4341",
+      "reportedCases": 23
+    },
+    {
+      "name": "priority_chain",
+      "pass": true,
+      "returnCode": 0,
+      "elapsedSeconds": 4.15,
+      "log": "/workspace/r24-validation/final-node-regressions/priority_chain.log",
+      "logSha256": "4ed38b3b03063781f79e18f6b9bc76cb45f062e8d89df3943f26560437aaaae6",
+      "reportedCases": 34
+    },
+    {
+      "name": "trigger_order",
+      "pass": true,
+      "returnCode": 0,
+      "elapsedSeconds": 1.86,
+      "log": "/workspace/r24-validation/final-node-regressions/trigger_order.log",
+      "logSha256": "38b6b297248f79c2e5ced81c7f0b40957a8a8f3c3b50b89a154e0b42c98b3066",
+      "reportedCases": 10
+    },
+    {
+      "name": "damage_step",
+      "pass": true,
+      "returnCode": 0,
+      "elapsedSeconds": 5.15,
+      "log": "/workspace/r24-validation/final-node-regressions/damage_step.log",
+      "logSha256": "b42604069d90cc618129af203df2c86d172d34d7e4c6b46e8f91950442037f7c",
+      "reportedCases": 26
+    },
+    {
+      "name": "xyz_summon",
+      "pass": true,
+      "returnCode": 0,
+      "elapsedSeconds": 1.95,
+      "log": "/workspace/r24-validation/final-node-regressions/xyz_summon.log",
+      "logSha256": "bc64e8db4fb2aac2c712db38b94b0950c6e4ee6c7751326c9c8cc6e119e28b70",
+      "reportedCases": 33
+    },
+    {
+      "name": "pendulum_summon",
+      "pass": true,
+      "returnCode": 0,
+      "elapsedSeconds": 8.26,
+      "log": "/workspace/r24-validation/final-node-regressions/pendulum_summon.log",
+      "logSha256": "7fc7c3f6cc2fc1125d0e2cdb20aa9a240ecf77c0d13f9d9ad3ace11b01916555",
+      "reportedCases": 34
+    },
+    {
+      "name": "draw_sequences",
+      "pass": true,
+      "returnCode": 0,
+      "elapsedSeconds": 132.77,
+      "log": "/workspace/r24-validation/final-node-regressions/draw_sequences.log",
+      "logSha256": "f5becb0130a0942eeba8f6111b4c75df303dd2bb20934d844fc7b093ca7c0330",
+      "reportedCases": 39
+    },
+    {
+      "name": "data_review_r23",
+      "pass": true,
+      "returnCode": 0,
+      "elapsedSeconds": 1.77,
+      "log": "/workspace/r24-validation/final-node-regressions/data_review_r23.log",
+      "logSha256": "b28421e4e8bd6b936f29e28915b5dc870c2d2e8a79ca4ca818dbafdf63da2af8",
+      "reportedCases": 30
+    },
+    {
+      "name": "registered_response_chains",
+      "pass": true,
+      "returnCode": 0,
+      "elapsedSeconds": 1.75,
+      "log": "/workspace/r24-validation/final-node-regressions/registered_response_chains.log",
+      "logSha256": "406d11fb46c6a20221784c1d7f455517801b3843f36f72d8b18c273ad3981362",
+      "reportedCases": 18
+    },
+    {
+      "name": "response_windows",
+      "pass": true,
+      "returnCode": 0,
+      "elapsedSeconds": 1.31,
+      "log": "/workspace/r24-validation/final-node-regressions/response_windows.log",
+      "logSha256": "8dac69a0d4d79b95dc70a19a09b375249d029df4b4383ea84d23c98cd0b2a929",
+      "reportedCases": 10
+    },
+    {
+      "name": "new_card_effects",
+      "pass": true,
+      "returnCode": 0,
+      "elapsedSeconds": 1.53,
+      "log": "/workspace/r24-validation/final-node-regressions/new_card_effects.log",
+      "logSha256": "79e55da332703b47f1d51a60b583cc44b86d7b52c73df4fc716fe9d379f28495",
+      "reportedCases": 21
+    },
+    {
+      "name": "search_horizons",
+      "pass": true,
+      "returnCode": 0,
+      "elapsedSeconds": 0.57,
+      "log": "/workspace/r24-validation/final-node-regressions/search_horizons.log",
+      "logSha256": "503518541c7818fd6fffaba8d7dbe3f156b474b4736a819403dbf57b4a6645d0",
+      "reportedCases": 10
+    },
+    {
+      "name": "draw_uncertainty",
+      "pass": true,
+      "returnCode": 0,
+      "elapsedSeconds": 0.34,
+      "log": "/workspace/r24-validation/final-node-regressions/draw_uncertainty.log",
+      "logSha256": "b02ce69dc06d79169f032c07ac2e0255cd3bc1e0487c35fb1a4d29902a929bb8",
+      "reportedCases": 6
+    },
+    {
+      "name": "draw_continuation",
+      "pass": true,
+      "returnCode": 0,
+      "elapsedSeconds": 20.0,
+      "log": "/workspace/r24-validation/final-node-regressions/draw_continuation.log",
+      "logSha256": "abbef62a14be7894b282c4203a193908aba65ee57a7bd5dabf411934de66f998",
+      "reportedCases": 27
+    },
+    {
+      "name": "data_quality",
+      "pass": true,
+      "returnCode": 0,
+      "elapsedSeconds": 1.22,
+      "log": "/workspace/r24-validation/final-node-regressions/data_quality.log",
+      "logSha256": "61b110dcd9971046126141d93b76e9d25344dc05dcc5021b47c9e06309dfdc9d",
+      "reportedCases": 15
+    },
+    {
+      "name": "deck_identity_review",
+      "pass": true,
+      "returnCode": 0,
+      "elapsedSeconds": 6.54,
+      "log": "/workspace/r24-validation/final-node-regressions/deck_identity_review.log",
+      "logSha256": "43e9bc657db24df2bc61ca3c6899bb86a921f083f72a273124a8574d6f8afacd",
+      "reportedCases": 22
+    },
+    {
+      "name": "monster_reborn",
+      "pass": true,
+      "returnCode": 0,
+      "elapsedSeconds": 3.28,
+      "log": "/workspace/r24-validation/final-node-regressions/monster_reborn.log",
+      "logSha256": "57f00086f51f46a075c156643228547de4020ab125369baa79f3d7e47f0164b9",
+      "reportedCases": 64
+    },
+    {
+      "name": "stardust_synchro",
+      "pass": true,
+      "returnCode": 0,
+      "elapsedSeconds": 3.11,
+      "log": "/workspace/r24-validation/final-node-regressions/stardust_synchro.log",
+      "logSha256": "1085db72ac3d8d1c21018c35997f2cc205c64fbeeae17af73ee99638052a5950",
+      "reportedCases": 58
+    },
+    {
+      "name": "azure_eyes",
+      "pass": true,
+      "returnCode": 0,
+      "elapsedSeconds": 4.93,
+      "log": "/workspace/r24-validation/final-node-regressions/azure_eyes.log",
+      "logSha256": "c11820ceca585201b3f680f41b1b505c12fce2db4db4a07870270af5c35c06c9",
+      "reportedCases": 74
+    },
+    {
+      "name": "spirit_revival",
+      "pass": true,
+      "returnCode": 0,
+      "elapsedSeconds": 4.85,
+      "log": "/workspace/r24-validation/final-node-regressions/spirit_revival.log",
+      "logSha256": "70f2a162f8145aafbb97514f5b247504efd9a7c598d0e4578040e074761e1208",
+      "reportedCases": 50
+    },
+    {
+      "name": "wolf_revival",
+      "pass": true,
+      "returnCode": 0,
+      "elapsedSeconds": 10.32,
+      "log": "/workspace/r24-validation/final-node-regressions/wolf_revival.log",
+      "logSha256": "3a4ebf95dc4e8878aae8bc7b1eade62f11da657190e23ee513758af5cc39575f",
+      "reportedCases": 69
+    },
+    {
+      "name": "albaz_fusion",
+      "pass": true,
+      "returnCode": 0,
+      "elapsedSeconds": 5.47,
+      "log": "/workspace/r24-validation/final-node-regressions/albaz_fusion.log",
+      "logSha256": "a5e91800da9739647a49d445ebe22bc6c12faa1402e97a29e140397173769b63",
+      "reportedCases": 33
+    },
+    {
+      "name": "multiple_attacks",
+      "pass": true,
+      "returnCode": 0,
+      "elapsedSeconds": 4.65,
+      "log": "/workspace/r24-validation/final-node-regressions/multiple_attacks.log",
+      "logSha256": "5f073db94e798123d8552bc3af89492d55d1394e4599615eebd0bb1707e13537",
+      "reportedCases": 86
+    },
+    {
+      "name": "flip_effects",
+      "pass": true,
+      "returnCode": 0,
+      "elapsedSeconds": 2.85,
+      "log": "/workspace/r24-validation/final-node-regressions/flip_effects.log",
+      "logSha256": "fd9cfef4ef9252f47001a1d772c61da545254d596b051de7cc0bde0e06dbc3e6",
+      "reportedCases": 63
+    },
+    {
+      "name": "duel_phases",
+      "pass": true,
+      "returnCode": 0,
+      "elapsedSeconds": 1.2,
+      "log": "/workspace/r24-validation/final-node-regressions/duel_phases.log",
+      "logSha256": "dd472b910ea53f15d26fe601fee13053a048e792dd81f0a8cf31f03263de1a14",
+      "reportedCases": 31
+    },
+    {
+      "name": "physical_responses",
+      "pass": true,
+      "returnCode": 0,
+      "elapsedSeconds": 1.62,
+      "log": "/workspace/r24-validation/final-node-regressions/physical_responses.log",
+      "logSha256": "a6e28907a2c6f42138b4513174c27cea7efd024ef5f8e7f1ba7bd9dcef7d50ae",
+      "reportedCases": 33
+    },
+    {
+      "name": "expanded_archetypes",
+      "pass": true,
+      "returnCode": 0,
+      "elapsedSeconds": 14.05,
+      "log": "/workspace/r24-validation/final-node-regressions/expanded_archetypes.log",
+      "logSha256": "2d8701ebe523390a5fe56db3739b09876cd00aa4bb4819cda9ec7c345755d0fc",
+      "reportedCases": 23
+    },
+    {
+      "name": "blue_eyes_duel",
+      "pass": true,
+      "returnCode": 0,
+      "elapsedSeconds": 1.31,
+      "log": "/workspace/r24-validation/final-node-regressions/blue_eyes_duel.log",
+      "logSha256": "7edc35d4323d3af9a571b7e89eeaf2da6f0120745261a7eef3eaf4680af82974",
+      "reportedCases": 13
+    },
+    {
+      "name": "blue_eyes_protection_and_gy",
+      "pass": true,
+      "returnCode": 0,
+      "elapsedSeconds": 2.62,
+      "log": "/workspace/r24-validation/final-node-regressions/blue_eyes_protection_and_gy.log",
+      "logSha256": "3e77c420d4c275dc0ccf4924ecb28eda361986dd99edf5452144f9cfdaadd47c",
+      "reportedCases": 38
+    },
+    {
+      "name": "mechaba_spell_activations",
+      "pass": true,
+      "returnCode": 0,
+      "elapsedSeconds": 1.29,
+      "log": "/workspace/r24-validation/final-node-regressions/mechaba_spell_activations.log",
+      "logSha256": "2476eec484596ca6627591b12461e2093496f680bef67cfb6a9df195f24904bd",
+      "reportedCases": 20
+    },
+    {
+      "name": "mechaba_monster_zones",
+      "pass": true,
+      "returnCode": 0,
+      "elapsedSeconds": 3.61,
+      "log": "/workspace/r24-validation/final-node-regressions/mechaba_monster_zones.log",
+      "logSha256": "76c863d9fbaa1660c6262f73a9ab770f531b08282df2f47233247bb13dc096e0",
+      "reportedCases": 33
+    },
+    {
+      "name": "mechaba_quick_hand",
+      "pass": true,
+      "returnCode": 0,
+      "elapsedSeconds": 2.46,
+      "log": "/workspace/r24-validation/final-node-regressions/mechaba_quick_hand.log",
+      "logSha256": "f43a37d45aa86090df9b8e03bec7df26b1ada6d6793e4e1ffa41234cf93d8166",
+      "reportedCases": 28
+    },
+    {
+      "name": "field_spell_activations",
+      "pass": true,
+      "returnCode": 0,
+      "elapsedSeconds": 2.22,
+      "log": "/workspace/r24-validation/final-node-regressions/field_spell_activations.log",
+      "logSha256": "e1714120260e847922165796c743dcc5da98dee6dba668fec183614ce6c4c937",
+      "reportedCases": 39
+    },
+    {
+      "name": "normal_trap_activations",
+      "pass": true,
+      "returnCode": 0,
+      "elapsedSeconds": 2.75,
+      "log": "/workspace/r24-validation/final-node-regressions/normal_trap_activations.log",
+      "logSha256": "95167e807cb2dadaa48ecb06c81e2dbd46d7d251ffe18aadf909894e514fa041",
+      "reportedCases": 53
+    },
+    {
+      "name": "compulsory_evacuation",
+      "pass": true,
+      "returnCode": 0,
+      "elapsedSeconds": 3.06,
+      "log": "/workspace/r24-validation/final-node-regressions/compulsory_evacuation.log",
+      "logSha256": "3af3f68c847ce036088b585847e1ad185429a66455ff838b94a8d8d9581896d2",
+      "reportedCases": 57
+    },
+    {
+      "name": "typed_field_goals",
+      "pass": true,
+      "returnCode": 0,
+      "elapsedSeconds": 1.31,
+      "log": "/workspace/r24-validation/final-node-regressions/typed_field_goals.log",
+      "logSha256": "a9168ac51f7a5034ceb91047cdacd5543387f435fd39c2da139820220e2c1921",
+      "reportedCases": 27
+    },
+    {
+      "name": "goal_progress",
+      "pass": true,
+      "returnCode": 0,
+      "elapsedSeconds": 1.06,
+      "log": "/workspace/r24-validation/final-node-regressions/goal_progress.log",
+      "logSha256": "2c43ea89abf6837dc32cf65a8bee6eb60fb881c14880ab920e09e1e08923b813",
+      "reportedCases": 24
+    },
+    {
+      "name": "card_action_coverage",
+      "pass": true,
+      "returnCode": 0,
+      "elapsedSeconds": 0.46,
+      "log": "/workspace/r24-validation/final-node-regressions/card_action_coverage.log",
+      "logSha256": "b6d1a0ce9049dc04db9962e32d900cb1abc41a31c5d4f90fe8a169bc59080184",
+      "reportedCases": 19
+    },
+    {
+      "name": "builtin_scenarios",
+      "pass": true,
+      "returnCode": 0,
+      "elapsedSeconds": 2.22,
+      "log": "/workspace/r24-validation/final-node-regressions/builtin_scenarios.log",
+      "logSha256": "2e24ae882ea24dbc574968cf95df3c8a00cbb06902944b603e750c2a787a5155",
+      "reportedCases": 29
+    },
+    {
+      "name": "recommendations",
+      "pass": true,
+      "returnCode": 0,
+      "elapsedSeconds": 3.1,
+      "log": "/workspace/r24-validation/final-node-regressions/recommendations.log",
+      "logSha256": "8b45c25dd428194ef83e441e9eeaa321da5523ee78c85703c9499b7eeee73030",
+      "reportedCases": 24
+    },
+    {
+      "name": "formats",
+      "pass": true,
+      "returnCode": 0,
+      "elapsedSeconds": 0.08,
+      "log": "/workspace/r24-validation/final-node-regressions/formats.log",
+      "logSha256": "05b47c7a97da382524638c29d109692964b6f744b14a426318c4a106a6c16642",
+      "reportedCases": 28
+    },
+    {
+      "name": "provenance",
+      "pass": true,
+      "returnCode": 0,
+      "elapsedSeconds": 0.13,
+      "log": "/workspace/r24-validation/final-node-regressions/provenance.log",
+      "logSha256": "f10acdf7ece7b2480e21df328efeb67879ce9d65a3263165153e7725b1d3c424",
+      "reportedCases": 17
+    },
+    {
+      "name": "strategy",
+      "pass": true,
+      "returnCode": 0,
+      "elapsedSeconds": 0.26,
+      "log": "/workspace/r24-validation/final-node-regressions/strategy.log",
+      "logSha256": "3c32b73175b867bb0fd98b2e6ed86be49e0b1c21fd8b35cd2a79dfeb16ae0f32",
+      "reportedCases": 19
+    },
+    {
+      "name": "causal_core",
+      "pass": true,
+      "returnCode": 0,
+      "elapsedSeconds": 0.76,
+      "log": "/workspace/r24-validation/final-node-regressions/causal_core.log",
+      "logSha256": "24dc5bd20f6383e10c1b5480083a0499a3b3b33842582c90cf6507ab9b322acc",
+      "reportedCases": 35
+    },
+    {
+      "name": "archetype_rules",
+      "pass": true,
+      "returnCode": 0,
+      "elapsedSeconds": 5.9,
+      "log": "/workspace/r24-validation/final-node-regressions/archetype_rules.log",
+      "logSha256": "9c22329033ee5a094fd73d7c0f6280eb50aa880cc6d2d46edd7ec6828bc33005",
+      "reportedCases": 22
+    },
+    {
+      "name": "probability_and_calibration",
+      "pass": true,
+      "returnCode": 0,
+      "elapsedSeconds": 0.07,
+      "log": "/workspace/r24-validation/final-node-regressions/probability_and_calibration.log",
+      "logSha256": "9e06003b1fb984839cfa6ddd32eaec63176bd3680afee810d3fed254cd2f7134",
+      "reportedCases": 13
+    }
+  ],
+  "elapsedSeconds": 312.64,
+  "scope": "SOURCE_VM_COMMANDS_ONLY_NOT_COMPLETE_DELIVERED_HTML_SUITE"
+}

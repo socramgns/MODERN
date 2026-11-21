@@ -1,0 +1,145 @@
+{
+  "schema": "ygo-physical-response-regression/v1",
+  "pass": true,
+  "total": 33,
+  "tests": [
+    {
+      "name": "Veiler sends an actual hand copy, negates field search, consumes trigger and replays",
+      "pass": true
+    },
+    {
+      "name": "Veiler is not a response to the Normal Summon or a Spell activation",
+      "pass": true
+    },
+    {
+      "name": "An invented Veiler UID is rejected without paying or resolving anything",
+      "pass": true
+    },
+    {
+      "name": "Impermanence from empty hand-side field resolves and does not invent a column lock",
+      "pass": true
+    },
+    {
+      "name": "Impermanence cannot activate from hand while its player controls a card",
+      "pass": true
+    },
+    {
+      "name": "Previously set Impermanence preserves its physical column and applies the turn lock",
+      "pass": true
+    },
+    {
+      "name": "Impermanence set this turn cannot respond as a set Trap",
+      "pass": true
+    },
+    {
+      "name": "Opponent Chixiao banishes a real Wyrm cost and shares its one-effect turn budget",
+      "pass": true
+    },
+    {
+      "name": "Mechaba pays a matching monster, negates activation and banishes its actual field source",
+      "pass": true
+    },
+    {
+      "name": "Mechaba cannot answer a Spell activation using only Monster hand costs",
+      "pass": true
+    },
+    {
+      "name": "Negating Mo Ye still reveals the actual card and consumes the hard once-per-turn",
+      "pass": true
+    },
+    {
+      "name": "Veiler on Chixiao CL1 does not negate the different Mo Ye CL2 graveyard draw",
+      "pass": true
+    },
+    {
+      "name": "Ash CL3 instead negates the Mo Ye draw while Chixiao search resolves",
+      "pass": true
+    },
+    {
+      "name": "Crow from either player pays a real discard and banishes only an opposing GY card",
+      "pass": true
+    },
+    {
+      "name": "Crow cannot banish a card outside the declared opposing Graveyard",
+      "pass": true
+    },
+    {
+      "name": "Droll opens after a real search, pays its hand cost, and blocks another Deck-to-hand effect",
+      "pass": true
+    },
+    {
+      "name": "Droll search window closes after a later action and is not opened by a normal turn draw",
+      "pass": true
+    },
+    {
+      "name": "Mirrorjade sends a real Extra Fusion cost, selects without targeting and enters its next-turn cooldown",
+      "pass": true
+    },
+    {
+      "name": "Mirrorjade has no activation when its admitted Extra Fusion cost is absent",
+      "pass": true
+    },
+    {
+      "name": "Veiler negates Mirrorjade after its Extra cost is paid, with no banish or resolution cooldown",
+      "pass": true
+    },
+    {
+      "name": "A Fusion-summoned Mirrorjade removed by opposing effect schedules and resolves its End Phase destruction",
+      "pass": true
+    },
+    {
+      "name": "Player zero Veiler can answer player one Main Phase Chixiao with both real costs paid",
+      "pass": true
+    },
+    {
+      "name": "Player zero hand Impermanence answers player one while its own field is empty",
+      "pass": true
+    },
+    {
+      "name": "Player zero Mechaba answers player one and banishes its activation source after costs",
+      "pass": true
+    },
+    {
+      "name": "Player zero Chixiao can negate player one Chixiao while each uses its own independent cost and budget",
+      "pass": true
+    },
+    {
+      "name": "Veiler cannot answer an opposing quick effect during the Veiler owner own Main Phase",
+      "pass": true
+    },
+    {
+      "name": "Crow excludes unreviewed Graveyard identities rather than claiming universal departure coverage",
+      "pass": true
+    },
+    {
+      "name": "Player zero Ash can negate player one Ancients End Phase summon with the actual opposite-player cost",
+      "pass": true
+    },
+    {
+      "name": "Droll restriction expires at End Phase and does not permanently block the next real turn",
+      "pass": true
+    },
+    {
+      "name": "Mechaba never silently omits its mandatory banish when answering a newly registered Gazelle effect",
+      "pass": true
+    },
+    {
+      "name": "Tampering with a cost record, target or final response state invalidates fresh replay",
+      "pass": true
+    },
+    {
+      "name": "Set Impermanence mirrors the opponent column and does not negate an unoccupied different column",
+      "pass": true
+    },
+    {
+      "name": "An Invocation forced into the only free negated column is consumed without moving materials or summoning",
+      "pass": true
+    }
+  ],
+  "limitations": [
+    "Physical diagnostic scenarios do not certify previous declared summon history.",
+    "Each modeled packet supports one response; arbitrary response-to-response chains are outside these tests.",
+    "The application restriction snapshot is technical context, not authenticated Konami evidence."
+  ]
+}
+

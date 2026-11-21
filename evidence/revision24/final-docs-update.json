@@ -1,0 +1,51 @@
+{
+  "schema": "ygo-r24-documentation-update/v1",
+  "pass": true,
+  "mode": "APPLIED",
+  "candidateCommit": "9977424e6bacee97dc607fa94cd894c46d3db557",
+  "buildId": "2d7de2e019f18f6524de0f72d8575ec12a981d145e360cd897397b2680a8c0c7",
+  "htmlSha256": "0d955d44e782d57db880a68b2dac80ad288172e570da647e6753cc8d1f6eb63c",
+  "remoteRunUrl": "https://github.com/socramgns/MODERN/actions/runs/44848581354",
+  "criteria": "27/32_UNWEIGHTED_C27_C31_PENDING",
+  "remoteGroups": 95,
+  "guiChecks": 28,
+  "sourceNodeGroups": 51,
+  "sourceTestsWorkflowHtmlGitOrAcceptanceJsonWritten": false,
+  "documents": [
+    {
+      "path": "README.md",
+      "archive": "evidence/history/revision23-accepted/README.md",
+      "originalSha256": "3d3219f3e6657c4791e667d7014fd4d4e55854bc359d6f4279bc36dc5d4a1164",
+      "newSha256": "0ab01d640c58edca08bf54641085947b7ac58bbceb87a952a70f82db01e19ab9",
+      "changed": true
+    },
+    {
+      "path": "docs/ESTADO_PROYECTO.md",
+      "archive": "evidence/history/revision23-accepted/docs/ESTADO_PROYECTO.md",
+      "originalSha256": "c38821874d9185b415b5ae73d6374a38795e6dd5f240a45c638726f824bd3585",
+      "newSha256": "38a49964e82a5ee2a7e9f1cae10fbbf9a2156114f3bce8a53db033f8594838d6",
+      "changed": true
+    },
+    {
+      "path": "docs/DESARROLLO.md",
+      "archive": "evidence/history/revision23-accepted/docs/DESARROLLO.md",
+      "originalSha256": "e855d56914b048012483d284cd82b4d6cb337785417e4162171603b219d033c3",
+      "newSha256": "9c52556c409288c3495d9a3eabd231ff30a632b47ef07e2a969fd4ab68795723",
+      "changed": true
+    },
+    {
+      "path": "docs/ALCANCE_COMBOS.md",
+      "archive": "evidence/history/revision23-accepted/docs/ALCANCE_COMBOS.md",
+      "originalSha256": "a661af5a64af19e2837ae9fa659c3ebcd0c2c764b50916b640a13a5860da001a",
+      "newSha256": "6250a4faff088f6d5be57ba89b6ac6301f3724b2f38e3361f5849248585f9a6a",
+      "changed": true
+    },
+    {
+      "path": "evidence/README.md",
+      "archive": "evidence/history/revision23-accepted/evidence/README.md",
+      "originalSha256": "a1137f383e563d5e6947feb80f72a3418bc6ca8c1b4f33549346116c60a7e5e8",
+      "newSha256": "26d4546cc904155a0d0852ccf83dd7fd20d4d3ede26cfe4536058e48292835e0",
+      "changed": true
+    }
+  ]
+}

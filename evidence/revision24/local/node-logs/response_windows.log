@@ -1,0 +1,53 @@
+{
+  "schema": "ygo-response-window-tests/v1",
+  "pass": true,
+  "total": 10,
+  "tests": [
+    {
+      "name": "Mechaba responds physically to Spark in both Main Phases, Battle, Standby and End on either turn",
+      "pass": true
+    },
+    {
+      "name": "Veiler stays in the opposing Main Phase while Spark remains available in other registered windows",
+      "pass": true
+    },
+    {
+      "name": "Hand Impermanence answers registered monster effects in Battle, Standby and End with its empty-field condition",
+      "pass": true
+    },
+    {
+      "name": "Mechaba can negate Spirit tribute outside Main while retaining the tribute cost and not banishing its old field source",
+      "pass": true
+    },
+    {
+      "name": "Mechaba answers Azure revival in Standby with an actual monster hand cost and a fresh replay",
+      "pass": true
+    },
+    {
+      "name": "Own Invoked family route works in Main Phase 2 and replays from its declared physical setup",
+      "pass": true
+    },
+    {
+      "name": "Hard-coded family inventories are not falsely mirrored to the rival during Main Phase 2",
+      "pass": true
+    },
+    {
+      "name": "Quick-effect windows do not precede the compulsory turn draw; after the real draw Mechaba is available",
+      "pass": true
+    },
+    {
+      "name": "Optional triggers can be explicitly declined in Battle without allowing ordinary family ignition actions",
+      "pass": true
+    },
+    {
+      "name": "Forged response timing cannot be replayed by transplanting a Main Phase Veiler action into Battle",
+      "pass": true
+    }
+  ],
+  "limitations": [
+    "These are registered between-action windows, not a general Damage Step or arbitrary priority model.",
+    "Player-zero family handlers remain explicit; no rival inventory is silently mirrored.",
+    "Declared setup histories remain assumptions."
+  ]
+}
+

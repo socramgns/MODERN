@@ -1,0 +1,109 @@
+{
+  "schema": "ygo-expanded-archetype-regression/v1",
+  "pass": true,
+  "total": 23,
+  "tests": [
+    {
+      "name": "Both technical fixtures contain physical 40-card Mains, five-card hands and exact remaining orders",
+      "pass": true
+    },
+    {
+      "name": "Ashuna special summon uses no Normal Summon and cannot be credited twice in the turn",
+      "pass": true
+    },
+    {
+      "name": "Tenyi reaches Shaman plus revived Monk with a real banish and discard, then fresh replay",
+      "pass": true
+    },
+    {
+      "name": "Shaman requires a separate discard and a properly summoned Extra Deck revival target",
+      "pass": true
+    },
+    {
+      "name": "Ash negates Ashuna resolution after consuming the banish cost without applying its Wyrm restriction",
+      "pass": true
+    },
+    {
+      "name": "Ashuna forbids a non-Wyrm Special Summon even when another registered handler tries it",
+      "pass": true
+    },
+    {
+      "name": "Shaman restriction prevents a non-Tenyi Extra Deck monster effect, while a Tenyi Link Summon remains possible",
+      "pass": true
+    },
+    {
+      "name": "Berserker consumes two real Link materials and Adhara recovers a different banished Wyrm",
+      "pass": true
+    },
+    {
+      "name": "Vessel sends a physical Wyrm and only optionally searches a different Tenyi under a non-Effect monster",
+      "pass": true
+    },
+    {
+      "name": "Salamangreat route preserves Spinny replacement, reincarnates Wolf and recovers Roar with fresh replay",
+      "pass": true
+    },
+    {
+      "name": "Gazelle sends the selected real Roar from Deck without claiming a discard cost",
+      "pass": true
+    },
+    {
+      "name": "Spinny discard pays a real hand card, gives only 500 ATK and loses the boost on leaving the field",
+      "pass": true
+    },
+    {
+      "name": "Spinny is banished rather than sent to GY as a Link Material, and the proof records the real destination",
+      "pass": true
+    },
+    {
+      "name": "Normal Wolf cannot recover Spell/Trap and Sanctuary reincarnation consumes exactly one same-name Link Material",
+      "pass": true
+    },
+    {
+      "name": "Roar may instead Set itself from GY, cannot activate this turn and keeps its future banish replacement",
+      "pass": true
+    },
+    {
+      "name": "Ash negates Gazelle Deck send, spends a physical Ash and leaves Roar in Deck",
+      "pass": true
+    },
+    {
+      "name": "Ash cannot answer Spinny revival from GY",
+      "pass": true
+    },
+    {
+      "name": "HOPT remains consumed across the route and impossible material reuse is rejected",
+      "pass": true
+    },
+    {
+      "name": "Fresh replay rejects modified LP, forged material costs and different physical decks for both archetypes",
+      "pass": true
+    },
+    {
+      "name": "Vishuda returns a declared physical opposing Normal monster and replay preserves the starting-board assumption",
+      "pass": true
+    },
+    {
+      "name": "Vishuda does not silently bounce a face-up Trap with an unmodeled leaving-field effect",
+      "pass": true
+    },
+    {
+      "name": "Both declared goals are discoverable through bounded search and all returned candidates replay",
+      "pass": true
+    },
+    {
+      "name": "Ashuna restriction still allows Normal Set and Tribute Summon of non-Wyrms",
+      "pass": true
+    }
+  ],
+  "archetypes": [
+    "Tenyi",
+    "Salamangreat"
+  ],
+  "limitations": [
+    "Technical construction snapshots do not authenticate official banlists.",
+    "Fixtures contain Normal Monster fillers, not competitive deck recommendations.",
+    "These routes do not claim coverage of every card effect or opponent response."
+  ]
+}
+

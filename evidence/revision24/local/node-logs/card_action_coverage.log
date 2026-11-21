@@ -1,0 +1,84 @@
+{
+  "schema": "ygo-card-coverage-tests/v1",
+  "pass": true,
+  "total": 19,
+  "tests": [
+    {
+      "name": "Real Invoked deck keeps technical data separate from its partial registered actions",
+      "pass": true
+    },
+    {
+      "name": "Blue-Eyes, Tenyi and Salamangreat report actual registered source effects",
+      "pass": true
+    },
+    {
+      "name": "Albaz summon, Artemis summon and Chengying summon do not claim complete source effects",
+      "pass": true
+    },
+    {
+      "name": "Safe-cost membership and catalogue metadata never manufacture a card effect",
+      "pass": true
+    },
+    {
+      "name": "Printed Normals get basic transport actions separately from specific effects",
+      "pass": true
+    },
+    {
+      "name": "Unknown and invalid passcodes remain diagnostic without assumed actions",
+      "pass": true
+    },
+    {
+      "name": "Canonical alias families retain distinct passcodes and physical quantities",
+      "pass": true
+    },
+    {
+      "name": "Duplicate rows are counted as declared copies and exposed rather than silently removed",
+      "pass": true
+    },
+    {
+      "name": "Invalid quantities never turn into a default copy or a partial probability",
+      "pass": true
+    },
+    {
+      "name": "Source evidence, stats, token, Extra and prerelease guards constrain generic Normal actions",
+      "pass": true
+    },
+    {
+      "name": "Skills are separated even when a known action identity is accidentally put in their zone",
+      "pass": true
+    },
+    {
+      "name": "Missing handlers and providers cannot be advertised by the declarative mapping",
+      "pass": true
+    },
+    {
+      "name": "Ash is recognized through its real native policy rather than a nonexistent provider",
+      "pass": true
+    },
+    {
+      "name": "Mutable presentation objects cannot promote unknown effects into basic Normal support",
+      "pass": true
+    },
+    {
+      "name": "Report context is fresh and non-TCG formats are explicitly outside the causal model",
+      "pass": true
+    },
+    {
+      "name": "Export snapshots include build and catalogue identity without a coverage or project percentage",
+      "pass": true
+    },
+    {
+      "name": "Mutating exported mapping or report snapshots never changes later reports",
+      "pass": true
+    },
+    {
+      "name": "All zones remain inventoried while aggregate categories conserve valid declared copies",
+      "pass": true
+    },
+    {
+      "name": "Malformed zones, non-object rows and oversized input remain explicit diagnostic failures",
+      "pass": true
+    }
+  ]
+}
+

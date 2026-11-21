@@ -1,0 +1,119 @@
+{
+  "pass": true,
+  "total": 28,
+  "tests": [
+    {
+      "name": "TCG 40/60 boundaries and 39/61 rejection",
+      "pass": true
+    },
+    {
+      "name": "TCG and OCG Extra/Side limits are separate",
+      "pass": true
+    },
+    {
+      "name": "Master Duel rejects Side Deck instead of using paper Side15",
+      "pass": true
+    },
+    {
+      "name": "Duel Links Speed is20-30 and Rush is30-40",
+      "pass": true
+    },
+    {
+      "name": "Duel Links Extra slots require explicit unlocked/Skill context when used",
+      "pass": true
+    },
+    {
+      "name": "Duel Links Limit1 budget is shared between different identities",
+      "pass": true
+    },
+    {
+      "name": "Duel Links Limit2 budget rejects three copies across two cards",
+      "pass": true
+    },
+    {
+      "name": "Duel Links Limit3 permits three aggregate copies but rejects four",
+      "pass": true
+    },
+    {
+      "name": "Aliased artworks share the three-copy physical limit",
+      "pass": true
+    },
+    {
+      "name": "Skills are outside Main and one active Skill maximum",
+      "pass": true
+    },
+    {
+      "name": "Speed Duel Side Skills count toward six-card Side capacity",
+      "pass": true
+    },
+    {
+      "name": "Rush unknown Legend metadata stays pending rather than non-Legend",
+      "pass": true
+    },
+    {
+      "name": "Rush permits one verified Legend per category and rejects two monsters",
+      "pass": true
+    },
+    {
+      "name": "GOAT Fusion Deck does not inherit modern Extra15 and rejects Synchro",
+      "pass": true
+    },
+    {
+      "name": "Time Wizard requires historical date and historical Extra rules",
+      "pass": true
+    },
+    {
+      "name": "Dated historical availability rejects cards released later",
+      "pass": true
+    },
+    {
+      "name": "Digital complete supplied pool is used, missing IDs rejected",
+      "pass": true
+    },
+    {
+      "name": "Missing or empty undated restriction list never means unlimited",
+      "pass": true
+    },
+    {
+      "name": "Stale or wrong-format snapshots are explicit pending states",
+      "pass": true
+    },
+    {
+      "name": "Conflicting duplicate restriction rows rejected transactionally",
+      "pass": true
+    },
+    {
+      "name": "Failed dynamic refresh preserves previous snapshot and date",
+      "pass": true
+    },
+    {
+      "name": "Successful refresh validates the staged list before atomic commit",
+      "pass": true
+    },
+    {
+      "name": "Snapshots have stable canonical identity independent of row order",
+      "pass": true
+    },
+    {
+      "name": "Unknown catalogue IDs are rejected instead of trusting supplied metadata",
+      "pass": true
+    },
+    {
+      "name": "Unknown card type remains pending instead of inventing zone classification",
+      "pass": true
+    },
+    {
+      "name": "Contradictory status/max rows cannot weaken restrictions",
+      "pass": true
+    },
+    {
+      "name": "Upcoming list does not silently become current before its date",
+      "pass": true
+    },
+    {
+      "name": "No construction result claims official certification",
+      "pass": true
+    }
+  ]
+}
+

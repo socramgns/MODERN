@@ -1,0 +1,120 @@
+{
+  "schema": "ygo-r24-data-formats-tests/v1",
+  "pass": true,
+  "total": 28,
+  "tests": [
+    {
+      "name": "Evidence request preserves all 98 original identities and 51 unknown statistic rows",
+      "pass": true
+    },
+    {
+      "name": "Evidence requests are strict detached snapshots bound to build, hashes and original values",
+      "pass": true
+    },
+    {
+      "name": "Recording a note cannot supply evidence or fill missing statistics",
+      "pass": true
+    },
+    {
+      "name": "A deck evidence request contains only its unresolved passcodes and preserves its source fingerprint",
+      "pass": true
+    },
+    {
+      "name": "Actual current secondary-source receipt records five hashed SQLite checks and zero unresolved exact matches",
+      "pass": true
+    },
+    {
+      "name": "Official transport receipts preserve actual proxy denial without disabling TLS or certifying content",
+      "pass": true
+    },
+    {
+      "name": "The real pinned primary CDB prepares a zero-change review package",
+      "pass": true
+    },
+    {
+      "name": "No-change real-source evidence cannot manufacture an applied data copy",
+      "pass": true
+    },
+    {
+      "name": "Original bytes, exact passcode and same type support a staged missing-statistics copy",
+      "pass": true
+    },
+    {
+      "name": "Explicit acceptance creates a detached copy preserving original passcodes, nulls, zero and technical markers",
+      "pass": true
+    },
+    {
+      "name": "A reviewed copy never overwrites an existing file or its original source",
+      "pass": true
+    },
+    {
+      "name": "Wrong acceptance fingerprint, forged patch, passcode, source hash and certification fail atomically",
+      "pass": true
+    },
+    {
+      "name": "Source byte changes reject an old review rather than rebinding evidence",
+      "pass": true
+    },
+    {
+      "name": "Exact passcode with conflicting type cannot supply any statistics",
+      "pass": true
+    },
+    {
+      "name": "Known zero survives import and conflicting known values preserve the entire record",
+      "pass": true
+    },
+    {
+      "name": "Duplicate JSON keys and duplicate source passcodes are rejected",
+      "pass": true
+    },
+    {
+      "name": "The advertised ten construction formats retain separate declared pools and modeled limits",
+      "pass": true
+    },
+    {
+      "name": "A user Extra limit cannot enlarge fixed TCG, Traditional, OCG, Master, Rush or Speed Duel construction",
+      "pass": true
+    },
+    {
+      "name": "Malformed or excessive digital Extra declarations preserve the safety bound and uncertainty",
+      "pass": true
+    },
+    {
+      "name": "Event declarations can reduce Side capacity but cannot add a Side Deck to digital formats",
+      "pass": true
+    },
+    {
+      "name": "Traditional models an Advanced forbidden identity as Limited while Advanced still rejects it",
+      "pass": true
+    },
+    {
+      "name": "Provided Speed Duel restriction budgets include active and Side Skills",
+      "pass": true
+    },
+    {
+      "name": "A future, wrong-version or invalid-date banlist is not applied as a prohibition",
+      "pass": true
+    },
+    {
+      "name": "An explicit passcode restriction cannot also restrict another identity with the same supplied name",
+      "pass": true
+    },
+    {
+      "name": "Restriction source, completeness, contradictory no-list declaration and coercible IDs fail validation",
+      "pass": true
+    },
+    {
+      "name": "Unknown Skills cannot bypass identity checks and string quantities cannot enter counts",
+      "pass": true
+    },
+    {
+      "name": "Retained catalogue type prevents a supplied Skill disguise from bypassing deck-zone checks",
+      "pass": true
+    },
+    {
+      "name": "All operations preserve shipped catalogue and manifest bytes and every unresolved baseline count",
+      "pass": true
+    }
+  ]
+}
+
