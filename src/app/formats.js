@@ -6,11 +6,12 @@ const arr=x=>Array.isArray(x)?x:[],own=(x,k)=>Object.prototype.hasOwnProperty.ca
 const clone=x=>typeof structuredClone==='function'?structuredClone(x):JSON.parse(JSON.stringify(x));
 const freeze=x=>{if(x&&typeof x==='object'){Object.freeze(x);for(const y of Object.values(x))if(y&&typeof y==='object'&&!Object.isFrozen(y))freeze(y)}return x};
 const normalize=x=>String(x??'').normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]/g,'');
+const sourceURL=x=>/^https:\/\/[^\s/?#]+(?:[/?#][^\s]*)?$/.test(String(x||''))&&String(x).length<=2048;
 const aliases={tcg:'tcg',tcgadvanced:'tcg',tcgtraditional:'tcgTraditional',ocg:'ocg',master:'master',masterduel:'master',duellinks:'duelLinksSpeed',duellinksspeed:'duelLinksSpeed',duellinksrush:'duelLinksRush',rush:'rush',rushduel:'rush',speedduel:'speedDuel',goat:'goat',goatformat:'goat',timewizard:'timeWizard'};
 const keyOf=x=>aliases[normalize(x)]||null;
 const policies=freeze({
  tcg:{mainMin:40,mainMax:60,extraMax:15,sideMax:15,skills:0,restrictionMode:'PER_IDENTITY',pool:'TCG'},
- tcgTraditional:{mainMin:40,mainMax:60,extraMax:15,sideMax:15,skills:0,restrictionMode:'PER_IDENTITY',pool:'TCG'},
+ tcgTraditional:{mainMin:40,mainMax:60,extraMax:15,sideMax:15,skills:0,restrictionMode:'PER_IDENTITY',pool:'TCG',forbiddenMaximum:1},
  ocg:{mainMin:40,mainMax:60,extraMax:15,sideMax:15,skills:0,restrictionMode:'PER_IDENTITY',pool:'OCG'},
  master:{mainMin:40,mainMax:60,extraMax:15,sideMax:0,skills:0,restrictionMode:'PER_IDENTITY',pool:'DIGITAL_VERSIONED'},
  duelLinksSpeed:{mainMin:20,mainMax:30,extraMax:null,extraSafetyMax:15,sideMax:0,skills:1,restrictionMode:'SHARED_LIMIT_GROUPS',pool:'DIGITAL_VERSIONED',extraLimitRequiresContext:true,skillMayChangeConstruction:true},
@@ -40,14 +41,17 @@ function normalizeSnapshot(input,format){
  const effective=date(source.effectiveDate||source.officialEffective||source.date),version=String(source.version||source.revision||effective||'').trim();
  if(!effective&&!source.noGeneralList)issues.push('RESTRICTION_DATE_REQUIRED');
  if(!version&&!source.noGeneralList)issues.push('RESTRICTION_VERSION_REQUIRED');
- if(!/^https:\/\//i.test(String(source.source||source.authoritySource||source.url||'')))issues.push('RESTRICTION_SOURCE_REQUIRED');
+ if(!sourceURL(source.source||source.authoritySource||source.url))issues.push('RESTRICTION_SOURCE_REQUIRED');
+ if(source.complete===false)issues.push('RESTRICTION_DECLARED_INCOMPLETE');
+ if(source.noGeneralList===true&&rows.length)issues.push('NO_GENERAL_LIST_WITH_RESTRICTION_ROWS');
  const seen=new Map();
  for(const row of rows){
-  const id=Number(row?.id),name=String(row?.name||'').trim(),max=ruleMaximum(row),identity=Number.isSafeInteger(id)&&id>0?'id:'+id:name?'name:'+normalize(name):null;
+  if(row?.id!==undefined&&row.id!==null&&(!Number.isSafeInteger(row.id)||row.id<1)){issues.push('INVALID_RESTRICTION_PASSCODE');continue}
+  const id=Number(row?.id),name=String(row?.name||'').trim(),sourceMaximum=ruleMaximum(row),max=format==='tcgTraditional'&&sourceMaximum===0?1:sourceMaximum,identity=Number.isSafeInteger(id)&&id>0?'id:'+id:name?'name:'+normalize(name):null;
   if(!identity||max===null){issues.push('INVALID_RESTRICTION_ROW');continue}
   const statusMaximum=group(row)??({forbidden:0,limited:1,'semi-limited':2,legal:3})[String(row.status||'').toLowerCase()];
   if(statusMaximum!==undefined&&row.max!==undefined&&Number(row.max)!==statusMaximum){issues.push('RESTRICTION_STATUS_MAXIMUM_MISMATCH');continue}
-  const normalized={id:Number.isSafeInteger(id)&&id>0?id:null,name,max,status:String(row.status||''),sharedGroup:group(row)};
+  const normalized={id:Number.isSafeInteger(id)&&id>0?id:null,name,max,status:format==='tcgTraditional'&&sourceMaximum===0?'Limited':String(row.status||''),sharedGroup:group(row)};
   if(seen.has(identity)){const previous=seen.get(identity);if(previous.max!==max||previous.sharedGroup!==normalized.sharedGroup)issues.push('CONFLICTING_RESTRICTION_ROWS');continue}
   seen.set(identity,normalized);out.push(normalized);
  }
@@ -81,7 +85,7 @@ function normalizePoolSnapshot(input,format,context={}){
  for(const field of ['asOfDate','historicalDate','date'])if(context[field]!==undefined&&!date(context[field]))issues.push('FORMAT_CONTEXT_DATE_INVALID:'+field);
  if(!effectiveDate)issues.push('POOL_DATE_REQUIRED');if(!version||version.length>240)issues.push('POOL_VERSION_REQUIRED');
  if(!/^https:\/\/[^\s/?#]+(?:[/?#][^\s]*)?$/.test(source)||source.length>2048)issues.push('POOL_SOURCE_REQUIRED');
- if(pool.complete!==true)issues.push('POOL_COMPLETENESS_DECLARATION_REQUIRED');
+  if(pool.complete!==true)issues.push('POOL_COMPLETENESS_DECLARATION_REQUIRED');
  if(!Array.isArray(pool.ids)||pool.ids.length>100000)issues.push('POOL_IDS_REQUIRED');
  else{const seen=new Set();for(const id of pool.ids){if(!Number.isSafeInteger(id)||id<1){issues.push('POOL_INVALID_PASSCODE');continue;}if(seen.has(id)){issues.push('POOL_DUPLICATE_PASSCODE');continue;}seen.add(id);ids.push(id);}}
  if(effectiveDate&&selectedDate&&effectiveDate>selectedDate)issues.push('POOL_SNAPSHOT_AFTER_SELECTED_DATE');
@@ -139,33 +143,46 @@ function availability(card,context={}){
 function validateDeck(deck,context={}){
  const format=keyOf(context.format||W.__YGO_ACTIVE_BAN_KEY||'tcg'),policy=policies[format];
  if(!policy)return{schema:'ygo-format-validation/v1',format,pass:false,constructionValid:false,errors:[{reason:'UNKNOWN_FORMAT'}],pending:[],certified:false};
- const errors=[],pending=[],warnings=[],counts={main:0,extra:0,side:0,skills:0},families=new Map(),entries=[];
+ const errors=[],pending=[],warnings=[],counts={main:0,extra:0,side:0,skills:0},families=new Map(),restrictionFamilies=new Map(),entries=[],restrictionEntries=[];
  const addPending=(reason,detail={})=>{if(!pending.some(x=>x.reason===reason))pending.push({reason,...detail})};
  const historicalDate=date(context.historicalDate||context.date||policy.defaultHistoricalDate);
  if(policy.historicalRulesRequireContext&&!historicalDate)addPending('HISTORICAL_DATE_REQUIRED');
  if(policy.historicalRulesRequireContext&&!Number.isSafeInteger(context.extraDeckLimit))addPending('HISTORICAL_EXTRA_RULE_REQUIRED');
  let extraMax=policy.extraMax;
- if(Number.isSafeInteger(context.extraDeckLimit)&&context.extraDeckLimit>=0&&context.extraDeckLimit<=10000)extraMax=context.extraDeckLimit;
- else if(policy.extraLimitRequiresContext){extraMax=policy.extraSafetyMax;}
+ const dynamicExtra=policy.extraLimitRequiresContext||policy.historicalRulesRequireContext;
+ const extraContextValid=Number.isSafeInteger(context.extraDeckLimit)&&context.extraDeckLimit>=0&&context.extraDeckLimit<=(policy.extraSafetyMax||1000);
+ if(context.extraDeckLimit!==undefined&&!extraContextValid)addPending('EXTRA_LIMIT_CONTEXT_INVALID');
+ if(dynamicExtra&&extraContextValid)extraMax=context.extraDeckLimit;
+ else if(policy.extraLimitRequiresContext)extraMax=policy.extraSafetyMax;
+ if(!dynamicExtra&&context.extraDeckLimit!==undefined&&context.extraDeckLimit!==policy.extraMax)addPending('FIXED_EXTRA_LIMIT_OVERRIDE_UNSUPPORTED');
  let sideMax=policy.sideMax;
- if(context.event&&Number.isSafeInteger(context.event.sideMax)&&context.event.sideMax>=0&&context.event.sideMax<=15)sideMax=context.event.sideMax;
+ if(context.event?.sideMax!==undefined){if(Number.isSafeInteger(context.event.sideMax)&&context.event.sideMax>=0&&context.event.sideMax<=policy.sideMax)sideMax=context.event.sideMax;else addPending('EVENT_SIDE_LIMIT_INVALID');}
  let activeSkills=0,sideSkills=0;
  for(const zone of ['main','extra','side','skills']){
   const cards=deck?.[zone];if(zone==='skills'&&cards===undefined)continue;
   if(!Array.isArray(cards)){errors.push({zone,reason:'ZONE_NOT_ARRAY'});continue}
-  for(const card of cards){
-   const q=Number(card?.qty??1),id=identity(card),bits=Number(card?.typeBits),skill=!!(bits&0x8000000)||/skill/i.test(String(card?.type||''));
+  for(const supplied of cards){
+   const passcode=supplied?.id??supplied?.cardId,q=supplied?.qty??1;
+   if(!Number.isSafeInteger(passcode)||passcode<1){errors.push({zone,reason:'UNKNOWN_IDENTITY',id:passcode});continue}
+   const original=typeof W.YGODataCatalog?.rulesCard==='function'?W.YGODataCatalog.rulesCard(passcode):typeof W.YGODataCatalog?.lookup==='function'?W.YGODataCatalog.lookup(passcode):supplied;
+   if(!original){errors.push({zone,reason:'UNKNOWN_IDENTITY',id:passcode});continue}
+   // Identity, type and technical pool metadata come from the retained source.
+   // Only explicitly declared construction evidence can supplement that row.
+   const card={...original,qty:q};for(const field of ['legend','isLegend','legendMetadataVerified','speedDuelPrintVerified','releaseDates','tcgReleaseDate','constructionEvidence'])if(own(supplied,field))card[field]=clone(supplied[field]);
+   const id=identity(card),bits=Number(card?.typeBits),skill=!!(bits&0x8000000)||/skill/i.test(String(card?.type||''));
    if(!Number.isSafeInteger(q)||q<1||q>60){errors.push({zone,reason:'INVALID_QUANTITY',id:card?.id});continue}
    counts[zone]+=q;
    if(skill){
+    const pool=availability(card,{...context,format,historicalDate});if(pool.eligible===false)errors.push({id,zone,reason:pool.status});else if(pool.eligible!==true)addPending(pool.status,{id});
+    if(id!==null){restrictionFamilies.set(id,(restrictionFamilies.get(id)||0)+q);restrictionEntries.push({card,q,zone,id});}
     if(zone==='skills'){activeSkills+=q;if(!policy.skills)errors.push({zone,reason:'SKILLS_NOT_ALLOWED'})}
     else if(zone==='side'&&policy.sideSkills)sideSkills+=q;
     else errors.push({zone,reason:'SKILL_IN_CARD_DECK'});
     continue;
    }
    if(zone==='skills'){errors.push({zone,reason:'NON_SKILL_IN_SKILL_ZONE'});continue}
-   if(id===null||typeof W.YGODataCatalog?.lookup==='function'&&!W.YGODataCatalog.lookup(Number(card?.id??card?.cardId))){errors.push({zone,reason:'UNKNOWN_IDENTITY',id:card?.id});continue}
-   families.set(id,(families.get(id)||0)+q);entries.push({card,q,zone,id});
+   if(id===null){errors.push({zone,reason:'UNKNOWN_IDENTITY',id:card?.id});continue}
+   families.set(id,(families.get(id)||0)+q);restrictionFamilies.set(id,(restrictionFamilies.get(id)||0)+q);const entry={card,q,zone,id};entries.push(entry);restrictionEntries.push(entry);
    if(bits&0x4000)errors.push({id,zone,reason:'TOKEN_NOT_IN_DECK'});
    const knownType=Number.isSafeInteger(bits)&&bits>0,extraOnly=!!(bits&(0x40|0x2000|0x800000|0x4000000));
    if(!knownType)addPending('CARD_TYPE_METADATA_REQUIRED',{id});
@@ -200,13 +217,14 @@ function validateDeck(deck,context={}){
  const asOf=date(context.asOfDate)||new Date().toISOString().slice(0,10);
  if(!historicalDate&&snapshot.effectiveDate&&snapshot.effectiveDate>asOf)addPending('SNAPSHOT_NOT_YET_EFFECTIVE',{effectiveDate:snapshot.effectiveDate,asOfDate:asOf});
  const shared=new Map([[1,{copies:0,ids:new Set()}],[2,{copies:0,ids:new Set()}],[3,{copies:0,ids:new Set()}]]);
- const matched=new Set();
- if(snapshot.complete)for(const restriction of snapshot.data){
+ const matched=new Set(),restrictionContext=contextEvidence({...context,format});
+ const restrictionUsable=snapshot.complete&&!restrictionContext.issues.some(reason=>/^SNAPSHOT_|^FORMAT_CONTEXT_DATE_INVALID/.test(reason));
+ if(restrictionUsable)for(const restriction of snapshot.data){
   const ids=new Set();if(restriction.id){const id=identity({id:restriction.id,alias:W.YGODataCatalog?.lookup?.(restriction.id)?.alias});if(id)ids.add(id)}
-  if(restriction.name){for(const entry of entries){const names=[entry.card.name,entry.card.canonicalName,...arr(entry.card.legacyNames)];if(names.some(n=>normalize(n)===normalize(restriction.name)))ids.add(entry.id)}
+  if(!restriction.id&&restriction.name){for(const entry of restrictionEntries){const names=[entry.card.name,entry.card.canonicalName,...arr(entry.card.legacyNames)];if(names.some(n=>normalize(n)===normalize(restriction.name)))ids.add(entry.id)}
    const resolved=W.YGODataCatalog?.resolveName?.(restriction.name,{format});for(const id of resolved?.canonicalIds||[])if(id!=null)ids.add(String(id));}
-  const copies=[...ids].reduce((n,id)=>n+(families.get(id)||0),0);
-  if(policy.restrictionMode==='SHARED_LIMIT_GROUPS'&&restriction.sharedGroup){const target=shared.get(restriction.sharedGroup);for(const id of ids){if(!target.ids.has(id)){target.ids.add(id);target.copies+=families.get(id)||0}}}
+  const copies=[...ids].reduce((n,id)=>n+(restrictionFamilies.get(id)||0),0);
+  if(policy.restrictionMode==='SHARED_LIMIT_GROUPS'&&restriction.sharedGroup){const target=shared.get(restriction.sharedGroup);for(const id of ids){if(!target.ids.has(id)){target.ids.add(id);target.copies+=restrictionFamilies.get(id)||0}}}
   else if(copies>restriction.max)errors.push({reason:'BANLIST_MAXIMUM',name:restriction.name,id:restriction.id,maximum:restriction.max,actual:copies});
   if(copies)for(const id of ids)matched.add(id);
  }

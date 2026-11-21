@@ -57,6 +57,30 @@ const definitions=[
  {id:87871125,actions:[summon('SALAMANGREAT_LINK_WOLF','Invocación Link de Sunlight Wolf'),summon('SALAMANGREAT_REINCARNATE_WOLF','Reincarnación de Sunlight Wolf'),effect('SALAMANGREAT_WOLF_RECOVER_ST','Recuperar Mágica/Trampa admitida'),effect('SALAMANGREAT_WOLF_RECOVER_FIRE','Recuperar FIRE admitido')]},
  {id:51339637,actions:[effect('SALAMANGREAT_ROAR_SET_FROM_GY','Colocar Roar desde GY'),response('ROAR','Counter Trap: negar y destruir una activación admitida')],notes:['Comparte el límite de uso con su efecto GY y exige una colocación de un turno anterior.']}
 ];
+// R24 additions remain conditional on the actual loaded adapter/procedure.
+// A recipe describes a summon of its Fusion Monster, not a new monster effect.
+const priorityAction=(cardId,id,label,kind='EFFECT',registration='PRIORITY_ADAPTER')=>({...action(kind,id,label,registration),cardId});
+const append=(id,actions,notes=[])=>{let row=definitions.find(x=>x.id===id);if(!row){row={id,actions:[]};definitions.push(row);}row.actions.push(...actions);row.notes=[...arr(row.notes),...notes];};
+append(14558127,[priorityAction(14558127,'ASH_BLOSSOM','Negar un efecto registrado que accede al Deck','RESPONSE')]);
+append(74063034,[priorityAction(74063034,'INVOCATION_MECHABA','Fusión con prioridad y materiales elegidos al resolver'),priorityAction(74063034,'INVOCATION_RECYCLE','Recuperación con prioridad y objetivo fijado al activar')]);
+append(44362883,[priorityAction(44362883,'BRANDED_FUSION_LUBELLION','Branded Fusion con respuestas y materiales al resolver')]);
+append(70534340,[priorityAction(70534340,'PRIORITY_LUBELLION_FUSION_MIRRORJADE','Disparo de Lubellion con descarte real','EFFECT','TRIGGER_PROFILE')],['En prioridad explícita, Lubellion aplica sus restricciones restantes al resolver sin negación, incluso si no logra realizar la Fusión.']);
+append(96633955,[priorityAction(96633955,'TRIGGER_CHENGYING_BANISH','Disparo de Chengying: elegir destierros al resolver','EFFECT','TRIGGER_PROFILE'),action('EFFECT','CHENGYING_EFFECT_DESTRUCTION_REPLACEMENT','Sustituir la destrucción por efecto de Chengying','DESTRUCTION_REPLACEMENT')]);
+definitions.find(x=>x.id===96633955).notes=['Sus estadísticas continuas y los nuevos perfiles de reemplazo y disparo son parciales. Los dos últimos requieren prioridad y orden de disparos; se excluyen efectos de salida no revisados.'];
+append(90953320,[{...summon('SYNCHRO_TG_HYPER_LIBRARIAN','Invocación Synchro de Librarian con Cantante y no Cantantes Normales revisados'),registration:'LIBRARIAN_PROCEDURE',cardId:90953320}]);
+definitions.find(x=>x.id===90953320).notes=['La receta registrada exige niveles impresos que sumen cinco y Normales técnicamente cotejados. El robo obligatorio requiere prioridad y orden de disparos; un orden desconocido mantiene pendiente su resolución. El campo inicial declarado no acredita su invocación apropiada.'];
+append(74157028,[{...summon('INVOCATION_MECHABA','Fusión de Cyber Twin mediante Invocation y dos Cyber Dragon de la mano'),registration:'INVOCATION_FUSION_RECIPE',cardId:74157028}]);
+definitions.find(x=>x.id===74157028).notes=['Conserva su segundo ataque continuo y su Volteo revisado. La receta adicional usa exactamente dos Cyber Dragon físicos de la mano mediante Invocation. Monster Reborn exige un historial real de Fusión apropiada; declararlo en el campo inicial no lo demuestra.'];
+for(const [id,name]of [[81612598,'Adamante'],[54401832,'Crimsonite']])append(id,[{...summon('METALFOES_FUSION','Fusión de '+name+' con materiales Metalfoes admitidos'),registration:'METALFOES_FUSION_RECIPE',cardId:id}]);
+for(const [cardId,id,label,registration]of [
+ [73594093,'METALFOES_FUSION','Metalfoes Fusion con materiales elegidos al resolver'],
+ [73594093,'METALFOES_FUSION_GY_DRAW','Efecto GY de Metalfoes Fusion: barajar y robar; la incertidumbre conserva la resolución pendiente'],
+ [33327029,'METALFOES_COUNTER','Counter tras una destrucción física registrada'],
+ [33327029,'METALFOES_COUNTER_GY_RECOVER','Desterrar Counter del GY como coste y recuperar Metalfoes del Extra boca arriba'],
+ [69711728,'METALFOES_COMBINATION_ACTIVATE','Activar Combination previamente Colocada'],
+ [69711728,'TRIGGER_METALFOES_COMBINATION_REVIVE','Disparo de Combination tras Fusión registrada','TRIGGER_PROFILE'],
+ [69711728,'TRIGGER_METALFOES_COMBINATION_SEARCH','Disparo de Combination enviada del campo al GY','TRIGGER_PROFILE']
+])append(cardId,[priorityAction(cardId,id,label,'EFFECT',registration||'PRIORITY_ADAPTER')]);
 const byId=new Map(definitions.map(row=>[row.id,row]));
 const labels={main:'Main',extra:'Extra',side:'Side',skills:'Skills'};
 const statusLabels={PARTIAL_REGISTERED_ACTIONS:'Acciones específicas parciales',REGISTERED_SUMMON_ONLY:'Solo invocación registrada',BASIC_NORMAL_ACTIONS_ONLY:'Solo acciones básicas de Normal',NO_REGISTERED_CARD_ACTIONS:'Sin acciones específicas registradas',SKILL_OUTSIDE_CAUSAL_ENGINE:'Skill fuera del motor causal'};
@@ -69,6 +93,9 @@ function moduleCapabilities(name){try{return W[name]?.capabilities?.()||null}cat
 function capabilities(){const value=W.YGOComboEngine?.capabilities?.()||{},flip=W.YGOFlipEffects?.capabilities?.()||{},supportsFlip=card=>W.YGOFlipEffects?.supportsFlip?.(card)===true;return{handlers:new Set(arr(value.handlers)),responses:new Set(arr(value.responseProviders)),replacements:new Set(arr(value.duelPhases?.destructionReplacementProviders)),battleProfiles:new Set(arr(value.duelPhases?.multipleAttackProfiles).filter(p=>p.limit===2&&p.rule==='REVIEWED_CONTINUOUS_SECOND_ATTACK').map(p=>p.cardId)),flipProfiles:new Set([31560081,21015833,74157028].filter(id=>supportsFlip(W.YGODataCatalog?.rulesCard?.(id)))),flipNormalProfiles:new Set(arr(flip.reviewedMainNormalSummonIds)),supportsFlip,policies:new Set(arr(value.opponentPolicies)),priority:value.priority||null,triggerOrder:moduleCapabilities('YGOTriggerOrder'),xyz:moduleCapabilities('YGOXyzSummon'),pendulum:moduleCapabilities('YGOPendulumSummon'),available:typeof W.YGOComboEngine?.capabilities==='function'};}
 function priorityRegistered(action,caps){return['PRIORITY_ACTIVATE','PRIORITY_PASS','PRIORITY_RESOLVE'].every(id=>caps.handlers.has(id))&&arr(caps.priority?.effects).some(p=>p.id===action.id&&p.cardId===action.cardId);}
 function registered(action,caps){
+ if(action.registration==='LIBRARIAN_PROCEDURE')return caps.handlers.has(action.id)&&moduleCapabilities('YGOCardProfilesExpanded')?.librarian?.action===action.id;
+ if(action.registration==='INVOCATION_FUSION_RECIPE')return priorityRegistered({...action,cardId:74063034},caps)&&arr(moduleCapabilities('YGOPriorityFusions')?.invocation?.recipes).some(x=>x.cardId===action.cardId);
+ if(action.registration==='METALFOES_FUSION_RECIPE')return priorityRegistered({...action,cardId:73594093},caps)&&arr(moduleCapabilities('YGOMetalfoesEffects')?.fusionMonsterRecipes).includes(action.cardId);
  if(action.registration==='XYZ_PROFILE')return caps.handlers.has(action.id)&&arr(caps.xyz?.cardIds).includes(action.cardId)&&[caps.xyz?.summonAction,caps.xyz?.effectAction].includes(action.id);
  if(action.registration==='PENDULUM_PROFILE')return caps.handlers.has(action.id)&&arr(caps.pendulum?.cardIds).includes(action.cardId)&&[caps.pendulum?.scaleAction,caps.pendulum?.summonAction,caps.pendulum?.effectAction].includes(action.id);
  if(action.registration==='PRIORITY_ADAPTER')return priorityRegistered(action,caps);

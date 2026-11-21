@@ -1,0 +1,30 @@
+{
+  "schema": "ygo-r24-official-transport-observation/v1",
+  "requests": [
+    {
+      "requestedUrl": "https://www.db.yugioh-card.com/yugiohdb/card_search.action?ope=1&keyword=Photon%20Emperor&request_locale=en",
+      "observedAt": "2026-11-20T21:21:33.227456+00:00",
+      "tlsValidationDisabled": false,
+      "networkContext": "required-network-context",
+      "status": "TRANSPORT_ERROR",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "requestedUrl": "https://www.yugioh-card.com/en/limited/index.html",
+      "observedAt": "2026-11-20T21:21:33.248511+00:00",
+      "tlsValidationDisabled": false,
+      "networkContext": "required-network-context",
+      "status": "TRANSPORT_ERROR",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    }
+  ],
+  "officialIdentityAuthenticated": false,
+  "currentListProven": false,
+  "criteriaClosed": [],
+  "preliminarySandboxAttempts": {
+    "officialRequestCount": 2,
+    "officialStatus": "OPERATION_NOT_PERMITTED_DEFAULT_SANDBOX",
+    "nativeGitStatus": "DEFAULT_SANDBOX_PROXY_CONNECT_FAILURE",
+    "meaning": "Not an effective network-policy diagnosis. A single retry in required network context produced the actual receipts above."
+  }
+}

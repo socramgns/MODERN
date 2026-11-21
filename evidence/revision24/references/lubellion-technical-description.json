@@ -1,0 +1,13 @@
+{
+  "schema": "ygo-technical-card-description/v1",
+  "sourceCommit": "ae5dedb957c2c48ab86554fee08a0fca73d8b1cf",
+  "sourcePath": ".cache/catalog/ae5dedb957c2c48ab86554fee08a0fca73d8b1cf-cards.cdb",
+  "sourceCdbSha256": "d5166c35296a6c65dcc0230c7bc0e9f25721639159b80fa78bf724be61183a6a",
+  "cardId": 70534340,
+  "name": "Lubellion the Searing Dragon",
+  "description": "1 DARK monster + \"Fallen of Albaz\"\r\nIf this card is Fusion Summoned: You can discard 1 card; Fusion Summon 1 Level 8 or lower Fusion Monster from your Extra Deck, except \"Lubellion the Searing Dragon\", by shuffling Fusion Materials mentioned on it into the Deck, from your monsters on the field, GY, and/or face-up banished cards. For the rest of this turn, this card cannot attack, also you cannot Special Summon monsters from the Extra Deck, except Fusion Monsters. You can only use this effect of \"Lubellion the Searing Dragon\" once per turn.",
+  "descriptionSha256": "cf40a14da5cd3ba04b3a35f21bac3cc53828a71d65939c098f8fd3a736a8e9fc",
+  "officialTcgRulingCertified": false,
+  "sourceReauthenticatedAtIntegration": false,
+  "purpose": "Lubellion restriction wording: rest of this turn, not entire turn."
+}

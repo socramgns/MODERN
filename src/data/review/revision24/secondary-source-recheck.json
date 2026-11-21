@@ -1,0 +1,79 @@
+{
+  "schema": "ygo-r24-secondary-source-recheck/v1",
+  "checks": [
+    {
+      "file": "cards.cdb",
+      "url": "https://raw.githubusercontent.com/ProjectIgnis/BabelCDB/3d673dfe3b90471022cf11898e8ebe53443c8f17/cards.cdb",
+      "commit": "3d673dfe3b90471022cf11898e8ebe53443c8f17",
+      "role": "SECONDARY_TECHNICAL_PROJECT_IGNIS_CDB",
+      "retrievedAt": "2026-11-20T21:21:54.342323+00:00",
+      "tlsValidationDisabled": false,
+      "status": "HASHED_SQLITE_READ_ONLY",
+      "sha256": "3aab211ae722881dad79fe25fb5d5c9636d3e5d03e8e3ca3e52078ca79666fa7",
+      "bytes": 7987200,
+      "records": 14794,
+      "sqliteQuickCheck": "ok",
+      "exactUnresolvedMatches": []
+    },
+    {
+      "file": "cards-rush.cdb",
+      "url": "https://raw.githubusercontent.com/ProjectIgnis/BabelCDB/3d673dfe3b90471022cf11898e8ebe53443c8f17/cards-rush.cdb",
+      "commit": "3d673dfe3b90471022cf11898e8ebe53443c8f17",
+      "role": "SECONDARY_TECHNICAL_PROJECT_IGNIS_CDB",
+      "retrievedAt": "2026-11-20T21:21:55.113889+00:00",
+      "tlsValidationDisabled": false,
+      "status": "HASHED_SQLITE_READ_ONLY",
+      "sha256": "77f2f077ffb3f97afde2dd5be208fed1685f4a23cdcba48b2b2eee91637a8401",
+      "bytes": 1527808,
+      "records": 3667,
+      "sqliteQuickCheck": "ok",
+      "exactUnresolvedMatches": []
+    },
+    {
+      "file": "cards-skills.cdb",
+      "url": "https://raw.githubusercontent.com/ProjectIgnis/BabelCDB/3d673dfe3b90471022cf11898e8ebe53443c8f17/cards-skills.cdb",
+      "commit": "3d673dfe3b90471022cf11898e8ebe53443c8f17",
+      "role": "SECONDARY_TECHNICAL_PROJECT_IGNIS_CDB",
+      "retrievedAt": "2026-11-20T21:21:55.511945+00:00",
+      "tlsValidationDisabled": false,
+      "status": "HASHED_SQLITE_READ_ONLY",
+      "sha256": "4bb2e1ad111d780a9dc217e865c3a915c4a8ea6606ea60c7141646c0ed443009",
+      "bytes": 136192,
+      "records": 208,
+      "sqliteQuickCheck": "ok",
+      "exactUnresolvedMatches": []
+    },
+    {
+      "file": "cards-unofficial.cdb",
+      "url": "https://raw.githubusercontent.com/ProjectIgnis/BabelCDB/3d673dfe3b90471022cf11898e8ebe53443c8f17/cards-unofficial.cdb",
+      "commit": "3d673dfe3b90471022cf11898e8ebe53443c8f17",
+      "role": "SECONDARY_TECHNICAL_PROJECT_IGNIS_CDB",
+      "retrievedAt": "2026-11-20T21:21:55.920056+00:00",
+      "tlsValidationDisabled": false,
+      "status": "HASHED_SQLITE_READ_ONLY",
+      "sha256": "63a989e31a349fb2f127330007671267e1a6538488570f49636344e62db699b0",
+      "bytes": 2228224,
+      "records": 5880,
+      "sqliteQuickCheck": "ok",
+      "exactUnresolvedMatches": []
+    },
+    {
+      "file": "cards-skills-unofficial.cdb",
+      "url": "https://raw.githubusercontent.com/ProjectIgnis/BabelCDB/3d673dfe3b90471022cf11898e8ebe53443c8f17/cards-skills-unofficial.cdb",
+      "commit": "3d673dfe3b90471022cf11898e8ebe53443c8f17",
+      "role": "SECONDARY_TECHNICAL_PROJECT_IGNIS_CDB",
+      "retrievedAt": "2026-11-20T21:21:56.248351+00:00",
+      "tlsValidationDisabled": false,
+      "status": "HASHED_SQLITE_READ_ONLY",
+      "sha256": "d64bd027d347e3aa0bad2ab00af3d4749623542ab4323f5c1ce43593e674d933",
+      "bytes": 13312,
+      "records": 19,
+      "sqliteQuickCheck": "ok",
+      "exactUnresolvedMatches": []
+    }
+  ],
+  "baselineUnresolvedIds": 98,
+  "officialIdentityCertified": false,
+  "officialAvailabilityVerified": false,
+  "criteriaClosed": []
+}

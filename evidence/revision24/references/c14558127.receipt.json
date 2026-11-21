@@ -1,0 +1,12 @@
+{
+  "cardId": 14558127,
+  "url": "https://raw.githubusercontent.com/ProjectIgnis/CardScripts/915c6ff63518a04e18d16ee45962d75a8c8be264/official/c14558127.lua",
+  "sourceCommit": "915c6ff63518a04e18d16ee45962d75a8c8be264",
+  "officialTcgRulingCertified": false,
+  "executed": false,
+  "httpStatus": 200,
+  "sha256": "ef52822941d9e63d6b3ed0d7bea58dc8ab440be983a88aa353c36e3e294313ac",
+  "bytes": 1758,
+  "path": "/workspace/r24-validation/references/c14558127.lua",
+  "pass": true
+}

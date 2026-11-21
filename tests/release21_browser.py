@@ -101,7 +101,7 @@ def run(url=None):
               and page.evaluate('()=>navigator.onLine===false&&YGO_BUILD_MANIFEST.buildId') == build['buildId'])
         expected_ids = ['spark', 'spirit', 'invoked', 'swordsoul', 'branded', 'tenyi', 'salamangreat',
                         'roar', 'crow', 'droll', 'field', 'trap', 'evacuation', 'shuffle', 'reborn',
-                        'synchro', 'azure', 'spirit-reborn', 'wolf-reborn', 'albaz', 'hayabusa', 'faith-flip', 'priority-chain', 'simultaneous-triggers', 'xyz-corn', 'pendulum-metalfoes', 'damage-step', 'draw-sequences']
+                        'synchro', 'azure', 'spirit-reborn', 'wolf-reborn', 'albaz', 'hayabusa', 'faith-flip', 'priority-chain', 'simultaneous-triggers', 'xyz-corn', 'pendulum-metalfoes', 'damage-step', 'draw-sequences', 'branded-priority', 'tenyi-priority', 'salamangreat-priority', 'metalfoes-priority']
         check('twenty_one_visible_examples_preserve_all_twenty_previous_identifiers',
               page.locator('#ygoExampleSelect').evaluate('(el)=>[...el.options].map(o=>o.value)') == expected_ids)
         try:
@@ -255,10 +255,12 @@ def run(url=None):
             coverage = page.evaluate('()=>YGOCardCoverage.report().entries.find(x=>x.id===74157028)')
             check('cyber_twin_action_inventory_declares_its_partial_attack_and_reviewed_flip_profiles',
                   coverage is not None and coverage['completeCardRules'] is False
-                  and len(coverage['actions']) == 2
+                  and len(coverage['actions']) == 3
                   and {(a['id'], a['registration']) for a in coverage['actions']} == {
-                      ('DUEL_ATTACK', 'BATTLE_PROFILE'), ('DUEL_FLIP_SUMMON', 'FLIP_PROFILE')}
-                  and any('no añade su receta' in note for note in coverage['notes']))
+                      ('DUEL_ATTACK', 'BATTLE_PROFILE'), ('DUEL_FLIP_SUMMON', 'FLIP_PROFILE'),
+                      ('INVOCATION_MECHABA', 'INVOCATION_FUSION_RECIPE')}
+                  and any('dos Cyber Dragon' in note for note in coverage['notes'])
+                  and twin['properlySummoned'] is False)
             first, _ = step(page, 'DUEL_ATTACK', player=0, attackerUid=twin['uid'], targetUid=targets[0]['uid'])
             check('cyber_twin_first_attack_sends_the_first_physical_rival_to_its_owners_grave',
                   first['current']['lp'] == [8000, 7000]

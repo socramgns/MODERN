@@ -313,7 +313,41 @@ const drawSequences=base('draw-sequences','Probabilidades: dos robos en orden cr
  'Con los límites sugeridos, el objetivo de tener Blue-Eyes en tu mano después de los dos eventos tiene peso 1/3. Revisa las decisiones de ambos jugadores y la masa desconocida que se conserve si reduces los límites.',
  'Exporta y verifica el análisis contra este mismo escenario. Sus hipótesis no se reanudan como jugadas observadas y el intervalo no es una tasa de victoria.'
 ]);drawSequences.context.priorityMode=true;drawSequences.context.manualBothPlayers=true;
-const templates=new Map([spark,spirit,invoked,swordsoul,branded,tenyi,salamangreat,roar,crow,droll,field,trap,evacuation,shuffle,reborn,synchro,azure,spiritReborn,wolfReborn,albaz,hayabusa,faithFlip,priorityChain,simultaneous,xyzCorn,pendulumMetalfoes,damageStep,drawSequences].map(value=>[value.id,value]));
+const brandedPriority=base('branded-priority','Branded con prioridad: materiales al resolver','Separa las dos Fusiones, sus respuestas y el descarte de Lubellion en decisiones físicas.',physical(brandedDeck,brandedOpening),blue(),emptyField(),{requiredFieldIds:[44146295]},[
+ 'Activa Branded Fusion como primer eslabón de prioridad. Todavía no elijas ni muevas materiales: Albaz y Dark Magician siguen en el Deck.',
+ 'Cede prioridad con ambos jugadores. Al resolver elige Lubellion, Albaz y Dark Magician del Deck, una zona principal libre y su posición. Los materiales se envían como parte de la resolución, no como coste.',
+ 'Activa el efecto opcional de Lubellion en el orden de efectos disparados y descarta 7 Colored Fish de tu mano. El coste ya está pagado mientras la cadena espera respuestas.',
+ 'Cede con ambos jugadores y resuelve eligiendo Mirrorjade, Albaz del Cementerio y Lubellion del campo. Albaz regresa al Deck y Lubellion al Extra.',
+ 'Comprueba el descarte, la restricción de Fusión y la reproducción del informe exportado. Esta receta registrada no representa todas las Fusiones ni todas sus interacciones.'
+]);
+const ashDeck=deck([[14558127,1]],[]),ashOpening=[14558127,...NORMALS.slice(0,4)];
+const tenyiPriority=base('tenyi-priority','Tenyi con prioridad: Ashuna frente a Ash','Paga el destierro de Ashuna y compara una negación de efecto con su invocación desde el Deck.',physical(tenyiDeck,tenyiOpening),physical(ashDeck,ashOpening),{turn:2,activePlayer:0,phase:'MAIN 1',placements:[
+ {player:0,from:'hand',cardId:87052196,zone:'gy'},
+ {player:0,from:'extra',cardId:32519092,zone:'monster',zoneIndex:5,position:'ATTACK',faceUp:true,summonTurn:1}
+]},{requiredFieldIds:[32519092,98159737]},[
+ 'Monk en el campo y Ashuna en el Cementerio son supuestos iniciales declarados. Activa Ashuna: se destierra como coste, antes de elegir un monstruo del Deck.',
+ 'El jugador 2 puede responder con Ash Blossom desde su mano. Su descarte es otro coste físico; Ash niega el efecto de Ashuna, no su activación.',
+ 'Cede con ambos jugadores y resuelve Ash antes de Ashuna. No se invoca Adhara y no se aplica la restricción Wyrm; ambos costes permanecen pagados.',
+ 'Para comparar, vuelve a cargar el ejemplo y activa Ashuna sin respuesta. Tras ambas cesiones, elige Adhara y una zona principal al resolver: esta vez se invoca y se aplica la restricción Wyrm.',
+ 'Exporta y reanuda cualquiera de las dos líneas. Su reproducción conserva la zona de activación y cada copia, sin certificar la invocación previa de Monk.'
+]);
+const salamangreatPriority=base('salamangreat-priority','Salamangreat con prioridad: Gazelle y Spinny','Distingue un disparado opcional, el envío del Deck, un descarte y una resurrección con respuestas independientes.',physical(salamangreatDeck,salamangreatOpening),physical(ashDeck,ashOpening),emptyField(),{requiredFieldIds:[26889158,52277807]},[
+ 'Invoca normalmente a Gazelle. Elige su efecto opcional en el orden de disparados; Roar permanece en el Deck hasta resolver.',
+ 'El rival puede responder con Ash Blossom y pagar su descarte. Para la ruta principal cede sin esa respuesta y resuelve eligiendo Roar del Deck: este envío es efecto, no coste.',
+ 'Activa Spinny desde la mano sobre Gazelle. Spinny se descarta inmediatamente; Gazelle recibe sus 500 ATK sólo cuando resuelve el eslabón tras las dos cesiones.',
+ 'Activa Spinny en el Cementerio y resuelve en una zona principal libre. No es una invocación desde el Deck y no admite Ash por esa categoría.',
+ 'Comprueba Gazelle y Spinny en el campo, Roar en el Cementerio y el desvío al destierro que Spinny conserva para cuando deje el campo. Exporta la línea y verifica su reproducción.'
+]);
+const metalFusionDeck=deck([[73594093,1],[33256280,1],[23771716,1]],[[81612598,1]]),metalFusionOpening=[73594093,33256280,...NORMALS.slice(0,3)];
+const metalfoesPriority=base('metalfoes-priority','Metalfoes Fusion: receta física y prioridad','Invoca Adamante con dos materiales de la mano elegidos al resolver y conserva los límites del robo desconocido.',physical(metalFusionDeck,metalFusionOpening),blue(),emptyField(),{requiredFieldIds:[81612598]},[
+ 'Activa Metalfoes Fusion desde la mano y abre la cadena de prioridad. Goldriver y 7 Colored Fish siguen en tu mano durante las respuestas.',
+ 'Cede con ambos jugadores. Al resolver elige Metalfoes Adamante, Goldriver y 7 Colored Fish como sus dos materiales, una zona libre y la posición.',
+ 'Comprueba que ambos materiales van al Cementerio desde la mano y Adamante queda correctamente invocado por Fusión. Los materiales no fueron costes y la Magia termina en el Cementerio.',
+ 'Exporta y reanuda esta línea resuelta. El ejemplo cubre esta receta finita y no acredita todos los efectos Metalfoes.',
+ 'El efecto de Metalfoes Fusion en el Cementerio baraja antes de robar. Si lo activas, su resolución queda pendiente al requerir un robo desconocido: no se inventa una carta observada ni se presenta una hipótesis como jugada real.'
+]);
+for(const example of [brandedPriority,tenyiPriority,salamangreatPriority,metalfoesPriority])Object.assign(example.context,{priorityMode:true,triggerOrderMode:true,manualBothPlayers:true});
+const templates=new Map([spark,spirit,invoked,swordsoul,branded,tenyi,salamangreat,roar,crow,droll,field,trap,evacuation,shuffle,reborn,synchro,azure,spiritReborn,wolfReborn,albaz,hayabusa,faithFlip,priorityChain,simultaneous,xyzCorn,pendulumMetalfoes,damageStep,drawSequences,brandedPriority,tenyiPriority,salamangreatPriority,metalfoesPriority].map(value=>[value.id,value]));
 const describe=value=>({id:value.id,name:value.name,description:value.description,scope:value.scope,steps:clone(value.tutorial.steps),replacesDeck:true,initialHistoryCertified:false,competitiveRecommendation:false});
 function list(){return[...templates.values()].map(describe);}
 function get(id){if(typeof id!=='string'||!templates.has(id))throw Error('SCENARIO_EXAMPLE_UNKNOWN');return clone(templates.get(id));}
@@ -333,5 +367,5 @@ async function load(id){const spec=get(id);if(loading)throw Error('SCENARIO_EXAM
  await A.initialize({goal:spec.goal});
  return{pass:true,status:'SCENARIO_EXAMPLE_LOADED',id,name:spec.name,message:'Ejemplo cargado. El campo inicial es un supuesto declarado; selecciona y ejecuta cada acción en el laboratorio.',steps:clone(spec.tutorial.steps),report:clone(A.report())};
  }finally{loading=false;}}
-W.YGOScenarioExamples=Object.freeze({version:'self-contained-physical-examples-v8',list,get,load,get isBusy(){return loading;}});
+W.YGOScenarioExamples=Object.freeze({version:'self-contained-physical-examples-v9',list,get,load,get isBusy(){return loading;}});
 })();

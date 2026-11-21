@@ -1,0 +1,12 @@
+{
+  "cardId": 74063034,
+  "url": "https://raw.githubusercontent.com/ProjectIgnis/CardScripts/915c6ff63518a04e18d16ee45962d75a8c8be264/official/c74063034.lua",
+  "sourceCommit": "915c6ff63518a04e18d16ee45962d75a8c8be264",
+  "officialTcgRulingCertified": false,
+  "executed": false,
+  "httpStatus": 200,
+  "sha256": "5db6d7a7701f19dd4f9d75249b139a15cc07b077fee178c807f82b638dc115c1",
+  "bytes": 2850,
+  "path": "/workspace/r24-validation/references/c74063034.lua",
+  "pass": true
+}

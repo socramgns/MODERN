@@ -1,0 +1,1024 @@
+{
+  "schema": "ygo-exact-id-data-review/v1",
+  "binding": {
+    "catalogueSha256": "cc265022039bba09fc31e8e3a48afb0030e5a81cab0c30c386843fcd75e1cba6",
+    "manifestSha256": "bb7ce41310c0d997c23bff7b8f88b32e63ff33e065db4aaf13eb45cd4b241a67",
+    "sourceCommit": "ae5dedb957c2c48ab86554fee08a0fca73d8b1cf",
+    "cardCount": 21986
+  },
+  "source": {
+    "sha256": "3aab211ae722881dad79fe25fb5d5c9636d3e5d03e8e3ca3e52078ca79666fa7",
+    "url": "https://raw.githubusercontent.com/ProjectIgnis/BabelCDB/3d673dfe3b90471022cf11898e8ebe53443c8f17/cards.cdb",
+    "revision": "3d673dfe3b90471022cf11898e8ebe53443c8f17",
+    "reviewer": "Revisión técnica R24",
+    "reason": "Cotejo por passcode exacto de las 98 identidades pendientes contra la revisión pública inmutable de Project Ignis; fuente secundaria, sin certificación oficial.",
+    "bytes": 7987200,
+    "records": 14794,
+    "sqliteQuickCheck": "ok",
+    "role": "LOCAL_EXACT_ID_SECONDARY_TECHNICAL_CDB",
+    "urlAuthenticatedByThisCommand": false
+  },
+  "records": [
+    {
+      "id": 300,
+      "originalName": "Deck Master Functions",
+      "originalSource": "cards-unofficial(2).cdb",
+      "missingFields": [],
+      "sourceRecord": null,
+      "disposition": "NO_EXACT_ID_SOURCE_RECORD"
+    },
+    {
+      "id": 4001,
+      "originalName": "Strings Placeholder 1",
+      "originalSource": "cards-unofficial(2).cdb",
+      "missingFields": [],
+      "sourceRecord": null,
+      "disposition": "NO_EXACT_ID_SOURCE_RECORD"
+    },
+    {
+      "id": 4002,
+      "originalName": "Strings Placeholder 2",
+      "originalSource": "cards-unofficial(2).cdb",
+      "missingFields": [],
+      "sourceRecord": null,
+      "disposition": "NO_EXACT_ID_SOURCE_RECORD"
+    },
+    {
+      "id": 4003,
+      "originalName": "Strings Placeholder 3",
+      "originalSource": "cards-unofficial(2).cdb",
+      "missingFields": [],
+      "sourceRecord": null,
+      "disposition": "NO_EXACT_ID_SOURCE_RECORD"
+    },
+    {
+      "id": 4004,
+      "originalName": "Strings Placeholder 4",
+      "originalSource": "cards-unofficial(2).cdb",
+      "missingFields": [],
+      "sourceRecord": null,
+      "disposition": "NO_EXACT_ID_SOURCE_RECORD"
+    },
+    {
+      "id": 4005,
+      "originalName": "Strings Placeholder 5",
+      "originalSource": "cards-unofficial(2).cdb",
+      "missingFields": [],
+      "sourceRecord": null,
+      "disposition": "NO_EXACT_ID_SOURCE_RECORD"
+    },
+    {
+      "id": 4006,
+      "originalName": "Strings Placeholder 6",
+      "originalSource": "cards-unofficial(2).cdb",
+      "missingFields": [],
+      "sourceRecord": null,
+      "disposition": "NO_EXACT_ID_SOURCE_RECORD"
+    },
+    {
+      "id": 4007,
+      "originalName": "Strings Placeholder 7",
+      "originalSource": "cards-unofficial(2).cdb",
+      "missingFields": [],
+      "sourceRecord": null,
+      "disposition": "NO_EXACT_ID_SOURCE_RECORD"
+    },
+    {
+      "id": 4008,
+      "originalName": "Strings Placeholder 8",
+      "originalSource": "cards-unofficial(2).cdb",
+      "missingFields": [],
+      "sourceRecord": null,
+      "disposition": "NO_EXACT_ID_SOURCE_RECORD"
+    },
+    {
+      "id": 4009,
+      "originalName": "Strings Placeholder 9",
+      "originalSource": "cards-unofficial(2).cdb",
+      "missingFields": [],
+      "sourceRecord": null,
+      "disposition": "NO_EXACT_ID_SOURCE_RECORD"
+    },
+    {
+      "id": 4010,
+      "originalName": "String Placeholder 10",
+      "originalSource": "cards-unofficial(2).cdb",
+      "missingFields": [],
+      "sourceRecord": null,
+      "disposition": "NO_EXACT_ID_SOURCE_RECORD"
+    },
+    {
+      "id": 4011,
+      "originalName": "String Placeholder 11",
+      "originalSource": "cards-unofficial(2).cdb",
+      "missingFields": [],
+      "sourceRecord": null,
+      "disposition": "NO_EXACT_ID_SOURCE_RECORD"
+    },
+    {
+      "id": 4012,
+      "originalName": "String Placeholder 12",
+      "originalSource": "cards-unofficial(2).cdb",
+      "missingFields": [],
+      "sourceRecord": null,
+      "disposition": "NO_EXACT_ID_SOURCE_RECORD"
+    },
+    {
+      "id": 4013,
+      "originalName": "String Placeholder 13",
+      "originalSource": "cards-unofficial(2).cdb",
+      "missingFields": [],
+      "sourceRecord": null,
+      "disposition": "NO_EXACT_ID_SOURCE_RECORD"
+    },
+    {
+      "id": 4015,
+      "originalName": "String Placeholder 15",
+      "originalSource": "cards-unofficial(2).cdb",
+      "missingFields": [],
+      "sourceRecord": null,
+      "disposition": "NO_EXACT_ID_SOURCE_RECORD"
+    },
+    {
+      "id": 4016,
+      "originalName": "String Placeholder 16",
+      "originalSource": "cards-unofficial(2).cdb",
+      "missingFields": [],
+      "sourceRecord": null,
+      "disposition": "NO_EXACT_ID_SOURCE_RECORD"
+    },
+    {
+      "id": 4017,
+      "originalName": "String Placeholder 17",
+      "originalSource": "cards-unofficial(2).cdb",
+      "missingFields": [],
+      "sourceRecord": null,
+      "disposition": "NO_EXACT_ID_SOURCE_RECORD"
+    },
+    {
+      "id": 100000023,
+      "originalName": "Fossil Machine Skull Convoy",
+      "originalSource": "cards-unofficial(2).cdb",
+      "missingFields": [
+        "atk",
+        "defOrLinkMarkers",
+        "packedLevel"
+      ],
+      "sourceRecord": null,
+      "disposition": "NO_EXACT_ID_SOURCE_RECORD"
+    },
+    {
+      "id": 100000026,
+      "originalName": "Cenozoic Fossil Knight - Skullger",
+      "originalSource": "cards-unofficial(2).cdb",
+      "missingFields": [
+        "atk",
+        "defOrLinkMarkers",
+        "packedLevel"
+      ],
+      "sourceRecord": null,
+      "disposition": "NO_EXACT_ID_SOURCE_RECORD"
+    },
+    {
+      "id": 100000028,
+      "originalName": "Paleozoic Fossil Knight - Skullking",
+      "originalSource": "cards-unofficial(2).cdb",
+      "missingFields": [
+        "atk",
+        "defOrLinkMarkers",
+        "packedLevel"
+      ],
+      "sourceRecord": null,
+      "disposition": "NO_EXACT_ID_SOURCE_RECORD"
+    },
+    {
+      "id": 100000041,
+      "originalName": "Efflorescent Knight",
+      "originalSource": "cards-unofficial(2).cdb",
+      "missingFields": [
+        "atk",
+        "defOrLinkMarkers",
+        "packedLevel"
+      ],
+      "sourceRecord": null,
+      "disposition": "NO_EXACT_ID_SOURCE_RECORD"
+    },
+    {
+      "id": 100000159,
+      "originalName": "Assault Dog (TF6)",
+      "originalSource": "cards-unofficial(2).cdb",
+      "missingFields": [
+        "atk",
+        "defOrLinkMarkers",
+        "packedLevel"
+      ],
+      "sourceRecord": null,
+      "disposition": "NO_EXACT_ID_SOURCE_RECORD"
+    },
+    {
+      "id": 100000185,
+      "originalName": "Bonds of Rival",
+      "originalSource": "cards-unofficial(2).cdb",
+      "missingFields": [],
+      "sourceRecord": null,
+      "disposition": "NO_EXACT_ID_SOURCE_RECORD"
+    },
+    {
+      "id": 100000620,
+      "originalName": "Fossil Machine Skull Buggy",
+      "originalSource": "cards-unofficial(2).cdb",
+      "missingFields": [
+        "atk",
+        "defOrLinkMarkers",
+        "packedLevel"
+      ],
+      "sourceRecord": null,
+      "disposition": "NO_EXACT_ID_SOURCE_RECORD"
+    },
+    {
+      "id": 100000621,
+      "originalName": "Fossil Dragon Skullgar",
+      "originalSource": "cards-unofficial(2).cdb",
+      "missingFields": [
+        "atk",
+        "defOrLinkMarkers",
+        "packedLevel"
+      ],
+      "sourceRecord": null,
+      "disposition": "NO_EXACT_ID_SOURCE_RECORD"
+    },
+    {
+      "id": 100000622,
+      "originalName": "Fossil Machine Skull Wagon",
+      "originalSource": "cards-unofficial(2).cdb",
+      "missingFields": [
+        "atk",
+        "defOrLinkMarkers",
+        "packedLevel"
+      ],
+      "sourceRecord": null,
+      "disposition": "NO_EXACT_ID_SOURCE_RECORD"
+    },
+    {
+      "id": 100293096,
+      "originalName": "Switch Point",
+      "originalSource": "prerelease-slf1.cdb",
+      "missingFields": [],
+      "sourceRecord": null,
+      "disposition": "NO_EXACT_ID_SOURCE_RECORD"
+    },
+    {
+      "id": 100293099,
+      "originalName": "Sweet Room-Maid",
+      "originalSource": "prerelease-slf1.cdb",
+      "missingFields": [],
+      "sourceRecord": null,
+      "disposition": "NO_EXACT_ID_SOURCE_RECORD"
+    },
+    {
+      "id": 100293273,
+      "originalName": "The Revived Sky God",
+      "originalSource": "prerelease-mp22.cdb",
+      "missingFields": [],
+      "sourceRecord": null,
+      "disposition": "NO_EXACT_ID_SOURCE_RECORD"
+    },
+    {
+      "id": 100293274,
+      "originalName": "The Breaking Ruin God",
+      "originalSource": "prerelease-mp22.cdb",
+      "missingFields": [],
+      "sourceRecord": null,
+      "disposition": "NO_EXACT_ID_SOURCE_RECORD"
+    },
+    {
+      "id": 100293275,
+      "originalName": "The True Sun God",
+      "originalSource": "prerelease-mp22.cdb",
+      "missingFields": [],
+      "sourceRecord": null,
+      "disposition": "NO_EXACT_ID_SOURCE_RECORD"
+    },
+    {
+      "id": 101111001,
+      "originalName": "Photon Emperor",
+      "originalSource": "prerelease-phhy.cdb",
+      "missingFields": [
+        "atk",
+        "defOrLinkMarkers",
+        "packedLevel"
+      ],
+      "sourceRecord": null,
+      "disposition": "NO_EXACT_ID_SOURCE_RECORD"
+    },
+    {
+      "id": 101111002,
+      "originalName": "Galaxy Summoner",
+      "originalSource": "prerelease-phhy.cdb",
+      "missingFields": [
+        "atk",
+        "defOrLinkMarkers",
+        "packedLevel"
+      ],
+      "sourceRecord": null,
+      "disposition": "NO_EXACT_ID_SOURCE_RECORD"
+    },
+    {
+      "id": 101111003,
+      "originalName": "Galakuriboh",
+      "originalSource": "prerelease-phhy.cdb",
+      "missingFields": [
+        "atk",
+        "defOrLinkMarkers",
+        "packedLevel"
+      ],
+      "sourceRecord": null,
+      "disposition": "NO_EXACT_ID_SOURCE_RECORD"
+    },
+    {
+      "id": 101111006,
+      "originalName": "Kshatri-La Riseheart",
+      "originalSource": "prerelease-phhy.cdb",
+      "missingFields": [
+        "atk",
+        "defOrLinkMarkers",
+        "packedLevel"
+      ],
+      "sourceRecord": null,
+      "disposition": "NO_EXACT_ID_SOURCE_RECORD"
+    },
+    {
+      "id": 101111007,
+      "originalName": "Scareclaw Kshatri-La",
+      "originalSource": "prerelease-phhy.cdb",
+      "missingFields": [
+        "atk",
+        "defOrLinkMarkers",
+        "packedLevel"
+      ],
+      "sourceRecord": null,
+      "disposition": "NO_EXACT_ID_SOURCE_RECORD"
+    },
+    {
+      "id": 101111008,
+      "originalName": "Tearlaments Kshatri-La",
+      "originalSource": "prerelease-phhy.cdb",
+      "missingFields": [
+        "atk",
+        "defOrLinkMarkers",
+        "packedLevel"
+      ],
+      "sourceRecord": null,
+      "disposition": "NO_EXACT_ID_SOURCE_RECORD"
+    },
+    {
+      "id": 101111009,
+      "originalName": "Chaos Witch",
+      "originalSource": "prerelease-phhy.cdb",
+      "missingFields": [
+        "atk",
+        "defOrLinkMarkers",
+        "packedLevel"
+      ],
+      "sourceRecord": null,
+      "disposition": "NO_EXACT_ID_SOURCE_RECORD"
+    },
+    {
+      "id": 101111010,
+      "originalName": "Shell of Chaos",
+      "originalSource": "prerelease-phhy.cdb",
+      "missingFields": [
+        "atk",
+        "defOrLinkMarkers",
+        "packedLevel"
+      ],
+      "sourceRecord": null,
+      "disposition": "NO_EXACT_ID_SOURCE_RECORD"
+    },
+    {
+      "id": 101111011,
+      "originalName": "Core of Chaos",
+      "originalSource": "prerelease-phhy.cdb",
+      "missingFields": [
+        "atk",
+        "defOrLinkMarkers",
+        "packedLevel"
+      ],
+      "sourceRecord": null,
+      "disposition": "NO_EXACT_ID_SOURCE_RECORD"
+    },
+    {
+      "id": 101111012,
+      "originalName": "Mind Tuner",
+      "originalSource": "prerelease-phhy.cdb",
+      "missingFields": [
+        "atk",
+        "defOrLinkMarkers",
+        "packedLevel"
+      ],
+      "sourceRecord": null,
+      "disposition": "NO_EXACT_ID_SOURCE_RECORD"
+    },
+    {
+      "id": 101111013,
+      "originalName": "Chaos Mirage Dragon",
+      "originalSource": "prerelease-phhy.cdb",
+      "missingFields": [
+        "atk",
+        "defOrLinkMarkers",
+        "packedLevel"
+      ],
+      "sourceRecord": null,
+      "disposition": "NO_EXACT_ID_SOURCE_RECORD"
+    },
+    {
+      "id": 101111018,
+      "originalName": "Grim Gishki",
+      "originalSource": "prerelease-phhy.cdb",
+      "missingFields": [
+        "atk",
+        "defOrLinkMarkers",
+        "packedLevel"
+      ],
+      "sourceRecord": null,
+      "disposition": "NO_EXACT_ID_SOURCE_RECORD"
+    },
+    {
+      "id": 101111019,
+      "originalName": "Basiltrice, Familiar of the Evil Eye",
+      "originalSource": "prerelease-phhy.cdb",
+      "missingFields": [
+        "atk",
+        "defOrLinkMarkers",
+        "packedLevel"
+      ],
+      "sourceRecord": null,
+      "disposition": "NO_EXACT_ID_SOURCE_RECORD"
+    },
+    {
+      "id": 101111020,
+      "originalName": "Vara, Seidhr of the Generaider Bosses",
+      "originalSource": "prerelease-phhy.cdb",
+      "missingFields": [
+        "atk",
+        "defOrLinkMarkers",
+        "packedLevel"
+      ],
+      "sourceRecord": null,
+      "disposition": "NO_EXACT_ID_SOURCE_RECORD"
+    },
+    {
+      "id": 101111032,
+      "originalName": "Evigishki Nereimanas",
+      "originalSource": "prerelease-phhy.cdb",
+      "missingFields": [
+        "atk",
+        "defOrLinkMarkers",
+        "packedLevel"
+      ],
+      "sourceRecord": null,
+      "disposition": "NO_EXACT_ID_SOURCE_RECORD"
+    },
+    {
+      "id": 101111039,
+      "originalName": "Chaos Archfiend",
+      "originalSource": "prerelease-phhy.cdb",
+      "missingFields": [
+        "atk",
+        "defOrLinkMarkers",
+        "packedLevel"
+      ],
+      "sourceRecord": null,
+      "disposition": "NO_EXACT_ID_SOURCE_RECORD"
+    },
+    {
+      "id": 101111040,
+      "originalName": "Chaos Beast",
+      "originalSource": "prerelease-phhy.cdb",
+      "missingFields": [
+        "atk",
+        "defOrLinkMarkers",
+        "packedLevel"
+      ],
+      "sourceRecord": null,
+      "disposition": "NO_EXACT_ID_SOURCE_RECORD"
+    },
+    {
+      "id": 101111043,
+      "originalName": "Number C62: Neo Galaxy-Eyes Prime Photon Dragon",
+      "originalSource": "prerelease-phhy.cdb",
+      "missingFields": [
+        "atk",
+        "defOrLinkMarkers",
+        "packedLevel"
+      ],
+      "sourceRecord": null,
+      "disposition": "NO_EXACT_ID_SOURCE_RECORD"
+    },
+    {
+      "id": 101111044,
+      "originalName": "Galaxy Photon Dragon",
+      "originalSource": "prerelease-phhy.cdb",
+      "missingFields": [
+        "atk",
+        "defOrLinkMarkers",
+        "packedLevel"
+      ],
+      "sourceRecord": null,
+      "disposition": "NO_EXACT_ID_SOURCE_RECORD"
+    },
+    {
+      "id": 101111046,
+      "originalName": "Kshatri-La Ariseheart",
+      "originalSource": "prerelease-phhy.cdb",
+      "missingFields": [
+        "atk",
+        "defOrLinkMarkers",
+        "packedLevel"
+      ],
+      "sourceRecord": null,
+      "disposition": "NO_EXACT_ID_SOURCE_RECORD"
+    },
+    {
+      "id": 101111047,
+      "originalName": "Laevateinn, Generaider Boss of Shadows",
+      "originalSource": "prerelease-phhy.cdb",
+      "missingFields": [
+        "atk",
+        "defOrLinkMarkers",
+        "packedLevel"
+      ],
+      "sourceRecord": null,
+      "disposition": "NO_EXACT_ID_SOURCE_RECORD"
+    },
+    {
+      "id": 101111051,
+      "originalName": "Galaxy Hundred",
+      "originalSource": "prerelease-phhy.cdb",
+      "missingFields": [],
+      "sourceRecord": null,
+      "disposition": "NO_EXACT_ID_SOURCE_RECORD"
+    },
+    {
+      "id": 101111052,
+      "originalName": "Numeron Creation",
+      "originalSource": "prerelease-phhy.cdb",
+      "missingFields": [],
+      "sourceRecord": null,
+      "disposition": "NO_EXACT_ID_SOURCE_RECORD"
+    },
+    {
+      "id": 101111057,
+      "originalName": "Kshatri-La Overlap",
+      "originalSource": "prerelease-phhy.cdb",
+      "missingFields": [],
+      "sourceRecord": null,
+      "disposition": "NO_EXACT_ID_SOURCE_RECORD"
+    },
+    {
+      "id": 101111058,
+      "originalName": "Kshatri-La Papiyas",
+      "originalSource": "prerelease-phhy.cdb",
+      "missingFields": [],
+      "sourceRecord": null,
+      "disposition": "NO_EXACT_ID_SOURCE_RECORD"
+    },
+    {
+      "id": 101111059,
+      "originalName": "Prime Planet Paraisos",
+      "originalSource": "prerelease-phhy.cdb",
+      "missingFields": [],
+      "sourceRecord": null,
+      "disposition": "NO_EXACT_ID_SOURCE_RECORD"
+    },
+    {
+      "id": 101111060,
+      "originalName": "Scareclaw Defang",
+      "originalSource": "prerelease-phhy.cdb",
+      "missingFields": [],
+      "sourceRecord": null,
+      "disposition": "NO_EXACT_ID_SOURCE_RECORD"
+    },
+    {
+      "id": 101111061,
+      "originalName": "Tearlaments Perlregia",
+      "originalSource": "prerelease-phhy.cdb",
+      "missingFields": [],
+      "sourceRecord": null,
+      "disposition": "NO_EXACT_ID_SOURCE_RECORD"
+    },
+    {
+      "id": 101111066,
+      "originalName": "Gishki Icemirror",
+      "originalSource": "prerelease-phhy.cdb",
+      "missingFields": [],
+      "sourceRecord": null,
+      "disposition": "NO_EXACT_ID_SOURCE_RECORD"
+    },
+    {
+      "id": 101111067,
+      "originalName": "Aquamirror Focalization",
+      "originalSource": "prerelease-phhy.cdb",
+      "missingFields": [],
+      "sourceRecord": null,
+      "disposition": "NO_EXACT_ID_SOURCE_RECORD"
+    },
+    {
+      "id": 101111068,
+      "originalName": "Evil Eye Resurrection",
+      "originalSource": "prerelease-phhy.cdb",
+      "missingFields": [],
+      "sourceRecord": null,
+      "disposition": "NO_EXACT_ID_SOURCE_RECORD"
+    },
+    {
+      "id": 101111071,
+      "originalName": "Photon Deceleration",
+      "originalSource": "prerelease-phhy.cdb",
+      "missingFields": [],
+      "sourceRecord": null,
+      "disposition": "NO_EXACT_ID_SOURCE_RECORD"
+    },
+    {
+      "id": 101111074,
+      "originalName": "Trivikarma",
+      "originalSource": "prerelease-phhy.cdb",
+      "missingFields": [],
+      "sourceRecord": null,
+      "disposition": "NO_EXACT_ID_SOURCE_RECORD"
+    },
+    {
+      "id": 101111075,
+      "originalName": "Kshatri-La Big Bang",
+      "originalSource": "prerelease-phhy.cdb",
+      "missingFields": [],
+      "sourceRecord": null,
+      "disposition": "NO_EXACT_ID_SOURCE_RECORD"
+    },
+    {
+      "id": 101111076,
+      "originalName": "Chaos Phantasm",
+      "originalSource": "prerelease-phhy.cdb",
+      "missingFields": [],
+      "sourceRecord": null,
+      "disposition": "NO_EXACT_ID_SOURCE_RECORD"
+    },
+    {
+      "id": 101111109,
+      "originalName": "Black Beast Token",
+      "originalSource": "prerelease-phhy.cdb",
+      "missingFields": [
+        "atk",
+        "defOrLinkMarkers",
+        "packedLevel"
+      ],
+      "sourceRecord": null,
+      "disposition": "NO_EXACT_ID_SOURCE_RECORD"
+    },
+    {
+      "id": 101111209,
+      "originalName": "White Beast Token",
+      "originalSource": "prerelease-phhy.cdb",
+      "missingFields": [
+        "atk",
+        "defOrLinkMarkers",
+        "packedLevel"
+      ],
+      "sourceRecord": null,
+      "disposition": "NO_EXACT_ID_SOURCE_RECORD"
+    },
+    {
+      "id": 511000292,
+      "originalName": "Infernity Sage",
+      "originalSource": "cards-unofficial(2).cdb",
+      "missingFields": [
+        "atk",
+        "defOrLinkMarkers",
+        "packedLevel"
+      ],
+      "sourceRecord": null,
+      "disposition": "NO_EXACT_ID_SOURCE_RECORD"
+    },
+    {
+      "id": 511000576,
+      "originalName": "Trap Sluzer",
+      "originalSource": "cards-unofficial(2).cdb",
+      "missingFields": [
+        "atk",
+        "defOrLinkMarkers",
+        "packedLevel"
+      ],
+      "sourceRecord": null,
+      "disposition": "NO_EXACT_ID_SOURCE_RECORD"
+    },
+    {
+      "id": 511000725,
+      "originalName": "Summon Storm",
+      "originalSource": "cards-unofficial(2).cdb",
+      "missingFields": [],
+      "sourceRecord": null,
+      "disposition": "NO_EXACT_ID_SOURCE_RECORD"
+    },
+    {
+      "id": 511000911,
+      "originalName": "Smile Angel",
+      "originalSource": "cards-unofficial(2).cdb",
+      "missingFields": [
+        "atk",
+        "defOrLinkMarkers",
+        "packedLevel"
+      ],
+      "sourceRecord": null,
+      "disposition": "NO_EXACT_ID_SOURCE_RECORD"
+    },
+    {
+      "id": 511001233,
+      "originalName": "Gachi Battle",
+      "originalSource": "cards-unofficial(2).cdb",
+      "missingFields": [],
+      "sourceRecord": null,
+      "disposition": "NO_EXACT_ID_SOURCE_RECORD"
+    },
+    {
+      "id": 511001365,
+      "originalName": "Tellus Wing",
+      "originalSource": "cards-unofficial(2).cdb",
+      "missingFields": [
+        "atk",
+        "defOrLinkMarkers",
+        "packedLevel"
+      ],
+      "sourceRecord": null,
+      "disposition": "NO_EXACT_ID_SOURCE_RECORD"
+    },
+    {
+      "id": 511001407,
+      "originalName": "Gagagamirage",
+      "originalSource": "cards-unofficial(2).cdb",
+      "missingFields": [],
+      "sourceRecord": null,
+      "disposition": "NO_EXACT_ID_SOURCE_RECORD"
+    },
+    {
+      "id": 511001570,
+      "originalName": "Tribute Ticket",
+      "originalSource": "cards-unofficial(2).cdb",
+      "missingFields": [],
+      "sourceRecord": null,
+      "disposition": "NO_EXACT_ID_SOURCE_RECORD"
+    },
+    {
+      "id": 511001664,
+      "originalName": "Numeron Wall",
+      "originalSource": "cards-unofficial(2).cdb",
+      "missingFields": [
+        "atk",
+        "defOrLinkMarkers",
+        "packedLevel"
+      ],
+      "sourceRecord": null,
+      "disposition": "NO_EXACT_ID_SOURCE_RECORD"
+    },
+    {
+      "id": 511001966,
+      "originalName": "Iron Chain Dragon (Anime)",
+      "originalSource": "cards-unofficial(2).cdb",
+      "missingFields": [
+        "atk",
+        "defOrLinkMarkers",
+        "packedLevel"
+      ],
+      "sourceRecord": null,
+      "disposition": "NO_EXACT_ID_SOURCE_RECORD"
+    },
+    {
+      "id": 511002017,
+      "originalName": "Edge Nightmare",
+      "originalSource": "cards-unofficial(2).cdb",
+      "missingFields": [],
+      "sourceRecord": null,
+      "disposition": "NO_EXACT_ID_SOURCE_RECORD"
+    },
+    {
+      "id": 511002094,
+      "originalName": "Speed World",
+      "originalSource": "cards-unofficial(2).cdb",
+      "missingFields": [],
+      "sourceRecord": null,
+      "disposition": "NO_EXACT_ID_SOURCE_RECORD"
+    },
+    {
+      "id": 511002582,
+      "originalName": "Photon Spear",
+      "originalSource": "cards-unofficial(2).cdb",
+      "missingFields": [],
+      "sourceRecord": null,
+      "disposition": "NO_EXACT_ID_SOURCE_RECORD"
+    },
+    {
+      "id": 511002613,
+      "originalName": "Black Luster Soldier (DM)",
+      "originalSource": "cards-unofficial(2).cdb",
+      "missingFields": [
+        "atk",
+        "defOrLinkMarkers",
+        "packedLevel"
+      ],
+      "sourceRecord": null,
+      "disposition": "NO_EXACT_ID_SOURCE_RECORD"
+    },
+    {
+      "id": 511005062,
+      "originalName": "Hat Token",
+      "originalSource": "cards-unofficial(2).cdb",
+      "missingFields": [
+        "atk",
+        "defOrLinkMarkers",
+        "packedLevel"
+      ],
+      "sourceRecord": null,
+      "disposition": "NO_EXACT_ID_SOURCE_RECORD"
+    },
+    {
+      "id": 511005063,
+      "originalName": "Magical Hats (Anime)",
+      "originalSource": "cards-unofficial(2).cdb",
+      "missingFields": [],
+      "sourceRecord": null,
+      "disposition": "NO_EXACT_ID_SOURCE_RECORD"
+    },
+    {
+      "id": 511009112,
+      "originalName": "Doll Monster Bear-Bear",
+      "originalSource": "cards-unofficial(2).cdb",
+      "missingFields": [
+        "atk",
+        "defOrLinkMarkers",
+        "packedLevel"
+      ],
+      "sourceRecord": null,
+      "disposition": "NO_EXACT_ID_SOURCE_RECORD"
+    },
+    {
+      "id": 511009116,
+      "originalName": "Doll Monster Miss MadChen",
+      "originalSource": "cards-unofficial(2).cdb",
+      "missingFields": [
+        "atk",
+        "defOrLinkMarkers",
+        "packedLevel"
+      ],
+      "sourceRecord": null,
+      "disposition": "NO_EXACT_ID_SOURCE_RECORD"
+    },
+    {
+      "id": 511009215,
+      "originalName": "Slime Token",
+      "originalSource": "cards-unofficial(2).cdb",
+      "missingFields": [
+        "atk",
+        "defOrLinkMarkers",
+        "packedLevel"
+      ],
+      "sourceRecord": null,
+      "disposition": "NO_EXACT_ID_SOURCE_RECORD"
+    },
+    {
+      "id": 511009679,
+      "originalName": "Sunseed Genius Loci",
+      "originalSource": "cards-unofficial(2).cdb",
+      "missingFields": [
+        "atk",
+        "defOrLinkMarkers",
+        "packedLevel"
+      ],
+      "sourceRecord": null,
+      "disposition": "NO_EXACT_ID_SOURCE_RECORD"
+    },
+    {
+      "id": 511030041,
+      "originalName": "Appliancer Vacculephant",
+      "originalSource": "cards-unofficial(2).cdb",
+      "missingFields": [
+        "atk",
+        "defOrLinkMarkers",
+        "packedLevel"
+      ],
+      "sourceRecord": null,
+      "disposition": "NO_EXACT_ID_SOURCE_RECORD"
+    },
+    {
+      "id": 513000168,
+      "originalName": "Wisel Top (Anime)",
+      "originalSource": "cards-unofficial(2).cdb",
+      "missingFields": [
+        "atk",
+        "defOrLinkMarkers",
+        "packedLevel"
+      ],
+      "sourceRecord": null,
+      "disposition": "NO_EXACT_ID_SOURCE_RECORD"
+    },
+    {
+      "id": 513000169,
+      "originalName": "Wisel Attack (Anime)",
+      "originalSource": "cards-unofficial(2).cdb",
+      "missingFields": [
+        "atk",
+        "defOrLinkMarkers",
+        "packedLevel"
+      ],
+      "sourceRecord": null,
+      "disposition": "NO_EXACT_ID_SOURCE_RECORD"
+    },
+    {
+      "id": 513000170,
+      "originalName": "Wisel Guard (Anime)",
+      "originalSource": "cards-unofficial(2).cdb",
+      "missingFields": [
+        "atk",
+        "defOrLinkMarkers",
+        "packedLevel"
+      ],
+      "sourceRecord": null,
+      "disposition": "NO_EXACT_ID_SOURCE_RECORD"
+    },
+    {
+      "id": 513000171,
+      "originalName": "Wisel Carrier (Anime)",
+      "originalSource": "cards-unofficial(2).cdb",
+      "missingFields": [
+        "atk",
+        "defOrLinkMarkers",
+        "packedLevel"
+      ],
+      "sourceRecord": null,
+      "disposition": "NO_EXACT_ID_SOURCE_RECORD"
+    },
+    {
+      "id": 513000174,
+      "originalName": "Skiel Top (Anime)",
+      "originalSource": "cards-unofficial(2).cdb",
+      "missingFields": [
+        "atk",
+        "defOrLinkMarkers",
+        "packedLevel"
+      ],
+      "sourceRecord": null,
+      "disposition": "NO_EXACT_ID_SOURCE_RECORD"
+    },
+    {
+      "id": 513000176,
+      "originalName": "Skiel Guard (Anime)",
+      "originalSource": "cards-unofficial(2).cdb",
+      "missingFields": [
+        "atk",
+        "defOrLinkMarkers",
+        "packedLevel"
+      ],
+      "sourceRecord": null,
+      "disposition": "NO_EXACT_ID_SOURCE_RECORD"
+    },
+    {
+      "id": 513000177,
+      "originalName": "Skiel Carrier (Anime)",
+      "originalSource": "cards-unofficial(2).cdb",
+      "missingFields": [
+        "atk",
+        "defOrLinkMarkers",
+        "packedLevel"
+      ],
+      "sourceRecord": null,
+      "disposition": "NO_EXACT_ID_SOURCE_RECORD"
+    },
+    {
+      "id": 810000043,
+      "originalName": "Amplifier (Anime)",
+      "originalSource": "cards-unofficial(2).cdb",
+      "missingFields": [],
+      "sourceRecord": null,
+      "disposition": "NO_EXACT_ID_SOURCE_RECORD"
+    },
+    {
+      "id": 810000094,
+      "originalName": "Magician's Selection",
+      "originalSource": "cards-unofficial(2).cdb",
+      "missingFields": [],
+      "sourceRecord": null,
+      "disposition": "NO_EXACT_ID_SOURCE_RECORD"
+    }
+  ],
+  "patches": [],
+  "counts": {
+    "unresolvedIdentities": 98,
+    "exactSourceMatches": 0,
+    "fieldsSupportedForDetachedCopy": 0
+  },
+  "policy": "EXACT_PASSCODE_SAME_TYPE_MISSING_STATS_ONLY_DETACHED_COPY",
+  "originalCatalogueChanged": false,
+  "activeDeckChanged": false,
+  "officialIdentityCertified": false,
+  "officialAvailabilityVerified": false,
+  "criteriaClosed": [],
+  "reviewFingerprint": "4e8d15282a0c7036475c27ee4ba9a7268a6f0081e1f8449723baf12de9c75c8d"
+}

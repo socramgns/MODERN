@@ -33,6 +33,7 @@ GOLDRIVER, STEELEN, SILVERD, VOLFLAME, METAL_FUSION = 33256280, 60473572, 786857
 LEGACY_IDS = ['spark', 'spirit', 'invoked', 'swordsoul', 'branded', 'tenyi', 'salamangreat',
               'roar', 'crow', 'droll', 'field', 'trap', 'evacuation', 'shuffle', 'reborn',
               'synchro', 'azure', 'spirit-reborn', 'wolf-reborn', 'albaz', 'hayabusa', 'faith-flip']
+R24_IDS = ['branded-priority', 'tenyi-priority', 'salamangreat-priority', 'metalfoes-priority']
 NEW_IDS = ['priority-chain', 'simultaneous-triggers', 'xyz-corn', 'pendulum-metalfoes',
            'draw-sequences', 'damage-step']
 
@@ -224,8 +225,9 @@ def run(url=None, evidence_dir=None):
               and hashlib.sha256(response.body()).hexdigest() == digest
               and page.evaluate('()=>navigator.onLine===false&&YGO_BUILD_MANIFEST.buildId') == build['buildId'])
         ids = page.locator('#ygoExampleSelect').evaluate('(el)=>[...el.options].map(x=>x.value)')
-        check('twenty_eight_visible_examples_preserve_all_twenty_two_previous_identifiers',
-              ids[:22] == LEGACY_IDS and len(ids) == 28 and all(value in ids for value in NEW_IDS), ids)
+        check('thirty_two_visible_examples_preserve_all_twenty_eight_previous_identifiers',
+              ids[:28] == LEGACY_IDS + ['priority-chain', 'simultaneous-triggers', 'xyz-corn',
+                  'pendulum-metalfoes', 'damage-step', 'draw-sequences'] and ids[28:] == R24_IDS, ids)
         check('registered_extended_rule_modules_and_manual_review_api_are_present', page.evaluate('''()=>
           !!(window.YGOPriorityChain&&window.YGOTriggerOrder&&window.YGODamageStep&&window.YGOXyzSummon
             &&window.YGOPendulumSummon&&window.YGODrawSequences

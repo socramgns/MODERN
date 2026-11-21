@@ -12,7 +12,7 @@ permissions:
 jobs:
   verify:
     runs-on: ubuntu-24.04
-    timeout-minutes: 75
+    timeout-minutes: 100
     container:
       image: mcr.microsoft.com/playwright/python@sha256:aa81288e738725378becba5b3e06cb0f3a7f012a610e87e8d767a090ea3f740d
       options: --shm-size=1g
@@ -63,8 +63,8 @@ jobs:
                       browser = engine.launch(headless=True, args=['--no-sandbox'] if name == 'chromium' else [])
                       try:
                           page = browser.new_page()
-                          page.set_content('<!doctype html><title>R23 runtime check</title><p>Ready</p>')
-                          assert page.title() == 'R23 runtime check'
+                          page.set_content('<!doctype html><title>R24 runtime check</title><p>Ready</p>')
+                          assert page.title() == 'R24 runtime check'
                           checks.append({'engine': name, 'version': browser.version, 'title': page.title(), 'pass': True})
                       finally:
                           browser.close()
@@ -72,7 +72,7 @@ jobs:
                       checks.append({'engine': name, 'pass': False, 'error': str(error)[-2400:]})
           for check in checks:
               text = json.dumps(check, ensure_ascii=False, separators=(',', ':'))
-              print('::warning title=R23_RUNTIME_CHECK::' + text.replace('%', '%25').replace('\r', '%0D').replace('\n', '%0A'))
+              print('::warning title=R24_RUNTIME_CHECK::' + text.replace('%', '%25').replace('\r', '%0D').replace('\n', '%0A'))
           assert len(checks) == 3 and all(check['pass'] for check in checks), 'One or more browser runtime checks failed'
           PY
       # Estas comprobaciones son idempotentes sobre los binarios de la imagen.
@@ -104,7 +104,7 @@ jobs:
           result = subprocess.run(['git', 'rev-parse', '--show-toplevel'], capture_output=True, text=True)
           checks['rootAfter'] = {'returncode': result.returncode, 'output': (result.stdout + result.stderr)[-1800:]}
           text = json.dumps(checks, ensure_ascii=False, separators=(',', ':'))
-          print('::warning title=R23_GIT_RUNTIME::' + text.replace('%', '%25').replace('\r', '%0D').replace('\n', '%0A'))
+          print('::warning title=R24_GIT_RUNTIME::' + text.replace('%', '%25').replace('\r', '%0D').replace('\n', '%0A'))
           assert checks['gitMetadataPresent'] and result.returncode == 0
           assert Path(result.stdout.strip()).resolve() == workspace_directory
           with sync_playwright() as runtime:
@@ -125,7 +125,7 @@ jobs:
           python tools/build.py
           cmp Analizador_YuGiOh.html dist/Calculadora_de_Barajas_YuGiOh_Alpha_1263_Corregida.html
       - name: Ejecutar pruebas del entregable
-        timeout-minutes: 45
+        timeout-minutes: 70
         run: python tests/run_all.py --no-build
       - name: Exigir comprobación entre motores
         timeout-minutes: 5
@@ -146,7 +146,7 @@ jobs:
               rows = report.get('suites', [])
               failed = [row.get('name', 'UNNAMED_GROUP') for row in rows if row.get('pass') is not True]
               binding_matches = (report.get('buildId') == build.get('buildId') and report.get('htmlSha256') == build.get('htmlSha256'))
-              result = {'schema': 'ygo-ci-result-summary/v1', 'pass': report.get('pass') is True and len(rows) == 88 and not failed and binding_matches,
+              result = {'schema': 'ygo-ci-result-summary/v1', 'pass': report.get('pass') is True and len(rows) == 95 and not failed and binding_matches,
                         'buildId': report.get('buildId'), 'htmlSha256': report.get('htmlSha256'), 'groups': len(rows),
                         'failed': failed, 'buildBindingMatches': binding_matches, 'rawReportSha256': hashlib.sha256(raw).hexdigest(),
                         'sourceCommit': os.environ.get('GITHUB_SHA'), 'sourceRun': os.environ.get('GITHUB_RUN_ID')}
@@ -156,8 +156,8 @@ jobs:
                         'error': 'No se generó dist/validation-summary.json.', 'sourceCommit': os.environ.get('GITHUB_SHA'),
                         'sourceRun': os.environ.get('GITHUB_RUN_ID')}
           text = json.dumps(result, ensure_ascii=False, separators=(',', ':'))
-          print('::warning title=R23_CI_RESULT::' + text.replace('%', '%25').replace('\r', '%0D').replace('\n', '%0A'))
-          Path(os.environ['GITHUB_STEP_SUMMARY']).write_text('<h1>Resultado R23</h1><pre>' + html.escape(text) + '</pre>')
+          print('::warning title=R24_CI_RESULT::' + text.replace('%', '%25').replace('\r', '%0D').replace('\n', '%0A'))
+          Path(os.environ['GITHUB_STEP_SUMMARY']).write_text('<h1>Resultado R24</h1><pre>' + html.escape(text) + '</pre>')
           PY
       - name: Guardar los informes
         if: always()
